@@ -65,13 +65,13 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-        
+
         // PROPERTIES
         public new AppSettingsReader Settings { get; }
 
         public new SQLiteConnection DataConnection { get; }
 
-        public new Dictionary<string, object> Parameter { get; }
+        public Dictionary<string, object> Parameter { get; }
 
         public new SQLiteParameter[] Parameters { get; set; }
 
@@ -244,7 +244,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {table} WHERE {sql}";
+                return $"SELECT * FROM {table} WHERE {sql}";
             }
             catch(Exception ex)
             {
@@ -257,7 +257,7 @@ namespace BudgetExecution
         {
             try
             {
-                return(SQLiteConnection) base.DataConnection;
+                return (SQLiteConnection) base.DataConnection;
             }
             catch(Exception ex)
             {
@@ -277,7 +277,7 @@ namespace BudgetExecution
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"SELECT * FROM {source.ToString()} WHERE {vals}";
+                return $"SELECT * FROM {source.ToString()} WHERE {vals}";
             }
             catch(Exception ex)
             {
@@ -303,7 +303,7 @@ namespace BudgetExecution
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
+                return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
             }
             catch(Exception ex)
             {
@@ -326,7 +326,7 @@ namespace BudgetExecution
 
                 cols = cols.Trim().Substring(0, cols.Length - 2);
                 vals = vals.Trim().Substring(0, vals.Length - 2);
-                return$"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
+                return $"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
             }
             catch(Exception ex)
             {
@@ -346,7 +346,7 @@ namespace BudgetExecution
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"DELETE * FROM {source.ToString()} WHERE {vals}";
+                return $"DELETE * FROM {source.ToString()} WHERE {vals}";
             }
             catch(Exception ex)
             {
@@ -461,19 +461,19 @@ namespace BudgetExecution
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT :
+                    case Sql.SELECT:
                         return GetSelectCommand(source, provider, pmr, connection);
 
-                    case Sql.UPDATE :
+                    case Sql.UPDATE:
                         return GetUpdateCommand(source, provider, pmr, connection);
 
-                    case Sql.INSERT :
+                    case Sql.INSERT:
                         return GetInsertCommand(source, provider, pmr, connection);
 
-                    case Sql.DELETE :
+                    case Sql.DELETE:
                         return GetDeleteCommand(source, provider, pmr, connection);
 
-                    default :
+                    default:
                         return GetSelectCommand(source, provider, pmr, connection);
                 }
             }

@@ -150,7 +150,8 @@ namespace BudgetExecution
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
             foreach(DataColumn dc in table.Columns)
             {
-                if(dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                if(dc.ColumnName.Equals("Id") ||
+                   dc.ColumnName.Equals("Amount"))
                 {
                     continue;
                 }
@@ -180,7 +181,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -207,7 +208,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -225,7 +226,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1;
+                return -1;
             }
         }
 
@@ -350,7 +351,8 @@ namespace BudgetExecution
 
         internal FTE[] GetFTE(DataTable table)
         {
-            if(table.Rows.Count > 0 && BocCodes.Contains("17"))
+            if(table.Rows.Count > 0 &&
+               BocCodes.Contains("17"))
             {
                 try
                 {

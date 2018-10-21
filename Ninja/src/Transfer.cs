@@ -129,17 +129,20 @@ namespace BudgetExecution
             try
             {
                 Fund account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
-                if(!param.ContainsKey("Name") || param["Name"] == null)
+                if(!param.ContainsKey("Name") ||
+                   param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
-                if(!param.ContainsKey("TreasurySymbol") || param["TreasurySymbol"] == null)
+                if(!param.ContainsKey("TreasurySymbol") ||
+                   param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
-                if(!param.ContainsKey("Title") || param["Title"] == null)
+                if(!param.ContainsKey("Title") ||
+                   param["Title"] == null)
                 {
                     param["Title"] = account.Title;
                 }
@@ -215,7 +218,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-        
+
         /// <summary>
         ///     Updates the specified source.
         /// </summary>
@@ -252,7 +255,7 @@ namespace BudgetExecution
             {
                 Query query = new Query(source, provider, Sql.UPDATE, p);
                 string cmd = query.UpdateStatement;
-                SQLiteConnection conn = (SQLiteConnection)query.GetDataConnection(Provider.SQLite);
+                SQLiteConnection conn = (SQLiteConnection) query.GetDataConnection(Provider.SQLite);
                 conn.Open();
                 using(conn)
                 {

@@ -172,35 +172,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
-                if(!param.ContainsKey("FundName") || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") ||
+                   param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if(!param.ContainsKey("Org") || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if(!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") ||
+                   param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if(!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if(!param.ContainsKey("Goal") || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if(!param.ContainsKey("Objective") || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -249,11 +255,11 @@ namespace BudgetExecution
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
                 string cmd = query.InsertStatement;
-                SQLiteConnection conn = (SQLiteConnection)query.GetDataConnection(Provider.SQLite);
+                SQLiteConnection conn = (SQLiteConnection) query.GetDataConnection(Provider.SQLite);
                 conn.Open();
                 using(conn)
                 {
-                    SQLiteCommand insert = (SQLiteCommand)query.GetDataCommand(cmd, conn);
+                    SQLiteCommand insert = (SQLiteCommand) query.GetDataCommand(cmd, conn);
                     insert.ExecuteNonQuery();
                 }
             }
@@ -286,7 +292,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider,Sql.UPDATE, p);
+                Query query = new Query(source, provider, Sql.UPDATE, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)

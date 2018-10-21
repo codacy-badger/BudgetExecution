@@ -48,7 +48,8 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if(DbData.Source == Source.DivisionAccounts && DbData.Input == null)
+            if(DbData.Source == Source.DivisionAccounts &&
+               DbData.Input == null)
             {
                 DivisionTotals = GetDataTotals(Table, Field.RC);
                 DivisionMetrics = GetMetrics(Table, Field.RC);
@@ -219,7 +220,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -232,7 +233,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -267,7 +268,8 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach(DataColumn dc in table.Columns)
                 {
-                    if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    if(dc.ColumnName.Equals("ID") ||
+                       dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }
@@ -308,7 +310,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1;
+                return -1;
             }
         }
 

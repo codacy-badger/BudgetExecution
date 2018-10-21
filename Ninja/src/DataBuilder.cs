@@ -96,7 +96,7 @@ namespace BudgetExecution
             if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable()
-                                            .Where(p => p.Field<string>("BOC")!="17")
+                                            .Where(p => p.Field<string>("BOC") != "17")
                                             .Where(p => p.Field<decimal>("Amount") > 0)
                                             .Select(p => p)
                                             .CopyToDataTable();
@@ -401,7 +401,8 @@ namespace BudgetExecution
         {
             try
             {
-                if(col.Length == 1 && filter.Length == 1)
+                if(col.Length == 1 &&
+                   filter.Length == 1)
                 {
                     return table.AsEnumerable()
                                 .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
@@ -409,7 +410,8 @@ namespace BudgetExecution
                                 .CopyToDataTable();
                 }
 
-                if(col.Length == 2 && filter.Length == 2)
+                if(col.Length == 2 &&
+                   filter.Length == 2)
                 {
                     return table.AsEnumerable()
                                 .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
@@ -418,7 +420,8 @@ namespace BudgetExecution
                                 .CopyToDataTable();
                 }
 
-                if(col.Length == 3 && filter.Length == 3)
+                if(col.Length == 3 &&
+                   filter.Length == 3)
                 {
                     return table.AsEnumerable()
                                 .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
@@ -499,7 +502,10 @@ namespace BudgetExecution
                     Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                     foreach(DataColumn dc in table.Columns)
                     {
-                        if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                        if(dc.ColumnName.Equals("ID") ||
+                           dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Contains("Obligation") ||
+                           dc.ColumnName.Contains("Commitment"))
                         {
                             continue;
                         }
@@ -528,7 +534,7 @@ namespace BudgetExecution
 
             return null;
         }
-            
+
         /// <summary>
         ///     Gets the count.
         /// </summary>
@@ -555,22 +561,22 @@ namespace BudgetExecution
                 {
                     case Source.PRC:
                         return table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BOC") != "17")
-                                     .Where(p => p.Field<decimal>("Amount") > 0m)
-                                     .Select(p => p.Field<decimal>("Amount"))
-                                     .Sum();
+                                    .Where(p => p.Field<string>("BOC") != "17")
+                                    .Where(p => p.Field<decimal>("Amount") > 0m)
+                                    .Select(p => p.Field<decimal>("Amount"))
+                                    .Sum();
                     case Source.FTE:
                         return table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BOC") == "17")
-                                     .Where(p => p.Field<decimal>("Amount") > 0m)
-                                     .Select(p => p.Field<decimal>("Amount"))
-                                     .Sum();
+                                    .Where(p => p.Field<string>("BOC") == "17")
+                                    .Where(p => p.Field<decimal>("Amount") > 0m)
+                                    .Select(p => p.Field<decimal>("Amount"))
+                                    .Sum();
                     case Source.ProgramObligations:
                     case Source.TravelObligations:
                     case Source.PayrollObligations:
                         return table.AsEnumerable()
-                                     .Select(p => p.Field<decimal>("Obligations"))
-                                     .Sum();
+                                    .Select(p => p.Field<decimal>("Obligations"))
+                                    .Sum();
                     default:
                         return 0m;
                 }

@@ -134,7 +134,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1;
+                return -1;
             }
         }
 

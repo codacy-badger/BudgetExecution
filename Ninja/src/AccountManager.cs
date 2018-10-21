@@ -451,7 +451,7 @@ namespace BudgetExecution
         {
             try
             {
-                foreach(var s in list)
+                foreach(string s in list)
                 {
                     comboBox.Items.Add(s);
                 }

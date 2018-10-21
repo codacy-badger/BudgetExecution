@@ -360,7 +360,7 @@ namespace BudgetExecution
                 DataSeries = new ChartSeries("Total", type);
                 switch(type)
                 {
-                    case ChartSeriesType.Column :
+                    case ChartSeriesType.Column:
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
                             DataSeries.Points.Add(kvp.Key, kvp.Value);
@@ -368,7 +368,7 @@ namespace BudgetExecution
 
                         return DataSeries;
 
-                    case ChartSeriesType.Area :
+                    case ChartSeriesType.Area:
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
                             DataSeries.Points.Add(kvp.Key, kvp.Value);
@@ -376,7 +376,7 @@ namespace BudgetExecution
 
                         return DataSeries;
 
-                    case ChartSeriesType.Pie :
+                    case ChartSeriesType.Pie:
                         ArrayList list = new ArrayList();
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
@@ -519,7 +519,8 @@ namespace BudgetExecution
         {
             try
             {
-                if(value == Stat.Total || value == Stat.Average)
+                if(value == Stat.Total ||
+                   value == Stat.Average)
                 {
                     series.Style.TextFormat = "{0:C}";
                 }
@@ -534,7 +535,8 @@ namespace BudgetExecution
                     series.Style.TextFormat = "{0}";
                 }
 
-                if(series.Type == ChartSeriesType.Area || series.Type == ChartSeriesType.Column)
+                if(series.Type == ChartSeriesType.Area ||
+                   series.Type == ChartSeriesType.Column)
                 {
                     series.SmartLabels = true;
                     series.SortPoints = true;

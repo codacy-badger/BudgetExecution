@@ -83,7 +83,7 @@ namespace BudgetExecution
             try
             {
                 AppSettingsReader setting = new AppSettingsReader();
-                return(string) setting.GetValue("BudgetReport", typeof(string));
+                return (string) setting.GetValue("BudgetReport", typeof(string));
             }
             catch(Exception ex)
             {

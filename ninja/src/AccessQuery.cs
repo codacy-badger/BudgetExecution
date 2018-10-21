@@ -67,7 +67,7 @@ namespace BudgetExecution
 
         public new OleDbConnection DataConnection { get; }
 
-        public new Dictionary<string, object> Parameter { get; }
+        public Dictionary<string, object> Parameter { get; }
 
         public new OleDbParameter[] Parameters { get; set; }
 
@@ -96,7 +96,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {TableName} WHERE {sql}";
+                return $"SELECT * FROM {TableName} WHERE {sql}";
             }
             catch(Exception ex)
             {
@@ -458,7 +458,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+                return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
             }
             catch(Exception ex)
             {

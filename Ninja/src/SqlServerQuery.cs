@@ -52,7 +52,7 @@ namespace BudgetExecution
 
         public new SqlConnection DataConnection { get; set; }
 
-        public new Dictionary<string, object> Parameter { get; set; }
+        public Dictionary<string, object> Parameter { get; set; }
 
         public new string TableName { get; set; }
 
@@ -158,7 +158,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
+                return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
             }
             catch(Exception ex)
             {
@@ -171,7 +171,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {table} WHERE {sql}";
+                return $"SELECT * FROM {table} WHERE {sql}";
             }
             catch(Exception ex)
             {
@@ -184,7 +184,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {TableName} WHERE {sql}";
+                return $"SELECT * FROM {TableName} WHERE {sql}";
             }
             catch(Exception ex)
             {

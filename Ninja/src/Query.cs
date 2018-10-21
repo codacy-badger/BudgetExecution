@@ -1,17 +1,14 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Common;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Data.SqlServerCe;
+using System.Data.SQLite;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.Common;
-    using System.Data.OleDb;
-    using System.Data.SqlClient;
-    using System.Data.SQLite;
-    using System.Data.SqlServerCe;
-
     public class Query : IQuery
     {
         // CONSTRUCTORS
@@ -99,6 +96,315 @@ namespace BudgetExecution
 
         public DbDataAdapter DataAdapter { get; set; }
 
+        /// <summary>
+        ///     Gets the data connection.
+        /// </summary>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
+        public DbConnection GetDataConnection(Provider provider)
+        {
+            try
+            {
+                switch(provider)
+                {
+                    case Provider.SQLite:
+                        return new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlite\R6.db;foreign keys=True;datetime kind=Local;default database type=String");
+
+                    case Provider.SqlCe:
+                        return new SqlCeConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlce\R6.sdf");
+
+                    case Provider.SqlServer:
+                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlserver\R6.mdf;Integrated Security=True;Connect Timeout=30");
+
+                    case Provider.Access:
+                        return new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.accdb");
+
+                    case Provider.OleDb:
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
+
+                    case Provider.Excel:
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the SQL statement.
+        /// </summary>
+        /// <param name="sql">The SQL.</param>
+        /// <returns></returns>
+        public string GetSqlStatement(string sql)
+        {
+            try
+            {
+                return $"SELECT * FROM {TableName} WHERE {sql}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the data command.
+        /// </summary>
+        /// <param name="sql">The SQL.</param>
+        /// <param name="connection">The connection.</param>
+        /// <returns></returns>
+        public DbCommand GetDataCommand(string sql, DbConnection connection)
+        {
+            try
+            {
+                switch(connection)
+                {
+                    case SQLiteConnection liteConnection:
+                        SqlStatement = sql;
+                        return new SQLiteCommand(SqlStatement, liteConnection);
+                    case OleDbConnection dbConnection:
+                        SqlStatement = sql;
+                        return new OleDbCommand(SqlStatement, dbConnection);
+                    case SqlCeConnection sqlceConnection:
+                        SqlStatement = sql;
+                        return new SqlCeCommand(SqlStatement, sqlceConnection);
+                    case SqlConnection sqlConnection:
+                        SqlStatement = sql;
+                        return new SqlCommand(SqlStatement, sqlConnection);
+                    default:
+                        return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        // ADAPTER METHODS----------------------------------------------------------------
+
+        /// <summary>
+        ///     Gets the data adapter.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
+        public DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd)
+        {
+            try
+            {
+                switch(cmd)
+                {
+                    case Sql.SELECT:
+                        if(command is SQLiteCommand)
+                        {
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter((SQLiteCommand) command);
+                            adapter.SelectCommand = (SQLiteCommand) command;
+                            return adapter;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            OleDbDataAdapter oledbselect = new OleDbDataAdapter((OleDbCommand) command);
+                            oledbselect.SelectCommand = (OleDbCommand) command;
+                            return oledbselect;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter((SqlCeCommand) command);
+                            sqlceselect.SelectCommand = (SqlCeCommand) command;
+                            return sqlceselect;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            SqlDataAdapter sqlselect = new SqlDataAdapter((SqlCommand) command);
+                            sqlselect.SelectCommand = (SqlCommand) command;
+                            return sqlselect;
+                        }
+
+                        break;
+
+                    case Sql.UPDATE:
+                        if(command is SQLiteCommand)
+                        {
+                            SQLiteDataAdapter update = new SQLiteDataAdapter((SQLiteCommand) command);
+                            update.UpdateCommand = (SQLiteCommand) command;
+                            return update;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            OleDbDataAdapter update = new OleDbDataAdapter((OleDbCommand) command);
+                            update.UpdateCommand = (OleDbCommand) command;
+                            return update;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            SqlCeDataAdapter update = new SqlCeDataAdapter((SqlCeCommand) command);
+                            update.UpdateCommand = (SqlCeCommand) command;
+                            return update;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            SqlDataAdapter update = new SqlDataAdapter((SqlCommand) command);
+                            update.UpdateCommand = (SqlCommand) command;
+                            return update;
+                        }
+
+                        break;
+
+                    case Sql.INSERT:
+                        if(command is SQLiteCommand)
+                        {
+                            SQLiteDataAdapter insert = new SQLiteDataAdapter((SQLiteCommand) command);
+                            insert.InsertCommand = (SQLiteCommand) command;
+                            return insert;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            OleDbDataAdapter insert = new OleDbDataAdapter((OleDbCommand) command);
+                            insert.InsertCommand = (OleDbCommand) command;
+                            return insert;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            SqlCeDataAdapter insert = new SqlCeDataAdapter((SqlCeCommand) command);
+                            insert.InsertCommand = (SqlCeCommand) command;
+                            return insert;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            SqlDataAdapter insert = new SqlDataAdapter((SqlCommand) command);
+                            insert.InsertCommand = (SqlCommand) command;
+                            return insert;
+                        }
+
+                        break;
+
+                    case Sql.DELETE:
+                        if(command is SQLiteCommand)
+                        {
+                            SQLiteDataAdapter delete = new SQLiteDataAdapter((SQLiteCommand) command);
+                            delete.DeleteCommand = (SQLiteCommand) command;
+                            return delete;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            OleDbDataAdapter delete = new OleDbDataAdapter((OleDbCommand) command);
+                            delete.DeleteCommand = (OleDbCommand) command;
+                            return delete;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            SqlCeDataAdapter delete = new SqlCeDataAdapter((SqlCeCommand) command);
+                            delete.DeleteCommand = (SqlCeCommand) command;
+                            return delete;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            SqlDataAdapter delete = new SqlDataAdapter((SqlCommand) command);
+                            delete.DeleteCommand = (SqlCommand) command;
+                            return delete;
+                        }
+
+                        break;
+
+                    default:
+                        SQLiteDataAdapter select = new SQLiteDataAdapter((SQLiteCommand) command);
+                        select.SelectCommand = (SQLiteCommand) command;
+                        return select;
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the data reader.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
+        public DbDataReader GetDataReader(DbCommand command)
+        {
+            try
+            {
+                switch(command)
+                {
+                    case SQLiteCommand liteCommand:
+                        return liteCommand.ExecuteReader();
+                    case OleDbCommand dbCommand:
+                        return dbCommand.ExecuteReader();
+                    case SqlCommand sqlCommand:
+                        return sqlCommand.ExecuteReader();
+                    case SqlCeCommand sqlceCommand:
+                        return sqlceCommand.ExecuteReader();
+                    default:
+                        return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the command builder.
+        /// </summary>
+        /// <param name="adapter">The adapter.</param>
+        /// <returns></returns>
+        public DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter)
+        {
+            try
+            {
+                switch(adapter)
+                {
+                    case SQLiteDataAdapter _:
+                        CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
+                        return CommandBuilder;
+                    case OleDbDataAdapter _:
+                        CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
+                        return CommandBuilder;
+                    case SqlCeDataAdapter _:
+                        CommandBuilder = new SqlCeCommandBuilder(adapter as SqlCeDataAdapter);
+                        return CommandBuilder;
+                    case SqlDataAdapter _:
+                        CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
+                        return CommandBuilder;
+                    default:
+                        return null;
+                }
+            }
+            catch(SystemException ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         // STRING METHODS----------------------------------------------------------------       
 
         /// <summary>
@@ -156,7 +462,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         /// <summary>
         ///     Gets the database parameters.
         /// </summary>
@@ -241,7 +547,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         /// <summary>
         ///     Gets the SQL statement.
         /// </summary>
@@ -293,7 +599,7 @@ namespace BudgetExecution
         {
             try
             {
-                return$"SELECT * FROM {table} WHERE {GetSqlParameterString(param)}";
+                return $"SELECT * FROM {table} WHERE {GetSqlParameterString(param)}";
             }
             catch(Exception ex)
             {
@@ -319,7 +625,7 @@ namespace BudgetExecution
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"SELECT * FROM {source.ToString()} WHERE {vals}";
+                return $"SELECT * FROM {source.ToString()} WHERE {vals}";
             }
             catch(Exception ex)
             {
@@ -344,14 +650,14 @@ namespace BudgetExecution
                 {
                     if(p.SourceColumn == "ID")
                     {
-                        pid = (int)p.Value;
+                        pid = (int) p.Value;
                     }
 
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
+                return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
             }
             catch(Exception ex)
             {
@@ -380,7 +686,7 @@ namespace BudgetExecution
 
                 cols = cols.Trim().Substring(0, cols.Length - 2);
                 vals = vals.Trim().Substring(0, vals.Length - 2);
-                return$"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
+                return $"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
             }
             catch(Exception ex)
             {
@@ -406,64 +712,7 @@ namespace BudgetExecution
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"DELETE * FROM {source.ToString()} WHERE {vals}";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the data connection.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <returns></returns>
-        public DbConnection GetDataConnection(Provider provider)
-        {
-            try
-            {
-                switch(provider)
-                {
-                    case Provider.SQLite:
-                        return new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlite\R6.db;foreign keys=True;datetime kind=Local;default database type=String");
-
-                    case Provider.SqlCe:
-                        return new SqlCeConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlce\R6.sdf");
-
-                    case Provider.SqlServer:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlserver\R6.mdf;Integrated Security=True;Connect Timeout=30");
-
-                    case Provider.Access:
-                        return new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.accdb");
-
-                    case Provider.OleDb:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
-
-                    case Provider.Excel:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
-                }
-
-                return null;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the SQL statement.
-        /// </summary>
-        /// <param name="sql">The SQL.</param>
-        /// <returns></returns>
-        public string GetSqlStatement(string sql)
-        {
-            try
-            {
-                return$"SELECT * FROM {TableName} WHERE {sql}";
+                return $"DELETE * FROM {source.ToString()} WHERE {vals}";
             }
             catch(Exception ex)
             {
@@ -473,7 +722,7 @@ namespace BudgetExecution
         }
 
         //COMMAND METHODS----------------------------------------------------------------
-        
+
 
         /// <summary>
         ///     Gets the delete command.
@@ -522,17 +771,17 @@ namespace BudgetExecution
                 switch(connection)
                 {
                     case SQLiteConnection _:
-                        SelectStatement = @select;
-                        return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
+                        SelectStatement = select;
+                        return new SQLiteCommand(SelectStatement, (SQLiteConnection) connection);
                     case OleDbConnection _:
-                        SelectStatement = @select;
-                        return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
+                        SelectStatement = select;
+                        return new OleDbCommand(SelectStatement, (OleDbConnection) connection);
                     case SqlCeConnection _:
                         SelectStatement = select;
-                        return new SqlCeCommand(SelectStatement, (SqlCeConnection)connection);
+                        return new SqlCeCommand(SelectStatement, (SqlCeConnection) connection);
                     case SqlConnection _:
-                        SelectStatement = @select;
-                        return new SqlCommand(SelectStatement, (SqlConnection)connection);
+                        SelectStatement = select;
+                        return new SqlCommand(SelectStatement, (SqlConnection) connection);
                     default:
                         return null;
                 }
@@ -542,7 +791,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }       
+        }
 
         /// <summary>
         ///     Gets the select command.
@@ -649,41 +898,6 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets the data command.
         /// </summary>
-        /// <param name="sql">The SQL.</param>
-        /// <param name="connection">The connection.</param>
-        /// <returns></returns>
-        public DbCommand GetDataCommand(string sql, DbConnection connection)
-        {
-            try
-            {
-                switch(connection)
-                {
-                    case SQLiteConnection liteConnection:
-                        SqlStatement = sql;
-                        return new SQLiteCommand(SqlStatement, liteConnection);
-                    case OleDbConnection dbConnection:
-                        SqlStatement = sql;
-                        return new OleDbCommand(SqlStatement, dbConnection);
-                    case SqlCeConnection sqlceConnection:
-                        SqlStatement = sql;
-                        return new SqlCeCommand(SqlStatement, sqlceConnection);
-                    case SqlConnection sqlConnection:
-                        SqlStatement = sql;
-                        return new SqlCommand(SqlStatement, sqlConnection);
-                    default:
-                        return null;
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the data command.
-        /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
         /// <param name="cmd">The command.</param>
@@ -712,223 +926,6 @@ namespace BudgetExecution
                 }
             }
             catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        // ADAPTER METHODS----------------------------------------------------------------
-
-        /// <summary>
-        ///     Gets the data adapter.
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <param name="cmd"></param>
-        /// <returns></returns>
-        public DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd)
-        {
-            try
-            {
-                switch(cmd)
-                {
-                    case Sql.SELECT:
-                        if(command is SQLiteCommand)
-                        {
-                            SQLiteDataAdapter adapter = new SQLiteDataAdapter((SQLiteCommand) command);
-                            adapter.SelectCommand = (SQLiteCommand) command;
-                            return adapter;
-                        }
-
-                        if(command is OleDbCommand)
-                        {
-                            OleDbDataAdapter oledbselect = new OleDbDataAdapter((OleDbCommand)command);
-                            oledbselect.SelectCommand = (OleDbCommand) command;
-                            return oledbselect;
-                        }
-
-                        if(command is SqlCeCommand)
-                        {
-                            SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter((SqlCeCommand)command);
-                            sqlceselect.SelectCommand = (SqlCeCommand)command;
-                            return sqlceselect;
-                        }
-
-                        if(command is SqlCommand)
-                        {
-                            SqlDataAdapter sqlselect = new SqlDataAdapter((SqlCommand)command);
-                            sqlselect.SelectCommand = (SqlCommand)command;
-                            return sqlselect;
-                        }
-
-                        break;
-
-                    case Sql.UPDATE:
-                        if(command is SQLiteCommand)
-                        {
-                            SQLiteDataAdapter update = new SQLiteDataAdapter((SQLiteCommand)command);
-                            update.UpdateCommand = (SQLiteCommand)command;
-                            return update;
-                        }
-
-                        if(command is OleDbCommand)
-                        {
-                            OleDbDataAdapter update = new OleDbDataAdapter((OleDbCommand)command);
-                            update.UpdateCommand = (OleDbCommand)command;
-                            return update;
-                        }
-
-                        if(command is SqlCeCommand)
-                        {
-                            SqlCeDataAdapter update = new SqlCeDataAdapter((SqlCeCommand)command);
-                            update.UpdateCommand = (SqlCeCommand)command;
-                            return update;
-                        }
-
-                        if(command is SqlCommand)
-                        {
-                            SqlDataAdapter update = new SqlDataAdapter((SqlCommand)command);
-                            update.UpdateCommand = (SqlCommand)command;
-                            return update;
-                        }
-
-                        break;
-
-                    case Sql.INSERT:
-                        if(command is SQLiteCommand)
-                        {
-                            SQLiteDataAdapter insert = new SQLiteDataAdapter((SQLiteCommand)command);
-                            insert.InsertCommand = (SQLiteCommand)command;
-                            return insert;
-                        }
-
-                        if(command is OleDbCommand)
-                        {
-                            OleDbDataAdapter insert = new OleDbDataAdapter((OleDbCommand)command);
-                            insert.InsertCommand = (OleDbCommand)command;
-                            return insert;
-                        }
-
-                        if(command is SqlCeCommand)
-                        {
-                            SqlCeDataAdapter insert = new SqlCeDataAdapter((SqlCeCommand)command);
-                            insert.InsertCommand = (SqlCeCommand)command;
-                            return insert;
-                        }
-
-                        if(command is SqlCommand)
-                        {
-                            SqlDataAdapter insert = new SqlDataAdapter((SqlCommand)command);
-                            insert.InsertCommand = (SqlCommand)command;
-                            return insert;
-                        }
-
-                        break;
-
-                    case Sql.DELETE:
-                        if(command is SQLiteCommand)
-                        {
-                            SQLiteDataAdapter delete = new SQLiteDataAdapter((SQLiteCommand)command);
-                            delete.DeleteCommand = (SQLiteCommand)command;
-                            return delete;
-                        }
-
-                        if(command is OleDbCommand)
-                        {
-                            OleDbDataAdapter delete = new OleDbDataAdapter((OleDbCommand)command);
-                            delete.DeleteCommand = (OleDbCommand)command;
-                            return delete;
-                        }
-
-                        if(command is SqlCeCommand)
-                        {
-                            SqlCeDataAdapter delete = new SqlCeDataAdapter((SqlCeCommand)command);
-                            delete.DeleteCommand = (SqlCeCommand)command;
-                            return delete;
-                        }
-
-                        if(command is SqlCommand)
-                        {
-                            SqlDataAdapter delete = new SqlDataAdapter((SqlCommand)command);
-                            delete.DeleteCommand = (SqlCommand)command;
-                            return delete;
-                        }
-
-                        break;
-
-                    default:
-                        SQLiteDataAdapter select = new SQLiteDataAdapter((SQLiteCommand)command);
-                        select.SelectCommand = (SQLiteCommand)command;
-                        return select;
-                }
-
-                return null;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-        
-        /// <summary>
-        ///     Gets the data reader.
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <returns></returns>
-        public DbDataReader GetDataReader(DbCommand command)
-        {
-            try
-            {
-                switch(command)
-                {
-                    case SQLiteCommand liteCommand:
-                        return liteCommand.ExecuteReader();
-                    case OleDbCommand dbCommand:
-                        return dbCommand.ExecuteReader();
-                    case SqlCommand sqlCommand:
-                        return sqlCommand.ExecuteReader();
-                    case SqlCeCommand sqlceCommand:
-                        return sqlceCommand.ExecuteReader();
-                    default:
-                        return null;
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the command builder.
-        /// </summary>
-        /// <param name="adapter">The adapter.</param>
-        /// <returns></returns>
-        public DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter)
-        {
-            try
-            {
-                switch(adapter)
-                {
-                    case SQLiteDataAdapter _:
-                        CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
-                        return CommandBuilder;
-                    case OleDbDataAdapter _:
-                        CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
-                        return CommandBuilder;
-                    case SqlCeDataAdapter _:
-                        CommandBuilder = new SqlCeCommandBuilder(adapter as SqlCeDataAdapter);
-                        return CommandBuilder;
-                    case SqlDataAdapter _:
-                        CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
-                        return CommandBuilder;
-                    default:
-                        return null;
-                }
-            }
-            catch(SystemException ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

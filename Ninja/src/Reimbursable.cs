@@ -122,32 +122,38 @@ namespace BudgetExecution
             try
             {
                 Reimbursable account = new Reimbursable(source);
-                if(!param.ContainsKey("AgreementNumber") || param["AgreementNumber"] == null)
+                if(!param.ContainsKey("AgreementNumber") ||
+                   param["AgreementNumber"] == null)
                 {
                     param["AgreementNumber"] = account.AgreementNumber;
                 }
 
-                if(!param.ContainsKey("OrgCode") || param["OrgCode"] == null)
+                if(!param.ContainsKey("OrgCode") ||
+                   param["OrgCode"] == null)
                 {
                     param["OrgCode"] = account.OrgCode;
                 }
 
-                if(!param.ContainsKey("SiteProjectCode") || param["SiteProjectCode"] == null)
+                if(!param.ContainsKey("SiteProjectCode") ||
+                   param["SiteProjectCode"] == null)
                 {
                     param["SiteProjectCode"] = account.SiteProjectCode;
                 }
 
-                if(!param.ContainsKey("DocumentNumber") || param["DocumentNumber"] == null)
+                if(!param.ContainsKey("DocumentNumber") ||
+                   param["DocumentNumber"] == null)
                 {
                     param["DocumentNumber"] = account.DocumentNumber;
                 }
 
-                if(!param.ContainsKey("FOC") || param["FOC"] == null)
+                if(!param.ContainsKey("FOC") ||
+                   param["FOC"] == null)
                 {
                     param["FOC"] = account.FOC;
                 }
 
-                if(!param.ContainsKey("BOC") || param["BOC"] == null)
+                if(!param.ContainsKey("BOC") ||
+                   param["BOC"] == null)
                 {
                     param["BOC"] = account.BOC;
                 }
@@ -288,7 +294,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider,Sql.UPDATE, p);
+                Query query = new Query(source, provider, Sql.UPDATE, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)

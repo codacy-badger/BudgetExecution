@@ -9,8 +9,12 @@ namespace BudgetExecution
     {
         public TravelObligations()
         {
-            Source = Source.ProgramObligations;
-            Provider = Provider.SQLite;
+        }
+
+        public TravelObligations(Source source = Source.TravelObligations, Provider provider = Provider.SQLite)
+        {
+            Source = source;
+            Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
@@ -31,6 +35,8 @@ namespace BudgetExecution
         public Source Source { get; }
 
         public Provider Provider { get; }
+
+        public Sql Sql { get; }
 
         public DataBuilder DbData { get; }
 

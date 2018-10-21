@@ -149,7 +149,8 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach(DataColumn dc in table.Columns)
                 {
-                    if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    if(dc.ColumnName.Equals("ID") ||
+                       dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }
@@ -185,7 +186,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -212,7 +213,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -238,7 +239,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1;
+                return -1;
             }
         }
 
@@ -251,7 +252,7 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1M;
+                return -1M;
             }
         }
 
@@ -316,12 +317,12 @@ namespace BudgetExecution
             {
                 DataTable query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"])).Where(r => r.Field<string>("Fund").Equals(p["Fund"])).Where(r => r.Field<string>("Code").Equals(p["Code"])).Where(r => r.Field<string>("Org").Equals(p["Org"])).Where(r => r.Field<string>("BOC").Equals(p["BOC"])).Select(r => r).CopyToDataTable();
                 DataRow row = query.Rows[0];
-                return(int) row["Id"];
+                return (int) row["Id"];
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return-1;
+                return -1;
             }
         }
 

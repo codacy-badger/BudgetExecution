@@ -4,13 +4,9 @@ using System.Data.SQLite;
 
 namespace BudgetExecution
 {
-    public class RC
+    public struct RC
     {
         // CONSTRUCTORS
-        public RC()
-        {
-        }
-
         public RC(string code)
         {
             Code = code;

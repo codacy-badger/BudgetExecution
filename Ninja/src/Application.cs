@@ -50,7 +50,7 @@ namespace BudgetExecution
 
     public enum Provider { SQLite = 0, Excel = 1, SqlServer = 2, SqlCe = 3, Access = 4, OleDb = 5 }
 
-    public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, TravelObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, ProgramObligations, RegionalAccounts,  PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
+    public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, TravelObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, ProgramObligations, RegionalAccounts, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
 
     public enum Stat { Total = 0, Count = 1, Average = 2, Ratio = 3 }
 

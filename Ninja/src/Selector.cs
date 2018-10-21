@@ -68,28 +68,28 @@ namespace BudgetExecution
                 string i = carousel.ActiveImage.Tag.ToString();
                 switch(i)
                 {
-                    case"SummaryImages" :
+                    case "SummaryImages":
                         Selector f = new Selector(Info.SummaryImages);
                         f.Show();
                         Close();
                         return;
 
-                    case"DatabaseImages" :
+                    case "DatabaseImages":
                         DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
-                    case"Division" :
+                    case "Division":
                         Selector d = new Selector(Info.DivisionImages);
                         d.Show();
                         Close();
                         return;
-                    case"FunctionImages" :
+                    case "FunctionImages":
                         FunctionSelector fi = new FunctionSelector(Info.FunctionImages);
                         fi.Show();
                         Close();
                         return;
-                    case"Appropriation" :
+                    case "Appropriation":
                         Selector aps = new Selector(Info.AppropriationImages);
                         aps.Show();
                         Close();
