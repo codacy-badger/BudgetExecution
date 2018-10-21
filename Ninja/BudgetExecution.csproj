@@ -53,7 +53,7 @@
     <StartupObject>BudgetExecution.Application</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>summation_3d_blue_oma_icon.ico</ApplicationIcon>
+    <ApplicationIcon>budgetclear.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Devart.Data, Version=5.0.2021.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
@@ -704,6 +704,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="budgetclear.ico" />
     <Content Include="database\sqlite\R6.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
