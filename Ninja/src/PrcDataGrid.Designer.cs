@@ -1,4 +1,4 @@
-﻿namespace Ninja.Data
+﻿namespace BudgetExecution
 {
     partial class BudgetDataGrid
     {

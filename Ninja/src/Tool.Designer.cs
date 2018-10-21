@@ -5,7 +5,7 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-namespace BudgetExecution.src
+namespace BudgetExecution
 {
     partial class Tool
     {

@@ -1,4 +1,4 @@
-﻿namespace Ninja.Data.Forms
+﻿namespace BudgetExecution
 {
     partial class SearchBox
     {

@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
 
-namespace Ninja.Data
+namespace BudgetExecution
 {
     public partial class BudgetDataGrid : UserControl
     {

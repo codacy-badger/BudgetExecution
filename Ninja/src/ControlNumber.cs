@@ -44,7 +44,7 @@ namespace BudgetExecution
             Source = Source.ControlNumbers;
             Provider = Provider.SQLite;
             Fund = fund;
-            DivisionID = division;
+            Division = division;
             DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
             Table = DbData.Table;
             DbRow = Table.Rows[0];
@@ -73,7 +73,7 @@ namespace BudgetExecution
 
         public int FundControlNumber { get; set; }
 
-        public string DivisionID { get; set; }
+        public string Division { get; set; }
 
         public string DivisionControlNumber { get; set; }
 
@@ -328,7 +328,7 @@ namespace BudgetExecution
         /// </returns>
         public override string ToString()
         {
-            return new StringBuilder($"{FiscalYear}={Region}-{RegionControlNumber}-{Fund}-{FundControlNumber}-{DivisionID}-{BudgetControlNumber}").ToString();
+            return new StringBuilder($"{FiscalYear}={Region}-{RegionControlNumber}-{Fund}-{FundControlNumber}-{Division}-{BudgetControlNumber}").ToString();
         }
 
         /// <summary>

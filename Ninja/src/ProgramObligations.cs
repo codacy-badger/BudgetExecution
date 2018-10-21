@@ -29,27 +29,6 @@ namespace BudgetExecution
             DbRow = Records[0];
         }
 
-        public ProgramObligations(Source source, Provider provider, Dictionary<string, object> param, string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname, string doctype, string system, string prn, string dcnprefix, string grantnumber, string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.Table;
-            Records = Table.AsEnumerable().Select(ob => ob).ToArray();
-            DbRow = Records[0];
-            ID = int.Parse(DbRow["ID"].ToString());
-            RPIO = rpio;
-            BFY = fy;
-            Fund = new Fund(source, provider, fund, fy);
-            Org = new Org(org);
-            RC = new RC(rc);
-            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
-            BOC = new BOC(boc);
-            FOC = foc;
-            FocName = focname;
-            Amount = o;
-        }
-
         public ProgramObligations(DataRow dr)
         {
             ID = int.Parse(dr["ID"].ToString());
@@ -298,7 +277,7 @@ namespace BudgetExecution
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch(Exception ex)
@@ -336,7 +315,7 @@ namespace BudgetExecution
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch(Exception ex)

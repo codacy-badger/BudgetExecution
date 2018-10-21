@@ -1,6 +1,6 @@
 using Syncfusion.Windows.Forms;
 
-namespace BudgetExecution.src
+namespace BudgetExecution
 {
     public partial class Tool : MetroForm
     {

@@ -31,7 +31,7 @@ namespace BudgetExecution
             });
             DataSeries = GetSeriesTotals(data);
             DataSeries.Type = SeriesType;
-            Chart.Series.Add(DataSeries);
+            Chart.Series?.Add(DataSeries);
             ConfigureLargeNumberSeries(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
             Configure3DMode(Chart);
@@ -55,7 +55,7 @@ namespace BudgetExecution
             }
 
             DataSeries = GetSeriesTotals(DataTotals);
-            Chart.Series.Add(DataSeries);
+            Chart.Series?.Add(DataSeries);
             DataSeries.Type = SeriesType;
             ConfigureLargeNumberSeries(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);

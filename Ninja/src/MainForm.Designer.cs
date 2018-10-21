@@ -1,6 +1,3 @@
-using Ninja.Data.Forms;
-
-
 namespace BudgetExecution
 {
     partial class MainForm

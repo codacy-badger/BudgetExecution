@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Ninja.Data.Forms
+namespace BudgetExecution
 {
     public partial class SearchBox : UserControl
     {

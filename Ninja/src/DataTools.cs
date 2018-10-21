@@ -1,10 +1,10 @@
 ﻿using Syncfusion.Windows.Forms;
 
-namespace Ninja.Data.Forms
+namespace BudgetExecution
 {
-    public partial class NinjaForm5 : MetroForm
+    public partial class DataTools : MetroForm
     {
-        public NinjaForm5()
+        public DataTools()
         {
             InitializeComponent();
         }

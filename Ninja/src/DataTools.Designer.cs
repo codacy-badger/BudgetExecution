@@ -1,6 +1,6 @@
-﻿namespace Ninja.Data.Forms
+﻿namespace BudgetExecution
 {
-    partial class NinjaForm5
+    partial class DataTools
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NinjaForm5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataTools));
             this.SuspendLayout();
             // 
             // NinjaForm5
@@ -42,7 +42,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
-            this.Name = "NinjaForm5";
+            this.Name = "DataTools";
             this.ShowIcon = false;
             this.ResumeLayout(false);
 

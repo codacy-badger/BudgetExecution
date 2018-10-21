@@ -3,13 +3,9 @@ using System.Collections.Generic;
 
 namespace BudgetExecution
 {
-    public class Org
+    public struct Org
     {
         // CONSTRUCTORS
-        public Org()
-        {
-        }
-
         public Org(string code)
         {
             Code = code;

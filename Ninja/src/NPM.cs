@@ -3,17 +3,23 @@ using System.Collections.Generic;
 
 namespace BudgetExecution
 {
-    public class NPM
+    public struct NPM
     {
         // CONSTRUCTORS
         public NPM(HQ code)
         {
             Code = code.ToString();
+            Name = null;
+            RPIO = null;
+            Title = null;
         }
 
         public NPM(string code)
         {
             Code = code;
+            Name = null;
+            RPIO = null;
+            Title = null;
         }
 
         // PROPERTIES
