@@ -90,6 +90,7 @@ namespace BudgetExecution
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
+            Provider = provider;
             Input = param;
             Query = new Query(source, provider, Sql.SELECT, Input);
             if(source == Source.PRC)
@@ -124,6 +125,10 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public Sql Sql { get; }
 
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
@@ -284,11 +289,11 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        private SQLiteQuery GetSQLiteQuery(Source source)
+        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, Sql sql)
         {
             try
             {
-                return new SQLiteQuery(source);
+                return new SQLiteQuery(source, provider, sql);
             }
             catch(Exception ex)
             {
@@ -303,30 +308,11 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        private SQLiteQuery GetSQLiteQuery(Source source, SQLiteParameter[] pmr)
+        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> pmr)
         {
             try
             {
-                return new SQLiteQuery(source, pmr);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the sq lite query.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="dpr">The DPR.</param>
-        /// <returns></returns>
-        private SQLiteQuery GetSQLiteQuery(Source source, Dictionary<string, object> dpr)
-        {
-            try
-            {
-                return new SQLiteQuery(source, dpr);
+                return new SQLiteQuery(source, provider, sql, pmr);
             }
             catch(Exception ex)
             {

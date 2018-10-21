@@ -888,7 +888,7 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.INSERT, p);
                 using(query.DataConnection)
                 {
                     SQLiteCommand command = query.InsertCommand;
@@ -913,7 +913,7 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.UPDATE, p);
                 using(query.DataConnection)
                 {
                     SQLiteCommand command = query.UpdateCommand;
@@ -938,7 +938,7 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.DELETE, p);
                 using(query.DataConnection)
                 {
                     SQLiteCommand command = query.DeleteCommand;

@@ -13,10 +13,11 @@ namespace BudgetExecution
         {
         }
 
-        public SQLiteQuery(Source source) : base(source)
+        public SQLiteQuery(Source source, Provider provider) : base(source, provider)
         {
-            Provider = base.Provider;
+            Provider = provider;
             Source = source;
+            SqlCmd = Sql.SELECT;
             DataConnection = GetConnection();
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {TableName}";
@@ -29,10 +30,28 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Dictionary<string, object> param)
+        public SQLiteQuery(Source source, Provider provider, Sql sql) : base(source, provider, sql)
         {
-            Provider = base.Provider;
+            Provider = provider;
             Source = source;
+            SqlCmd = sql;
+            DataConnection = GetConnection();
+            TableName = source.ToString();
+            SelectStatement = $"SELECT * FROM {TableName}";
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+            Settings = new AppSettingsReader();
+        }
+
+        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
+        {
+            Provider = provider;
+            Source = source;
+            SqlCmd = sql;
             Parameter = param;
             Parameters = GetParameter(param);
             DataConnection = GetConnection();
@@ -46,24 +65,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-
-        public SQLiteQuery(Source source, SQLiteParameter[] param)
-        {
-            Provider = base.Provider;
-            Source = source;
-            Parameters = param;
-            DataConnection = GetConnection();
-            TableName = source.ToString();
-            SelectStatement = GetSelectStatement(TableName, Parameter);
-            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            DataAdapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(DataAdapter);
-            UpdateCommand = CommandBuilder.GetUpdateCommand();
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
-        }
-
+        
         // PROPERTIES
         public new AppSettingsReader Settings { get; }
 
@@ -74,6 +76,8 @@ namespace BudgetExecution
         public new SQLiteParameter[] Parameters { get; set; }
 
         public new string TableName { get; }
+
+        public Sql SqlCmd { get; set; }
 
         public new string SelectStatement { get; set; }
 

@@ -173,14 +173,14 @@ namespace BudgetExecution
         ///     Inserts the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
-        public static void Insert(Dictionary<string, object> p)
+        public static void Insert(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
                 Dictionary<string, object> param = GetInsertionColumns(p);
                 string[] fields = param.Keys.ToArray();
                 object[] vals = param.Values.ToArray();
-                SQLiteQuery query = new SQLiteQuery(Source.ControlNumbers, param);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
                 {
@@ -227,11 +227,11 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Dictionary<string, object> p)
+        public static void Update(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
@@ -276,11 +276,11 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Dictionary<string, object> p)
+        public static void Delete(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)

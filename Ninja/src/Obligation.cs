@@ -104,6 +104,8 @@ namespace BudgetExecution
 
         public RC RC { get; set; }
 
+        public string AH { get; set; }
+
         public string RPIO { get; set; }
 
         // METHODS

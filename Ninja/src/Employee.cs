@@ -9,7 +9,7 @@ namespace BudgetExecution
         {
             Source = Source.Employees;
             Provider = Provider.SQLite;
-            DbQuery = new SQLiteQuery(Source);
+            DbQuery = new SQLiteQuery(Source, Provider);
             DbData = new DataBuilder(DbQuery);
             DbTable = DbData.Table;
         }
@@ -18,7 +18,7 @@ namespace BudgetExecution
         {
             Source = Source.Employees;
             Provider = Provider.SQLite;
-            DbQuery = new SQLiteQuery(Source);
+            DbQuery = new SQLiteQuery(Source, Provider);
             DbData = new DataBuilder(DbQuery);
             DbTable = DbData.Table;
             ID = id;

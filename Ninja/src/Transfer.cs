@@ -199,65 +199,33 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
-        public static void Insert(Source source, Dictionary<string, object> p)
+        public static void Insert(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
-                Dictionary<string, object> param = GetInsertionColumns(source, Provider.SQLite, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                SQLiteQuery query = new SQLiteQuery(source, param);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
+                conn.Open();
+                SQLiteCommand insert = query.InsertCommand;
+                insert.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
-
-        /// <summary>
-        ///     Inserts the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            try
-            {
-                Dictionary<string, object> param = GetInsertionColumns(source, provider, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                Query query = new Query(source, provider, Sql.INSERT, param);
-                string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
+        
         /// <summary>
         ///     Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Dictionary<string, object> p)
+        public static void Update(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
@@ -303,19 +271,17 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Dictionary<string, object> p)
+        public static void Delete(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 string cmd = query.DeleteStatement;
-                SQLiteConnection conn = (SQLiteConnection)query.GetDataConnection(Provider.SQLite);
+                SQLiteConnection conn = query.DataConnection;
                 conn.Open();
-                using(conn)
-                {
-                    SQLiteCommand delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
-                }
+                SQLiteCommand delete = query.GetDataCommand(cmd, conn);
+                delete.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {

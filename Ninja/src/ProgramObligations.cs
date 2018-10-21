@@ -88,7 +88,7 @@ namespace BudgetExecution
 
         public string ProgramProjectCode { get; set; }
 
-        public string DocumentControlNumber { get; set; }
+        public string DCN { get; set; }
 
         public string FOC { get; set; }
 
@@ -106,7 +106,7 @@ namespace BudgetExecution
 
         public decimal DollarAmount { get; set; }
 
-        public decimal Commitments { get; set; }
+        public decimal OpenCommitments { get; set; }
 
         public decimal Obligations { get; set; }
 
@@ -243,35 +243,11 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Dictionary<string, object> p)
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Dictionary<string, object> param = GetInsertColumns(source, Provider.SQLite, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                SQLiteQuery query = new SQLiteQuery(source, param);
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Insert(Source source, Provider provider,Dictionary<string, object> p)
-        {
-            try
-            {
-                Dictionary<string, object> param = GetInsertColumns(source, provider, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                Query query = new Query(source, provider, Sql.INSERT, param);
+                Query query = new Query(source, provider, Sql.INSERT, p);
                 string cmd = query.InsertStatement;
                 SQLiteConnection conn = (SQLiteConnection)query.GetDataConnection(Provider.SQLite);
                 conn.Open();
@@ -291,7 +267,7 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, Provider.SQLite, Sql.UPDATE, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
@@ -329,7 +305,7 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, p);
+                SQLiteQuery query = new SQLiteQuery(source, Provider.SQLite, Sql.DELETE, p);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
