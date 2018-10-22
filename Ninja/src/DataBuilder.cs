@@ -504,8 +504,11 @@ namespace BudgetExecution
                     {
                         if(dc.ColumnName.Equals("ID") ||
                            dc.ColumnName.Equals("Amount") ||
-                           dc.ColumnName.Contains("Obligation") ||
-                           dc.ColumnName.Contains("Commitment"))
+                           dc.ColumnName.Equals("Hours") ||
+                           dc.ColumnName.Contains("Obligations") ||
+                           dc.ColumnName.Contains("Commitments") ||
+                           dc.ColumnName.Contains("OpenCommitments") ||
+                           dc.ColumnName.Contains("ULO"))
                         {
                             continue;
                         }

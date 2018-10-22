@@ -185,7 +185,7 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets or sets the ChartField
         /// </summary>
-        public Field ChartField { get; set; }
+        public Field PrimaryGrouping { get; set; }
 
         /// <summary>
         ///     Gets or sets the ChartFilter
@@ -215,7 +215,7 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets or sets the ChartGroup
         /// </summary>
-        public Field ChartGroup { get; set; }
+        public Field SecondaryGrouping { get; set; }
 
         /// <summary>
         ///     Gets or sets the ProgramElements
@@ -434,11 +434,11 @@ namespace BudgetExecution
             {
                 string level = rb.Tag.ToString();
                 Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}'";
+                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}'";
                 DataTable table = ((DataTable) BindingSource.DataSource).AsEnumerable()
                                                                         .Where(p => p.Field<decimal>("Amount") > 0)
                                                                         .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                                        .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
                                                                         .Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
@@ -453,7 +453,7 @@ namespace BudgetExecution
                     GridBocFilter.Items.Clear();
                 }
 
-                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1}";
+                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridYearFilter.SelectedItem}";
                 TransitionChart(table);
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -468,12 +468,12 @@ namespace BudgetExecution
             try
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                DataTable table = ((DataTable) BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                        .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Select(p => p).CopyToDataTable();
+                BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
+                DataTable table = Table.AsEnumerable()
+                                       .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
+                                       .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
+                                       .Where(p => p.Field<decimal>("Amount") > 0)
+                                       .Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -492,7 +492,7 @@ namespace BudgetExecution
 
                 PopulateGridBocFilterItems();
                 GridBocFilter.Visible = true;
-                GridGroupBox.Text = $"{Source.ToString()} {GridFilter1} {GridFilter2}";
+                GridGroupBox.Text = $"{Source.ToString()} {GridYearFilter.SelectedItem} {GridFundFilter.SelectedItem}";
                 TransitionChart(table);
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -508,13 +508,13 @@ namespace BudgetExecution
             {
                 string level = rb.Tag.ToString();
                 Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                DataTable table = ((DataTable) BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                        .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                        .Select(p => p).CopyToDataTable();
+                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
+                DataTable table = Table.AsEnumerable()
+                                       .Where(p => p.Field<decimal>("Amount") > 0)
+                                       .Where(p => p.Field<string>("BudgetLevel").Equals(level))
+                                       .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
+                                       .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
+                                       .Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -533,7 +533,7 @@ namespace BudgetExecution
 
                 PopulateGridBocFilterItems();
                 GridBocFilter.Visible = true;
-                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2}";
+                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridYearFilter.SelectedItem} {GridFundFilter.SelectedItem}";
                 TransitionChart(table);
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -664,6 +664,11 @@ namespace BudgetExecution
         {
             try
             {
+                if(GridBocFilter.Items.Count > 0)
+                {
+                    GridBocFilter.Items.Clear();
+                }
+
                 GridFilterControl2 = sender as VisualComboBox;
                 GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
                 if(GridLevel7.Checked)
@@ -994,7 +999,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The GetTabNames
         /// </summary>
-        /// <returns>The <see /></returns>
+        /// <returns>The <see /></returns>   
         private string[] GetTabNames()
         {
             try
@@ -1049,14 +1054,33 @@ namespace BudgetExecution
             }
         }
 
-        private void GetChart(Field field, string level)
+        private void GetPrimarySummaryChart(Field field)
+        {
+            try
+            {
+                ChartMainTitle = new[]
+                {
+                    $"{Source.ToString()} Resources By {field.ToString()} "
+                };
+                BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, field, Measure, ChartType).Activate();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void GetPrimaryGroupSummaryChart(Field field, string level)
         {
             try
             {
                 Dictionary<string, object> fp = new Dictionary<string, object>
                 {
-                    [PrimaryFilter.SelectedItem.ToString()] = BocFilter3.SelectedItem.ToString(),
                     ["BudgetLevel"] = level
+                };
+                ChartMainTitle = new[]
+                {
+                    $"{Source.ToString()} Level-{level} Resources By {field.ToString()} "
                 };
                 DataBuilder fd = new DataBuilder(Source, Provider, fp);
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
@@ -1067,13 +1091,39 @@ namespace BudgetExecution
             }
         }
 
-        private void GetChart(Field field)
+        private void GetSecondaryGroupSummaryChart(Field field)
         {
             try
             {
                 Dictionary<string, object> fp = new Dictionary<string, object>
                 {
                     [PrimaryFilter.SelectedItem.ToString()] = BocFilter3.SelectedItem.ToString()
+                };
+                ChartMainTitle = new[]
+                {
+                    $"{Source.ToString()} {ChartFilter} Resources By {field.ToString()} "
+                };
+                DataBuilder fd = new DataBuilder(Source, Provider, fp);
+                BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void GetSecondaryGroupSummaryChart(Field field, string level)
+        {
+            try
+            {
+                Dictionary<string, object> fp = new Dictionary<string, object>
+                {
+                    [PrimaryFilter.SelectedItem.ToString()] = ChartFilter,
+                    ["BudgetLevel"] = level
+                };
+                ChartMainTitle = new[]
+                {
+                    $"{Source.ToString()} {ChartFilter} Level-{level} Resources By {field.ToString()} "
                 };
                 DataBuilder fd = new DataBuilder(Source, Provider, fp);
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
@@ -1133,23 +1183,17 @@ namespace BudgetExecution
 
                 if(ChartLevel7.Checked)
                 {
-                    Level = "7";
-                    var input = new Dictionary<string, object> { ["BudgetLevel"] = Level };
-                    var data = new DataBuilder(Source, Provider, input);
-                    BocChart = new BudgetChart(BocChart, ChartMainTitle, data, ChartField, Measure, ChartType).Activate();
+                    GetPrimaryGroupSummaryChart(PrimaryGrouping, ChartLevel7.Tag.ToString());
                 }
 
                 if(ChartLevel8.Checked)
                 {
-                    Level = "8";
-                    var input = new Dictionary<string, object> { ["BudgetLevel"] = Level };
-                    var data = new DataBuilder(Source, Provider, input);
-                    BocChart = new BudgetChart(BocChart, ChartMainTitle, data, ChartField, Measure, ChartType).Activate();
+                    GetPrimaryGroupSummaryChart(PrimaryGrouping, ChartLevel8.Tag.ToString());
                 }
 
                 else
                 {
-                    BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, ChartField, Measure, ChartType).Activate();
+                    GetPrimarySummaryChart(PrimaryGrouping);
                 }
             }
             catch(Exception ex)
@@ -1211,14 +1255,10 @@ namespace BudgetExecution
                 ChartFilterControl4 = sender as VisualComboBox;
                 if(ChartFilterControl4 != null)
                 {
-                    ChartGroup = (Field) Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
-                    ChartMainTitle = new[]
-                    {
-                        $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
-                    };
+                    SecondaryGrouping = (Field) Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                 }
 
-                switch(ChartGroup)
+                switch(SecondaryGrouping)
                 {
                     case Field.FundName:
                     case Field.BocName:
@@ -1230,17 +1270,17 @@ namespace BudgetExecution
                     case Field.ProgramProjectCode:
                         if(ChartLevel7.Checked)
                         {
-                            GetChart(ChartGroup, ChartLevel7.Tag.ToString());
+                            GetSecondaryGroupSummaryChart(SecondaryGrouping, ChartLevel7.Tag.ToString());
                         }
 
                         if(ChartLevel8.Checked)
                         {
-                            GetChart(ChartGroup, ChartLevel8.Tag.ToString());
+                            GetSecondaryGroupSummaryChart(SecondaryGrouping, ChartLevel8.Tag.ToString());
                         }
 
                         else
                         {
-                            GetChart(ChartGroup);
+                            GetSecondaryGroupSummaryChart(SecondaryGrouping);
                         }
 
                         break;
@@ -1292,12 +1332,12 @@ namespace BudgetExecution
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
         [ SuppressMessage("ReSharper", "AssignNullToNotNullAttribute") ]
-        internal void PrimaryFilterControl_ItemSelected(object sender, EventArgs e)
+        internal void PrimaryChartFilterControl_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 PrimaryFilter = sender as VisualComboBox;
-                ChartField = (Field) Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
+                PrimaryGrouping = (Field) Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
                 if(BocExpander1.Visible == false ||
                    BocExpander1.IsExpanded == false)
                 {
@@ -1638,25 +1678,25 @@ namespace BudgetExecution
                     case 0:
                         return new[]
                         {
-                            string.Format("Total {0} Funding by {1}", source, grouping)
+                            $"Total {source} Funding by {grouping}"
                         };
 
                     case 1:
                         return new[]
                         {
-                            string.Format("{0}  Accounts by {1}", source, grouping)
+                            $"{source}  Accounts by {grouping}"
                         };
 
                     case 2:
                         return new[]
                         {
-                            string.Format("Average {0} Funding by {1}", source, grouping)
+                            $"Average {source} Funding by {grouping}"
                         };
 
                     case 3:
                         return new[]
                         {
-                            string.Format("{0} Funding Percentage by {1}", source, grouping)
+                            $"{source} Funding Percentage by {grouping}"
                         };
                 }
 
@@ -1884,7 +1924,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
-        private void ChartButton_OnClick(object sender, EventArgs e)
+        private void AccountChartButton_OnClick(object sender, EventArgs e)
         {
             try
             {

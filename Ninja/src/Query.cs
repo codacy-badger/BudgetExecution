@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.Common;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Data.SqlServerCe;
 using System.Data.SQLite;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace BudgetExecution
 {
@@ -38,11 +40,10 @@ namespace BudgetExecution
             Provider = provider;
             Source = source;
             CommandType = command;
-            Parameters = GetDataParameters(param);
-            DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
-            SqlStatement = GetSqlStatement(Source, CommandType, Parameters);
-            DataCommand = GetDataCommand(Parameters, CommandType);
+            DataConnection = GetDataConnection(Provider);
+            SqlStatement = GetSqlStatement(Source, CommandType, param);
+            DataCommand = GetDataCommand(SqlStatement, DataConnection);
             DataAdapter = GetDataAdapter(DataCommand, CommandType);
             if(CommandType == Sql.SELECT)
             {
@@ -422,10 +423,9 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                DbParameter[] sqlparameter = GetDataParameters(param);
-                foreach(DbParameter p in sqlparameter)
+                foreach(KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -443,14 +443,14 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        internal string GetSelectParamString(DbParameter[] param)
+        internal string GetSelectParamString(Dictionary<string, object> p)
         {
             try
             {
                 string vals = string.Empty;
-                foreach(DbParameter p in param)
+                foreach(KeyValuePair<string, object> kvp in p)
                 {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -462,7 +462,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+        
         /// <summary>
         ///     Gets the database parameters.
         /// </summary>
@@ -472,12 +472,12 @@ namespace BudgetExecution
         {
             try
             {
-                DbParameter[] val = new DbParameter[input.Count];
-                for(int i = 0; i < input.Count; i++)
+                switch(Provider)
                 {
-                    switch(Provider)
+                    case Provider.Access:
                     {
-                        case Provider.Access:
+                        OleDbParameter[] val = new OleDbParameter[input.Count];
+                        for(int i = 0; i < input.Count; i++)
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -485,11 +485,15 @@ namespace BudgetExecution
                                 val[i].SourceColumn = kvp.Key;
                                 val[i].Value = kvp.Value;
                             }
-
-                            break;
                         }
 
-                        case Provider.Excel:
+                        return val;
+                    }
+
+                    case Provider.Excel:
+                    {
+                        OleDbParameter[] val = new OleDbParameter[input.Count];
+                        for(int i = 0; i < input.Count; i++)
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -497,23 +501,33 @@ namespace BudgetExecution
                                 val[i].SourceColumn = kvp.Key;
                                 val[i].Value = kvp.Value;
                             }
-
-                            break;
                         }
 
-                        case Provider.SQLite:
+                        return val;
+                    }
+
+                    case Provider.SQLite:
+                    {
+                        SQLiteParameter[] val = new SQLiteParameter[input.Count];
+                        for(int i = 0; i < input.Count; i++)
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
                                 val[i] = new SQLiteParameter();
                                 val[i].SourceColumn = kvp.Key;
                                 val[i].Value = kvp.Value;
-                            }
-
-                            break;
+                                val[i].ParameterName = kvp.Key;
+                                val[i].DbType = DbType.String;
+                            }                            
                         }
 
-                        case Provider.SqlCe:
+                        return val;
+                    }
+
+                    case Provider.SqlCe:
+                    {
+                        SqlCeParameter[] val = new SqlCeParameter[input.Count];
+                        for(int i = 0; i < input.Count; i++)
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -521,11 +535,15 @@ namespace BudgetExecution
                                 val[i].SourceColumn = kvp.Key;
                                 val[i].Value = kvp.Value;
                             }
-
-                            break;
                         }
 
-                        case Provider.SqlServer:
+                        return val;
+                    }
+
+                    case Provider.SqlServer:
+                    {
+                        SqlParameter[] val = new SqlParameter[input.Count];
+                        for(int i = 0; i < input.Count; i++)
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -533,13 +551,13 @@ namespace BudgetExecution
                                 val[i].SourceColumn = kvp.Key;
                                 val[i].Value = kvp.Value;
                             }
-
-                            break;
                         }
+
+                        return val;
                     }
                 }
 
-                return val;
+                return null;
             }
             catch(Exception ex)
             {
@@ -547,7 +565,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+        
         /// <summary>
         ///     Gets the SQL statement.
         /// </summary>
@@ -556,7 +574,7 @@ namespace BudgetExecution
         /// <param name="p">The p.</param>
         /// <param name="cmd">The command.</param>
         /// <returns></returns>
-        public string GetSqlStatement(Source source, Sql cmd, DbParameter[] p)
+        public string GetSqlStatement(Source source, Sql cmd, Dictionary<string, object> p)
         {
             try
             {
@@ -588,7 +606,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+        
         /// <summary>
         ///     Gets the select statement.
         /// </summary>
@@ -614,17 +632,17 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetSelectStatement(Source source, DbParameter[] param)
+        public string GetSelectStatement(Source source, Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach(DbParameter p in param)
+                foreach(KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
+                vals = vals.TrimEnd().Substring(0, vals.Length - 4);
                 return $"SELECT * FROM {source.ToString()} WHERE {vals}";
             }
             catch(Exception ex)
@@ -633,31 +651,27 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+       
         /// <summary>
         ///     Gets the update statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="update">The update.</param>
         /// <returns></returns>
-        public string GetUpdateStatement(Source source, DbParameter[] update)
+        public string GetUpdateStatement(Source source, Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                int pid = 0;
-                foreach(DbParameter p in update)
-                {
-                    if(p.SourceColumn == "ID")
-                    {
-                        pid = (int) p.Value;
-                    }
+                int id = int.Parse(param["ID"].ToString());
 
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                foreach(KeyValuePair<string, object> kvp in param)
+                {
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
-                return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
+                return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{id}'";
             }
             catch(Exception ex)
             {
@@ -665,23 +679,23 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+        
         /// <summary>
         ///     Gets the insert statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetInsertStatement(Source source, DbParameter[] param)
+        public string GetInsertStatement(Source source, Dictionary<string, object> param)
         {
             try
             {
                 string cols = string.Empty;
                 string vals = string.Empty;
-                foreach(DbParameter p in param)
+                foreach(KeyValuePair<string, object> kvp in param)
                 {
-                    cols += $"{p.SourceColumn}, ";
-                    vals += $"{p.Value}, ";
+                    cols += $"{kvp.Key}, ";
+                    vals += $"{kvp.Value}, ";
                 }
 
                 cols = cols.Trim().Substring(0, cols.Length - 2);
@@ -694,25 +708,20 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+        
         /// <summary>
         ///     Gets the delete statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetDeleteStatement(Source source, DbParameter[] param)
+        public string GetDeleteStatement(Source source, Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach(DbParameter p in param)
-                {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return $"DELETE * FROM {source.ToString()} WHERE {vals}";
+                int id = int.Parse(param["ID"].ToString());
+                return $"DELETE * FROM {source.ToString()} WHERE ID = '{id}'";
             }
             catch(Exception ex)
             {
@@ -720,43 +729,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
-        //COMMAND METHODS----------------------------------------------------------------
-
-
-        /// <summary>
-        ///     Gets the delete command.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="pmr">The PMR.</param>
-        /// <param name="connection">The connection.</param>
-        /// <returns></returns>
-        public DbCommand GetDeleteCommand(DbParameter[] pmr)
-        {
-            try
-            {
-                if(pmr.Length > 0)
-                {
-                    string sql = GetDeleteStatement(Source, pmr);
-                    DbCommand delete = GetDataCommand(sql, DataConnection);
-                    delete.CommandText = sql;
-                    delete.Connection = DataConnection;
-                    foreach(DbParameter p in pmr)
-                    {
-                        delete.Parameters.Add(p);
-                    }
-
-                    return delete;
-                }
-
-                return null;
-            }
-            catch(Exception e)
-            {
-                new Error(e).ShowDialog();
-                return null;
-            }
-        }
+        
 
         /// <summary>
         ///     Gets the select command.
@@ -794,65 +767,21 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the select command.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <param name="connection">The connection.</param>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
-        public DbCommand GetSelectCommand(DbParameter[] pmr)
-        {
-            try
-            {
-                if(pmr.Length > 0)
-                {
-                    string sql = GetSelectStatement(Source, pmr);
-                    DbCommand select = GetDataCommand(sql, DataConnection);
-                    select.CommandText = sql;
-                    select.Connection = DataConnection;
-                    foreach(DbParameter p in pmr)
-                    {
-                        select.Parameters.Add(p);
-                    }
-
-                    return select;
-                }
-
-                return null;
-            }
-            catch(Exception e)
-            {
-                new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
         ///     Gets the update command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public DbCommand GetUpdateCommand(DbParameter[] pmr)
+        public DbCommand GetUpdateCommand(Dictionary<string, object> pmr)
         {
             try
             {
-                if(pmr.Length > 0)
-                {
-                    string sql = GetUpdateStatement(Source, pmr);
-                    DbCommand update = GetDataCommand(sql, DataConnection);
-                    update.CommandText = sql;
-                    update.Connection = DataConnection;
-                    foreach(DbParameter p in pmr)
-                    {
-                        update.Parameters.Add(p);
-                    }
-
-                    return update;
-                }
-
-                return null;
+                string sql = GetUpdateStatement(Source, pmr);
+                DbCommand update = GetDataCommand(sql, DataConnection);
+                update.CommandText = sql;
+                update.Connection = DataConnection;
+                return update;
             }
             catch(Exception e)
             {
@@ -868,25 +797,32 @@ namespace BudgetExecution
         /// <param name="connection">The connection.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public DbCommand GetInsertCommand(DbParameter[] pmr)
+        public DbCommand GetInsertCommand(Dictionary<string, object> pmr)
         {
             try
             {
-                if(pmr.Length > 0)
-                {
-                    string sql = GetInsertStatement(Source, pmr);
-                    DbCommand insert = GetDataCommand(sql, DataConnection);
-                    insert.CommandText = sql;
-                    insert.Connection = DataConnection;
-                    foreach(DbParameter p in pmr)
-                    {
-                        insert.Parameters.Add(p);
-                    }
-
-                    return insert;
-                }
-
+                string sql = GetInsertStatement(Source, pmr);
+                DbCommand insert = GetDataCommand(sql, DataConnection);
+                insert.CommandText = sql;
+                insert.Connection = DataConnection;
+                return insert;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
                 return null;
+            }
+        }
+
+        public DbCommand GetDeleteCommand(Dictionary<string, object> pmr)
+        {
+            try
+            {
+                string sql = GetDeleteStatement(Source, pmr);
+                DbCommand deleteCommand = GetDataCommand(sql, DataConnection);
+                deleteCommand.CommandText = sql;
+                deleteCommand.Connection = DataConnection;
+                return deleteCommand;
             }
             catch(Exception e)
             {
@@ -903,14 +839,14 @@ namespace BudgetExecution
         /// <param name="cmd">The command.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public DbCommand GetDataCommand(DbParameter[] pmr, Sql cmd)
+        public DbCommand GetDataCommand(Dictionary<string, object> pmr, Sql cmd)
         {
             try
             {
                 switch(cmd)
                 {
                     case Sql.SELECT:
-                        return GetSelectCommand(pmr);
+                        return GetSelectCommand(GetSelectParamString(pmr), DataConnection);
 
                     case Sql.UPDATE:
                         return GetUpdateCommand(pmr);
@@ -922,7 +858,7 @@ namespace BudgetExecution
                         return GetDeleteCommand(pmr);
 
                     default:
-                        return GetSelectCommand(pmr);
+                        return GetSelectCommand(GetSelectParamString(pmr), DataConnection);
                 }
             }
             catch(Exception ex)

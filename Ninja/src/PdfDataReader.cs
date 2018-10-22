@@ -7,7 +7,6 @@ namespace BudgetExecution
         public PdfDataReader()
         {
             InitializeComponent();
-            DataFilterTab.TabVisible = false;
         }
     }
 }
