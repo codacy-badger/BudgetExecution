@@ -736,15 +736,7 @@ namespace BudgetExecution
 
         private void AddButton_OnClick(object sender, EventArgs e)
         {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
+
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)

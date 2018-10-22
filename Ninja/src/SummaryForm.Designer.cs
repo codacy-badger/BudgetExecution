@@ -50,12 +50,14 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle2 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle3 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle4 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle5 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle6 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle7 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -68,21 +70,20 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            VisualPlus.Structure.TextStyle textStyle16 = new VisualPlus.Structure.TextStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
-            VisualPlus.Structure.TextStyle textStyle7 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle17 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle8 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle12 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle9 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle13 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle10 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle11 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle13 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle12 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle14 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle15 = new VisualPlus.Structure.TextStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            VisualPlus.Structure.TextStyle textStyle15 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle46 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle16 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle47 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries5 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo5 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -95,7 +96,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            VisualPlus.Structure.TextStyle textStyle17 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle18 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle19 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle20 = new VisualPlus.Structure.TextStyle();
@@ -124,6 +124,7 @@ namespace BudgetExecution
             VisualPlus.Structure.TextStyle textStyle43 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle44 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle45 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle46 = new VisualPlus.Structure.TextStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -171,7 +172,8 @@ namespace BudgetExecution
             this.MiniTabControl1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.buttonEditChildButton1 = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
             this.AllocationTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.LevelFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
+            this.ChartLevel8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
+            this.ChartLevel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.PrimaryFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.BocExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.BocFilter4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
@@ -187,8 +189,8 @@ namespace BudgetExecution
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.DatabaseTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.GridGroupBox = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
-            this.L8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
-            this.L7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
+            this.GridLevel8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
+            this.GridLevel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.visualGroupBox5 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.GridYearFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.GridBocFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
@@ -208,19 +210,20 @@ namespace BudgetExecution
             this.Grid = new System.Windows.Forms.DataGridView();
             this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.DatabaseSearchButton = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.GridRefreshButton = new System.Windows.Forms.Button();
             this.ChartButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.CopyButton = new System.Windows.Forms.Button();
+            this.ExcelButton = new System.Windows.Forms.Button();
             this.visualGroupBox1 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.TransferButton = new System.Windows.Forms.Button();
+            this.DatabaseSearchButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
@@ -1091,7 +1094,8 @@ namespace BudgetExecution
             // 
             // AllocationTab
             // 
-            this.AllocationTab.Controls.Add(this.LevelFilter);
+            this.AllocationTab.Controls.Add(this.ChartLevel8);
+            this.AllocationTab.Controls.Add(this.ChartLevel7);
             this.AllocationTab.Controls.Add(this.PrimaryFilter);
             this.AllocationTab.Controls.Add(this.BocExpander2);
             this.AllocationTab.Controls.Add(this.BocExpander1);
@@ -1109,68 +1113,96 @@ namespace BudgetExecution
             this.AllocationTab.Tag = "BocName";
             this.AllocationTab.Text = "Authority";
             this.AllocationTab.ThemesEnabled = false;
-            this.AllocationTab.Click += new System.EventHandler(this.AllocationTab_Click);
             // 
-            // LevelFilter
+            // ChartLevel8
             // 
-            this.LevelFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.LevelFilter.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LevelFilter.BackColorState.Enabled = System.Drawing.Color.Black;
-            this.LevelFilter.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LevelFilter.Border.HoverColor = System.Drawing.Color.SteelBlue;
-            this.LevelFilter.Border.HoverVisible = true;
-            this.LevelFilter.Border.Rounding = 6;
-            this.LevelFilter.Border.Thickness = 1;
-            this.LevelFilter.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.LevelFilter.Border.Visible = true;
-            this.LevelFilter.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.LevelFilter.ButtonImage = null;
-            this.LevelFilter.ButtonStyle = VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox.ButtonStyles.Arrow;
-            this.LevelFilter.ButtonWidth = 30;
-            this.LevelFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.LevelFilter.DropDownHeight = 100;
-            this.LevelFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LevelFilter.DropDownWidth = 34;
-            this.LevelFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LevelFilter.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.LevelFilter.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.LevelFilter.FormattingEnabled = true;
-            this.LevelFilter.ImageList = null;
-            this.LevelFilter.ImageVisible = false;
-            this.LevelFilter.Index = 0;
-            this.LevelFilter.IntegralHeight = false;
-            this.LevelFilter.ItemHeight = 30;
-            this.LevelFilter.ItemImageVisible = true;
-            this.LevelFilter.Items.AddRange(new object[] {
-            "7",
-            "8"});
-            this.LevelFilter.Location = new System.Drawing.Point(1524, 69);
-            this.LevelFilter.MenuItemHover = System.Drawing.Color.SteelBlue;
-            this.LevelFilter.MenuItemNormal = System.Drawing.Color.Black;
-            this.LevelFilter.MenuTextColor = System.Drawing.Color.LightSteelBlue;
-            this.LevelFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.LevelFilter.Name = "LevelFilter";
-            this.LevelFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LevelFilter.SeparatorVisible = false;
-            this.LevelFilter.Size = new System.Drawing.Size(192, 36);
-            this.LevelFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
-            this.LevelFilter.TabIndex = 173;
-            this.LevelFilter.Tag = "BudgetLevel";
-            this.LevelFilter.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.LevelFilter.TextDisabledColor = System.Drawing.Color.Empty;
-            this.LevelFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.LevelFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            this.LevelFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.ChartLevel8.BackColor = System.Drawing.Color.Transparent;
+            this.ChartLevel8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.ChartLevel8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.ChartLevel8.Border.HoverVisible = true;
+            this.ChartLevel8.Border.Rounding = 12;
+            this.ChartLevel8.Border.Thickness = 1;
+            this.ChartLevel8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.ChartLevel8.Border.Visible = true;
+            this.ChartLevel8.Box = new System.Drawing.Size(14, 10);
+            this.ChartLevel8.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChartLevel8.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.ChartLevel8.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.ChartLevel8.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ChartLevel8.BoxSpacing = 2;
+            this.ChartLevel8.CheckStyle.AutoSize = true;
+            this.ChartLevel8.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.ChartLevel8.CheckStyle.Character = '✔';
+            this.ChartLevel8.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.ChartLevel8.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ChartLevel8.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.ChartLevel8.CheckStyle.ShapeRounding = 6;
+            this.ChartLevel8.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.ChartLevel8.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.ChartLevel8.CheckStyle.Thickness = 2F;
+            this.ChartLevel8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChartLevel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ChartLevel8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.ChartLevel8.IsBoxLarger = false;
+            this.ChartLevel8.Location = new System.Drawing.Point(1633, 61);
+            this.ChartLevel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.ChartLevel8.Name = "ChartLevel8";
+            this.ChartLevel8.Size = new System.Drawing.Size(83, 29);
+            this.ChartLevel8.TabIndex = 180;
+            this.ChartLevel8.Tag = "8";
+            this.ChartLevel8.Text = "Level 8";
+            this.ChartLevel8.TextSize = new System.Drawing.Size(57, 24);
             textStyle1.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             textStyle1.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             textStyle1.Hover = System.Drawing.Color.Empty;
             textStyle1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.LevelFilter.TextStyle = textStyle1;
-            this.LevelFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.LevelFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.LevelFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.LevelFilter.Watermark.Text = "Watermark text";
-            this.LevelFilter.Watermark.Visible = false;
+            this.ChartLevel8.TextStyle = textStyle1;
+            this.ChartLevel8.Click += new System.EventHandler(this.GridLevel8Button_OnClicked);
+            // 
+            // ChartLevel7
+            // 
+            this.ChartLevel7.BackColor = System.Drawing.Color.Transparent;
+            this.ChartLevel7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.ChartLevel7.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.ChartLevel7.Border.HoverVisible = true;
+            this.ChartLevel7.Border.Rounding = 12;
+            this.ChartLevel7.Border.Thickness = 1;
+            this.ChartLevel7.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.ChartLevel7.Border.Visible = true;
+            this.ChartLevel7.Box = new System.Drawing.Size(14, 10);
+            this.ChartLevel7.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChartLevel7.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.ChartLevel7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.ChartLevel7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ChartLevel7.BoxSpacing = 2;
+            this.ChartLevel7.CheckStyle.AutoSize = true;
+            this.ChartLevel7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.ChartLevel7.CheckStyle.Character = '✔';
+            this.ChartLevel7.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.ChartLevel7.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ChartLevel7.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.ChartLevel7.CheckStyle.ShapeRounding = 6;
+            this.ChartLevel7.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.ChartLevel7.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.ChartLevel7.CheckStyle.Thickness = 2F;
+            this.ChartLevel7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChartLevel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ChartLevel7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.ChartLevel7.IsBoxLarger = false;
+            this.ChartLevel7.Location = new System.Drawing.Point(1524, 61);
+            this.ChartLevel7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.ChartLevel7.Name = "ChartLevel7";
+            this.ChartLevel7.Size = new System.Drawing.Size(91, 29);
+            this.ChartLevel7.TabIndex = 179;
+            this.ChartLevel7.Tag = "7";
+            this.ChartLevel7.Text = "Level 7";
+            this.ChartLevel7.TextSize = new System.Drawing.Size(57, 24);
+            textStyle2.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle2.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle2.Hover = System.Drawing.Color.Empty;
+            textStyle2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.ChartLevel7.TextStyle = textStyle2;
+            this.ChartLevel7.Click += new System.EventHandler(this.ChartLevel7Button_OnClicked);
             // 
             // PrimaryFilter
             // 
@@ -1227,11 +1259,11 @@ namespace BudgetExecution
             this.PrimaryFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrimaryFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.PrimaryFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle2.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle2.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle2.Hover = System.Drawing.Color.Empty;
-            textStyle2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.PrimaryFilter.TextStyle = textStyle2;
+            textStyle3.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle3.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle3.Hover = System.Drawing.Color.Empty;
+            textStyle3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.PrimaryFilter.TextStyle = textStyle3;
             this.PrimaryFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.PrimaryFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.PrimaryFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1304,11 +1336,11 @@ namespace BudgetExecution
             this.BocFilter4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BocFilter4.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.BocFilter4.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle3.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle3.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle3.Hover = System.Drawing.Color.Empty;
-            textStyle3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BocFilter4.TextStyle = textStyle3;
+            textStyle4.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle4.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle4.Hover = System.Drawing.Color.Empty;
+            textStyle4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BocFilter4.TextStyle = textStyle4;
             this.BocFilter4.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BocFilter4.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BocFilter4.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1362,11 +1394,11 @@ namespace BudgetExecution
             this.BocFilter3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BocFilter3.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.BocFilter3.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle4.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle4.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle4.Hover = System.Drawing.Color.Empty;
-            textStyle4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BocFilter3.TextStyle = textStyle4;
+            textStyle5.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle5.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle5.Hover = System.Drawing.Color.Empty;
+            textStyle5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BocFilter3.TextStyle = textStyle5;
             this.BocFilter3.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BocFilter3.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BocFilter3.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1407,10 +1439,10 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.label6);
             this.BocExpander1.Controls.Add(this.BocFilter1);
             this.BocExpander1.ExpandedHeight = 245;
-            this.BocExpander1.IsExpanded = true;
+            this.BocExpander1.IsExpanded = false;
             this.BocExpander1.Location = new System.Drawing.Point(1501, 221);
             this.BocExpander1.Name = "BocExpander1";
-            this.BocExpander1.Size = new System.Drawing.Size(230, 245);
+            this.BocExpander1.Size = new System.Drawing.Size(230, 37);
             this.BocExpander1.TabIndex = 108;
             this.BocExpander1.Text = "Chart Configuration";
             this.BocExpander1.UseAnimation = true;
@@ -1478,11 +1510,11 @@ namespace BudgetExecution
             this.BocFilter2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BocFilter2.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.BocFilter2.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle5.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle5.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle5.Hover = System.Drawing.Color.Empty;
-            textStyle5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BocFilter2.TextStyle = textStyle5;
+            textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle6.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle6.Hover = System.Drawing.Color.Empty;
+            textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BocFilter2.TextStyle = textStyle6;
             this.BocFilter2.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BocFilter2.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BocFilter2.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1550,11 +1582,11 @@ namespace BudgetExecution
             this.BocFilter1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BocFilter1.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.BocFilter1.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle6.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle6.Hover = System.Drawing.Color.Empty;
-            textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BocFilter1.TextStyle = textStyle6;
+            textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle7.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle7.Hover = System.Drawing.Color.Empty;
+            textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BocFilter1.TextStyle = textStyle7;
             this.BocFilter1.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BocFilter1.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BocFilter1.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1756,8 +1788,8 @@ namespace BudgetExecution
             this.GridGroupBox.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             this.GridGroupBox.Border.Visible = true;
             this.GridGroupBox.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
-            this.GridGroupBox.Controls.Add(this.L8);
-            this.GridGroupBox.Controls.Add(this.L7);
+            this.GridGroupBox.Controls.Add(this.GridLevel8);
+            this.GridGroupBox.Controls.Add(this.GridLevel7);
             this.GridGroupBox.Controls.Add(this.visualGroupBox5);
             this.GridGroupBox.Controls.Add(this.visualGroupBox3);
             this.GridGroupBox.Controls.Add(this.visualGroupBox4);
@@ -1777,102 +1809,102 @@ namespace BudgetExecution
             this.GridGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
             this.GridGroupBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridGroupBox.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle16.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle16.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle16.Hover = System.Drawing.Color.Empty;
-            textStyle16.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridGroupBox.TextStyle = textStyle16;
+            textStyle17.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle17.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle17.Hover = System.Drawing.Color.Empty;
+            textStyle17.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridGroupBox.TextStyle = textStyle17;
             this.GridGroupBox.TitleBoxHeight = 35;
             // 
-            // L8
+            // GridLevel8
             // 
-            this.L8.BackColor = System.Drawing.Color.Transparent;
-            this.L8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.L8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.L8.Border.HoverVisible = true;
-            this.L8.Border.Rounding = 12;
-            this.L8.Border.Thickness = 1;
-            this.L8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L8.Border.Visible = true;
-            this.L8.Box = new System.Drawing.Size(14, 10);
-            this.L8.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.L8.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.L8.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
-            this.L8.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.L8.BoxSpacing = 2;
-            this.L8.CheckStyle.AutoSize = true;
-            this.L8.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
-            this.L8.CheckStyle.Character = '✔';
-            this.L8.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
-            this.L8.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L8.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.L8.CheckStyle.ShapeRounding = 6;
-            this.L8.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L8.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
-            this.L8.CheckStyle.Thickness = 2F;
-            this.L8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.L8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.L8.IsBoxLarger = false;
-            this.L8.Location = new System.Drawing.Point(1066, 3);
-            this.L8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.L8.Name = "L8";
-            this.L8.Size = new System.Drawing.Size(92, 29);
-            this.L8.TabIndex = 178;
-            this.L8.Tag = "8";
-            this.L8.Text = "Level 8";
-            this.L8.TextSize = new System.Drawing.Size(57, 24);
-            textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle7.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle7.Hover = System.Drawing.Color.Empty;
-            textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.L8.TextStyle = textStyle7;
-            this.L8.Click += new System.EventHandler(this.L8_OnClicked);
-            // 
-            // L7
-            // 
-            this.L7.BackColor = System.Drawing.Color.Transparent;
-            this.L7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.L7.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.L7.Border.HoverVisible = true;
-            this.L7.Border.Rounding = 12;
-            this.L7.Border.Thickness = 1;
-            this.L7.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L7.Border.Visible = true;
-            this.L7.Box = new System.Drawing.Size(14, 10);
-            this.L7.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.L7.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.L7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
-            this.L7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.L7.BoxSpacing = 2;
-            this.L7.CheckStyle.AutoSize = true;
-            this.L7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
-            this.L7.CheckStyle.Character = '✔';
-            this.L7.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
-            this.L7.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L7.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.L7.CheckStyle.ShapeRounding = 6;
-            this.L7.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L7.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
-            this.L7.CheckStyle.Thickness = 2F;
-            this.L7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.L7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.L7.IsBoxLarger = false;
-            this.L7.Location = new System.Drawing.Point(954, 3);
-            this.L7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.L7.Name = "L7";
-            this.L7.Size = new System.Drawing.Size(91, 29);
-            this.L7.TabIndex = 177;
-            this.L7.Tag = "7";
-            this.L7.Text = "Level 7";
-            this.L7.TextSize = new System.Drawing.Size(57, 24);
+            this.GridLevel8.BackColor = System.Drawing.Color.Transparent;
+            this.GridLevel8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.GridLevel8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.GridLevel8.Border.HoverVisible = true;
+            this.GridLevel8.Border.Rounding = 12;
+            this.GridLevel8.Border.Thickness = 1;
+            this.GridLevel8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.GridLevel8.Border.Visible = true;
+            this.GridLevel8.Box = new System.Drawing.Size(14, 10);
+            this.GridLevel8.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GridLevel8.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.GridLevel8.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.GridLevel8.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.GridLevel8.BoxSpacing = 2;
+            this.GridLevel8.CheckStyle.AutoSize = true;
+            this.GridLevel8.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.GridLevel8.CheckStyle.Character = '✔';
+            this.GridLevel8.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.GridLevel8.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.GridLevel8.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.GridLevel8.CheckStyle.ShapeRounding = 6;
+            this.GridLevel8.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.GridLevel8.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.GridLevel8.CheckStyle.Thickness = 2F;
+            this.GridLevel8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GridLevel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.GridLevel8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.GridLevel8.IsBoxLarger = false;
+            this.GridLevel8.Location = new System.Drawing.Point(1066, 3);
+            this.GridLevel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.GridLevel8.Name = "GridLevel8";
+            this.GridLevel8.Size = new System.Drawing.Size(92, 29);
+            this.GridLevel8.TabIndex = 178;
+            this.GridLevel8.Tag = "8";
+            this.GridLevel8.Text = "Level 8";
+            this.GridLevel8.TextSize = new System.Drawing.Size(57, 24);
             textStyle8.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             textStyle8.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             textStyle8.Hover = System.Drawing.Color.Empty;
             textStyle8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.L7.TextStyle = textStyle8;
-            this.L7.Click += new System.EventHandler(this.L7_OnClicked);
+            this.GridLevel8.TextStyle = textStyle8;
+            this.GridLevel8.Click += new System.EventHandler(this.GridLevel8Button_OnClicked);
+            // 
+            // GridLevel7
+            // 
+            this.GridLevel7.BackColor = System.Drawing.Color.Transparent;
+            this.GridLevel7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.GridLevel7.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.GridLevel7.Border.HoverVisible = true;
+            this.GridLevel7.Border.Rounding = 12;
+            this.GridLevel7.Border.Thickness = 1;
+            this.GridLevel7.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.GridLevel7.Border.Visible = true;
+            this.GridLevel7.Box = new System.Drawing.Size(14, 10);
+            this.GridLevel7.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GridLevel7.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.GridLevel7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.GridLevel7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.GridLevel7.BoxSpacing = 2;
+            this.GridLevel7.CheckStyle.AutoSize = true;
+            this.GridLevel7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.GridLevel7.CheckStyle.Character = '✔';
+            this.GridLevel7.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.GridLevel7.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.GridLevel7.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.GridLevel7.CheckStyle.ShapeRounding = 6;
+            this.GridLevel7.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.GridLevel7.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.GridLevel7.CheckStyle.Thickness = 2F;
+            this.GridLevel7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GridLevel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.GridLevel7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.GridLevel7.IsBoxLarger = false;
+            this.GridLevel7.Location = new System.Drawing.Point(954, 3);
+            this.GridLevel7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.GridLevel7.Name = "GridLevel7";
+            this.GridLevel7.Size = new System.Drawing.Size(91, 29);
+            this.GridLevel7.TabIndex = 177;
+            this.GridLevel7.Tag = "7";
+            this.GridLevel7.Text = "Level 7";
+            this.GridLevel7.TextSize = new System.Drawing.Size(57, 24);
+            textStyle9.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle9.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle9.Hover = System.Drawing.Color.Empty;
+            textStyle9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridLevel7.TextStyle = textStyle9;
+            this.GridLevel7.Click += new System.EventHandler(this.GridLevel7Button_OnClicked);
             // 
             // visualGroupBox5
             // 
@@ -1905,11 +1937,11 @@ namespace BudgetExecution
             this.visualGroupBox5.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox5.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle12.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle12.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle12.Hover = System.Drawing.Color.Empty;
-            textStyle12.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox5.TextStyle = textStyle12;
+            textStyle13.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle13.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle13.Hover = System.Drawing.Color.Empty;
+            textStyle13.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox5.TextStyle = textStyle13;
             this.visualGroupBox5.TitleBoxHeight = 25;
             // 
             // GridYearFilter
@@ -1958,11 +1990,11 @@ namespace BudgetExecution
             this.GridYearFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridYearFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridYearFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle9.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle9.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle9.Hover = System.Drawing.Color.Empty;
-            textStyle9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridYearFilter.TextStyle = textStyle9;
+            textStyle10.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle10.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle10.Hover = System.Drawing.Color.Empty;
+            textStyle10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridYearFilter.TextStyle = textStyle10;
             this.GridYearFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridYearFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridYearFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -2017,11 +2049,11 @@ namespace BudgetExecution
             this.GridBocFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridBocFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridBocFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle10.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle10.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle10.Hover = System.Drawing.Color.Empty;
-            textStyle10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridBocFilter.TextStyle = textStyle10;
+            textStyle11.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle11.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle11.Hover = System.Drawing.Color.Empty;
+            textStyle11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridBocFilter.TextStyle = textStyle11;
             this.GridBocFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridBocFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridBocFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -2076,11 +2108,11 @@ namespace BudgetExecution
             this.GridFundFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridFundFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridFundFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle11.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle11.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle11.Hover = System.Drawing.Color.Empty;
-            textStyle11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridFundFilter.TextStyle = textStyle11;
+            textStyle12.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle12.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle12.Hover = System.Drawing.Color.Empty;
+            textStyle12.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridFundFilter.TextStyle = textStyle12;
             this.GridFundFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridFundFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridFundFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -2118,11 +2150,11 @@ namespace BudgetExecution
             this.visualGroupBox3.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox3.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle13.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle13.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle13.Hover = System.Drawing.Color.Empty;
-            textStyle13.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox3.TextStyle = textStyle13;
+            textStyle14.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle14.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle14.Hover = System.Drawing.Color.Empty;
+            textStyle14.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox3.TextStyle = textStyle14;
             this.visualGroupBox3.TitleBoxHeight = 25;
             // 
             // tableLayoutPanel1
@@ -2291,11 +2323,11 @@ namespace BudgetExecution
             this.visualGroupBox4.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox4.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle14.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle14.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle14.Hover = System.Drawing.Color.Empty;
-            textStyle14.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox4.TextStyle = textStyle14;
+            textStyle15.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle15.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle15.Hover = System.Drawing.Color.Empty;
+            textStyle15.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox4.TextStyle = textStyle15;
             this.visualGroupBox4.TitleBoxHeight = 25;
             // 
             // metroPanel1
@@ -2357,6 +2389,7 @@ namespace BudgetExecution
             this.Grid.Size = new System.Drawing.Size(887, 304);
             this.Grid.TabIndex = 2;
             this.Grid.SelectionChanged += new System.EventHandler(this.UpdateAccountChart);
+            this.Grid.DoubleClick += new System.EventHandler(this.Grid_OnDoubleClick);
             // 
             // visualGroupBox2
             // 
@@ -2375,23 +2408,23 @@ namespace BudgetExecution
             this.visualGroupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.visualGroupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.visualGroupBox2.Image = null;
-            this.visualGroupBox2.Location = new System.Drawing.Point(221, 551);
+            this.visualGroupBox2.Location = new System.Drawing.Point(221, 572);
             this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox2.Name = "visualGroupBox2";
             this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.visualGroupBox2.Separator = false;
             this.visualGroupBox2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualGroupBox2.Size = new System.Drawing.Size(937, 245);
+            this.visualGroupBox2.Size = new System.Drawing.Size(937, 184);
             this.visualGroupBox2.TabIndex = 173;
             this.visualGroupBox2.Text = "Navigation";
             this.visualGroupBox2.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox2.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle15.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle15.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle15.Hover = System.Drawing.Color.Empty;
-            textStyle15.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox2.TextStyle = textStyle15;
+            textStyle16.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle16.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle16.Hover = System.Drawing.Color.Empty;
+            textStyle16.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox2.TextStyle = textStyle16;
             this.visualGroupBox2.TitleBoxHeight = 25;
             // 
             // tableLayoutPanel2
@@ -2405,47 +2438,29 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.tableLayoutPanel2.Controls.Add(this.DatabaseSearchButton, 7, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.ChartButton, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.EditButton, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.AddButton, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.CopyButton, 5, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(17, 92);
+            this.tableLayoutPanel2.Controls.Add(this.ExcelButton, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.EditButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.AddButton, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 4, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 56);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(887, 67);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(908, 71);
             this.tableLayoutPanel2.TabIndex = 169;
-            // 
-            // DatabaseSearchButton
-            // 
-            this.DatabaseSearchButton.BackColor = System.Drawing.Color.Transparent;
-            this.DatabaseSearchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatabaseSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DatabaseSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
-            this.DatabaseSearchButton.Location = new System.Drawing.Point(776, 5);
-            this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DatabaseSearchButton.Name = "DatabaseSearchButton";
-            this.DatabaseSearchButton.Size = new System.Drawing.Size(107, 57);
-            this.DatabaseSearchButton.TabIndex = 169;
-            this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
-            this.DatabaseSearchButton.UseVisualStyleBackColor = false;
-            this.DatabaseSearchButton.Click += new System.EventHandler(this.DatabaseSearchButton_OnClick);
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2453,7 +2468,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 57);
+            this.button6.Size = new System.Drawing.Size(110, 61);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -2465,19 +2480,37 @@ namespace BudgetExecution
             this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(114, 5);
+            this.button7.Location = new System.Drawing.Point(122, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 57);
+            this.button7.Size = new System.Drawing.Size(96, 61);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.NextButton_OnClick);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(464, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 65);
+            this.button3.TabIndex = 158;
+            this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // GridRefreshButton
             // 
@@ -2485,14 +2518,15 @@ namespace BudgetExecution
             this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GridRefreshButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridRefreshButton.FlatAppearance.BorderSize = 0;
             this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(210, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(792, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(102, 57);
+            this.GridRefreshButton.Size = new System.Drawing.Size(112, 61);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -2504,14 +2538,15 @@ namespace BudgetExecution
             this.ChartButton.BackColor = System.Drawing.Color.Transparent;
             this.ChartButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChartButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ChartButton.FlatAppearance.BorderSize = 0;
             this.ChartButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.ChartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ChartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChartButton.Image = ((System.Drawing.Image)(resources.GetObject("ChartButton.Image")));
-            this.ChartButton.Location = new System.Drawing.Point(662, 5);
+            this.ChartButton.Location = new System.Drawing.Point(678, 5);
             this.ChartButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChartButton.Name = "ChartButton";
-            this.ChartButton.Size = new System.Drawing.Size(106, 57);
+            this.ChartButton.Size = new System.Drawing.Size(106, 61);
             this.ChartButton.TabIndex = 167;
             this.ChartButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.ChartButton, "Search Database");
@@ -2524,14 +2559,15 @@ namespace BudgetExecution
             this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EditButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EditButton.FlatAppearance.BorderSize = 0;
             this.EditButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(320, 5);
+            this.EditButton.Location = new System.Drawing.Point(226, 5);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(121, 57);
+            this.EditButton.Size = new System.Drawing.Size(102, 61);
             this.EditButton.TabIndex = 165;
             this.EditButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.EditButton, "Edit Account");
@@ -2545,38 +2581,40 @@ namespace BudgetExecution
             this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(449, 5);
+            this.AddButton.Location = new System.Drawing.Point(336, 5);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(96, 57);
+            this.AddButton.Size = new System.Drawing.Size(121, 61);
             this.AddButton.TabIndex = 166;
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.AddButton, "Add  Account");
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_OnClick);
             // 
-            // CopyButton
+            // ExcelButton
             // 
-            this.CopyButton.BackColor = System.Drawing.Color.Transparent;
-            this.CopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CopyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CopyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.Location = new System.Drawing.Point(553, 5);
-            this.CopyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(101, 57);
-            this.CopyButton.TabIndex = 168;
-            this.CopyButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.CopyButton, "Transfer Funds");
-            this.CopyButton.UseVisualStyleBackColor = false;
-            this.CopyButton.Click += new System.EventHandler(this.ReprogramButton_OnClick);
+            this.ExcelButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExcelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ExcelButton.FlatAppearance.BorderSize = 0;
+            this.ExcelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
+            this.ExcelButton.Location = new System.Drawing.Point(569, 5);
+            this.ExcelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ExcelButton.Name = "ExcelButton";
+            this.ExcelButton.Size = new System.Drawing.Size(101, 61);
+            this.ExcelButton.TabIndex = 168;
+            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.ExcelButton, "Transfer Funds");
+            this.ExcelButton.UseVisualStyleBackColor = false;
+            this.ExcelButton.Click += new System.EventHandler(this.ExcelButton_Click);
             // 
             // visualGroupBox1
             // 
@@ -2609,43 +2647,84 @@ namespace BudgetExecution
             this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox1.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle46.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle46.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle46.Hover = System.Drawing.Color.Empty;
-            textStyle46.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox1.TextStyle = textStyle46;
+            textStyle47.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle47.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle47.Hover = System.Drawing.Color.Empty;
+            textStyle47.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox1.TextStyle = textStyle47;
             this.visualGroupBox1.TitleBoxHeight = 35;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tableLayoutPanel3.Controls.Add(this.TransferButton, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.DatabaseSearchButton, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.button1, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(65, 648);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 655);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(473, 62);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(540, 66);
             this.tableLayoutPanel3.TabIndex = 163;
+            // 
+            // TransferButton
+            // 
+            this.TransferButton.BackColor = System.Drawing.Color.Transparent;
+            this.TransferButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.TransferButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TransferButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TransferButton.FlatAppearance.BorderSize = 0;
+            this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
+            this.TransferButton.Location = new System.Drawing.Point(449, 3);
+            this.TransferButton.Name = "TransferButton";
+            this.TransferButton.Size = new System.Drawing.Size(88, 60);
+            this.TransferButton.TabIndex = 170;
+            this.metroSetToolTip1.SetToolTip(this.TransferButton, "Remove Account");
+            this.TransferButton.UseVisualStyleBackColor = false;
+            this.TransferButton.Click += new System.EventHandler(this.ReprogramButton_OnClick);
+            // 
+            // DatabaseSearchButton
+            // 
+            this.DatabaseSearchButton.BackColor = System.Drawing.Color.Transparent;
+            this.DatabaseSearchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DatabaseSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DatabaseSearchButton.FlatAppearance.BorderSize = 0;
+            this.DatabaseSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
+            this.DatabaseSearchButton.Location = new System.Drawing.Point(348, 5);
+            this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DatabaseSearchButton.Name = "DatabaseSearchButton";
+            this.DatabaseSearchButton.Size = new System.Drawing.Size(94, 56);
+            this.DatabaseSearchButton.TabIndex = 169;
+            this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
+            this.DatabaseSearchButton.UseVisualStyleBackColor = false;
+            this.DatabaseSearchButton.Click += new System.EventHandler(this.DatabaseSearchButton_OnClick);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 56);
+            this.button4.Size = new System.Drawing.Size(108, 60);
             this.button4.TabIndex = 159;
             this.metroSetToolTip1.SetToolTip(this.button4, "Previous Account");
             this.button4.UseVisualStyleBackColor = false;
@@ -2656,32 +2735,17 @@ namespace BudgetExecution
             this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(93, 3);
+            this.button5.Location = new System.Drawing.Point(117, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 56);
+            this.button5.Size = new System.Drawing.Size(112, 60);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.NextButton_OnClick);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(316, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 56);
-            this.button3.TabIndex = 158;
-            this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -2689,12 +2753,13 @@ namespace BudgetExecution
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(198, 3);
+            this.button1.Location = new System.Drawing.Point(235, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 56);
+            this.button1.Size = new System.Drawing.Size(106, 60);
             this.button1.TabIndex = 157;
             this.metroSetToolTip1.SetToolTip(this.button1, "Upload Changes ");
             this.button1.UseVisualStyleBackColor = false;
@@ -2703,9 +2768,9 @@ namespace BudgetExecution
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.AccountTabControl);
-            this.panel1.Location = new System.Drawing.Point(18, 114);
+            this.panel1.Location = new System.Drawing.Point(18, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(543, 523);
+            this.panel1.Size = new System.Drawing.Size(543, 579);
             this.panel1.TabIndex = 1;
             // 
             // AccountTabControl
@@ -2714,7 +2779,7 @@ namespace BudgetExecution
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.SystemColors.Highlight;
             this.AccountTabControl.AdjustTopGap = 3;
             this.AccountTabControl.BackColor = System.Drawing.Color.Black;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(528, 491);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(528, 546);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.BorderWidth = 0;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -2737,7 +2802,7 @@ namespace BudgetExecution
             this.AccountTabControl.Padding = new System.Drawing.Point(15, 3);
             this.AccountTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(528, 491);
+            this.AccountTabControl.Size = new System.Drawing.Size(528, 546);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 150;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -2752,7 +2817,7 @@ namespace BudgetExecution
             this.GraphTab.Location = new System.Drawing.Point(0, 42);
             this.GraphTab.Name = "GraphTab";
             this.GraphTab.ShowCloseButton = true;
-            this.GraphTab.Size = new System.Drawing.Size(528, 449);
+            this.GraphTab.Size = new System.Drawing.Size(528, 504);
             this.GraphTab.TabBackColor = System.Drawing.Color.Black;
             this.GraphTab.TabIndex = 2;
             this.GraphTab.Text = "Account Graph";
@@ -2868,7 +2933,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(528, 449);
+            this.AccountChart.Size = new System.Drawing.Size(528, 504);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -2921,7 +2986,7 @@ namespace BudgetExecution
             this.EditTab.Location = new System.Drawing.Point(0, 42);
             this.EditTab.Name = "EditTab";
             this.EditTab.ShowCloseButton = true;
-            this.EditTab.Size = new System.Drawing.Size(528, 449);
+            this.EditTab.Size = new System.Drawing.Size(528, 504);
             this.EditTab.TabBackColor = System.Drawing.Color.Transparent;
             this.EditTab.TabForeColor = System.Drawing.Color.LightSkyBlue;
             this.EditTab.TabIndex = 4;
@@ -2950,11 +3015,11 @@ namespace BudgetExecution
             this.visualLabel11.Text = "ORG";
             this.visualLabel11.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel11.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle17.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle17.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle17.Hover = System.Drawing.Color.Empty;
-            textStyle17.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel11.TextStyle = textStyle17;
+            textStyle18.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle18.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle18.Hover = System.Drawing.Color.Empty;
+            textStyle18.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel11.TextStyle = textStyle18;
             // 
             // UpdateOrg
             // 
@@ -3006,11 +3071,11 @@ namespace BudgetExecution
             this.visualLabel10.Text = "New Amount";
             this.visualLabel10.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel10.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle18.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle18.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle18.Hover = System.Drawing.Color.Empty;
-            textStyle18.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel10.TextStyle = textStyle18;
+            textStyle19.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle19.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle19.Hover = System.Drawing.Color.Empty;
+            textStyle19.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel10.TextStyle = textStyle19;
             // 
             // visualLabel9
             // 
@@ -3034,11 +3099,11 @@ namespace BudgetExecution
             this.visualLabel9.Text = "Original Amount";
             this.visualLabel9.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel9.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle19.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle19.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle19.Hover = System.Drawing.Color.Empty;
-            textStyle19.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel9.TextStyle = textStyle19;
+            textStyle20.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle20.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle20.Hover = System.Drawing.Color.Empty;
+            textStyle20.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel9.TextStyle = textStyle20;
             // 
             // visualLabel8
             // 
@@ -3062,11 +3127,11 @@ namespace BudgetExecution
             this.visualLabel8.Text = "PRC Code";
             this.visualLabel8.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel8.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle20.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle20.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle20.Hover = System.Drawing.Color.Empty;
-            textStyle20.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel8.TextStyle = textStyle20;
+            textStyle21.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle21.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle21.Hover = System.Drawing.Color.Empty;
+            textStyle21.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel8.TextStyle = textStyle21;
             // 
             // visualLabel7
             // 
@@ -3090,11 +3155,11 @@ namespace BudgetExecution
             this.visualLabel7.Text = "BOC";
             this.visualLabel7.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel7.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle21.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle21.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle21.Hover = System.Drawing.Color.Empty;
-            textStyle21.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel7.TextStyle = textStyle21;
+            textStyle22.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle22.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle22.Hover = System.Drawing.Color.Empty;
+            textStyle22.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel7.TextStyle = textStyle22;
             // 
             // visualLabel6
             // 
@@ -3118,11 +3183,11 @@ namespace BudgetExecution
             this.visualLabel6.Text = "RC";
             this.visualLabel6.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel6.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle22.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle22.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle22.Hover = System.Drawing.Color.Empty;
-            textStyle22.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel6.TextStyle = textStyle22;
+            textStyle23.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle23.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle23.Hover = System.Drawing.Color.Empty;
+            textStyle23.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel6.TextStyle = textStyle23;
             // 
             // visualLabel5
             // 
@@ -3146,11 +3211,11 @@ namespace BudgetExecution
             this.visualLabel5.Text = "AH ";
             this.visualLabel5.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel5.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle23.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle23.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle23.Hover = System.Drawing.Color.Empty;
-            textStyle23.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel5.TextStyle = textStyle23;
+            textStyle24.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle24.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle24.Hover = System.Drawing.Color.Empty;
+            textStyle24.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel5.TextStyle = textStyle24;
             // 
             // visualLabel4
             // 
@@ -3174,11 +3239,11 @@ namespace BudgetExecution
             this.visualLabel4.Text = "Fund";
             this.visualLabel4.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel4.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle24.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle24.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle24.Hover = System.Drawing.Color.Empty;
-            textStyle24.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel4.TextStyle = textStyle24;
+            textStyle25.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle25.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle25.Hover = System.Drawing.Color.Empty;
+            textStyle25.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel4.TextStyle = textStyle25;
             // 
             // visualLabel3
             // 
@@ -3202,11 +3267,11 @@ namespace BudgetExecution
             this.visualLabel3.Text = "Fiscal Year";
             this.visualLabel3.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel3.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle25.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle25.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle25.Hover = System.Drawing.Color.Empty;
-            textStyle25.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel3.TextStyle = textStyle25;
+            textStyle26.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle26.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle26.Hover = System.Drawing.Color.Empty;
+            textStyle26.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel3.TextStyle = textStyle26;
             // 
             // visualLabel2
             // 
@@ -3230,11 +3295,11 @@ namespace BudgetExecution
             this.visualLabel2.Text = "Level";
             this.visualLabel2.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel2.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle26.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle26.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle26.Hover = System.Drawing.Color.Empty;
-            textStyle26.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel2.TextStyle = textStyle26;
+            textStyle27.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle27.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle27.Hover = System.Drawing.Color.Empty;
+            textStyle27.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel2.TextStyle = textStyle27;
             // 
             // visualLabel1
             // 
@@ -3258,11 +3323,11 @@ namespace BudgetExecution
             this.visualLabel1.Text = "ID";
             this.visualLabel1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel1.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle27.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle27.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle27.Hover = System.Drawing.Color.Empty;
-            textStyle27.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel1.TextStyle = textStyle27;
+            textStyle28.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle28.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle28.Hover = System.Drawing.Color.Empty;
+            textStyle28.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel1.TextStyle = textStyle28;
             // 
             // CalculatorButton
             // 
@@ -3588,7 +3653,7 @@ namespace BudgetExecution
             this.AddTab.Location = new System.Drawing.Point(0, 42);
             this.AddTab.Name = "AddTab";
             this.AddTab.ShowCloseButton = true;
-            this.AddTab.Size = new System.Drawing.Size(528, 449);
+            this.AddTab.Size = new System.Drawing.Size(528, 504);
             this.AddTab.TabIndex = 5;
             this.AddTab.Text = "Add Account";
             this.AddTab.ThemesEnabled = false;
@@ -3615,11 +3680,11 @@ namespace BudgetExecution
             this.visualLabel20.Text = "Object Class";
             this.visualLabel20.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel20.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle28.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle28.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle28.Hover = System.Drawing.Color.Empty;
-            textStyle28.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel20.TextStyle = textStyle28;
+            textStyle29.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle29.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle29.Hover = System.Drawing.Color.Empty;
+            textStyle29.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel20.TextStyle = textStyle29;
             // 
             // visualLabel19
             // 
@@ -3643,11 +3708,11 @@ namespace BudgetExecution
             this.visualLabel19.Text = "Activity Code";
             this.visualLabel19.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel19.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle29.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle29.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle29.Hover = System.Drawing.Color.Empty;
-            textStyle29.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel19.TextStyle = textStyle29;
+            textStyle30.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle30.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle30.Hover = System.Drawing.Color.Empty;
+            textStyle30.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel19.TextStyle = textStyle30;
             // 
             // visualLabel18
             // 
@@ -3671,11 +3736,11 @@ namespace BudgetExecution
             this.visualLabel18.Text = "RC Code";
             this.visualLabel18.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel18.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle30.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle30.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle30.Hover = System.Drawing.Color.Empty;
-            textStyle30.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel18.TextStyle = textStyle30;
+            textStyle31.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle31.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle31.Hover = System.Drawing.Color.Empty;
+            textStyle31.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel18.TextStyle = textStyle31;
             // 
             // visualLabel17
             // 
@@ -3699,11 +3764,11 @@ namespace BudgetExecution
             this.visualLabel17.Text = "Org Code";
             this.visualLabel17.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel17.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle31.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle31.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle31.Hover = System.Drawing.Color.Empty;
-            textStyle31.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel17.TextStyle = textStyle31;
+            textStyle32.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle32.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle32.Hover = System.Drawing.Color.Empty;
+            textStyle32.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel17.TextStyle = textStyle32;
             // 
             // visualLabel16
             // 
@@ -3727,11 +3792,11 @@ namespace BudgetExecution
             this.visualLabel16.Text = "Allowance Holder";
             this.visualLabel16.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel16.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle32.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle32.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle32.Hover = System.Drawing.Color.Empty;
-            textStyle32.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel16.TextStyle = textStyle32;
+            textStyle33.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle33.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle33.Hover = System.Drawing.Color.Empty;
+            textStyle33.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel16.TextStyle = textStyle33;
             // 
             // visualLabel15
             // 
@@ -3755,11 +3820,11 @@ namespace BudgetExecution
             this.visualLabel15.Text = "Fund";
             this.visualLabel15.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel15.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle33.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle33.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle33.Hover = System.Drawing.Color.Empty;
-            textStyle33.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel15.TextStyle = textStyle33;
+            textStyle34.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle34.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle34.Hover = System.Drawing.Color.Empty;
+            textStyle34.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel15.TextStyle = textStyle34;
             // 
             // visualLabel14
             // 
@@ -3783,11 +3848,11 @@ namespace BudgetExecution
             this.visualLabel14.Text = "Fiscal Year";
             this.visualLabel14.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel14.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle34.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle34.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle34.Hover = System.Drawing.Color.Empty;
-            textStyle34.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel14.TextStyle = textStyle34;
+            textStyle35.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle35.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle35.Hover = System.Drawing.Color.Empty;
+            textStyle35.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel14.TextStyle = textStyle35;
             // 
             // visualLabel13
             // 
@@ -3811,11 +3876,11 @@ namespace BudgetExecution
             this.visualLabel13.Text = "Budget Level";
             this.visualLabel13.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel13.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle35.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle35.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle35.Hover = System.Drawing.Color.Empty;
-            textStyle35.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel13.TextStyle = textStyle35;
+            textStyle36.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle36.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle36.Hover = System.Drawing.Color.Empty;
+            textStyle36.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel13.TextStyle = textStyle36;
             // 
             // visualLabel12
             // 
@@ -3839,11 +3904,11 @@ namespace BudgetExecution
             this.visualLabel12.Text = "PRC Code";
             this.visualLabel12.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel12.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle36.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle36.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle36.Hover = System.Drawing.Color.Empty;
-            textStyle36.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel12.TextStyle = textStyle36;
+            textStyle37.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle37.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle37.Hover = System.Drawing.Color.Empty;
+            textStyle37.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel12.TextStyle = textStyle37;
             // 
             // AddCode
             // 
@@ -3890,11 +3955,11 @@ namespace BudgetExecution
             this.AddCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddCode.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddCode.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle37.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle37.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle37.Hover = System.Drawing.Color.Empty;
-            textStyle37.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddCode.TextStyle = textStyle37;
+            textStyle38.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle38.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle38.Hover = System.Drawing.Color.Empty;
+            textStyle38.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddCode.TextStyle = textStyle38;
             this.AddCode.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddCode.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddCode.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -3946,11 +4011,11 @@ namespace BudgetExecution
             this.AddBoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBoc.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddBoc.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle38.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle38.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle38.Hover = System.Drawing.Color.Empty;
-            textStyle38.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddBoc.TextStyle = textStyle38;
+            textStyle39.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle39.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle39.Hover = System.Drawing.Color.Empty;
+            textStyle39.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddBoc.TextStyle = textStyle39;
             this.AddBoc.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddBoc.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddBoc.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4002,11 +4067,11 @@ namespace BudgetExecution
             this.AddSub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddSub.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddSub.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle39.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle39.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle39.Hover = System.Drawing.Color.Empty;
-            textStyle39.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddSub.TextStyle = textStyle39;
+            textStyle40.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle40.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle40.Hover = System.Drawing.Color.Empty;
+            textStyle40.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddSub.TextStyle = textStyle40;
             this.AddSub.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddSub.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddSub.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4058,11 +4123,11 @@ namespace BudgetExecution
             this.AddRc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddRc.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddRc.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle40.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle40.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle40.Hover = System.Drawing.Color.Empty;
-            textStyle40.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddRc.TextStyle = textStyle40;
+            textStyle41.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle41.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle41.Hover = System.Drawing.Color.Empty;
+            textStyle41.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddRc.TextStyle = textStyle41;
             this.AddRc.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddRc.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddRc.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4114,11 +4179,11 @@ namespace BudgetExecution
             this.AddOrg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddOrg.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddOrg.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle41.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle41.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle41.Hover = System.Drawing.Color.Empty;
-            textStyle41.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddOrg.TextStyle = textStyle41;
+            textStyle42.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle42.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle42.Hover = System.Drawing.Color.Empty;
+            textStyle42.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddOrg.TextStyle = textStyle42;
             this.AddOrg.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddOrg.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddOrg.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4170,11 +4235,11 @@ namespace BudgetExecution
             this.AddAh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddAh.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddAh.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle42.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle42.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle42.Hover = System.Drawing.Color.Empty;
-            textStyle42.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddAh.TextStyle = textStyle42;
+            textStyle43.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle43.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle43.Hover = System.Drawing.Color.Empty;
+            textStyle43.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddAh.TextStyle = textStyle43;
             this.AddAh.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddAh.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddAh.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4226,11 +4291,11 @@ namespace BudgetExecution
             this.AddFund.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddFund.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddFund.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle43.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle43.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle43.Hover = System.Drawing.Color.Empty;
-            textStyle43.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddFund.TextStyle = textStyle43;
+            textStyle44.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle44.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle44.Hover = System.Drawing.Color.Empty;
+            textStyle44.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddFund.TextStyle = textStyle44;
             this.AddFund.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddFund.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddFund.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4282,11 +4347,11 @@ namespace BudgetExecution
             this.AddYear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddYear.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddYear.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle44.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle44.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle44.Hover = System.Drawing.Color.Empty;
-            textStyle44.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddYear.TextStyle = textStyle44;
+            textStyle45.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle45.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle45.Hover = System.Drawing.Color.Empty;
+            textStyle45.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddYear.TextStyle = textStyle45;
             this.AddYear.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddYear.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddYear.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4338,11 +4403,11 @@ namespace BudgetExecution
             this.AddLevel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddLevel.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.AddLevel.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle45.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle45.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle45.Hover = System.Drawing.Color.Empty;
-            textStyle45.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.AddLevel.TextStyle = textStyle45;
+            textStyle46.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle46.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle46.Hover = System.Drawing.Color.Empty;
+            textStyle46.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.AddLevel.TextStyle = textStyle46;
             this.AddLevel.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.AddLevel.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AddLevel.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -4637,7 +4702,7 @@ namespace BudgetExecution
         private Button button7;
         private Button button6;
         private TableLayoutPanel tableLayoutPanel2;
-        private Button CopyButton;
+        private Button ExcelButton;
         private Button ChartButton;
         private Button GridRefreshButton;
         private Button AddButton;
@@ -4699,9 +4764,11 @@ namespace BudgetExecution
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel14;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel13;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel12;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton L8;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton L7;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton GridLevel8;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton GridLevel7;
         private Button DatabaseSearchButton;
-        private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox LevelFilter;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton ChartLevel8;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton ChartLevel7;
+        private Button TransferButton;
     }
 }
