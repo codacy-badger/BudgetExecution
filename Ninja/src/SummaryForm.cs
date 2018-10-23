@@ -38,57 +38,24 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
-            switch(source)
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            ProgramElements = DbData.ProgramElements;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbData.Table;
+            Grid.DataSource = BindingSource;
+            Metric = new PrcMetric(DbData);
+            ChartMainTitle = new[]
             {
-                case Source.RegionalAccounts:
-                case Source.DivisionAccounts:
-                    DbData = new DataBuilder(Source, Provider);
-                    Table = DbData.Table;
-                    ProgramElements = DbData.ProgramElements;
-                    BindingSource = new BindingSource();
-                    BindingSource.DataSource = DbData.Table;
-                    Grid.DataSource = BindingSource;
-                    GetTabNames();
-                    Metric = new PrcMetric(DbData);
-                    DatabaseTab.TabVisible = false;
-                    GridFundFilter.Visible = false;
-                    GridBocFilter.Visible = false;
-                    PopulateGridYearFilterItems();
-                    ChartMainTitle = new[]
-                    {
-                        $"{Source.ToString()} Funding By Appropriation"
-                    };
-                    BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
-                    break;
-
-                default:
-                    DbData = new DataBuilder(Source, Provider);
-                    Table = DbData.Table;
-                    ProgramElements = DbData.GetProgramElements(Table);
-                    GetTabNames();
-                    Metric = new PrcMetric(DbData);
-                    BindingSource = new BindingSource();
-                    BindingSource.DataSource = DbData.Table;
-                    Grid.DataSource = BindingSource;
-                    DatabaseTab.TabVisible = true;
-                    GridGroupBox.Text = $"{Source.ToString()}";
-                    lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-                    lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    lblCount.Text = DbData.GetCount(Table).ToString();
-                    GridFundFilter.Visible = false;
-                    GridBocFilter.Visible = false;
-                    PopulateGridYearFilterItems();
-                    ConfigureTextBoxBindings();
-                    DefineVisisbleDataColumns(Grid);
-                    ChartMainTitle = new[]
-                    {
-                        $"{Source.ToString()} Funding By Appropriation"
-                    };
-                    BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
-                    break;
-            }
+                $"{Source.ToString()} Funding By Appropriation"
+            };
+            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+            lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+            lblCount.Text = DbData.GetCount(Table).ToString();
+            ChartMainTitle = new[]{ $"{Source.ToString()} Resources" };
+            BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();           
         }
 
         // PROPERTIES
@@ -303,31 +270,70 @@ namespace BudgetExecution
         {
             try
             {
-                PopulateComboBoxes();
                 BocExpander1.Visible = false;
                 BocExpander2.Visible = false;
                 EditTab.Visible = false;
                 AddTab.Visible = false;
+                PopulateAddTabComboBoxes();
+                PopulateGridYearFilterItems();
+                ConfigureEditTabTextBoxBindings();
+                DefineVisisbleDataColumns(Grid);
+                DatabaseTab.TabVisible = true;
+                GridFundFilter.Visible = false;
+                GridBocFilter.Visible = false;
 
                 switch(Source)
                 {
                     case Source.PRC:
+                        SetPrcConfiguration();
+                        break;
+
                     case Source.CONTRACTS:
+                        SetContractsConfiguration();
+                        break;
+
                     case Source.DWH:
+                        SetDWHConfiguration();
+                        break;
+
                     case Source.EPM:
+                        SetEPMConfiguration();
+                        break;
+
                     case Source.EXPENSES:
+                        SetExpensesConfigurations();
+                        break;
+
                     case Source.GRANTS:
+                        SetGrantsConfiguration();
+                        break;
+
                     case Source.LUST:
+                        SetLUSTConfiguration();
+                        break;
+
                     case Source.SF6A:
+                        SetSF6AConfiguration();
+                        break;
+
                     case Source.STAG:
+                        SetSTAGConfiguration();
+                        break;
+
                     case Source.SUPERFUND:
+                        SetSuperfundConfiguration();
+                        break;
+
                     case Source.OIL:
+                        SetOilSpillConfiguration();
+                        break;
+
                     case Source.TRAVEL:
+                        SetTravelConfiguration();
+                        break;
+
                     case Source.FTE:
-                        GridLevel7.Visible = true;
-                        GridLevel8.Visible = true;
-                        ChartLevel7.Visible = true;
-                        ChartLevel8.Visible = true;
+                        SetFTEConfiguration();
                         break;
 
                     default:
@@ -337,6 +343,278 @@ namespace BudgetExecution
                         ChartLevel8.Visible = false;
                         break;
                 }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetPrcConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetRegionalAccountsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetDivisionAccountsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetContractsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetExpensesConfigurations()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetTravelConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetWCFConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetFTEConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+                PrimaryFilter.Items.Remove("BocName");
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetPayrollConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetAwardsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetGrantsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetEPMConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+                PrimaryFilter.Items.Remove("FundName");
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetSuperfundConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetLUSTConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetOilSpillConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetSTAGConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetDWHConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetSF6AConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
             }
             catch(Exception ex)
             {
@@ -882,7 +1160,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The PopulateComboBoxes
         /// </summary>
-        internal void PopulateComboBoxes()
+        internal void PopulateAddTabComboBoxes()
         {
             DataTable table = new DataBuilder(Source.PRC).Table;
             string[] query = table.AsEnumerable().Select(p => p.Field<string>("SubProject")).Distinct().ToArray();
@@ -943,20 +1221,20 @@ namespace BudgetExecution
         /// <summary>
         ///     The ConfigureTextBoxBindings
         /// </summary>
-        private void ConfigureTextBoxBindings()
+        private void ConfigureEditTabTextBoxBindings()
         {
             try
             {
-                Updateid.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
-                UpdateBudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
-                UpdateBFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
-                UpdateFund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
-                UpdateAH.DataBindings.Add(new Binding("Text", Grid.DataSource, "AH"));
-                UpdateOrg.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
-                UpdateRC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
-                UpdateCode.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
-                UpdateBOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
-                Amount.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
+                editID.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
+                EditBudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
+                EditBFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
+                EditFund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
+                EditAH.DataBindings.Add(new Binding("Text", Grid.DataSource, "AH"));
+                EditOrg.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
+                EditRC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
+                EditCode.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
+                EditBOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
+                OriginalAmount.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
             }
             catch(Exception ex)
             {
@@ -1877,17 +2155,43 @@ namespace BudgetExecution
             {
                 Grid = sender as DataGridView;
                 DataGridViewRow drv = Grid?.CurrentRow;
-                decimal total = Table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
-                                     .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
-                                     .Select(p => p.Field<decimal>("Amount")).Sum();
-                decimal ratio = (decimal) drv.Cells["Amount"].Value / total;
-                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) (decimal) drv.Cells["Amount"].Value };
-                ChartMainTitle = new[]
+                if(GridLevel7.Checked)
                 {
-                    $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding"
-                };
-                AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                    decimal total = Table.AsEnumerable()
+                                         .Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel7.Tag.ToString()))
+                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
+                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
+                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
+                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
+                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
+                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                }
+
+                if(GridLevel8.Checked)
+                {
+                    decimal total = Table.AsEnumerable()
+                                         .Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel8.Tag.ToString()))
+                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
+                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
+                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
+                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
+                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
+                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                }
+
+                else
+                {
+                    decimal total = Table.AsEnumerable()
+                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
+                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
+                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
+                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
+                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
+                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                }
             }
             catch(Exception ex)
             {
@@ -1985,6 +2289,7 @@ namespace BudgetExecution
                 Console.WriteLine(e);
                 throw;
             }
-        }       
+        }
+        
     }
 }

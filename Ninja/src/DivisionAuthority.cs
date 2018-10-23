@@ -35,12 +35,10 @@ namespace BudgetExecution
             TableFilter = DataBuilder.FilterRecords;
         }
 
-        public DivisionAuthority(string rc)
+        public DivisionAuthority(Source source)
         {
             TableFilter = DataBuilder.FilterRecords;
-            RC = new RC(rc);
-            Org = new Org(RC.Code);
-            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
+            DbData = new DataBuilder(source, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DbTable = DbData.Table;
             DataRecords = DbData.Records;

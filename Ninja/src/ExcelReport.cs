@@ -49,7 +49,7 @@ namespace BudgetExecution
             Provider = provider;
             if(p.ContainsKey("RC"))
             {
-                D6 = new DivisionAuthority(p["RC"].ToString());
+                D6 = new DivisionAuthority(source);
                 DbData = D6.DbData;
                 Table = DbData.Table;
                 Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
