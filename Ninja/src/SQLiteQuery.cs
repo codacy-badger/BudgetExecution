@@ -47,7 +47,7 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
+        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(param, source, provider, sql)
         {
             Provider = provider;
             Source = source;

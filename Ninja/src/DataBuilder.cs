@@ -92,7 +92,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             Input = param;
-            Query = new Query(source, provider, Sql.SELECT, Input);
+            Query = new Query(Input, source, provider, Sql.SELECT);
             if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable()

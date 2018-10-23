@@ -35,7 +35,7 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
+        public Query(Dictionary<string, object> param, Source source, Provider provider, Sql command)
         {
             Provider = provider;
             Source = source;

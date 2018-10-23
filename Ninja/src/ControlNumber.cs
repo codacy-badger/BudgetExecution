@@ -207,7 +207,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetInsertionColumns(p);
                 string[] fields = param.Keys.ToArray();
                 object[] vals = param.Values.ToArray();
-                Query query = new Query(source, provider, Sql.INSERT, param);
+                Query query = new Query(param, source, provider, Sql.INSERT);
                 string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
@@ -256,7 +256,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.UPDATE, p);
+                Query query = new Query(p, source, provider, Sql.UPDATE);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
@@ -305,7 +305,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.DELETE, p);
+                Query query = new Query(p, source, provider, Sql.DELETE);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)

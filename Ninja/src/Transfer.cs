@@ -253,7 +253,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.UPDATE, p);
+                Query query = new Query(p, source, provider, Sql.UPDATE);
                 string cmd = query.UpdateStatement;
                 SQLiteConnection conn = (SQLiteConnection) query.GetDataConnection(Provider.SQLite);
                 conn.Open();
@@ -302,7 +302,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.DELETE, p);
+                Query query = new Query(p, source, provider, Sql.DELETE);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
