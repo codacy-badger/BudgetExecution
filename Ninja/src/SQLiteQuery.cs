@@ -74,7 +74,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             SqlStatement = GetSqlStatement(Source, SqlCmd, param);
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
-            DataAdapter = GetDataAdapter(DataCommand as SQLiteCommand);
+            DataAdapter = GetDataAdapter((SQLiteCommand) DataCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();

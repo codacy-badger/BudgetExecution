@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,6 +12,8 @@ using Syncfusion.Windows.Forms.Chart;
 
 namespace BudgetExecution
 {
+    [ SuppressMessage("ReSharper", "UnusedParameter.Local") ]
+    [ SuppressMessage("ReSharper", "UnusedVariable") ]
     public class FormData
     {
         // CONSTRUCTORS
@@ -31,6 +34,8 @@ namespace BudgetExecution
 
         public FormData(Source source, Provider provider)
         {
+            Source = source;
+            Provider = provider;
             DbData = new DataBuilder(source, provider);
             Table = DbData.Table;
             BindingSource = new BindingSource();
@@ -39,6 +44,8 @@ namespace BudgetExecution
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
+            Source = source;
+            Provider = provider;
             DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
             BindingSource = new BindingSource();
@@ -52,6 +59,8 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
             BindGridAndNavigator(Table, dgv, BindingSource, bn);
+            Source = source;
+            Provider = provider;
             Grid = dgv;
             Grid.DataSource = BindingSource.DataSource;
         }
@@ -220,10 +229,10 @@ namespace BudgetExecution
             try
             {
                 ListBox box = control as ListBox;
-                box.Controls.Clear();
+                box?.Controls.Clear();
                 foreach(string f in list)
                 {
-                    box.Items.Add(f);
+                    box?.Items.Add(f);
                 }
             }
             catch(Exception ex)
