@@ -32,7 +32,7 @@ namespace BudgetExecution
         public FormData(Source source, Provider provider)
         {
             DbData = new DataBuilder(source, provider);
-            Table = DbData.GetDataTable();
+            Table = DbData.Table;
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
         }
@@ -40,20 +40,18 @@ namespace BudgetExecution
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
             DbData = new DataBuilder(source, provider, param);
-            Table = DbData.GetDataTable();
+            Table = DbData.Table;
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
         }
 
-        public FormData(Source source, Provider provider, Dictionary<string, object> param, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+        public FormData(Source source, Provider provider, Dictionary<string, object> param, DataGridView dgv, BindingNavigator bn)
         {
             DbData = new DataBuilder(source, provider, param);
-            Table = DbData.GetDataTable();
+            Table = DbData.Table;
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
-            BindGridAndNavigator(Table, dgv, bs, bn);
-            BindingSource = bs;
-            BindingSource.DataSource = Table;
+            BindGridAndNavigator(Table, dgv, BindingSource, bn);
             Grid = dgv;
             Grid.DataSource = BindingSource.DataSource;
         }
@@ -82,24 +80,6 @@ namespace BudgetExecution
         internal DataFilter TableFilter { get; set; }
 
         // METHODS
-        public List<SQLiteParameter[]> GetParamList(DataTable table)
-        {
-            try
-            {
-                List<SQLiteParameter[]> paramlist = new List<SQLiteParameter[]>();
-                foreach(DataRow row in table.Rows)
-                {
-                    paramlist.Add(GetParamArray(row));
-                }
-
-                return paramlist;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
 
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {

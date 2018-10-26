@@ -1052,7 +1052,7 @@ namespace BudgetExecution
                 d.Add("PRC Level-8", Source.DivisionAccounts);
                 d.Add("R6 PRC", Source.PRC);
                 d.Add("Division Details", Source.Divisions);
-                d.Add("Employee Leave", Source.Employees);
+                d.Add("Employee Leave", Source.Personnel);
                 d.Add("Treasury Fund Data", Source.Funds);
                 d.Add("Programmatic Obligations", Source.ProgramObligations);
                 d.Add("Payroll Obligations", Source.PayrollObligations);

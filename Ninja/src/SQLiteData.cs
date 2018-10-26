@@ -448,7 +448,7 @@ namespace BudgetExecution
                         Filter4.Tag = "Code";
                         break;
 
-                    case Source.Employees:
+                    case Source.Personnel:
                         label1.Text = "HrOrgCodeName";
                         PopulateFilterItems(Field.HrOrgCodeName, Table, Filter1, label1);
                         Filter2.Tag = "WorkCode";
@@ -823,6 +823,11 @@ namespace BudgetExecution
 
         private void VisualGroupBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

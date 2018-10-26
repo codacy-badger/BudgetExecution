@@ -408,7 +408,7 @@
     <Compile Include="src\DataBuilder.cs" />
     <Compile Include="src\DivisionAuthority.cs" />
     <Compile Include="src\DocInfo.cs" />
-    <Compile Include="src\Employee.cs" />
+    <Compile Include="src\Personnel.cs" />
     <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
     <Compile Include="src\IFund.cs" />
