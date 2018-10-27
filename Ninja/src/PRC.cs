@@ -28,7 +28,7 @@ namespace BudgetExecution
             Org = new Org(DbRow["Org"].ToString());
             BOC = new BOC(DbRow["BOC"].ToString());
             RC = new RC(DbRow["RC"].ToString());
-            Account = new Account(Fund.Code, DbRow["Code"].ToString());
+            Account = new Account(BFY, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
             Amount = decimal.Parse(DbRow["Amount"].ToString());
             Parameter = GetDataDictionary();
@@ -57,7 +57,7 @@ namespace BudgetExecution
             Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
             Org = new Org(DbRow["Org"].ToString());
             RC = new RC(DbRow["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(DbRow["BOC"].ToString());
             Amount = decimal.Parse(DbRow["Amount"].ToString());
@@ -78,11 +78,11 @@ namespace BudgetExecution
             BudgetLevel = bl;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(Source.Funds, Provider.SQLite, fund, bfy);
+            Fund = new Fund(Source.Funds, Provider.SQLite, fund, BFY);
             AH = ah;
             RC = new RC(rc);
             Org = new Org(org);
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, code);
+            Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Parameter = GetDataDictionary();
@@ -109,7 +109,7 @@ namespace BudgetExecution
             Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
             Org = new Org(row["Org"].ToString());
             RC = new RC(row["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, row["Code"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
             Parameter = GetDataDictionary();
@@ -256,7 +256,7 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
                 if(!param.ContainsKey("FundName") ||
                    param["FundName"] == null)
                 {

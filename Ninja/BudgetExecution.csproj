@@ -356,7 +356,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryImages.resx</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Compile Include="src\Application.cs" />
     <Compile Include="src\DataTools.cs">
       <SubType>Form</SubType>

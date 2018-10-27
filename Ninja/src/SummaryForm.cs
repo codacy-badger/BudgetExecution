@@ -607,6 +607,21 @@ namespace BudgetExecution
             }
         }
 
+        private void SetBudgetLevelsConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Visible = true;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
         private void SetSF6AConfiguration()
         {
             try

@@ -20,18 +20,18 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
-        public Account(string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite) : this(source, provider)
+        public Account(string bfy, string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite) : this(source, provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
-            Parameter = GetAccountParameter(fund, code);
+            Parameter = GetAccountParameter(bfy, fund, code);
             DbRow = Table.Rows[0];
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
             Org = DbRow["Org"].ToString();
-            FiscalYear = DbRow["BFY"].ToString();
+            BFY = DbRow["BFY"].ToString();
             Fund = DbRow["Fund"].ToString();
             FundName = DbRow["FundName"].ToString();
             ProgramProjectName = DbRow["ProgramProjectName"].ToString();
@@ -43,12 +43,12 @@ namespace BudgetExecution
             ProgramAreaName = DbRow["ProgramAreaName"].ToString();
         }
 
-        public Account(Source source, Provider provider, string fund, string code) : this(source, provider)
+        public Account(Source source, Provider provider, string bfy, string fund, string code) : this(source, provider)
         {
             Fund = fund;
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
-            Parameter = GetAccountParameter(fund, code);
+            Parameter = GetAccountParameter(bfy, fund, code);
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             DbRow = Table.Rows[0];
@@ -57,7 +57,7 @@ namespace BudgetExecution
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             Org = Table.Rows[0]["Org"].ToString();
-            FiscalYear = Table.Rows[0]["BFY"].ToString();
+            BFY = Table.Rows[0]["BFY"].ToString();
             Fund = Table.Rows[0]["Fund"].ToString();
             ProgramProjectName = DbRow["ProgramProjectName"].ToString();
             NPM = Table.Rows[0]["NPM"].ToString();
@@ -75,7 +75,7 @@ namespace BudgetExecution
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
-            FiscalYear = data["BFY"].ToString();
+            BFY = data["BFY"].ToString();
             Fund = data["Fund"].ToString();
             FundName = data["FundName"].ToString();
             ProgramProjectName = data["ProgramProjectName"].ToString();
@@ -99,7 +99,7 @@ namespace BudgetExecution
 
         public int AccountId { get; set; }
 
-        public string FiscalYear { get; set; }
+        public string BFY { get; set; }
 
         public string Fund { get; set; }
 
@@ -229,7 +229,7 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, Provider.SQLite, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, Provider.SQLite, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
                 if(!param.ContainsKey("Fund") ||
                    param["Fund"] == null)
                 {
@@ -290,7 +290,7 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
                 if(!param.ContainsKey("FundName") ||
                    param["FundName"] == null)
                 {
@@ -431,25 +431,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
-        /// <summary>
-        ///     Gets the account parameter.
-        /// </summary>
-        /// <param name="fund">The fund.</param>
-        /// <param name="code">The code.</param>
-        /// <returns></returns>
-        internal Dictionary<string, object> GetAccountParameter(string fund, string code)
-        {
-            try
-            {
-                return new Dictionary<string, object> { ["Fund"] = fund, ["ProgramProjectCode"] = Code.Substring(4, 2) };
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
+        
 
         /// <summary>
         ///     Gets the account parameter.
@@ -477,11 +459,11 @@ namespace BudgetExecution
         /// <param name="fund">The fund.</param>
         /// <param name="code">The code.</param>
         /// <returns></returns>
-        internal Dictionary<string, object> GetAccountProgramData(string fund, string code)
+        internal Dictionary<string, object> GetAccountProgramData(string bfy, string fund, string code)
         {
             try
             {
-                Dictionary<string, object> param = GetAccountParameter(fund, code);
+                Dictionary<string, object> param = GetAccountParameter(bfy, fund, code);
                 DataTable data = GetAccountData(Source.Accounts, Provider.SQLite, param);
                 DataRow dr = data.Rows[0];
                 GoalName = dr["GoalName"].ToString();

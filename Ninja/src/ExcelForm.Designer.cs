@@ -86,7 +86,7 @@ namespace BudgetExecution
             this.BudgetReport.DefaultRowCount = 60;
             this.BudgetReport.DisplayAlerts = true;
             this.BudgetReport.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BudgetReport.FileName = "Book2";
+            this.BudgetReport.FileName = "Book3";
             this.BudgetReport.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BudgetReport.ForeColor = System.Drawing.Color.Black;
             this.BudgetReport.FormulaBarVisibility = false;
@@ -230,7 +230,7 @@ namespace BudgetExecution
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(30, 42);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 325);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 254);
             this.flowLayoutPanel1.TabIndex = 155;
             // 
             // visualGroupBox1
@@ -250,13 +250,13 @@ namespace BudgetExecution
             this.visualGroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualGroupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.visualGroupBox1.Image = ((System.Drawing.Image)(resources.GetObject("visualGroupBox1.Image")));
-            this.visualGroupBox1.Location = new System.Drawing.Point(73, 506);
-            this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualGroupBox1.Location = new System.Drawing.Point(61, 545);
+            this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Hover;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.visualGroupBox1.Separator = true;
             this.visualGroupBox1.SeparatorColor = System.Drawing.Color.Transparent;
-            this.visualGroupBox1.Size = new System.Drawing.Size(320, 404);
+            this.visualGroupBox1.Size = new System.Drawing.Size(320, 350);
             this.visualGroupBox1.TabIndex = 172;
             this.visualGroupBox1.Text = "Appropriation";
             this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Far;
@@ -278,7 +278,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
@@ -291,7 +291,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 50);
             this.tableLayoutPanel2.TabIndex = 173;
             // 
             // button2
@@ -306,7 +306,7 @@ namespace BudgetExecution
             this.button2.Location = new System.Drawing.Point(4, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 25);
+            this.button2.Size = new System.Drawing.Size(124, 40);
             this.button2.TabIndex = 162;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
@@ -320,10 +320,10 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(772, 5);
+            this.button12.Location = new System.Drawing.Point(771, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(127, 25);
+            this.button12.Size = new System.Drawing.Size(128, 40);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button12.UseVisualStyleBackColor = false;
@@ -340,7 +340,7 @@ namespace BudgetExecution
             this.button3.Location = new System.Drawing.Point(136, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 25);
+            this.button3.Size = new System.Drawing.Size(107, 40);
             this.button3.TabIndex = 163;
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
@@ -354,10 +354,10 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(637, 5);
+            this.button11.Location = new System.Drawing.Point(636, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(127, 25);
+            this.button11.Size = new System.Drawing.Size(127, 40);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button11.UseVisualStyleBackColor = false;
@@ -372,10 +372,10 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(252, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(251, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(119, 25);
+            this.GridRefreshButton.Size = new System.Drawing.Size(119, 40);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GridRefreshButton.UseVisualStyleBackColor = false;
@@ -390,10 +390,10 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(379, 5);
+            this.button9.Location = new System.Drawing.Point(378, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(123, 25);
+            this.button9.Size = new System.Drawing.Size(123, 40);
             this.button9.TabIndex = 165;
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button9.UseCompatibleTextRendering = true;
@@ -409,10 +409,10 @@ namespace BudgetExecution
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(510, 5);
+            this.button4.Location = new System.Drawing.Point(509, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 25);
+            this.button4.Size = new System.Drawing.Size(119, 40);
             this.button4.TabIndex = 166;
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
@@ -434,13 +434,13 @@ namespace BudgetExecution
             this.visualGroupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualGroupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.visualGroupBox2.Image = ((System.Drawing.Image)(resources.GetObject("visualGroupBox2.Image")));
-            this.visualGroupBox2.Location = new System.Drawing.Point(73, 55);
+            this.visualGroupBox2.Location = new System.Drawing.Point(61, 163);
             this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox2.Name = "visualGroupBox2";
             this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.visualGroupBox2.Separator = true;
             this.visualGroupBox2.SeparatorColor = System.Drawing.Color.Transparent;
-            this.visualGroupBox2.Size = new System.Drawing.Size(320, 404);
+            this.visualGroupBox2.Size = new System.Drawing.Size(320, 349);
             this.visualGroupBox2.TabIndex = 174;
             this.visualGroupBox2.Text = "Division";
             this.visualGroupBox2.TextAlignment = System.Drawing.StringAlignment.Far;
@@ -456,9 +456,9 @@ namespace BudgetExecution
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(30, 42);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(30, 78);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(268, 325);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(268, 239);
             this.flowLayoutPanel2.TabIndex = 155;
             // 
             // ExcelForm

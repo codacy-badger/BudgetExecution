@@ -106,11 +106,11 @@ namespace BudgetExecution
             }
         }
 
-        internal void InitializeFilterButtons(Control control, string[] list)
+        internal void InitializeFilterButtons(Control container, string[] list)
         {
             try
             {
-                control.Controls.Clear();
+                container.Controls.Clear();
                 foreach(string f in list)
                 {
                     MetroSetButton b = new MetroSetButton();
@@ -125,8 +125,8 @@ namespace BudgetExecution
                     b.Size = new Size(175, 30);
                     b.Margin = new Padding(3);
                     b.Padding = new Padding(1);
-                    control.Controls.Add(b);
-                    control.AutoSize = true;
+                    container.Controls.Add(b);
+                    container.AutoSize = true;
                     b.Tag = f;
                 }
             }
@@ -136,12 +136,12 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterPanel(FlowLayoutPanel fitlerControl, string[] filter)
+        internal void PopulateFilterPanel(FlowLayoutPanel container, string[] filter)
         {
             try
             {
-                InitializeFilterButtons(fitlerControl, filter);
-                foreach(MetroSetComboBox c in fitlerControl.Controls)
+                InitializeFilterButtons(container, filter);
+                foreach(MetroSetComboBox c in container.Controls)
                 {
                     MetroSetButton msb = new MetroSetButton();
                     InitializeFilterButtons(msb, filter);
@@ -157,12 +157,6 @@ namespace BudgetExecution
         {
             CalculatorForm cf = new CalculatorForm();
             cf.ShowDialog();
-        }
-
-        private void ExcelButton_OnClick(object sender, EventArgs e)
-        {
-            ExcelData ef = new ExcelData();
-            ef.Show();
         }
 
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
@@ -196,19 +190,6 @@ namespace BudgetExecution
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-        }
-
-        private void CopyButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
         }
 
         private void ExcelForm_Load(object sender, EventArgs e)
