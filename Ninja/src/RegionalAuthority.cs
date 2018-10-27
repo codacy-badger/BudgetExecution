@@ -14,11 +14,11 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             TableFilter = DataBuilder.FilterRecords;
             Metric = new PrcMetric(DbData);
-            DbTable = DbData.Table;
+            Table = DbData.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(DbTable);
+            ProgramElements = GetProgramElements(Table);
             FundData = Metric.FundTotals;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
@@ -27,7 +27,7 @@ namespace BudgetExecution
             ProjectData = Metric.ProgramProjectTotals;
             if(ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(DbTable);
+                FTE = GetFTE(Table);
             }
         }
 
@@ -44,7 +44,7 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; set; }
 
-        public DataFilter TableFilter { get; }
+        public TableDelegate TableFilter { get; }
 
         public FTE[] FTE { get; }
 
@@ -64,7 +64,7 @@ namespace BudgetExecution
 
         public Dictionary<string, decimal> ProjectData { get; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
         public decimal Amount { get; set; }
 

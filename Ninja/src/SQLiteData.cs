@@ -55,7 +55,7 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal TableDelegate TableFilter { get; set; }
 
         internal Fields Fields { get; set; }
 
@@ -109,7 +109,6 @@ namespace BudgetExecution
                     }
                 }
 
-                FunctionTab.TabVisible = false;
                 GetDataBase(Source);
             }
             catch(Exception ex)
@@ -788,32 +787,6 @@ namespace BudgetExecution
                 data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
                 RecordManager am = new RecordManager(Source, Provider, data);
                 am.Show();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void FilterButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                FilterTab.TabVisible = true;
-                FunctionTab.TabVisible = false;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void FunctionButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                FunctionTab.TabVisible = true;
-                FilterTab.TabVisible = false;
             }
             catch(Exception ex)
             {

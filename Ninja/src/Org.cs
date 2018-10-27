@@ -3,9 +3,13 @@ using System.Collections.Generic;
 
 namespace BudgetExecution
 {
-    public struct Org
+    public class Org
     {
         // CONSTRUCTORS
+        public Org()
+        {
+        }
+
         public Org(string code)
         {
             Code = code;
@@ -36,7 +40,7 @@ namespace BudgetExecution
 
         public override string ToString()
         {
-            return Code;
+            return ID;
         }
     }
 }

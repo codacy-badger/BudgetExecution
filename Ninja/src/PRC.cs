@@ -141,6 +141,22 @@ namespace BudgetExecution
 
         public string BudgetLevel { get; set; }
 
+        public string RPIO { get; set; }
+
+        public string BFY { get; set; }
+
+        public Fund Fund { get; }
+
+        public Org Org { get; }
+
+        public RC RC { get; }
+
+        public Account Account { get; }
+
+        public decimal Amount { get; set; }
+
+        public BOC BOC { get; }
+
         public string AH { get; }
 
         public FTE FTE { get; set; }
@@ -204,22 +220,6 @@ namespace BudgetExecution
         {
             return Code.Substring(5, 2);
         }
-
-        public string RPIO { get; set; }
-
-        public string BFY { get; set; }
-
-        public Fund Fund { get; }
-
-        public Org Org { get; }
-
-        public RC RC { get; }
-
-        public Account Account { get; }
-
-        public decimal Amount { get; set; }
-
-        public BOC BOC { get; }
 
         internal Dictionary<string, object> GetDataDictionary()
         {
@@ -324,8 +324,6 @@ namespace BudgetExecution
         {
             try
             {
-                Insert insert = Info.Insert;
-                insert(Source.PRC, Provider.SQLite, p);
             }
             catch(Exception ex)
             {
@@ -337,8 +335,6 @@ namespace BudgetExecution
         {
             try
             {
-                Insert update = Info.Insert;
-                update(Source.PRC, Provider.SQLite, p);
             }
             catch(Exception ex)
             {
@@ -350,8 +346,6 @@ namespace BudgetExecution
         {
             try
             {
-                Insert update = Info.Insert;
-                update(Source.PRC, Provider.SQLite, p);
             }
             catch(Exception ex)
             {

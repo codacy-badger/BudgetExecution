@@ -4,9 +4,13 @@ using System.Data.SQLite;
 
 namespace BudgetExecution
 {
-    public struct RC
+    public class RC
     {
         // CONSTRUCTORS
+        public RC()
+        {
+        }
+
         public RC(string code)
         {
             Code = code;
@@ -27,33 +31,11 @@ namespace BudgetExecution
             return Code;
         }
 
-        private Dictionary<string, object> GetParameter(string code)
+        private Dictionary<string, object> GetParameter()
         {
             try
             {
-                return new Dictionary<string, object> { ["Code"] = code };
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        private SQLiteParameter[] GetParameter(Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteParameter[] parms = new SQLiteParameter[p.Count];
-                for(int i = 0; i < p.Count; i++)
-                {
-                    foreach(KeyValuePair<string, object> kvp in p)
-                    {
-                        parms[i] = new SQLiteParameter(kvp.Key, kvp.Value);
-                    }
-                }
-
-                return parms;
+                return new Dictionary<string, object> { ["Code"] = Code };
             }
             catch(Exception ex)
             {

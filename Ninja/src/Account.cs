@@ -389,7 +389,7 @@ namespace BudgetExecution
         {
             try
             {
-                Insert insert = Info.Insert;
+                InsertDelegate insert = Info.Insert;
                 insert(Source.Accounts, Provider.SQLite, p);
             }
             catch(Exception ex)
@@ -406,7 +406,7 @@ namespace BudgetExecution
         {
             try
             {
-                Insert update = Info.Update;
+                InsertDelegate update = Info.Update;
                 update(Source.Accounts, Provider.SQLite, p);
             }
             catch(Exception ex)
@@ -423,7 +423,7 @@ namespace BudgetExecution
         {
             try
             {
-                Insert delete = Info.Insert;
+                InsertDelegate delete = Info.Insert;
                 delete(Source.Accounts, Provider.SQLite, p);
             }
             catch(Exception ex)

@@ -1,36 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using Syncfusion.Windows.Forms.Chart;
 
 namespace BudgetExecution
 {
     // Delegates
-    public delegate double[] Calculator(DataTable table);
+    public delegate DataTable TableDelegate(DataTable table, Field column, string filter);
 
-    public delegate DbParameter[] Param(Dictionary<string, object> param);
-
-    public delegate DataTable DataFilter(DataTable table, Field column, string filter);
-
-    public delegate DataTable DataFiltr(DataTable table, Field[] column, string[] filter);
+    public delegate DataTable DataDelegate(DataTable table, Field[] column, string[] filter);
 
     public delegate string[] Fields(DataTable table, string filter);
 
-    public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
+    public delegate ChartControl ChartDelegate(ChartControl chart, string title, Dictionary<string, double> data);
 
-    public delegate void Insert(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void InsertDelegate(Source source, Provider provider, Dictionary<string, object> dpr);
 
-    public delegate void Update(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void UpdateDelegate(Source source, Provider provider, Dictionary<string, object> dpr);
 
-    public delegate void Delete(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void DeleteDelegate(Source source, Provider provider, Dictionary<string, object> dpr);
 
-    public delegate Dictionary<string, string[]> ProgramElement(DataTable table, Field column);
+    public delegate Dictionary<string, string[]> ElementDelegate(DataTable table, Field column);
 
     // Enum
     public enum FileExt { XLSX = 1, CSV = 2, TXT = 3, PDF = 4, DOC = 5 }
 
-    public enum FundCode { B, BR, BR2, BR3, T, TC, TD, TR, TR1, TR2, TR2A, TR2B, TR3, F, FC, FD, H, HC, HD, E1, E1C, E1D, E2, E2C, E2D, E3, E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL, FS3, TS3 }
+    public enum FundCode { B, BR, BR1, BR2, BR3, T, TC, TD, TR, TR1, TR2, TR2A, TR2B, TR3, F, FC, FD, H, HC, HD, E1, E1C, E1D, E2, E2C, E2D, E3, E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL, FS3, TS3 }
 
     public enum Function { SQLiteData, BudgetTools, DataTools, DataMigration, ExcelImporter, PdfDataReader }
 

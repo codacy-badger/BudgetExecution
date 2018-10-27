@@ -56,7 +56,7 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal TableDelegate TableFilter { get; set; }
 
         internal Fields Fields { get; set; }
 

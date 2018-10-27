@@ -45,7 +45,7 @@ namespace BudgetExecution
 
         public BindingSource BindingSource { get; set; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal TableDelegate TableFilter { get; set; }
 
         internal DataBuilder DbData { get; set; }
 

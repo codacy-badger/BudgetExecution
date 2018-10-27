@@ -148,6 +148,7 @@ namespace BudgetExecution
 
         public DataRow[] Records { get; set; }
 
+        // METHODS
         public DataTable GetDataTable()
         {
             try
@@ -185,7 +186,6 @@ namespace BudgetExecution
             }
         }
 
-        // METHODS
         /// <summary>
         ///     Gets the data set.
         /// </summary>

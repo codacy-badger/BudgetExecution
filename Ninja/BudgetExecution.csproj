@@ -297,6 +297,7 @@
     <Compile Include="src\Message.Designer.cs">
       <DependentUpon>Message.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Division.cs" />
     <Compile Include="src\Reprogramming.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -86,7 +86,7 @@ namespace BudgetExecution
 
         public DataGridView Grid { get; set; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal TableDelegate TableFilter { get; set; }
 
         // METHODS
 

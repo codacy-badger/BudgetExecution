@@ -16,24 +16,24 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = DbData.Table;
-            CarryOverTable = DbData.Table.AsEnumerable()
+            CarryOver = DbData.Table.AsEnumerable()
                                    .Where(p => p.Field<string>("BFY").Equals("2018"))
                                    .Select(p => p)
                                    .CopyToDataTable();
-            CurrentYearTable = DbData.Table.AsEnumerable()
+            CurrentYear = DbData.Table.AsEnumerable()
                                      .Where(p => p.Field<string>("BFY").Equals("2019"))
                                      .Select(p => p)
                                      .CopyToDataTable();
             ProgramElements = DbData.GetProgramElements(DbData.Table);
             Total = GetTotals(Table);
-            CarryOverTotal = GetTotals(CarryOverTable);
-            CurrentYearTotal = GetTotals(CurrentYearTable);
+            CarryOverTotal = GetTotals(CarryOver);
+            CurrentYearTotal = GetTotals(CurrentYear);
             Count = Table.Rows.Count;
-            CarryOverCount = CarryOverTable.Rows.Count;
-            CurrentYearCount = CurrentYearTable.Rows.Count;
+            CarryOverCount = CarryOver.Rows.Count;
+            CurrentYearCount = CurrentYear.Rows.Count;
             Metrics = GetMetrics(Table);
-            CarryOverMetrics = GetMetrics(CarryOverTable);
-            CurrentYearMetrics = GetMetrics(CurrentYearTable);
+            CarryOverMetrics = GetMetrics(CarryOver);
+            CurrentYearMetrics = GetMetrics(CurrentYear);
             FundTotals = GetDataTotals(Table, Field.FundName);
             FundMetrics = GetMetrics(Table, Field.FundName);
             BocTotals = GetDataTotals(Table, Field.BocName);
@@ -67,23 +67,23 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = Info.FilterRows(DbData.Table, column, filter);
-            CarryOverTable = Info.FilterRows(DbData.Table, column, filter)
+            CarryOver = Info.FilterRows(DbData.Table, column, filter)
                                  .AsEnumerable()
                                  .Where(p => p.Field<string>("BFY").Equals("2018"))
                                  .Select(p => p)
                                  .CopyToDataTable();
-            CurrentYearTable = Info.FilterRows(DbData.Table, column, filter)
+            CurrentYear = Info.FilterRows(DbData.Table, column, filter)
                                    .AsEnumerable()
                                    .Where(p => p.Field<string>("BFY").Equals("2019"))
                                    .Select(p => p)
                                    .CopyToDataTable();
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
-            CarryOverTotal = GetTotals(CarryOverTable);
-            CurrentYearTotal = GetTotals(CurrentYearTable);
+            CarryOverTotal = GetTotals(CarryOver);
+            CurrentYearTotal = GetTotals(CurrentYear);
             Count = Table.Rows.Count;
-            CarryOverCount = CarryOverTable.Rows.Count;
-            CurrentYearCount = CurrentYearTable.Rows.Count;
+            CarryOverCount = CarryOver.Rows.Count;
+            CurrentYearCount = CurrentYear.Rows.Count;
             Average = GetAverage(Table);
             Metrics = GetMetrics(Table);
             FundTotals = GetDataTotals(Table, Field.FundName);
@@ -160,9 +160,9 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
-        public DataTable CarryOverTable { get; set; }
+        public DataTable CarryOver { get; set; }
 
-        public DataTable CurrentYearTable { get; set; }
+        public DataTable CurrentYear { get; set; }
 
         public decimal Total { get; }
 

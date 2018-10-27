@@ -25,18 +25,18 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = Fund.Code, ["BFY"] = bfy });
             Metric = new PrcMetric(DbData);
-            DbTable = DbData.Table;
-            Allocation = GetPrcArray(DbTable);
+            Table = DbData.Table;
+            Allocation = GetPrcArray(Table);
             Total = Metric.Total;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(DbTable);
+            ProgramElements = GetProgramElements(Table);
             BocCodes = ProgramElements["BOC"];
             if(BocCodes.Contains("17"))
             {
-                FTE = GetFTE(DbTable);
+                FTE = GetFTE(Table);
             }
 
-            Count = DbTable.Rows.Count;
+            Count = Table.Rows.Count;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
             ProgramData = Metric.ProgramAreaTotals;
@@ -90,7 +90,7 @@ namespace BudgetExecution
 
         public PrcMetric Metric { get; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
         public decimal Amount { get; }
 

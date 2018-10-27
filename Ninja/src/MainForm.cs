@@ -33,7 +33,7 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        public GetChart Chart { get; set; }
+        public ChartDelegate Chart { get; set; }
 
         public int Counter { get; set; }
 

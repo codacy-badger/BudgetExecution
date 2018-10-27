@@ -11,80 +11,62 @@ namespace BudgetExecution
         public DivisionAuthority()
         {
             TableFilter = DataBuilder.FilterRecords;
-            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            DbData = new DataBuilder(Source.DivisionAccounts);
             Metric = new PrcMetric(DbData);
             DataRecords = DbData.Records;
-            DbTable = DbData.Table;
-            PRC = GetPrcArray(DbTable);
+            Table = DbData.Table;
+            PRC = GetPrcArray(Table);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(DbTable);
-            FundAuthority = Metric.FundTotals;
-            BocAuthority = Metric.BocTotals;
-            NpmAuthority = Metric.NpmTotals;
-            GoalAuthority = Metric.GoalTotals;
-            ProgramAreaAuthority = Metric.ProgramAreaTotals;
-            ProgramProjectAuthority = Metric.ProgramProjectTotals;
+            ProgramElements = DbData.ProgramElements;
             if(ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(DbData.Table);
             }
-
-            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).Table;
+            
             TableFilter = DataBuilder.FilterRecords;
         }
 
         public DivisionAuthority(Source source)
         {
             TableFilter = DataBuilder.FilterRecords;
-            DbData = new DataBuilder(source, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
+            DbData = new DataBuilder(source);
+            Table = DbData.Table;
+            ProgramElements = DbData.ProgramElements;
             Metric = new PrcMetric(DbData);
-            DbTable = DbData.Table;
+            Division = new Division(source);
+            CurrentYear = Metric.CurrentYear;
+            CarryOver = Metric.CarryOver;
             DataRecords = DbData.Records;
-            PRC = GetPrcArray(DbTable);
-            Total = Metric.Total;
-            Count = Metric.Count;
-            Average = Metric.Average;
-            ProgramElements = GetProgramElements(DbTable);
-            Appropriation = GetAppropriation(ProgramElements["Fund"]);
-            FundAuthority = Metric.FundTotals;
-            BocAuthority = Metric.BocTotals;
-            NpmAuthority = Metric.NpmTotals;
-            GoalAuthority = Metric.GoalTotals;
-            ProgramAreaAuthority = Metric.ProgramAreaTotals;
-            ProgramProjectAuthority = Metric.ProgramProjectTotals;
             if(ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(DbTable);
-            }
-
-            EPM = GetEPM(DbTable);
-            LUST = GetLUST(DbTable);
-            STAG = GetSTAG(DbTable);
-            SUPERFUND = GetSUPERFUND(DbTable);
-            SF6A = GetSF6A(DbTable);
-            TR = GetTR(DbTable);
-            OIL = GetOIL(DbTable);
-            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear }).Table;
+                FTE = GetFTE(Table);
+            }           
         }
 
         // PROPERTIES
-        public static string FiscalYear { get; set; } = "2018";
+        public Division Division { get; }
 
-        public RC RC { get; }
-
-        public Org Org { get; }
+        public DataBuilder DbData { get; }
 
         public DataRow[] DataRecords { get; }
 
         public PRC[] PRC { get; }
 
+        public Dictionary<string, string[]> ProgramElements { get; }
+
+        public TableDelegate TableFilter { get; }
+
+        public DataTable FTE { get; }
+
         public Appropriation[] Appropriation { get; set; }
 
-        public DataBuilder DbData { get; set; }
-
         public DataSet Allocation { get; set; }
+
+        public DataTable CurrentYear { get; set; }
+
+        public DataTable CarryOver { get; set; }
 
         public DataTable EPM { get; set; }
 
@@ -106,17 +88,11 @@ namespace BudgetExecution
 
         public DataTable FS3 { get; set; }
 
-        public DataTable Awards { get; }
-
         public decimal Total { get; }
 
         public int Count { get; }
 
         public decimal Average { get; }
-
-        public DataFilter TableFilter { get; }
-
-        public DataTable FTE { get; }
 
         public Dictionary<string, decimal> BocAuthority { get; set; }
 
@@ -132,11 +108,9 @@ namespace BudgetExecution
 
         public ExcelReport Budget { get; set; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
-        public PrcMetric Metric { get; }
-
-        public Dictionary<string, string[]> ProgramElements { get; }
+        public PrcMetric Metric { get; set; }
 
         public decimal Amount { get; set; }
 
@@ -417,28 +391,5 @@ namespace BudgetExecution
             return null;
         }
 
-        internal Appropriation[] GetAppropriation(string[] funds)
-        {
-            if(funds.Length > 0)
-            {
-                try
-                {
-                    Appropriation[] approp = new Appropriation[funds.Length];
-                    for(int i = 0; i < funds.Length; i++)
-                    {
-                        approp[i] = new Appropriation(funds[i], FiscalYear);
-                    }
-
-                    return approp;
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
     }
 }

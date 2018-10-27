@@ -7,7 +7,7 @@ namespace BudgetExecution
     public interface IBudgetAuthority
     {
         // PROPERTIES
-        DataTable DbTable { get; }
+        DataTable Table { get; }
 
         PrcMetric Metric { get; }
 
