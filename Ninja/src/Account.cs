@@ -380,59 +380,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
-        /// <summary>
-        ///     Inserts the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
-        public static void Insert(Dictionary<string, object> p)
-        {
-            try
-            {
-                InsertDelegate insert = Info.Insert;
-                insert(Source.Accounts, Provider.SQLite, p);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        ///     Updates the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
-        public static void Update(Dictionary<string, object> p)
-        {
-            try
-            {
-                InsertDelegate update = Info.Update;
-                update(Source.Accounts, Provider.SQLite, p);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        ///     Deletes the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
-        public static void Delete(Dictionary<string, object> p)
-        {
-            try
-            {
-                InsertDelegate delete = Info.Insert;
-                delete(Source.Accounts, Provider.SQLite, p);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
         
-
         /// <summary>
         ///     Gets the account parameter.
         /// </summary>
@@ -539,6 +487,57 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return null;
+            }
+        }
+
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
             }
         }
     }

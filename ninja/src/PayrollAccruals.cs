@@ -121,5 +121,56 @@ namespace BudgetExecution
                 return null;
             }
         }
+
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
     }
 }

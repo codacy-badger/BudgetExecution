@@ -197,20 +197,15 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Inserts the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        public static void Insert(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                SQLiteConnection conn = query.DataConnection;
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
                 conn.Open();
-                SQLiteCommand insert = query.InsertCommand;
-                insert.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 conn.Close();
             }
             catch(Exception ex)
@@ -219,71 +214,15 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Updates the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        public static void Update(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        ///     Updates the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.UPDATE);
-                string cmd = query.UpdateStatement;
-                SQLiteConnection conn = (SQLiteConnection) query.GetDataConnection(Provider.SQLite);
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
                 conn.Open();
-                using(conn)
-                {
-                    SQLiteCommand update = (SQLiteCommand) query.UpdateCommand;
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        ///     Deletes the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        public static void Delete(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = query.DeleteStatement;
-                SQLiteConnection conn = query.DataConnection;
-                conn.Open();
-                SQLiteCommand delete = query.GetDataCommand(cmd, conn);
-                delete.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 conn.Close();
             }
             catch(Exception ex)
@@ -292,24 +231,16 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Deletes the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.DELETE);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace BudgetExecution
 {
+    [ SuppressMessage("ReSharper", "UnassignedGetOnlyAutoProperty") ]
     public class FTE : PRC, IPRC
     {
         public FTE()
@@ -28,7 +30,7 @@ namespace BudgetExecution
 
         public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
 
-        public PRC[] Data { get; }
+        public new PRC[] Data { get; }
 
         public Dictionary<string, string[]> DataElement { get; }
 

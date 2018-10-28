@@ -894,20 +894,12 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.INSERT, p);
-                using(query.DataConnection)
-                {
-                    SQLiteCommand command = query.InsertCommand;
-                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
-                    {
-                        foreach(SQLiteParameter pmr in param)
-                        {
-                            command.Parameters.Add(pmr);
-                        }
-                    }
-
-                    command.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
+                conn.Open();    
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -919,20 +911,12 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.UPDATE, p);
-                using(query.DataConnection)
-                {
-                    SQLiteCommand command = query.UpdateCommand;
-                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
-                    {
-                        foreach(SQLiteParameter pmr in param)
-                        {
-                            command.Parameters.Add(pmr);
-                        }
-                    }
-
-                    command.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.UPDATE, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -944,20 +928,12 @@ namespace BudgetExecution
         {
             try
             {
-                SQLiteQuery query = new SQLiteQuery(source, provider, Sql.DELETE, p);
-                using(query.DataConnection)
-                {
-                    SQLiteCommand command = query.DeleteCommand;
-                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
-                    {
-                        foreach(SQLiteParameter pmr in param)
-                        {
-                            command.Parameters.Add(pmr);
-                        }
-                    }
-
-                    command.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.DELETE, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {

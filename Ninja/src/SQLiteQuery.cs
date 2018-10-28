@@ -64,11 +64,11 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(param, source, provider, sql)
+        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
         {
             Provider = base.Provider;
             Source = base.Source;
-            SqlCmd = CommandType;
+            SqlCmd = Sql;
             Parameter = param;
             DataConnection = GetConnection();
             TableName = source.ToString();

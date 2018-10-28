@@ -232,34 +232,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.INSERT);
-                string cmd = query.InsertStatement;
-                SQLiteConnection conn = (SQLiteConnection) query.GetDataConnection(Provider.SQLite);
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
                 conn.Open();
-                using(conn)
-                {
-                    SQLiteCommand insert = (SQLiteCommand) query.GetDataCommand(cmd, conn);
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Update(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, Provider.SQLite, Sql.UPDATE, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -271,33 +249,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.UPDATE);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Delete(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, Provider.SQLite, Sql.DELETE, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -309,14 +266,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.DELETE);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {

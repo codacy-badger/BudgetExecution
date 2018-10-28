@@ -22,12 +22,12 @@ namespace BudgetExecution
         {
             Provider = provider;
             Source = source;
-            CommandType = cmb;
+            Sql = cmb;
             DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
             SelectStatement = $"SELECT * FROM {TableName}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            DataAdapter = GetDataAdapter(SelectCommand, CommandType);
+            DataAdapter = GetDataAdapter(SelectCommand, Sql);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -35,29 +35,21 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public Query(Dictionary<string, object> param, Source source, Provider provider, Sql command)
+        public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
         {
             Provider = provider;
             Source = source;
-            CommandType = command;
+            Sql = command;
             TableName = Source.ToString();
             DataConnection = GetDataConnection(Provider);
-            SqlStatement = GetSqlStatement(Source, CommandType, param);
+            SqlStatement = GetSqlStatement(Source, Sql, param);
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
-            DataAdapter = GetDataAdapter(DataCommand, CommandType);
-            if(CommandType == Sql.SELECT)
-            {
-                CommandBuilder = GetCommandBuilder(DataAdapter);
-                UpdateCommand = CommandBuilder.GetUpdateCommand();
-                InsertCommand = CommandBuilder.GetInsertCommand();
-                DeleteCommand = CommandBuilder.GetDeleteCommand();
-            }
-
+            DataAdapter = GetDataAdapter(DataCommand, Sql);
             Settings = new AppSettingsReader();
         }
 
         // PROPERTIES
-        public Sql CommandType { get; }
+        public Sql Sql { get; }
 
         public string TableName { get; }
 
@@ -188,8 +180,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
-        // ADAPTER METHODS----------------------------------------------------------------
 
         /// <summary>
         ///     Gets the data adapter.
@@ -406,8 +396,6 @@ namespace BudgetExecution
             }
         }
 
-        // STRING METHODS----------------------------------------------------------------       
-
         /// <summary>
         ///     Gets the connection.
         /// </summary>
@@ -453,110 +441,6 @@ namespace BudgetExecution
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-        
-        /// <summary>
-        ///     Gets the database parameters.
-        /// </summary>
-        /// <param name="input">The input.</param>
-        /// <returns></returns>
-        [ SuppressMessage("ReSharper", "CoVariantArrayConversion") ]
-        public DbParameter[] GetDataParameters(Dictionary<string, object> input)
-        {
-            try
-            {
-                switch(Provider)
-                {
-                    case Provider.Access:
-                    {
-                        OleDbParameter[] val = new OleDbParameter[input.Count];
-                        for(int i = 0; i < input.Count; i++)
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new OleDbParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-                        }
-
-                        return val;
-                    }
-
-                    case Provider.Excel:
-                    {
-                        OleDbParameter[] val = new OleDbParameter[input.Count];
-                        for(int i = 0; i < input.Count; i++)
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new OleDbParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-                        }
-
-                        return val;
-                    }
-
-                    case Provider.SQLite:
-                    {
-                        SQLiteParameter[] val = new SQLiteParameter[input.Count];
-                        for(int i = 0; i < input.Count; i++)
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SQLiteParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                                val[i].ParameterName = kvp.Key;
-                                val[i].DbType = DbType.String;
-                            }                            
-                        }
-
-                        return val;
-                    }
-
-                    case Provider.SqlCe:
-                    {
-                        SqlCeParameter[] val = new SqlCeParameter[input.Count];
-                        for(int i = 0; i < input.Count; i++)
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlCeParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-                        }
-
-                        return val;
-                    }
-
-                    case Provider.SqlServer:
-                    {
-                        SqlParameter[] val = new SqlParameter[input.Count];
-                        for(int i = 0; i < input.Count; i++)
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-                        }
-
-                        return val;
-                    }
-                }
-
-                return null;
             }
             catch(Exception ex)
             {
@@ -724,8 +608,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }
-        
+        }     
 
         /// <summary>
         ///     Gets the select command.
@@ -826,10 +709,10 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets the data command.
         /// </summary>
-        /// <param name="pmr">The PMR.</param>
         /// <param name="cmd">The command.</param>
+        /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        public DbCommand GetDataCommand(Dictionary<string, object> pmr, Sql cmd)
+        public DbCommand GetDataCommand(Sql cmd, Dictionary<string, object> pmr)
         {
             try
             {

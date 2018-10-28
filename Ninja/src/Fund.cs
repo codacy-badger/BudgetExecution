@@ -73,8 +73,6 @@ namespace BudgetExecution
 
         public Provider Provider { get; }
 
-        public DataBuilder DbData { get; }
-
         public int ID { get; set; }
 
         public DataRow Data { get; set; }
@@ -228,61 +226,16 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
-        {
-            try
-            {
-                Dictionary<string, object> param = GetInsertionColumns(source, Provider.SQLite, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Dictionary<string, object> param = GetInsertionColumns(source, provider, p);
-                string[] fields = param.Keys.ToArray();
-                object[] vals = param.Values.ToArray();
-                Query query = new Query(param, source, provider, Sql.INSERT);
-                string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Update(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.InsertCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -294,33 +247,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.UPDATE);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Delete(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
-        {
-            try
-            {
-                SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using(conn)
-                {
-                    SQLiteCommand delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.UpdateCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {
@@ -332,14 +264,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(p, source, provider, Sql.DELETE);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
-                {
-                    SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
+                var query = new Query(source, provider, Sql.INSERT, p);
+                var conn = query.DataConnection;
+                var command = query.DeleteCommand;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
             }
             catch(Exception ex)
             {

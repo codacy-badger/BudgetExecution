@@ -18,7 +18,7 @@ namespace BudgetExecution
         {
             Input = null;
             Source = q.Source;
-            Query = new Query(q.Source, q.Provider, q.CommandType);
+            Query = new Query(q.Source, q.Provider, q.Sql);
 
             if(q.Source == Source.PRC)
             {
@@ -92,7 +92,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             Input = param;
-            Query = new Query(Input, source, provider, Sql.SELECT);
+            Query = new Query(source, provider, Sql.SELECT, Input);
             if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable()
