@@ -93,7 +93,6 @@ namespace BudgetExecution
                 param.Add("Org", Organization.Code);
                 param.Add("Division", Organization.Name);
                 param.Add("Id", Organization.ID);
-                param.Add("FiscalYear", DivisionAuthority.FiscalYear);
                 param.Add("Purpose", Purpose);
                 return param;
             }
@@ -111,7 +110,6 @@ namespace BudgetExecution
             division.Add($"{Organization.Name}");
             division.Add($"ID : {Organization.ID}");
             division.Add($"Org Code: {Organization.Code}");
-            division.Add($"Budget Authority for Fiscal Year {DivisionAuthority.FiscalYear}");
             return division;
         }
 

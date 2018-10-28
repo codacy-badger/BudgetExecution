@@ -57,7 +57,7 @@ namespace BudgetExecution
 
             if(DbData.Source == Source.PRC)
             {
-                DataTable table = new DivisionAuthority().DbTable;
+                DataTable table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, Field.RC);
                 DivisionMetrics = GetMetrics(table, Field.RC);
             }
@@ -107,7 +107,7 @@ namespace BudgetExecution
             }
             else
             {
-                DataTable table = new DivisionAuthority().DbTable;
+                DataTable table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, Field.RC);
                 DivisionMetrics = GetMetrics(table, Field.RC);
             }

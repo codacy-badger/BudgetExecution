@@ -227,6 +227,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="src\BudgetLevel.cs" />
     <Compile Include="src\ExcelData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,7 +236,9 @@
     </Compile>
     <Compile Include="src\AccessQuery.cs" />
     <Compile Include="src\Awards.cs" />
-    <Compile Include="src\Benefits.cs" />
+    <Compile Include="src\Employee.cs" />
+    <Compile Include="src\PayrollAccruals.cs" />
+    <Compile Include="src\WorkCode.cs" />
     <Compile Include="src\ProgramObligations.cs" />
     <Compile Include="src\Programs.cs" />
     <Compile Include="resources\ControlIcon.Designer.cs">
@@ -464,7 +467,6 @@
     <Compile Include="src\Fund.cs" />
     <Compile Include="src\Info.cs" />
     <Compile Include="src\ISupplementalAllocation.cs" />
-    <Compile Include="src\Obligation.cs" />
     <Compile Include="src\Org.cs" />
     <Compile Include="src\PayrollObligation.cs" />
     <Compile Include="src\PRC.cs" />

@@ -12,38 +12,25 @@ namespace BudgetExecution
         {
         }
 
-        public PayrollObligation(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
+        public PayrollObligation(Source source = Source.PayrollObligations, Provider provider = Provider.SQLite, Sql sql = Sql.SELECT)
         {
-            RPIO = rpio;
-            BFY = bfy;
-            Fund = new Fund(fund, bfy);
-            Org = new Org(org);
-            RC = new RC(rc);
-            Code = code;
-            ProgramProjectCode = progproj;
-            ProgramProjectName = progprojname;
-            HrOrgCode = hoc;
-            WorkCode = wc;
-            WorkCodeName = wcn;
-            Amount = amount;
-            Hours = ybh;
-            YearBasePay = ybp;
-            YearBaseHours = ybh;
-            YearOverTimePay = yotp;
-            YearOverTimeHours = yoth;
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source.PayrollObligations, Provider);
         }
 
         public PayrollObligation(Source source, Provider provider, Dictionary<string, object> p)
         {
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source, Provider, p);
-            DbTable = DbData.Table;
-            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
+            DbData = new DataBuilder(Source.PayrollObligations, Provider, p);
+            Table = DbData.Table;
+            DbRow = DbData.Table.AsEnumerable().Select(prc => prc).First();
             RPIO = DbRow["RPIO"].ToString();
             BFY = DbRow["BFY "].ToString();
             Fund = new Fund(DbRow["Fund"].ToString(), BFY);
             Org = new Org(DbRow["Org"].ToString());
+            OrgName = Org.Name;
             RC = new RC(DbRow["RC"].ToString());
             Code = DbRow["Code"].ToString();
             ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
@@ -51,12 +38,9 @@ namespace BudgetExecution
             HrOrgCode = DbRow["HrOrgCode"].ToString();
             WorkCode = DbRow["WorkCode"].ToString();
             WorkCodeName = DbRow["WorkCodeName"].ToString();
-            Amount = decimal.Parse(DbRow["Amount"].ToString());
-            Hours = double.Parse(DbRow["Hours"].ToString());
-            YearBasePay = decimal.Parse(DbRow["YearBasePay"].ToString());
-            YearBaseHours = double.Parse(DbRow["YearBaseHours"].ToString());
-            YearOverTimePay = decimal.Parse(DbRow["YearOverTimePay"].ToString());
-            YearOverTimeHours = double.Parse(DbRow["YearOverTimeHours"].ToString());
+            PayPeriod = DbRow["PayPeriod"].ToString();
+            Obligations = decimal.Parse(DbRow["Obligations"].ToString());
+            Hours = decimal.Parse(DbRow["Hours"].ToString());
         }
 
         public PayrollObligation(DataRow dr)
@@ -72,12 +56,9 @@ namespace BudgetExecution
             HrOrgCode = dr["HrOrgCode"].ToString();
             WorkCode = dr["WorkCode"].ToString();
             WorkCodeName = dr["WorkCodeName"].ToString();
+            PayPeriod = dr["PayPeriod"].ToString();
             Amount = decimal.Parse(dr["Amount"].ToString());
-            Hours = double.Parse(dr["Hours"].ToString());
-            YearBasePay = decimal.Parse(dr["YearBasePay"].ToString());
-            YearBaseHours = double.Parse(dr["YearBaseHours"].ToString());
-            YearOverTimePay = decimal.Parse(dr["YearOverTimePay"].ToString());
-            YearOverTimeHours = double.Parse(dr["YearOverTimeHours"].ToString());
+            Hours = decimal.Parse(dr["Hours"].ToString());
         }
 
         // PROPERTIES
@@ -85,11 +66,23 @@ namespace BudgetExecution
 
         public Provider Provider { get; }
 
+        public Sql Sql { get; }
+
         public DataBuilder DbData { get; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
         public DataRow DbRow { get; }
+
+        public int ID { get; set; }
+
+        public string TreasurySymbol { get; set; }
+
+        public string AH { get; set; }
+
+        public string AhName { get; set; }
+
+        public string OrgName { get; set; }
 
         public decimal Amount { get; }
 
@@ -99,7 +92,11 @@ namespace BudgetExecution
 
         public Fund Fund { get; }
 
-        public double Hours { get; }
+        public string FOC { get; set; }
+
+        public string FocName { get; set; }
+
+        public decimal Hours { get; }
 
         public string HrOrgCode { get; }
 
@@ -111,19 +108,17 @@ namespace BudgetExecution
 
         public RC RC { get; }
 
+        public string DivisionName { get; set; }
+
         public string RPIO { get; }
 
         public string WorkCode { get; }
 
+        public string PayPeriod { get; set; }
+
+        public decimal Obligations { get; set; }
+
         public string WorkCodeName { get; }
-
-        public double YearBaseHours { get; }
-
-        public decimal YearBasePay { get; }
-
-        public double YearOverTimeHours { get; }
-
-        public decimal YearOverTimePay { get; }
 
         // METHODS
         private Dictionary<string, object> GetParameter(string code, string bfy)

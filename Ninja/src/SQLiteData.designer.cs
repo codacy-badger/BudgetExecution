@@ -44,7 +44,6 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            VisualPlus.Structure.TextStyle textStyle58 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle7 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle8 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle9 = new VisualPlus.Structure.TextStyle();
@@ -58,52 +57,53 @@ namespace BudgetExecution
             VisualPlus.Structure.TextStyle textStyle17 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle18 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle19 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle21 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle23 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle25 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle27 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle29 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle31 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle33 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle35 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle38 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle39 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle41 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle43 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle45 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle47 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle49 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle51 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle53 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle55 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle57 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle59 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle61 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle63 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle65 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle20 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle21 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle22 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle23 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle24 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle25 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle26 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle27 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle28 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle29 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle30 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle31 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle32 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle33 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle34 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle35 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle36 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle37 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle38 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle39 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle40 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle41 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle42 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle43 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle44 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle45 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle46 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle47 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle48 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle49 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle50 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle51 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle52 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle53 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle54 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle55 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle56 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle66 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle57 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle58 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle59 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle60 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle61 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle62 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle63 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle64 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle65 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle66 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             this.toolstripitem1 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
@@ -124,9 +124,9 @@ namespace BudgetExecution
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.GridRefreshButton = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.GridRefreshButton = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -149,13 +149,18 @@ namespace BudgetExecution
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.DataGroupBox = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.GridTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.EditTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AddTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.visualTextBox26 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualTextBox1 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualLabel1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualLabel2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
@@ -169,62 +174,57 @@ namespace BudgetExecution
             this.visualLabel6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox6 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel9 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel10 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel11 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel12 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel13 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel14 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel15 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel16 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel17 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel18 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel19 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel20 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel21 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel22 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel23 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel24 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel25 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel26 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel27 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel28 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel29 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-            this.visualLabel30 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox7 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox8 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel9 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox9 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel10 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox10 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel11 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox11 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel12 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox12 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel13 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox13 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel14 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox14 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel15 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox15 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.visualTextBox16 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel16 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel17 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox17 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel18 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox18 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel19 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox19 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel20 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox20 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel21 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox21 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel22 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox22 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel23 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox23 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel24 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox24 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel25 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox25 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
-            this.visualTextBox30 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel26 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualTextBox26 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel27 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox27 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel28 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox28 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel29 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.visualTextBox29 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+            this.visualLabel30 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualTextBox30 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.TabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -234,10 +234,10 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabPageAdv2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).BeginInit();
             this.TabControl.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // E6DataGrid
@@ -391,14 +391,14 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button11, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.button9, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(524, 548);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(581, 485);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -418,7 +418,7 @@ namespace BudgetExecution
             this.button2.Location = new System.Drawing.Point(4, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 74);
+            this.button2.Size = new System.Drawing.Size(126, 74);
             this.button2.TabIndex = 162;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button2, "Previous Account");
@@ -434,7 +434,7 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(139, 5);
+            this.button3.Location = new System.Drawing.Point(138, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 74);
@@ -444,25 +444,6 @@ namespace BudgetExecution
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.NextButton_OnClick);
             // 
-            // GridRefreshButton
-            // 
-            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
-            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(543, 5);
-            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(104, 67);
-            this.GridRefreshButton.TabIndex = 164;
-            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
-            this.GridRefreshButton.UseVisualStyleBackColor = false;
-            this.GridRefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Transparent;
@@ -471,7 +452,7 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(655, 5);
+            this.button11.Location = new System.Drawing.Point(654, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(106, 67);
@@ -491,7 +472,7 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(286, 5);
+            this.button9.Location = new System.Drawing.Point(285, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(127, 74);
@@ -502,6 +483,25 @@ namespace BudgetExecution
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.CopyButton_OnClick);
             // 
+            // GridRefreshButton
+            // 
+            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
+            this.GridRefreshButton.Location = new System.Drawing.Point(542, 5);
+            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GridRefreshButton.Name = "GridRefreshButton";
+            this.GridRefreshButton.Size = new System.Drawing.Size(104, 67);
+            this.GridRefreshButton.TabIndex = 164;
+            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
+            this.GridRefreshButton.UseVisualStyleBackColor = false;
+            this.GridRefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.Transparent;
@@ -510,7 +510,7 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(421, 5);
+            this.button12.Location = new System.Drawing.Point(420, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(114, 67);
@@ -530,7 +530,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -539,7 +539,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.Controls.Add(this.label8, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(394, 50);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(394, 70);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -562,7 +562,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(626, 0);
+            this.label10.Location = new System.Drawing.Point(625, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 33);
             this.label10.TabIndex = 158;
@@ -573,7 +573,7 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(91, 0);
+            this.label6.Location = new System.Drawing.Point(90, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 33);
             this.label6.TabIndex = 154;
@@ -584,7 +584,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(565, 0);
+            this.label9.Location = new System.Drawing.Point(564, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 33);
             this.label9.TabIndex = 157;
@@ -595,7 +595,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(250, 0);
+            this.label7.Location = new System.Drawing.Point(249, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 33);
             this.label7.TabIndex = 155;
@@ -606,7 +606,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(311, 0);
+            this.label8.Location = new System.Drawing.Point(310, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 33);
             this.label8.TabIndex = 156;
@@ -617,7 +617,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(842, 0);
+            this.label11.Location = new System.Drawing.Point(841, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 33);
             this.label11.TabIndex = 159;
@@ -628,7 +628,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(927, 0);
+            this.label12.Location = new System.Drawing.Point(926, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 33);
             this.label12.TabIndex = 160;
@@ -1015,6 +1015,114 @@ namespace BudgetExecution
             this.metroSetToolTip1.ThemeAuthor = "Narwin";
             this.metroSetToolTip1.ThemeName = "MetroDark";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(4, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 74);
+            this.button1.TabIndex = 162;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroSetToolTip1.SetToolTip(this.button1, "Previous Account");
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(138, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(139, 74);
+            this.button4.TabIndex = 163;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button4, "Next Account");
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(654, 5);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 67);
+            this.button5.TabIndex = 167;
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button5, "Copy Account\r\n");
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(285, 5);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(127, 74);
+            this.button6.TabIndex = 165;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button6, "Edit Account");
+            this.button6.UseCompatibleTextRendering = true;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(542, 5);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(104, 67);
+            this.button7.TabIndex = 164;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button7, "Refresh Data");
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(420, 5);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(114, 67);
+            this.button8.TabIndex = 168;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button8, "Remove Account");
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // DataGroupBox
             // 
             this.DataGroupBox.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1034,13 +1142,13 @@ namespace BudgetExecution
             this.DataGroupBox.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.DataGroupBox.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.DataGroupBox.Image = null;
-            this.DataGroupBox.Location = new System.Drawing.Point(14, 21);
+            this.DataGroupBox.Location = new System.Drawing.Point(12, 20);
             this.DataGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.DataGroupBox.Name = "DataGroupBox";
             this.DataGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.DataGroupBox.Separator = false;
             this.DataGroupBox.SeparatorColor = System.Drawing.Color.Black;
-            this.DataGroupBox.Size = new System.Drawing.Size(1456, 653);
+            this.DataGroupBox.Size = new System.Drawing.Size(1492, 604);
             this.DataGroupBox.TabIndex = 158;
             this.DataGroupBox.Text = "Database";
             this.DataGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -1077,7 +1185,7 @@ namespace BudgetExecution
             this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Grid.Location = new System.Drawing.Point(458, 109);
+            this.Grid.Location = new System.Drawing.Point(495, 122);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersWidth = 20;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray;
@@ -1092,7 +1200,7 @@ namespace BudgetExecution
             this.Grid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.Grid.RowTemplate.Height = 28;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(925, 404);
+            this.Grid.Size = new System.Drawing.Size(925, 355);
             this.Grid.TabIndex = 171;
             // 
             // GridTab
@@ -1224,58 +1332,6 @@ namespace BudgetExecution
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1340, 417);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // visualTextBox26
-            // 
-            this.visualTextBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.visualTextBox26.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualTextBox26.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.visualTextBox26.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualTextBox26.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox26.Border.HoverVisible = true;
-            this.visualTextBox26.Border.Rounding = 6;
-            this.visualTextBox26.Border.Thickness = 1;
-            this.visualTextBox26.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox26.Border.Visible = true;
-            this.visualTextBox26.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualTextBox26.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox26.ButtonBorder.HoverVisible = true;
-            this.visualTextBox26.ButtonBorder.Rounding = 6;
-            this.visualTextBox26.ButtonBorder.Thickness = 1;
-            this.visualTextBox26.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox26.ButtonBorder.Visible = true;
-            this.visualTextBox26.ButtonColor.Disabled = System.Drawing.Color.Empty;
-            this.visualTextBox26.ButtonColor.Enabled = System.Drawing.Color.Empty;
-            this.visualTextBox26.ButtonColor.Hover = System.Drawing.Color.Empty;
-            this.visualTextBox26.ButtonColor.Pressed = System.Drawing.Color.Empty;
-            this.visualTextBox26.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualTextBox26.ButtonIndent = 3;
-            this.visualTextBox26.ButtonText = "visualButton";
-            this.visualTextBox26.ButtonVisible = false;
-            this.visualTextBox26.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualTextBox26.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualTextBox26.ImageSize = new System.Drawing.Size(16, 16);
-            this.visualTextBox26.ImageVisible = false;
-            this.visualTextBox26.ImageWidth = 35;
-            this.visualTextBox26.Location = new System.Drawing.Point(216, 363);
-            this.visualTextBox26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualTextBox26.Name = "visualTextBox26";
-            this.visualTextBox26.PasswordChar = '\0';
-            this.visualTextBox26.ReadOnly = false;
-            this.visualTextBox26.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.visualTextBox26.Size = new System.Drawing.Size(194, 32);
-            this.visualTextBox26.TabIndex = 52;
-            this.visualTextBox26.TextBoxWidth = 184;
-            textStyle58.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle58.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle58.Hover = System.Drawing.Color.Empty;
-            textStyle58.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualTextBox26.TextStyle = textStyle58;
-            this.visualTextBox26.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.visualTextBox26.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualTextBox26.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.visualTextBox26.Watermark.Text = "Watermark text";
-            this.visualTextBox26.Watermark.Visible = false;
             // 
             // visualTextBox1
             // 
@@ -1792,673 +1848,6 @@ namespace BudgetExecution
             textStyle19.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualLabel7.TextStyle = textStyle19;
             // 
-            // visualLabel8
-            // 
-            this.visualLabel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel8.Location = new System.Drawing.Point(245, 94);
-            this.visualLabel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel8.Name = "visualLabel8";
-            this.visualLabel8.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel8.Outline = false;
-            this.visualLabel8.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel8.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel8.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel8.ReflectionSpacing = 0;
-            this.visualLabel8.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel8.ShadowDirection = 315;
-            this.visualLabel8.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel8.ShadowOpacity = 100;
-            this.visualLabel8.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel8.TabIndex = 8;
-            this.visualLabel8.Text = "visualLabel8";
-            this.visualLabel8.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel8.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle21.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle21.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle21.Hover = System.Drawing.Color.Empty;
-            textStyle21.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel8.TextStyle = textStyle21;
-            // 
-            // visualLabel9
-            // 
-            this.visualLabel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel9.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel9.Location = new System.Drawing.Point(466, 94);
-            this.visualLabel9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel9.Name = "visualLabel9";
-            this.visualLabel9.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel9.Outline = false;
-            this.visualLabel9.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel9.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel9.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel9.ReflectionSpacing = 0;
-            this.visualLabel9.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel9.ShadowDirection = 315;
-            this.visualLabel9.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel9.ShadowOpacity = 100;
-            this.visualLabel9.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel9.TabIndex = 9;
-            this.visualLabel9.Text = "visualLabel9";
-            this.visualLabel9.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel9.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle23.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle23.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle23.Hover = System.Drawing.Color.Empty;
-            textStyle23.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel9.TextStyle = textStyle23;
-            // 
-            // visualLabel10
-            // 
-            this.visualLabel10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel10.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel10.Location = new System.Drawing.Point(695, 94);
-            this.visualLabel10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel10.Name = "visualLabel10";
-            this.visualLabel10.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel10.Outline = false;
-            this.visualLabel10.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel10.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel10.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel10.ReflectionSpacing = 0;
-            this.visualLabel10.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel10.ShadowDirection = 315;
-            this.visualLabel10.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel10.ShadowOpacity = 100;
-            this.visualLabel10.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel10.TabIndex = 10;
-            this.visualLabel10.Text = "visualLabel10";
-            this.visualLabel10.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel10.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle25.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle25.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle25.Hover = System.Drawing.Color.Empty;
-            textStyle25.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel10.TextStyle = textStyle25;
-            // 
-            // visualLabel11
-            // 
-            this.visualLabel11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel11.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel11.Location = new System.Drawing.Point(920, 94);
-            this.visualLabel11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel11.Name = "visualLabel11";
-            this.visualLabel11.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel11.Outline = false;
-            this.visualLabel11.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel11.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel11.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel11.ReflectionSpacing = 0;
-            this.visualLabel11.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel11.ShadowDirection = 315;
-            this.visualLabel11.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel11.ShadowOpacity = 100;
-            this.visualLabel11.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel11.TabIndex = 11;
-            this.visualLabel11.Text = "visualLabel11";
-            this.visualLabel11.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel11.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle27.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle27.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle27.Hover = System.Drawing.Color.Empty;
-            textStyle27.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel11.TextStyle = textStyle27;
-            // 
-            // visualLabel12
-            // 
-            this.visualLabel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel12.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel12.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel12.Location = new System.Drawing.Point(1149, 94);
-            this.visualLabel12.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel12.Name = "visualLabel12";
-            this.visualLabel12.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel12.Outline = false;
-            this.visualLabel12.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel12.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel12.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel12.ReflectionSpacing = 0;
-            this.visualLabel12.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel12.ShadowDirection = 315;
-            this.visualLabel12.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel12.ShadowOpacity = 100;
-            this.visualLabel12.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel12.TabIndex = 12;
-            this.visualLabel12.Text = "visualLabel12";
-            this.visualLabel12.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel12.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle29.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle29.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle29.Hover = System.Drawing.Color.Empty;
-            textStyle29.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel12.TextStyle = textStyle29;
-            // 
-            // visualLabel13
-            // 
-            this.visualLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel13.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel13.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel13.Location = new System.Drawing.Point(33, 174);
-            this.visualLabel13.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel13.Name = "visualLabel13";
-            this.visualLabel13.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel13.Outline = false;
-            this.visualLabel13.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel13.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel13.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel13.ReflectionSpacing = 0;
-            this.visualLabel13.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel13.ShadowDirection = 315;
-            this.visualLabel13.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel13.ShadowOpacity = 100;
-            this.visualLabel13.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel13.TabIndex = 13;
-            this.visualLabel13.Text = "visualLabel13";
-            this.visualLabel13.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel13.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle31.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle31.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle31.Hover = System.Drawing.Color.Empty;
-            textStyle31.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel13.TextStyle = textStyle31;
-            // 
-            // visualLabel14
-            // 
-            this.visualLabel14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel14.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel14.Location = new System.Drawing.Point(245, 174);
-            this.visualLabel14.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel14.Name = "visualLabel14";
-            this.visualLabel14.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel14.Outline = false;
-            this.visualLabel14.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel14.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel14.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel14.ReflectionSpacing = 0;
-            this.visualLabel14.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel14.ShadowDirection = 315;
-            this.visualLabel14.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel14.ShadowOpacity = 100;
-            this.visualLabel14.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel14.TabIndex = 14;
-            this.visualLabel14.Text = "visualLabel14";
-            this.visualLabel14.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel14.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle33.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle33.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle33.Hover = System.Drawing.Color.Empty;
-            textStyle33.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel14.TextStyle = textStyle33;
-            // 
-            // visualLabel15
-            // 
-            this.visualLabel15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel15.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel15.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel15.Location = new System.Drawing.Point(466, 174);
-            this.visualLabel15.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel15.Name = "visualLabel15";
-            this.visualLabel15.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel15.Outline = false;
-            this.visualLabel15.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel15.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel15.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel15.ReflectionSpacing = 0;
-            this.visualLabel15.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel15.ShadowDirection = 315;
-            this.visualLabel15.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel15.ShadowOpacity = 100;
-            this.visualLabel15.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel15.TabIndex = 15;
-            this.visualLabel15.Text = "visualLabel15";
-            this.visualLabel15.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel15.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle35.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle35.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle35.Hover = System.Drawing.Color.Empty;
-            textStyle35.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel15.TextStyle = textStyle35;
-            // 
-            // visualLabel16
-            // 
-            this.visualLabel16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel16.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel16.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel16.Location = new System.Drawing.Point(695, 174);
-            this.visualLabel16.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel16.Name = "visualLabel16";
-            this.visualLabel16.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel16.Outline = false;
-            this.visualLabel16.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel16.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel16.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel16.ReflectionSpacing = 0;
-            this.visualLabel16.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel16.ShadowDirection = 315;
-            this.visualLabel16.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel16.ShadowOpacity = 100;
-            this.visualLabel16.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel16.TabIndex = 16;
-            this.visualLabel16.Text = "visualLabel16";
-            this.visualLabel16.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel16.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle38.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle38.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle38.Hover = System.Drawing.Color.Empty;
-            textStyle38.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel16.TextStyle = textStyle38;
-            // 
-            // visualLabel17
-            // 
-            this.visualLabel17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel17.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel17.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel17.Location = new System.Drawing.Point(920, 174);
-            this.visualLabel17.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel17.Name = "visualLabel17";
-            this.visualLabel17.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel17.Outline = false;
-            this.visualLabel17.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel17.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel17.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel17.ReflectionSpacing = 0;
-            this.visualLabel17.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel17.ShadowDirection = 315;
-            this.visualLabel17.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel17.ShadowOpacity = 100;
-            this.visualLabel17.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel17.TabIndex = 17;
-            this.visualLabel17.Text = "visualLabel17";
-            this.visualLabel17.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel17.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle39.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle39.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle39.Hover = System.Drawing.Color.Empty;
-            textStyle39.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel17.TextStyle = textStyle39;
-            // 
-            // visualLabel18
-            // 
-            this.visualLabel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel18.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel18.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel18.Location = new System.Drawing.Point(1149, 174);
-            this.visualLabel18.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel18.Name = "visualLabel18";
-            this.visualLabel18.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel18.Outline = false;
-            this.visualLabel18.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel18.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel18.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel18.ReflectionSpacing = 0;
-            this.visualLabel18.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel18.ShadowDirection = 315;
-            this.visualLabel18.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel18.ShadowOpacity = 100;
-            this.visualLabel18.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel18.TabIndex = 18;
-            this.visualLabel18.Text = "visualLabel18";
-            this.visualLabel18.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel18.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle41.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle41.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle41.Hover = System.Drawing.Color.Empty;
-            textStyle41.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel18.TextStyle = textStyle41;
-            // 
-            // visualLabel19
-            // 
-            this.visualLabel19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel19.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel19.Location = new System.Drawing.Point(33, 254);
-            this.visualLabel19.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel19.Name = "visualLabel19";
-            this.visualLabel19.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel19.Outline = false;
-            this.visualLabel19.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel19.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel19.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel19.ReflectionSpacing = 0;
-            this.visualLabel19.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel19.ShadowDirection = 315;
-            this.visualLabel19.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel19.ShadowOpacity = 100;
-            this.visualLabel19.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel19.TabIndex = 19;
-            this.visualLabel19.Text = "visualLabel19";
-            this.visualLabel19.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel19.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle43.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle43.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle43.Hover = System.Drawing.Color.Empty;
-            textStyle43.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel19.TextStyle = textStyle43;
-            // 
-            // visualLabel20
-            // 
-            this.visualLabel20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel20.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel20.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel20.Location = new System.Drawing.Point(245, 254);
-            this.visualLabel20.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel20.Name = "visualLabel20";
-            this.visualLabel20.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel20.Outline = false;
-            this.visualLabel20.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel20.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel20.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel20.ReflectionSpacing = 0;
-            this.visualLabel20.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel20.ShadowDirection = 315;
-            this.visualLabel20.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel20.ShadowOpacity = 100;
-            this.visualLabel20.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel20.TabIndex = 20;
-            this.visualLabel20.Text = "visualLabel20";
-            this.visualLabel20.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel20.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle45.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle45.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle45.Hover = System.Drawing.Color.Empty;
-            textStyle45.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel20.TextStyle = textStyle45;
-            // 
-            // visualLabel21
-            // 
-            this.visualLabel21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel21.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel21.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel21.Location = new System.Drawing.Point(466, 254);
-            this.visualLabel21.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel21.Name = "visualLabel21";
-            this.visualLabel21.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel21.Outline = false;
-            this.visualLabel21.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel21.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel21.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel21.ReflectionSpacing = 0;
-            this.visualLabel21.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel21.ShadowDirection = 315;
-            this.visualLabel21.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel21.ShadowOpacity = 100;
-            this.visualLabel21.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel21.TabIndex = 21;
-            this.visualLabel21.Text = "visualLabel21";
-            this.visualLabel21.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel21.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle47.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle47.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle47.Hover = System.Drawing.Color.Empty;
-            textStyle47.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel21.TextStyle = textStyle47;
-            // 
-            // visualLabel22
-            // 
-            this.visualLabel22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel22.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel22.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel22.Location = new System.Drawing.Point(695, 254);
-            this.visualLabel22.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel22.Name = "visualLabel22";
-            this.visualLabel22.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel22.Outline = false;
-            this.visualLabel22.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel22.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel22.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel22.ReflectionSpacing = 0;
-            this.visualLabel22.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel22.ShadowDirection = 315;
-            this.visualLabel22.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel22.ShadowOpacity = 100;
-            this.visualLabel22.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel22.TabIndex = 22;
-            this.visualLabel22.Text = "visualLabel22";
-            this.visualLabel22.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel22.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle49.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle49.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle49.Hover = System.Drawing.Color.Empty;
-            textStyle49.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel22.TextStyle = textStyle49;
-            // 
-            // visualLabel23
-            // 
-            this.visualLabel23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel23.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel23.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel23.Location = new System.Drawing.Point(920, 254);
-            this.visualLabel23.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel23.Name = "visualLabel23";
-            this.visualLabel23.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel23.Outline = false;
-            this.visualLabel23.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel23.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel23.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel23.ReflectionSpacing = 0;
-            this.visualLabel23.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel23.ShadowDirection = 315;
-            this.visualLabel23.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel23.ShadowOpacity = 100;
-            this.visualLabel23.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel23.TabIndex = 23;
-            this.visualLabel23.Text = "visualLabel23";
-            this.visualLabel23.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel23.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle51.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle51.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle51.Hover = System.Drawing.Color.Empty;
-            textStyle51.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel23.TextStyle = textStyle51;
-            // 
-            // visualLabel24
-            // 
-            this.visualLabel24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel24.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel24.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel24.Location = new System.Drawing.Point(1149, 254);
-            this.visualLabel24.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel24.Name = "visualLabel24";
-            this.visualLabel24.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel24.Outline = false;
-            this.visualLabel24.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel24.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel24.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel24.ReflectionSpacing = 0;
-            this.visualLabel24.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel24.ShadowDirection = 315;
-            this.visualLabel24.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel24.ShadowOpacity = 100;
-            this.visualLabel24.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel24.TabIndex = 24;
-            this.visualLabel24.Text = "visualLabel24";
-            this.visualLabel24.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel24.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle53.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle53.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle53.Hover = System.Drawing.Color.Empty;
-            textStyle53.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel24.TextStyle = textStyle53;
-            // 
-            // visualLabel25
-            // 
-            this.visualLabel25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel25.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel25.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel25.Location = new System.Drawing.Point(33, 334);
-            this.visualLabel25.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel25.Name = "visualLabel25";
-            this.visualLabel25.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel25.Outline = false;
-            this.visualLabel25.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel25.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel25.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel25.ReflectionSpacing = 0;
-            this.visualLabel25.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel25.ShadowDirection = 315;
-            this.visualLabel25.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel25.ShadowOpacity = 100;
-            this.visualLabel25.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel25.TabIndex = 25;
-            this.visualLabel25.Text = "visualLabel25";
-            this.visualLabel25.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel25.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle55.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle55.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle55.Hover = System.Drawing.Color.Empty;
-            textStyle55.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel25.TextStyle = textStyle55;
-            // 
-            // visualLabel26
-            // 
-            this.visualLabel26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel26.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel26.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel26.Location = new System.Drawing.Point(245, 334);
-            this.visualLabel26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel26.Name = "visualLabel26";
-            this.visualLabel26.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel26.Outline = false;
-            this.visualLabel26.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel26.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel26.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel26.ReflectionSpacing = 0;
-            this.visualLabel26.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel26.ShadowDirection = 315;
-            this.visualLabel26.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel26.ShadowOpacity = 100;
-            this.visualLabel26.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel26.TabIndex = 26;
-            this.visualLabel26.Text = "visualLabel26";
-            this.visualLabel26.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel26.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle57.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle57.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle57.Hover = System.Drawing.Color.Empty;
-            textStyle57.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel26.TextStyle = textStyle57;
-            // 
-            // visualLabel27
-            // 
-            this.visualLabel27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel27.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel27.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel27.Location = new System.Drawing.Point(466, 334);
-            this.visualLabel27.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel27.Name = "visualLabel27";
-            this.visualLabel27.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel27.Outline = false;
-            this.visualLabel27.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel27.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel27.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel27.ReflectionSpacing = 0;
-            this.visualLabel27.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel27.ShadowDirection = 315;
-            this.visualLabel27.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel27.ShadowOpacity = 100;
-            this.visualLabel27.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel27.TabIndex = 27;
-            this.visualLabel27.Text = "visualLabel27";
-            this.visualLabel27.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel27.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle59.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle59.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle59.Hover = System.Drawing.Color.Empty;
-            textStyle59.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel27.TextStyle = textStyle59;
-            // 
-            // visualLabel28
-            // 
-            this.visualLabel28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel28.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel28.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel28.Location = new System.Drawing.Point(695, 334);
-            this.visualLabel28.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel28.Name = "visualLabel28";
-            this.visualLabel28.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel28.Outline = false;
-            this.visualLabel28.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel28.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel28.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel28.ReflectionSpacing = 0;
-            this.visualLabel28.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel28.ShadowDirection = 315;
-            this.visualLabel28.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel28.ShadowOpacity = 100;
-            this.visualLabel28.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel28.TabIndex = 28;
-            this.visualLabel28.Text = "visualLabel28";
-            this.visualLabel28.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel28.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle61.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle61.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle61.Hover = System.Drawing.Color.Empty;
-            textStyle61.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel28.TextStyle = textStyle61;
-            // 
-            // visualLabel29
-            // 
-            this.visualLabel29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel29.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel29.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel29.Location = new System.Drawing.Point(920, 334);
-            this.visualLabel29.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel29.Name = "visualLabel29";
-            this.visualLabel29.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel29.Outline = false;
-            this.visualLabel29.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel29.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel29.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel29.ReflectionSpacing = 0;
-            this.visualLabel29.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel29.ShadowDirection = 315;
-            this.visualLabel29.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel29.ShadowOpacity = 100;
-            this.visualLabel29.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel29.TabIndex = 29;
-            this.visualLabel29.Text = "visualLabel29";
-            this.visualLabel29.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel29.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle63.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle63.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle63.Hover = System.Drawing.Color.Empty;
-            textStyle63.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel29.TextStyle = textStyle63;
-            // 
-            // visualLabel30
-            // 
-            this.visualLabel30.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.visualLabel30.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualLabel30.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel30.Location = new System.Drawing.Point(1149, 334);
-            this.visualLabel30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualLabel30.Name = "visualLabel30";
-            this.visualLabel30.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.visualLabel30.Outline = false;
-            this.visualLabel30.OutlineColor = System.Drawing.Color.Red;
-            this.visualLabel30.OutlineLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel30.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.visualLabel30.ReflectionSpacing = 0;
-            this.visualLabel30.ShadowColor = System.Drawing.Color.Black;
-            this.visualLabel30.ShadowDirection = 315;
-            this.visualLabel30.ShadowLocation = new System.Drawing.Point(0, 0);
-            this.visualLabel30.ShadowOpacity = 100;
-            this.visualLabel30.Size = new System.Drawing.Size(146, 23);
-            this.visualLabel30.TabIndex = 30;
-            this.visualLabel30.Text = "visualLabel30";
-            this.visualLabel30.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.visualLabel30.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle65.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle65.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle65.Hover = System.Drawing.Color.Empty;
-            textStyle65.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualLabel30.TextStyle = textStyle65;
-            // 
             // visualTextBox7
             // 
             this.visualTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -2510,6 +1899,35 @@ namespace BudgetExecution
             this.visualTextBox7.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox7.Watermark.Text = "Watermark text";
             this.visualTextBox7.Watermark.Visible = false;
+            // 
+            // visualLabel8
+            // 
+            this.visualLabel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel8.Location = new System.Drawing.Point(245, 94);
+            this.visualLabel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel8.Name = "visualLabel8";
+            this.visualLabel8.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel8.Outline = false;
+            this.visualLabel8.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel8.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel8.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel8.ReflectionSpacing = 0;
+            this.visualLabel8.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel8.ShadowDirection = 315;
+            this.visualLabel8.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel8.ShadowOpacity = 100;
+            this.visualLabel8.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel8.TabIndex = 8;
+            this.visualLabel8.Text = "visualLabel8";
+            this.visualLabel8.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel8.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle21.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle21.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle21.Hover = System.Drawing.Color.Empty;
+            textStyle21.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel8.TextStyle = textStyle21;
             // 
             // visualTextBox8
             // 
@@ -2563,6 +1981,35 @@ namespace BudgetExecution
             this.visualTextBox8.Watermark.Text = "Watermark text";
             this.visualTextBox8.Watermark.Visible = false;
             // 
+            // visualLabel9
+            // 
+            this.visualLabel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel9.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel9.Location = new System.Drawing.Point(466, 94);
+            this.visualLabel9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel9.Name = "visualLabel9";
+            this.visualLabel9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel9.Outline = false;
+            this.visualLabel9.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel9.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel9.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel9.ReflectionSpacing = 0;
+            this.visualLabel9.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel9.ShadowDirection = 315;
+            this.visualLabel9.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel9.ShadowOpacity = 100;
+            this.visualLabel9.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel9.TabIndex = 9;
+            this.visualLabel9.Text = "visualLabel9";
+            this.visualLabel9.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel9.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle23.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle23.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle23.Hover = System.Drawing.Color.Empty;
+            textStyle23.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel9.TextStyle = textStyle23;
+            // 
             // visualTextBox9
             // 
             this.visualTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -2614,6 +2061,35 @@ namespace BudgetExecution
             this.visualTextBox9.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox9.Watermark.Text = "Watermark text";
             this.visualTextBox9.Watermark.Visible = false;
+            // 
+            // visualLabel10
+            // 
+            this.visualLabel10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel10.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel10.Location = new System.Drawing.Point(695, 94);
+            this.visualLabel10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel10.Name = "visualLabel10";
+            this.visualLabel10.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel10.Outline = false;
+            this.visualLabel10.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel10.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel10.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel10.ReflectionSpacing = 0;
+            this.visualLabel10.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel10.ShadowDirection = 315;
+            this.visualLabel10.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel10.ShadowOpacity = 100;
+            this.visualLabel10.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel10.TabIndex = 10;
+            this.visualLabel10.Text = "visualLabel10";
+            this.visualLabel10.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel10.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle25.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle25.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle25.Hover = System.Drawing.Color.Empty;
+            textStyle25.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel10.TextStyle = textStyle25;
             // 
             // visualTextBox10
             // 
@@ -2667,6 +2143,35 @@ namespace BudgetExecution
             this.visualTextBox10.Watermark.Text = "Watermark text";
             this.visualTextBox10.Watermark.Visible = false;
             // 
+            // visualLabel11
+            // 
+            this.visualLabel11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel11.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel11.Location = new System.Drawing.Point(920, 94);
+            this.visualLabel11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel11.Name = "visualLabel11";
+            this.visualLabel11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel11.Outline = false;
+            this.visualLabel11.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel11.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel11.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel11.ReflectionSpacing = 0;
+            this.visualLabel11.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel11.ShadowDirection = 315;
+            this.visualLabel11.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel11.ShadowOpacity = 100;
+            this.visualLabel11.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel11.TabIndex = 11;
+            this.visualLabel11.Text = "visualLabel11";
+            this.visualLabel11.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel11.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle27.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle27.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle27.Hover = System.Drawing.Color.Empty;
+            textStyle27.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel11.TextStyle = textStyle27;
+            // 
             // visualTextBox11
             // 
             this.visualTextBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -2718,6 +2223,35 @@ namespace BudgetExecution
             this.visualTextBox11.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox11.Watermark.Text = "Watermark text";
             this.visualTextBox11.Watermark.Visible = false;
+            // 
+            // visualLabel12
+            // 
+            this.visualLabel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel12.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel12.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel12.Location = new System.Drawing.Point(1149, 94);
+            this.visualLabel12.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel12.Name = "visualLabel12";
+            this.visualLabel12.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel12.Outline = false;
+            this.visualLabel12.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel12.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel12.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel12.ReflectionSpacing = 0;
+            this.visualLabel12.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel12.ShadowDirection = 315;
+            this.visualLabel12.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel12.ShadowOpacity = 100;
+            this.visualLabel12.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel12.TabIndex = 12;
+            this.visualLabel12.Text = "visualLabel12";
+            this.visualLabel12.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel12.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle29.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle29.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle29.Hover = System.Drawing.Color.Empty;
+            textStyle29.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel12.TextStyle = textStyle29;
             // 
             // visualTextBox12
             // 
@@ -2771,6 +2305,35 @@ namespace BudgetExecution
             this.visualTextBox12.Watermark.Text = "Watermark text";
             this.visualTextBox12.Watermark.Visible = false;
             // 
+            // visualLabel13
+            // 
+            this.visualLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel13.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel13.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel13.Location = new System.Drawing.Point(33, 174);
+            this.visualLabel13.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel13.Name = "visualLabel13";
+            this.visualLabel13.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel13.Outline = false;
+            this.visualLabel13.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel13.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel13.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel13.ReflectionSpacing = 0;
+            this.visualLabel13.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel13.ShadowDirection = 315;
+            this.visualLabel13.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel13.ShadowOpacity = 100;
+            this.visualLabel13.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel13.TabIndex = 13;
+            this.visualLabel13.Text = "visualLabel13";
+            this.visualLabel13.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel13.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle31.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle31.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle31.Hover = System.Drawing.Color.Empty;
+            textStyle31.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel13.TextStyle = textStyle31;
+            // 
             // visualTextBox13
             // 
             this.visualTextBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -2823,6 +2386,35 @@ namespace BudgetExecution
             this.visualTextBox13.Watermark.Text = "Watermark text";
             this.visualTextBox13.Watermark.Visible = false;
             // 
+            // visualLabel14
+            // 
+            this.visualLabel14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel14.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel14.Location = new System.Drawing.Point(245, 174);
+            this.visualLabel14.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel14.Name = "visualLabel14";
+            this.visualLabel14.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel14.Outline = false;
+            this.visualLabel14.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel14.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel14.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel14.ReflectionSpacing = 0;
+            this.visualLabel14.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel14.ShadowDirection = 315;
+            this.visualLabel14.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel14.ShadowOpacity = 100;
+            this.visualLabel14.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel14.TabIndex = 14;
+            this.visualLabel14.Text = "visualLabel14";
+            this.visualLabel14.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel14.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle33.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle33.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle33.Hover = System.Drawing.Color.Empty;
+            textStyle33.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel14.TextStyle = textStyle33;
+            // 
             // visualTextBox14
             // 
             this.visualTextBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -2874,6 +2466,35 @@ namespace BudgetExecution
             this.visualTextBox14.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox14.Watermark.Text = "Watermark text";
             this.visualTextBox14.Watermark.Visible = false;
+            // 
+            // visualLabel15
+            // 
+            this.visualLabel15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel15.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel15.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel15.Location = new System.Drawing.Point(466, 174);
+            this.visualLabel15.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel15.Name = "visualLabel15";
+            this.visualLabel15.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel15.Outline = false;
+            this.visualLabel15.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel15.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel15.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel15.ReflectionSpacing = 0;
+            this.visualLabel15.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel15.ShadowDirection = 315;
+            this.visualLabel15.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel15.ShadowOpacity = 100;
+            this.visualLabel15.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel15.TabIndex = 15;
+            this.visualLabel15.Text = "visualLabel15";
+            this.visualLabel15.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel15.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle35.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle35.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle35.Hover = System.Drawing.Color.Empty;
+            textStyle35.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel15.TextStyle = textStyle35;
             // 
             // visualTextBox15
             // 
@@ -2979,6 +2600,64 @@ namespace BudgetExecution
             this.visualTextBox16.Watermark.Text = "Watermark text";
             this.visualTextBox16.Watermark.Visible = false;
             // 
+            // visualLabel16
+            // 
+            this.visualLabel16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel16.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel16.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel16.Location = new System.Drawing.Point(695, 174);
+            this.visualLabel16.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel16.Name = "visualLabel16";
+            this.visualLabel16.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel16.Outline = false;
+            this.visualLabel16.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel16.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel16.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel16.ReflectionSpacing = 0;
+            this.visualLabel16.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel16.ShadowDirection = 315;
+            this.visualLabel16.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel16.ShadowOpacity = 100;
+            this.visualLabel16.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel16.TabIndex = 16;
+            this.visualLabel16.Text = "visualLabel16";
+            this.visualLabel16.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel16.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle38.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle38.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle38.Hover = System.Drawing.Color.Empty;
+            textStyle38.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel16.TextStyle = textStyle38;
+            // 
+            // visualLabel17
+            // 
+            this.visualLabel17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel17.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel17.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel17.Location = new System.Drawing.Point(920, 174);
+            this.visualLabel17.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel17.Name = "visualLabel17";
+            this.visualLabel17.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel17.Outline = false;
+            this.visualLabel17.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel17.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel17.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel17.ReflectionSpacing = 0;
+            this.visualLabel17.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel17.ShadowDirection = 315;
+            this.visualLabel17.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel17.ShadowOpacity = 100;
+            this.visualLabel17.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel17.TabIndex = 17;
+            this.visualLabel17.Text = "visualLabel17";
+            this.visualLabel17.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel17.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle39.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle39.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle39.Hover = System.Drawing.Color.Empty;
+            textStyle39.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel17.TextStyle = textStyle39;
+            // 
             // visualTextBox17
             // 
             this.visualTextBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3030,6 +2709,35 @@ namespace BudgetExecution
             this.visualTextBox17.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox17.Watermark.Text = "Watermark text";
             this.visualTextBox17.Watermark.Visible = false;
+            // 
+            // visualLabel18
+            // 
+            this.visualLabel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel18.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel18.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel18.Location = new System.Drawing.Point(1149, 174);
+            this.visualLabel18.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel18.Name = "visualLabel18";
+            this.visualLabel18.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel18.Outline = false;
+            this.visualLabel18.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel18.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel18.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel18.ReflectionSpacing = 0;
+            this.visualLabel18.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel18.ShadowDirection = 315;
+            this.visualLabel18.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel18.ShadowOpacity = 100;
+            this.visualLabel18.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel18.TabIndex = 18;
+            this.visualLabel18.Text = "visualLabel18";
+            this.visualLabel18.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel18.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle41.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle41.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle41.Hover = System.Drawing.Color.Empty;
+            textStyle41.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel18.TextStyle = textStyle41;
             // 
             // visualTextBox18
             // 
@@ -3083,6 +2791,35 @@ namespace BudgetExecution
             this.visualTextBox18.Watermark.Text = "Watermark text";
             this.visualTextBox18.Watermark.Visible = false;
             // 
+            // visualLabel19
+            // 
+            this.visualLabel19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel19.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel19.Location = new System.Drawing.Point(33, 254);
+            this.visualLabel19.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel19.Name = "visualLabel19";
+            this.visualLabel19.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel19.Outline = false;
+            this.visualLabel19.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel19.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel19.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel19.ReflectionSpacing = 0;
+            this.visualLabel19.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel19.ShadowDirection = 315;
+            this.visualLabel19.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel19.ShadowOpacity = 100;
+            this.visualLabel19.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel19.TabIndex = 19;
+            this.visualLabel19.Text = "visualLabel19";
+            this.visualLabel19.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel19.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle43.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle43.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle43.Hover = System.Drawing.Color.Empty;
+            textStyle43.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel19.TextStyle = textStyle43;
+            // 
             // visualTextBox19
             // 
             this.visualTextBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3134,6 +2871,35 @@ namespace BudgetExecution
             this.visualTextBox19.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox19.Watermark.Text = "Watermark text";
             this.visualTextBox19.Watermark.Visible = false;
+            // 
+            // visualLabel20
+            // 
+            this.visualLabel20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel20.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel20.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel20.Location = new System.Drawing.Point(245, 254);
+            this.visualLabel20.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel20.Name = "visualLabel20";
+            this.visualLabel20.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel20.Outline = false;
+            this.visualLabel20.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel20.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel20.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel20.ReflectionSpacing = 0;
+            this.visualLabel20.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel20.ShadowDirection = 315;
+            this.visualLabel20.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel20.ShadowOpacity = 100;
+            this.visualLabel20.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel20.TabIndex = 20;
+            this.visualLabel20.Text = "visualLabel20";
+            this.visualLabel20.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel20.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle45.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle45.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle45.Hover = System.Drawing.Color.Empty;
+            textStyle45.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel20.TextStyle = textStyle45;
             // 
             // visualTextBox20
             // 
@@ -3187,6 +2953,35 @@ namespace BudgetExecution
             this.visualTextBox20.Watermark.Text = "Watermark text";
             this.visualTextBox20.Watermark.Visible = false;
             // 
+            // visualLabel21
+            // 
+            this.visualLabel21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel21.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel21.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel21.Location = new System.Drawing.Point(466, 254);
+            this.visualLabel21.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel21.Name = "visualLabel21";
+            this.visualLabel21.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel21.Outline = false;
+            this.visualLabel21.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel21.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel21.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel21.ReflectionSpacing = 0;
+            this.visualLabel21.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel21.ShadowDirection = 315;
+            this.visualLabel21.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel21.ShadowOpacity = 100;
+            this.visualLabel21.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel21.TabIndex = 21;
+            this.visualLabel21.Text = "visualLabel21";
+            this.visualLabel21.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel21.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle47.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle47.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle47.Hover = System.Drawing.Color.Empty;
+            textStyle47.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel21.TextStyle = textStyle47;
+            // 
             // visualTextBox21
             // 
             this.visualTextBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3238,6 +3033,35 @@ namespace BudgetExecution
             this.visualTextBox21.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox21.Watermark.Text = "Watermark text";
             this.visualTextBox21.Watermark.Visible = false;
+            // 
+            // visualLabel22
+            // 
+            this.visualLabel22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel22.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel22.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel22.Location = new System.Drawing.Point(695, 254);
+            this.visualLabel22.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel22.Name = "visualLabel22";
+            this.visualLabel22.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel22.Outline = false;
+            this.visualLabel22.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel22.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel22.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel22.ReflectionSpacing = 0;
+            this.visualLabel22.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel22.ShadowDirection = 315;
+            this.visualLabel22.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel22.ShadowOpacity = 100;
+            this.visualLabel22.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel22.TabIndex = 22;
+            this.visualLabel22.Text = "visualLabel22";
+            this.visualLabel22.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel22.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle49.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle49.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle49.Hover = System.Drawing.Color.Empty;
+            textStyle49.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel22.TextStyle = textStyle49;
             // 
             // visualTextBox22
             // 
@@ -3291,6 +3115,35 @@ namespace BudgetExecution
             this.visualTextBox22.Watermark.Text = "Watermark text";
             this.visualTextBox22.Watermark.Visible = false;
             // 
+            // visualLabel23
+            // 
+            this.visualLabel23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel23.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel23.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel23.Location = new System.Drawing.Point(920, 254);
+            this.visualLabel23.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel23.Name = "visualLabel23";
+            this.visualLabel23.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel23.Outline = false;
+            this.visualLabel23.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel23.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel23.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel23.ReflectionSpacing = 0;
+            this.visualLabel23.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel23.ShadowDirection = 315;
+            this.visualLabel23.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel23.ShadowOpacity = 100;
+            this.visualLabel23.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel23.TabIndex = 23;
+            this.visualLabel23.Text = "visualLabel23";
+            this.visualLabel23.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel23.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle51.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle51.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle51.Hover = System.Drawing.Color.Empty;
+            textStyle51.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel23.TextStyle = textStyle51;
+            // 
             // visualTextBox23
             // 
             this.visualTextBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3342,6 +3195,35 @@ namespace BudgetExecution
             this.visualTextBox23.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox23.Watermark.Text = "Watermark text";
             this.visualTextBox23.Watermark.Visible = false;
+            // 
+            // visualLabel24
+            // 
+            this.visualLabel24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel24.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel24.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel24.Location = new System.Drawing.Point(1149, 254);
+            this.visualLabel24.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel24.Name = "visualLabel24";
+            this.visualLabel24.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel24.Outline = false;
+            this.visualLabel24.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel24.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel24.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel24.ReflectionSpacing = 0;
+            this.visualLabel24.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel24.ShadowDirection = 315;
+            this.visualLabel24.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel24.ShadowOpacity = 100;
+            this.visualLabel24.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel24.TabIndex = 24;
+            this.visualLabel24.Text = "visualLabel24";
+            this.visualLabel24.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel24.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle53.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle53.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle53.Hover = System.Drawing.Color.Empty;
+            textStyle53.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel24.TextStyle = textStyle53;
             // 
             // visualTextBox24
             // 
@@ -3395,6 +3277,35 @@ namespace BudgetExecution
             this.visualTextBox24.Watermark.Text = "Watermark text";
             this.visualTextBox24.Watermark.Visible = false;
             // 
+            // visualLabel25
+            // 
+            this.visualLabel25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel25.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel25.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel25.Location = new System.Drawing.Point(33, 334);
+            this.visualLabel25.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel25.Name = "visualLabel25";
+            this.visualLabel25.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel25.Outline = false;
+            this.visualLabel25.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel25.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel25.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel25.ReflectionSpacing = 0;
+            this.visualLabel25.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel25.ShadowDirection = 315;
+            this.visualLabel25.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel25.ShadowOpacity = 100;
+            this.visualLabel25.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel25.TabIndex = 25;
+            this.visualLabel25.Text = "visualLabel25";
+            this.visualLabel25.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel25.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle55.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle55.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle55.Hover = System.Drawing.Color.Empty;
+            textStyle55.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel25.TextStyle = textStyle55;
+            // 
             // visualTextBox25
             // 
             this.visualTextBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3447,57 +3358,115 @@ namespace BudgetExecution
             this.visualTextBox25.Watermark.Text = "Watermark text";
             this.visualTextBox25.Watermark.Visible = false;
             // 
-            // visualTextBox30
+            // visualLabel26
             // 
-            this.visualTextBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.visualTextBox30.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualTextBox30.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.visualTextBox30.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualTextBox30.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox30.Border.HoverVisible = true;
-            this.visualTextBox30.Border.Rounding = 6;
-            this.visualTextBox30.Border.Thickness = 1;
-            this.visualTextBox30.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox30.Border.Visible = true;
-            this.visualTextBox30.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.visualTextBox30.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.visualTextBox30.ButtonBorder.HoverVisible = true;
-            this.visualTextBox30.ButtonBorder.Rounding = 6;
-            this.visualTextBox30.ButtonBorder.Thickness = 1;
-            this.visualTextBox30.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualTextBox30.ButtonBorder.Visible = true;
-            this.visualTextBox30.ButtonColor.Disabled = System.Drawing.Color.Empty;
-            this.visualTextBox30.ButtonColor.Enabled = System.Drawing.Color.Empty;
-            this.visualTextBox30.ButtonColor.Hover = System.Drawing.Color.Empty;
-            this.visualTextBox30.ButtonColor.Pressed = System.Drawing.Color.Empty;
-            this.visualTextBox30.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualTextBox30.ButtonIndent = 3;
-            this.visualTextBox30.ButtonText = "visualButton";
-            this.visualTextBox30.ButtonVisible = false;
-            this.visualTextBox30.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualTextBox30.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualTextBox30.ImageSize = new System.Drawing.Size(16, 16);
-            this.visualTextBox30.ImageVisible = false;
-            this.visualTextBox30.ImageWidth = 35;
-            this.visualTextBox30.Location = new System.Drawing.Point(1107, 363);
-            this.visualTextBox30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualTextBox30.Name = "visualTextBox30";
-            this.visualTextBox30.PasswordChar = '\0';
-            this.visualTextBox30.ReadOnly = false;
-            this.visualTextBox30.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.visualTextBox30.Size = new System.Drawing.Size(194, 32);
-            this.visualTextBox30.TabIndex = 54;
-            this.visualTextBox30.TextBoxWidth = 184;
-            textStyle66.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle66.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle66.Hover = System.Drawing.Color.Empty;
-            textStyle66.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualTextBox30.TextStyle = textStyle66;
-            this.visualTextBox30.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.visualTextBox30.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualTextBox30.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.visualTextBox30.Watermark.Text = "Watermark text";
-            this.visualTextBox30.Watermark.Visible = false;
+            this.visualLabel26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel26.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel26.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel26.Location = new System.Drawing.Point(245, 334);
+            this.visualLabel26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel26.Name = "visualLabel26";
+            this.visualLabel26.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel26.Outline = false;
+            this.visualLabel26.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel26.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel26.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel26.ReflectionSpacing = 0;
+            this.visualLabel26.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel26.ShadowDirection = 315;
+            this.visualLabel26.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel26.ShadowOpacity = 100;
+            this.visualLabel26.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel26.TabIndex = 26;
+            this.visualLabel26.Text = "visualLabel26";
+            this.visualLabel26.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel26.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle57.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle57.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle57.Hover = System.Drawing.Color.Empty;
+            textStyle57.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel26.TextStyle = textStyle57;
+            // 
+            // visualTextBox26
+            // 
+            this.visualTextBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.visualTextBox26.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.visualTextBox26.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.visualTextBox26.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.visualTextBox26.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualTextBox26.Border.HoverVisible = true;
+            this.visualTextBox26.Border.Rounding = 6;
+            this.visualTextBox26.Border.Thickness = 1;
+            this.visualTextBox26.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualTextBox26.Border.Visible = true;
+            this.visualTextBox26.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.visualTextBox26.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualTextBox26.ButtonBorder.HoverVisible = true;
+            this.visualTextBox26.ButtonBorder.Rounding = 6;
+            this.visualTextBox26.ButtonBorder.Thickness = 1;
+            this.visualTextBox26.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualTextBox26.ButtonBorder.Visible = true;
+            this.visualTextBox26.ButtonColor.Disabled = System.Drawing.Color.Empty;
+            this.visualTextBox26.ButtonColor.Enabled = System.Drawing.Color.Empty;
+            this.visualTextBox26.ButtonColor.Hover = System.Drawing.Color.Empty;
+            this.visualTextBox26.ButtonColor.Pressed = System.Drawing.Color.Empty;
+            this.visualTextBox26.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visualTextBox26.ButtonIndent = 3;
+            this.visualTextBox26.ButtonText = "visualButton";
+            this.visualTextBox26.ButtonVisible = false;
+            this.visualTextBox26.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualTextBox26.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualTextBox26.ImageSize = new System.Drawing.Size(16, 16);
+            this.visualTextBox26.ImageVisible = false;
+            this.visualTextBox26.ImageWidth = 35;
+            this.visualTextBox26.Location = new System.Drawing.Point(216, 363);
+            this.visualTextBox26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualTextBox26.Name = "visualTextBox26";
+            this.visualTextBox26.PasswordChar = '\0';
+            this.visualTextBox26.ReadOnly = false;
+            this.visualTextBox26.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.visualTextBox26.Size = new System.Drawing.Size(194, 32);
+            this.visualTextBox26.TabIndex = 52;
+            this.visualTextBox26.TextBoxWidth = 184;
+            textStyle58.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle58.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle58.Hover = System.Drawing.Color.Empty;
+            textStyle58.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualTextBox26.TextStyle = textStyle58;
+            this.visualTextBox26.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.visualTextBox26.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualTextBox26.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.visualTextBox26.Watermark.Text = "Watermark text";
+            this.visualTextBox26.Watermark.Visible = false;
+            // 
+            // visualLabel27
+            // 
+            this.visualLabel27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel27.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel27.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel27.Location = new System.Drawing.Point(466, 334);
+            this.visualLabel27.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel27.Name = "visualLabel27";
+            this.visualLabel27.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel27.Outline = false;
+            this.visualLabel27.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel27.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel27.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel27.ReflectionSpacing = 0;
+            this.visualLabel27.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel27.ShadowDirection = 315;
+            this.visualLabel27.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel27.ShadowOpacity = 100;
+            this.visualLabel27.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel27.TabIndex = 27;
+            this.visualLabel27.Text = "visualLabel27";
+            this.visualLabel27.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel27.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle59.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle59.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle59.Hover = System.Drawing.Color.Empty;
+            textStyle59.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel27.TextStyle = textStyle59;
             // 
             // visualTextBox27
             // 
@@ -3551,6 +3520,35 @@ namespace BudgetExecution
             this.visualTextBox27.Watermark.Text = "Watermark text";
             this.visualTextBox27.Watermark.Visible = false;
             // 
+            // visualLabel28
+            // 
+            this.visualLabel28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel28.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel28.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel28.Location = new System.Drawing.Point(695, 334);
+            this.visualLabel28.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel28.Name = "visualLabel28";
+            this.visualLabel28.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel28.Outline = false;
+            this.visualLabel28.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel28.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel28.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel28.ReflectionSpacing = 0;
+            this.visualLabel28.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel28.ShadowDirection = 315;
+            this.visualLabel28.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel28.ShadowOpacity = 100;
+            this.visualLabel28.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel28.TabIndex = 28;
+            this.visualLabel28.Text = "visualLabel28";
+            this.visualLabel28.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel28.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle61.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle61.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle61.Hover = System.Drawing.Color.Empty;
+            textStyle61.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel28.TextStyle = textStyle61;
+            // 
             // visualTextBox28
             // 
             this.visualTextBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -3602,6 +3600,35 @@ namespace BudgetExecution
             this.visualTextBox28.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.visualTextBox28.Watermark.Text = "Watermark text";
             this.visualTextBox28.Watermark.Visible = false;
+            // 
+            // visualLabel29
+            // 
+            this.visualLabel29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel29.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel29.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel29.Location = new System.Drawing.Point(920, 334);
+            this.visualLabel29.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel29.Name = "visualLabel29";
+            this.visualLabel29.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel29.Outline = false;
+            this.visualLabel29.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel29.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel29.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel29.ReflectionSpacing = 0;
+            this.visualLabel29.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel29.ShadowDirection = 315;
+            this.visualLabel29.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel29.ShadowOpacity = 100;
+            this.visualLabel29.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel29.TabIndex = 29;
+            this.visualLabel29.Text = "visualLabel29";
+            this.visualLabel29.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel29.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle63.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle63.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle63.Hover = System.Drawing.Color.Empty;
+            textStyle63.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel29.TextStyle = textStyle63;
             // 
             // visualTextBox29
             // 
@@ -3655,6 +3682,87 @@ namespace BudgetExecution
             this.visualTextBox29.Watermark.Text = "Watermark text";
             this.visualTextBox29.Watermark.Visible = false;
             // 
+            // visualLabel30
+            // 
+            this.visualLabel30.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visualLabel30.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel30.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel30.Location = new System.Drawing.Point(1149, 334);
+            this.visualLabel30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel30.Name = "visualLabel30";
+            this.visualLabel30.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel30.Outline = false;
+            this.visualLabel30.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel30.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel30.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel30.ReflectionSpacing = 0;
+            this.visualLabel30.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel30.ShadowDirection = 315;
+            this.visualLabel30.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel30.ShadowOpacity = 100;
+            this.visualLabel30.Size = new System.Drawing.Size(146, 23);
+            this.visualLabel30.TabIndex = 30;
+            this.visualLabel30.Text = "visualLabel30";
+            this.visualLabel30.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.visualLabel30.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle65.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle65.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle65.Hover = System.Drawing.Color.Empty;
+            textStyle65.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel30.TextStyle = textStyle65;
+            // 
+            // visualTextBox30
+            // 
+            this.visualTextBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.visualTextBox30.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.visualTextBox30.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.visualTextBox30.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.visualTextBox30.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualTextBox30.Border.HoverVisible = true;
+            this.visualTextBox30.Border.Rounding = 6;
+            this.visualTextBox30.Border.Thickness = 1;
+            this.visualTextBox30.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualTextBox30.Border.Visible = true;
+            this.visualTextBox30.ButtonBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.visualTextBox30.ButtonBorder.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.visualTextBox30.ButtonBorder.HoverVisible = true;
+            this.visualTextBox30.ButtonBorder.Rounding = 6;
+            this.visualTextBox30.ButtonBorder.Thickness = 1;
+            this.visualTextBox30.ButtonBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.visualTextBox30.ButtonBorder.Visible = true;
+            this.visualTextBox30.ButtonColor.Disabled = System.Drawing.Color.Empty;
+            this.visualTextBox30.ButtonColor.Enabled = System.Drawing.Color.Empty;
+            this.visualTextBox30.ButtonColor.Hover = System.Drawing.Color.Empty;
+            this.visualTextBox30.ButtonColor.Pressed = System.Drawing.Color.Empty;
+            this.visualTextBox30.ButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visualTextBox30.ButtonIndent = 3;
+            this.visualTextBox30.ButtonText = "visualButton";
+            this.visualTextBox30.ButtonVisible = false;
+            this.visualTextBox30.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualTextBox30.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualTextBox30.ImageSize = new System.Drawing.Size(16, 16);
+            this.visualTextBox30.ImageVisible = false;
+            this.visualTextBox30.ImageWidth = 35;
+            this.visualTextBox30.Location = new System.Drawing.Point(1107, 363);
+            this.visualTextBox30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualTextBox30.Name = "visualTextBox30";
+            this.visualTextBox30.PasswordChar = '\0';
+            this.visualTextBox30.ReadOnly = false;
+            this.visualTextBox30.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.visualTextBox30.Size = new System.Drawing.Size(194, 32);
+            this.visualTextBox30.TabIndex = 54;
+            this.visualTextBox30.TextBoxWidth = 184;
+            textStyle66.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle66.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle66.Hover = System.Drawing.Color.Empty;
+            textStyle66.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualTextBox30.TextStyle = textStyle66;
+            this.visualTextBox30.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.visualTextBox30.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualTextBox30.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.visualTextBox30.Watermark.Text = "Watermark text";
+            this.visualTextBox30.Watermark.Visible = false;
+            // 
             // tabPageAdv2
             // 
             this.tabPageAdv2.Controls.Add(this.tableLayoutPanel4);
@@ -3668,6 +3776,30 @@ namespace BudgetExecution
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button4, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button5, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button6, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button7, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button8, 3, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(445, 573);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 84);
+            this.tableLayoutPanel4.TabIndex = 171;
             // 
             // tabPageAdv1
             // 
@@ -3709,138 +3841,6 @@ namespace BudgetExecution
             this.TabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.TabControl.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv1_SelectedIndexChanged);
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel4.ColumnCount = 6;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button4, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button5, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button6, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button7, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button8, 3, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(445, 573);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 84);
-            this.tableLayoutPanel4.TabIndex = 171;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(4, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 74);
-            this.button1.TabIndex = 162;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroSetToolTip1.SetToolTip(this.button1, "Previous Account");
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(139, 5);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 74);
-            this.button4.TabIndex = 163;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button4, "Next Account");
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(655, 5);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 67);
-            this.button5.TabIndex = 167;
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button5, "Copy Account\r\n");
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(286, 5);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 74);
-            this.button6.TabIndex = 165;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button6, "Edit Account");
-            this.button6.UseCompatibleTextRendering = true;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(543, 5);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 67);
-            this.button7.TabIndex = 164;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button7, "Refresh Data");
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(421, 5);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 67);
-            this.button8.TabIndex = 168;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button8, "Remove Account");
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -3881,10 +3881,10 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tabPageAdv2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tabPageAdv1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).EndInit();
             this.TabControl.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -21,6 +21,21 @@ namespace BudgetExecution
                                                     .Select(d => d).First();
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
+        }
+
+        public Division(Dictionary<string, object> p)
+        {
+            Data = new DataBuilder(Source.Divisions, Provider.SQLite, p).Table.AsEnumerable()
+                                                                        .Where(d => d.Field<string>("Source").Equals(Source.Divisions.ToString()))
+                                                                        .Select(d => d).First();
+            ID = Data["ID"].ToString();
+            RC = Data["RC"].ToString();
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
         }
 
         // PROPERTIES
