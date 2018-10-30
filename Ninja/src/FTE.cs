@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿// <copyright file="FTE.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
-    [ SuppressMessage("ReSharper", "UnassignedGetOnlyAutoProperty") ]
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
+
+    [SuppressMessage("ReSharper", "UnassignedGetOnlyAutoProperty")]
     public class FTE : PRC, IPRC
     {
         public FTE()
@@ -63,7 +67,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -76,7 +80,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -89,7 +93,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -102,7 +106,7 @@ namespace BudgetExecution
             {
                 return table.Rows.Count;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -112,9 +116,9 @@ namespace BudgetExecution
         public Dictionary<string, string[]> GetDataElements(DataTable table)
         {
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-            foreach(DataColumn dc in table.Columns)
+            foreach (DataColumn dc in table.Columns)
             {
-                if(dc.ColumnName.Equals("ID") ||
+                if (dc.ColumnName.Equals("ID") ||
                    dc.ColumnName.Equals("Amount"))
                 {
                     continue;
@@ -123,12 +127,12 @@ namespace BudgetExecution
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
 
-            if(data.ContainsKey("ID"))
+            if (data.ContainsKey("ID"))
             {
                 data.Remove("ID");
             }
 
-            if(data.ContainsKey("Amount"))
+            if (data.ContainsKey("Amount"))
             {
                 data.Remove("Amount");
             }
@@ -143,7 +147,7 @@ namespace BudgetExecution
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -166,7 +170,7 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                foreach(string filter in list)
+                foreach (string filter in list)
                 {
                     decimal[] stat = new decimal[4];
                     stat[0] = GetDataValues(table, column, filter).Item3;
@@ -178,7 +182,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -191,7 +195,7 @@ namespace BudgetExecution
             {
                 string[] list = GetCodes(table, column);
                 Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                foreach(string ftr in list)
+                foreach (string ftr in list)
                 {
                     decimal[] stat = new decimal[4];
                     stat[0] = GetDataValues(table, column, filter).Item3;
@@ -203,7 +207,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -216,7 +220,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => new PRC()).ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -229,7 +233,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -242,10 +246,10 @@ namespace BudgetExecution
             {
                 string[] list = GetCodes(table, column);
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach(string ftr in list)
+                foreach (string ftr in list)
                 {
                     decimal query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Sum(p => p.Field<decimal>("Amount"));
-                    if(query > 0)
+                    if (query > 0)
                     {
                         info.Add(filter, query);
                     }
@@ -253,7 +257,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -265,10 +269,10 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach(string filter in filters)
+                foreach (string filter in filters)
                 {
                     decimal query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                    if(query > 0)
+                    if (query > 0)
                     {
                         info.Add(filter, query);
                     }
@@ -276,7 +280,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

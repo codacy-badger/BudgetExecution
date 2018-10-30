@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿// <copyright file="IFund.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Data;
+
     public interface IFund
     {
         // PROPERTIES

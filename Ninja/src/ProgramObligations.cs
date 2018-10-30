@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
+﻿// <copyright file="ProgramObligations.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+
     public class ProgramObligations
     {
         // CONSRTUCTORS
@@ -97,7 +101,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -110,7 +114,7 @@ namespace BudgetExecution
             {
                 return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -125,7 +129,7 @@ namespace BudgetExecution
 
                 return prc.Keys.ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -139,7 +143,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetDataFields();
                 return param.Values.ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -151,40 +155,40 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if(!param.ContainsKey("FundName") ||
+                if (!param.ContainsKey("FundName") ||
                    param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if(!param.ContainsKey("Org") ||
+                if (!param.ContainsKey("Org") ||
                    param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if(!param.ContainsKey("ProgramProject") ||
+                if (!param.ContainsKey("ProgramProject") ||
                    param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if(!param.ContainsKey("ProgramArea") ||
+                if (!param.ContainsKey("ProgramArea") ||
                    param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if(!param.ContainsKey("Goal") ||
+                if (!param.ContainsKey("Goal") ||
                    param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if(!param.ContainsKey("Objective") ||
+                if (!param.ContainsKey("Objective") ||
                    param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
@@ -193,7 +197,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -207,7 +211,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Obligation(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -221,7 +225,7 @@ namespace BudgetExecution
                 DataRow query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
                 return new Obligation(query);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -239,7 +243,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -256,7 +260,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -273,7 +277,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

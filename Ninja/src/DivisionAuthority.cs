@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿// <copyright file="DivisionAuthority.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
     public class DivisionAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
@@ -20,11 +24,11 @@ namespace BudgetExecution
             Count = Metric.Count;
             Average = Metric.Average;
             ProgramElements = DbData.ProgramElements;
-            if(ProgramElements["BOC"].Contains("17"))
+            if (ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(DbData.Table);
             }
-            
+
             TableFilter = DataBuilder.FilterRecords;
         }
 
@@ -39,10 +43,10 @@ namespace BudgetExecution
             CurrentYear = Metric.CurrentYear;
             CarryOver = Metric.CarryOver;
             DataRecords = DbData.Records;
-            if(ProgramElements["BOC"].Contains("17"))
+            if (ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(Table);
-            }           
+            }
         }
 
         // PROPERTIES
@@ -106,7 +110,7 @@ namespace BudgetExecution
 
         public Dictionary<string, decimal> ProgramProjectAuthority { get; set; }
 
-        public ExcelReport Budget { get; set; }
+        public ExcelDocument Budget { get; set; }
 
         public DataTable Table { get; }
 
@@ -121,7 +125,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -135,7 +139,7 @@ namespace BudgetExecution
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -153,7 +157,7 @@ namespace BudgetExecution
                     GetAverage(table)
                 };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -166,7 +170,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => new PRC()).ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -178,9 +182,9 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                foreach(DataColumn dc in table.Columns)
+                foreach (DataColumn dc in table.Columns)
                 {
-                    if(dc.ColumnName.Equals("ID") ||
+                    if (dc.ColumnName.Equals("ID") ||
                        dc.ColumnName.Equals("Amount"))
                     {
                         continue;
@@ -189,19 +193,19 @@ namespace BudgetExecution
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
 
-                if(data.ContainsKey("ID"))
+                if (data.ContainsKey("ID"))
                 {
                     data.Remove("ID");
                 }
 
-                if(data.ContainsKey("Amount"))
+                if (data.ContainsKey("Amount"))
                 {
                     data.Remove("Amount");
                 }
 
                 return data;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -214,7 +218,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Sum(p => p.Field<decimal>("Amount"));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -227,7 +231,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -240,7 +244,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -249,13 +253,13 @@ namespace BudgetExecution
 
         internal DataTable GetFTE(DataTable table)
         {
-            if(GetCodes(table, "BOC").Contains("17"))
+            if (GetCodes(table, "BOC").Contains("17"))
             {
                 try
                 {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -267,13 +271,13 @@ namespace BudgetExecution
 
         internal DataTable GetEPM(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("T"))
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("B")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -285,13 +289,13 @@ namespace BudgetExecution
 
         internal DataTable GetSTAG(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("E"))
+            if (GetCodes(approp, "Fund").Contains("E"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("E")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -303,13 +307,13 @@ namespace BudgetExecution
 
         internal DataTable GetOIL(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("H"))
+            if (GetCodes(approp, "Fund").Contains("H"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("H")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -321,13 +325,13 @@ namespace BudgetExecution
 
         internal DataTable GetLUST(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("F"))
+            if (GetCodes(approp, "Fund").Contains("F"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("F")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -339,13 +343,13 @@ namespace BudgetExecution
 
         internal DataTable GetSF6A(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("T"))
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(a => a.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -357,13 +361,13 @@ namespace BudgetExecution
 
         internal DataTable GetTR(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("TR"))
+            if (GetCodes(approp, "Fund").Contains("TR"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("TR")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -375,13 +379,13 @@ namespace BudgetExecution
 
         internal DataTable GetSUPERFUND(DataTable approp)
         {
-            if(GetCodes(approp, "Fund").Contains("T"))
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
                 try
                 {
                     return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(p => p.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -390,6 +394,5 @@ namespace BudgetExecution
 
             return null;
         }
-
     }
 }

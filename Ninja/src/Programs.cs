@@ -1,8 +1,12 @@
-﻿using System.Data;
-using System.Linq;
+﻿// <copyright file="Programs.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System.Data;
+    using System.Linq;
+
     public class Programs
     {
         // CONSTRUCTORS

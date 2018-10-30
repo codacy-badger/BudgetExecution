@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
-using System.Text;
+﻿// <copyright file="ControlNumber.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+    using System.Text;
+
     public class ControlNumber
     {
         // CONSTRUCTORS
@@ -101,7 +105,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Fund"] = fund, ["DivisionID"] = divisionid };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -121,7 +125,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -141,7 +145,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -162,7 +166,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -190,7 +194,7 @@ namespace BudgetExecution
             {
                 return Table.GetColumnNames();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -208,7 +212,7 @@ namespace BudgetExecution
             {
                 return Table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(fund)).Select(p => p).Count();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -226,7 +230,7 @@ namespace BudgetExecution
             {
                 return Table.AsEnumerable().Where(p => p.Field<string>("DivisionID").Equals(divisionId)).Select(p => p).Count();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -243,7 +247,7 @@ namespace BudgetExecution
             {
                 return DbData.Table.AsEnumerable().Count();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -268,7 +272,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -285,7 +289,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -302,7 +306,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

@@ -38,11 +38,11 @@ namespace BudgetExecution
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste spreadsheetCopyPaste1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste();
             Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController formulaRangeSelectionController1 = new Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController();
-            Syncfusion.Windows.Forms.Tools.Office2016ColorTable office2016ColorTable1 = new Syncfusion.Windows.Forms.Tools.Office2016ColorTable();
             VisualPlus.Structure.TextStyle textStyle4 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle3 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle2 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
+            Syncfusion.Windows.Forms.Tools.Office2016ColorTable office2016ColorTable1 = new Syncfusion.Windows.Forms.Tools.Office2016ColorTable();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelForm));
             this.BudgetReport = new Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet();
@@ -51,28 +51,21 @@ namespace BudgetExecution
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
-            this.BudgetReportRibbon1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.GridRefreshButton = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.CarryOverButton = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.CurrentYearButton = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.visualGroupBox3 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.visualGroupBox1 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.spreadsheetRibbon1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon();
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.metroSetPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BudgetReportRibbon1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.visualGroupBox3.SuspendLayout();
             this.visualGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
             // BudgetReport
@@ -90,7 +83,7 @@ namespace BudgetExecution
             this.BudgetReport.DefaultRowCount = 60;
             this.BudgetReport.DisplayAlerts = true;
             this.BudgetReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BudgetReport.FileName = "Book4";
+            this.BudgetReport.FileName = "Book2";
             this.BudgetReport.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BudgetReport.ForeColor = System.Drawing.Color.Black;
             this.BudgetReport.FormulaBarVisibility = true;
@@ -98,12 +91,12 @@ namespace BudgetExecution
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
             this.BudgetReport.FormulaRangeSelectionController = formulaRangeSelectionController1;
             this.BudgetReport.IsCustomTabItemContextMenuEnabled = false;
-            this.BudgetReport.Location = new System.Drawing.Point(0, 234);
+            this.BudgetReport.Location = new System.Drawing.Point(0, 0);
             this.BudgetReport.Name = "BudgetReport";
             this.BudgetReport.SelectedTabIndex = 0;
             this.BudgetReport.SelectedTabItem = null;
             this.BudgetReport.ShowBusyIndicator = true;
-            this.BudgetReport.Size = new System.Drawing.Size(1170, 652);
+            this.BudgetReport.Size = new System.Drawing.Size(1170, 1011);
             this.BudgetReport.TabIndex = 1;
             this.BudgetReport.TabItemContextMenu = null;
             this.BudgetReport.ThemeName = "Default";
@@ -174,180 +167,20 @@ namespace BudgetExecution
             this.metroSetPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.metroSetPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.metroSetPanel1.BorderThickness = 1;
+            this.metroSetPanel1.Controls.Add(this.spreadsheetRibbon1);
             this.metroSetPanel1.Controls.Add(this.BudgetReport);
-            this.metroSetPanel1.Controls.Add(this.BudgetReportRibbon1);
-            this.metroSetPanel1.Location = new System.Drawing.Point(468, 51);
+            this.metroSetPanel1.Location = new System.Drawing.Point(465, 12);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(1170, 886);
+            this.metroSetPanel1.Size = new System.Drawing.Size(1170, 1011);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 2;
             this.metroSetPanel1.ThemeAuthor = "Narwin";
             this.metroSetPanel1.ThemeName = "MetroDark";
             // 
-            // BudgetReportRibbon1
-            // 
-            this.BudgetReportRibbon1.CaptionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BudgetReportRibbon1.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Top;
-            this.BudgetReportRibbon1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BudgetReportRibbon1.HideMenuButtonToolTip = true;
-            this.BudgetReportRibbon1.LauncherStyle = Syncfusion.Windows.Forms.Tools.LauncherStyle.Metro;
-            this.BudgetReportRibbon1.Location = new System.Drawing.Point(0, 0);
-            this.BudgetReportRibbon1.MenuButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BudgetReportRibbon1.MenuButtonText = "FILE";
-            this.BudgetReportRibbon1.MenuButtonWidth = 56;
-            this.BudgetReportRibbon1.MenuColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.BudgetReportRibbon1.Name = "BudgetReportRibbon1";
-            this.BudgetReportRibbon1.Office2016ColorScheme = Syncfusion.Windows.Forms.Tools.Office2016ColorScheme.DarkGray;
-            this.BudgetReportRibbon1.Office2016ColorTable.Add(office2016ColorTable1);
-            this.BudgetReportRibbon1.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Black;
-            // 
-            // BudgetReportRibbon1.OfficeMenu
-            // 
-            this.BudgetReportRibbon1.OfficeMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.BudgetReportRibbon1.OfficeMenu.Name = "OfficeMenu";
-            this.BudgetReportRibbon1.OfficeMenu.ShowItemToolTips = true;
-            this.BudgetReportRibbon1.OfficeMenu.Size = new System.Drawing.Size(12, 65);
-            this.BudgetReportRibbon1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BudgetReportRibbon1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
-            this.BudgetReportRibbon1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.BudgetReportRibbon1.ShowQuickItemsDropDownButton = false;
-            this.BudgetReportRibbon1.ShowRibbonDisplayOptionButton = false;
-            this.BudgetReportRibbon1.Size = new System.Drawing.Size(1170, 234);
-            this.BudgetReportRibbon1.Spreadsheet = this.BudgetReport;
-            this.BudgetReportRibbon1.SystemText.QuickAccessDialogDropDownName = "Start menu";
-            this.BudgetReportRibbon1.SystemText.RenameDisplayLabelText = "&Display Name:";
-            this.BudgetReportRibbon1.TabIndex = 0;
-            this.BudgetReportRibbon1.Text = "spreadsheetRibbon1";
-            this.BudgetReportRibbon1.ThemeName = "Default";
-            this.BudgetReportRibbon1.TitleColor = System.Drawing.Color.White;
-            this.BudgetReportRibbon1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BudgetReportRibbon1.Click += new System.EventHandler(this.CalculatorButton_OnClick);
-            // 
             // superToolTip1
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.75F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.25F));
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button11, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button9, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(65, 748);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 187);
-            this.tableLayoutPanel2.TabIndex = 173;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(4, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 40);
-            this.button2.TabIndex = 162;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(160, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 40);
-            this.button3.TabIndex = 163;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(160, 130);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(85, 40);
-            this.button11.TabIndex = 167;
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // GridRefreshButton
-            // 
-            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
-            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GridRefreshButton.FlatAppearance.BorderSize = 0;
-            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(4, 73);
-            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(101, 40);
-            this.GridRefreshButton.TabIndex = 164;
-            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GridRefreshButton.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(160, 73);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 40);
-            this.button9.TabIndex = 165;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseCompatibleTextRendering = true;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(4, 130);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 40);
-            this.button4.TabIndex = 166;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // CarryOverButton
             // 
@@ -523,6 +356,60 @@ namespace BudgetExecution
             this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 178);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.BackColor = System.Drawing.Color.SteelBlue;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 20);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // spreadsheetRibbon1
+            // 
+            this.spreadsheetRibbon1.CaptionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spreadsheetRibbon1.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Top;
+            this.spreadsheetRibbon1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.spreadsheetRibbon1.HideMenuButtonToolTip = true;
+            this.spreadsheetRibbon1.LauncherStyle = Syncfusion.Windows.Forms.Tools.LauncherStyle.Metro;
+            this.spreadsheetRibbon1.Location = new System.Drawing.Point(0, 0);
+            this.spreadsheetRibbon1.MenuButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spreadsheetRibbon1.MenuButtonText = "FILE";
+            this.spreadsheetRibbon1.MenuButtonWidth = 56;
+            this.spreadsheetRibbon1.MenuColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.spreadsheetRibbon1.Name = "spreadsheetRibbon1";
+            this.spreadsheetRibbon1.Office2013ColorScheme = Syncfusion.Windows.Forms.Tools.Office2013ColorScheme.DarkGray;
+            this.spreadsheetRibbon1.Office2016ColorScheme = Syncfusion.Windows.Forms.Tools.Office2016ColorScheme.Black;
+            office2016ColorTable1.DropDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            office2016ColorTable1.GalleryItemNormalColor = System.Drawing.SystemColors.AppWorkspace;
+            office2016ColorTable1.QuickDropDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            office2016ColorTable1.ToolStripCheckBoxBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.spreadsheetRibbon1.Office2016ColorTable.Add(office2016ColorTable1);
+            this.spreadsheetRibbon1.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Black;
+            // 
+            // spreadsheetRibbon1.OfficeMenu
+            // 
+            this.spreadsheetRibbon1.OfficeMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.spreadsheetRibbon1.OfficeMenu.Name = "OfficeMenu";
+            this.spreadsheetRibbon1.OfficeMenu.ShowItemToolTips = true;
+            this.spreadsheetRibbon1.OfficeMenu.Size = new System.Drawing.Size(12, 65);
+            this.spreadsheetRibbon1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spreadsheetRibbon1.QuickPanelVisible = false;
+            this.spreadsheetRibbon1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
+            this.spreadsheetRibbon1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
+            this.spreadsheetRibbon1.ShowQuickItemsDropDownButton = false;
+            this.spreadsheetRibbon1.ShowRibbonDisplayOptionButton = true;
+            this.spreadsheetRibbon1.Size = new System.Drawing.Size(1170, 220);
+            this.spreadsheetRibbon1.Spreadsheet = this.BudgetReport;
+            this.spreadsheetRibbon1.SystemText.QuickAccessDialogDropDownName = "Start menu";
+            this.spreadsheetRibbon1.SystemText.RenameDisplayLabelText = "&Display Name:";
+            this.spreadsheetRibbon1.TabIndex = 0;
+            this.spreadsheetRibbon1.Text = "spreadsheetRibbon1";
+            this.spreadsheetRibbon1.ThemeName = "Default";
+            this.spreadsheetRibbon1.TitleColor = System.Drawing.Color.White;
+            this.spreadsheetRibbon1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // ExcelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -540,12 +427,11 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(100, 30);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1702, 949);
+            this.ClientSize = new System.Drawing.Size(1647, 1025);
             this.Controls.Add(this.visualGroupBox1);
             this.Controls.Add(this.visualGroupBox3);
             this.Controls.Add(this.CurrentYearButton);
             this.Controls.Add(this.CarryOverButton);
-            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.metroSetPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MetroColor = System.Drawing.Color.Black;
@@ -557,10 +443,9 @@ namespace BudgetExecution
             this.toolStripTabItem1.Panel.ResumeLayout(false);
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.metroSetPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BudgetReportRibbon1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.visualGroupBox3.ResumeLayout(false);
             this.visualGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -570,22 +455,16 @@ namespace BudgetExecution
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem2;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
-        private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon BudgetReportRibbon1;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
         private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
         private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet BudgetReport;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button GridRefreshButton;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton CurrentYearButton;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton CarryOverButton;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon spreadsheetRibbon1;
     }
 }

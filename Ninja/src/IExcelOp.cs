@@ -1,8 +1,12 @@
-﻿using System;
-using Microsoft.Office.Interop.Excel;
+﻿// <copyright file="IExcelOp.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using Microsoft.Office.Interop.Excel;
+
     public interface IExcelOp
     {
         // PROPERTIES

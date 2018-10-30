@@ -1,9 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
+﻿// <copyright file="RC.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.SQLite;
+
     public class RC
     {
         // CONSTRUCTORS
@@ -37,7 +41,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = Code };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

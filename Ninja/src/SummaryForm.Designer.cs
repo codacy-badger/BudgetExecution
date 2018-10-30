@@ -2446,7 +2446,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 7, 0);
@@ -2496,7 +2496,7 @@ namespace BudgetExecution
             this.button7.Location = new System.Drawing.Point(105, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 52);
+            this.button7.Size = new System.Drawing.Size(80, 52);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -2514,10 +2514,10 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(760, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(759, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(123, 52);
+            this.GridRefreshButton.Size = new System.Drawing.Size(124, 52);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -2534,7 +2534,7 @@ namespace BudgetExecution
             this.ChartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ChartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChartButton.Image = ((System.Drawing.Image)(resources.GetObject("ChartButton.Image")));
-            this.ChartButton.Location = new System.Drawing.Point(646, 5);
+            this.ChartButton.Location = new System.Drawing.Point(645, 5);
             this.ChartButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChartButton.Name = "ChartButton";
             this.ChartButton.Size = new System.Drawing.Size(106, 52);
@@ -2554,7 +2554,7 @@ namespace BudgetExecution
             this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
-            this.ExcelButton.Location = new System.Drawing.Point(537, 5);
+            this.ExcelButton.Location = new System.Drawing.Point(536, 5);
             this.ExcelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExcelButton.Name = "ExcelButton";
             this.ExcelButton.Size = new System.Drawing.Size(101, 52);
@@ -2575,7 +2575,7 @@ namespace BudgetExecution
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(194, 5);
+            this.EditButton.Location = new System.Drawing.Point(193, 5);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(102, 52);
@@ -2597,7 +2597,7 @@ namespace BudgetExecution
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(304, 5);
+            this.AddButton.Location = new System.Drawing.Point(303, 5);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(121, 52);
@@ -2617,7 +2617,7 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(432, 3);
+            this.button3.Location = new System.Drawing.Point(431, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 56);
             this.button3.TabIndex = 158;
@@ -2670,7 +2670,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel3.Controls.Add(this.TransferButton, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.DatabaseSearchButton, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
@@ -2693,9 +2693,9 @@ namespace BudgetExecution
             this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
-            this.TransferButton.Location = new System.Drawing.Point(438, 3);
+            this.TransferButton.Location = new System.Drawing.Point(437, 3);
             this.TransferButton.Name = "TransferButton";
-            this.TransferButton.Size = new System.Drawing.Size(99, 60);
+            this.TransferButton.Size = new System.Drawing.Size(100, 60);
             this.TransferButton.TabIndex = 170;
             this.metroSetToolTip1.SetToolTip(this.TransferButton, "Transfer");
             this.TransferButton.UseVisualStyleBackColor = false;
@@ -2711,7 +2711,7 @@ namespace BudgetExecution
             this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
-            this.DatabaseSearchButton.Location = new System.Drawing.Point(337, 5);
+            this.DatabaseSearchButton.Location = new System.Drawing.Point(336, 5);
             this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DatabaseSearchButton.Name = "DatabaseSearchButton";
             this.DatabaseSearchButton.Size = new System.Drawing.Size(94, 56);
@@ -2749,7 +2749,7 @@ namespace BudgetExecution
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(111, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 60);
+            this.button5.Size = new System.Drawing.Size(106, 60);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -2765,7 +2765,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(224, 3);
+            this.button1.Location = new System.Drawing.Point(223, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 60);
             this.button1.TabIndex = 157;
@@ -2822,10 +2822,10 @@ namespace BudgetExecution
             this.GraphTab.Controls.Add(this.AccountChart);
             this.GraphTab.Image = null;
             this.GraphTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.GraphTab.Location = new System.Drawing.Point(0, 42);
+            this.GraphTab.Location = new System.Drawing.Point(0, -1);
             this.GraphTab.Name = "GraphTab";
             this.GraphTab.ShowCloseButton = true;
-            this.GraphTab.Size = new System.Drawing.Size(528, 534);
+            this.GraphTab.Size = new System.Drawing.Size(528, 577);
             this.GraphTab.TabBackColor = System.Drawing.Color.Black;
             this.GraphTab.TabIndex = 2;
             this.GraphTab.Text = "Account Graph";
@@ -2942,7 +2942,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(528, 534);
+            this.AccountChart.Size = new System.Drawing.Size(528, 577);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 1F;
             this.AccountChart.Style3D = true;
@@ -2992,10 +2992,10 @@ namespace BudgetExecution
             this.EditTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.EditTab.Image = null;
             this.EditTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.EditTab.Location = new System.Drawing.Point(0, 42);
+            this.EditTab.Location = new System.Drawing.Point(0, -1);
             this.EditTab.Name = "EditTab";
             this.EditTab.ShowCloseButton = true;
-            this.EditTab.Size = new System.Drawing.Size(528, 534);
+            this.EditTab.Size = new System.Drawing.Size(528, 577);
             this.EditTab.TabBackColor = System.Drawing.Color.Transparent;
             this.EditTab.TabForeColor = System.Drawing.Color.LightSkyBlue;
             this.EditTab.TabIndex = 4;
@@ -3659,10 +3659,10 @@ namespace BudgetExecution
             this.AddTab.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.AddTab.Image = null;
             this.AddTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddTab.Location = new System.Drawing.Point(0, 42);
+            this.AddTab.Location = new System.Drawing.Point(0, -1);
             this.AddTab.Name = "AddTab";
             this.AddTab.ShowCloseButton = true;
-            this.AddTab.Size = new System.Drawing.Size(528, 534);
+            this.AddTab.Size = new System.Drawing.Size(528, 577);
             this.AddTab.TabIndex = 5;
             this.AddTab.Text = "Add Account";
             this.AddTab.ThemesEnabled = false;

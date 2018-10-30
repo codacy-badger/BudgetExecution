@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
+﻿// <copyright file="Reimbursable.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+
     public class Reimbursable
     {
         // CONSTRUCTORS
@@ -111,6 +115,7 @@ namespace BudgetExecution
         public Dictionary<string, object> ReimbParam { get; set; }
 
         // METHODS
+
         /// <summary>
         ///     Gets the insert fields.
         /// </summary>
@@ -122,37 +127,37 @@ namespace BudgetExecution
             try
             {
                 Reimbursable account = new Reimbursable(source);
-                if(!param.ContainsKey("AgreementNumber") ||
+                if (!param.ContainsKey("AgreementNumber") ||
                    param["AgreementNumber"] == null)
                 {
                     param["AgreementNumber"] = account.AgreementNumber;
                 }
 
-                if(!param.ContainsKey("OrgCode") ||
+                if (!param.ContainsKey("OrgCode") ||
                    param["OrgCode"] == null)
                 {
                     param["OrgCode"] = account.OrgCode;
                 }
 
-                if(!param.ContainsKey("SiteProjectCode") ||
+                if (!param.ContainsKey("SiteProjectCode") ||
                    param["SiteProjectCode"] == null)
                 {
                     param["SiteProjectCode"] = account.SiteProjectCode;
                 }
 
-                if(!param.ContainsKey("DocumentNumber") ||
+                if (!param.ContainsKey("DocumentNumber") ||
                    param["DocumentNumber"] == null)
                 {
                     param["DocumentNumber"] = account.DocumentNumber;
                 }
 
-                if(!param.ContainsKey("FOC") ||
+                if (!param.ContainsKey("FOC") ||
                    param["FOC"] == null)
                 {
                     param["FOC"] = account.FOC;
                 }
 
-                if(!param.ContainsKey("BOC") ||
+                if (!param.ContainsKey("BOC") ||
                    param["BOC"] == null)
                 {
                     param["BOC"] = account.BOC;
@@ -160,7 +165,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -180,7 +185,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -201,7 +206,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -220,13 +225,13 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetInsertFields(source, p);
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 SQLiteConnection conn = query.DataConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand insert = query.InsertCommand;
                     insert.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -248,13 +253,13 @@ namespace BudgetExecution
                 Query query = new Query(source, provider, Sql.INSERT, param);
                 string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     insert?.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -270,15 +275,15 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn);
                     update.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -295,15 +300,15 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.UPDATE, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update?.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -319,15 +324,15 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand delete = query.GetDataCommand(cmd, conn);
                     delete.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -344,15 +349,15 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.DELETE, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using(conn)
+                using (conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update?.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

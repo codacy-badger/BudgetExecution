@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using Syncfusion.Windows.Forms.Chart;
+﻿// <copyright file="Application.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using Syncfusion.Windows.Forms.Chart;
+
     // Delegates
     public delegate DataTable TableDelegate(DataTable table, Field column, string filter);
 
@@ -33,6 +37,8 @@ namespace BudgetExecution
 
     public enum HQ { A, B, C, D, E, F, G, H, J, L, M }
 
+    public enum Sheet { Budget, Internal, External, Report}
+
     public enum Net { Zero, Increase, Decrease }
 
     public enum Objective { O1, O2, O3, O4, O5 }
@@ -45,7 +51,7 @@ namespace BudgetExecution
 
     public enum Provider { SQLite = 0, Excel = 1, SqlServer = 2, SqlCe = 3, Access = 4, OleDb = 5 }
 
-    public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, TravelObligations, Divisions, DWH, EJ, EN, Personnel, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, BudgetLevels, ProgramObligations, RegionalAccounts, WorkCodes, PayrollObligations, PayAccruals, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
+    public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, TravelObligations, Divisions, DWH, EJ, EN, Personnel, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, BudgetLevels, ProgramObligations, RegionalAccounts, WorkCodes, PayrollObligations, PayAccruals, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS, External }
 
     public enum Stat { Total = 0, Count = 1, Average = 2, Ratio = 3 }
 
@@ -56,7 +62,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The main entry point for the application.
         /// </summary>
-        [ STAThread ]
+        [STAThread ]
         private static void Main()
         {
             System.Windows.Forms.Application.EnableVisualStyles();

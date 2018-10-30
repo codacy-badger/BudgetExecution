@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="ISupplementalAllocation.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     internal interface ISupplementalAllocation
     {

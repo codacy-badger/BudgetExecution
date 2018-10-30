@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// <copyright file="Org.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Org
     {
         // CONSTRUCTORS
@@ -31,7 +35,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = code };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

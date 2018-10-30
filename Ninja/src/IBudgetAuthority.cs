@@ -1,9 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
+// <copyright file="IBudgetAuthority.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+
     public interface IBudgetAuthority
     {
         // PROPERTIES

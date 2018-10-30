@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
+﻿// <copyright file="Transfer.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+
     public class Transfer
     {
         // CONSTRUCTORS
@@ -117,6 +121,7 @@ namespace BudgetExecution
         public string TCN { get; }
 
         // METHODS
+
         /// <summary>
         ///     Gets the insertion columns.
         /// </summary>
@@ -129,19 +134,19 @@ namespace BudgetExecution
             try
             {
                 Fund account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
-                if(!param.ContainsKey("Name") ||
+                if (!param.ContainsKey("Name") ||
                    param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
-                if(!param.ContainsKey("TreasurySymbol") ||
+                if (!param.ContainsKey("TreasurySymbol") ||
                    param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
-                if(!param.ContainsKey("Title") ||
+                if (!param.ContainsKey("Title") ||
                    param["Title"] == null)
                 {
                     param["Title"] = account.Title;
@@ -149,7 +154,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -169,7 +174,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Transfer(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -190,7 +195,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Transfer(datarow);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -208,7 +213,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -225,7 +230,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -242,7 +247,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

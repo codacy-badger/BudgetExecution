@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿// <copyright file="Employee.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
     public class Employee : IEmployee
     {
         // CONSTRUCTORS
@@ -33,7 +37,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, p);
             Table = DbData.Table;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-            if(Table.Rows.Count == 1)
+            if (Table.Rows.Count == 1)
             {
                 Data = Records[0];
                 Section = Data["Section"].ToString();
@@ -95,7 +99,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -112,7 +116,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -129,7 +133,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

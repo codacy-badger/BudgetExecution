@@ -1,12 +1,16 @@
-using System;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Tools;
+// <copyright file="AppropriationSelector.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Drawing;
+    using System.IO;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Tools;
+
     public partial class AppropriationSelector : MetroForm
     {
         public AppropriationSelector()
@@ -34,12 +38,12 @@ namespace BudgetExecution
             {
                 Carousel carousel = sender as Carousel;
                 string i = carousel.ActiveImage.Tag.ToString();
-                Source s = (Source) Enum.Parse(typeof(Source), i);
+                Source s = (Source)Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(s, Provider.SQLite);
                 sf.Show();
                 Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -54,7 +58,7 @@ namespace BudgetExecution
                 AppropriationCarousel.ImageSlides = true;
                 AppropriationCarousel.UseOriginalImageinPreview = true;
                 string[] images = Directory.GetFiles(path);
-                foreach(string i in images)
+                foreach (string i in images)
                 {
                     Bitmap b = new Bitmap(i);
                     b.Tag = i;
@@ -66,7 +70,7 @@ namespace BudgetExecution
 
                 AppropriationCarousel.ImageList = ilist;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 new Error(e).ShowDialog();
             }

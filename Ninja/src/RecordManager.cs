@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
+﻿// <copyright file="RecordManager.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+
     public partial class RecordManager : MetroForm
     {
         // CONSTRUCTORS
@@ -75,12 +79,12 @@ namespace BudgetExecution
             try
             {
                 string[] codes = Info.AgencyFundCodes;
-                foreach(string c in codes)
+                foreach (string c in codes)
                 {
                     FundComboBox.Items.Add(c);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -101,12 +105,12 @@ namespace BudgetExecution
                     "38",
                     "41"
                 };
-                foreach(string c in codes)
+                foreach (string c in codes)
                 {
                     BocBox.Items.Add(c);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -151,7 +155,7 @@ namespace BudgetExecution
                 };
                 return label;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -197,7 +201,7 @@ namespace BudgetExecution
                 };
                 return box;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -209,25 +213,25 @@ namespace BudgetExecution
             try
             {
                 Label[] lbl = GetLabels();
-                foreach(Label l in lbl)
+                foreach (Label l in lbl)
                 {
                     l.Visible = false;
                 }
 
                 MetroSetTextBox[] tbx = GetTextBoxes();
-                foreach(MetroSetTextBox tb in tbx)
+                foreach (MetroSetTextBox tb in tbx)
                 {
                     tb.Visible = false;
                 }
 
                 List<string> cn = new List<string>();
-                foreach(DataColumn dc in dt.Columns)
+                foreach (DataColumn dc in dt.Columns)
                 {
                     cn.Add(dc.ColumnName);
                 }
 
                 int current = bs.Position;
-                for(int i = 0; i < cn.Count; i++)
+                for (int i = 0; i < cn.Count; i++)
                 {
                     tbx[i].Visible = true;
                     tbx[i].DataBindings.Add(new Binding("Text", BindingSource.DataSource, dt.Columns[i].ColumnName));
@@ -235,7 +239,7 @@ namespace BudgetExecution
                     lbl[i].Text = dt.Columns[i].ColumnName;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -246,25 +250,25 @@ namespace BudgetExecution
             try
             {
                 Label[] lbl = GetLabels();
-                foreach(Label l in lbl)
+                foreach (Label l in lbl)
                 {
                     l.Visible = false;
                 }
 
                 MetroSetTextBox[] tbx = GetTextBoxes();
-                foreach(MetroSetTextBox tb in tbx)
+                foreach (MetroSetTextBox tb in tbx)
                 {
                     tb.Visible = false;
                 }
 
                 List<string> cn = new List<string>();
-                foreach(DataColumn dc in DbTable.Columns)
+                foreach (DataColumn dc in DbTable.Columns)
                 {
                     cn.Add(dc.ColumnName);
                 }
 
                 int current = BindingSource.Position;
-                for(int i = 0; i < cn.Count; i++)
+                for (int i = 0; i < cn.Count; i++)
                 {
                     tbx[i].Visible = true;
                     tbx[i].DataBindings.Add(new Binding("Text", BindingSource.DataSource, cn[i]));
@@ -272,7 +276,7 @@ namespace BudgetExecution
                     lbl[i].Text = cn[i];
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -283,14 +287,14 @@ namespace BudgetExecution
             try
             {
                 List<MetroSetComboBox> labels = null;
-                foreach(MetroSetComboBox lbl in RecordTabelPanel.Controls)
+                foreach (MetroSetComboBox lbl in RecordTabelPanel.Controls)
                 {
                     labels.Add(lbl);
                 }
 
                 return labels;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
+﻿// <copyright file="FormData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
-    [ SuppressMessage("ReSharper", "UnusedParameter.Local") ]
-    [ SuppressMessage("ReSharper", "UnusedVariable") ]
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
+    [SuppressMessage("ReSharper", "UnusedParameter.Local")]
+    [SuppressMessage("ReSharper", "UnusedVariable")]
     public class FormData
     {
         // CONSTRUCTORS
@@ -99,7 +103,7 @@ namespace BudgetExecution
                 bn.BindingSource = bs;
                 ConfigureDataGridViewVisibleColumns(dg);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -109,12 +113,12 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable table = (DataTable) bs.DataSource;
+                DataTable table = (DataTable)bs.DataSource;
                 DataRow row = table.Rows[bs.Position];
                 Binding binding = new Binding("Text", row, field);
                 tb.DataBindings.Add(binding);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -124,15 +128,15 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable table = (DataTable) bs.DataSource;
+                DataTable table = (DataTable)bs.DataSource;
                 string[] field = table.GetColumnNames();
                 DataRow row = table.Rows[bs.Position];
-                for(int i = 0; i < tb.Count; i++)
+                for (int i = 0; i < tb.Count; i++)
                 {
                     tb[i].DataBindings.Add(new Binding("Text", row, field[i]));
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -144,7 +148,7 @@ namespace BudgetExecution
             {
                 BindingSource.Filter = $"{mscb.Tag} = '{mscb.SelectedItem}'";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -155,12 +159,12 @@ namespace BudgetExecution
             ListBox listbox = sender as ListBox;
             try
             {
-                if(listbox != null)
+                if (listbox != null)
                 {
                     BindingSource.Filter = $"{listbox.Tag} = '{listbox.SelectedItem}'";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -171,7 +175,7 @@ namespace BudgetExecution
             try
             {
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -182,13 +186,13 @@ namespace BudgetExecution
             try
             {
                 InitializeFilterButtons(fitlerControl, filter);
-                foreach(MetroSetComboBox c in fitlerControl.Controls)
+                foreach (MetroSetComboBox c in fitlerControl.Controls)
                 {
                     MetroSetButton msb = new MetroSetButton();
                     InitializeFilterButtons(msb, filter);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -199,7 +203,7 @@ namespace BudgetExecution
             try
             {
                 control.Controls.Clear();
-                foreach(string f in list)
+                foreach (string f in list)
                 {
                     MetroSetButton b = new MetroSetButton();
                     b.Text = f;
@@ -218,7 +222,7 @@ namespace BudgetExecution
                     b.Tag = f;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -230,12 +234,12 @@ namespace BudgetExecution
             {
                 ListBox box = control as ListBox;
                 box?.Controls.Clear();
-                foreach(string f in list)
+                foreach (string f in list)
                 {
                     box?.Items.Add(f);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -259,7 +263,7 @@ namespace BudgetExecution
                 form.Padding = new Padding(1);
                 form.CaptionAlign = HorizontalAlignment.Left;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -269,7 +273,7 @@ namespace BudgetExecution
         {
             try
             {
-                foreach(DataGridViewColumn dc in dgv.Columns)
+                foreach (DataGridViewColumn dc in dgv.Columns)
                 {
                     dc.Visible = false;
                 }
@@ -283,7 +287,7 @@ namespace BudgetExecution
                 dgv.Columns[12].Visible = true;
                 dgv.Columns[12].DefaultCellStyle.Format = "c";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -296,7 +300,7 @@ namespace BudgetExecution
                 Table = DbData.Table;
                 BindingSource.DataSource = Table;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -306,7 +310,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(dgv.CurrentRow != null)
+                if (dgv.CurrentRow != null)
                 {
                     DataGridViewRow row = dgv.CurrentRow;
                     Dictionary<string, object> data = new Dictionary<string, object>();
@@ -321,7 +325,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -330,13 +334,13 @@ namespace BudgetExecution
 
         internal decimal GetCount(DataTable table, Field column, string filter)
         {
-            if(table.Columns.Contains("Amount"))
+            if (table.Columns.Contains("Amount"))
             {
                 try
                 {
                     return table.AsEnumerable().Where(p => p.Field<string>(column.ToString()).Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return -1;
@@ -356,14 +360,14 @@ namespace BudgetExecution
                 string[] col = table.GetColumnNames();
                 object[] val = row.ItemArray;
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                for(int i = 0; i < cct; i++)
+                for (int i = 0; i < cct; i++)
                 {
                     param.Add(col[i], val[i]);
                 }
 
                 return param;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -377,14 +381,14 @@ namespace BudgetExecution
                 DataColumnCollection cols = row.Table.Columns;
                 object[] item = row.ItemArray;
                 SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
-                for(int i = 0; i < row.ItemArray.Length; i++)
+                for (int i = 0; i < row.ItemArray.Length; i++)
                 {
                     param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
                 }
 
                 return param;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -405,7 +409,7 @@ namespace BudgetExecution
                 tbx[7].DataBindings.Add(new Binding("Text", dgv.DataSource, "BOC"));
                 tbx[8].DataBindings.Add(new Binding("Text", dgv.DataSource, "Amount"));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -446,7 +450,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -463,7 +467,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

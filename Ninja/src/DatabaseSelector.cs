@@ -1,12 +1,16 @@
-﻿using System;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Tools;
+﻿// <copyright file="DatabaseSelector.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Drawing;
+    using System.IO;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Tools;
+
     public partial class DatabaseSelector : MetroForm
     {
         // CONSTRUCTORS
@@ -46,7 +50,7 @@ namespace BudgetExecution
                 ViewerCarousel.UseOriginalImageinPreview = true;
                 string[] images = Directory.GetFiles(path);
                 FilePath = path;
-                foreach(string i in images)
+                foreach (string i in images)
                 {
                     string p = Path.GetFileNameWithoutExtension(i);
                     Bitmap b = new Bitmap(i);
@@ -59,7 +63,7 @@ namespace BudgetExecution
 
                 ViewerCarousel.ImageList = ilist;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -74,17 +78,17 @@ namespace BudgetExecution
             try
             {
                 Carousel carousel = sender as Carousel;
-                if(carousel != null)
+                if (carousel != null)
                 {
                     string i = carousel.ActiveImage.Tag.ToString();
-                    Source s = (Source) Enum.Parse(typeof(Source), i);
+                    Source s = (Source)Enum.Parse(typeof(Source), i);
                     SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
                     sqlitedata.Show();
                 }
 
                 Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
