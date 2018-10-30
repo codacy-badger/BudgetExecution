@@ -6,7 +6,6 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.SQLite;
 
     public class RC
     {

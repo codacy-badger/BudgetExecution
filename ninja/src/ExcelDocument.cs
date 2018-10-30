@@ -5,13 +5,10 @@
 namespace BudgetExecution
 {
     using System;
-    using System.Collections.Generic;
     using System.Data;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using Microsoft.Office.Interop.Excel;
-    using Syncfusion.Windows.Forms.Diagram;
-    using Syncfusion.XlsIO.Implementation.Collections;
     using DataTable = System.Data.DataTable;
     using Excel = Microsoft.Office.Interop.Excel.Application;
 

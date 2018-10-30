@@ -7,7 +7,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
     using System.Linq;
 
     public class Division
@@ -20,9 +19,9 @@ namespace BudgetExecution
         public Division(Source source)
         {
             Name = source.ToString();
-            Data = new DataBuilder(Source.Divisions).Table.AsEnumerable()
-                                                    .Where(d => d.Field<string>("Source").Equals(source.ToString()))
-                                                    .Select(d => d).First();
+            Data = new DataBuilder(source).Table.AsEnumerable()
+                                          .Where(d => d.Field<string>("Source").Equals(source.ToString()))
+                                          .Select(d => d).First();
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
             Title = Data["Title"].ToString();
