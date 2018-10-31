@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
 
@@ -21,16 +22,7 @@ namespace BudgetExecution
             D6 = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
-            Values = new[]
-            {
-                Metric.GetChartTotals(R6.Table, Field.Fund),
-                Metric.GetChartTotals(R6.Table, Field.BOC),
-                Metric.GetChartTotals(D6.Table, Field.Fund),
-                Metric.GetChartTotals(R6.Table, Field.NPM),
-                Metric.GetChartTotals(D6.Table, Field.NPM),
-                Metric.GetChartTotals(R6.Table, Field.GoalName),
-                Metric.GetChartTotals(D6.Table, Field.GoalName)
-            };
+            Values = new[] { Metric.GetChartTotals(R6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.BOC), Metric.GetChartTotals(D6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.NPM), Metric.GetChartTotals(D6.Table, Field.NPM), Metric.GetChartTotals(R6.Table, Field.GoalName), Metric.GetChartTotals(D6.Table, Field.GoalName) };
             Title = GetChartTitles(Values);
             Chart = GetMainChart;
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();

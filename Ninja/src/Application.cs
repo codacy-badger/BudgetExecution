@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+
     using Syncfusion.Windows.Forms.Chart;
 
     // Delegates
@@ -37,7 +38,7 @@ namespace BudgetExecution
 
     public enum HQ { A, B, C, D, E, F, G, H, J, L, M }
 
-    public enum Sheet { Budget, Internal, External, Report}
+    public enum Sheet { Budget, Internal, External, Report }
 
     public enum Net { Zero, Increase, Decrease }
 
@@ -62,7 +63,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The main entry point for the application.
         /// </summary>
-        [STAThread ]
+        [STAThread]
         private static void Main()
         {
             System.Windows.Forms.Application.EnableVisualStyles();

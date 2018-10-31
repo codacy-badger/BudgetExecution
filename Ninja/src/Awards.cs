@@ -30,7 +30,6 @@ namespace BudgetExecution
         public DataTable Table { get; set; }
 
         // METHODS
-
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try

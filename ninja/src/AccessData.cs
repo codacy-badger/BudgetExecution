@@ -8,8 +8,11 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
+
     using VisualPlus.Toolkit.Controls.Interactivity;
 
     /// <summary>
@@ -701,6 +704,20 @@ namespace BudgetExecution
                         PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
+                        break;
+                    case Source.Programs:
+                        break;
+                    case Source.BudgetLevels:
+                        break;
+                    case Source.WorkCodes:
+                        break;
+                    case Source.PayrollObligations:
+                        break;
+                    case Source.PayAccruals:
+                        break;
+                    case Source.SF6A:
+                        break;
+                    case Source.External:
                         break;
                 }
             }

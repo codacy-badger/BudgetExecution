@@ -13,7 +13,8 @@ namespace BudgetExecution
     public class ExcelQuery : Query, IQuery
     {
         // Constructors
-        public ExcelQuery(Source source) : base(source)
+        public ExcelQuery(Source source)
+                : base(source)
         {
             Provider = base.Provider;
             Source = source;
@@ -29,7 +30,8 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public ExcelQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.OleDb)
+        public ExcelQuery(Source source, Dictionary<string, object> parameter)
+                : base(source, Provider.OleDb)
         {
             Settings = new AppSettingsReader();
             Source = source;

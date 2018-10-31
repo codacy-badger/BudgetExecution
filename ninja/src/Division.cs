@@ -19,9 +19,7 @@ namespace BudgetExecution
         public Division(Source source)
         {
             Name = source.ToString();
-            Data = new DataBuilder(source).Table.AsEnumerable()
-                                          .Where(d => d.Field<string>("Source").Equals(source.ToString()))
-                                          .Select(d => d).First();
+            Data = new DataBuilder(source).Table.AsEnumerable().Where(d => d.Field<string>("Source").Equals(source.ToString())).Select(d => d).First();
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
             Title = Data["Title"].ToString();
@@ -31,9 +29,7 @@ namespace BudgetExecution
 
         public Division(Dictionary<string, object> p)
         {
-            Data = new DataBuilder(Source.Divisions, Provider.SQLite, p).Table.AsEnumerable()
-                                                                        .Where(d => d.Field<string>("Source").Equals(Source.Divisions.ToString()))
-                                                                        .Select(d => d).First();
+            Data = new DataBuilder(Source.Divisions, Provider.SQLite, p).Table.AsEnumerable().Where(d => d.Field<string>("Source").Equals(Source.Divisions.ToString())).Select(d => d).First();
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
             Title = Data["Title"].ToString();

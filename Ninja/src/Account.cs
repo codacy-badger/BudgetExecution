@@ -24,7 +24,8 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
-        public Account(string bfy, string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite) : this(source, provider)
+        public Account(string bfy, string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite)
+                : this(source, provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
@@ -47,7 +48,8 @@ namespace BudgetExecution
             ProgramAreaName = DbRow["ProgramAreaName"].ToString();
         }
 
-        public Account(Source source, Provider provider, string bfy, string fund, string code) : this(source, provider)
+        public Account(Source source, Provider provider, string bfy, string fund, string code)
+                : this(source, provider)
         {
             Fund = fund;
             Code = code;
@@ -235,41 +237,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, Provider.SQLite, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("Fund") ||
-                   param["Fund"] == null)
+                if (!param.ContainsKey("Fund")
+                   || param["Fund"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org") ||
-                   param["Org"] == null)
+                if (!param.ContainsKey("Org")
+                   || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProjectCode") ||
-                   param["ProgramProjectCode"] == null)
+                if (!param.ContainsKey("ProgramProjectCode")
+                   || param["ProgramProjectCode"] == null)
                 {
                     param["ProgramProjectCode"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea") ||
-                   param["ProgramArea"] == null)
+                if (!param.ContainsKey("ProgramArea")
+                   || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal") ||
-                   param["Goal"] == null)
+                if (!param.ContainsKey("Goal")
+                   || param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective") ||
-                   param["Objective"] == null)
+                if (!param.ContainsKey("Objective")
+                   || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -296,41 +298,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName") ||
-                   param["FundName"] == null)
+                if (!param.ContainsKey("FundName")
+                   || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org") ||
-                   param["Org"] == null)
+                if (!param.ContainsKey("Org")
+                   || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject") ||
-                   param["ProgramProject"] == null)
+                if (!param.ContainsKey("ProgramProject")
+                   || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea") ||
-                   param["ProgramArea"] == null)
+                if (!param.ContainsKey("ProgramArea")
+                   || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal") ||
-                   param["Goal"] == null)
+                if (!param.ContainsKey("Goal")
+                   || param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective") ||
-                   param["Objective"] == null)
+                if (!param.ContainsKey("Objective")
+                   || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;

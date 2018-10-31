@@ -117,20 +117,12 @@ namespace BudgetExecution
             try
             {
                 int count = GetCount(table);
-                return new[]
-                {
-                    GetTotal(table),
-                    count,
-                    GetAverage(table)
-                };
+                return new[] { GetTotal(table), count, GetAverage(table) };
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return new[]
-                {
-                    -1m
-                };
+                return new[] { -1m };
             }
         }
 
@@ -154,8 +146,8 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") ||
-                       dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID")
+                       || dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }

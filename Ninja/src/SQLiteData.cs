@@ -9,8 +9,11 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
+
     using VisualPlus.Toolkit.Controls.Interactivity;
 
     /// <summary>
@@ -163,10 +166,7 @@ namespace BudgetExecution
                     label.Text = control.Tag?.ToString() ?? colname;
                 }
 
-                string[] filters = table.AsEnumerable()
-                                        .Select(p => p.Field<string>(colname))
-                                        .Distinct()
-                                        .ToArray();
+                string[] filters = table.AsEnumerable().Select(p => p.Field<string>(colname)).Distinct().ToArray();
                 foreach (string i in filters)
                 {
                     control.Items.Add(i);
@@ -225,10 +225,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                string[] item = table.AsEnumerable()
-                                     .Select(p => p.Field<string>(colname.ToString()))
-                                     .Distinct()
-                                     .ToArray();
+                string[] item = table.AsEnumerable().Select(p => p.Field<string>(colname.ToString())).Distinct().ToArray();
                 control.Tag = colname.ToString();
                 foreach (string i in item)
                 {
@@ -329,11 +326,7 @@ namespace BudgetExecution
                     C2 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable table = Table.AsEnumerable()
-                                       .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
-                                       .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
-                                       .Select(p => p)
-                                       .CopyToDataTable();
+                DataTable table = Table.AsEnumerable().Where(p => p.Field<string>(C1.ToString()).Equals(F1)).Where(p => p.Field<string>(C2.ToString()).Equals(F2)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 label6.Text = DbData.GetTotal(Source, table).ToString("c");
                 label12.Text = table.Rows.Count.ToString();
@@ -358,12 +351,7 @@ namespace BudgetExecution
                     C3 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable table = Table.AsEnumerable()
-                                       .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
-                                       .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
-                                       .Where(p => p.Field<string>(C3.ToString()).Equals(F3))
-                                       .Select(p => p)
-                                       .CopyToDataTable();
+                DataTable table = Table.AsEnumerable().Where(p => p.Field<string>(C1.ToString()).Equals(F1)).Where(p => p.Field<string>(C2.ToString()).Equals(F2)).Where(p => p.Field<string>(C3.ToString()).Equals(F3)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 label6.Text = DbData.GetTotal(Source, table).ToString("c") ?? "0";
                 label12.Text = table.Rows.Count.ToString() ?? "0";
@@ -389,13 +377,7 @@ namespace BudgetExecution
                     C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable table = Table.AsEnumerable()
-                                       .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
-                                       .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
-                                       .Where(p => p.Field<string>(C3.ToString()).Equals(F3))
-                                       .Where(p => p.Field<string>(C4.ToString()).Equals(F4))
-                                       .Select(p => p)
-                                       .CopyToDataTable();
+                DataTable table = Table.AsEnumerable().Where(p => p.Field<string>(C1.ToString()).Equals(F1)).Where(p => p.Field<string>(C2.ToString()).Equals(F2)).Where(p => p.Field<string>(C3.ToString()).Equals(F3)).Where(p => p.Field<string>(C4.ToString()).Equals(F4)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 if (table.Columns.Contains("Amount"))
                 {

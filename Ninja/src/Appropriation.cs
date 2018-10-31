@@ -25,7 +25,8 @@ namespace BudgetExecution
             Title = Fund.Title;
         }
 
-        public Appropriation(Source source, Provider provider, string fundcode, string bfy) : this(fundcode, bfy)
+        public Appropriation(Source source, Provider provider, string fundcode, string bfy)
+                : this(fundcode, bfy)
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = Fund.Code, ["BFY"] = bfy });
             Metric = new PrcMetric(DbData);
@@ -128,12 +129,7 @@ namespace BudgetExecution
         public decimal[] GetMetrics(DataTable table)
         {
             int count = GetCount(table);
-            return new[]
-            {
-                GetTotal(table),
-                count,
-                GetAverage(table)
-            };
+            return new[] { GetTotal(table), count, GetAverage(table) };
         }
 
         public PRC[] GetPrcArray(DataTable table)
@@ -154,8 +150,8 @@ namespace BudgetExecution
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
             foreach (DataColumn dc in table.Columns)
             {
-                if (dc.ColumnName.Equals("Id") ||
-                   dc.ColumnName.Equals("Amount"))
+                if (dc.ColumnName.Equals("Id")
+                   || dc.ColumnName.Equals("Amount"))
                 {
                     continue;
                 }
@@ -355,8 +351,8 @@ namespace BudgetExecution
 
         internal FTE[] GetFTE(DataTable table)
         {
-            if (table.Rows.Count > 0 &&
-               BocCodes.Contains("17"))
+            if (table.Rows.Count > 0
+               && BocCodes.Contains("17"))
             {
                 try
                 {

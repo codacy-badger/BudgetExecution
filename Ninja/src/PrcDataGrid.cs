@@ -5,6 +5,7 @@
 namespace BudgetExecution
 {
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms.Chart;
 
     public partial class BudgetDataGrid : UserControl

@@ -20,14 +20,8 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = DbData.Table;
-            CarryOver = DbData.Table.AsEnumerable()
-                                   .Where(p => p.Field<string>("BFY").Equals("2018"))
-                                   .Select(p => p)
-                                   .CopyToDataTable();
-            CurrentYear = DbData.Table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BFY").Equals("2019"))
-                                     .Select(p => p)
-                                     .CopyToDataTable();
+            CarryOver = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
+            CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             ProgramElements = DbData.GetProgramElements(DbData.Table);
             Total = GetTotals(Table);
             CarryOverTotal = GetTotals(CarryOver);
@@ -52,8 +46,8 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccounts &&
-               DbData.Input == null)
+            if (DbData.Source == Source.DivisionAccounts
+               && DbData.Input == null)
             {
                 DivisionTotals = GetDataTotals(Table, Field.RC);
                 DivisionMetrics = GetMetrics(Table, Field.RC);
@@ -71,16 +65,8 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = Info.FilterRows(DbData.Table, column, filter);
-            CarryOver = Info.FilterRows(DbData.Table, column, filter)
-                                 .AsEnumerable()
-                                 .Where(p => p.Field<string>("BFY").Equals("2018"))
-                                 .Select(p => p)
-                                 .CopyToDataTable();
-            CurrentYear = Info.FilterRows(DbData.Table, column, filter)
-                                   .AsEnumerable()
-                                   .Where(p => p.Field<string>("BFY").Equals("2019"))
-                                   .Select(p => p)
-                                   .CopyToDataTable();
+            CarryOver = Info.FilterRows(DbData.Table, column, filter).AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
+            CurrentYear = Info.FilterRows(DbData.Table, column, filter).AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             CarryOverTotal = GetTotals(CarryOver);
@@ -256,13 +242,7 @@ namespace BudgetExecution
 
         public double[] GetMetrics(DataTable table)
         {
-            return new[]
-            {
-                (double)GetTotals(table),
-                GetCount(table),
-                (double)GetAverage(table),
-                (double)GetTotals(table) / (double)Total
-            };
+            return new[] { (double)GetTotals(table), GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)Total };
         }
 
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
@@ -272,8 +252,8 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") ||
-                       dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID")
+                       || dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }
@@ -397,10 +377,7 @@ namespace BudgetExecution
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
                     {
-                        info.Add(filter, new[]
-                        {
-                            (double)GetTotals(query)
-                        });
+                        info.Add(filter, new[] { (double)GetTotals(query) });
                     }
                 }
 

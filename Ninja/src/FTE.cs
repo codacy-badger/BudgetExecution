@@ -17,7 +17,8 @@ namespace BudgetExecution
         {
         }
 
-        public FTE(DataRow datarow) : base(datarow)
+        public FTE(DataRow datarow)
+                : base(datarow)
         {
             FteParameter = GetDataDictionary();
         }
@@ -118,8 +119,8 @@ namespace BudgetExecution
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
             foreach (DataColumn dc in table.Columns)
             {
-                if (dc.ColumnName.Equals("ID") ||
-                   dc.ColumnName.Equals("Amount"))
+                if (dc.ColumnName.Equals("ID")
+                   || dc.ColumnName.Equals("Amount"))
                 {
                     continue;
                 }
@@ -157,12 +158,7 @@ namespace BudgetExecution
         public decimal[] GetMetrics(DataTable table)
         {
             int count = GetCount(table);
-            return new[]
-            {
-                GetTotal(table),
-                count,
-                GetAverage(table)
-            };
+            return new[] { GetTotal(table), count, GetAverage(table) };
         }
 
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)

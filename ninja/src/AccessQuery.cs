@@ -13,7 +13,8 @@ namespace BudgetExecution
     public class AccessQuery : Query, IQuery
     {
         // Constructors
-        public AccessQuery(Source source) : base(source)
+        public AccessQuery(Source source)
+                : base(source)
         {
             Provider = base.Provider;
             Source = source;
@@ -29,7 +30,8 @@ namespace BudgetExecution
             Settings = new AppSettingsReader();
         }
 
-        public AccessQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.OleDb)
+        public AccessQuery(Source source, Dictionary<string, object> parameter)
+                : base(source, Provider.OleDb)
         {
             Settings = new AppSettingsReader();
             Source = source;

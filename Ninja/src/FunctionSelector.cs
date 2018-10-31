@@ -8,6 +8,7 @@ namespace BudgetExecution
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Tools;
 
@@ -31,7 +32,6 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-
         private string FilePath { get; set; }
 
         private string[] Images { get; set; }

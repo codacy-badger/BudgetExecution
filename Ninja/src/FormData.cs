@@ -12,7 +12,9 @@ namespace BudgetExecution
     using System.Drawing;
     using System.Linq;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
 
@@ -93,7 +95,6 @@ namespace BudgetExecution
         internal TableDelegate TableFilter { get; set; }
 
         // METHODS
-
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
             try

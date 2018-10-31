@@ -23,7 +23,8 @@ namespace BudgetExecution
             Table = new DataBuilder(Source, Provider).Table;
         }
 
-        public Fund(string code, string bfy) : this(Source.Funds, Provider.SQLite)
+        public Fund(string code, string bfy)
+                : this(Source.Funds, Provider.SQLite)
         {
             Code = code;
             FiscalYear = bfy;
@@ -174,20 +175,20 @@ namespace BudgetExecution
             try
             {
                 Fund account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("Name") ||
-                   param["Name"] == null)
+                if (!param.ContainsKey("Name")
+                   || param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
-                if (!param.ContainsKey("TreasurySymbol") ||
-                   param["TreasurySymbol"] == null)
+                if (!param.ContainsKey("TreasurySymbol")
+                   || param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
-                if (!param.ContainsKey("Title") ||
-                   param["Title"] == null)
+                if (!param.ContainsKey("Title")
+                   || param["Title"] == null)
                 {
                     param["Title"] = account.Title;
                 }

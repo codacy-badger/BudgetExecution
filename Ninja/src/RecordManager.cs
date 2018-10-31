@@ -8,7 +8,9 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
 
     public partial class RecordManager : MetroForm
@@ -94,17 +96,7 @@ namespace BudgetExecution
         {
             try
             {
-                string[] codes =
-                {
-                    "10",
-                    "17",
-                    "21",
-                    "28",
-                    "36",
-                    "37",
-                    "38",
-                    "41"
-                };
+                string[] codes = { "10", "17", "21", "28", "36", "37", "38", "41" };
                 foreach (string c in codes)
                 {
                     BocBox.Items.Add(c);
@@ -120,39 +112,7 @@ namespace BudgetExecution
         {
             try
             {
-                Label[] label =
-                {
-                    lbl0,
-                    lbl1,
-                    lbl2,
-                    lbl3,
-                    lbl4,
-                    lbl5,
-                    lbl6,
-                    lbl7,
-                    lbl8,
-                    lbl9,
-                    lbl10,
-                    lbl11,
-                    lbl12,
-                    lbl13,
-                    lbl14,
-                    lbl15,
-                    lbl16,
-                    lbl17,
-                    lbl18,
-                    lbl19,
-                    lbl20,
-                    lbl21,
-                    lbl22,
-                    lbl23,
-                    lbl24,
-                    lbl25,
-                    lbl26,
-                    lbl27,
-                    lbl28,
-                    lbl29
-                };
+                Label[] label = { lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18, lbl19, lbl20, lbl21, lbl22, lbl23, lbl24, lbl25, lbl26, lbl27, lbl28, lbl29 };
                 return label;
             }
             catch (Exception ex)
@@ -166,39 +126,7 @@ namespace BudgetExecution
         {
             try
             {
-                MetroSetTextBox[] box =
-                {
-                    box0,
-                    box1,
-                    box2,
-                    box3,
-                    box4,
-                    box5,
-                    box6,
-                    box7,
-                    box8,
-                    box9,
-                    box10,
-                    box11,
-                    box12,
-                    box13,
-                    box14,
-                    box15,
-                    box16,
-                    box17,
-                    box18,
-                    box19,
-                    box20,
-                    box21,
-                    box22,
-                    box23,
-                    box24,
-                    box25,
-                    box26,
-                    box27,
-                    box28,
-                    box29
-                };
+                MetroSetTextBox[] box = { box0, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16, box17, box18, box19, box20, box21, box22, box23, box24, box25, box26, box27, box28, box29 };
                 return box;
             }
             catch (Exception ex)

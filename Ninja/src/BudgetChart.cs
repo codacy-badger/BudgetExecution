@@ -10,6 +10,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms.Chart;
 
     public class BudgetChart
@@ -29,10 +30,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            ConfigurePrimaryAxisTitle(new[]
-            {
-                title
-            });
+            ConfigurePrimaryAxisTitle(new[] { title });
             DataSeries = GetSeriesTotals(data);
             DataSeries.Type = SeriesType;
             Chart.Series?.Add(DataSeries);
@@ -318,11 +316,11 @@ namespace BudgetExecution
             try
             {
                 ChartSeries series = new ChartSeries("Total", SeriesType);
-                if (SeriesType == ChartSeriesType.Column ||
-                   SeriesType == ChartSeriesType.Line ||
-                   SeriesType == ChartSeriesType.Spline ||
-                   SeriesType == ChartSeriesType.SplineArea ||
-                   SeriesType == ChartSeriesType.StackingColumn)
+                if (SeriesType == ChartSeriesType.Column
+                   || SeriesType == ChartSeriesType.Line
+                   || SeriesType == ChartSeriesType.Spline
+                   || SeriesType == ChartSeriesType.SplineArea
+                   || SeriesType == ChartSeriesType.StackingColumn)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
                     {
@@ -474,43 +472,43 @@ namespace BudgetExecution
             }
         }
 
-        internal void ConfigureSeries(ChartSeries Series)
+        internal void ConfigureSeries(ChartSeries series)
         {
             try
             {
-                Series.SmartLabels = true;
-                Series.SortPoints = true;
-                Series.Style.DisplayText = true;
-                Series.Style.TextOffset = 15.0F;
-                Series.Style.TextOrientation = ChartTextOrientation.Up;
-                Series.Style.DisplayShadow = true;
-                Series.Style.TextColor = Color.White;
-                Series.PointsToolTipFormat = "{0}-{1}";
-                Series.Style.Font.Size = 12.0F;
-                Series.Style.Font.Facename = "Segoe UI";
-                Series.Style.Font.FontStyle = FontStyle.Bold;
+                series.SmartLabels = true;
+                series.SortPoints = true;
+                series.Style.DisplayText = true;
+                series.Style.TextOffset = 15.0F;
+                series.Style.TextOrientation = ChartTextOrientation.Up;
+                series.Style.DisplayShadow = true;
+                series.Style.TextColor = Color.White;
+                series.PointsToolTipFormat = "{0}-{1}";
+                series.Style.Font.Size = 12.0F;
+                series.Style.Font.Facename = "Segoe UI";
+                series.Style.Font.FontStyle = FontStyle.Bold;
                 if (Source == Source.FTE)
                 {
-                    Series.Style.TextFormat = "{0}";
+                    series.Style.TextFormat = "{0}";
                 }
                 else
                 {
-                    Series.Style.TextFormat = "${0:N2}";
+                    series.Style.TextFormat = "${0:N2}";
                 }
 
                 if (SeriesType == ChartSeriesType.Column)
                 {
-                    Series.SmartLabels = true;
-                    Series.SortPoints = true;
-                    Series.Style.DisplayText = true;
-                    Series.Style.TextOffset = 15.0F;
-                    Series.Style.TextOrientation = ChartTextOrientation.Up;
-                    Series.Style.DisplayShadow = true;
-                    Series.Style.TextColor = Color.White;
-                    Series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    Series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
-                    Series.ConfigItems.ColumnItem.PhongAlpha = 2;
-                    ConfigureToolTip(Series);
+                    series.SmartLabels = true;
+                    series.SortPoints = true;
+                    series.Style.DisplayText = true;
+                    series.Style.TextOffset = 15.0F;
+                    series.Style.TextOrientation = ChartTextOrientation.Up;
+                    series.Style.DisplayShadow = true;
+                    series.Style.TextColor = Color.White;
+                    series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                    series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
+                    series.ConfigItems.ColumnItem.PhongAlpha = 2;
+                    ConfigureToolTip(series);
                 }
             }
             catch (Exception e)
@@ -523,8 +521,8 @@ namespace BudgetExecution
         {
             try
             {
-                if (value == Stat.Total ||
-                   value == Stat.Average)
+                if (value == Stat.Total
+                   || value == Stat.Average)
                 {
                     series.Style.TextFormat = "{0:C}";
                 }
@@ -539,8 +537,8 @@ namespace BudgetExecution
                     series.Style.TextFormat = "{0}";
                 }
 
-                if (series.Type == ChartSeriesType.Area ||
-                   series.Type == ChartSeriesType.Column)
+                if (series.Type == ChartSeriesType.Area
+                   || series.Type == ChartSeriesType.Column)
                 {
                     series.SmartLabels = true;
                     series.SortPoints = true;
@@ -677,10 +675,7 @@ namespace BudgetExecution
                 }
 
                 ChartDataBindModel model = new ChartDataBindModel(chartdata);
-                model.YNames = new[]
-                {
-                    filter.ToString()
-                };
+                model.YNames = new[] { filter.ToString() };
                 return model;
             }
             catch (Exception ex)

@@ -11,10 +11,13 @@ namespace BudgetExecution
     using System.IO;
     using System.Linq;
     using System.Windows.Forms;
+
     using MakarovDev.ExpandCollapsePanel;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
+
     using VisualPlus.Toolkit.Controls.Interactivity;
 
     /// <summary>
@@ -49,10 +52,7 @@ namespace BudgetExecution
             BindingSource.DataSource = DbData.Table;
             Grid.DataSource = BindingSource;
             Metric = new PrcMetric(DbData);
-            ChartMainTitle = new[]
-            {
-                $"{Source.ToString()} Funding By Appropriation"
-            };
+            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation" };
             lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
             lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
             lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
@@ -699,10 +699,7 @@ namespace BudgetExecution
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridFilter1}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                        .Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -733,11 +730,7 @@ namespace BudgetExecution
                 string level = rb.Tag.ToString();
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                                                        .Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -767,11 +760,7 @@ namespace BudgetExecution
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
-                DataTable table = Table.AsEnumerable()
-                                       .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                       .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
-                                       .Where(p => p.Field<decimal>("Amount") > 0)
-                                       .Select(p => p).CopyToDataTable();
+                DataTable table = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -807,12 +796,7 @@ namespace BudgetExecution
                 string level = rb.Tag.ToString();
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
-                DataTable table = Table.AsEnumerable()
-                                       .Where(p => p.Field<decimal>("Amount") > 0)
-                                       .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                       .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                       .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
-                                       .Select(p => p).CopyToDataTable();
+                DataTable table = Table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -847,12 +831,7 @@ namespace BudgetExecution
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                        .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                        .Where(p => p.Field<string>("BocName").Equals(GridFilter3))
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -887,13 +866,7 @@ namespace BudgetExecution
                 string level = rb.Tag.ToString();
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{level}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                        .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                        .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                                        .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                        .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                        .Where(p => p.Field<string>("BocName").Equals(GridFilter3))
-                                                                        .Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -1329,17 +1302,7 @@ namespace BudgetExecution
         {
             try
             {
-                string[] filters =
-                {
-                    "FundName",
-                    "BocName",
-                    "NPM",
-                    "GoalName",
-                    "ObjectiveName",
-                    "Division",
-                    "ProgramArea",
-                    "ProgramProjectCode"
-                };
+                string[] filters = { "FundName", "BocName", "NPM", "GoalName", "ObjectiveName", "Division", "ProgramArea", "ProgramProjectCode" };
 
                 return filters;
             }
@@ -1354,10 +1317,7 @@ namespace BudgetExecution
         {
             try
             {
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} Resources By {field.ToString()} "
-                };
+                ChartMainTitle = new[] { $"{Source.ToString()} Resources By {field.ToString()} " };
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, field, Measure, ChartType).Activate();
             }
             catch (Exception ex)
@@ -1370,14 +1330,8 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> fp = new Dictionary<string, object>
-                {
-                    ["BudgetLevel"] = level
-                };
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} Level-{level} Resources By {field.ToString()} "
-                };
+                Dictionary<string, object> fp = new Dictionary<string, object> { ["BudgetLevel"] = level };
+                ChartMainTitle = new[] { $"{Source.ToString()} Level-{level} Resources By {field.ToString()} " };
                 DataBuilder fd = new DataBuilder(Source, Provider, fp);
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
             }
@@ -1391,14 +1345,8 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> fp = new Dictionary<string, object>
-                {
-                    [PrimaryFilter.SelectedItem.ToString()] = BocFilter3.SelectedItem.ToString()
-                };
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} {ChartFilter} Resources By {field.ToString()} "
-                };
+                Dictionary<string, object> fp = new Dictionary<string, object> { [PrimaryFilter.SelectedItem.ToString()] = BocFilter3.SelectedItem.ToString() };
+                ChartMainTitle = new[] { $"{Source.ToString()} {ChartFilter} Resources By {field.ToString()} " };
                 DataBuilder fd = new DataBuilder(Source, Provider, fp);
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
             }
@@ -1412,15 +1360,8 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> fp = new Dictionary<string, object>
-                {
-                    [PrimaryFilter.SelectedItem.ToString()] = ChartFilter,
-                    ["BudgetLevel"] = level
-                };
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} {ChartFilter} Level-{level} Resources By {field.ToString()} "
-                };
+                Dictionary<string, object> fp = new Dictionary<string, object> { [PrimaryFilter.SelectedItem.ToString()] = ChartFilter, ["BudgetLevel"] = level };
+                ChartMainTitle = new[] { $"{Source.ToString()} {ChartFilter} Level-{level} Resources By {field.ToString()} " };
                 DataBuilder fd = new DataBuilder(Source, Provider, fp);
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, fd, field, Measure, ChartType).Activate();
             }
@@ -1447,8 +1388,8 @@ namespace BudgetExecution
                 }
             }
 
-            if (Expander2.Visible &&
-               Expander2.IsExpanded)
+            if (Expander2.Visible
+               && Expander2.IsExpanded)
             {
                 Expander2.IsExpanded = false;
             }
@@ -1464,14 +1405,14 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl2 = sender as VisualComboBox;
-                if (ChartFilterControl2 != null &&
-                   ChartFilterControl2.SelectedItem != null)
+                if (ChartFilterControl2 != null
+                   && ChartFilterControl2.SelectedItem != null)
                 {
                     Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 }
 
-                if (!Expander2.Visible ||
-                   Expander2.IsExpanded == false)
+                if (!Expander2.Visible
+                   || Expander2.IsExpanded == false)
                 {
                     Expander2.Visible = true;
                     Expander2.IsExpanded = true;
@@ -1513,17 +1454,7 @@ namespace BudgetExecution
                 }
 
                 BocFilter4.Items.Clear();
-                string[] filters =
-                {
-                    "FundName",
-                    "BocName",
-                    "NPM",
-                    "GoalName",
-                    "ObjectiveName",
-                    "Division",
-                    "ProgramArea",
-                    "ProgramProjectCode"
-                };
+                string[] filters = { "FundName", "BocName", "NPM", "GoalName", "ObjectiveName", "Division", "ProgramArea", "ProgramProjectCode" };
 
                 foreach (string s in filters)
                 {
@@ -1632,7 +1563,8 @@ namespace BudgetExecution
             {
                 PrimaryFilter = sender as VisualComboBox;
                 PrimaryGrouping = (Field)Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
-                if (BocExpander1.Visible == false || BocExpander1.IsExpanded == false)
+                if (BocExpander1.Visible == false
+                   || BocExpander1.IsExpanded == false)
                 {
                     BocExpander1.Visible = true;
                     BocExpander1.IsExpanded = true;
@@ -1643,7 +1575,8 @@ namespace BudgetExecution
                     CurrentIndex = PrimaryFilter.SelectedIndex;
                 }
 
-                if (BocExpander2.IsExpanded || BocExpander2.Visible)
+                if (BocExpander2.IsExpanded
+                   || BocExpander2.Visible)
                 {
                     BocExpander2.IsExpanded = false;
                     BocExpander2.Visible = false;
@@ -1664,17 +1597,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Appropriation"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Appropriation" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Appropriation"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1693,17 +1620,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Object Class"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Object Class" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Object Class"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Object Class" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1722,17 +1643,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By HQ NPM"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By HQ NPM" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By HQ NPM"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By HQ NPM" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1751,17 +1666,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Agency Goal"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Agency Goal" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Agency Goal"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Agency Goal" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1780,17 +1689,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Objective"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Objective" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Objective"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Objective" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1809,17 +1712,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Division"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Division" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Division"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Division" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Division, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1838,17 +1735,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Program Area"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Program Area" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Program Area"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Program Area" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1867,17 +1758,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Program Project"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Program Project" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Program Project"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Program Project" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1920,17 +1805,11 @@ namespace BudgetExecution
 
                         if (Division != null)
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Object Class"
-                            };
+                            ChartMainTitle = new[] { $"{Division} Funding By Object Class" };
                         }
                         else
                         {
-                            ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Object Class"
-                            };
+                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Object Class" };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1968,28 +1847,16 @@ namespace BudgetExecution
                 switch (index)
                 {
                     case 0:
-                        return new[]
-                        {
-                            $"Total {source} Funding by {grouping}"
-                        };
+                        return new[] { $"Total {source} Funding by {grouping}" };
 
                     case 1:
-                        return new[]
-                        {
-                            $"{source}  Accounts by {grouping}"
-                        };
+                        return new[] { $"{source}  Accounts by {grouping}" };
 
                     case 2:
-                        return new[]
-                        {
-                            $"Average {source} Funding by {grouping}"
-                        };
+                        return new[] { $"Average {source} Funding by {grouping}" };
 
                     case 3:
-                        return new[]
-                        {
-                            $"{source} Funding Percentage by {grouping}"
-                        };
+                        return new[] { $"{source} Funding Percentage by {grouping}" };
                 }
 
                 return null;
@@ -2170,11 +2037,7 @@ namespace BudgetExecution
                 DataGridViewRow drv = Grid?.CurrentRow;
                 if (GridLevel7.Checked)
                 {
-                    decimal total = Table.AsEnumerable()
-                                         .Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel7.Tag.ToString()))
-                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
-                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
-                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel7.Tag.ToString())).Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                     decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
                     Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
                     ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
@@ -2183,11 +2046,7 @@ namespace BudgetExecution
 
                 if (GridLevel8.Checked)
                 {
-                    decimal total = Table.AsEnumerable()
-                                         .Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel8.Tag.ToString()))
-                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
-                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
-                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel8.Tag.ToString())).Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                     decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
                     Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
                     ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
@@ -2195,10 +2054,7 @@ namespace BudgetExecution
                 }
                 else
                 {
-                    decimal total = Table.AsEnumerable()
-                                         .Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString()))
-                                         .Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString()))
-                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                     decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
                     Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
                     ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
@@ -2217,16 +2073,10 @@ namespace BudgetExecution
             try
             {
                 DataRow row = table?.Rows[0];
-                decimal total = table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BFY").Equals(row?["BFY"].ToString()))
-                                     .Where(p => p.Field<string>("Code").Contains(row?["Code"].ToString()))
-                                     .Select(p => p.Field<decimal>("Amount")).Sum();
+                decimal total = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(row?["BFY"].ToString())).Where(p => p.Field<string>("Code").Contains(row?["Code"].ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                 decimal ratio = decimal.Parse(row?["Amount"].ToString()) / total;
                 Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)decimal.Parse(row?["Amount"].ToString()) };
-                ChartMainTitle = new[]
-                {
-                    $"{ratio.ToString("P")} {Source.ToString()} PRC {row?["Code"]} Funding"
-                };
+                ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {row?["Code"]} Funding" };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
             catch (Exception ex)

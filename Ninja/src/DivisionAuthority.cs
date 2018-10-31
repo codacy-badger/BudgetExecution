@@ -150,12 +150,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new[]
-                {
-                    GetTotal(table),
-                    table.Rows.Count,
-                    GetAverage(table)
-                };
+                return new[] { GetTotal(table), table.Rows.Count, GetAverage(table) };
             }
             catch (Exception ex)
             {
@@ -184,8 +179,8 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") ||
-                       dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID")
+                       || dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }

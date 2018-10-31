@@ -10,7 +10,9 @@ namespace BudgetExecution
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
 
     public partial class ExcelForm : MetroForm
@@ -83,7 +85,6 @@ namespace BudgetExecution
         internal string BudgetTemplate { get; set; }
 
         // METHODS
-
         private void ExcelForm_Load(object sender, EventArgs e)
         {
         }
