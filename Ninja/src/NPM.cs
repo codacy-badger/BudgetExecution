@@ -7,23 +7,19 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
 
-    public struct NPM
+    public class NPM
     {
         // CONSTRUCTORS
-        public NPM(HQ code)
+        public NPM()
         {
-            Code = code.ToString();
-            Name = null;
-            RPIO = null;
-            Title = null;
         }
 
         public NPM(string code)
         {
             Code = code;
-            Name = null;
-            RPIO = null;
-            Title = null;
+            Name = Info.GetNpm(code);
+            RPIO = Info.GetNpmRpio(code);
+            Title = Info.GetNpmTitle(code);
         }
 
         // PROPERTIES

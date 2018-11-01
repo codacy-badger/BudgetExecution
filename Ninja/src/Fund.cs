@@ -50,17 +50,20 @@ namespace BudgetExecution
             TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
-        public Fund(Source source, Provider provider, string code, string bfy)
+        public Fund(Source source, Provider provider, Dictionary<string, object> p)
         {
-            Code = code;
-            FiscalYear = bfy;
+            Code = p["Code"].ToString();
+            FiscalYear = p["BFY"].ToString();
             Parameter = GetDataFields(Code, FiscalYear);
-            Table = GetData(Source.Funds, Provider.SQLite, Parameter);
-            Data = Table.AsEnumerable().First();
-            ID = int.Parse(Data["ID"].ToString());
-            Name = Data["Name"].ToString();
-            Title = Data["Title"].ToString();
-            TreasurySymbol = Data["TreasurySymbol"].ToString();
+            Table = GetData(source, provider, Parameter);
+            if (Table.Rows.Count == 1)
+            {
+                Data = Table.AsEnumerable().First();
+                ID = int.Parse(Data["ID"].ToString());
+                Name = Data["Name"].ToString();
+                Title = Data["Title"].ToString();
+                TreasurySymbol = Data["TreasurySymbol"].ToString();
+            }
         }
 
         public Fund(DataRow data)
@@ -113,7 +116,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable dr = GetData(Source.Funds, Provider.SQLite, Parameter);
+                GetData(Source.Funds, Provider.SQLite, this.Parameter);
                 Parameter.Add("Name", Name);
                 Parameter.Add("Title", Title);
                 Parameter.Add("TreasurySymbol", TreasurySymbol);
@@ -174,21 +177,21 @@ namespace BudgetExecution
         {
             try
             {
-                Fund account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
+                Fund account = new Fund(source, provider, param);
                 if (!param.ContainsKey("Name")
-                   || param["Name"] == null)
+                    || param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
                 if (!param.ContainsKey("TreasurySymbol")
-                   || param["TreasurySymbol"] == null)
+                    || param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
                 if (!param.ContainsKey("Title")
-                   || param["Title"] == null)
+                    || param["Title"] == null)
                 {
                     param["Title"] = account.Title;
                 }

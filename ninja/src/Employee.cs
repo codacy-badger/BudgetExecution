@@ -36,10 +36,10 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
             Table = DbData.Table;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
+            Records = Table.AsEnumerable().Select(a => a).ToArray();
             if (Table.Rows.Count == 1)
             {
-                Data = Records[0];
+                Data = Table.AsEnumerable().Select(r => r).Single();
                 Section = Data["Section"].ToString();
                 FirstName = Data["FirstName"].ToString();
                 LastName = Data["LastName"].ToString();
@@ -49,8 +49,22 @@ namespace BudgetExecution
                 Email = Data["Email"].ToString();
                 Status = Data["Status"].ToString();
                 RC = new RC(Data["RC"].ToString());
-                Division = new Division(new Dictionary<string, object> { ["RC"] = RC.Code });
+                Division = new Division(source);
             }
+        }
+
+        public Employee(DataRow data)
+        {
+            Data = data;
+            Section = Data["Section"].ToString();
+            FirstName = Data["FirstName"].ToString();
+            LastName = Data["LastName"].ToString();
+            Office = Data["Office"].ToString();
+            Phone = Data["Phone"].ToString();
+            Cell = Data["Cell"].ToString();
+            Email = Data["Email"].ToString();
+            Status = Data["Status"].ToString();
+            RC = new RC(Data["RC"].ToString());
         }
 
         // PROPERTIES

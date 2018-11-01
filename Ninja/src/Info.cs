@@ -106,6 +106,141 @@ namespace BudgetExecution
             }
         }
 
+        public static string GetNpm(string code)
+        {
+            switch (code)
+            {
+                case "A":
+                    return "OAR";
+
+                case "B":
+                    return "OW";
+
+                case "C":
+                    return "OCSPP";
+
+                case "D":
+                    return "OLEM";
+
+                case "E":
+                    return "OECA";
+
+                case "F":
+                    return "OCFO";
+
+                case "G":
+                    return "OARM";
+
+                case "H":
+                    return "OEI";
+
+                case "M":
+                    return "OA";
+
+                case "P":
+                    return "OIG";
+
+                case "N":
+                    return "OGC";
+
+                case "":
+                    return "R06";
+
+                default:
+                    return "R06";
+            }
+        }
+
+        public static string GetNpmTitle(string code)
+        {
+            switch (code)
+            {
+                case "A":
+                    return "OFFICE AIR AND RADIATION";
+
+                case "B":
+                    return "OFFICE OF WATER";
+
+                case "C":
+                    return "OFFICE OF CHEMICAL SAFETY AND POLLUTION PREVENTION";
+
+                case "D":
+                    return "OFFICE OF LAND REVITALISATION AND EMERGENCY MANAGEMENT";
+
+                case "E":
+                    return "OFFICE OF ENFORCEMENT AND COMPLIANCE ASSURANCE";
+
+                case "F":
+                    return "OFFICE OF THE CHIEF FINANCIAL OFFICER";
+
+                case "G":
+                    return "OFFICE OF ADMINISTRATION AND MANAGEMENT";
+
+                case "H":
+                    return "OFFICE OF ENVIRONMENTAL INFORMATION";
+
+                case "M":
+                    return "OFFICE OF THE ADMINISTRATOR";
+
+                case "P":
+                    return "OFFICE OF THE INSPECTOR GENERAL";
+
+                case "N":
+                    return "OFFICE OF GENERAL COUNSEL";
+
+                case "":
+                    return "R06";
+
+                default:
+                    return "R06";
+            }
+        }
+
+        public static string GetNpmRpio(string code)
+        {
+            switch (code)
+            {
+                case "A":
+                    return "27";
+
+                case "B":
+                    return "30";
+
+                case "C":
+                    return "20";
+
+                case "D":
+                    return "75";
+
+                case "E":
+                    return "77";
+
+                case "F":
+                    return "17";
+
+                case "G":
+                    return "16";
+
+                case "H":
+                    return "18";
+
+                case "M":
+                    return "11";
+
+                case "P":
+                    return "35";
+
+                case "N":
+                    return "39";
+
+                case "":
+                    return "R06";
+
+                default:
+                    return "R06";
+            }
+        }
+
         public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -189,7 +324,7 @@ namespace BudgetExecution
             try
             {
                 if (table != null
-                   && table.Columns.Contains(column))
+                    && table.Columns.Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }
@@ -206,7 +341,7 @@ namespace BudgetExecution
         public static Dictionary<string, string[]> GetProgramElements(DataTable table, string column)
         {
             if (table != null
-               && table.GetColumnNames().Contains(column))
+                && table.GetColumnNames().Contains(column))
             {
                 try
                 {
@@ -257,13 +392,13 @@ namespace BudgetExecution
                 d.Add("PRC Level-7", Source.RegionalAccounts);
                 d.Add("PRC Level-8", Source.DivisionAccounts);
                 d.Add("R6 PRC", Source.PRC);
-                d.Add("Division Details", Source.Divisions);
-                d.Add("Employee Leave", Source.Personnel);
-                d.Add("Treasury Fund Data", Source.Funds);
+                d.Add("Divisions", Source.Divisions);
+                d.Add("Employee", Source.Personnel);
+                d.Add("Treasury Data", Source.Funds);
                 d.Add("Programmatic Obligations", Source.ProgramObligations);
                 d.Add("Payroll Obligations", Source.PayrollObligations);
                 d.Add("Travel Obligations", Source.TravelObligations);
-                d.Add("Compensation & Benefits", Source.Benefits);
+                d.Add("Accruals", Source.PayAccruals);
                 d.Add("EPM Appropriation", Source.EPM);
                 d.Add("Oil Spill", Source.OIL);
                 d.Add("Superfund Appropriation", Source.SUPERFUND);

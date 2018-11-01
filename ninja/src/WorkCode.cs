@@ -43,18 +43,18 @@ namespace BudgetExecution
             Description = Data["FirstName"].ToString();
         }
 
-        public WorkCode(DataRow Data)
+        public WorkCode(DataRow data)
         {
-            ID = int.Parse(Data["ID"].ToString());
-            PayPeriod = Data["PayPeriod"].ToString();
-            BFY = Data["BFY"].ToString();
-            Org = Data["StartDate"].ToString();
-            Fund = Data["EndDate"].ToString();
-            ApprovalDate = Data["ApprovalDate"].ToString();
-            Project = Data["ProgramProjectCode"].ToString();
-            Code = Data["WorkCode"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            Description = Data["FirstName"].ToString();
+            ID = int.Parse(data["ID"].ToString());
+            PayPeriod = data["PayPeriod"].ToString();
+            BFY = data["BFY"].ToString();
+            Org = data["StartDate"].ToString();
+            Fund = data["EndDate"].ToString();
+            ApprovalDate = data["ApprovalDate"].ToString();
+            Project = data["ProgramProjectCode"].ToString();
+            Code = data["WorkCode"].ToString();
+            PayPeriod = data["PayPeriod"].ToString();
+            Description = data["FirstName"].ToString();
         }
 
         // PROPERTIES
@@ -95,7 +95,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = code, ["BFY"] = bfy };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -113,7 +113,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -130,7 +130,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -147,10 +147,11 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
     }
 }
+

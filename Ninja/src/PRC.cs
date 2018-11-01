@@ -82,7 +82,7 @@ namespace BudgetExecution
             BudgetLevel = bl;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(Source.Funds, Provider.SQLite, fund, BFY);
+            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["fund"] = fund });
             AH = ah;
             RC = new RC(rc);
             Org = new Org(org);
