@@ -1,4 +1,4 @@
-SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NPM, NpmName, AH, AhName, AH AS Org, AhName AS OrgName,
+SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NPM, NpmCode, NPM, AH, AhName, AH AS Org, AhName AS OrgName,
 	CASE
 	WHEN Org LIKE "6A%" THEN "06L"
 	WHEN Org = "06A" THEN Org
@@ -20,30 +20,62 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NPM, NpmName, AH, AhName, AH 
 	WHEN Org LIKE "065K" THEN "06K"
 	WHEN Org LIKE "06J%" THEN "06J"
 	WHEN Org LIKE "0600%" THEN "06L"
-	WHEN Org LIKE "06_Z" AND ProgramProjectCode in ("14", "11", "04", "05", "08", "09", "10") THEN "06J"
-	WHEN Org LIKE "06_Z" AND ProgramProjectCode in ("01", "03", "06", "07") THEN "06K"
-	WHEN NPM IN ("A", "C")  THEN "06J"
-	WHEN Fund LIKE 'E%' AND ProgramProjectCode in ("14", "11", "04", "05", "08", "09", "10") THEN "06J"
-	WHEN Fund LIKE 'E%' AND ProgramProjectCode in ("24", "79") THEN "06L"
-	WHEN Fund LIKE 'T%' AND AH LIKE '6A%' OR NPM = 'D' THEN "06L"
-	WHEN Fund LIKE 'T%' AND AH LIKE '6A%' OR NPM = 'D' THEN "06L"
-	WHEN NPM = 'E' AND ProgramProjectCode = '14' THEN "06M"
-	WHEN NPM = 'E' AND ProgramProjectCode = '12' THEN "06J"
-	WHEN NPM = 'B' THEN "06K"
-	WHEN Fund LIKE 'F%' AND BOC IN ('21', '37', '41') THEN '06J'
-	WHEN Fund LIKE 'F%' AND BOC = '36' THEN '06J'
+	WHEN Org LIKE "06_Z" AND 
+		ProgramProjectCode in ("14", "11", "04", "05", "08", "09", "10") THEN "06J"
+	WHEN Org LIKE "06_Z" AND 
+		ProgramProjectCode in ("01", "03", "06", "07") THEN "06K"
+	WHEN NpmCode IN ("A", "C")  THEN "06J"
+	WHEN Fund LIKE 'E%' AND 
+		ProgramProjectCode in ("14", "11", "04", "05", "08", "09", "10") THEN "06J"
+	WHEN Fund LIKE 'E%' AND 
+		ProgramProjectCode in ("24", "79") THEN "06L"
+	WHEN Fund LIKE 'T%' AND 
+		AH LIKE "6A%" OR NPM = "D" THEN "06L"
+	WHEN Fund LIKE 'T%' AND 
+		AH LIKE "6A%" OR NPM = "D" THEN "06L"
+	WHEN Fund LIKE "ZL" THEN "06K"
+	WHEN NpmCode = "E" AND 
+		ProgramProjectCode = "14" THEN "06M"
+	WHEN NpmCode = 'E' AND 
+		ProgramProjectCode = "12" THEN "06J"
+	WHEN Fund LIKE "E%" AND 
+		NpmCode = "B" THEN "06K"
+	WHEN Fund LIKE 'E%' AND
+		NpmCode IN ("A", "C") THEN '06J'
+	WHEN Fund LIKE 'E%' AND
+		ProgramProjectCode LIKE '79%' THEN '06L'
+	WHEN Fund LIKE 'TR%' AND
+		BOC NOT IN ('10', '17', '38') THEN '06L'
+	WHEN Fund LIKE 'F%' AND 
+		BOC IN ('21', '36', '37', '41') THEN '06J'
 	WHEN BOC = '38' THEN '06G'
-	WHEN Fund LIKE 'H%' AND BOC = '36' THEN '06G'
-	WHEN Fund LIKE 'H%' AND BOC IN ('21', '37', '41') THEN '06L'
-	WHEN Fund LIKE 'T%' AND BOC IN ('28', '36', '37', '41') AND NPM = 'D' THEN '06L'
-	WHEN Fund LIKE 'T%' AND NPM = 'J' AND ProgramProjectCode ='E5' THEN '06C'
-	WHEN Fund LIKE 'T%' AND ProgramProjectCode IN ('F2', 'F5', 'F8') THEN '06N'
-	WHEN Fund LIKE 'T%' AND ProgramProjectCode IN ('H2', 'C7') AND BOC != '38' THEN '06L'
-	WHEN NPM = 'L' THEN '06F'
+	WHEN Fund LIKE 'H%' AND 
+		BOC = '36' THEN '06G'
+	WHEN Fund LIKE 'H%' AND 
+		BOC IN ('21', '37', '41') THEN '06L'
+	WHEN Fund LIKE 'T%' AND 
+		BOC IN ('21', '28', '36', '37', '41') AND 
+		NpmCode = 'D' THEN '06L'
+	WHEN Fund = 'T' AND 
+		BOC IN ('21', '28', '36', '37', '41') AND 
+		NpmCode = 'D' AND
+		ProgramProjectCode = '72' THEN '06L'
+	WHEN Fund LIKE 'T%' AND 
+		NpmCode = 'J' AND 
+		ProgramProjectCode ='E5' THEN '06C'
+	WHEN Fund LIKE 'T%' AND 
+		ProgramProjectCode IN ('F2', 'F5', 'F8') THEN '06N'
+	WHEN Fund LIKE 'T%' AND 
+		ProgramProjectCode IN ('H2', 'C7') AND 
+		BOC != '38' THEN '06L'
+	WHEN NpmCode = "L" THEN '06F'
 	END RC,
 	Code, ProgramProjectCode, ProgramProjectName, ProgramArea, ProgramAreaName, BOC, BocName,
 	Authority, Budgeted, Posted, CarryIn, CarryOut, Commitments, OpenCommitments, Obligations, ULO, Balance
 FROM BudgetLevels
-WHERE BOC NOT IN ('10', '17') AND BudgetLevel = '7' AND Fund != 'B' AND Authority > '0'
+WHERE BOC NOT IN ('10', '17') AND 
+	BudgetLevel = 7 AND 
+	Fund != 'B' AND
+	Authority != 0
 GROUP BY BFY, Fund, RC, Org, Code, BOC
 ORDER BY Code;

@@ -95,7 +95,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = code, ["BFY"] = bfy };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -113,7 +113,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -130,7 +130,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -147,7 +147,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Linq;
 
     public class Awards
     {
@@ -19,7 +20,39 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Table = new DataBuilder(source, provider).GetDataTable();
+            Table = new DataBuilder(source, provider).Table;
+            Records = Table.AsEnumerable().Select(p => p).ToArray();
+        }
+
+        public Awards(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            Source = source;
+            Provider = provider;
+            Table = new DataBuilder(source, provider, p).GetDataTable();
+            Records = Table.AsEnumerable().Select(r => r).ToArray();
+            if(Table.Rows.Count == 1)
+            {
+                Data = Table.AsEnumerable().Select(d => d).Single();
+                ID = int.Parse(Data["ID"].ToString());
+                Type = Data["Type"].ToString();
+                RC = Data["RC"].ToString();
+                DivisionName = Data["DivisionName"].ToString();
+                Fund = Data["Fund"].ToString();
+                BFY = Data["BFY"].ToString();
+                Amount = decimal.Parse(Data["Amount"].ToString());
+            }
+        }
+
+        public Awards(DataRow data)
+        {
+            Data = data;
+            ID = int.Parse(Data["ID"].ToString());
+            Type = Data["Type"].ToString();
+            RC = Data["RC"].ToString();
+            DivisionName = Data["DivisionName"].ToString();
+            Fund = Data["Fund"].ToString();
+            BFY = Data["BFY"].ToString();
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         // PROPERTIES
@@ -29,7 +62,28 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public DataRow[] Records { get; set; }
+
+        public DataRow Data { get; set; }
+
+        public int ID { get; set; }
+
+        public string Type { get; set; }
+
+        public string RC { get; set; }
+
+        public string DivisionName { get; set; }
+
+        public string Fund { get; set; }
+
+        public string BFY { get; set; }
+
+        public string BOC { get; set; }
+
+        public decimal Amount { get; set; }
+
         // METHODS
+
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -41,7 +95,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -58,7 +112,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -75,7 +129,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

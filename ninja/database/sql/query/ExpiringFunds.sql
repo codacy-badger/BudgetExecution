@@ -1,4 +1,4 @@
-SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NPM, NpmName, AH, AhName, RC, DivisionName, Org, OrgName,
+SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NpMCode, NPM, AH, AhName, RC, DivisionName, Org, OrgName,
 	Code, ProgramProjectCode, ProgramProjectName, ProgramArea, ProgramAreaName, BOC, BocName,
 	Authority, Commitments, OpenCommitments, Obligations, ULO, Balance
 FROM BudgetLevels
