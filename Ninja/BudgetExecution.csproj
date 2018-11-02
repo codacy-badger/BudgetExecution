@@ -368,12 +368,6 @@
       <DependentUpon>DataTools.cs</DependentUpon>
     </Compile>
     <Compile Include="src\IControlDocument.cs" />
-    <Compile Include="src\MetroForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\MetroForm1.Designer.cs">
-      <DependentUpon>MetroForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\RecordManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -429,20 +423,8 @@
     <Compile Include="src\BudgetTools.Designer.cs">
       <DependentUpon>BudgetTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\DataNavigator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\DataNavigator.Designer.cs">
-      <DependentUpon>DataNavigator.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\SearchBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\SearchBox.Designer.cs">
-      <DependentUpon>SearchBox.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Selector.cs">
       <SubType>Form</SubType>
@@ -513,12 +495,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\PrcMetric.cs" />
-    <Compile Include="src\PrcDataGrid.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\PrcDataGrid.Designer.cs">
-      <DependentUpon>PrcDataGrid.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="resources\FormImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -616,9 +592,6 @@
     <EmbeddedResource Include="src\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\MetroForm1.resx">
-      <DependentUpon>MetroForm1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\RecordManager.resx">
       <DependentUpon>RecordManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -633,9 +606,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\BudgetTools.resx">
       <DependentUpon>BudgetTools.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\SearchBox.resx">
-      <DependentUpon>SearchBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Selector.resx">
       <DependentUpon>Selector.cs</DependentUpon>

@@ -42,7 +42,7 @@ namespace BudgetExecution
             this.ViewerCarousel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewerCarousel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewerCarousel.HighlightColor = System.Drawing.Color.SteelBlue;
-            this.ViewerCarousel.ImageshadeColor = System.Drawing.Color.Black;
+            this.ViewerCarousel.ImageshadeColor = System.Drawing.SystemColors.Desktop;
             this.ViewerCarousel.ImageSlides = true;
             this.ViewerCarousel.Location = new System.Drawing.Point(0, 0);
             this.ViewerCarousel.Margin = new System.Windows.Forms.Padding(2);

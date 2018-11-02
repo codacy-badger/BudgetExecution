@@ -46,7 +46,7 @@ namespace BudgetExecution
             ID = int.Parse(Records[0]["ID"].ToString());
             RPIO = rpio;
             BFY = fy;
-            Fund = new Fund(source, provider, fund, fy);
+            Fund = new Fund(source, provider, new Dictionary<string, object> { ["Fund"] = param["Fund"].ToString(), ["BFY"] =  param["BFY"].ToString()});
             Org = new Org(org);
             RC = new RC(rc);
             ProgramProjectCode = Records[0]["ProgramProjectCode"].ToString();

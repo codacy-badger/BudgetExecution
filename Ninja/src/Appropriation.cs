@@ -19,7 +19,7 @@ namespace BudgetExecution
         public Appropriation(string fundcode, string bfy)
         {
             Code = fundcode;
-            Fund = new Fund(Source.Funds, Provider.SQLite, fundcode, bfy);
+            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             FiscalYear = bfy;
             Name = Fund.Name;
             Title = Fund.Title;

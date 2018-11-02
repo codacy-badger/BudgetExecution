@@ -30,7 +30,7 @@ namespace BudgetExecution
             Provider = provider;
             Table = new DataBuilder(source, provider, p).GetDataTable();
             Records = Table.AsEnumerable().Select(r => r).ToArray();
-            if(Table.Rows.Count == 1)
+            if (Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
@@ -95,7 +95,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -112,7 +112,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -129,7 +129,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

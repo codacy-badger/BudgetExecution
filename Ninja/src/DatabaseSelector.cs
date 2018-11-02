@@ -83,7 +83,7 @@ namespace BudgetExecution
                 {
                     string i = carousel.ActiveImage.Tag.ToString();
                     Source s = (Source)Enum.Parse(typeof(Source), i);
-                    SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
+                    SQLiteData sqlitedata = new SQLiteData(s);
                     sqlitedata.Show();
                 }
 

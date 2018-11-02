@@ -43,7 +43,7 @@ namespace BudgetExecution
             this.AppropriationCarousel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AppropriationCarousel.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppropriationCarousel.HighlightColor = System.Drawing.Color.SteelBlue;
-            this.AppropriationCarousel.ImageshadeColor = System.Drawing.Color.Black;
+            this.AppropriationCarousel.ImageshadeColor = System.Drawing.SystemColors.Desktop;
             this.AppropriationCarousel.ImageSlides = true;
             this.AppropriationCarousel.Location = new System.Drawing.Point(0, 0);
             this.AppropriationCarousel.Name = "AppropriationCarousel";

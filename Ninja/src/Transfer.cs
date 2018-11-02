@@ -131,7 +131,7 @@ namespace BudgetExecution
         {
             try
             {
-                Fund account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
+                Fund account = new Fund(source, provider, param);
                 if (!param.ContainsKey("Name")
                    || param["Name"] == null)
                 {

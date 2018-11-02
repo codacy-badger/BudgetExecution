@@ -32,7 +32,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
-            if(Table.Rows.Count == 1)
+            if (Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
