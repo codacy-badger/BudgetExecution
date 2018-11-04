@@ -55,6 +55,7 @@
   <PropertyGroup>
     <ApplicationIcon>budgetclear.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Devart.Data, Version=5.0.2021.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <HintPath>..\packages\dotConnect.Express.for.SQLite.5.11.1229\lib\Devart.Data.dll</HintPath>
@@ -513,10 +514,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="report\BudgetControlTemplate.xlsx" />
-    <EmbeddedResource Include="resources\ControlIcon.resx">
+    <None Include="resources\ControlIcon.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlIcon.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="resources\ControlImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlImages.Designer.cs</LastGenOutput>
@@ -643,6 +644,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <LastGenOutput>SummaryImages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Tool.resx">
       <DependentUpon>Tool.cs</DependentUpon>
@@ -963,8 +965,6 @@
     <None Include="resources\NinjaDivisionIcons\WSA.png" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
-    <None Include="resources\SummaryImages\RegionalAccounts.png" />
-    <None Include="resources\SummaryImages\FTE.png" />
     <None Include="resources\SummaryImages\Appropriation.png" />
     <None Include="resources\RegionAccount.png" />
     <None Include="resources\unnamed.png" />
@@ -1106,10 +1106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="database\sql\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

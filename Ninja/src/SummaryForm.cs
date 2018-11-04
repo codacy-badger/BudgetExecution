@@ -341,6 +341,21 @@ namespace BudgetExecution
                         SetFTEConfiguration();
                         break;
 
+                    case Source.MD:
+                    case Source.SF:
+                    case Source.RC:
+                    case Source.RA:
+                    case Source.EJ:
+                    case Source.XA:
+                    case Source.WQ:
+                    case Source.MM:
+                    case Source.WSA:
+                    case Source.WCF:
+                    case Source.MDR:
+                    case Source.EN:
+                        SetDivisionConfiguration();
+                        break;
+
                     default:
                         GridLevel7.Visible = false;
                         GridLevel8.Visible = false;
@@ -378,6 +393,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                DatabaseTab.Visible = false;
             }
             catch (Exception ex)
             {
@@ -393,6 +409,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                DatabaseTab.Visible = false;
             }
             catch (Exception ex)
             {
@@ -530,6 +547,7 @@ namespace BudgetExecution
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
                 PrimaryFilter.Items.Remove("FundName");
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -545,6 +563,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -560,6 +579,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -575,6 +595,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -590,6 +611,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -605,6 +627,7 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
             {
@@ -635,8 +658,25 @@ namespace BudgetExecution
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
                 ChartLevel8.Visible = true;
+                SummaryTabControl.TabPages[1].TabVisible = false;
             }
             catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void SetDivisionConfiguration()
+        {
+            try
+            {
+                GridLevel7.Visible = false;
+                GridLevel8.Visible = false;
+                ChartLevel7.Visible = false;
+                ChartLevel8.Visible = false;
+                SummaryTabControl.TabPages[0].TabVisible = false;
+            }
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -1917,7 +1957,7 @@ namespace BudgetExecution
         /// <param name="e">The e<see cref="EventArgs" /></param>
         private void ExcelButton_Click(object sender, EventArgs e)
         {
-            var er = new ExcelDocument();
+            ExcelDocument er = new ExcelDocument();
         }
 
         /// <summary>

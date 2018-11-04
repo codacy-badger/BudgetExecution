@@ -237,9 +237,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -254,9 +254,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -271,9 +271,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

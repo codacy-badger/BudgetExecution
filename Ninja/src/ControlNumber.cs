@@ -28,13 +28,6 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            ID = int.Parse(DbRow["ID"].ToString());
-            Region = "R6";
-            FiscalYear = Table.AsEnumerable().Select(p => p).First().Field<string>("FiscalYear");
-            RegionControlNumber = GetRegionCount() + 1;
-            FundControlNumber = RegionControlNumber + 1;
-            BudgetControlNumber = FundControlNumber + 1;
         }
 
         /// <summary>
@@ -50,21 +43,44 @@ namespace BudgetExecution
             Division = division;
             DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            ID = int.Parse(DbRow["ID"].ToString());
-            FiscalYear = DbRow["FiscalYear"].ToString();
+            if(Table.Rows.Count == 1)
+            {
+                Data = Table.AsEnumerable().Select(d => d).Single();
+                ID = int.Parse(Data["ID"].ToString());
+                Region = "R6";
+                FiscalYear = Table.AsEnumerable()
+                                  .Select(p => p.Field<string>("FiscalYear")).First();
+                RegionControlNumber = GetRegionCount() + 1;
+                FundControlNumber = RegionControlNumber + 1;
+                BudgetControlNumber = FundControlNumber + 1;
+            }
+        }
+
+        public ControlNumber(DataRow data)
+        {
+            Data = data;
+            ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
+            FiscalYear = Table.AsEnumerable()
+                              .Select(p => p.Field<string>("FiscalYear")).First();
             RegionControlNumber = GetRegionCount() + 1;
-            FundControlNumber = GetFundCount(fund) + 1;
-            BudgetControlNumber = GetDivisionCount(division) + 1;
+            FundControlNumber = RegionControlNumber + 1;
+            BudgetControlNumber = FundControlNumber + 1;
         }
 
         // PROPERTIES
+
+        private Source Source { get; }
+
+        private Provider Provider { get; }
+
+        private DataTable Table { get; }
+
         public static string Region { get; set; }
 
         public int ID { get; set; }
 
-        public DataRow DbRow { get; set; }
+        public DataRow Data { get; set; }
 
         public DataBuilder DbData { get; set; }
 
@@ -83,12 +99,6 @@ namespace BudgetExecution
         public int BudgetControlNumber { get; set; }
 
         public Dictionary<string, object> Parameter { get; set; }
-
-        private Source Source { get; }
-
-        private Provider Provider { get; }
-
-        private DataTable Table { get; }
 
         // METHODS
 
@@ -223,11 +233,12 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="divisionid">The divisionid.</param>
         /// <returns></returns>
-        internal int GetDivisionCount(string divisionId)
+        internal int GetDivisionCount(int divisionId)
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("DivisionID").Equals(divisionId)).Select(p => p).Count();
+                return Table.AsEnumerable().Where(p => p.Field<int>("ID").Equals(divisionId))
+                            .Select(p => p).Count();
             }
             catch (Exception ex)
             {
@@ -244,7 +255,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.Table.AsEnumerable().Count();
+                return DbData.Table.Rows.Count;
             }
             catch (Exception ex)
             {
@@ -253,7 +264,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void Calculate(string fund, string divisionid)
+        internal void Calculate(string fund, int divisionid)
         {
             int reg = GetRegionCount() + 1;
             int fd = GetFundCount(fund) + 1;
@@ -264,9 +275,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -281,9 +292,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -298,9 +309,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

@@ -55,7 +55,7 @@ namespace BudgetExecution
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1552, 918);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1314, 620);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -65,9 +65,9 @@ namespace BudgetExecution
             // panel1
             // 
             this.panel1.Controls.Add(this.ViewerCarousel);
-            this.panel1.Location = new System.Drawing.Point(84, 87);
+            this.panel1.Location = new System.Drawing.Point(208, 199);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1552, 918);
+            this.panel1.Size = new System.Drawing.Size(1314, 620);
             this.panel1.TabIndex = 3;
             // 
             // toolTip1

@@ -24,59 +24,73 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
-        public Account(string bfy, string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite)
-                : this(source, provider)
-        {
-            Code = code;
-            ProgramProjectCode = Code.Substring(4, 2);
-            Parameter = GetAccountParameter(bfy, fund, code);
-            DbRow = Table.Rows[0];
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            ProgramProjectCode = Code.Substring(4, 2);
-            Org = DbRow["Org"].ToString();
-            BFY = DbRow["BFY"].ToString();
-            Fund = DbRow["Fund"].ToString();
-            FundName = DbRow["FundName"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            AccountId = int.Parse(DbRow["ID"].ToString());
-            NPM = DbRow["NPM"].ToString();
-            ObjectiveName = DbRow["ObjectiveName"].ToString();
-            GoalName = DbRow["GoalName"].ToString();
-            ProgramArea = DbRow["ProgramArea"].ToString();
-            ProgramAreaName = DbRow["ProgramAreaName"].ToString();
-        }
-
         public Account(Source source, Provider provider, string bfy, string fund, string code)
                 : this(source, provider)
         {
-            Fund = fund;
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(bfy, fund, code);
-            DbData = new DataBuilder(Source, Provider);
+            DbData = new DataBuilder(source, provider, Parameter);
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            AccountId = int.Parse(DbRow["ID"].ToString());
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            Org = Table.Rows[0]["Org"].ToString();
-            BFY = Table.Rows[0]["BFY"].ToString();
-            Fund = Table.Rows[0]["Fund"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            NPM = Table.Rows[0]["NPM"].ToString();
-            ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
-            GoalName = Table.Rows[0]["GoalName"].ToString();
-            ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
-            ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+            if(Table.Rows.Count == 1)
+            {
+                Data = Table.AsEnumerable().Select(d => d).Single();
+                ID = int.Parse(Data["ID"].ToString());
+                Goal = Code.Substring(0, 1);
+                Objective = Code.Substring(1, 2);
+                NpmCode = Code.Substring(3, 1);
+                Org = Table.Rows[0]["Org"].ToString();
+                BFY = Table.Rows[0]["BFY"].ToString();
+                Fund = Table.Rows[0]["Fund"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                NPM = Table.Rows[0]["NPM"].ToString();
+                ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+                GoalName = Table.Rows[0]["GoalName"].ToString();
+                ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+                ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+            }
+        }
+
+        public Account(Source source, Provider provider, Dictionary<string, object> p)
+                : this(source, provider)
+        {
+            if(p.ContainsKey("Fund"))
+            {
+                Fund = p["Fund"].ToString();
+            }
+
+            if(p.ContainsKey("Code"))
+            {
+                Code = p["Code"].ToString();
+            }
+
+            ProgramProjectCode = Code.Substring(4, 2);
+            Parameter = p;
+            DbData = new DataBuilder(source, provider, Parameter);
+            Table = DbData.Table;
+            if (Table.Rows.Count == 1)
+            {
+                Data = Table.AsEnumerable().Select(d => d).Single();
+                ID = int.Parse(Data["ID"].ToString());
+                Goal = Code.Substring(0, 1);
+                Objective = Code.Substring(1, 2);
+                NpmCode = Code.Substring(3, 1);
+                Org = Data["Org"].ToString();
+                BFY = Data["BFY"].ToString();
+                Fund = Data["Fund"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                NPM = Data["NPM"].ToString();
+                ObjectiveName = Data["ObjectiveName"].ToString();
+                GoalName = Data["GoalName"].ToString();
+                ProgramArea = Data["ProgramArea"].ToString();
+                ProgramAreaName = Data["ProgramAreaName"].ToString();
+            }
         }
 
         public Account(DataRow data)
         {
-            DbRow = data;
-            AccountId = int.Parse(data["ID"].ToString());
+            Data = data;
+            ID = int.Parse(data["ID"].ToString());
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
@@ -101,9 +115,9 @@ namespace BudgetExecution
 
         public DataTable Table { get; }
 
-        public DataRow DbRow { get; }
+        public DataRow Data { get; }
 
-        public int AccountId { get; set; }
+        public int ID { get; set; }
 
         public string BFY { get; set; }
 
@@ -501,9 +515,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -518,9 +532,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -535,9 +549,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

@@ -14,6 +14,8 @@ namespace BudgetExecution
     {
         public static string[] Sources = Enum.GetNames(typeof(Source));
 
+        public static string ObjectClass = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\ObjectClasses";
+
         public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
 
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
@@ -259,9 +261,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -276,9 +278,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.UPDATE, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.UPDATE, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -293,9 +295,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.DELETE, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.DELETE, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

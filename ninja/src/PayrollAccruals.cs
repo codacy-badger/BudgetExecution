@@ -29,40 +29,41 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source.PayrollObligations, Provider, p);
             Table = DbData.Table;
-            DbRow = DbData.Table.AsEnumerable().Select(prc => prc).First();
-            ID = int.Parse(DbRow["ID"].ToString());
-            FirstName = DbRow["FirstName"].ToString();
-            EmployeeID = DbRow["EmployeeID"].ToString();
-            PayPeriod = DbRow["PayPeriod"].ToString();
-            StartDate = DbRow["StartDate"].ToString();
-            EndDate = DbRow["EndDate"].ToString();
-            ApprovalDate = DbRow["ApprovalDate"].ToString();
-            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            HrOrgCode = DbRow["HrOrgCode"].ToString();
-            WorkCode = DbRow["WorkCode"].ToString();
-            PayPeriod = DbRow["PayPeriod"].ToString();
-            Hours = decimal.Parse(DbRow["Hours"].ToString());
+            Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
+            ID = int.Parse(Data["ID"].ToString());
+            FirstName = Data["FirstName"].ToString();
+            EmployeeID = Data["EmployeeID"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            StartDate = Data["StartDate"].ToString();
+            EndDate = Data["EndDate"].ToString();
+            ApprovalDate = Data["ApprovalDate"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
-        public PayrollAccruals(DataRow DbRow)
+        public PayrollAccruals(DataRow data)
         {
-            ID = int.Parse(DbRow["ID"].ToString());
-            FirstName = DbRow["FirstName"].ToString();
-            EmployeeID = DbRow["EmployeeID"].ToString();
-            PayPeriod = DbRow["PayPeriod"].ToString();
-            StartDate = DbRow["StartDate"].ToString();
-            EndDate = DbRow["EndDate"].ToString();
-            ApprovalDate = DbRow["ApprovalDate"].ToString();
-            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            HrOrgCode = DbRow["HrOrgCode"].ToString();
-            WorkCode = DbRow["WorkCode"].ToString();
-            ReportingCodeName = DbRow["ReportingCodeName"].ToString();
-            ReportingCode = DbRow["ReportingCode"].ToString();
-            PayPeriod = DbRow["PayPeriod"].ToString();
-            HrOrgCodeName = DbRow["HrOrgCodeName"].ToString();
-            Hours = decimal.Parse(DbRow["Hours"].ToString());
+            Data = data;
+            ID = int.Parse(Data["ID"].ToString());
+            FirstName = Data["FirstName"].ToString();
+            EmployeeID = Data["EmployeeID"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            StartDate = Data["StartDate"].ToString();
+            EndDate = Data["EndDate"].ToString();
+            ApprovalDate = Data["ApprovalDate"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            ReportingCodeName = Data["ReportingCodeName"].ToString();
+            ReportingCode = Data["ReportingCode"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            HrOrgCodeName = Data["HrOrgCodeName"].ToString();
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         // PROPERTIES
@@ -74,7 +75,7 @@ namespace BudgetExecution
 
         public DataTable Table { get; }
 
-        public DataRow DbRow { get; }
+        public DataRow Data { get; }
 
         public int ID { get; set; }
 
@@ -130,9 +131,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -147,9 +148,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -164,9 +165,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

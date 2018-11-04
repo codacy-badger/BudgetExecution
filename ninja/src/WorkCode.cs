@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.Common;
     using System.Linq;
 
     public class WorkCode
@@ -16,7 +17,7 @@ namespace BudgetExecution
         {
         }
 
-        public WorkCode(Source source = Source.WorkCodes, Provider provider = Provider.SQLite, Sql sql = Sql.SELECT)
+        public WorkCode(Source source = Source.WorkCodes, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
@@ -30,7 +31,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.WorkCodes, Provider, p);
             Table = DbData.Table;
             Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
-            ID = int.Parse(Data["ID"].ToString());
             ID = int.Parse(Data["ID"].ToString());
             PayPeriod = Data["PayPeriod"].ToString();
             BFY = Data["BFY"].ToString();
@@ -61,6 +61,8 @@ namespace BudgetExecution
         public Source Source { get; }
 
         public Provider Provider { get; }
+
+        public Sql Sql { get; }
 
         public DataBuilder DbData { get; }
 
@@ -106,9 +108,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -123,9 +125,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.UPDATE, p);
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -140,9 +142,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.DELETE, p);
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

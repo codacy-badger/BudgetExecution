@@ -34,7 +34,7 @@ namespace BudgetExecution
                 Org = new Org(Data["Org"].ToString());
                 BOC = new BOC(Data["BOC"].ToString());
                 RC = new RC(Data["RC"].ToString());
-                Account = new Account(BFY, Fund.Code, Data["Code"].ToString());
+                Account = new Account((Source)Source.Accounts, (Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Data["Code"].ToString());
                 Code = Account.Code;
                 Amount = decimal.Parse(Data["Amount"].ToString());
                 Parameter = GetDataDictionary();
@@ -335,9 +335,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -352,9 +352,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -369,9 +369,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

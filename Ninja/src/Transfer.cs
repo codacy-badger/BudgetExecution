@@ -45,7 +45,7 @@ namespace BudgetExecution
             Qtr = qtr;
             Date = date;
             Code = code;
-            Account = new Account(BFY, fund, code, Source.Accounts, 0);
+            Account = new Account((Source)Source.Accounts, (Provider)0, this.BFY, fund, code);
             NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
@@ -66,7 +66,7 @@ namespace BudgetExecution
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
-            Account = new Account(BFY, Fund.Code, Code);
+            Account = new Account((Source)Source.Accounts, (Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Code);
             NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
@@ -204,9 +204,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -221,9 +221,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -238,9 +238,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

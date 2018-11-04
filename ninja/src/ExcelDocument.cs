@@ -147,7 +147,7 @@ namespace BudgetExecution
                     case Source.WCF:
                     case Source.XA:
                     {
-                        var division = new Division(source);
+                        Division division = new Division(source);
                         return division.RC;
                     }
 

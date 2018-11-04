@@ -29,40 +29,41 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source.PayrollObligations, Provider, p);
             Table = DbData.Table;
-            DbRow = DbData.Table.AsEnumerable().Select(prc => prc).First();
-            RPIO = DbRow["RPIO"].ToString();
-            BFY = DbRow["BFY "].ToString();
-            Fund = new Fund(DbRow["Fund"].ToString(), BFY);
-            Org = new Org(DbRow["Org"].ToString());
+            Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY "].ToString();
+            Fund = new Fund(Data["Fund"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
             OrgName = Org.Name;
-            RC = new RC(DbRow["RC"].ToString());
-            Code = DbRow["Code"].ToString();
-            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            HrOrgCode = DbRow["HrOrgCode"].ToString();
-            WorkCode = DbRow["WorkCode"].ToString();
-            WorkCodeName = DbRow["WorkCodeName"].ToString();
-            PayPeriod = DbRow["PayPeriod"].ToString();
-            Obligations = decimal.Parse(DbRow["Obligations"].ToString());
-            Hours = decimal.Parse(DbRow["Hours"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Code = Data["Code"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            WorkCodeName = Data["WorkCodeName"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         public PayrollObligation(DataRow dr)
         {
-            RPIO = dr["RPIO"].ToString();
-            BFY = dr["BFY "].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
-            Org = new Org(dr["Org"].ToString());
-            RC = new RC(dr["RC"].ToString());
-            Code = dr["Code"].ToString();
-            ProgramProjectCode = dr["ProgramProjectCode"].ToString();
-            ProgramProjectName = dr["ProgramProjectName"].ToString();
-            HrOrgCode = dr["HrOrgCode"].ToString();
-            WorkCode = dr["WorkCode"].ToString();
-            WorkCodeName = dr["WorkCodeName"].ToString();
-            PayPeriod = dr["PayPeriod"].ToString();
-            Amount = decimal.Parse(dr["Amount"].ToString());
-            Hours = decimal.Parse(dr["Hours"].ToString());
+            Data = dr;
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY "].ToString();
+            Fund = new Fund(Data["Fund"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Code = Data["Code"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            WorkCodeName = Data["WorkCodeName"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Amount = decimal.Parse(Data["Amount"].ToString());
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         // PROPERTIES
@@ -76,7 +77,7 @@ namespace BudgetExecution
 
         public DataTable Table { get; }
 
-        public DataRow DbRow { get; }
+        public DataRow Data { get; }
 
         public int ID { get; set; }
 
@@ -142,9 +143,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -159,9 +160,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -176,9 +177,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

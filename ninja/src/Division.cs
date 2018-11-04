@@ -20,9 +20,17 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider);
             Records = DbData.Table.AsEnumerable().Select(p => p).ToArray();
-            if (Records.Length == 1)
+        }
+
+        public Division(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            DbData = new DataBuilder(source, provider, p);
+            Records = DbData.Table.AsEnumerable().Select(r => r).ToArray();
+            if (DbData.Table.Rows.Count == 1)
             {
-                Data = DbData.Table.AsEnumerable().Where(d => d.Field<string>("Source").Equals(source.ToString())).Select(d => d).First();
+                Data = DbData.Table.AsEnumerable()
+                             .Where(d => d.Field<string>("Source").Equals(source.ToString()))
+                             .Select(d => d).First();
                 ID = Data["ID"].ToString();
                 RC = Data["RC"].ToString();
                 Title = Data["Title"].ToString();
@@ -31,19 +39,14 @@ namespace BudgetExecution
             }
         }
 
-        public Division(Source source, Provider provider, Dictionary<string, object> p)
+        public Division(DataRow data)
         {
-            DbData = new DataBuilder(source, provider, p);
-            Records = DbData.Table.AsEnumerable().Select(r => r).ToArray();
-            Data = DbData.Table.AsEnumerable().Where(d => d.Field<string>("Source").Equals(Source.Divisions.ToString())).Select(d => d).First();
-            if (DbData.Table.Rows.Count == 1)
-            {
-                ID = Data["ID"].ToString();
-                RC = Data["RC"].ToString();
-                Title = Data["Title"].ToString();
-                Code = Data["Code"].ToString();
-                Name = Data["Name"].ToString();
-            }
+            Data = data;
+            ID = Data["ID"].ToString();
+            RC = Data["RC"].ToString();
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
         }
 
         // PROPERTIES
@@ -92,9 +95,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.InsertCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -109,9 +112,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.UpdateCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -126,9 +129,9 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, Sql.INSERT, p);
-                var conn = query.DataConnection;
-                var command = query.DeleteCommand;
+                Query query = new Query(source, provider, Sql.INSERT, p);
+                System.Data.Common.DbConnection conn = query.DataConnection;
+                System.Data.Common.DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

@@ -80,7 +80,7 @@ namespace BudgetExecution
                         return;
 
                     case "DatabaseImages":
-                        DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
+                        var ds = new Selector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
@@ -90,13 +90,19 @@ namespace BudgetExecution
                         Close();
                         return;
                     case "FunctionImages":
-                        FunctionSelector fi = new FunctionSelector(Info.FunctionImages);
+                        var fi = new Selector(Info.FunctionImages);
                         fi.Show();
                         Close();
                         return;
                     case "Appropriation":
                         Selector aps = new Selector(Info.AppropriationImages);
                         aps.Show();
+                        Close();
+                        return;
+
+                    case "ObjectClass":
+                        Selector obs = new Selector(Info.ObjectClass);
+                        obs.Show();
                         Close();
                         return;
                 }
