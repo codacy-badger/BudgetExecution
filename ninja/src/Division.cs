@@ -29,7 +29,7 @@ namespace BudgetExecution
             if (DbData.Table.Rows.Count == 1)
             {
                 Data = DbData.Table.AsEnumerable()
-                             .Where(d => d.Field<string>("Source").Equals(source.ToString()))
+                             .Where(d => d.Field<string>("Source").Equals(source.ToString(), StringComparison.CurrentCultureIgnoreCase))
                              .Select(d => d).First();
                 ID = Data["ID"].ToString();
                 RC = Data["RC"].ToString();

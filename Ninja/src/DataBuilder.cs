@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Specialized;
+
 namespace BudgetExecution
 {
     using System;
@@ -54,12 +56,17 @@ namespace BudgetExecution
 
             if (source == Source.PRC)
             {
-                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source).AsEnumerable()
+                                            .Where(p => p.Field<string>("BOC") != "17")
+                                            .Where(p => p.Field<decimal>("Amount") > 0)
+                                            .Select(p => p).CopyToDataTable();
             }
 
             if (source == Source.FTE)
             {
-                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                                            .Where(p => p.Field<decimal>("Amount") > 0)
+                                            .Select(p => p).CopyToDataTable();
             }
             else
             {
@@ -126,6 +133,11 @@ namespace BudgetExecution
         public DataRow[] Records { get; set; }
 
         // METHODS
+
+        /// <summary>
+        /// Gets the data table.
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetDataTable()
         {
             try
@@ -171,8 +183,8 @@ namespace BudgetExecution
         {
             try
             {
-                DataSet ds = new DataSet("R06");
-                ds.DataSetName = "R06";
+                DataSet ds = new DataSet("R6");
+                ds.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
@@ -195,8 +207,8 @@ namespace BudgetExecution
         {
             try
             {
-                DataSet ds = new DataSet("R06");
-                ds.DataSetName = "R06";
+                DataSet ds = new DataSet("R6");
+                ds.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
@@ -206,55 +218,6 @@ namespace BudgetExecution
             catch (Exception e)
             {
                 new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the parameter array.
-        /// </summary>
-        /// <param name="row">The row.</param>
-        /// <returns></returns>
-        public SQLiteParameter[] GetParamArray(DataRow row)
-        {
-            try
-            {
-                DataColumnCollection cols = row.Table.Columns;
-                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
-                for (int i = 0; i < row.ItemArray.Length; i++)
-                {
-                    param[i] = new SQLiteParameter(cols[i].ColumnName, row.ItemArray[i]);
-                }
-
-                return param;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the parameter list.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public List<SQLiteParameter[]> GetParameterList(DataTable table)
-        {
-            try
-            {
-                List<SQLiteParameter[]> paramlist = new List<SQLiteParameter[]>();
-                foreach (DataRow row in table.Rows)
-                {
-                    paramlist.Add(GetParamArray(row));
-                }
-
-                return paramlist;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -295,50 +258,17 @@ namespace BudgetExecution
                 return null;
             }
         }
+        
 
-        /// <summary>
-        ///     Gets the excel query.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <returns></returns>
-        public ExcelQuery GetExcelQuery(Dictionary<string, object> pmr)
+        public static DataTable FilterRecords(DataTable table, Tuple<string, string> p)
         {
             try
             {
-                if (pmr != null)
-                {
-                    ExcelQuery eq = new ExcelQuery(Source, pmr);
-                    return eq;
-                }
-
-                return null;
+                return table.AsEnumerable()
+                            .Where(prc => prc.Field<string>(p.Item1.ToString()).Equals(p.Item2.ToString(), StringComparison.CurrentCultureIgnoreCase))
+                            .Select(prc => prc).CopyToDataTable();
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the excel query.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="pmr">The PMR.</param>
-        /// <returns></returns>
-        public ExcelQuery GetExcelQuery(Source source, Dictionary<string, object> pmr)
-        {
-            try
-            {
-                if (pmr != null)
-                {
-                    ExcelQuery eq = new ExcelQuery(source, pmr);
-                    return eq;
-                }
-
-                return null;
-            }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -511,11 +441,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the total.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public decimal GetTotal(Source source, DataTable table)
         {
             try
             {
-                switch (source)
+                switch(source)
                 {
                     case Source.PRC:
                         return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p.Field<decimal>("Amount")).Sum();
@@ -529,7 +465,7 @@ namespace BudgetExecution
                         return 0m;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return 0;

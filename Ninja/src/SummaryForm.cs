@@ -18,6 +18,8 @@ namespace BudgetExecution
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
 
+    using MetroSet_UI;
+
     using VisualPlus.Toolkit.Controls.Interactivity;
 
     /// <summary>
@@ -75,6 +77,26 @@ namespace BudgetExecution
         public Provider Provider { get; }
 
         /// <summary>
+        ///     Gets or sets the ChartType
+        /// </summary>
+        public ChartSeriesType ChartType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ChartField
+        /// </summary>
+        public Field PrimaryGrouping { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ChartGroup
+        /// </summary>
+        public Field SecondaryGrouping { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the Measure
+        /// </summary>
+        public Stat Measure { get; set; }
+
+        /// <summary>
         ///     Gets or sets the Parameter
         /// </summary>
         public Dictionary<string, object> Input { get; set; }
@@ -98,11 +120,6 @@ namespace BudgetExecution
         ///     Gets or sets the Metric
         /// </summary>
         public PrcMetric Metric { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ChartType
-        /// </summary>
-        public ChartSeriesType ChartType { get; set; }
 
         /// <summary>
         ///     Gets or sets the BudgetLevel
@@ -155,11 +172,6 @@ namespace BudgetExecution
         public string[] SubProject { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartField
-        /// </summary>
-        public Field PrimaryGrouping { get; set; }
-
-        /// <summary>
         ///     Gets or sets the ChartFilter
         /// </summary>
         public string ChartFilter { get; set; }
@@ -183,11 +195,6 @@ namespace BudgetExecution
         ///     Gets or sets the Division
         /// </summary>
         public string Division { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ChartGroup
-        /// </summary>
-        public Field SecondaryGrouping { get; set; }
 
         /// <summary>
         ///     Gets or sets the ProgramElements
@@ -253,11 +260,6 @@ namespace BudgetExecution
         ///     Gets or sets the Expander2
         /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the Measure
-        /// </summary>
-        public Stat Measure { get; set; }
 
         /// <summary>
         ///     Gets or sets the Tab
@@ -424,6 +426,8 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                bL7.Checked = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -439,6 +443,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -454,6 +459,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -469,6 +475,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -484,6 +491,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 PrimaryFilter.Items.Remove("BocName");
             }
@@ -500,6 +508,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -515,6 +524,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -530,6 +540,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -562,6 +573,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[1].TabVisible = false;
             }
@@ -594,6 +606,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[1].TabVisible = false;
             }
@@ -610,6 +623,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[1].TabVisible = false;
             }
@@ -626,6 +640,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[1].TabVisible = false;
             }
@@ -642,6 +657,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
             }
             catch (Exception ex)
@@ -657,6 +673,7 @@ namespace BudgetExecution
                 GridLevel7.Visible = true;
                 GridLevel8.Visible = true;
                 ChartLevel7.Visible = true;
+                ChartLevel7.Checked = true;
                 ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[1].TabVisible = false;
             }
@@ -670,10 +687,11 @@ namespace BudgetExecution
         {
             try
             {
-                GridLevel7.Visible = false;
-                GridLevel8.Visible = false;
-                ChartLevel7.Visible = false;
-                ChartLevel8.Visible = false;
+                GridLevel7.Visible = true;
+                GridLevel8.Visible = true;
+                ChartLevel7.Visible = true;
+                ChartLevel8.Checked = true;
+                ChartLevel8.Visible = true;
                 SummaryTabControl.TabPages[0].TabVisible = false;
             }
             catch(Exception ex)
@@ -1110,7 +1128,9 @@ namespace BudgetExecution
                 }
 
                 DataTable table = (DataTable)BindingSource.DataSource;
-                foreach (DataRow row in table.AsEnumerable().Where(p => p.Field<string>(col.ToString()).Equals(prcfilter)).Select(p => p).Distinct().ToArray())
+                foreach (DataRow row in table.AsEnumerable()
+                                             .Where(p => p.Field<string>(col.ToString()).Equals(prcfilter))
+                                             .Select(p => p).Distinct().ToArray())
                 {
                     cmbox.Items.Add(row["FundName"].ToString());
                 }
@@ -1428,8 +1448,7 @@ namespace BudgetExecution
                 }
             }
 
-            if (Expander2.Visible
-               && Expander2.IsExpanded)
+            if (Expander2.Visible && Expander2.IsExpanded)
             {
                 Expander2.IsExpanded = false;
             }
@@ -1445,14 +1464,13 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl2 = sender as VisualComboBox;
-                if (ChartFilterControl2 != null
-                   && ChartFilterControl2.SelectedItem != null)
+                filter3label.Text = $"Filter {PrimaryGrouping.ToString()} By";
+                if (ChartFilterControl2 != null && ChartFilterControl2.SelectedItem != null)
                 {
                     Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 }
 
-                if (!Expander2.Visible
-                   || Expander2.IsExpanded == false)
+                if (!Expander2.Visible || Expander2.IsExpanded == false)
                 {
                     Expander2.Visible = true;
                     Expander2.IsExpanded = true;
@@ -1496,12 +1514,24 @@ namespace BudgetExecution
                 BocFilter4.Items.Clear();
                 string[] filters = { "FundName", "BocName", "NPM", "GoalName", "ObjectiveName", "Division", "ProgramArea", "ProgramProjectCode" };
 
-                foreach (string s in filters)
+                if(filters.Contains(ChartFilter))
                 {
-                    BocFilter4.Items.Add(s);
+                    var filt = filters.Where(s => !s.Equals(ChartFilter))
+                                      .Select(s => s).ToArray();
+                    foreach(string s in filt)
+                    {
+                        BocFilter4.Items.Add(s);
+                    }
                 }
+                else
+                {
+                    foreach(string s in filters)
+                    {
+                        BocFilter4.Items.Add(s);
+                    }
 
-                BocFilter4.Items.Remove(PrimaryFilter.SelectedItem.ToString());
+                    BocFilter4.Items.Remove(PrimaryFilter.SelectedItem.ToString());
+                }
             }
             catch (Exception ex)
             {
@@ -1577,7 +1607,6 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="panel1">The panel1<see cref="ExpandCollapsePanel" /></param>
         /// <param name="panel2">The panel2<see cref="ExpandCollapsePanel" /></param>
-        [SuppressMessage("ReSharper", "ParameterHidesMember")]
         private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
@@ -1596,218 +1625,38 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         internal void PrimaryChartFilterControl_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 PrimaryFilter = sender as VisualComboBox;
                 PrimaryGrouping = (Field)Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
-                if (BocExpander1.Visible == false
-                   || BocExpander1.IsExpanded == false)
+                if (BocExpander1.Visible == false || BocExpander1.IsExpanded == false)
                 {
                     BocExpander1.Visible = true;
                     BocExpander1.IsExpanded = true;
                 }
 
-                if (PrimaryFilter != null)
+                AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
+                AssignChartExpanders(BocExpander1, BocExpander2);
+                PopulateFilterBoxItems(BocFilter3, ProgramElements[PrimaryGrouping.ToString()]);
+                PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
+                BocFilter4.Items.Remove(PrimaryGrouping.ToString());
+                if (Source == Source.RegionalAccounts)
                 {
-                    CurrentIndex = PrimaryFilter.SelectedIndex;
+                    BocFilter4.Items.Remove("RC");
                 }
 
-                if (BocExpander2.IsExpanded
-                   || BocExpander2.Visible)
+                if (Division != null)
                 {
-                    BocExpander2.IsExpanded = false;
-                    BocExpander2.Visible = false;
+                    ChartMainTitle = new[] { $"{Division} Funding By Appropriation" };
+                }
+                else
+                {
+                    ChartMainTitle = new[] { $"{Source.ToString()} Funding By {PrimaryGrouping}" };
                 }
 
-                switch (CurrentIndex)
-                {
-                    case 0:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, ProgramElements["FundName"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("FundName");
-                        if (Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Appropriation" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 1:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, ProgramElements["BocName"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("BocName");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Object Class" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Object Class" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 2:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["NPM"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("NPM");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By HQ NPM" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By HQ NPM" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 3:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["GoalName"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("GoalName");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Agency Goal" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Agency Goal" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 4:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["ObjectiveName"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("ObjectiveName");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Objective" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Objective" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 5:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["Division"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("Division");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Division" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Division" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Division, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 6:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["ProgramArea"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("ProgramArea");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Program Area" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Program Area" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-
-                    case 7:
-                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["ProgramProjectCode"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                        BocFilter4.Items.Remove("ProgramProjectCode");
-                        if (DbData.Source == Source.RegionalAccounts)
-                        {
-                            BocFilter4.Items.Remove("RC");
-                        }
-
-                        if (Division != null)
-                        {
-                            ChartMainTitle = new[] { $"{Division} Funding By Program Project" };
-                        }
-                        else
-                        {
-                            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Program Project" };
-                        }
-
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
-                        break;
-                }
+                BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, PrimaryGrouping, Stat.Total, ChartSeriesType.Column).Activate();                      
             }
             catch (Exception ex)
             {

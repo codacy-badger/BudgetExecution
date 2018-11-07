@@ -45,7 +45,15 @@ namespace BudgetExecution
                 BOC = new BOC(Data["BOC"].ToString());
                 FOC = Data["FOC"].ToString();
                 FocName = Data["FocName"].ToString();
-                Amount = decimal.Parse(Data["Obligations"].ToString());
+                Authority = decimal.Parse(Data["Authority"].ToString());
+                Budgeted = decimal.Parse(Data["Budgeted"].ToString());
+                Posted = decimal.Parse(Data["Posted"].ToString());
+                CarryIn = decimal.Parse(Data["CarryIn"].ToString());
+                CarryOut = decimal.Parse(Data["CarryOut"].ToString());
+                Commitments = decimal.Parse(Data["Commitments"].ToString());
+                OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
+                Obligations = decimal.Parse(Data["Obligations"].ToString());
+                ULO = decimal.Parse(Data["ULO"].ToString());
             }
         }
 
@@ -62,7 +70,15 @@ namespace BudgetExecution
             BOC = new BOC(Data["BOC"].ToString());
             FOC = Data["FOC"].ToString();
             FocName = Data["FocName"].ToString();
-            Amount = decimal.Parse(Data["Obligations"].ToString());
+            Authority = decimal.Parse(Data["Authority"].ToString());
+            Budgeted = decimal.Parse(Data["Budgeted"].ToString());
+            Posted = decimal.Parse(Data["Posted"].ToString());
+            CarryIn = decimal.Parse(Data["CarryIn"].ToString());
+            CarryOut = decimal.Parse(Data["CarryOut"].ToString());
+            Commitments = decimal.Parse(Data["Commitments"].ToString());
+            OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            ULO = decimal.Parse(Data["ULO"].ToString());
         }
 
         // Properties
@@ -171,6 +187,13 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// Gets the data records.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         internal DataRow[] GetDataRecords(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -184,6 +207,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the fields.
+        /// </summary>
+        /// <returns></returns>
         internal string[] GetFields()
         {
             try
@@ -218,41 +245,35 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                    || param["FundName"] == null)
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                    || param["Org"] == null)
+                if (!param.ContainsKey("Org") || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject")
-                    || param["ProgramProject"] == null)
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                    || param["ProgramArea"] == null)
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                    || param["Goal"] == null)
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                    || param["Objective"] == null)
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
