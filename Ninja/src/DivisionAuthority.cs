@@ -17,8 +17,8 @@ namespace BudgetExecution
             TableFilter = DataBuilder.FilterRecords;
             DbData = new DataBuilder(Source.DivisionAccounts);
             Metric = new PrcMetric(DbData);
-            DataRecords = DbData.Records;
             Table = DbData.Table;
+            DataRecords = DbData.Records;
             PRC = GetPrcArray(Table);
             Total = Metric.Total;
             Count = Metric.Count;
@@ -28,8 +28,6 @@ namespace BudgetExecution
             {
                 FTE = GetFTE(DbData.Table);
             }
-
-            TableFilter = DataBuilder.FilterRecords;
         }
 
         public DivisionAuthority(Source source)
@@ -66,32 +64,12 @@ namespace BudgetExecution
 
         public Appropriation[] Appropriation { get; set; }
 
-        public DataSet Allocation { get; set; }
+        public DataSet R6 { get; set; }
 
         public DataTable CurrentYear { get; set; }
 
         public DataTable CarryOver { get; set; }
-
-        public DataTable EPM { get; set; }
-
-        public DataTable SUPERFUND { get; set; }
-
-        public DataTable LUST { get; set; }
-
-        public DataTable STAG { get; set; }
-
-        public DataTable OIL { get; set; }
-
-        public DataTable TR { get; set; }
-
-        public DataTable SF6A { get; set; }
-
-        public DataTable DWH { get; set; }
-
-        public DataTable TS3 { get; set; }
-
-        public DataTable FS3 { get; set; }
-
+        
         public decimal Total { get; }
 
         public int Count { get; }
@@ -179,8 +157,11 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID")
-                       || dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Equals("Obligations") ||
+                        dc.ColumnName.Equals("Commitments") || dc.ColumnName.Equals("OpenCommitments") || 
+                        dc.ColumnName.Equals("ULO") || dc.ColumnName.Equals("Hours") || dc.ColumnName.Equals("Authority") || 
+                        dc.ColumnName.Equals("Budgeted")|| dc.ColumnName.Equals("Posted") || dc.ColumnName.Equals("CarryIn") || 
+                        dc.ColumnName.Equals("CarryOut") || dc.ColumnName.Equals("Balance"))
                     {
                         continue;
                     }

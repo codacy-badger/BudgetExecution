@@ -16,21 +16,21 @@ namespace BudgetExecution
         {
         }
 
-        public Account(Source source = Source.Accounts, Provider provider = Provider.SQLite)
+        public Account(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.Accounts;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
         }
 
-        public Account(Source source, Provider provider, string bfy, string fund, string code)
-                : this(source, provider)
+        public Account(Provider provider, string bfy, string fund, string code)
+                : this(provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(bfy, fund, code);
-            DbData = new DataBuilder(source, provider, Parameter);
+            DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
             if(Table.Rows.Count == 1)
             {
@@ -51,9 +51,14 @@ namespace BudgetExecution
             }
         }
 
-        public Account(Source source, Provider provider, Dictionary<string, object> p)
-                : this(source, provider)
+        public Account(Provider provider, Dictionary<string, object> p)
+                : this(provider)
         {
+            if(p.ContainsKey("BFY"))
+            {
+                BFY = p["BFY"].ToString();
+            }
+
             if(p.ContainsKey("Fund"))
             {
                 Fund = p["Fund"].ToString();
@@ -66,7 +71,7 @@ namespace BudgetExecution
 
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = p;
-            DbData = new DataBuilder(source, provider, Parameter);
+            DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
             if (Table.Rows.Count == 1)
             {
@@ -250,7 +255,7 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, Provider.SQLite, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(Provider.SQLite, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("Fund")
                     || param["Fund"] == null)
                 {
@@ -311,7 +316,7 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName")
                     || param["FundName"] == null)
                 {
@@ -359,48 +364,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }
-
-        /// <summary>
-        ///     Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public static Account Select(Source source, Dictionary<string, object> param)
-        {
-            try
-            {
-                DataRow query = new DataBuilder(source, Provider.SQLite, param).Table.AsEnumerable().Select(p => p).First();
-                return new Account(query);
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public static Account Select(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            try
-            {
-                DataRow query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
-                return new Account(query);
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
+        }        
 
         /// <summary>
         ///     Gets the account parameter.
@@ -413,7 +377,8 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund, ["ProgramProjectCode"] = Code.Substring(4, 2) };
+                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund,
+                    ["ProgramProjectCode"] = code};
             }
             catch (Exception ex)
             {
@@ -433,76 +398,13 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, object> param = GetAccountParameter(bfy, fund, code);
-                DataTable data = GetAccountData(Source.Accounts, Provider.SQLite, param);
-                DataRow dr = data.Rows[0];
-                GoalName = dr["GoalName"].ToString();
-                ObjectiveName = dr["ObjectiveName"].ToString();
-                ProgramProjectName = dr["ProgramProjectName"].ToString();
-                param.Add("GoalName", dr["GoalName"].ToString());
-                param.Add("ObjectiveName", dr["ObjectiveName"].ToString());
-                param.Add("ProgramProjectName", dr["ProgramProjectName"].ToString());
+                GoalName = Data["GoalName"].ToString();
+                ObjectiveName = Data["ObjectiveName"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                param.Add("GoalName", GoalName);
+                param.Add("ObjectiveName", ObjectiveName);
+                param.Add("ProgramProjectName", ProgramProjectName);
                 return param;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the account data.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <returns></returns>
-        internal DataTable GetAccountData(Source source, Provider provider)
-        {
-            try
-            {
-                DataBuilder data = new DataBuilder(source, provider);
-                return data.Table;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the account data.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        internal DataTable GetAccountData(Source source, Dictionary<string, object> param)
-        {
-            try
-            {
-                DataBuilder data = new DataBuilder(source, Provider.SQLite, param);
-                return data.Table;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the account data.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        internal DataTable GetAccountData(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            try
-            {
-                DataBuilder data = new DataBuilder(source, provider, param);
-                return data.Table;
             }
             catch (Exception ex)
             {

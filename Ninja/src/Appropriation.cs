@@ -79,7 +79,7 @@ namespace BudgetExecution
 
         public Dictionary<string, decimal> ObjectiveData { get; set; }
 
-        public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+        public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
 
         public Dictionary<string, decimal> ProgramData { get; set; }
 

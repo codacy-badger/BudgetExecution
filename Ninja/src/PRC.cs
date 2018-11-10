@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.Common;
     using System.Linq;
 
     public class PRC : IPRC, IAccount
@@ -16,15 +17,15 @@ namespace BudgetExecution
         {
         }
 
-        public PRC(Source source = Source.PRC, Provider provider = Provider.SQLite)
+        public PRC(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.PRC;
             Provider = provider;
-            DbData = new DataBuilder(source, provider);
+            DbData = new DataBuilder(Source, Provider);
             Allocation = DbData.Records;
             if (DbData.Table.Rows.Count == 1)
             {
-                Data = DbData.Table.Rows[0];
+                Data = DbData.Table.AsEnumerable().Select(p => p).Single();
                 ID = int.Parse(Data["ID"].ToString());
                 BudgetLevel = Data["BudgetLevel"].ToString();
                 RPIO = Data["RPIO"].ToString();
@@ -34,7 +35,7 @@ namespace BudgetExecution
                 Org = new Org(Data["Org"].ToString());
                 BOC = new BOC(Data["BOC"].ToString());
                 RC = new RC(Data["RC"].ToString());
-                Account = new Account((Source)Source.Accounts, (Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Data["Code"].ToString());
+                Account = new Account(Provider.SQLite, this.BFY, this.Fund.Code, this.Data["Code"].ToString());
                 Code = Account.Code;
                 Amount = decimal.Parse(Data["Amount"].ToString());
                 Parameter = GetDataDictionary();
@@ -67,7 +68,7 @@ namespace BudgetExecution
                 Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
                 Org = new Org(Data["Org"].ToString());
                 RC = new RC(Data["RC"].ToString());
-                Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
+                Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
                 Code = Account.Code;
                 BOC = new BOC(Data["BOC"].ToString());
                 Amount = decimal.Parse(Data["Amount"].ToString());
@@ -93,7 +94,7 @@ namespace BudgetExecution
             AH = ah;
             RC = new RC(rc);
             Org = new Org(org);
-            Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, code);
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Parameter = GetDataDictionary();
@@ -120,7 +121,7 @@ namespace BudgetExecution
             Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
             Org = new Org(row["Org"].ToString());
             RC = new RC(row["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, BFY, Fund.Code, row["Code"].ToString());
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
             Parameter = GetDataDictionary();
@@ -267,42 +268,36 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                   || param["FundName"] == null)
+                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                   || param["Org"] == null)
+                if (!param.ContainsKey("Org") || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject")
-                   || param["ProgramProject"] == null)
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                   || param["ProgramArea"] == null)
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                   || param["Goal"] == null)
+                if (!param.ContainsKey("Goal")|| param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                   || param["Objective"] == null)
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -336,8 +331,8 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -353,13 +348,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -370,8 +365,8 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();

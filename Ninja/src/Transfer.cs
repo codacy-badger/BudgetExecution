@@ -45,7 +45,7 @@ namespace BudgetExecution
             Qtr = qtr;
             Date = date;
             Code = code;
-            Account = new Account((Source)Source.Accounts, (Provider)0, this.BFY, fund, code);
+            Account = new Account((Provider)0, this.BFY, fund, code);
             NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
@@ -66,7 +66,7 @@ namespace BudgetExecution
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
-            Account = new Account((Source)Source.Accounts, (Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Code);
+            Account = new Account((Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Code);
             NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());

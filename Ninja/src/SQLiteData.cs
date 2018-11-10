@@ -41,7 +41,7 @@ namespace BudgetExecution
             label12.Text = Table.Rows.Count.ToString();
         }
 
-        public SQLiteData(Source source = Source.PRC, Provider provider = Provider.SQLite)
+        public SQLiteData(Source source, Provider provider = Provider.SQLite)
         {
             InitializeComponent();
             Source = source;

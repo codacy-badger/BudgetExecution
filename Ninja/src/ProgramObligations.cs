@@ -12,19 +12,19 @@ namespace BudgetExecution
     public class ProgramObligations
     {
         // CONSRTUCTORS
-        public ProgramObligations()
+        public ProgramObligations(Provider provider = Provider.SQLite)
         {
             Source = Source.ProgramObligations;
-            Provider = Provider.SQLite;
+            Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
             DbRow = Records[0];
         }
 
-        public ProgramObligations(Source source, Provider provider, Dictionary<string, object> param)
+        public ProgramObligations(Provider provider, Dictionary<string, object> param)
         {
-            Source = source;
+            Source = Source.ProgramObligations;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
             Table = DbData.Table;
@@ -93,11 +93,12 @@ namespace BudgetExecution
         public decimal Obligations { get; set; }
 
         // METHODS
-        internal Dictionary<string, object> GetDataFields()
+        internal Dictionary<string, object> GetSchema()
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
+                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY,
+                    ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
             catch (Exception ex)
@@ -124,7 +125,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetDataFields();
+                Dictionary<string, object> prc = GetSchema();
 
                 return prc.Keys.ToArray();
             }
@@ -139,7 +140,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetDataFields();
+                Dictionary<string, object> param = GetSchema();
                 return param.Values.ToArray();
             }
             catch (Exception ex)
@@ -153,9 +154,8 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                   || param["FundName"] == null)
+                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }

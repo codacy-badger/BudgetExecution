@@ -22,7 +22,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             CarryOver = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
             CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
-            ProgramElements = DbData.GetProgramElements(DbData.Table);
+            ProgramElements = DbData.ProgramElements;
             Total = GetTotals(Table);
             CarryOverTotal = GetTotals(CarryOver);
             CurrentYearTotal = GetTotals(CurrentYear);
@@ -46,8 +46,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccounts
-               && DbData.Input == null)
+            if (DbData.Source == Source.DivisionAccounts && DbData.Input == null)
             {
                 DivisionTotals = GetDataTotals(Table, Field.RC);
                 DivisionMetrics = GetMetrics(Table, Field.RC);
@@ -199,13 +198,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (Count > 0d)
-                {
-                    return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-                }
-
-                int ave = 0;
-                return ave;
+                return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch (Exception ex)
             {
@@ -252,8 +245,7 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID")
-                       || dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }

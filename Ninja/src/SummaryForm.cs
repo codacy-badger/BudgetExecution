@@ -687,11 +687,10 @@ namespace BudgetExecution
         {
             try
             {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Checked = true;
-                ChartLevel8.Visible = true;
+                GridLevel7.Visible = false;
+                GridLevel8.Visible = false;
+                ChartLevel7.Visible = false;
+                ChartLevel8.Visible = false;
                 SummaryTabControl.TabPages[0].TabVisible = false;
             }
             catch(Exception ex)

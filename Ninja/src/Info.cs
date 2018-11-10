@@ -6,27 +6,30 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Linq;
     using System.Windows.Forms;
 
     public static class Info
     {
+        public static AppSettingsReader Setting = new AppSettingsReader();
+
         public static string[] Sources = Enum.GetNames(typeof(Source));
 
-        public static string ObjectClass = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\ObjectClasses";
+        public static string ObjectClass = (string)Setting.GetValue("ObjectClass", typeof(string));
 
-        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
+        public static string DivisionImages = (string)Setting.GetValue("Division", typeof(string));
 
-        public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
+        public static string SummaryImages = (string)Setting.GetValue("SummaryImages", typeof(string));
 
-        public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
+        public static string FunctionImages = (string)Setting.GetValue("FunctionImages", typeof(string));
 
-        public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
+        public static string DatabaseImages = (string)Setting.GetValue("DatabaseImages", typeof(string));
 
-        public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
+        public static string AppropriationImages = (string)Setting.GetValue("AppropriationImages", typeof(string));
 
-        public static string Enter = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter";
+        public static string EnterImages = (string)Setting.GetValue("EnterImages", typeof(string));
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
 
@@ -58,42 +61,36 @@ namespace BudgetExecution
         {
             try
             {
-                Account account = new Account(source, provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                   || param["FundName"] == null)
+                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                   || param["Org"] == null)
+                if (!param.ContainsKey("Org") || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject")
-                   || param["ProgramProject"] == null)
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                   || param["ProgramArea"] == null)
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                   || param["Goal"] == null)
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                   || param["Objective"] == null)
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -325,8 +322,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (table != null
-                    && table.Columns.Contains(column))
+                if (table != null && table.Columns.Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }

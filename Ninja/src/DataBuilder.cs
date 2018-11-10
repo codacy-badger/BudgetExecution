@@ -387,13 +387,11 @@ namespace BudgetExecution
                     Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                     foreach (DataColumn dc in table.Columns)
                     {
-                        if (dc.ColumnName.Equals("ID")
-                           || dc.ColumnName.Equals("Amount")
-                           || dc.ColumnName.Equals("Hours")
-                           || dc.ColumnName.Contains("Obligations")
-                           || dc.ColumnName.Contains("Commitments")
-                           || dc.ColumnName.Contains("OpenCommitments")
-                           || dc.ColumnName.Contains("ULO"))
+                        if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || 
+                            dc.ColumnName.Equals("Hours") || dc.ColumnName.Contains("OpenCommitments") || 
+                            dc.ColumnName.Contains("ULO") || dc.ColumnName.Equals("Obligations") || dc.ColumnName.Equals("Commitments") ||
+                            dc.ColumnName.Equals("Authority") || dc.ColumnName.Equals("Budgeted") || dc.ColumnName.Equals("Posted") ||
+                            dc.ColumnName.Equals("CarryIn") || dc.ColumnName.Equals("CarryOut") || dc.ColumnName.Equals("Balance"))
                         {
                             continue;
                         }

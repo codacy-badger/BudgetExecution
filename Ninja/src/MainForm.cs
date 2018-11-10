@@ -176,7 +176,7 @@ namespace BudgetExecution
 
         public void EnterTile_OnClick(object sender, EventArgs e)
         {
-            Selector summary = new Selector(Info.Enter);
+            Selector summary = new Selector(Info.EnterImages);
             summary.Show();
         }
 

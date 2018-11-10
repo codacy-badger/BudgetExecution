@@ -239,6 +239,12 @@
     <Compile Include="src\Employee.cs" />
     <Compile Include="src\Obligation.cs" />
     <Compile Include="src\PayrollAccruals.cs" />
+    <Compile Include="src\PdfViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PdfViewer.Designer.cs">
+      <DependentUpon>PdfViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\WorkCode.cs" />
     <Compile Include="src\ProgramObligations.cs" />
     <Compile Include="src\Programs.cs" />
@@ -246,16 +252,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlIcon.resx</DependentUpon>
-    </Compile>
-    <Compile Include="resources\DivisionImages.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DivisionImages.resx</DependentUpon>
-    </Compile>
-    <Compile Include="resources\ExcelFile.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ExcelFile.resx</DependentUpon>
     </Compile>
     <Compile Include="resources\FunctionImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -458,12 +454,6 @@
     <Compile Include="src\RegionalAuthority.cs" />
     <Compile Include="src\Reimbursable.cs" />
     <Compile Include="src\Transfer.cs" />
-    <Compile Include="src\Tool.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\Tool.Designer.cs">
-      <DependentUpon>Tool.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -526,14 +516,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="resources\DivisionImages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DivisionImages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="resources\ExcelFile.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ExcelFile.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="resources\FunctionImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FunctionImages.Designer.cs</LastGenOutput>
@@ -593,6 +575,9 @@
     <EmbeddedResource Include="src\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\PdfViewer.resx">
+      <DependentUpon>PdfViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\RecordManager.resx">
       <DependentUpon>RecordManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -645,9 +630,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <LastGenOutput>SummaryImages.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Tool.resx">
-      <DependentUpon>Tool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
@@ -964,6 +946,9 @@
     <None Include="resources\NinjaDivisionIcons\SF.png" />
     <None Include="resources\NinjaDivisionIcons\WSA.png" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
+    <None Include="resources\DivisionIcon\MDR.png" />
+    <None Include="resources\DivisionIcon\WCF.png" />
+    <None Include="resources\DivisionIcon\SF.png" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\Appropriation.png" />
     <None Include="resources\RegionAccount.png" />

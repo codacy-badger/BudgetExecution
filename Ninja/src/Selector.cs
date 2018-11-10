@@ -5,6 +5,7 @@
 namespace BudgetExecution
 {
     using System;
+    using System.Configuration;
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
@@ -28,6 +29,8 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        private AppSettingsReader Setting { get; set; }
+
         private string DivisionImages { get; set; }
 
         private string SummaryImages { get; set; }
@@ -80,7 +83,7 @@ namespace BudgetExecution
                         return;
 
                     case "DatabaseImages":
-                        var ds = new Selector(Info.DatabaseImages);
+                        var ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
