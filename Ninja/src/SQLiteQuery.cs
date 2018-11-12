@@ -17,8 +17,7 @@ namespace BudgetExecution
         {
         }
 
-        public SQLiteQuery(Source source)
-                : base(source)
+        public SQLiteQuery(Source source): base(source)
         {
             Provider = base.Provider;
             Source = base.Source;
@@ -32,11 +31,9 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Dictionary<string, object> p, Sql sqlcmd = Sql.SELECT)
-                : base(source)
+        public SQLiteQuery(Source source, Sql sqlcmd, Dictionary<string, object> p) : base(source, Provider.SQLite, sqlcmd, p)
         {
             Provider = base.Provider;
             Source = source;
@@ -50,11 +47,9 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Provider provider, Sql sql)
-                : base(source, provider, sql)
+        public SQLiteQuery(Source source, Provider provider, Sql sql) : base(source, provider, sql)
         {
             Provider = provider;
             Source = source;
@@ -68,11 +63,9 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
         }
 
-        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param)
-                : base(source, provider, sql, param)
+        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
         {
             Provider = base.Provider;
             Source = base.Source;
@@ -87,11 +80,9 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
         }
 
         // PROPERTIES
-        public new AppSettingsReader Settings { get; }
 
         public new SQLiteConnection DataConnection { get; }
 

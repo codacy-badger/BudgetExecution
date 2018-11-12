@@ -29,6 +29,7 @@ namespace BudgetExecution
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionSelector));
             this.ViewerCarousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -53,7 +54,7 @@ namespace BudgetExecution
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1702, 1017);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1588, 753);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -66,7 +67,7 @@ namespace BudgetExecution
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1702, 1017);
+            this.panel1.Size = new System.Drawing.Size(1588, 753);
             this.panel1.TabIndex = 3;
             // 
             // FunctionSelector
@@ -76,15 +77,16 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1702, 1017);
+            this.ClientSize = new System.Drawing.Size(1588, 753);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1714, 1064);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1600, 800);
             this.MetroColor = System.Drawing.Color.Black;
-            this.MinimumSize = new System.Drawing.Size(1714, 1064);
+            this.MinimumSize = new System.Drawing.Size(1600, 800);
             this.Name = "FunctionSelector";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

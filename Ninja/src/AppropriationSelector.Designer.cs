@@ -32,6 +32,7 @@ namespace BudgetExecution
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppropriationSelector));
             this.AppropriationCarousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace BudgetExecution
             this.AppropriationCarousel.RotateAlways = false;
             this.AppropriationCarousel.ShowImagePreview = true;
             this.AppropriationCarousel.ShowImageShadow = true;
-            this.AppropriationCarousel.Size = new System.Drawing.Size(1702, 989);
+            this.AppropriationCarousel.Size = new System.Drawing.Size(1588, 725);
             this.AppropriationCarousel.TabIndex = 8;
             this.AppropriationCarousel.Text = "carousel2";
             this.AppropriationCarousel.TouchTransitionSpeed = 3F;
@@ -70,17 +71,18 @@ namespace BudgetExecution
             this.CaptionBarHeight = 60;
             this.CaptionFont = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1702, 989);
+            this.ClientSize = new System.Drawing.Size(1588, 725);
             this.Controls.Add(this.AppropriationCarousel);
             this.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1714, 1064);
+            this.MaximumSize = new System.Drawing.Size(1600, 800);
             this.MetroColor = System.Drawing.Color.Black;
-            this.MinimumSize = new System.Drawing.Size(1714, 1064);
+            this.MinimumSize = new System.Drawing.Size(1600, 800);
             this.Name = "AppropriationSelector";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }

@@ -34,7 +34,6 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
         }
 
         public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
@@ -47,15 +46,17 @@ namespace BudgetExecution
             SqlStatement = GetSqlStatement(Source, Sql, param);
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
             DataAdapter = GetDataAdapter(DataCommand, Sql);
-            Settings = new AppSettingsReader();
         }
 
         // PROPERTIES
+
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
         public Sql Sql { get; }
 
         public string TableName { get; }
-
-        public AppSettingsReader Settings { get; }
 
         public DbParameter[] Parameters { get; set; }
 
@@ -77,10 +78,6 @@ namespace BudgetExecution
 
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
-        public Source Source { get; }
-
-        public Provider Provider { get; }
-
         public DbConnection DataConnection { get; }
 
         public string SqlStatement { get; set; }
@@ -100,25 +97,26 @@ namespace BudgetExecution
         {
             try
             {
+                var connectionString = ConfigurationManager.ConnectionStrings;
                 switch (provider)
                 {
                     case Provider.SQLite:
-                        return new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlite\R6.db;foreign keys=True;datetime kind=Local;default database type=String");
+                        return new SQLiteConnection(connectionString["SQLite"].ConnectionString);
 
                     case Provider.SqlCe:
-                        return new SqlCeConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlce\R6.sdf");
+                        return new SqlCeConnection(connectionString["SqlCe"].ConnectionString);
 
                     case Provider.SqlServer:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlserver\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                        return new SqlConnection(connectionString["SqlServer"].ConnectionString);
 
                     case Provider.Access:
-                        return new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.accdb");
+                        return new OleDbConnection(connectionString["Access"].ConnectionString);
 
                     case Provider.OleDb:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                        return new OleDbConnection(connectionString["OleDb"].ConnectionString);
 
                     case Provider.Excel:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                        return new OleDbConnection(connectionString["Excel"].ConnectionString);
                 }
 
                 return null;

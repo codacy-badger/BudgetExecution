@@ -288,412 +288,8 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 GridFundFilter.Visible = false;
                 GridBocFilter.Visible = false;
-
-                switch (Source)
-                {
-                    case Source.PRC:
-                        SetPrcConfiguration();
-                        break;
-
-                    case Source.CONTRACTS:
-                        SetContractsConfiguration();
-                        break;
-
-                    case Source.DWH:
-                        SetDWHConfiguration();
-                        break;
-
-                    case Source.EPM:
-                        SetEPMConfiguration();
-                        break;
-
-                    case Source.EXPENSES:
-                        SetExpensesConfigurations();
-                        break;
-
-                    case Source.GRANTS:
-                        SetGrantsConfiguration();
-                        break;
-
-                    case Source.LUST:
-                        SetLUSTConfiguration();
-                        break;
-
-                    case Source.SF6A:
-                        SetSF6AConfiguration();
-                        break;
-
-                    case Source.STAG:
-                        SetSTAGConfiguration();
-                        break;
-
-                    case Source.SUPERFUND:
-                        SetSuperfundConfiguration();
-                        break;
-
-                    case Source.OIL:
-                        SetOilSpillConfiguration();
-                        break;
-
-                    case Source.TRAVEL:
-                        SetTravelConfiguration();
-                        break;
-
-                    case Source.FTE:
-                        SetFTEConfiguration();
-                        break;
-
-                    case Source.MD:
-                    case Source.SF:
-                    case Source.RC:
-                    case Source.RA:
-                    case Source.EJ:
-                    case Source.XA:
-                    case Source.WQ:
-                    case Source.MM:
-                    case Source.WSA:
-                    case Source.WCF:
-                    case Source.MDR:
-                    case Source.EN:
-                        SetDivisionConfiguration();
-                        break;
-
-                    default:
-                        GridLevel7.Visible = false;
-                        GridLevel8.Visible = false;
-                        ChartLevel7.Visible = false;
-                        ChartLevel8.Visible = false;
-                        break;
-                }
             }
             catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetPrcConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetRegionalAccountsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Visible = true;
-                DatabaseTab.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetDivisionAccountsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Visible = true;
-                DatabaseTab.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetContractsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                bL7.Checked = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetExpensesConfigurations()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetTravelConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetWCFConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetFTEConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                PrimaryFilter.Items.Remove("BocName");
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetPayrollConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetAwardsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetGrantsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetEPMConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Visible = true;
-                PrimaryFilter.Items.Remove("FundName");
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetSuperfundConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetLUSTConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetOilSpillConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetSTAGConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetDWHConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetBudgetLevelsConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetSF6AConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = true;
-                GridLevel8.Visible = true;
-                ChartLevel7.Visible = true;
-                ChartLevel7.Checked = true;
-                ChartLevel8.Visible = true;
-                SummaryTabControl.TabPages[1].TabVisible = false;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void SetDivisionConfiguration()
-        {
-            try
-            {
-                GridLevel7.Visible = false;
-                GridLevel8.Visible = false;
-                ChartLevel7.Visible = false;
-                ChartLevel8.Visible = false;
-                SummaryTabControl.TabPages[0].TabVisible = false;
-            }
-            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -780,37 +376,6 @@ namespace BudgetExecution
             }
         }
 
-        private void FilterDataGridYear(VisualRadioButton rb)
-        {
-            try
-            {
-                string level = rb.Tag.ToString();
-                Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
-                BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                PopulateGridFundFilterItems();
-                GridFundFilter.Visible = true;
-                if (GridBocFilter.Visible)
-                {
-                    GridBocFilter.Items.Clear();
-                }
-
-                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridYearFilter.SelectedItem}";
-                TransitionChart(table);
-                Grid.SelectionChanged += UpdateAccountChart;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
         private void FilterDataGridFund()
         {
             try
@@ -837,42 +402,6 @@ namespace BudgetExecution
                 PopulateGridBocFilterItems();
                 GridBocFilter.Visible = true;
                 GridGroupBox.Text = $"{Source.ToString()} {GridYearFilter.SelectedItem} {GridFundFilter.SelectedItem}";
-                TransitionChart(table);
-                Grid.SelectionChanged += UpdateAccountChart;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void FilterDataGridFund(VisualRadioButton rb)
-        {
-            try
-            {
-                string level = rb.Tag.ToString();
-                Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
-                DataTable table = Table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
-                BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                if (int.Parse(lblCount.Text) >= 4)
-                {
-                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                }
-
-                if (int.Parse(lblCount.Text) < 4)
-                {
-                    lblDev.Text = "NA";
-                    lblVar.Text = "NA";
-                }
-
-                PopulateGridBocFilterItems();
-                GridBocFilter.Visible = true;
-                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridYearFilter.SelectedItem} {GridFundFilter.SelectedItem}";
                 TransitionChart(table);
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -916,40 +445,6 @@ namespace BudgetExecution
             }
         }
 
-        private void FilterDataGridBoc(VisualRadioButton rb)
-        {
-            try
-            {
-                string level = rb.Tag.ToString();
-                Grid.SelectionChanged -= UpdateAccountChart;
-                BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{level}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BudgetLevel").Equals(level)).Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Select(p => p).CopyToDataTable();
-                BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                if (int.Parse(lblCount.Text) >= 4)
-                {
-                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                }
-
-                if (int.Parse(lblCount.Text) < 4)
-                {
-                    lblDev.Text = "NA";
-                    lblVar.Text = "NA";
-                }
-
-                TransitionChart(table);
-                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2} {GridFilter3}";
-                Grid.SelectionChanged += UpdateAccountChart;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
         /// <summary>
         ///     The GridFilterControl1_ItemSelected
         /// </summary>
@@ -962,19 +457,7 @@ namespace BudgetExecution
                 BindingSource.DataSource = Table;
                 GridFilterControl1 = sender as VisualComboBox;
                 GridFilter1 = GridFilterControl1?.SelectedItem.ToString();
-                if (GridLevel7.Checked)
-                {
-                    FilterDataGridYear(GridLevel7);
-                }
-
-                if (GridLevel8.Checked)
-                {
-                    FilterDataGridYear(GridLevel8);
-                }
-                else
-                {
-                    FilterDataGridYear();
-                }
+                FilterDataGridYear();
             }
             catch (Exception ex)
             {
@@ -991,28 +474,16 @@ namespace BudgetExecution
         {
             try
             {
-                if (GridBocFilter.Items.Count > 0)
+                if(GridBocFilter.Items.Count > 0)
                 {
                     GridBocFilter.Items.Clear();
                 }
 
                 GridFilterControl2 = sender as VisualComboBox;
                 GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
-                if (GridLevel7.Checked)
-                {
-                    FilterDataGridFund(GridLevel7);
-                }
-
-                if (GridLevel8.Checked)
-                {
-                    FilterDataGridFund(GridLevel8);
-                }
-                else
-                {
-                    FilterDataGridFund();
-                }
+                FilterDataGridFund();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -1029,19 +500,7 @@ namespace BudgetExecution
             {
                 GridFilterControl3 = sender as VisualComboBox;
                 GridFilter3 = GridFilterControl3?.SelectedItem.ToString();
-                if (GridLevel7.Checked)
-                {
-                    FilterDataGridBoc(GridLevel7);
-                }
-
-                if (GridLevel8.Checked)
-                {
-                    FilterDataGridBoc(GridLevel8);
-                }
-                else
-                {
-                    FilterDataGridBoc();
-                }
+                FilterDataGridBoc();
             }
             catch (Exception ex)
             {
@@ -1474,20 +933,8 @@ namespace BudgetExecution
                     Expander2.Visible = true;
                     Expander2.IsExpanded = true;
                 }
-
-                if (ChartLevel7.Checked)
-                {
-                    GetPrimaryGroupSummaryChart(PrimaryGrouping, ChartLevel7.Tag.ToString());
-                }
-
-                if (ChartLevel8.Checked)
-                {
-                    GetPrimaryGroupSummaryChart(PrimaryGrouping, ChartLevel8.Tag.ToString());
-                }
-                else
-                {
-                    GetPrimarySummaryChart(PrimaryGrouping);
-                }
+                    
+                GetPrimarySummaryChart(PrimaryGrouping);               
             }
             catch (Exception ex)
             {
@@ -1563,20 +1010,7 @@ namespace BudgetExecution
                     case Field.Division:
                     case Field.ProgramArea:
                     case Field.ProgramProjectCode:
-                        if (ChartLevel7.Checked)
-                        {
-                            GetSecondaryGroupSummaryChart(SecondaryGrouping, ChartLevel7.Tag.ToString());
-                        }
-
-                        if (ChartLevel8.Checked)
-                        {
-                            GetSecondaryGroupSummaryChart(SecondaryGrouping, ChartLevel8.Tag.ToString());
-                        }
-                        else
-                        {
-                            GetSecondaryGroupSummaryChart(SecondaryGrouping);
-                        }
-
+                        GetSecondaryGroupSummaryChart(SecondaryGrouping);                       
                         break;
                 }
             }
@@ -1639,8 +1073,10 @@ namespace BudgetExecution
                 AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                 AssignChartExpanders(BocExpander1, BocExpander2);
                 PopulateFilterBoxItems(BocFilter3, ProgramElements[PrimaryGrouping.ToString()]);
-                PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
-                BocFilter4.Items.Remove(PrimaryGrouping.ToString());
+                var tabpage = GetTabPageTags().AsEnumerable()
+                                              .Where(p => p != PrimaryGrouping.ToString())
+                                              .Select(p => p).ToArray();
+                PopulateFilterBoxItems(BocFilter4, tabpage);
                 if (Source == Source.RegionalAccounts)
                 {
                     BocFilter4.Items.Remove("RC");
@@ -1655,6 +1091,7 @@ namespace BudgetExecution
                     ChartMainTitle = new[] { $"{Source.ToString()} Funding By {PrimaryGrouping}" };
                 }
 
+                BocFilter4.Items.Remove(PrimaryGrouping.ToString());
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, PrimaryGrouping, Stat.Total, ChartSeriesType.Column).Activate();                      
             }
             catch (Exception ex)
@@ -1923,31 +1360,11 @@ namespace BudgetExecution
             {
                 Grid = sender as DataGridView;
                 DataGridViewRow drv = Grid?.CurrentRow;
-                if (GridLevel7.Checked)
-                {
-                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel7.Tag.ToString())).Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
-                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
-                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
-                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
-                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
-                }
-
-                if (GridLevel8.Checked)
-                {
-                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BudgetLevel").Equals(GridLevel8.Tag.ToString())).Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
-                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
-                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
-                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
-                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
-                }
-                else
-                {
-                    decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
-                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
-                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
-                    ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
-                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
-                }
+                decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
+                decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
+                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
+                ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
+                AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();                
             }
             catch (Exception ex)
             {
@@ -2039,6 +1456,11 @@ namespace BudgetExecution
                 Console.WriteLine(e);
                 throw;
             }
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
