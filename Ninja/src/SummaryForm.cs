@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Drawing;
+
 namespace BudgetExecution
 {
     using System;
@@ -21,6 +23,7 @@ namespace BudgetExecution
     using MetroSet_UI;
 
     using VisualPlus.Toolkit.Controls.Interactivity;
+    using System.Configuration;
 
     /// <summary>
     ///     Defines the <see cref="SummaryForm" />
@@ -288,6 +291,7 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 GridFundFilter.Visible = false;
                 GridBocFilter.Visible = false;
+                GetCaption(Source);
             }
             catch (Exception ex)
             {
@@ -1445,11 +1449,26 @@ namespace BudgetExecution
         /// <summary>
         ///     The GetCaption
         /// </summary>
-        private void GetCaption()
+        private void GetCaption(Source source)
         {
             try
             {
-                Directory.GetFiles(Info.DivisionImages);
+                var path = new AppSettingsReader();
+                var images = Directory.GetFiles((string)path.GetValue("SourceImages", typeof(string)));
+                foreach(string i in images)
+                {
+                    string p = Path.GetFileNameWithoutExtension(i);
+                    if(p.Equals(source.ToString(), StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        Bitmap b = new Bitmap(i);
+                        var ci = new CaptionImage();
+                        ci.Image = b;
+                        ci.BackColor = Color.Black;
+                        ci.Size = new Size(40, 30);
+                        ci.Location = new Point(10, 5);
+                        CaptionImages.Add(ci);
+                    }
+                }
             }
             catch (Exception e)
             {

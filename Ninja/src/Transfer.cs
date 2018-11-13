@@ -61,7 +61,7 @@ namespace BudgetExecution
             Org = new Org(dr["Org"].ToString());
             RC = new RC(dr["RC"].ToString());
             BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
+            Fund = new Fund(dr["FundCode"].ToString(), BFY);
             TCN = dr["TCN"].ToString();
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
@@ -105,6 +105,8 @@ namespace BudgetExecution
         public string FromTo { get; }
 
         public Fund Fund { get; }
+
+        public string FundCode { get; }
 
         public string NpmCode { get; }
 
