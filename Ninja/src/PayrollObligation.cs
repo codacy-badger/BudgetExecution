@@ -32,7 +32,7 @@ namespace BudgetExecution
             Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
             RPIO = Data["RPIO"].ToString();
             BFY = Data["BFY "].ToString();
-            Fund = new Fund(Data["Fund"].ToString(), BFY);
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
             Org = new Org(Data["Org"].ToString());
             OrgName = Org.Name;
             RC = new RC(Data["RC"].ToString());
@@ -52,7 +52,7 @@ namespace BudgetExecution
             Data = dr;
             RPIO = Data["RPIO"].ToString();
             BFY = Data["BFY "].ToString();
-            Fund = new Fund(Data["Fund"].ToString(), BFY);
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
             Org = new Org(Data["Org"].ToString());
             RC = new RC(Data["RC"].ToString());
             Code = Data["Code"].ToString();
@@ -62,7 +62,7 @@ namespace BudgetExecution
             WorkCode = Data["WorkCode"].ToString();
             WorkCodeName = Data["WorkCodeName"].ToString();
             PayPeriod = Data["PayPeriod"].ToString();
-            Amount = decimal.Parse(Data["Amount"].ToString());
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
             Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
@@ -89,13 +89,15 @@ namespace BudgetExecution
 
         public string OrgName { get; set; }
 
-        public decimal Amount { get; }
+        public decimal Obligations { get; }
 
         public string BFY { get; }
 
         public string Code { get; }
 
         public Fund Fund { get; }
+
+        public string FundCode { get; set; }
 
         public string FOC { get; set; }
 
@@ -120,8 +122,6 @@ namespace BudgetExecution
         public string WorkCode { get; }
 
         public string PayPeriod { get; set; }
-
-        public decimal Obligations { get; set; }
 
         public string WorkCodeName { get; }
 

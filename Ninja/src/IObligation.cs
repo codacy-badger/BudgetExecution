@@ -6,7 +6,7 @@ namespace BudgetExecution
 {
     public interface IObligation
     {
-        decimal Amount { get; set; }
+        decimal Obligations { get; set; }
 
         string BFY { get; set; }
 

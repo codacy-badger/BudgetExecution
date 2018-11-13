@@ -46,14 +46,14 @@ namespace BudgetExecution
             ID = int.Parse(Records[0]["ID"].ToString());
             RPIO = rpio;
             BFY = fy;
-            Fund = new Fund(source, provider, new Dictionary<string, object> { ["Fund"] = param["Fund"].ToString(), ["BFY"] =  param["BFY"].ToString()});
+            Fund = new Fund(source, provider, new Dictionary<string, object> { ["FundCode"] = param["FundCode"].ToString(), ["BFY"] = param["BFY"].ToString()});
             Org = new Org(org);
             RC = new RC(rc);
             ProgramProjectCode = Records[0]["ProgramProjectCode"].ToString();
             BOC = new BOC(boc);
             FOC = foc;
             FocName = focname;
-            Amount = o;
+            Obligations = o;
         }
 
         public Obligation(DataRow dr)
@@ -61,14 +61,14 @@ namespace BudgetExecution
             ID = int.Parse(dr["ID"].ToString());
             RPIO = dr["RPIO "].ToString();
             BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
+            Fund = new Fund(dr["FundCode"].ToString(), BFY);
             Org = new Org(dr["Org"].ToString());
             RC = new RC(dr["RC"].ToString());
             ProgramProjectCode = dr["ProgramProjectCode"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
             FOC = dr["FOC"].ToString();
             FocName = dr["FocName"].ToString();
-            Amount = decimal.Parse(dr["Obligations"].ToString());
+            Obligations = decimal.Parse(dr["Obligations"].ToString());
         }
 
         // Properties
@@ -104,7 +104,7 @@ namespace BudgetExecution
 
         public Fund Fund { get; set; }
 
-        public decimal Amount { get; set; }
+        public decimal Obligations { get; set; }
 
         public Org Org { get; set; }
 

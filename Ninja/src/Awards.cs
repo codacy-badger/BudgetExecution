@@ -37,7 +37,7 @@ namespace BudgetExecution
                 Type = Data["Type"].ToString();
                 RC = Data["RC"].ToString();
                 DivisionName = Data["DivisionName"].ToString();
-                Fund = Data["Fund"].ToString();
+                FundCode = Data["FundCode"].ToString();
                 BFY = Data["BFY"].ToString();
                 Amount = decimal.Parse(Data["Amount"].ToString());
             }
@@ -50,7 +50,7 @@ namespace BudgetExecution
             Type = Data["Type"].ToString();
             RC = Data["RC"].ToString();
             DivisionName = Data["DivisionName"].ToString();
-            Fund = Data["Fund"].ToString();
+            FundCode = Data["FundCode"].ToString();
             BFY = Data["BFY"].ToString();
             Amount = decimal.Parse(Data["Amount"].ToString());
         }
@@ -74,7 +74,7 @@ namespace BudgetExecution
 
         public string DivisionName { get; set; }
 
-        public string Fund { get; set; }
+        public string FundCode { get; set; }
 
         public string BFY { get; set; }
 

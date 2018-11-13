@@ -33,23 +33,22 @@ namespace BudgetExecution
         /// <summary>
         ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
         /// </summary>
-        /// <param name="fund">The fund.</param>
+        /// <param name="FundCode">The fund.</param>
         /// <param name="division">The division.</param>
-        public ControlNumber(string fund, string division)
+        public ControlNumber(string fundCode, string division)
         {
             Source = Source.ControlNumbers;
             Provider = Provider.SQLite;
-            Fund = fund;
+            FundCode = fundCode;
             Division = division;
-            DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
+            DbData = new DataBuilder(Source, Provider, GetParamData(FundCode, division));
             Table = DbData.Table;
             if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
-                Region = "R6";
-                FiscalYear = Table.AsEnumerable()
-                                  .Select(p => p.Field<string>("FiscalYear")).First();
+                Region = "R06";
+                BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
                 RegionControlNumber = GetRegionCount() + 1;
                 FundControlNumber = RegionControlNumber + 1;
                 BudgetControlNumber = FundControlNumber + 1;
@@ -61,8 +60,7 @@ namespace BudgetExecution
             Data = data;
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
-            FiscalYear = Table.AsEnumerable()
-                              .Select(p => p.Field<string>("FiscalYear")).First();
+            BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
@@ -84,11 +82,11 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; set; }
 
-        public string FiscalYear { get; }
+        public string BFY { get; }
 
         public int RegionControlNumber { get; set; }
 
-        public string Fund { get; set; }
+        public string FundCode { get; set; }
 
         public int FundControlNumber { get; set; }
 
@@ -190,7 +188,7 @@ namespace BudgetExecution
         /// </returns>
         public override string ToString()
         {
-            return new StringBuilder($"{FiscalYear}={Region}-{RegionControlNumber}-{Fund}-{FundControlNumber}-{Division}-{BudgetControlNumber}").ToString();
+            return new StringBuilder($"{BFY}={Region}-{RegionControlNumber}-{FundCode}-{FundControlNumber}-{Division}-{BudgetControlNumber}").ToString();
         }
 
         /// <summary>

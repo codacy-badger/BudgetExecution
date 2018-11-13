@@ -27,10 +27,10 @@ namespace BudgetExecution
                 : this(Source.Funds, Provider.SQLite)
         {
             Code = code;
-            FiscalYear = bfy;
-            Parameter = GetDataFields(Code, FiscalYear);
+            BFY = bfy;
+            Parameter = GetDataFields(Code, BFY);
             Table = GetData(Source, Provider, Parameter);
-            Data = Table.Rows[0];
+            Data = Table.AsEnumerable().Select(prc => prc).Single();
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
             Title = Data["Title"].ToString();
@@ -40,10 +40,10 @@ namespace BudgetExecution
         public Fund(Source source, string code, string bfy)
         {
             Code = code;
-            FiscalYear = bfy;
-            Parameter = GetDataFields(Code, FiscalYear);
+            BFY = bfy;
+            Parameter = GetDataFields(Code, BFY);
             Table = GetData(source, Provider.SQLite, Parameter);
-            Data = Table.AsEnumerable().First();
+            Data = Table.AsEnumerable().Select(prc => prc).Single();
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
             Title = Data["Title"].ToString();
@@ -53,12 +53,12 @@ namespace BudgetExecution
         public Fund(Source source, Provider provider, Dictionary<string, object> p)
         {
             Code = p["Code"].ToString();
-            FiscalYear = p["BFY"].ToString();
-            Parameter = GetDataFields(Code, FiscalYear);
+            BFY = p["BFY"].ToString();
+            Parameter = GetDataFields(Code, BFY);
             Table = GetData(source, provider, Parameter);
             if (Table.Rows.Count == 1)
             {
-                Data = Table.AsEnumerable().First();
+                Data = Table.AsEnumerable().Select(prc => prc).Single();
                 ID = int.Parse(Data["ID"].ToString());
                 Name = Data["Name"].ToString();
                 Title = Data["Title"].ToString();
@@ -86,7 +86,7 @@ namespace BudgetExecution
 
         public string Code { get; }
 
-        public string FiscalYear { get; }
+        public string BFY { get; }
 
         public Dictionary<string, object> Parameter { get; }
 

@@ -23,32 +23,6 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Allocation = DbData.Records;
-            if (DbData.Table.Rows.Count == 1)
-            {
-                Data = DbData.Table.AsEnumerable().Select(p => p).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                BudgetLevel = Data["BudgetLevel"].ToString();
-                RPIO = Data["RPIO"].ToString();
-                AH = Data["AH"].ToString();
-                BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
-                Org = new Org(Data["Org"].ToString());
-                BOC = new BOC(Data["BOC"].ToString());
-                RC = new RC(Data["RC"].ToString());
-                Account = new Account(Provider.SQLite, this.BFY, this.Fund.Code, this.Data["Code"].ToString());
-                Code = Account.Code;
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                Parameter = GetDataDictionary();
-                ProgramProjectCode = Account.ProgramProjectCode;
-                ProgramProjectName = Account.ProgramProjectName;
-                ProgramArea = Account.ProgramArea;
-                NPM = Account.NPM;
-                NpmCode = Account.NpmCode;
-                Goal = Account.Goal;
-                GoalName = Account.GoalName;
-                Objective = Account.Objective;
-                ObjectiveName = Account.ObjectiveName;
-            }
         }
 
         public PRC(Source source, Provider provider, Dictionary<string, object> param)
@@ -65,7 +39,7 @@ namespace BudgetExecution
                 RPIO = Data["RPIO"].ToString();
                 AH = Data["AH"].ToString();
                 BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
+                Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
                 Org = new Org(Data["Org"].ToString());
                 RC = new RC(Data["RC"].ToString());
                 Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
@@ -90,14 +64,14 @@ namespace BudgetExecution
             BudgetLevel = bl;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["fund"] = fund });
+            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["Code"] = fund });
+            FundCode = Fund.Code;
             AH = ah;
             RC = new RC(rc);
             Org = new Org(org);
             Account = new Account(Provider.SQLite, BFY, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetDataDictionary();
             Amount = amount;
             Parameter = GetDataDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
@@ -118,7 +92,8 @@ namespace BudgetExecution
             RPIO = row["RPIO"].ToString();
             AH = row["AH"].ToString();
             BFY = row["BFY"].ToString();
-            Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
+            Fund = new Fund(row["FundCode"].ToString(), row["BFY"].ToString());
+            FundCode = Fund.Code;
             Org = new Org(row["Org"].ToString());
             RC = new RC(row["RC"].ToString());
             Account = new Account(Provider.SQLite, BFY, Fund.Code, row["Code"].ToString());
@@ -158,6 +133,8 @@ namespace BudgetExecution
         public string BFY { get; set; }
 
         public Fund Fund { get; }
+
+        public string FundCode { get; }
 
         public Org Org { get; }
 

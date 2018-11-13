@@ -406,7 +406,7 @@ namespace BudgetExecution
                 {
                     case Source.Accounts:
                         label1.Text = @"Fund";
-                        PopulateFilterItems(Field.Fund, Table, Filter1, label1);
+                        PopulateFilterItems(Field.FundCode, Table, Filter1, label1);
                         Filter2.Tag = "GoalName";
                         Filter3.Tag = "ProgramProjectName";
                         break;

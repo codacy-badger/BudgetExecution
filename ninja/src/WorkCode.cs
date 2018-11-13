@@ -35,7 +35,7 @@ namespace BudgetExecution
             PayPeriod = Data["PayPeriod"].ToString();
             BFY = Data["BFY"].ToString();
             Org = Data["StartDate"].ToString();
-            Fund = Data["EndDate"].ToString();
+            FundCode = Data["EndDate"].ToString();
             ApprovalDate = Data["ApprovalDate"].ToString();
             Project = Data["ProgramProjectCode"].ToString();
             Code = Data["WorkCode"].ToString();
@@ -49,7 +49,7 @@ namespace BudgetExecution
             PayPeriod = data["PayPeriod"].ToString();
             BFY = data["BFY"].ToString();
             Org = data["StartDate"].ToString();
-            Fund = data["EndDate"].ToString();
+            FundCode = data["FundCode"].ToString();
             ApprovalDate = data["ApprovalDate"].ToString();
             Project = data["ProgramProjectCode"].ToString();
             Code = data["WorkCode"].ToString();
@@ -76,7 +76,7 @@ namespace BudgetExecution
 
         public string Org { get; }
 
-        public string Fund { get; }
+        public string FundCode { get; }
 
         public string BFY { get; set; }
 

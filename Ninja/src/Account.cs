@@ -24,8 +24,7 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
-        public Account(Provider provider, string bfy, string fund, string code)
-                : this(provider)
+        public Account(Provider provider, string bfy, string fund, string code) : this(provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
@@ -39,9 +38,9 @@ namespace BudgetExecution
                 Goal = Code.Substring(0, 1);
                 Objective = Code.Substring(1, 2);
                 NpmCode = Code.Substring(3, 1);
-                Org = Table.Rows[0]["Org"].ToString();
-                BFY = Table.Rows[0]["BFY"].ToString();
-                Fund = Table.Rows[0]["Fund"].ToString();
+                Org = Data["Org"].ToString();
+                BFY = Data["BFY"].ToString();
+                FundCode = Data["FundCode"].ToString();
                 ProgramProjectName = Data["ProgramProjectName"].ToString();
                 NPM = Table.Rows[0]["NPM"].ToString();
                 ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
@@ -61,7 +60,7 @@ namespace BudgetExecution
 
             if(p.ContainsKey("Fund"))
             {
-                Fund = p["Fund"].ToString();
+                FundCode = p["Fund"].ToString();
             }
 
             if(p.ContainsKey("Code"))
@@ -82,7 +81,7 @@ namespace BudgetExecution
                 NpmCode = Code.Substring(3, 1);
                 Org = Data["Org"].ToString();
                 BFY = Data["BFY"].ToString();
-                Fund = Data["Fund"].ToString();
+                FundCode = Data["Fund"].ToString();
                 ProgramProjectName = Data["ProgramProjectName"].ToString();
                 NPM = Data["NPM"].ToString();
                 ObjectiveName = Data["ObjectiveName"].ToString();
@@ -101,7 +100,7 @@ namespace BudgetExecution
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
             BFY = data["BFY"].ToString();
-            Fund = data["Fund"].ToString();
+            FundCode = data["Fund"].ToString();
             FundName = data["FundName"].ToString();
             ProgramProjectName = data["ProgramProjectName"].ToString();
             NPM = data["NPM"].ToString();
@@ -126,7 +125,7 @@ namespace BudgetExecution
 
         public string BFY { get; set; }
 
-        public string Fund { get; set; }
+        public string FundCode { get; set; }
 
         public string FundName { get; set; }
 

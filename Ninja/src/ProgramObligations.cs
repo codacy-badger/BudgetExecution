@@ -37,7 +37,7 @@ namespace BudgetExecution
             ID = int.Parse(dr["ID"].ToString());
             RPIO = dr["RPIO "].ToString();
             BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
+            Fund = new Fund(dr["FundCode"].ToString(), BFY);
             Org = new Org(dr["Org"].ToString());
             RC = new RC(dr["RC"].ToString());
             ProgramProjectCode = dr["ProgramProjectCode"].ToString();
@@ -77,6 +77,8 @@ namespace BudgetExecution
         public string FocName { get; set; }
 
         public Fund Fund { get; set; }
+
+        public string FundCode { get; set; }
 
         public decimal Amount { get; set; }
 

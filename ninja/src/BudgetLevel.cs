@@ -122,6 +122,8 @@ namespace BudgetExecution
 
         public Fund Fund { get; set; }
 
+        public string FundCode { get; set; }
+
         public string FundName { get; set; }
 
         public decimal Amount { get; set; }

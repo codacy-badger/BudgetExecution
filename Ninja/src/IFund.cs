@@ -14,7 +14,7 @@ namespace BudgetExecution
 
         DataTable Table { get; set; }
 
-        string FiscalYear { get; }
+        string BFY { get; }
 
         string Name { get; }
 
