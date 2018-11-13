@@ -690,7 +690,7 @@ namespace BudgetExecution
                 AddCode.Items.Add(c);
             }
 
-            string[] fund = table.AsEnumerable().Select(p => p.Field<string>("Fund")).Distinct().ToArray();
+            string[] fund = table.AsEnumerable().Select(p => p.Field<string>("FundCode")).Distinct().ToArray();
             foreach (string f in fund)
             {
                 AddFund.Items.Add(f);
