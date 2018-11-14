@@ -741,7 +741,7 @@ namespace BudgetExecution
                 editID.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
                 EditBudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
                 EditBFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
-                EditFund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
+                EditFund.DataBindings.Add(new Binding("Text", Grid.DataSource, "FundCode"));
                 EditAH.DataBindings.Add(new Binding("Text", Grid.DataSource, "AH"));
                 EditOrg.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
                 EditRC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
@@ -820,7 +820,7 @@ namespace BudgetExecution
         ///         <cref>string[]</cref>
         ///     </see>
         /// </returns>
-        private string[] GetTabPageTags()
+        private string[] GetPrimaryChartFIlterItems()
         {
             try
             {
@@ -1077,24 +1077,11 @@ namespace BudgetExecution
                 AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                 AssignChartExpanders(BocExpander1, BocExpander2);
                 PopulateFilterBoxItems(BocFilter3, ProgramElements[PrimaryGrouping.ToString()]);
-                var tabpage = GetTabPageTags().AsEnumerable()
-                                              .Where(p => p != PrimaryGrouping.ToString())
-                                              .Select(p => p).ToArray();
+                var tabpage = GetPrimaryChartFIlterItems().AsEnumerable()
+                                                          .Where(p => p != PrimaryGrouping.ToString())
+                                                          .Select(p => p).ToArray();
                 PopulateFilterBoxItems(BocFilter4, tabpage);
-                if (Source == Source.RegionalAccounts)
-                {
-                    BocFilter4.Items.Remove("RC");
-                }
-
-                if (Division != null)
-                {
-                    ChartMainTitle = new[] { $"{Division} Funding By Appropriation" };
-                }
-                else
-                {
-                    ChartMainTitle = new[] { $"{Source.ToString()} Funding By {PrimaryGrouping}" };
-                }
-
+                ChartMainTitle = new[] { $"{Source.ToString()} Funding By {PrimaryGrouping}" };
                 BocFilter4.Items.Remove(PrimaryGrouping.ToString());
                 BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, PrimaryGrouping, Stat.Total, ChartSeriesType.Column).Activate();                      
             }
@@ -1125,7 +1112,7 @@ namespace BudgetExecution
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
                         PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["BocName"]);
-                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
+                        PopulateFilterBoxItems(BocFilter4, GetPrimaryChartFIlterItems());
                         BocFilter4.Items.Remove("BocName");
                         if (DbData.Source == Source.RegionalAccounts)
                         {
@@ -1464,7 +1451,7 @@ namespace BudgetExecution
                         var ci = new CaptionImage();
                         ci.Image = b;
                         ci.BackColor = Color.Black;
-                        ci.Size = new Size(40, 30);
+                        ci.Size = new Size(30, 25);
                         ci.Location = new Point(10, 5);
                         CaptionImages.Add(ci);
                     }
