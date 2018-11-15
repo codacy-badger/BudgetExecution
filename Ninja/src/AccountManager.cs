@@ -2,17 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
+using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Windows.Forms;
-
-    using MetroSet_UI.Controls;
-
-    using Syncfusion.Windows.Forms;
-
     public partial class AccountManager : MetroForm
     {
         // CONSTRUCTORS
@@ -24,7 +22,7 @@ namespace BudgetExecution
         public AccountManager(DataBuilder data)
         {
             InitializeComponent();
-            if (DbData == null)
+            if(DbData == null)
             {
                 DbData = data;
             }
@@ -120,7 +118,7 @@ namespace BudgetExecution
         {
             try
             {
-                foreach (DataGridViewColumn dc in dgv.Columns)
+                foreach(DataGridViewColumn dc in dgv.Columns)
                 {
                     dc.Visible = false;
                 }
@@ -134,7 +132,7 @@ namespace BudgetExecution
                 dgv.Columns[12].Visible = true;
                 dgv.Columns[12].DefaultCellStyle.Format = "c";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -149,7 +147,7 @@ namespace BudgetExecution
                 bn.BindingSource = bs;
                 ConfigureGridVisibleColumns(dg);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -157,11 +155,11 @@ namespace BudgetExecution
 
         internal Dictionary<string, object> GetCurrentRowDictionary(BindingSource bs)
         {
-            if (bs.DataSource != null)
+            if(bs.DataSource != null)
             {
                 try
                 {
-                    DataRow row = (DataRow)bs.Current;
+                    DataRow row = (DataRow) bs.Current;
                     Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row["ID"].ToString()));
                     data.Add("AH", row["AH"].ToString());
@@ -171,7 +169,7 @@ namespace BudgetExecution
                     data.Add("BOC", row["BOC"].ToString());
                     return data;
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -203,7 +201,7 @@ namespace BudgetExecution
                 UpdateProgramArea.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramAreaName"));
                 UpdateAmount.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Amount"));
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -230,7 +228,7 @@ namespace BudgetExecution
                 AddYear.DataSource = BindingSource;
                 AddYear.DisplayMember = "BFY";
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Console.WriteLine(e);
                 throw;
@@ -239,37 +237,37 @@ namespace BudgetExecution
 
         internal void PopulateComboBoxes()
         {
-            foreach (string s in SubProject)
+            foreach(string s in SubProject)
             {
                 AddSubProject.Items.Add(s);
             }
 
-            foreach (string c in Code)
+            foreach(string c in Code)
             {
                 AddCode.Items.Add(c);
             }
 
-            foreach (string f in Fund)
+            foreach(string f in Fund)
             {
                 AddFund.Items.Add(f);
             }
 
-            foreach (string r in RC)
+            foreach(string r in RC)
             {
                 AddRc.Items.Add(r);
             }
 
-            foreach (string o in Org)
+            foreach(string o in Org)
             {
                 AddOrg.Items.Add(o);
             }
 
-            foreach (string a in AH)
+            foreach(string a in AH)
             {
                 AddAh.Items.Add(a);
             }
 
-            foreach (string b in BOC)
+            foreach(string b in BOC)
             {
                 AddBoc.Items.Add(b);
             }
@@ -280,12 +278,12 @@ namespace BudgetExecution
             try
             {
                 string[] codes = Info.AgencyFundCodes;
-                foreach (string c in codes)
+                foreach(string c in codes)
                 {
                     AddFund.Items.Add(c);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -296,14 +294,14 @@ namespace BudgetExecution
             try
             {
                 List<Label> lblList = null;
-                foreach (Label lbl in gbo.Controls)
+                foreach(Label lbl in gbo.Controls)
                 {
                     lblList.Add(lbl);
                 }
 
                 return lblList;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -315,14 +313,14 @@ namespace BudgetExecution
             try
             {
                 List<MetroSetComboBox> cboList = new List<MetroSetComboBox>();
-                foreach (MetroSetComboBox cbo in gbo.Controls)
+                foreach(MetroSetComboBox cbo in gbo.Controls)
                 {
                     cboList.Add(cbo);
                 }
 
                 return cboList;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -334,14 +332,14 @@ namespace BudgetExecution
             try
             {
                 List<Label> labels = new List<Label>();
-                foreach (Label lbl in RecorDataGroupBox.Controls)
+                foreach(Label lbl in RecorDataGroupBox.Controls)
                 {
                     labels.Add(lbl);
                 }
 
                 return labels;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -353,14 +351,14 @@ namespace BudgetExecution
             try
             {
                 List<MetroSetComboBox> labels = null;
-                foreach (MetroSetComboBox lbl in RecorDataGroupBox.Controls)
+                foreach(MetroSetComboBox lbl in RecorDataGroupBox.Controls)
                 {
                     labels.Add(lbl);
                 }
 
                 return labels;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -377,14 +375,14 @@ namespace BudgetExecution
                 string[] col = table.GetColumnNames();
                 object[] val = row.ItemArray;
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                for (int i = 0; i < cct; i++)
+                for(int i = 0; i < cct; i++)
                 {
                     param.Add(col[i], val[i]);
                 }
 
                 return param;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -426,7 +424,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -443,7 +441,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -457,12 +455,12 @@ namespace BudgetExecution
         {
             try
             {
-                foreach (string s in list)
+                foreach(string s in list)
                 {
                     comboBox.Items.Add(s);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

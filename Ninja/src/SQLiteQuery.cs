@@ -2,14 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.SQLite;
-
     public class SQLiteQuery : Query, IQuery
     {
         // CONSTRUCTORS
@@ -17,7 +16,7 @@ namespace BudgetExecution
         {
         }
 
-        public SQLiteQuery(Source source): base(source)
+        public SQLiteQuery(Source source) : base(source)
         {
             Provider = base.Provider;
             Source = base.Source;
@@ -75,7 +74,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             SqlStatement = GetSqlStatement(Source, SqlCmd, param);
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
-            DataAdapter = GetDataAdapter((SQLiteCommand)DataCommand);
+            DataAdapter = GetDataAdapter((SQLiteCommand) DataCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -120,7 +119,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (KeyValuePair<string, object> p in param)
+                foreach(KeyValuePair<string, object> p in param)
                 {
                     vals += $"{p.Key} = '{p.Value}' AND ";
                 }
@@ -128,7 +127,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -141,7 +140,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {table} WHERE {sql}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -152,9 +151,9 @@ namespace BudgetExecution
         {
             try
             {
-                return (SQLiteConnection)base.DataConnection;
+                return (SQLiteConnection) base.DataConnection;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -166,7 +165,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (SQLiteParameter p in param)
+                foreach(SQLiteParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -174,7 +173,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return $"SELECT * FROM {source.ToString()} WHERE {vals}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -187,11 +186,11 @@ namespace BudgetExecution
             {
                 string vals = string.Empty;
                 int pid = 0;
-                foreach (SQLiteParameter p in param)
+                foreach(SQLiteParameter p in param)
                 {
-                    if (p.SourceColumn == "ID")
+                    if(p.SourceColumn == "ID")
                     {
-                        pid = (int)p.Value;
+                        pid = (int) p.Value;
                     }
 
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
@@ -200,7 +199,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -213,7 +212,7 @@ namespace BudgetExecution
             {
                 string cols = string.Empty;
                 string vals = string.Empty;
-                foreach (SQLiteParameter p in param)
+                foreach(SQLiteParameter p in param)
                 {
                     cols += $"{p.SourceColumn}, ";
                     vals += $"{p.Value}, ";
@@ -223,7 +222,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 2);
                 return $"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -235,7 +234,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (SQLiteParameter p in param)
+                foreach(SQLiteParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -243,7 +242,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return $"DELETE * FROM {source.ToString()} WHERE {vals}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -254,11 +253,11 @@ namespace BudgetExecution
         {
             try
             {
-                if (provider == Provider.SQLite)
+                if(provider == Provider.SQLite)
                 {
                     string sql = GetSelectStatement(source, pmr);
                     SQLiteCommand select = new SQLiteCommand(sql, connection);
-                    foreach (SQLiteParameter p in pmr)
+                    foreach(SQLiteParameter p in pmr)
                     {
                         select.Parameters.Add(p);
                     }
@@ -268,7 +267,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -279,11 +278,11 @@ namespace BudgetExecution
         {
             try
             {
-                if (provider == Provider.SQLite)
+                if(provider == Provider.SQLite)
                 {
                     string sql = GetUpdateStatement(source, pmr);
                     SQLiteCommand update = new SQLiteCommand(sql, connection);
-                    foreach (SQLiteParameter p in pmr)
+                    foreach(SQLiteParameter p in pmr)
                     {
                         update.Parameters.Add(p);
                     }
@@ -293,7 +292,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -304,11 +303,11 @@ namespace BudgetExecution
         {
             try
             {
-                if (provider == Provider.SQLite)
+                if(provider == Provider.SQLite)
                 {
                     string sql = GetInsertStatement(source, pmr);
                     SQLiteCommand insert = new SQLiteCommand(sql, connection);
-                    foreach (SQLiteParameter p in pmr)
+                    foreach(SQLiteParameter p in pmr)
                     {
                         insert.Parameters.Add(p);
                     }
@@ -318,7 +317,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -329,11 +328,11 @@ namespace BudgetExecution
         {
             try
             {
-                if (provider == Provider.SQLite)
+                if(provider == Provider.SQLite)
                 {
                     string sql = GetDeleteStatement(source, pmr);
                     SQLiteCommand delete = new SQLiteCommand(sql, connection);
-                    foreach (SQLiteParameter p in pmr)
+                    foreach(SQLiteParameter p in pmr)
                     {
                         delete.Parameters.Add(p);
                     }
@@ -343,7 +342,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -354,7 +353,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (cmd)
+                switch(cmd)
                 {
                     case Sql.SELECT:
                         return GetSelectCommand(source, provider, pmr, connection);
@@ -372,7 +371,7 @@ namespace BudgetExecution
                         return GetSelectCommand(source, provider, pmr, connection);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -386,7 +385,7 @@ namespace BudgetExecution
                 SelectStatement = select;
                 return new SQLiteCommand(select, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -399,7 +398,7 @@ namespace BudgetExecution
             {
                 return new SQLiteDataAdapter(command);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -412,7 +411,7 @@ namespace BudgetExecution
             {
                 return command.ExecuteReader();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -425,7 +424,7 @@ namespace BudgetExecution
             {
                 return new SQLiteCommandBuilder(adapter);
             }
-            catch (SystemException ex)
+            catch(SystemException ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -439,7 +438,7 @@ namespace BudgetExecution
                 SelectStatement = select;
                 return new SQLiteCommand(SelectStatement, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -453,7 +452,7 @@ namespace BudgetExecution
                 SelectStatement = GetParameterStrings(param);
                 return new SQLiteCommand(SelectStatement, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

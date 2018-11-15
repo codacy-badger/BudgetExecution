@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-
     public class RC
     {
         // CONSTRUCTORS
@@ -40,7 +40,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = Code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

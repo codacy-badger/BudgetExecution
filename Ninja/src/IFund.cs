@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Data;
+
 namespace BudgetExecution
 {
-    using System.Collections.Generic;
-    using System.Data;
-
     public interface IFund
     {
         // PROPERTIES

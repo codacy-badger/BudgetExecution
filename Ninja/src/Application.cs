@@ -2,14 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-
-    using Syncfusion.Windows.Forms.Chart;
-
     // Delegates
     public delegate DataTable TableDelegate(DataTable table, Field column, string filter);
 
@@ -63,7 +62,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The main entry point for the application.
         /// </summary>
-        [STAThread]
+        [ STAThread ]
         private static void Main()
         {
             System.Windows.Forms.Application.EnableVisualStyles();

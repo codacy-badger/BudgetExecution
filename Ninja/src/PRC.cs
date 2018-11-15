@@ -2,14 +2,19 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.Common;
-    using System.Linq;
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="BudgetExecution.IPRC" />
+    /// <seealso cref="BudgetExecution.IAccount" />
     public class PRC : IPRC, IAccount
     {
         // CONSTRUCTORS
@@ -31,7 +36,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(source, provider, param);
             Allocation = DbData.Records;
-            if (DbData.Table.Rows.Count == 1)
+            if(DbData.Table.Rows.Count == 1)
             {
                 Data = DbData.Table.AsEnumerable().Select(p => p).Single();
                 ID = int.Parse(Data["ID"].ToString());
@@ -173,122 +178,182 @@ namespace BudgetExecution
         public string Objective { get; }
 
         // METHODS
+        /// <summary>
+        /// Gets the code.
+        /// </summary>
+        /// <returns></returns>
         public string GetCode()
         {
-            return Code;
+            try
+            {
+                return Code;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the goal.
+        /// </summary>
+        /// <returns></returns>
         public string GetGoal()
         {
-            char[] goal = Code.Substring(0, 1).ToCharArray();
-            return goal.ToString();
+            try
+            {
+                char[] goal = Code.Substring(0, 1).ToCharArray();
+                return goal.ToString();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the name of the goal.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         public string GetGoalName(string code)
         {
-            return Info.GetGoalName(code);
+            try
+            {
+                return Info.GetGoalName(code);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the NPM code.
+        /// </summary>
+        /// <returns></returns>
         public string GetNpmCode()
         {
-            char[] npm = Code.Substring(2, 1).ToCharArray();
-            return npm.ToString();
+            try
+            {
+                char[] npm = Code.Substring(2, 1).ToCharArray();
+                return npm.ToString();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the objective.
+        /// </summary>
+        /// <returns></returns>
         public string GetObjective()
         {
-            return Code.Substring(1, 2);
+            try
+            {
+                return Code.Substring(1, 2);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the name of the objective.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         public string GetObjectiveName(string code)
         {
-            return Info.GetObjectiveName(code);
+            try
+            {
+                return Info.GetObjectiveName(code);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        /// <summary>
+        /// Gets the program project code.
+        /// </summary>
+        /// <returns></returns>
         public string GetProgramProjectCode()
         {
             return Code.Substring(5, 2);
         }
 
+        /// <summary>
+        /// Gets the data dictionary.
+        /// </summary>
+        /// <returns></returns>
         internal Dictionary<string, object> GetDataDictionary()
         {
             try
             {
                 return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
 
+        /// <summary>
+        /// Gets the data.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal DataRow GetData(Dictionary<string, object> param)
         {
             try
             {
                 return new DataBuilder(Source, Provider, param).Table.AsEnumerable().Select(p => p).First();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
-        {
-            return Account.Code;
-        }
-
-        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
-                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName") || param["FundName"] == null)
-                {
-                    param["FundName"] = account.FundName;
-                }
-
-                if (!param.ContainsKey("Org") || param["Org"] == null)
-                {
-                    param["Org"] = account.Org;
-                }
-
-                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
-                {
-                    param["ProgramProject"] = account.ProgramProjectCode;
-                    param["ProgramProjectName"] = account.ProgramProjectName;
-                }
-
-                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
-                {
-                    param["ProgramArea"] = account.ProgramArea;
-                    param["ProgramAreaName"] = account.ProgramAreaName;
-                }
-
-                if (!param.ContainsKey("Goal")|| param["Goal"] == null)
-                {
-                    param["Goal"] = account.Goal;
-                    param["GoalName"] = account.GoalName;
-                }
-
-                if (!param.ContainsKey("Objective") || param["Objective"] == null)
-                {
-                    param["Objective"] = account.Objective;
-                    param["ObjectiveName"] = account.ObjectiveName;
-                }
-
-                return param;
+                return Account.Code;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return null;
+                return string.Empty;
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -296,13 +361,19 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -314,12 +385,18 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -337,6 +414,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -348,7 +431,7 @@ namespace BudgetExecution
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

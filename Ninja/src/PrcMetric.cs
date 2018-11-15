@@ -2,13 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class PrcMetric
     {
         // CONSTRUCTORS
@@ -46,13 +46,14 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccounts && DbData.Input == null)
+            if(DbData.Source == Source.DivisionAccounts &&
+               DbData.Input == null)
             {
                 DivisionTotals = GetDataTotals(Table, Field.RC);
                 DivisionMetrics = GetMetrics(Table, Field.RC);
             }
 
-            if (DbData.Source == Source.PRC)
+            if(DbData.Source == Source.PRC)
             {
                 DataTable table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, Field.RC);
@@ -89,7 +90,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccounts)
+            if(DbData.Source == Source.DivisionAccounts)
             {
                 DivisionTotals = GetDataTotals(DbData.Table, Field.RC);
                 DivisionMetrics = GetMetrics(DbData.Table, Field.RC);
@@ -200,7 +201,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -213,7 +214,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Sum(p => p.Field<decimal>("Amount"));
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1M;
@@ -226,7 +227,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -235,7 +236,7 @@ namespace BudgetExecution
 
         public double[] GetMetrics(DataTable table)
         {
-            return new[] { (double)GetTotals(table), GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)Total };
+            return new[] { (double) GetTotals(table), GetCount(table), (double) GetAverage(table), (double) GetTotals(table) / (double) Total };
         }
 
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
@@ -243,9 +244,10 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                foreach (DataColumn dc in table.Columns)
+                foreach(DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    if(dc.ColumnName.Equals("ID") ||
+                       dc.ColumnName.Equals("Amount"))
                     {
                         continue;
                     }
@@ -253,24 +255,24 @@ namespace BudgetExecution
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
 
-                if (data.ContainsKey("ID"))
+                if(data.ContainsKey("ID"))
                 {
                     data.Remove("ID");
                 }
 
-                if (data.ContainsKey("Amount"))
+                if(data.ContainsKey("Amount"))
                 {
                     data.Remove("Amount");
                 }
 
-                if (data.ContainsKey("P6_ID"))
+                if(data.ContainsKey("P6_ID"))
                 {
                     data.Remove("P6_ID");
                 }
 
                 return data;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -283,7 +285,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return -1;
@@ -295,10 +297,10 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach (string filter in GetCodes(table, prcfilter.ToString()))
+                foreach(string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetTotals(query) > 0)
+                    if(GetTotals(query) > 0)
                     {
                         info.Add(filter, GetTotals(query));
                     }
@@ -306,7 +308,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -318,10 +320,10 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, double[]> info = new Dictionary<string, double[]>();
-                foreach (string filter in GetCodes(table, prcfilter.ToString()))
+                foreach(string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetTotals(query) > 0)
+                    if(GetTotals(query) > 0)
                     {
                         info.Add(filter, GetMetrics(query));
                     }
@@ -329,7 +331,7 @@ namespace BudgetExecution
 
                 return info;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -341,18 +343,18 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, double> doubledata = new Dictionary<string, double>();
-                foreach (string filter in GetCodes(table, prcfilter.ToString()))
+                foreach(string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetTotals(query) > 0)
+                    if(GetTotals(query) > 0)
                     {
-                        doubledata.Add(filter, (double)GetTotals(query));
+                        doubledata.Add(filter, (double) GetTotals(query));
                     }
                 }
 
                 return doubledata;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -364,18 +366,18 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, double[]> info = new Dictionary<string, double[]>();
-                foreach (string filter in GetCodes(table, prcfilter.ToString()))
+                foreach(string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetTotals(query) > 0)
+                    if(GetTotals(query) > 0)
                     {
-                        info.Add(filter, new[] { (double)GetTotals(query) });
+                        info.Add(filter, new[] { (double) GetTotals(query) });
                     }
                 }
 
                 return info;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

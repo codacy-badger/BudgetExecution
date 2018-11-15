@@ -2,13 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class Fund : IFund
     {
         // CONSTRUCTORS
@@ -56,7 +57,7 @@ namespace BudgetExecution
             BFY = p["BFY"].ToString();
             Parameter = GetDataFields(Code, BFY);
             Table = GetData(source, provider, Parameter);
-            if (Table.Rows.Count == 1)
+            if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(prc => prc).Single();
                 ID = int.Parse(Data["ID"].ToString());
@@ -105,7 +106,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = code, ["FiscalYear"] = bfy };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -116,13 +117,13 @@ namespace BudgetExecution
         {
             try
             {
-                GetData(Source.Funds, Provider.SQLite, this.Parameter);
+                GetData(Source.Funds, Provider.SQLite, Parameter);
                 Parameter.Add("Name", Name);
                 Parameter.Add("Title", Title);
                 Parameter.Add("TreasurySymbol", TreasurySymbol);
                 return Parameter;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -136,7 +137,7 @@ namespace BudgetExecution
                 DataBuilder data = new DataBuilder(source, provider, param);
                 return data.Table;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -151,7 +152,7 @@ namespace BudgetExecution
 
                 return prc.Keys.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -166,7 +167,7 @@ namespace BudgetExecution
 
                 return param.Values.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -178,27 +179,27 @@ namespace BudgetExecution
             try
             {
                 Fund account = new Fund(source, provider, param);
-                if (!param.ContainsKey("Name")
-                    || param["Name"] == null)
+                if(!param.ContainsKey("Name") ||
+                   param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
-                if (!param.ContainsKey("TreasurySymbol")
-                    || param["TreasurySymbol"] == null)
+                if(!param.ContainsKey("TreasurySymbol") ||
+                   param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
-                if (!param.ContainsKey("Title")
-                    || param["Title"] == null)
+                if(!param.ContainsKey("Title") ||
+                   param["Title"] == null)
                 {
                     param["Title"] = account.Title;
                 }
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -212,7 +213,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -226,7 +227,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -238,13 +239,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -255,13 +256,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -272,13 +273,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

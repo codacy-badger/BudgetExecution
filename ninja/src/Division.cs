@@ -2,13 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class Division
     {
         // CONSTRUCTORS
@@ -26,11 +27,12 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider, p);
             Records = DbData.Table.AsEnumerable().Select(r => r).ToArray();
-            if (DbData.Table.Rows.Count == 1)
+            if(DbData.Table.Rows.Count == 1)
             {
                 Data = DbData.Table.AsEnumerable()
                              .Where(d => d.Field<string>("Source").Equals(source.ToString(), StringComparison.CurrentCultureIgnoreCase))
-                             .Select(d => d).First();
+                             .Select(d => d)
+                             .First();
                 ID = Data["ID"].ToString();
                 RC = Data["RC"].ToString();
                 Title = Data["Title"].ToString();
@@ -84,7 +86,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object> { ["Code"] = Code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -96,13 +98,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -113,13 +115,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -130,13 +132,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

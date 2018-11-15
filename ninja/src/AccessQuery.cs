@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.OleDb;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.OleDb;
-
     public class AccessQuery : Query, IQuery
     {
         // Constructors
@@ -86,7 +86,7 @@ namespace BudgetExecution
 
         public new OleDbCommand DeleteCommand { get; }
 
-        public new AppSettingsReader Settings { get; set; }
+        public AppSettingsReader Settings { get; set; }
 
         public new Source Source { get; }
 
@@ -99,7 +99,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {TableName} WHERE {sql}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -116,14 +116,14 @@ namespace BudgetExecution
             try
             {
                 OleDbParameter[] val = new OleDbParameter[dr.ItemArray.Length];
-                for (int i = 0; i < dr.ItemArray.Length; i++)
+                for(int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val[i] = new OleDbParameter(dr.Table.Columns[i].ColumnName, dr[i]);
                 }
 
                 return val;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -140,18 +140,18 @@ namespace BudgetExecution
             try
             {
                 OleDbParameter[] val = new OleDbParameter[param.Count];
-                for (int i = 0; i < param.Count; i++)
+                for(int i = 0; i < param.Count; i++)
                 {
-                    foreach (KeyValuePair<string, object> kvp in param)
+                    foreach(KeyValuePair<string, object> kvp in param)
                     {
                         val[i] = new OleDbParameter(kvp.Key, kvp.Value);
                         val[i].SourceColumn = kvp.Key;
-                        if (kvp.Key.Equals("ID"))
+                        if(kvp.Key.Equals("ID"))
                         {
                             val[i].DbType = DbType.Int64;
                         }
 
-                        if (kvp.Key.Equals("Amount"))
+                        if(kvp.Key.Equals("Amount"))
                         {
                             val[i].DbType = DbType.Decimal;
                         }
@@ -164,7 +164,7 @@ namespace BudgetExecution
 
                 return val;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -181,14 +181,14 @@ namespace BudgetExecution
             try
             {
                 List<OleDbParameter> val = new List<OleDbParameter>();
-                for (int i = 0; i < dr.ItemArray.Length; i++)
+                for(int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val.Add(new OleDbParameter(dr.Table.Columns[i].ColumnName, dr[i]));
                 }
 
                 return val;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -205,14 +205,14 @@ namespace BudgetExecution
             try
             {
                 List<OleDbParameter[]> val = new List<OleDbParameter[]>();
-                foreach (DataRow dr in table.Rows)
+                foreach(DataRow dr in table.Rows)
                 {
                     val.Add(GetParameter(dr));
                 }
 
                 return val;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -229,7 +229,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (KeyValuePair<string, object> kvp in param)
+                foreach(KeyValuePair<string, object> kvp in param)
                 {
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
@@ -237,7 +237,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -254,7 +254,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (OleDbParameter p in param)
+                foreach(OleDbParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -262,7 +262,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -279,7 +279,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommandBuilder(Adapter);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -296,7 +296,7 @@ namespace BudgetExecution
             {
                 return new OleDbDataAdapter(SelectCommand);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -313,7 +313,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (KeyValuePair<string, object> kvp in param)
+                foreach(KeyValuePair<string, object> kvp in param)
                 {
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
@@ -321,7 +321,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -338,7 +338,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommand(SelectStatement, DataConnection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -356,7 +356,7 @@ namespace BudgetExecution
             {
                 return new OleDbDataAdapter(sql, DataConnection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -374,7 +374,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommandBuilder(adapter);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -392,7 +392,7 @@ namespace BudgetExecution
             {
                 return new OleDbDataAdapter(command.CommandText, command.Connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -409,7 +409,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommandBuilder(Adapter).GetDeleteCommand();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -426,7 +426,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommandBuilder(Adapter).GetInsertCommand();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -444,7 +444,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommand(select, DataConnection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -461,7 +461,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -478,7 +478,7 @@ namespace BudgetExecution
             {
                 return new OleDbCommandBuilder(Adapter).GetUpdateCommand();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

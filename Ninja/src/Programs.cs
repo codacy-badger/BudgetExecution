@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System.Data;
-    using System.Linq;
-
     public class Programs
     {
         // CONSTRUCTORS

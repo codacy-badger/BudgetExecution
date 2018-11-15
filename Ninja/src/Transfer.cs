@@ -2,13 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class Transfer
     {
         // CONSTRUCTORS
@@ -45,7 +46,7 @@ namespace BudgetExecution
             Qtr = qtr;
             Date = date;
             Code = code;
-            Account = new Account((Provider)0, this.BFY, fund, code);
+            Account = new Account(0, BFY, fund, code);
             NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
@@ -66,7 +67,7 @@ namespace BudgetExecution
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
-            Account = new Account((Provider)Provider.SQLite, this.BFY, this.Fund.Code, this.Code);
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
             NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
@@ -134,27 +135,27 @@ namespace BudgetExecution
             try
             {
                 Fund account = new Fund(source, provider, param);
-                if (!param.ContainsKey("Name")
-                   || param["Name"] == null)
+                if(!param.ContainsKey("Name") ||
+                   param["Name"] == null)
                 {
                     param["Name"] = account.Name;
                 }
 
-                if (!param.ContainsKey("TreasurySymbol")
-                   || param["TreasurySymbol"] == null)
+                if(!param.ContainsKey("TreasurySymbol") ||
+                   param["TreasurySymbol"] == null)
                 {
                     param["TreasurySymbol"] = account.TreasurySymbol;
                 }
 
-                if (!param.ContainsKey("Title")
-                   || param["Title"] == null)
+                if(!param.ContainsKey("Title") ||
+                   param["Title"] == null)
                 {
                     param["Title"] = account.Title;
                 }
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -174,7 +175,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Transfer(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -195,59 +196,77 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Transfer(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

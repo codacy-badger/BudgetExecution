@@ -2,12 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-
     public class Personnel
     {
         // CONSTRUCTORS
@@ -59,8 +60,6 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public SQLiteQuery DbQuery { get; set; }
-
         public DataTable DbTable { get; set; }
 
         public DataRow DbRow { get; set; }
@@ -90,13 +89,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -107,13 +106,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -124,13 +123,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

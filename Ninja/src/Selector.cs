@@ -2,17 +2,16 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Configuration;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Configuration;
-    using System.Drawing;
-    using System.IO;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Tools;
-
     public partial class Selector : MetroForm
     {
         // CONSTRUCTORS
@@ -50,7 +49,7 @@ namespace BudgetExecution
             ViewerCarousel.UseOriginalImageinPreview = true;
             string[] images = Directory.GetFiles(path);
             FilePath = path;
-            foreach (string i in images)
+            foreach(string i in images)
             {
                 string p = Path.GetFileNameWithoutExtension(i);
                 Bitmap b = new Bitmap(i);
@@ -71,10 +70,10 @@ namespace BudgetExecution
         public void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             Carousel carousel = sender as Carousel;
-            if (carousel?.ActiveImage.Tag != null)
+            if(carousel?.ActiveImage.Tag != null)
             {
                 string i = carousel.ActiveImage.Tag.ToString();
-                switch (i)
+                switch(i)
                 {
                     case "SummaryImages":
                         Selector f = new Selector(Info.SummaryImages);
@@ -83,7 +82,7 @@ namespace BudgetExecution
                         return;
 
                     case "DatabaseImages":
-                        var ds = new DatabaseSelector(Info.DatabaseImages);
+                        DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
@@ -93,7 +92,7 @@ namespace BudgetExecution
                         Close();
                         return;
                     case "FunctionImages":
-                        var fi = new Selector(Info.FunctionImages);
+                        Selector fi = new Selector(Info.FunctionImages);
                         fi.Show();
                         Close();
                         return;
@@ -110,7 +109,7 @@ namespace BudgetExecution
                         return;
                 }
 
-                Source source = (Source)Enum.Parse(typeof(Source), i);
+                Source source = (Source) Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(source, Provider.SQLite);
                 sf.Show();
                 Close();

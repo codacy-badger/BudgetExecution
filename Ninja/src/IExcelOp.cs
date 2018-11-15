@@ -2,12 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using Microsoft.Office.Interop.Excel;
+
 namespace BudgetExecution
 {
-    using System;
-
-    using Microsoft.Office.Interop.Excel;
-
     public interface IExcelOp
     {
         // PROPERTIES

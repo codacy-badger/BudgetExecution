@@ -2,19 +2,17 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Drawing;
-    using System.Windows.Forms;
-
-    using MetroSet_UI.Controls;
-
-    using Syncfusion.Windows.Forms;
-
     public partial class ExcelForm : MetroForm
     {
         // CONSTRUCTORS
@@ -94,9 +92,9 @@ namespace BudgetExecution
             try
             {
                 AppSettingsReader setting = new AppSettingsReader();
-                return (string)setting.GetValue("BudgetReport", typeof(string));
+                return (string) setting.GetValue("BudgetReport", typeof(string));
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -108,10 +106,10 @@ namespace BudgetExecution
             try
             {
                 AppSettingsReader setting = new AppSettingsReader();
-                string report = (string)setting.GetValue("BudgetReport", typeof(string));
+                string report = (string) setting.GetValue("BudgetReport", typeof(string));
                 BudgetReport.Open(report);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -122,7 +120,7 @@ namespace BudgetExecution
             try
             {
                 container.Controls.Clear();
-                foreach (string f in list)
+                foreach(string f in list)
                 {
                     MetroSetButton b = new MetroSetButton();
                     b.Text = f;
@@ -141,7 +139,7 @@ namespace BudgetExecution
                     b.Tag = f;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -152,13 +150,13 @@ namespace BudgetExecution
             try
             {
                 InitializeFilterButtons(container, filter);
-                foreach (MetroSetComboBox c in container.Controls)
+                foreach(MetroSetComboBox c in container.Controls)
                 {
                     MetroSetButton msb = new MetroSetButton();
                     InitializeFilterButtons(msb, filter);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -193,7 +191,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

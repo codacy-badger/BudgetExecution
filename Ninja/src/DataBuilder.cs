@@ -2,17 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System.Collections.Specialized;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-    using System.Windows.Forms;
-
     public class DataBuilder : IDataBuilder
     {
         // CONSTRUCTORS
@@ -26,12 +23,12 @@ namespace BudgetExecution
             Source = q.Source;
             Query = new Query(q.Source, q.Provider, q.Sql);
 
-            if (q.Source == Source.PRC)
+            if(q.Source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             }
 
-            if (q.Source == Source.FTE)
+            if(q.Source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             }
@@ -54,19 +51,24 @@ namespace BudgetExecution
             Source = source;
             Query = new Query(source, provider);
 
-            if (source == Source.PRC)
+            if(source == Source.PRC)
             {
-                Table = GetDataTable(Source).AsEnumerable()
-                                            .Where(p => p.Field<string>("BOC") != "17")
-                                            .Where(p => p.Field<decimal>("Amount") > 0)
-                                            .Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source)
+                        .AsEnumerable()
+                        .Where(p => p.Field<string>("BOC") != "17")
+                        .Where(p => p.Field<decimal>("Amount") > 0)
+                        .Select(p => p)
+                        .CopyToDataTable();
             }
 
-            if (source == Source.FTE)
+            if(source == Source.FTE)
             {
-                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                                            .Where(p => p.Field<decimal>("Amount") > 0)
-                                            .Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source)
+                        .AsEnumerable()
+                        .Where(p => p.Field<string>("BOC").Equals("17"))
+                        .Where(p => p.Field<decimal>("Amount") > 0)
+                        .Select(p => p)
+                        .CopyToDataTable();
             }
             else
             {
@@ -86,12 +88,12 @@ namespace BudgetExecution
             Provider = provider;
             Input = param;
             Query = new Query(source, provider, Sql.SELECT, Input);
-            if (source == Source.PRC)
+            if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             }
 
-            if (source == Source.FTE)
+            if(source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             }
@@ -135,7 +137,7 @@ namespace BudgetExecution
         // METHODS
 
         /// <summary>
-        /// Gets the data table.
+        ///     Gets the data table.
         /// </summary>
         /// <returns></returns>
         public DataTable GetDataTable()
@@ -150,7 +152,7 @@ namespace BudgetExecution
                 Query.DataAdapter.Fill(ds, dt.TableName);
                 return dt;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -168,7 +170,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Select(p => p).ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -191,7 +193,7 @@ namespace BudgetExecution
                 Query.DataAdapter.Fill(ds, Source.ToString());
                 return ds;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -215,7 +217,7 @@ namespace BudgetExecution
                 Query.DataAdapter.Fill(ds, dt.TableName);
                 return dt;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -233,7 +235,7 @@ namespace BudgetExecution
             {
                 return new SQLiteQuery(source, provider, sql);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -252,13 +254,13 @@ namespace BudgetExecution
             {
                 return new SQLiteQuery(source, provider, sql, pmr);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
-        
+
 
         public static DataTable FilterRecords(DataTable table, Tuple<string, string> p)
         {
@@ -266,7 +268,8 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable()
                             .Where(prc => prc.Field<string>(p.Item1.ToString()).Equals(p.Item2.ToString(), StringComparison.CurrentCultureIgnoreCase))
-                            .Select(prc => prc).CopyToDataTable();
+                            .Select(prc => prc)
+                            .CopyToDataTable();
             }
             catch(Exception ex)
             {
@@ -288,7 +291,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<string>(col.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -306,7 +309,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (col.Length)
+                switch(col.Length)
                 {
                     case 1 when filter.Length == 1:
                         return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Select(p => p).CopyToDataTable();
@@ -318,7 +321,7 @@ namespace BudgetExecution
                         return null;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -335,14 +338,14 @@ namespace BudgetExecution
         {
             try
             {
-                if (table.GetColumnNames().Contains(column))
+                if(table.GetColumnNames().Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -359,14 +362,14 @@ namespace BudgetExecution
         {
             try
             {
-                if (table.GetColumnNames().Contains(column.ToString()))
+                if(table.GetColumnNames().Contains(column.ToString()))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column.ToString())).Distinct().ToArray();
                 }
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -380,18 +383,26 @@ namespace BudgetExecution
         /// <returns></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
-            if (table != null)
+            if(table != null)
             {
                 try
                 {
                     Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
+                    foreach(DataColumn dc in table.Columns)
                     {
-                        if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || 
-                            dc.ColumnName.Equals("Hours") || dc.ColumnName.Contains("OpenCommitments") || 
-                            dc.ColumnName.Contains("ULO") || dc.ColumnName.Equals("Obligations") || dc.ColumnName.Equals("Commitments") ||
-                            dc.ColumnName.Equals("Authority") || dc.ColumnName.Equals("Budgeted") || dc.ColumnName.Equals("Posted") ||
-                            dc.ColumnName.Equals("CarryIn") || dc.ColumnName.Equals("CarryOut") || dc.ColumnName.Equals("Balance"))
+                        if(dc.ColumnName.Equals("ID") ||
+                           dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Equals("Hours") ||
+                           dc.ColumnName.Contains("OpenCommitments") ||
+                           dc.ColumnName.Contains("ULO") ||
+                           dc.ColumnName.Equals("Obligations") ||
+                           dc.ColumnName.Equals("Commitments") ||
+                           dc.ColumnName.Equals("Authority") ||
+                           dc.ColumnName.Equals("Budgeted") ||
+                           dc.ColumnName.Equals("Posted") ||
+                           dc.ColumnName.Equals("CarryIn") ||
+                           dc.ColumnName.Equals("CarryOut") ||
+                           dc.ColumnName.Equals("Balance"))
                         {
                             continue;
                         }
@@ -399,19 +410,19 @@ namespace BudgetExecution
                         data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(dc)).Distinct().ToArray());
                     }
 
-                    if (data.ContainsKey("ID"))
+                    if(data.ContainsKey("ID"))
                     {
                         data.Remove("ID");
                     }
 
-                    if (data.ContainsKey("Amount"))
+                    if(data.ContainsKey("Amount"))
                     {
                         data.Remove("Amount");
                     }
 
                     return data;
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -432,7 +443,7 @@ namespace BudgetExecution
             {
                 return table.Rows.Count;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return 0;
@@ -440,7 +451,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the total.
+        ///     Gets the total.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="table">The table.</param>
@@ -477,13 +488,13 @@ namespace BudgetExecution
         /// <returns></returns>
         public string[] GetColumnNames(DataTable table)
         {
-            if (table.Rows.Count > 0)
+            if(table.Rows.Count > 0)
             {
                 try
                 {
                     return table.GetColumnNames();
                 }
-                catch (SystemException ex)
+                catch(SystemException ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;

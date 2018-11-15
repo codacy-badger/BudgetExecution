@@ -2,13 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class BudgetLevel
     {
         public BudgetLevel()
@@ -32,7 +33,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
-            if (Table.Rows.Count == 1)
+            if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
@@ -164,7 +165,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -173,13 +174,13 @@ namespace BudgetExecution
 
         internal string[] GetDataFields(DataTable table)
         {
-            if (table.Rows.Count > 0)
+            if(table.Rows.Count > 0)
             {
                 try
                 {
                     return table.GetColumnNames();
                 }
-                catch (SystemException ex)
+                catch(SystemException ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -190,7 +191,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data records.
+        ///     Gets the data records.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -202,7 +203,7 @@ namespace BudgetExecution
             {
                 return new DataBuilder(source, provider, p).Table.AsEnumerable().Select(o => o).ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -210,7 +211,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fields.
+        ///     Gets the fields.
         /// </summary>
         /// <returns></returns>
         internal string[] GetFields()
@@ -221,7 +222,7 @@ namespace BudgetExecution
 
                 return prc.Keys.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -235,7 +236,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetDataFields();
                 return param.Values.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -247,35 +248,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") ||
+                   param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org") || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") ||
+                   param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -283,7 +290,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -295,13 +302,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -312,13 +319,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -329,13 +336,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

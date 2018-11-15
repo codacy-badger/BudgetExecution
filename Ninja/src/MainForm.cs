@@ -2,15 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Chart;
-
     public partial class MainForm : MetroForm
     {
         // CONSTRUCTORS
@@ -60,7 +59,7 @@ namespace BudgetExecution
                 Timer.Enabled = true;
                 Timer.Interval = 5000;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -70,20 +69,20 @@ namespace BudgetExecution
         {
             try
             {
-                if (Counter >= Values.Length)
+                if(Counter >= Values.Length)
                 {
                     Counter = 0;
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                     Counter++;
                 }
 
-                if (Counter < Values.Length)
+                if(Counter < Values.Length)
                 {
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                     Counter++;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -115,7 +114,7 @@ namespace BudgetExecution
                 t[6] = "Division Funds by HQ NPM";
                 return t;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -129,7 +128,7 @@ namespace BudgetExecution
                 MainChart = new BudgetChart(chart, title[0], data).Activate();
                 return MainChart;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -143,7 +142,7 @@ namespace BudgetExecution
                 MainChart = new BudgetChart(chart, title, data).Activate();
                 return MainChart;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

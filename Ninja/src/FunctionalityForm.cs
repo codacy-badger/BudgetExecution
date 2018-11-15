@@ -2,16 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Drawing;
-    using System.IO;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Tools;
-
     public partial class FunctionalityForm : MetroForm
     {
         public FunctionalityForm()
@@ -34,7 +33,7 @@ namespace BudgetExecution
             FunctionCarousel.ImageSlides = true;
             FunctionCarousel.UseOriginalImageinPreview = true;
             string[] images = Directory.GetFiles(path);
-            foreach (string i in images)
+            foreach(string i in images)
             {
                 string p = Path.GetFileNameWithoutExtension(i);
                 Bitmap b = new Bitmap(i);
@@ -51,7 +50,7 @@ namespace BudgetExecution
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
             string i = FunctionCarousel.ActiveImage.Tag.ToString();
-            Source s = (Source)Enum.Parse(typeof(Source), i);
+            Source s = (Source) Enum.Parse(typeof(Source), i);
             SummaryForm a = new SummaryForm(s, Provider.SQLite);
             a.Show();
         }

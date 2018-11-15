@@ -2,13 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class Obligation : IObligation
     {
         public Obligation()
@@ -46,7 +46,7 @@ namespace BudgetExecution
             ID = int.Parse(Records[0]["ID"].ToString());
             RPIO = rpio;
             BFY = fy;
-            Fund = new Fund(source, provider, new Dictionary<string, object> { ["FundCode"] = param["FundCode"].ToString(), ["BFY"] = param["BFY"].ToString()});
+            Fund = new Fund(source, provider, new Dictionary<string, object> { ["FundCode"] = param["FundCode"].ToString(), ["BFY"] = param["BFY"].ToString() });
             Org = new Org(org);
             RC = new RC(rc);
             ProgramProjectCode = Records[0]["ProgramProjectCode"].ToString();
@@ -120,7 +120,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -129,13 +129,13 @@ namespace BudgetExecution
 
         internal string[] GetDataFields(DataTable table)
         {
-            if (table.Rows.Count > 0)
+            if(table.Rows.Count > 0)
             {
                 try
                 {
                     return table.GetColumnNames();
                 }
-                catch (SystemException ex)
+                catch(SystemException ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -151,7 +151,7 @@ namespace BudgetExecution
             {
                 return new DataBuilder(source, provider, p).Table.AsEnumerable().Select(o => o).ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -166,7 +166,7 @@ namespace BudgetExecution
 
                 return prc.Keys.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -180,7 +180,7 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetDataFields();
                 return param.Values.ToArray();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -192,41 +192,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                   || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") ||
+                   param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                   || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject")
-                   || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") ||
+                   param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                   || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                   || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                   || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -234,7 +234,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -248,7 +248,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Obligation(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -262,7 +262,7 @@ namespace BudgetExecution
                 DataRow query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
                 return new Obligation(query);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -276,7 +276,7 @@ namespace BudgetExecution
                 InsertDelegate insert = Info.Insert;
                 insert(Source.ProgramObligations, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -289,7 +289,7 @@ namespace BudgetExecution
                 InsertDelegate update = Info.Update;
                 update(Source.ProgramObligations, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -302,7 +302,7 @@ namespace BudgetExecution
                 InsertDelegate delete = Info.Delete;
                 delete(Source.ProgramObligations, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

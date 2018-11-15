@@ -2,34 +2,35 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Linq;
-    using System.Windows.Forms;
-
     public static class Info
     {
         public static AppSettingsReader Setting = new AppSettingsReader();
 
         public static string[] Sources = Enum.GetNames(typeof(Source));
 
-        public static string ObjectClass = (string)Setting.GetValue("ObjectClass", typeof(string));
+        public static string ObjectClass = (string) Setting.GetValue("ObjectClass", typeof(string));
 
-        public static string DivisionImages = (string)Setting.GetValue("Division", typeof(string));
+        public static string DivisionImages = (string) Setting.GetValue("Division", typeof(string));
 
-        public static string SummaryImages = (string)Setting.GetValue("SummaryImages", typeof(string));
+        public static string SummaryImages = (string) Setting.GetValue("SummaryImages", typeof(string));
 
-        public static string FunctionImages = (string)Setting.GetValue("FunctionImages", typeof(string));
+        public static string FunctionImages = (string) Setting.GetValue("FunctionImages", typeof(string));
 
-        public static string DatabaseImages = (string)Setting.GetValue("DatabaseImages", typeof(string));
+        public static string DatabaseImages = (string) Setting.GetValue("DatabaseImages", typeof(string));
 
-        public static string AppropriationImages = (string)Setting.GetValue("AppropriationImages", typeof(string));
+        public static string AppropriationImages = (string) Setting.GetValue("AppropriationImages", typeof(string));
 
-        public static string EnterImages = (string)Setting.GetValue("EnterImages", typeof(string));
+        public static string EnterImages = (string) Setting.GetValue("EnterImages", typeof(string));
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
 
@@ -62,35 +63,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") ||
+                   param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org") || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") ||
+                   param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -98,7 +105,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -107,7 +114,7 @@ namespace BudgetExecution
 
         public static string GetNpm(string code)
         {
-            switch (code)
+            switch(code)
             {
                 case "A":
                     return "OAR";
@@ -152,7 +159,7 @@ namespace BudgetExecution
 
         public static string GetNpmTitle(string code)
         {
-            switch (code)
+            switch(code)
             {
                 case "A":
                     return "OFFICE AIR AND RADIATION";
@@ -197,7 +204,7 @@ namespace BudgetExecution
 
         public static string GetNpmRpio(string code)
         {
-            switch (code)
+            switch(code)
             {
                 case "A":
                     return "27";
@@ -247,7 +254,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -259,13 +266,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -276,13 +283,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.UPDATE, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -293,13 +300,13 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.DELETE, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -311,7 +318,7 @@ namespace BudgetExecution
             {
                 return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -322,14 +329,15 @@ namespace BudgetExecution
         {
             try
             {
-                if (table != null && table.Columns.Contains(column))
+                if(table != null &&
+                   table.Columns.Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -338,19 +346,19 @@ namespace BudgetExecution
 
         public static Dictionary<string, string[]> GetProgramElements(DataTable table, string column)
         {
-            if (table != null
-                && table.GetColumnNames().Contains(column))
+            if(table != null &&
+               table.GetColumnNames().Contains(column))
             {
                 try
                 {
                     Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
+                    foreach(DataColumn dc in table.Columns)
                     {
-                        if (dc.ColumnName.Equals("ID")
-                           || dc.ColumnName.Equals("Amount")
-                           || dc.ColumnName.Contains("Obligation")
-                           || dc.ColumnName.Contains("Commitment")
-                           || dc.ColumnName.Contains("ULO"))
+                        if(dc.ColumnName.Equals("ID") ||
+                           dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Contains("Obligation") ||
+                           dc.ColumnName.Contains("Commitment") ||
+                           dc.ColumnName.Contains("ULO"))
                         {
                             continue;
                         }
@@ -358,19 +366,19 @@ namespace BudgetExecution
                         data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray());
                     }
 
-                    if (data.ContainsKey("ID"))
+                    if(data.ContainsKey("ID"))
                     {
                         data.Remove("ID");
                     }
 
-                    if (data.ContainsKey("Amount"))
+                    if(data.ContainsKey("Amount"))
                     {
                         data.Remove("Amount");
                     }
 
                     return data;
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -422,7 +430,7 @@ namespace BudgetExecution
                 d.Add("Working Captial Fund", Source.WCF);
                 return d;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -448,7 +456,7 @@ namespace BudgetExecution
 
         public static string DivisionName(string rc)
         {
-            switch (rc)
+            switch(rc)
             {
                 case "06K":
                     return "WATER DIVISION";
@@ -502,7 +510,7 @@ namespace BudgetExecution
 
         public static string GetFundName(string fundcode)
         {
-            switch (fundcode)
+            switch(fundcode)
             {
                 case "B":
                     return "EPM";
@@ -612,7 +620,7 @@ namespace BudgetExecution
 
         public static string GetAppropriationTitle(string fundcode)
         {
-            switch (fundcode)
+            switch(fundcode)
             {
                 case "B":
                     return "ENVIRONMENTAL PROGRAMS AND MANAGEMENT";
@@ -721,7 +729,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (boc)
+                switch(boc)
                 {
                     case "10":
                         return "PAYROLL";
@@ -751,7 +759,7 @@ namespace BudgetExecution
                         return "NONE";
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 MessageBox.Show(e.TargetSite + e.StackTrace);
                 return null;
@@ -762,7 +770,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (org)
+                switch(org)
                 {
                     case "06K":
                         return "6WQ";
@@ -810,7 +818,7 @@ namespace BudgetExecution
                         return "R06";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -823,9 +831,9 @@ namespace BudgetExecution
             {
                 DataColumnCollection columns = table.Columns;
                 string[] fields = new string[columns.Count];
-                for (int i = 0; i < columns.Count; i++)
+                for(int i = 0; i < columns.Count; i++)
                 {
-                    foreach (DataColumn dc in columns)
+                    foreach(DataColumn dc in columns)
                     {
                         fields[i] = dc.ColumnName;
                     }
@@ -833,7 +841,7 @@ namespace BudgetExecution
 
                 return fields;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -844,7 +852,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (goal)
+                switch(goal)
                 {
                     case "01":
                         return "CORE MISSION";
@@ -868,7 +876,7 @@ namespace BudgetExecution
                         return goal;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -879,7 +887,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (obj)
+                switch(obj)
                 {
                     case "1":
                         return "COMPLIANCE WITH THE LAW";
@@ -915,7 +923,7 @@ namespace BudgetExecution
                         return obj;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -926,7 +934,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch (fundcode)
+                switch(fundcode)
                 {
                     case "B":
                         return "068/0108";
@@ -1033,7 +1041,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

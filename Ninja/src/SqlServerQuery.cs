@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.SqlClient;
-
     public class SqlServerQuery : Query
     {
         // CONSTRUCTORS
@@ -52,7 +52,7 @@ namespace BudgetExecution
 
         public new Provider Provider { get; }
 
-        public new AppSettingsReader Settings { get; set; }
+        public AppSettingsReader Settings { get; set; }
 
         public new SqlConnection DataConnection { get; set; }
 
@@ -87,7 +87,7 @@ namespace BudgetExecution
             {
                 string vals = string.Empty;
                 SqlParameter[] sqlparameter = GetParameter(param);
-                foreach (SqlParameter p in sqlparameter)
+                foreach(SqlParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -95,7 +95,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -107,7 +107,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (SqlParameter p in param)
+                foreach(SqlParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -115,7 +115,7 @@ namespace BudgetExecution
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -127,18 +127,18 @@ namespace BudgetExecution
             try
             {
                 SqlParameter[] val = new SqlParameter[param.Count];
-                for (int i = 0; i < param.Count; i++)
+                for(int i = 0; i < param.Count; i++)
                 {
-                    foreach (KeyValuePair<string, object> kvp in param)
+                    foreach(KeyValuePair<string, object> kvp in param)
                     {
                         val[i] = new SqlParameter(kvp.Key, kvp.Value);
                         val[i].SourceColumn = kvp.Key;
-                        if (kvp.Key.Equals("ID"))
+                        if(kvp.Key.Equals("ID"))
                         {
                             val[i].DbType = DbType.Int64;
                         }
 
-                        if (kvp.Key.Equals("Amount"))
+                        if(kvp.Key.Equals("Amount"))
                         {
                             val[i].DbType = DbType.Decimal;
                         }
@@ -151,7 +151,7 @@ namespace BudgetExecution
 
                 return val;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -164,7 +164,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -177,7 +177,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {table} WHERE {sql}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -190,7 +190,7 @@ namespace BudgetExecution
             {
                 return $"SELECT * FROM {TableName} WHERE {sql}";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -203,7 +203,7 @@ namespace BudgetExecution
             {
                 return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -217,7 +217,7 @@ namespace BudgetExecution
                 SelectStatement = select;
                 return new SqlCommand(select, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -230,7 +230,7 @@ namespace BudgetExecution
             {
                 return new SqlDataAdapter(command);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -243,7 +243,7 @@ namespace BudgetExecution
             {
                 return command.ExecuteReader();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -256,7 +256,7 @@ namespace BudgetExecution
             {
                 return new SqlCommandBuilder(adapter);
             }
-            catch (SystemException ex)
+            catch(SystemException ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -270,7 +270,7 @@ namespace BudgetExecution
                 SelectStatement = select;
                 return new SqlCommand(SelectStatement, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -284,7 +284,7 @@ namespace BudgetExecution
                 SelectStatement = GetSelectParamString(param);
                 return new SqlCommand(SelectStatement, connection);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

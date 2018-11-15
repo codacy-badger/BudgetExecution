@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-
     public class Reimbursable
     {
         // CONSTRUCTORS
@@ -36,7 +36,7 @@ namespace BudgetExecution
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             OrgCode = org;
-            Account = new Account((Provider)Provider.SQLite, bfy, fund, code);
+            Account = new Account(Provider.SQLite, bfy, fund, code);
             SiteProjectCode = spc;
             AgreementNumber = an;
             Obligations = auth;
@@ -54,7 +54,7 @@ namespace BudgetExecution
             BFY = p["BFY"].ToString();
             Fund = new Fund(p["Fund"].ToString(), p["Fund"].ToString());
             OrgCode = p["OrgCode"].ToString();
-            Account = new Account((Provider)0, this.BFY, this.Fund.Code, p[this.Account.Code].ToString());
+            Account = new Account(0, BFY, Fund.Code, p[Account.Code].ToString());
             SiteProjectCode = p["SiteProjectCode"].ToString();
             AgreementNumber = p["AgreementNumber"].ToString();
             Obligations = decimal.Parse(p["Obligations"].ToString());
@@ -68,7 +68,7 @@ namespace BudgetExecution
             BFY = dr["BFY"].ToString();
             Fund = new Fund(dr["Fund"].ToString(), BFY);
             OrgCode = dr["OrgCode"].ToString();
-            Account = new Account((Provider)Provider.SQLite, this.BFY, dr["Fund"].ToString(), dr["Code"].ToString());
+            Account = new Account(Provider.SQLite, BFY, dr["Fund"].ToString(), dr["Code"].ToString());
             SiteProjectCode = dr["SiteProjectCode"].ToString();
             AgreementNumber = dr["Agreement"].ToString();
             Commitments = decimal.Parse(dr["Commitments"].ToString());
@@ -127,45 +127,45 @@ namespace BudgetExecution
             try
             {
                 Reimbursable account = new Reimbursable(source);
-                if (!param.ContainsKey("AgreementNumber")
-                   || param["AgreementNumber"] == null)
+                if(!param.ContainsKey("AgreementNumber") ||
+                   param["AgreementNumber"] == null)
                 {
                     param["AgreementNumber"] = account.AgreementNumber;
                 }
 
-                if (!param.ContainsKey("OrgCode")
-                   || param["OrgCode"] == null)
+                if(!param.ContainsKey("OrgCode") ||
+                   param["OrgCode"] == null)
                 {
                     param["OrgCode"] = account.OrgCode;
                 }
 
-                if (!param.ContainsKey("SiteProjectCode")
-                   || param["SiteProjectCode"] == null)
+                if(!param.ContainsKey("SiteProjectCode") ||
+                   param["SiteProjectCode"] == null)
                 {
                     param["SiteProjectCode"] = account.SiteProjectCode;
                 }
 
-                if (!param.ContainsKey("DocumentNumber")
-                   || param["DocumentNumber"] == null)
+                if(!param.ContainsKey("DocumentNumber") ||
+                   param["DocumentNumber"] == null)
                 {
                     param["DocumentNumber"] = account.DocumentNumber;
                 }
 
-                if (!param.ContainsKey("FOC")
-                   || param["FOC"] == null)
+                if(!param.ContainsKey("FOC") ||
+                   param["FOC"] == null)
                 {
                     param["FOC"] = account.FOC;
                 }
 
-                if (!param.ContainsKey("BOC")
-                   || param["BOC"] == null)
+                if(!param.ContainsKey("BOC") ||
+                   param["BOC"] == null)
                 {
                     param["BOC"] = account.BOC;
                 }
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -185,7 +185,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -206,7 +206,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -225,13 +225,13 @@ namespace BudgetExecution
                 Dictionary<string, object> param = GetInsertFields(source, p);
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand insert = query.InsertCommand;
                     insert.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -253,13 +253,13 @@ namespace BudgetExecution
                 Query query = new Query(source, provider, Sql.INSERT, param);
                 string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     insert?.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -275,15 +275,15 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn);
                     update.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -300,15 +300,15 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.UPDATE, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update?.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -324,15 +324,15 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand delete = query.GetDataCommand(cmd, conn);
                     delete.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -349,15 +349,15 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.DELETE, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update?.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

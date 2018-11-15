@@ -2,15 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-
     /// <summary>
     ///     class Reprogramming
     /// </summary>
@@ -94,7 +93,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -111,7 +110,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

@@ -2,13 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-
     public class Account : IAccount
     {
         // CONSTRUCTORS
@@ -72,7 +73,7 @@ namespace BudgetExecution
             Parameter = p;
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
-            if (Table.Rows.Count == 1)
+            if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
@@ -255,41 +256,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(Provider.SQLite, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("Fund")
-                    || param["Fund"] == null)
+                if(!param.ContainsKey("Fund") ||
+                   param["Fund"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                    || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProjectCode")
-                    || param["ProgramProjectCode"] == null)
+                if(!param.ContainsKey("ProgramProjectCode") ||
+                   param["ProgramProjectCode"] == null)
                 {
                     param["ProgramProjectCode"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                    || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                    || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                    || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -297,7 +298,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -316,41 +317,41 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName")
-                    || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") ||
+                   param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org")
-                    || param["Org"] == null)
+                if(!param.ContainsKey("Org") ||
+                   param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject")
-                    || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") ||
+                   param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea")
-                    || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") ||
+                   param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal")
-                    || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") ||
+                   param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective")
-                    || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") ||
+                   param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -358,12 +359,12 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }        
+        }
 
         /// <summary>
         ///     Gets the account parameter.
@@ -376,10 +377,9 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund,
-                    ["ProgramProjectCode"] = code};
+                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund, ["ProgramProjectCode"] = code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -405,59 +405,77 @@ namespace BudgetExecution
                 param.Add("ProgramProjectName", ProgramProjectName);
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.InsertCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.InsertCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.UpdateCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.UpdateCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                System.Data.Common.DbConnection conn = query.DataConnection;
-                System.Data.Common.DbCommand command = query.DeleteCommand;
+                DbConnection conn = query.DataConnection;
+                DbCommand command = query.DeleteCommand;
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
