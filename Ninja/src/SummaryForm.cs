@@ -291,7 +291,7 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 GridFundFilter.Visible = false;
                 GridBocFilter.Visible = false;
-                GetCaption(Source);
+                GetCaptionImages(Source);
             }
             catch (Exception ex)
             {
@@ -1343,8 +1343,6 @@ namespace BudgetExecution
         /// <summary>
         ///     The UpdateAccountChart
         /// </summary>
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-        [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         internal void UpdateAccountChart(object sender, EventArgs e)
         {
             try
@@ -1363,7 +1361,6 @@ namespace BudgetExecution
             }
         }
 
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         internal void TransitionChart(DataTable table)
         {
             try
@@ -1436,7 +1433,7 @@ namespace BudgetExecution
         /// <summary>
         ///     The GetCaption
         /// </summary>
-        private void GetCaption(Source source)
+        private void GetCaptionImages(Source source)
         {
             try
             {
@@ -1451,7 +1448,7 @@ namespace BudgetExecution
                         var ci = new CaptionImage();
                         ci.Image = b;
                         ci.BackColor = Color.Black;
-                        ci.Size = new Size(30, 25);
+                        ci.Size = new Size(55, 15);
                         ci.Location = new Point(10, 5);
                         CaptionImages.Add(ci);
                     }
