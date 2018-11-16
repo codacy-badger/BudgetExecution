@@ -1271,7 +1271,7 @@ namespace BudgetExecution
                         CaptionImage ci = new CaptionImage();
                         ci.Image = b;
                         ci.BackColor = Color.Black;
-                        ci.Size = new Size(55, 15);
+                        ci.Size = new Size(35, 20);
                         ci.Location = new Point(10, 5);
                         CaptionImages.Add(ci);
                     }

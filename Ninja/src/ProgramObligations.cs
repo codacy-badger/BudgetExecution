@@ -96,6 +96,10 @@ namespace BudgetExecution
         public decimal Obligations { get; set; }
 
         // METHODS
+        /// <summary>
+        /// Gets the schema.
+        /// </summary>
+        /// <returns></returns>
         internal Dictionary<string, object> GetSchema()
         {
             try
@@ -110,6 +114,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -123,6 +134,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the fields.
+        /// </summary>
+        /// <returns></returns>
         internal string[] GetFields()
         {
             try
@@ -138,6 +153,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the values.
+        /// </summary>
+        /// <returns></returns>
         internal object[] GetValues()
         {
             try
@@ -152,6 +171,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insert columns.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -206,6 +232,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Obligation Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -220,6 +252,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Obligation Select(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -234,6 +273,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -244,6 +289,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -251,6 +298,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -261,6 +314,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -268,6 +323,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -278,6 +339,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {

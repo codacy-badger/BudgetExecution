@@ -95,6 +95,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -112,6 +114,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -129,6 +133,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {

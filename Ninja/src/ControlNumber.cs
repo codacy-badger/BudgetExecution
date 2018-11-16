@@ -23,9 +23,9 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
-        public ControlNumber(Source source = Source.ControlNumbers, Provider provider = Provider.SQLite)
+        public ControlNumber(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.ControlNumbers;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
@@ -265,6 +265,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Calculates the specified fund.
+        /// </summary>
+        /// <param name="fund">The fund.</param>
+        /// <param name="divisionid">The divisionid.</param>
         internal void Calculate(string fund, int divisionid)
         {
             int reg = GetRegionCount() + 1;
@@ -272,6 +277,12 @@ namespace BudgetExecution
             int dc = GetDivisionCount(divisionid) + 1;
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -282,6 +293,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -289,6 +302,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -299,6 +318,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -306,6 +327,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -316,6 +343,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {

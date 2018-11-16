@@ -59,9 +59,9 @@ namespace BudgetExecution
                 BFY = p["BFY"].ToString();
             }
 
-            if(p.ContainsKey("Fund"))
+            if(p.ContainsKey("FundCode"))
             {
-                FundCode = p["Fund"].ToString();
+                FundCode = p["FundCode"].ToString();
             }
 
             if(p.ContainsKey("Code"))
@@ -82,7 +82,7 @@ namespace BudgetExecution
                 NpmCode = Code.Substring(3, 1);
                 Org = Data["Org"].ToString();
                 BFY = Data["BFY"].ToString();
-                FundCode = Data["Fund"].ToString();
+                FundCode = Data["FundCode"].ToString();
                 ProgramProjectName = Data["ProgramProjectName"].ToString();
                 NPM = Data["NPM"].ToString();
                 ObjectiveName = Data["ObjectiveName"].ToString();
@@ -428,6 +428,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -451,6 +453,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -474,6 +478,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {

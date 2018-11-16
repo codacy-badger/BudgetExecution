@@ -17,7 +17,7 @@ namespace BudgetExecution
         {
         }
 
-        public Fund(Source source, Provider provider)
+        public Fund(Source source = Source.Funds, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
@@ -100,6 +100,12 @@ namespace BudgetExecution
         public DataTable Table { get; set; }
 
         // METHODS
+        /// <summary>
+        /// Gets the data fields.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <param name="bfy">The bfy.</param>
+        /// <returns></returns>
         public Dictionary<string, object> GetDataFields(string code, string bfy)
         {
             try
@@ -113,6 +119,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the fund data.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         public Dictionary<string, object> GetFundData(string code)
         {
             try
@@ -130,6 +141,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public DataTable GetData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -144,6 +162,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the fields.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
         internal string[] GetFields(Source source, Provider provider)
         {
             try
@@ -159,6 +183,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the field values.
+        /// </summary>
+        /// <returns></returns>
         internal object[] GetFieldValues()
         {
             try
@@ -174,6 +202,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insertion columns.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -206,6 +241,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Fund Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -220,6 +261,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Fund Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -234,6 +282,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -244,6 +298,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -251,6 +307,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -261,6 +323,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -268,6 +332,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -278,6 +348,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {

@@ -10,6 +10,10 @@ using System.Linq;
 
 namespace BudgetExecution
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="BudgetExecution.IEmployee" />
     public class Employee : IEmployee
     {
         // CONSTRUCTORS
@@ -103,6 +107,12 @@ namespace BudgetExecution
 
         public string Status { get; set; }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -113,6 +123,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -120,6 +132,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -130,6 +148,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
@@ -137,6 +157,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -147,6 +173,8 @@ namespace BudgetExecution
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
+                command.Dispose();
+                conn.Dispose();
             }
             catch(Exception ex)
             {
