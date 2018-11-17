@@ -82,6 +82,7 @@ namespace BudgetExecution
                         return;
 
                     case "DatabaseImages":
+                    case "SQLiteData":
                         DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();

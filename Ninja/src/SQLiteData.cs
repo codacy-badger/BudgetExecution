@@ -431,10 +431,10 @@ namespace BudgetExecution
                         break;
 
                     case Source.Personnel:
-                        label1.Text = "HrOrgCodeName";
-                        PopulateFilterItems(Field.HrOrgCodeName, Table, Filter1, label1);
-                        Filter2.Tag = "WorkCode";
-                        Filter3.Tag = "LastName";
+                        label1.Text = "LastName";
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
+                        Filter2.Tag = "Section";
+                        Filter3.Tag = "Email";
                         break;
 
                     case Source.Funds:
