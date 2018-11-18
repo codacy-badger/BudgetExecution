@@ -9,19 +9,15 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
+using OfficeOpenXml;
 
 namespace BudgetExecution
 {
-    using Excel = Microsoft.Office.Interop.Excel.Application;
-
     public class ExcelDocument
     {
-        private readonly string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
-
         // CONSTRUCTORS
         public ExcelDocument()
         {
-            FilePath = path;
         }
 
         public ExcelDocument(string filepath)
@@ -59,13 +55,13 @@ namespace BudgetExecution
 
         public ExcelQuery Query { get; set; }
 
-        public DivisionAuthority D6 { get; set; }
+        public DivisionAuthority Authority { get; set; }
 
         public DataBuilder DbData { get; set; }
 
         public Division Division { get; set; }
 
-        public DataRow[] Authority { get; set; }
+        public DataRow[] Allocation { get; set; }
 
         public DataTable Table { get; set; }
 
@@ -81,7 +77,7 @@ namespace BudgetExecution
 
         public string BudgetTemplate { get; set; }
 
-        public Excel Excel { get; set; }
+        public Microsoft.Office.Interop.Excel.Application Excel { get; set; }
 
         public Workbook Workbook { get; set; }
 
@@ -173,7 +169,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -245,15 +241,33 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the connection string.
+        ///     Gets the connection string using the ConfigurationManager class and
+        /// the GetInternalFilePath method.
         /// </summary>
         /// <param name="filepath">The filepath.</param>
         /// <returns></returns>
         public string GetConnectionString(string filepath)
         {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
+            try
+            {
+                ConnectionStringSettingsCollection connectionString = ConfigurationManager.ConnectionStrings;
+                var excelpath = GetInternalFilePath();
+                string connectionstring = connectionString["Excel"].ConnectionString;
+                connectionstring.Replace($"{filepath}", excelpath);
+                return connectionstring;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
+        public void GetBudgetReport()
+        {
+
+        }
+       
         /// <summary>
         ///     Loads the internal data.
         /// </summary>
@@ -270,7 +284,7 @@ namespace BudgetExecution
         {
             try
             {
-                Workbook WorkBook = Excel.Workbooks.Open(path);
+                Workbook WorkBook = Excel.Workbooks.Open(GetInternalFilePath());
                 Worksheet WorkSheet = (Worksheet) WorkBook.Sheets[1];
                 WorkSheet.Name = table.TableName;
                 for(int i = 1; i < table.Columns.Count + 1; i++)
@@ -291,7 +305,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                new Error(ex).ShowDialog();
                 return null;
             }
             finally
@@ -313,7 +327,7 @@ namespace BudgetExecution
         {
             try
             {
-                Excel excel = Create();
+                var excel = Create();
                 Workbook excelWorkBook = excel.Workbooks.Open(filepath);
                 Worksheet excelWorkSheet = (Worksheet) excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
@@ -335,7 +349,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                new Error(ex).ShowDialog();
                 return null;
             }
             finally
@@ -361,7 +375,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show("ERROR!" + ex.StackTrace);
+                new Error(ex).ShowDialog();
                 return null;
             }
             finally
@@ -386,7 +400,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show("ERROR!" + ex.StackTrace);
+                new Error(ex).ShowDialog();
                 return null;
             }
             finally
@@ -418,7 +432,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show("ERROR!" + ex.StackTrace);
+                new Error(ex).ShowDialog();
             }
             finally
             {
@@ -453,7 +467,7 @@ namespace BudgetExecution
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("ERROR!" + ex.StackTrace);
+                    new Error(ex).ShowDialog();
                 }
                 finally
                 {
@@ -468,15 +482,15 @@ namespace BudgetExecution
         ///     Creates this instance.
         /// </summary>
         /// <returns></returns>
-        private Excel Create()
+        private Microsoft.Office.Interop.Excel.Application Create()
         {
             try
             {
-                return new Excel();
+                return new Microsoft.Office.Interop.Excel.Application();
             }
             catch(Exception ex)
             {
-                MessageBox.Show("ERROR!" + ex.StackTrace);
+                new Error(ex).ShowDialog();
                 return null;
             }
             finally
@@ -497,7 +511,7 @@ namespace BudgetExecution
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Unable to release the Object " + ex);
+                new Error(ex).ShowDialog();
             }
             finally
             {

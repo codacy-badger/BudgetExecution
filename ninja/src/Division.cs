@@ -114,13 +114,11 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.InsertCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                query.DataConnection.Open();
+                query.InsertCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -138,14 +136,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.UpdateCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(source, provider, Sql.UPDATE, p);
+                query.DataConnection.Open();
+                query.UpdateCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -163,14 +159,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.DeleteCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(source, provider, Sql.DELETE, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
