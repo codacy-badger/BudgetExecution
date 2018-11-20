@@ -485,21 +485,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="report\BudgetControlTemplate.xlsx" />
-    <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
-    <None Include="LinqToDB.Templates\DataModel.ttinclude" />
-    <None Include="LinqToDB.Templates\EditableObject.ttinclude" />
-    <None Include="LinqToDB.Templates\Humanizer.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.SQLite.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.Tools.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.ttinclude" />
-    <None Include="LinqToDB.Templates\MultipleFiles.ttinclude" />
-    <None Include="LinqToDB.Templates\NotifyDataErrorInfo.ttinclude" />
-    <None Include="LinqToDB.Templates\NotifyPropertyChanged.ttinclude" />
-    <None Include="LinqToDB.Templates\ObsoleteAttributes.ttinclude" />
-    <None Include="LinqToDB.Templates\PluralizationService.ttinclude" />
-    <None Include="LinqToDB.Templates\T4Model.ttinclude" />
-    <None Include="LinqToDB.Templates\Validation.ttinclude" />
     <None Include="resources\ControlIcon.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlIcon.Designer.cs</LastGenOutput>
@@ -929,7 +914,6 @@
     <None Include="resources\DivisionIcon\MDR.png" />
     <None Include="resources\DivisionIcon\WCF.png" />
     <None Include="resources\DivisionIcon\SF.png" />
-    <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
     <None Include="resources\SummaryImages\Appropriation.png" />
     <None Include="resources\RegionAccount.png" />
     <None Include="resources\unnamed.png" />

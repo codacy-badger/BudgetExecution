@@ -16,9 +16,9 @@ namespace BudgetExecution
         {
             TableFilter = DataBuilder.FilterRecords;
             DbData = new DataBuilder(Source.DivisionAccounts);
-            Metric = new PrcMetric(DbData);
             Table = DbData.Table;
             DataRecords = DbData.Records;
+            Metric = new PrcMetric(DbData);
             PRC = GetPrcArray(Table);
             Total = Metric.Total;
             Count = Metric.Count;

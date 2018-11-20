@@ -32,7 +32,7 @@ namespace BudgetExecution
                 Data = DbData.Table.AsEnumerable()
                              .Where(d => d.Field<string>("Source").Equals(source.ToString(), StringComparison.CurrentCultureIgnoreCase))
                              .Select(d => d)
-                             .First();
+                             .Single();
                 ID = Data["ID"].ToString();
                 RC = Data["RC"].ToString();
                 Title = Data["Title"].ToString();
@@ -83,7 +83,7 @@ namespace BudgetExecution
         /// </returns>
         public override string ToString()
         {
-            return Code;
+            return Title;
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["Code"] = Code };
+                return new Dictionary<string, object> {["RC"] = RC};
             }
             catch(Exception ex)
             {
@@ -106,14 +106,13 @@ namespace BudgetExecution
         /// <summary>
         /// Inserts the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
+                Query query = new Query(Source.Divisions, provider, Sql.INSERT, p);
                 query.DataConnection.Open();
                 query.InsertCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -129,14 +128,13 @@ namespace BudgetExecution
         /// <summary>
         /// Updates the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.UPDATE, p);
+                Query query = new Query(Source.Divisions, provider, Sql.UPDATE, p);
                 query.DataConnection.Open();
                 query.UpdateCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -152,18 +150,17 @@ namespace BudgetExecution
         /// <summary>
         /// Deletes the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.DELETE, p);
+                Query query = new Query(Source.Divisions, provider, Sql.DELETE, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
-                query.InsertCommand.Dispose();
+                query.DeleteCommand.Dispose();
                 query.DataConnection.Dispose();
             }
             catch(Exception ex)

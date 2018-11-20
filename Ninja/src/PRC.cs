@@ -30,11 +30,11 @@ namespace BudgetExecution
             Allocation = DbData.Records;
         }
 
-        public PRC(Source source, Provider provider, Dictionary<string, object> param)
+        public PRC(Provider provider, Dictionary<string, object> param)
         {
-            Source = source;
+            Source = Source.PRC;
             Provider = provider;
-            DbData = new DataBuilder(source, provider, param);
+            DbData = new DataBuilder(Source, Provider, param);
             Allocation = DbData.Records;
             if(DbData.Table.Rows.Count == 1)
             {
@@ -371,21 +371,18 @@ namespace BudgetExecution
         /// <summary>
         /// Inserts the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.InsertCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.PRC, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.InsertCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -396,21 +393,18 @@ namespace BudgetExecution
         /// <summary>
         /// Updates the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.UpdateCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.PRC, provider, Sql.UPDATE, p);
+                query.DataConnection.Open();
+                query.UpdateCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -421,21 +415,18 @@ namespace BudgetExecution
         /// <summary>
         /// Deletes the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.DeleteCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.PRC, provider, Sql.DELETE, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {

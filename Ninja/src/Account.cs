@@ -51,8 +51,7 @@ namespace BudgetExecution
             }
         }
 
-        public Account(Provider provider, Dictionary<string, object> p)
-                : this(provider)
+        public Account(Provider provider, Dictionary<string, object> p) : this(provider)
         {
             if(p.ContainsKey("BFY"))
             {
@@ -418,18 +417,16 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.InsertCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Accounts, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.InsertCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -440,21 +437,18 @@ namespace BudgetExecution
         /// <summary>
         /// Updates the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.UpdateCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Accounts, provider, Sql.UPDATE, p);
+                query.DataConnection.Open();
+                query.UpdateCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.UpdateCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -468,18 +462,16 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.DeleteCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Accounts, provider, Sql.DELETE, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {

@@ -283,14 +283,12 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.InsertCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.ProgramObligations, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -301,21 +299,18 @@ namespace BudgetExecution
         /// <summary>
         /// Updates the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.UpdateCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.ProgramObligations, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -326,21 +321,18 @@ namespace BudgetExecution
         /// <summary>
         /// Deletes the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.DeleteCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.ProgramObligations, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {

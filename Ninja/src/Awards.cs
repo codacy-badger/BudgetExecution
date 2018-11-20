@@ -17,19 +17,19 @@ namespace BudgetExecution
         {
         }
 
-        public Awards(Source source = Source.Awards, Provider provider = Provider.SQLite)
+        public Awards(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.Awards;
             Provider = provider;
-            Table = new DataBuilder(source, provider).Table;
+            Table = new DataBuilder(Source, Provider).Table;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
-        public Awards(Source source, Provider provider, Dictionary<string, object> p)
+        public Awards(Provider provider, Dictionary<string, object> p)
         {
-            Source = source;
+            Source = Source.Awards;
             Provider = provider;
-            Table = new DataBuilder(source, provider, p).GetDataTable();
+            Table = new DataBuilder(Source, Provider, p).GetDataTable();
             Records = Table.AsEnumerable().Select(r => r).ToArray();
             if(Table.Rows.Count == 1)
             {
@@ -85,18 +85,16 @@ namespace BudgetExecution
 
         // METHODS
 
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.InsertCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Awards, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.InsertCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -104,18 +102,16 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.UpdateCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Awards, provider, Sql.UPDATE, p);
+                query.DataConnection.Open();
+                query.UpdateCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {
@@ -123,18 +119,16 @@ namespace BudgetExecution
             }
         }
 
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
-                DbConnection conn = query.DataConnection;
-                DbCommand command = query.DeleteCommand;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-                command.Dispose();
-                conn.Dispose();
+                Query query = new Query(Source.Awards, provider, Sql.DELETE, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
             }
             catch(Exception ex)
             {

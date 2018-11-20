@@ -312,11 +312,46 @@ namespace BudgetExecution
                 switch(col.Length)
                 {
                     case 1 when filter.Length == 1:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Select(p => p).CopyToDataTable();
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Select(p => p)
+                                    .CopyToDataTable();
                     case 2 when filter.Length == 2:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).Select(p => p).CopyToDataTable();
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                    .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
+                                    .Select(p => p).CopyToDataTable();
                     case 3 when filter.Length == 3:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2])).Select(p => p).CopyToDataTable();
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                    .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
+                                    .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
+                                    .Select(p => p).CopyToDataTable();
+                    default:
+                        return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public static DataTable FilterRecords(DataTable table, string[] col, string[] filter)
+        {
+            try
+            {
+                switch(col.Length)
+                {
+                    case 1 when filter.Length == 1:
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0])).Select(p => p)
+                                    .CopyToDataTable();
+                    case 2 when filter.Length == 2:
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                                    .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
+                                    .Select(p => p).CopyToDataTable();
+                    case 3 when filter.Length == 3:
+                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                                    .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
+                                    .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
+                                    .Select(p => p).CopyToDataTable();
                     default:
                         return null;
                 }
