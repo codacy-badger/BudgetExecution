@@ -96,6 +96,11 @@ namespace BudgetExecution
         public decimal Obligations { get; set; }
 
         // METHODS
+        public override string ToString()
+        {
+            return DCN;
+        }
+
         /// <summary>
         /// Gets the schema.
         /// </summary>
@@ -138,7 +143,7 @@ namespace BudgetExecution
         /// Gets the fields.
         /// </summary>
         /// <returns></returns>
-        internal string[] GetFields()
+        internal string[] GetColumnNames()
         {
             try
             {

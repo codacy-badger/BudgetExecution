@@ -27,7 +27,7 @@ namespace BudgetExecution
         // METHODS
         DataTable GetData(Source source, Provider provider, Dictionary<string, object> param);
 
-        Dictionary<string, object> GetDataFields(string fundcode, string bfy);
+        Dictionary<string, object> GetParameter(string fundcode, string bfy);
 
         Dictionary<string, object> GetFundData(string code);
 

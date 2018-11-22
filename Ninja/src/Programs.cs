@@ -59,5 +59,11 @@ namespace BudgetExecution
         public BOC BOC { get; set; }
 
         public string BocName { get; set; }
+
+        public override string ToString()
+        {
+            return ProgramProjectName;
+        }
+
     }
 }

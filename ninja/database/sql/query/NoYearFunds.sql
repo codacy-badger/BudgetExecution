@@ -13,7 +13,6 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, NpmCode, NPM, AH, AhName, AH 
 	WHEN Fund LIKE 'TR%' THEN '06L'
 	WHEN Fund LIKE "E%" AND 
 		ProgramProjectCode = "14" THEN "06M"
-	WHEN BOC = '38' THEN '06G'
 	WHEN Fund LIKE 'E%' AND 
 	ProgramProjectCode = "15" THEN '06F'
 	END RC,
@@ -26,4 +25,5 @@ WHERE BudgetLevel = 7 AND
 GROUP BY ID, BudgetLevel, RPIO, BFY, Fund, FundName, NpmCode, NPM, AH, AhName, Org, OrgName,
 	Code, ProgramProjectCode, ProgramProjectName, ProgramArea, ProgramAreaName, BOC, BocName, RC,
 	Authority, Budgeted, Posted, CarryIn, CarryOut, Commitments, OpenCommitments, Obligations, ULO, Balance
+HAVING RC IS NOT NULL
 ORDER BY RC;

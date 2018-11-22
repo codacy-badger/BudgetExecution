@@ -17,18 +17,18 @@ namespace BudgetExecution
         {
         }
 
-        public Fund(Source source = Source.Funds, Provider provider = Provider.SQLite)
+        public Fund(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.Funds;
             Provider = provider;
             Table = new DataBuilder(Source, Provider).Table;
         }
 
-        public Fund(string code, string bfy) : this(Source.Funds, Provider.SQLite)
+        public Fund(string code, string bfy) : this(Provider.SQLite)
         {
             Code = code;
             BFY = bfy;
-            Parameter = GetDataFields(Code, BFY);
+            Parameter = GetParameter(Code, BFY);
             Table = GetData(Source, Provider, Parameter);
             Data = Table.AsEnumerable().Select(prc => prc).Single();
             ID = int.Parse(Data["ID"].ToString());
@@ -41,7 +41,7 @@ namespace BudgetExecution
         {
             Code = code;
             BFY = bfy;
-            Parameter = GetDataFields(Code, BFY);
+            Parameter = GetParameter(Code, BFY);
             Table = GetData(source, Provider.SQLite, Parameter);
             if(Table.Rows.Count == 1)
             {
@@ -57,7 +57,7 @@ namespace BudgetExecution
         {
             Code = p["Code"].ToString();
             BFY = p["BFY"].ToString();
-            Parameter = GetDataFields(Code, BFY);
+            Parameter = GetParameter(Code, BFY);
             Table = GetData(source, provider, Parameter);
             if(Table.Rows.Count == 1)
             {
@@ -108,7 +108,7 @@ namespace BudgetExecution
         /// <param name="fundcode">The code.</param>
         /// <param name="bfy">The bfy.</param>
         /// <returns></returns>
-        public Dictionary<string, object> GetDataFields(string fundcode, string bfy)
+        public Dictionary<string, object> GetParameter(string fundcode, string bfy)
         {
             try
             {
@@ -164,44 +164,9 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the fields.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <returns></returns>
-        internal string[] GetFields(Source source, Provider provider)
+        public override string ToString()
         {
-            try
-            {
-                Dictionary<string, object> prc = GetDataFields(Source.ToString(), Provider.ToString());
-
-                return prc.Keys.ToArray();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the field values.
-        /// </summary>
-        /// <returns></returns>
-        internal object[] GetFieldValues()
-        {
-            try
-            {
-                Dictionary<string, object> param = GetDataFields(Source.ToString(), Provider.ToString());
-
-                return param.Values.ToArray();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+            return Code;
         }
 
         /// <summary>
@@ -211,30 +176,11 @@ namespace BudgetExecution
         /// <param name="provider">The provider.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
+        public static string[] GetColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
-                Fund account = new Fund(source, provider, param);
-                if(!param.ContainsKey("Name") ||
-                   param["Name"] == null)
-                {
-                    param["Name"] = account.Name;
-                }
-
-                if(!param.ContainsKey("TreasurySymbol") ||
-                   param["TreasurySymbol"] == null)
-                {
-                    param["TreasurySymbol"] = account.TreasurySymbol;
-                }
-
-                if(!param.ContainsKey("Title") ||
-                   param["Title"] == null)
-                {
-                    param["Title"] = account.Title;
-                }
-
-                return param;
+                return new DataBuilder(source, provider, param).Columns;
             }
             catch(Exception ex)
             {

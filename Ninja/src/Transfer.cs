@@ -47,6 +47,7 @@ namespace BudgetExecution
             Date = date;
             Code = code;
             Account = new Account(0, BFY, fund, code);
+            FundCode = Account.FundCode;
             NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
@@ -68,6 +69,7 @@ namespace BudgetExecution
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
             Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
+            FundCode = Account.FundCode;
             NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
@@ -124,42 +126,14 @@ namespace BudgetExecution
         // METHODS
 
         /// <summary>
-        ///     Gets the insertion columns.
+        /// Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
+        public override string ToString()
         {
-            try
-            {
-                Fund account = new Fund(source, provider, param);
-                if(!param.ContainsKey("Name") ||
-                   param["Name"] == null)
-                {
-                    param["Name"] = account.Name;
-                }
-
-                if(!param.ContainsKey("TreasurySymbol") ||
-                   param["TreasurySymbol"] == null)
-                {
-                    param["TreasurySymbol"] = account.TreasurySymbol;
-                }
-
-                if(!param.ContainsKey("Title") ||
-                   param["Title"] == null)
-                {
-                    param["Title"] = account.Title;
-                }
-
-                return param;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+            return TCN;
         }
 
         /// <summary>

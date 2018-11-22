@@ -10,17 +10,15 @@ using System.Linq;
 
 namespace BudgetExecution
 {
-    [ SuppressMessage("ReSharper", "UnassignedGetOnlyAutoProperty") ]
     public class FTE : PRC, IPRC
     {
         public FTE()
         {
         }
 
-        public FTE(DataRow datarow)
-                : base(datarow)
+        public FTE(DataRow datarow) : base(datarow)
         {
-            FteParameter = GetDataDictionary();
+            FteParameter = AsDictionary();
         }
 
         public FTE(Source source, Provider provider, Dictionary<string, object> param)
@@ -210,7 +208,7 @@ namespace BudgetExecution
             }
         }
 
-        public PRC[] GetPrcArray(DataTable table)
+        PRC[] GetPrcArray(DataTable table)
         {
             try
             {
@@ -244,7 +242,10 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach(string ftr in list)
                 {
-                    decimal query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Sum(p => p.Field<decimal>("Amount"));
+                    decimal query = table.AsEnumerable()
+                                         .Where(p => p.Field<string>(column).Equals(filter))
+                                         .Where(p => p.Field<decimal>("Amount") != 0m)
+                                         .Sum(p => p.Field<decimal>("Amount"));
                     if(query > 0)
                     {
                         info.Add(filter, query);
@@ -267,7 +268,10 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach(string filter in filters)
                 {
-                    decimal query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    decimal query = table.AsEnumerable()
+                                         .Where(p => p.Field<string>(column).Equals(filter))
+                                         .Where(p => p.Field<decimal>("Amount") != 0m)
+                                         .Sum(p => p.Field<decimal>("Amount"));
                     if(query > 0)
                     {
                         info.Add(filter, query);

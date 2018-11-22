@@ -78,7 +78,7 @@ namespace BudgetExecution
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Amount = amount;
-            Parameter = GetDataDictionary();
+            Parameter = AsDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -104,9 +104,9 @@ namespace BudgetExecution
             Account = new Account(Provider.SQLite, BFY, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
-            Parameter = GetDataDictionary();
+            Parameter = AsDictionary();
             Amount = decimal.Parse(row["Amount"].ToString());
-            Parameter = GetDataDictionary();
+            Parameter = AsDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -297,11 +297,13 @@ namespace BudgetExecution
         /// Gets the data dictionary.
         /// </summary>
         /// <returns></returns>
-        internal Dictionary<string, object> GetDataDictionary()
+        public Dictionary<string, object> AsDictionary()
         {
             try
             {
-                return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
+                return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO,
+                    ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC,
+                    ["BOC"] = BOC.Code, ["Code"] = Account.Code };
             }
             catch(Exception ex)
             {

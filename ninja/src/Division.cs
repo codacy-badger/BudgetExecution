@@ -27,7 +27,7 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider, p);
             Records = DbData.Table.AsEnumerable().Select(r => r).ToArray();
-            if(DbData.Table.Rows.Count == 1)
+            if(Records.Length == 1)
             {
                 Data = DbData.Table.AsEnumerable()
                              .Where(d => d.Field<string>("Source").Equals(source.ToString(), StringComparison.CurrentCultureIgnoreCase))
@@ -74,6 +74,7 @@ namespace BudgetExecution
 
         public DataRow Data { get; set; }
 
+
         // METHODS
         /// <summary>
         /// Returns a <see cref="System.String" /> that represents this instance.
@@ -83,7 +84,7 @@ namespace BudgetExecution
         /// </returns>
         public override string ToString()
         {
-            return Title;
+            return RC;
         }
 
         /// <summary>

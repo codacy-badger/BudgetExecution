@@ -10,13 +10,13 @@ using System.Linq;
 
 namespace BudgetExecution
 {
-    public class BudgetLevel
+    public class UtilizationData
     {
-        public BudgetLevel()
+        public UtilizationData()
         {
         }
 
-        public BudgetLevel(Source source = Source.BudgetLevels, Provider provider = Provider.SQLite)
+        public UtilizationData(Source source = Source.BudgetLevels, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
@@ -26,11 +26,11 @@ namespace BudgetExecution
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
-        public BudgetLevel(Source source, Provider provider, Dictionary<string, object> param)
+        public UtilizationData(Provider provider, Dictionary<string, object> param)
         {
-            Source = source;
+            Source = Source.BudgetLevels;
             Provider = provider;
-            DbData = new DataBuilder(source, provider, param);
+            DbData = new DataBuilder(Source, provider, param);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
             if(Table.Rows.Count == 1)
@@ -58,7 +58,7 @@ namespace BudgetExecution
             }
         }
 
-        public BudgetLevel(DataRow dr)
+        public UtilizationData(DataRow dr)
         {
             Data = dr;
             ID = int.Parse(Data["ID"].ToString());

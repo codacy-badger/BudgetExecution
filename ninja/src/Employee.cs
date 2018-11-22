@@ -107,6 +107,12 @@ namespace BudgetExecution
 
         public string Status { get; set; }
 
+
+        public override string ToString()
+        {
+            return FirstName +" "+ LastName;
+        }
+
         /// <summary>
         /// Inserts the specified source.
         /// </summary>
