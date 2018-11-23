@@ -2,16 +2,22 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="RegionalAuthority" />
+    /// </summary>
     public class RegionalAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RegionalAuthority"/> class.
+        /// </summary>
         public RegionalAuthority()
         {
             DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
@@ -35,56 +41,112 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the FiscalYear
+        /// </summary>
         public static string FiscalYear { get; set; } = "2018";
 
+        /// <summary>
+        /// Gets the Total
+        /// </summary>
         public decimal Total { get; }
 
+        /// <summary>
+        /// Gets or sets the Average
+        /// </summary>
         public decimal Average { get; set; }
 
+        /// <summary>
+        /// Gets the BocData
+        /// </summary>
         public Dictionary<string, decimal> BocData { get; }
 
+        /// <summary>
+        /// Gets the Count
+        /// </summary>
         public int Count { get; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets the TableFilter
+        /// </summary>
         public TableDelegate TableFilter { get; }
 
+        /// <summary>
+        /// Gets the FTE
+        /// </summary>
         public FTE[] FTE { get; }
 
+        /// <summary>
+        /// Gets the FundData
+        /// </summary>
         public Dictionary<string, decimal> FundData { get; }
 
+        /// <summary>
+        /// Gets the GoalData
+        /// </summary>
         public Dictionary<string, decimal> GoalData { get; }
 
+        /// <summary>
+        /// Gets the Metrics
+        /// </summary>
         public decimal[] Metrics { get; }
 
+        /// <summary>
+        /// Gets the NpmData
+        /// </summary>
         public Dictionary<string, decimal> NpmData { get; }
 
+        /// <summary>
+        /// Gets the ObjectiveData
+        /// </summary>
         public Dictionary<string, decimal> ObjectiveData { get; }
 
+        /// <summary>
+        /// Gets the PrcData
+        /// </summary>
         public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
 
+        /// <summary>
+        /// Gets the ProgramData
+        /// </summary>
         public Dictionary<string, decimal> ProgramData { get; }
 
+        /// <summary>
+        /// Gets the ProjectData
+        /// </summary>
         public Dictionary<string, decimal> ProjectData { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
         public decimal Amount { get; set; }
 
+        /// <summary>
+        /// Gets the Metric
+        /// </summary>
         public PrcMetric Metric { get; }
 
+        /// <summary>
+        /// Gets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        // METHODS
-
         /// <summary>
-        ///     Returns array of strings consisting of unique values within a columns
+        /// Returns array of strings consisting of unique values within a columns
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
-        /// <returns>
-        ///     string[]
-        /// </returns>
+        /// <returns>The <see cref="string[]"/></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -100,7 +162,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data values.
+        /// Gets the data values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -121,7 +183,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the metrics.
+        /// Gets the metrics.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -140,7 +202,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the PRC array.
+        /// Gets the PRC array.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -158,7 +220,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the program elements.
+        /// Gets the program elements.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -198,7 +260,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the total.
+        /// Gets the total.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -215,9 +277,8 @@ namespace BudgetExecution
             }
         }
 
-        // METHODS
         /// <summary>
-        ///     Filters the table.
+        /// Filters the table.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -237,7 +298,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the average.
+        /// Gets the average.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -255,7 +316,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the codes.
+        /// Gets the codes.
         /// </summary>
         /// <param name="filter">The filter.</param>
         /// <returns></returns>
@@ -273,7 +334,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the count.
+        /// Gets the count.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -291,7 +352,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the ratio.
+        /// Gets the ratio.
         /// </summary>
         /// <param name="t1">The t1.</param>
         /// <param name="t2">The t2.</param>
@@ -309,6 +370,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetFTE
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="FTE[]"/></returns>
         internal FTE[] GetFTE(DataTable table)
         {
             try

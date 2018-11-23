@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="DivisionAuthority" />
+    /// </summary>
     public class DivisionAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DivisionAuthority"/> class.
+        /// </summary>
         public DivisionAuthority()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DivisionAuthority"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
         public DivisionAuthority(Source source)
         {
             TableFilter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
@@ -35,37 +45,88 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Division
+        /// </summary>
         public Division Division { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets the Records
+        /// </summary>
         public DataRow[] Records { get; }
 
+        /// <summary>
+        /// Gets the PRC
+        /// </summary>
         public PRC[] PRC { get; }
 
+        /// <summary>
+        /// Gets the TableFilter
+        /// </summary>
         public TableDelegate TableFilter { get; }
 
+        /// <summary>
+        /// Gets the FTE
+        /// </summary>
         public DataTable FTE { get; }
 
+        /// <summary>
+        /// Gets or sets the Appropriation
+        /// </summary>
         public Appropriation[] Appropriation { get; set; }
 
+        /// <summary>
+        /// Gets or sets the R6
+        /// </summary>
         public DataSet R6 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYear
+        /// </summary>
         public DataTable CurrentYear { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOver
+        /// </summary>
         public DataTable CarryOver { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Budget
+        /// </summary>
         public ExcelDocument Budget { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Metric
+        /// </summary>
         public PrcMetric Metric { get; set; }
 
+        /// <summary>
+        /// Gets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
         public decimal Amount { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The GetCodes
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <returns>The <see cref="string[]"/></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -79,6 +140,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataValues
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="Tuple{DataTable, PRC[], decimal, int}"/></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -93,6 +161,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal[]"/></returns>
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -106,6 +179,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetPrcArray
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="PRC[]"/></returns>
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -119,6 +197,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetProgramElements
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -165,6 +248,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTotal
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetTotal(DataTable table)
         {
             try
@@ -178,6 +266,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetAverage
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetAverage(DataTable table)
         {
             try
@@ -191,6 +284,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="int"/></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -204,6 +302,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetFTE
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetFTE(DataTable table)
         {
             if(GetCodes(table, "BOC").Contains("17"))
@@ -222,6 +325,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetEPM
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetEPM(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("T"))
@@ -240,6 +348,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetSTAG
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetSTAG(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("E"))
@@ -258,6 +371,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetOIL
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetOIL(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("H"))
@@ -276,6 +394,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetLUST
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetLUST(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("F"))
@@ -294,6 +417,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetSF6A
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetSF6A(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("T"))
@@ -312,6 +440,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetTR
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetTR(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("TR"))
@@ -330,6 +463,11 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The GetSUPERFUND
+        /// </summary>
+        /// <param name="approp">The approp<see cref="DataTable"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetSUPERFUND(DataTable approp)
         {
             if(GetCodes(approp, "Fund").Contains("T"))

@@ -2,24 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
     /// <summary>
+    /// Defines the <see cref="PRC" />
     /// </summary>
-    /// <seealso cref="BudgetExecution.IPRC" />
-    /// <seealso cref="BudgetExecution.IAccount" />
     public class PRC : IPRC, IAccount
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// </summary>
         public PRC()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public PRC(Provider provider = Provider.SQLite)
         {
             Source = Source.PRC;
@@ -30,6 +36,11 @@ namespace BudgetExecution
             Records = DbData.Records;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public PRC(Provider provider, Dictionary<string, object> param)
         {
             Source = Source.PRC;
@@ -65,6 +76,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// </summary>
+        /// <param name="id">The id<see cref="int"/></param>
+        /// <param name="bl">The bl<see cref="string"/></param>
+        /// <param name="rpio">The rpio<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
+        /// <param name="fund">The fund<see cref="string"/></param>
+        /// <param name="ah">The ah<see cref="string"/></param>
+        /// <param name="org">The org<see cref="string"/></param>
+        /// <param name="rc">The rc<see cref="string"/></param>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="boc">The boc<see cref="string"/></param>
+        /// <param name="amount">The amount<see cref="decimal"/></param>
         public PRC(int id, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
         {
             ID = id;
@@ -92,6 +117,10 @@ namespace BudgetExecution
             ObjectiveName = Account.ObjectiveName;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// </summary>
+        /// <param name="row">The row<see cref="DataRow"/></param>
         public PRC(DataRow row)
         {
             ID = int.Parse(row["ID"].ToString());
@@ -121,71 +150,163 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets the Records
+        /// </summary>
         public DataRow[] Records { get; }
 
+        /// <summary>
+        /// Gets the Data
+        /// </summary>
         public DataRow Data { get; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BudgetLevel
+        /// </summary>
         public string BudgetLevel { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RPIO
+        /// </summary>
         public string RPIO { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fund
+        /// </summary>
         public Fund Fund { get; set; }
 
+        /// <summary>
+        /// Gets the FundCode
+        /// </summary>
         public string FundCode { get; }
 
+        /// <summary>
+        /// Gets the Org
+        /// </summary>
         public Org Org { get; }
 
+        /// <summary>
+        /// Gets the RC
+        /// </summary>
         public RC RC { get; }
 
+        /// <summary>
+        /// Gets the Account
+        /// </summary>
         public Account Account { get; }
 
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
         public decimal Amount { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public BOC BOC { get; set; }
 
+        /// <summary>
+        /// Gets the AH
+        /// </summary>
         public string AH { get; }
 
+        /// <summary>
+        /// Gets or sets the FTE
+        /// </summary>
         public FTE FTE { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NpmCode
+        /// </summary>
         public string NpmCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectName
+        /// </summary>
         public string ProgramProjectName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramArea
+        /// </summary>
         public string ProgramArea { get; set; }
 
+        /// <summary>
+        /// Gets the GoalName
+        /// </summary>
         public string GoalName { get; }
 
+        /// <summary>
+        /// Gets the ObjectiveName
+        /// </summary>
         public string ObjectiveName { get; }
 
+        /// <summary>
+        /// Gets or sets the Parameter
+        /// </summary>
         internal Dictionary<string, object> Parameter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Code
+        /// </summary>
         public string Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NPM
+        /// </summary>
         public string NPM { get; set; }
 
+        /// <summary>
+        /// Gets the ProgramProjectCode
+        /// </summary>
         public string ProgramProjectCode { get; }
 
+        /// <summary>
+        /// Gets the Goal
+        /// </summary>
         public string Goal { get; }
 
+        /// <summary>
+        /// Gets the Objective
+        /// </summary>
         public string Objective { get; }
 
-        // METHODS
         /// <summary>
-        ///     Gets the code.
+        /// Gets the code.
         /// </summary>
         /// <returns></returns>
         public string GetCode()
@@ -202,7 +323,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the goal.
+        /// Gets the goal.
         /// </summary>
         /// <returns></returns>
         public string GetGoal()
@@ -220,7 +341,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the name of the goal.
+        /// Gets the name of the goal.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -238,7 +359,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the NPM code.
+        /// Gets the NPM code.
         /// </summary>
         /// <returns></returns>
         public string GetNpmCode()
@@ -256,7 +377,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the objective.
+        /// Gets the objective.
         /// </summary>
         /// <returns></returns>
         public string GetObjective()
@@ -273,7 +394,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the name of the objective.
+        /// Gets the name of the objective.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -291,7 +412,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the program project code.
+        /// Gets the program project code.
         /// </summary>
         /// <returns></returns>
         public string GetProgramProjectCode()
@@ -300,7 +421,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data dictionary.
+        /// Gets the data dictionary.
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, object> AsDictionary()
@@ -317,7 +438,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data.
+        /// Gets the data.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -335,11 +456,9 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Returns a <see cref="System.String" /> that represents this instance.
+        /// Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
-        /// <returns>
-        ///     A <see cref="System.String" /> that represents this instance.
-        /// </returns>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             try
@@ -354,7 +473,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -375,7 +494,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -397,7 +516,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -419,7 +538,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

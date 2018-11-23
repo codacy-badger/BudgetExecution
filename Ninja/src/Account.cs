@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Account" />
+    /// </summary>
     public class Account : IAccount
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
         public Account()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Account(Provider provider = Provider.SQLite)
         {
             Source = Source.Accounts;
@@ -24,6 +34,13 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
+        /// <param name="fund">The fund<see cref="string"/></param>
+        /// <param name="code">The code<see cref="string"/></param>
         public Account(Provider provider, string bfy, string fund, string code) : this(provider)
         {
             Code = code;
@@ -50,6 +67,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public Account(Provider provider, Dictionary<string, object> p) : this(provider)
         {
             if(p.ContainsKey("BFY"))
@@ -90,6 +112,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
         public Account(DataRow data)
         {
             Data = data;
@@ -110,60 +136,133 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets the Data
+        /// </summary>
         public DataRow Data { get; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundCode
+        /// </summary>
         public string FundCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundName
+        /// </summary>
         public string FundName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Org
+        /// </summary>
         public string Org { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NpmCode
+        /// </summary>
         public string NpmCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectName
+        /// </summary>
         public string ProgramProjectName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramArea
+        /// </summary>
         public string ProgramArea { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramAreaName
+        /// </summary>
         public string ProgramAreaName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GoalName
+        /// </summary>
         public string GoalName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ObjectiveName
+        /// </summary>
         public string ObjectiveName { get; set; }
 
+        /// <summary>
+        /// Gets the Parameter
+        /// </summary>
         public Dictionary<string, object> Parameter { get; }
 
+        /// <summary>
+        /// Gets or sets the Code
+        /// </summary>
         public string Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NPM
+        /// </summary>
         public string NPM { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Goal
+        /// </summary>
         public string Goal { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Objective
+        /// </summary>
         public string Objective { get; set; }
 
+        /// <summary>
+        /// Gets the ProgramProjectCode
+        /// </summary>
         public string ProgramProjectCode { get; }
 
-        // METHODS
-
         /// <summary>
-        ///     Gets the goal.
+        /// Gets the goal.
         /// </summary>
         /// <returns></returns>
         public string GetGoal()
@@ -173,7 +272,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the name of the goal.
+        /// Gets the name of the goal.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -183,7 +282,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the NPM code.
+        /// Gets the NPM code.
         /// </summary>
         /// <returns></returns>
         public string GetNpmCode()
@@ -193,7 +292,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the objective.
+        /// Gets the objective.
         /// </summary>
         /// <returns></returns>
         public string GetObjective()
@@ -202,7 +301,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the name of the objective.
+        /// Gets the name of the objective.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -212,7 +311,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the program project code.
+        /// Gets the program project code.
         /// </summary>
         /// <returns></returns>
         public string GetProgramProjectCode()
@@ -221,7 +320,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the code.
+        /// Gets the code.
         /// </summary>
         /// <returns></returns>
         string IAccount.GetCode()
@@ -230,7 +329,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the code.
+        /// Gets the code.
         /// </summary>
         /// <returns></returns>
         public string GetCode()
@@ -239,18 +338,16 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Returns a <see cref="System.String" /> that represents this instance.
+        /// Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
-        /// <returns>
-        ///     A <see cref="System.String" /> that represents this instance.
-        /// </returns>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return Code;
         }
 
         /// <summary>
-        ///     Gets the insert fields.
+        /// Gets the insert fields.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -309,7 +406,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the account parameter.
+        /// Gets the account parameter.
         /// </summary>
         /// <param name="bfy">The bfy.</param>
         /// <param name="fund">The fund.</param>
@@ -329,9 +426,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the account program data.
+        /// Gets the account program data.
         /// </summary>
-        /// <param name="fund">The fund.</param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
+        /// <param name="fundcode">The fundcode<see cref="string"/></param>
         /// <param name="code">The code.</param>
         /// <returns></returns>
         internal Dictionary<string, object> GetAccountProgramData(string bfy, string fundcode, string code)
@@ -355,9 +453,8 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
         public static void Insert(Provider provider, Dictionary<string, object> p)
@@ -378,7 +475,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -400,9 +497,8 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
         public static void Delete(Provider provider, Dictionary<string, object> p)

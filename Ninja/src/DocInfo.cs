@@ -2,18 +2,28 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// Defines the <see cref="DocInfo" />
+    /// </summary>
     public class DocInfo
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocInfo"/> class.
+        /// </summary>
         public DocInfo()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocInfo"/> class.
+        /// </summary>
+        /// <param name="budget">The budget<see cref="DivisionAuthority"/></param>
         public DocInfo(DivisionAuthority budget)
         {
             Data = budget;
@@ -24,41 +34,96 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the AccountingInfo
+        /// </summary>
         public List<string> AccountingInfo { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Awards
+        /// </summary>
         public decimal Awards { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ControlInfo
+        /// </summary>
         public List<string> ControlInfo { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ControlNumber
+        /// </summary>
         public ControlNumber ControlNumber { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ControlNumbers
+        /// </summary>
         public List<string> ControlNumbers { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DateIssued
+        /// </summary>
         public string DateIssued { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DcnPrefix
+        /// </summary>
         public string DcnPrefix { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Data
+        /// </summary>
         public DivisionAuthority Data { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DocumentHeader
+        /// </summary>
         public List<string> DocumentHeader { get; set; }
 
+        /// <summary>
+        /// Gets the Organization
+        /// </summary>
         public Org Organization { get; }
 
+        /// <summary>
+        /// Gets or sets the OverTime
+        /// </summary>
         public decimal OverTime { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Purpose
+        /// </summary>
         public string Purpose { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Reprogrammings
+        /// </summary>
         public List<Transfer> Reprogrammings { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SignatureBlock
+        /// </summary>
         public List<string> SignatureBlock { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Suppplemental
+        /// </summary>
         public Dictionary<string, object> Suppplemental { get; set; }
 
+        /// <summary>
+        /// Gets or sets the TimeOffAwards
+        /// </summary>
         public int TimeOffAwards { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Training
+        /// </summary>
         public PRC Training { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The GetAccountingInfo
+        /// </summary>
+        /// <returns>The <see cref="List{string}"/></returns>
         internal List<string> GetAccountingInfo()
         {
             List<string> footer = new List<string>();
@@ -75,6 +140,10 @@ namespace BudgetExecution
             return footer;
         }
 
+        /// <summary>
+        /// The GetControlNumber
+        /// </summary>
+        /// <returns>The <see cref="ControlNumber"/></returns>
         internal ControlNumber GetControlNumber()
         {
             try
@@ -88,6 +157,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDocmumentInfo
+        /// </summary>
+        /// <returns>The <see cref="Dictionary{string, string}"/></returns>
         internal Dictionary<string, string> GetDocmumentInfo()
         {
             try
@@ -107,6 +180,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDocumentHeader
+        /// </summary>
+        /// <returns>The <see cref="List{string}"/></returns>
         internal List<string> GetDocumentHeader()
         {
             List<string> division = new List<string>();
@@ -117,6 +194,10 @@ namespace BudgetExecution
             return division;
         }
 
+        /// <summary>
+        /// The GetManagementHeader
+        /// </summary>
+        /// <returns>The <see cref="List{string}"/></returns>
         internal List<string> GetManagementHeader()
         {
             List<string> header = new List<string>();
@@ -127,6 +208,10 @@ namespace BudgetExecution
             return header;
         }
 
+        /// <summary>
+        /// The GetNewDocNumber
+        /// </summary>
+        /// <returns>The <see cref="int"/></returns>
         internal int GetNewDocNumber()
         {
             try
@@ -140,6 +225,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSignatureInfo
+        /// </summary>
+        /// <returns>The <see cref="List{string}"/></returns>
         internal List<string> GetSignatureInfo()
         {
             List<string> signature = new List<string>();

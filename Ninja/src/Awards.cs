@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Awards" />
+    /// </summary>
     public class Awards
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// </summary>
         public Awards()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Awards(Provider provider = Provider.SQLite)
         {
             Source = Source.Awards;
@@ -24,6 +34,11 @@ namespace BudgetExecution
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public Awards(Provider provider, Dictionary<string, object> p)
         {
             Source = Source.Awards;
@@ -43,6 +58,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
         public Awards(DataRow data)
         {
             Data = data;
@@ -56,40 +75,92 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Data
+        /// </summary>
         public DataRow Data { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Type
+        /// </summary>
         public string Type { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public string RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DivisionName
+        /// </summary>
         public string DivisionName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundCode
+        /// </summary>
         public string FundCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public string BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
         public decimal Amount { get; set; }
 
         // METHODS
-
+        /// <summary>
+        /// The Insert
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -107,6 +178,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Update
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -124,6 +200,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try

@@ -2,23 +2,33 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-
 namespace BudgetExecution
 {
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+
+    /// <summary>
+    /// Defines the <see cref="AccountManager" />
+    /// </summary>
     public partial class AccountManager : MetroForm
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountManager"/> class.
+        /// </summary>
         public AccountManager()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountManager"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
         public AccountManager(DataBuilder data)
         {
             InitializeComponent();
@@ -31,6 +41,11 @@ namespace BudgetExecution
             BindingSource.DataSource = new DataBuilder(data.Source, Provider.SQLite);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountManager"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public AccountManager(Source source, Provider provider)
         {
             InitializeComponent();
@@ -52,6 +67,12 @@ namespace BudgetExecution
             SubProject = ProgramElements["SubProject"];
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountManager"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
         {
             InitializeComponent();
@@ -75,45 +96,106 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets the DbRow
+        /// </summary>
         public DataRow DbRow { get; }
 
+        /// <summary>
+        /// Gets or sets the Labels
+        /// </summary>
         public List<Label> Labels { get; set; }
 
+        /// <summary>
+        /// Gets or sets the TextBoxes
+        /// </summary>
         public List<MetroSetTextBox> TextBoxes { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ComboBoxes
+        /// </summary>
         public List<MetroSetComboBox> ComboBoxes { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Ninja
+        /// </summary>
         public FormData Ninja { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BudgetLevel
+        /// </summary>
         public string[] BudgetLevel { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string[] BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Org
+        /// </summary>
         public string[] Org { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public string[] RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the AH
+        /// </summary>
         public string[] AH { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Code
+        /// </summary>
         public string[] Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public string[] BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fund
+        /// </summary>
         public string[] Fund { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SubProject
+        /// </summary>
         public string[] SubProject { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The ConfigureGridVisibleColumns
+        /// </summary>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
         internal void ConfigureGridVisibleColumns(DataGridView dgv)
         {
             try
@@ -138,6 +220,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The BindGridAndNavigator
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="dg">The dg<see cref="DataGridView"/></param>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <param name="bn">The bn<see cref="BindingNavigator"/></param>
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
             try
@@ -153,6 +242,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCurrentRowDictionary
+        /// </summary>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         internal Dictionary<string, object> GetCurrentRowDictionary(BindingSource bs)
         {
             if(bs.DataSource != null)
@@ -179,11 +273,19 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// The AccountManager_Load
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AccountManager_Load(object sender, EventArgs e)
         {
             ConfigureTextBoxBindings();
         }
 
+        /// <summary>
+        /// The ConfigureTextBoxBindings
+        /// </summary>
         private void ConfigureTextBoxBindings()
         {
             try
@@ -207,6 +309,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The BindComboBoex
+        /// </summary>
         internal void BindComboBoex()
         {
             try
@@ -235,6 +340,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateComboBoxes
+        /// </summary>
         internal void PopulateComboBoxes()
         {
             foreach(string s in SubProject)
@@ -273,6 +381,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopuluateFundCodes
+        /// </summary>
         private void PopuluateFundCodes()
         {
             try
@@ -289,6 +400,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetLabels
+        /// </summary>
+        /// <param name="gbo">The gbo<see cref="GroupBox"/></param>
+        /// <returns>The <see cref="List{Label}"/></returns>
         private List<Label> GetLabels(GroupBox gbo)
         {
             try
@@ -308,6 +424,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetComboBoxes
+        /// </summary>
+        /// <param name="gbo">The gbo<see cref="GroupBox"/></param>
+        /// <returns>The <see cref="List{MetroSetComboBox}"/></returns>
         private List<MetroSetComboBox> GetComboBoxes(GroupBox gbo)
         {
             try
@@ -327,6 +448,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetLabels
+        /// </summary>
+        /// <returns>The <see cref="List{Label}"/></returns>
         private List<Label> GetLabels()
         {
             try
@@ -346,6 +471,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetComboBoxes
+        /// </summary>
+        /// <returns>The <see cref="List{MetroSetComboBox}"/></returns>
         private List<MetroSetComboBox> GetComboBoxes()
         {
             try
@@ -365,6 +494,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataFields
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         private Dictionary<string, object> GetDataFields(DataTable table)
         {
             try
@@ -389,34 +523,64 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CalculatorButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
             cf.ShowDialog();
         }
 
+        /// <summary>
+        /// The ExcelButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
             ExcelData ef = new ExcelData();
             ef.Show();
         }
 
+        /// <summary>
+        /// The ReprogrammingButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rf = new Reprogramming();
             rf.Show();
         }
 
+        /// <summary>
+        /// The PreviousButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
+        /// <summary>
+        /// The NextButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
         }
 
+        /// <summary>
+        /// The AddButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -430,10 +594,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The RefreshButton_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void RefreshButton_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The CopyButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -447,10 +621,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The AccountTabControl_SelectedIndexChanged
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The PopulateComboBox
+        /// </summary>
+        /// <param name="comboBox">The comboBox<see cref="ComboBox"/></param>
+        /// <param name="list">The list<see cref="string[]"/></param>
         internal void PopulateComboBox(ComboBox comboBox, string[] list)
         {
             try

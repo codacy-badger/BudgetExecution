@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Fund" />
+    /// </summary>
     public class Fund : IFund
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
         public Fund()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Fund(Provider provider = Provider.SQLite)
         {
             Source = Source.Funds;
@@ -23,6 +33,11 @@ namespace BudgetExecution
             Table = new DataBuilder(Source, Provider).Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
         public Fund(string code, string bfy) : this(Provider.SQLite)
         {
             Code = code;
@@ -36,6 +51,12 @@ namespace BudgetExecution
             TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
         public Fund(Source source, string code, string bfy)
         {
             Code = code;
@@ -52,6 +73,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public Fund(Source source, Provider provider, Dictionary<string, object> p)
         {
             Code = p["Code"].ToString();
@@ -68,6 +95,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fund"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
         public Fund(DataRow data)
         {
             Data = data;
@@ -78,39 +109,83 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Data
+        /// </summary>
         public DataRow Data { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets the Code
+        /// </summary>
         public string Code { get; }
 
+        /// <summary>
+        /// Gets the BFY
+        /// </summary>
         public string BFY { get; }
 
+        /// <summary>
+        /// Gets the Parameter
+        /// </summary>
         public Dictionary<string, object> Parameter { get; }
 
+        /// <summary>
+        /// Gets the Name
+        /// </summary>
         public string Name { get; }
 
+        /// <summary>
+        /// Gets the Title
+        /// </summary>
         public string Title { get; }
 
+        /// <summary>
+        /// Gets the TreasurySymbol
+        /// </summary>
         public string TreasurySymbol { get; }
 
-        // METHODS
         /// <summary>
-        ///     Gets the data fields.
+        /// Gets the data fields.
         /// </summary>
         /// <param name="fundcode">The code.</param>
         /// <param name="bfy">The bfy.</param>
@@ -129,7 +204,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the fund data.
+        /// Gets the fund data.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -151,7 +226,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data.
+        /// Gets the data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -171,13 +246,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ToString
+        /// </summary>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return Code;
         }
 
         /// <summary>
-        ///     Gets the insertion columns.
+        /// Gets the insertion columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -197,7 +276,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -217,7 +296,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -238,7 +317,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -260,7 +339,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -282,7 +361,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

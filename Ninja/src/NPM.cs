@@ -2,18 +2,28 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// Defines the <see cref="NPM" />
+    /// </summary>
     public class NPM
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NPM"/> class.
+        /// </summary>
         public NPM()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NPM"/> class.
+        /// </summary>
+        /// <param name="code">The code<see cref="string"/></param>
         public NPM(string code)
         {
             Code = code;
@@ -23,15 +33,32 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Code
+        /// </summary>
         public string Code { get; }
 
+        /// <summary>
+        /// Gets or sets the Name
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RPIO
+        /// </summary>
         public string RPIO { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Title
+        /// </summary>
         public string Title { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The GetParameter
+        /// </summary>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         private Dictionary<string, object> GetParameter(string code)
         {
             try
@@ -45,6 +72,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ToString
+        /// </summary>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return Code;

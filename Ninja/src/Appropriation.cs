@@ -2,20 +2,31 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Appropriation" />
+    /// </summary>
     public class Appropriation : IBudgetAuthority
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Appropriation"/> class.
+        /// </summary>
         public Appropriation()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Appropriation"/> class.
+        /// </summary>
+        /// <param name="fundcode">The fundcode<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
         public Appropriation(string fundcode, string bfy)
         {
             Code = fundcode;
@@ -25,6 +36,13 @@ namespace BudgetExecution
             Title = Fund.Title;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Appropriation"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="fundcode">The fundcode<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
         public Appropriation(Source source, Provider provider, string fundcode, string bfy) : this(fundcode, bfy)
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = Fund.Code, ["BFY"] = bfy });
@@ -48,59 +66,133 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Fund
+        /// </summary>
         public Fund Fund { get; }
 
+        /// <summary>
+        /// Gets the Code
+        /// </summary>
         public string Code { get; }
 
+        /// <summary>
+        /// Gets the Name
+        /// </summary>
         public string Name { get; }
 
+        /// <summary>
+        /// Gets the Title
+        /// </summary>
         public string Title { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Allocation
+        /// </summary>
         public PRC[] Allocation { get; set; }
 
+        /// <summary>
+        /// Gets the Average
+        /// </summary>
         public decimal Average { get; }
 
+        /// <summary>
+        /// Gets the BocCodes
+        /// </summary>
         public string[] BocCodes { get; }
 
+        /// <summary>
+        /// Gets or sets the BocData
+        /// </summary>
         public Dictionary<string, decimal> BocData { get; set; }
 
+        /// <summary>
+        /// Gets the Count
+        /// </summary>
         public int Count { get; }
 
+        /// <summary>
+        /// Gets the FiscalYear
+        /// </summary>
         public string FiscalYear { get; }
 
+        /// <summary>
+        /// Gets the FTE
+        /// </summary>
         public FTE[] FTE { get; }
 
+        /// <summary>
+        /// Gets or sets the GoalData
+        /// </summary>
         public Dictionary<string, decimal> GoalData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NpmData
+        /// </summary>
         public Dictionary<string, decimal> NpmData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ObjectiveData
+        /// </summary>
         public Dictionary<string, decimal> ObjectiveData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the PrcData
+        /// </summary>
         public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramData
+        /// </summary>
         public Dictionary<string, decimal> ProgramData { get; set; }
 
+        /// <summary>
+        /// Gets the Project
+        /// </summary>
         public string[] Project { get; }
 
+        /// <summary>
+        /// Gets or sets the ProjectData
+        /// </summary>
         public Dictionary<string, decimal> ProjectData { get; set; }
 
+        /// <summary>
+        /// Gets the Total
+        /// </summary>
         public decimal Total { get; }
 
+        /// <summary>
+        /// Gets the Data
+        /// </summary>
         internal DataRow[] Data { get; }
 
+        /// <summary>
+        /// Gets the Metric
+        /// </summary>
         public PrcMetric Metric { get; }
 
+        /// <summary>
+        /// Gets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets the Amount
+        /// </summary>
         public decimal Amount { get; }
 
-        // METHODS
-
         /// <summary>
+        /// The GetCodes
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -119,6 +211,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetDataValues
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -139,6 +232,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetMetrics
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -149,6 +243,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetPrcArray
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -166,6 +261,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetProgramElements
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -197,6 +293,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetTotal
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -214,6 +311,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The FilterTable
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -233,6 +331,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetAverage
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -250,6 +349,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetCodes
         /// </summary>
         /// <returns></returns>
         public Tuple<string[], string[], string[], string[], string[]> GetCodes()
@@ -258,6 +358,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetCount
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -275,6 +376,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetDataValues
         /// </summary>
         /// <param name="table"></param>
         /// <param name="list"></param>
@@ -300,6 +402,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetFteTotal
         /// </summary>
         /// <returns></returns>
         public decimal GetFteTotal()
@@ -308,6 +411,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetMetrics
         /// </summary>
         /// <param name="table"></param>
         /// <param name="list"></param>
@@ -338,6 +442,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetMetrics
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -369,6 +474,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetTotals
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -399,6 +505,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetTotals
         /// </summary>
         /// <param name="table"></param>
         /// <param name="filters"></param>
@@ -427,6 +534,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The GetFTE
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>

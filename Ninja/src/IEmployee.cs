@@ -4,6 +4,9 @@
 
 namespace BudgetExecution
 {
+    /// <summary>
+    /// Defines the <see cref="IEmployee" />
+    /// </summary>
     public interface IEmployee
     {
     }

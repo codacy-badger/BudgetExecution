@@ -2,24 +2,36 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.Common;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data.SqlServerCe;
-using System.Data.SQLite;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data.Common;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
+    using System.Data.SQLite;
+    using System.Data.SqlServerCe;
+
+    /// <summary>
+    /// Defines the <see cref="Query" />
+    /// </summary>
     public class Query : IQuery
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Query"/> class.
+        /// </summary>
         public Query()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Query"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="cmb">The cmb<see cref="Sql"/></param>
         public Query(Source source = Source.PRC, Provider provider = Provider.SQLite, Sql cmb = Sql.SELECT)
         {
             Provider = provider;
@@ -36,6 +48,13 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Query"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="command">The command<see cref="Sql"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
         {
             Provider = provider;
@@ -48,48 +67,104 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter(DataCommand, Sql);
         }
 
+        /// <summary>
+        /// Gets the Sql
+        /// </summary>
         public Sql Sql { get; }
 
+        /// <summary>
+        /// Gets the TableName
+        /// </summary>
         public string TableName { get; }
 
+        /// <summary>
+        /// Gets or sets the Parameters
+        /// </summary>
         public DbParameter[] Parameters { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SelectStatement
+        /// </summary>
         public string SelectStatement { get; set; }
 
+        /// <summary>
+        /// Gets or sets the UpdateStatement
+        /// </summary>
         public string UpdateStatement { get; set; }
 
+        /// <summary>
+        /// Gets or sets the InsertStatement
+        /// </summary>
         public string InsertStatement { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DeleteStatement
+        /// </summary>
         public string DeleteStatement { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SelectCommand
+        /// </summary>
         public DbCommand SelectCommand { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DeleteCommand
+        /// </summary>
         public DbCommand DeleteCommand { get; internal set; }
 
+        /// <summary>
+        /// Gets or sets the InsertCommand
+        /// </summary>
         public DbCommand InsertCommand { get; internal set; }
 
+        /// <summary>
+        /// Gets or sets the UpdateCommand
+        /// </summary>
         public DbCommand UpdateCommand { get; internal set; }
 
+        /// <summary>
+        /// Gets or sets the CommandBuilder
+        /// </summary>
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
         // PROPERTIES
-
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DataConnection
+        /// </summary>
         public DbConnection DataConnection { get; }
 
+        /// <summary>
+        /// Gets or sets the SqlStatement
+        /// </summary>
         public string SqlStatement { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataCommand
+        /// </summary>
         public DbCommand DataCommand { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataReader
+        /// </summary>
         public DbDataReader DataReader { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataAdapter
+        /// </summary>
         public DbDataAdapter DataAdapter { get; set; }
 
         /// <summary>
-        ///     Gets the data connection.
+        /// Gets the data connection.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <returns></returns>
@@ -129,7 +204,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the SQL statement.
+        /// Gets the SQL statement.
         /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <returns></returns>
@@ -147,7 +222,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data command.
+        /// Gets the data command.
         /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <param name="connection">The connection.</param>
@@ -182,7 +257,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data adapter.
+        /// Gets the data adapter.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <param name="cmd"></param>
@@ -198,29 +273,29 @@ namespace BudgetExecution
                         {
                             case SQLiteCommand _:
                             {
-                                SQLiteDataAdapter adapter = new SQLiteDataAdapter((SQLiteCommand) command);
-                                adapter.SelectCommand = (SQLiteCommand) command;
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter((SQLiteCommand)command);
+                                adapter.SelectCommand = (SQLiteCommand)command;
                                 return adapter;
                             }
 
                             case OleDbCommand _:
                             {
-                                OleDbDataAdapter oledbselect = new OleDbDataAdapter((OleDbCommand) command);
-                                oledbselect.SelectCommand = (OleDbCommand) command;
+                                OleDbDataAdapter oledbselect = new OleDbDataAdapter((OleDbCommand)command);
+                                oledbselect.SelectCommand = (OleDbCommand)command;
                                 return oledbselect;
                             }
 
                             case SqlCeCommand _:
                             {
-                                SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter((SqlCeCommand) command);
-                                sqlceselect.SelectCommand = (SqlCeCommand) command;
+                                SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter((SqlCeCommand)command);
+                                sqlceselect.SelectCommand = (SqlCeCommand)command;
                                 return sqlceselect;
                             }
 
                             case SqlCommand _:
                             {
-                                SqlDataAdapter sqlselect = new SqlDataAdapter((SqlCommand) command);
-                                sqlselect.SelectCommand = (SqlCommand) command;
+                                SqlDataAdapter sqlselect = new SqlDataAdapter((SqlCommand)command);
+                                sqlselect.SelectCommand = (SqlCommand)command;
                                 return sqlselect;
                             }
                         }
@@ -232,29 +307,29 @@ namespace BudgetExecution
                         {
                             case SQLiteCommand _:
                             {
-                                SQLiteDataAdapter update = new SQLiteDataAdapter((SQLiteCommand) command);
-                                update.UpdateCommand = (SQLiteCommand) command;
+                                SQLiteDataAdapter update = new SQLiteDataAdapter((SQLiteCommand)command);
+                                update.UpdateCommand = (SQLiteCommand)command;
                                 return update;
                             }
 
                             case OleDbCommand _:
                             {
-                                OleDbDataAdapter update = new OleDbDataAdapter((OleDbCommand) command);
-                                update.UpdateCommand = (OleDbCommand) command;
+                                OleDbDataAdapter update = new OleDbDataAdapter((OleDbCommand)command);
+                                update.UpdateCommand = (OleDbCommand)command;
                                 return update;
                             }
 
                             case SqlCeCommand _:
                             {
-                                SqlCeDataAdapter update = new SqlCeDataAdapter((SqlCeCommand) command);
-                                update.UpdateCommand = (SqlCeCommand) command;
+                                SqlCeDataAdapter update = new SqlCeDataAdapter((SqlCeCommand)command);
+                                update.UpdateCommand = (SqlCeCommand)command;
                                 return update;
                             }
 
                             case SqlCommand _:
                             {
-                                SqlDataAdapter update = new SqlDataAdapter((SqlCommand) command);
-                                update.UpdateCommand = (SqlCommand) command;
+                                SqlDataAdapter update = new SqlDataAdapter((SqlCommand)command);
+                                update.UpdateCommand = (SqlCommand)command;
                                 return update;
                             }
                         }
@@ -266,29 +341,29 @@ namespace BudgetExecution
                         {
                             case SQLiteCommand _:
                             {
-                                SQLiteDataAdapter insert = new SQLiteDataAdapter((SQLiteCommand) command);
-                                insert.InsertCommand = (SQLiteCommand) command;
+                                SQLiteDataAdapter insert = new SQLiteDataAdapter((SQLiteCommand)command);
+                                insert.InsertCommand = (SQLiteCommand)command;
                                 return insert;
                             }
 
                             case OleDbCommand _:
                             {
-                                OleDbDataAdapter insert = new OleDbDataAdapter((OleDbCommand) command);
-                                insert.InsertCommand = (OleDbCommand) command;
+                                OleDbDataAdapter insert = new OleDbDataAdapter((OleDbCommand)command);
+                                insert.InsertCommand = (OleDbCommand)command;
                                 return insert;
                             }
 
                             case SqlCeCommand _:
                             {
-                                SqlCeDataAdapter insert = new SqlCeDataAdapter((SqlCeCommand) command);
-                                insert.InsertCommand = (SqlCeCommand) command;
+                                SqlCeDataAdapter insert = new SqlCeDataAdapter((SqlCeCommand)command);
+                                insert.InsertCommand = (SqlCeCommand)command;
                                 return insert;
                             }
 
                             case SqlCommand _:
                             {
-                                SqlDataAdapter insert = new SqlDataAdapter((SqlCommand) command);
-                                insert.InsertCommand = (SqlCommand) command;
+                                SqlDataAdapter insert = new SqlDataAdapter((SqlCommand)command);
+                                insert.InsertCommand = (SqlCommand)command;
                                 return insert;
                             }
                         }
@@ -300,29 +375,29 @@ namespace BudgetExecution
                         {
                             case SQLiteCommand _:
                             {
-                                SQLiteDataAdapter delete = new SQLiteDataAdapter((SQLiteCommand) command);
-                                delete.DeleteCommand = (SQLiteCommand) command;
+                                SQLiteDataAdapter delete = new SQLiteDataAdapter((SQLiteCommand)command);
+                                delete.DeleteCommand = (SQLiteCommand)command;
                                 return delete;
                             }
 
                             case OleDbCommand _:
                             {
-                                OleDbDataAdapter delete = new OleDbDataAdapter((OleDbCommand) command);
-                                delete.DeleteCommand = (OleDbCommand) command;
+                                OleDbDataAdapter delete = new OleDbDataAdapter((OleDbCommand)command);
+                                delete.DeleteCommand = (OleDbCommand)command;
                                 return delete;
                             }
 
                             case SqlCeCommand _:
                             {
-                                SqlCeDataAdapter delete = new SqlCeDataAdapter((SqlCeCommand) command);
-                                delete.DeleteCommand = (SqlCeCommand) command;
+                                SqlCeDataAdapter delete = new SqlCeDataAdapter((SqlCeCommand)command);
+                                delete.DeleteCommand = (SqlCeCommand)command;
                                 return delete;
                             }
 
                             case SqlCommand _:
                             {
-                                SqlDataAdapter delete = new SqlDataAdapter((SqlCommand) command);
-                                delete.DeleteCommand = (SqlCommand) command;
+                                SqlDataAdapter delete = new SqlDataAdapter((SqlCommand)command);
+                                delete.DeleteCommand = (SqlCommand)command;
                                 return delete;
                             }
                         }
@@ -330,8 +405,8 @@ namespace BudgetExecution
                         break;
 
                     default:
-                        SQLiteDataAdapter select = new SQLiteDataAdapter((SQLiteCommand) command);
-                        select.SelectCommand = (SQLiteCommand) command;
+                        SQLiteDataAdapter select = new SQLiteDataAdapter((SQLiteCommand)command);
+                        select.SelectCommand = (SQLiteCommand)command;
                         return select;
                 }
 
@@ -345,7 +420,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data reader.
+        /// Gets the data reader.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns></returns>
@@ -375,7 +450,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the command builder.
+        /// Gets the command builder.
         /// </summary>
         /// <param name="adapter">The adapter.</param>
         /// <returns></returns>
@@ -409,7 +484,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the connection.
+        /// Gets the connection.
         /// </summary>
         /// <returns></returns>
         /// <summary>
@@ -438,8 +513,9 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the select parameter string.
+        /// Gets the select parameter string.
         /// </summary>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         /// <returns></returns>
         internal string GetSelectParamString(Dictionary<string, object> p)
         {
@@ -462,11 +538,11 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the SQL statement.
+        /// Gets the SQL statement.
         /// </summary>
         /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
         /// <param name="cmd">The command.</param>
+        /// <param name="p">The p.</param>
         /// <returns></returns>
         public string GetSqlStatement(Source source, Sql cmd, Dictionary<string, object> p)
         {
@@ -502,7 +578,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the select statement.
+        /// Gets the select statement.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="param">The parameter.</param>
@@ -521,7 +597,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the select statement.
+        /// Gets the select statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -547,9 +623,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the update statement.
+        /// Gets the update statement.
         /// </summary>
         /// <param name="source">The source.</param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         /// <returns></returns>
         public string GetUpdateStatement(Source source, Dictionary<string, object> param)
         {
@@ -574,7 +651,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the insert statement.
+        /// Gets the insert statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -603,7 +680,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the delete statement.
+        /// Gets the delete statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -623,7 +700,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the select command.
+        /// Gets the select command.
         /// </summary>
         /// <param name="select">The select.</param>
         /// <param name="connection">The connection.</param>
@@ -636,16 +713,16 @@ namespace BudgetExecution
                 {
                     case SQLiteConnection _:
                         SelectStatement = select;
-                        return new SQLiteCommand(SelectStatement, (SQLiteConnection) connection);
+                        return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                     case OleDbConnection _:
                         SelectStatement = select;
-                        return new OleDbCommand(SelectStatement, (OleDbConnection) connection);
+                        return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                     case SqlCeConnection _:
                         SelectStatement = select;
-                        return new SqlCeCommand(SelectStatement, (SqlCeConnection) connection);
+                        return new SqlCeCommand(SelectStatement, (SqlCeConnection)connection);
                     case SqlConnection _:
                         SelectStatement = select;
-                        return new SqlCommand(SelectStatement, (SqlConnection) connection);
+                        return new SqlCommand(SelectStatement, (SqlConnection)connection);
                     default:
                         return null;
                 }
@@ -658,7 +735,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the update command.
+        /// Gets the update command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
@@ -680,7 +757,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the insert command.
+        /// Gets the insert command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
@@ -701,6 +778,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDeleteCommand
+        /// </summary>
+        /// <param name="pmr">The pmr<see cref="Dictionary{string, object}"/></param>
+        /// <returns>The <see cref="DbCommand"/></returns>
         public DbCommand GetDeleteCommand(Dictionary<string, object> pmr)
         {
             try
@@ -719,7 +801,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data command.
+        /// Gets the data command.
         /// </summary>
         /// <param name="cmd">The command.</param>
         /// <param name="pmr">The PMR.</param>

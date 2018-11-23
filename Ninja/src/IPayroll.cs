@@ -4,6 +4,9 @@
 
 namespace BudgetExecution
 {
+    /// <summary>
+    /// Defines the <see cref="IPayroll" />
+    /// </summary>
     public interface IPayroll
     {
     }

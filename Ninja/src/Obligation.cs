@@ -2,19 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Obligation" />
+    /// </summary>
     public class Obligation : IObligation
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Obligation"/> class.
+        /// </summary>
         public Obligation()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Obligation"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Obligation(Source source = Source.ProgramObligations, Provider provider = Provider.SQLite)
         {
             Source = source;
@@ -25,6 +36,12 @@ namespace BudgetExecution
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Obligation"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public Obligation(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
@@ -35,6 +52,31 @@ namespace BudgetExecution
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Obligation"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
+        /// <param name="rpio">The rpio<see cref="string"/></param>
+        /// <param name="fy">The fy<see cref="string"/></param>
+        /// <param name="fund">The fund<see cref="string"/></param>
+        /// <param name="org">The org<see cref="string"/></param>
+        /// <param name="rc">The rc<see cref="string"/></param>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="boc">The boc<see cref="string"/></param>
+        /// <param name="foc">The foc<see cref="string"/></param>
+        /// <param name="focname">The focname<see cref="string"/></param>
+        /// <param name="doctype">The doctype<see cref="string"/></param>
+        /// <param name="system">The system<see cref="string"/></param>
+        /// <param name="prn">The prn<see cref="string"/></param>
+        /// <param name="dcnprefix">The dcnprefix<see cref="string"/></param>
+        /// <param name="grantnumber">The grantnumber<see cref="string"/></param>
+        /// <param name="siteprojcode">The siteprojcode<see cref="string"/></param>
+        /// <param name="siteprojname">The siteprojname<see cref="string"/></param>
+        /// <param name="dcn">The dcn<see cref="string"/></param>
+        /// <param name="c">The c<see cref="decimal"/></param>
+        /// <param name="o">The o<see cref="decimal"/></param>
         public Obligation(Source source, Provider provider, Dictionary<string, object> param, string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname, string doctype, string system, string prn, string dcnprefix, string grantnumber, string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
         {
             Source = source;
@@ -56,6 +98,10 @@ namespace BudgetExecution
             Obligations = o;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Obligation"/> class.
+        /// </summary>
+        /// <param name="dr">The dr<see cref="DataRow"/></param>
         public Obligation(DataRow dr)
         {
             ID = int.Parse(dr["ID"].ToString());
@@ -72,49 +118,108 @@ namespace BudgetExecution
         }
 
         // Properties
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets the Records
+        /// </summary>
         public DataRow[] Records { get; }
 
+        /// <summary>
+        /// Gets the DbRow
+        /// </summary>
         public DataRow DbRow { get; }
 
+        /// <summary>
+        /// Gets or sets the AH
+        /// </summary>
         public string AH { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the PRC
+        /// </summary>
         public PRC[] PRC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public BOC BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectCode
+        /// </summary>
         public string ProgramProjectCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DocumentControlNumber
+        /// </summary>
         public string DocumentControlNumber { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FOC
+        /// </summary>
         public string FOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FocName
+        /// </summary>
         public string FocName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fund
+        /// </summary>
         public Fund Fund { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Obligations
+        /// </summary>
         public decimal Obligations { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Org
+        /// </summary>
         public Org Org { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public RC RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RPIO
+        /// </summary>
         public string RPIO { get; set; }
 
-        // METHODS
         /// <summary>
-        ///     Gets the data fields.
+        /// Gets the data fields.
         /// </summary>
         /// <returns></returns>
         internal Dictionary<string, object> GetDataFields()
@@ -132,7 +237,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data fields.
+        /// Gets the data fields.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -155,7 +260,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data records.
+        /// Gets the data records.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -175,7 +280,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the fields.
+        /// Gets the fields.
         /// </summary>
         /// <returns></returns>
         internal string[] GetFields()
@@ -194,7 +299,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the values.
+        /// Gets the values.
         /// </summary>
         /// <returns></returns>
         internal object[] GetValues()
@@ -212,7 +317,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the insert columns.
+        /// Gets the insert columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -273,7 +378,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -293,7 +398,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified parameter.
+        /// Selects the specified parameter.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <param name="source">The source.</param>
@@ -314,7 +419,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified p.
+        /// Inserts the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
@@ -331,7 +436,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified p.
+        /// Updates the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Update(Dictionary<string, object> p)
@@ -348,7 +453,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified p.
+        /// Deletes the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Delete(Dictionary<string, object> p)

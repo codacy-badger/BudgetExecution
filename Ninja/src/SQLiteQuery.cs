@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+
+    /// <summary>
+    /// Defines the <see cref="SQLiteQuery" />
+    /// </summary>
     public class SQLiteQuery : Query, IQuery
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
+        /// </summary>
         public SQLiteQuery()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
         public SQLiteQuery(Source source) : base(source)
         {
             Provider = base.Provider;
@@ -32,6 +42,12 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="sqlcmd">The sqlcmd<see cref="Sql"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public SQLiteQuery(Source source, Sql sqlcmd, Dictionary<string, object> p) : base(source, Provider.SQLite, sqlcmd, p)
         {
             Provider = base.Provider;
@@ -48,6 +64,12 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
         public SQLiteQuery(Source source, Provider provider, Sql sql) : base(source, provider, sql)
         {
             Provider = provider;
@@ -64,6 +86,13 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
         {
             Provider = base.Provider;
@@ -82,38 +111,87 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-
+        /// <summary>
+        /// Gets the DataConnection
+        /// </summary>
         public new SQLiteConnection DataConnection { get; }
 
+        /// <summary>
+        /// Gets the Parameter
+        /// </summary>
         public Dictionary<string, object> Parameter { get; }
 
+        /// <summary>
+        /// Gets the TableName
+        /// </summary>
         public new string TableName { get; }
 
+        /// <summary>
+        /// Gets or sets the SqlCmd
+        /// </summary>
         public Sql SqlCmd { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SelectStatement
+        /// </summary>
         public new string SelectStatement { get; set; }
 
+        /// <summary>
+        /// Gets the SelectCommand
+        /// </summary>
         public new SQLiteCommand SelectCommand { get; }
 
+        /// <summary>
+        /// Gets or sets the DataReader
+        /// </summary>
         public new SQLiteDataReader DataReader { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataAdapter
+        /// </summary>
         public new SQLiteDataAdapter DataAdapter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CommandBuilder
+        /// </summary>
         public new SQLiteCommandBuilder CommandBuilder { get; internal set; }
 
+        /// <summary>
+        /// Gets or sets the DeleteCommand
+        /// </summary>
         public new SQLiteCommand DeleteCommand { get; set; }
 
+        /// <summary>
+        /// Gets or sets the InsertCommand
+        /// </summary>
         public new SQLiteCommand InsertCommand { get; set; }
 
+        /// <summary>
+        /// Gets or sets the UpdateCommand
+        /// </summary>
         public new SQLiteCommand UpdateCommand { get; set; }
 
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public new Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public new Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the SqlStatement
+        /// </summary>
         public new string SqlStatement { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The GetParameterStrings
+        /// </summary>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetParameterStrings(Dictionary<string, object> param)
         {
             try
@@ -134,6 +212,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSqlString
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="sql">The sql<see cref="string"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetSqlString(DataTable table, string sql)
         {
             try
@@ -147,6 +231,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetConnection
+        /// </summary>
+        /// <returns>The <see cref="SQLiteConnection"/></returns>
         public SQLiteConnection GetConnection()
         {
             try
@@ -160,6 +248,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSelectStatement
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="param">The param<see cref="SQLiteParameter[]"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -180,6 +274,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetUpdateStatement
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="param">The param<see cref="SQLiteParameter[]"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetUpdateStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -206,6 +306,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetInsertStatement
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="param">The param<see cref="SQLiteParameter[]"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetInsertStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -229,6 +335,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDeleteStatement
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="param">The param<see cref="SQLiteParameter[]"/></param>
+        /// <returns>The <see cref="string"/></returns>
         public string GetDeleteStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -249,6 +361,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSelectCommand
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetSelectCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -274,6 +394,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetUpdateCommand
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetUpdateCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -299,6 +427,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetInsertCommand
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetInsertCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -324,6 +460,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDeleteCommand
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetDeleteCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -349,6 +493,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataCommand
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="cmd">The cmd<see cref="Sql"/></param>
+        /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetDataCommand(Source source, Provider provider, Sql cmd, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -378,6 +531,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataCommand
+        /// </summary>
+        /// <param name="select">The select<see cref="string"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         public SQLiteCommand GetDataCommand(string select, SQLiteConnection connection)
         {
             try
@@ -392,6 +551,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataAdapter
+        /// </summary>
+        /// <param name="command">The command<see cref="SQLiteCommand"/></param>
+        /// <returns>The <see cref="SQLiteDataAdapter"/></returns>
         public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
         {
             try
@@ -405,6 +569,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataReader
+        /// </summary>
+        /// <param name="command">The command<see cref="SQLiteCommand"/></param>
+        /// <returns>The <see cref="SQLiteDataReader"/></returns>
         public SQLiteDataReader GetDataReader(SQLiteCommand command)
         {
             try
@@ -418,6 +587,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCommandBuilder
+        /// </summary>
+        /// <param name="adapter">The adapter<see cref="SQLiteDataAdapter"/></param>
+        /// <returns>The <see cref="SQLiteCommandBuilder"/></returns>
         public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
         {
             try
@@ -431,6 +605,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSelectCommand
+        /// </summary>
+        /// <param name="select">The select<see cref="string"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         internal SQLiteCommand GetSelectCommand(string select, SQLiteConnection connection)
         {
             try
@@ -445,6 +625,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSelectCommand
+        /// </summary>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
+        /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
+        /// <returns>The <see cref="SQLiteCommand"/></returns>
         internal SQLiteCommand GetSelectCommand(Dictionary<string, object> param, SQLiteConnection connection)
         {
             try

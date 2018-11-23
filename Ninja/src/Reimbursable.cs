@@ -2,21 +2,32 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="Reimbursable" />
+    /// </summary>
     public class Reimbursable
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reimbursable"/> class.
+        /// </summary>
         public Reimbursable()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reimbursable"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Reimbursable(Source source = Source.Reimbursables, Provider provider = Provider.SQLite)
         {
             Source = source;
@@ -26,6 +37,17 @@ namespace BudgetExecution
             DbRow = Table.Rows[0];
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reimbursable"/> class.
+        /// </summary>
+        /// <param name="fund">The fund<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
+        /// <param name="org">The org<see cref="string"/></param>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="spc">The spc<see cref="string"/></param>
+        /// <param name="an">The an<see cref="string"/></param>
+        /// <param name="auth">The auth<see cref="decimal"/></param>
+        /// <param name="amout">The amout<see cref="decimal"/></param>
         public Reimbursable(string fund, string bfy, string org, string code, string spc, string an, decimal auth, decimal amout)
         {
             Source = Source.Reimbursables;
@@ -43,6 +65,10 @@ namespace BudgetExecution
             Commitments = amout;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reimbursable"/> class.
+        /// </summary>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public Reimbursable(Dictionary<string, object> p)
         {
             Source = Source.Reimbursables;
@@ -61,6 +87,10 @@ namespace BudgetExecution
             Commitments = decimal.Parse(p["Commitments"].ToString());
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reimbursable"/> class.
+        /// </summary>
+        /// <param name="dr">The dr<see cref="DataRow"/></param>
         public Reimbursable(DataRow dr)
         {
             DbRow = dr;
@@ -76,48 +106,103 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets the DbRow
+        /// </summary>
         public DataRow DbRow { get; }
 
+        /// <summary>
+        /// Gets the ReimbId
+        /// </summary>
         public int ReimbId { get; }
 
+        /// <summary>
+        /// Gets the BFY
+        /// </summary>
         public string BFY { get; }
 
+        /// <summary>
+        /// Gets the Fund
+        /// </summary>
         public Fund Fund { get; }
 
+        /// <summary>
+        /// Gets the Account
+        /// </summary>
         public Account Account { get; }
 
+        /// <summary>
+        /// Gets the AgreementNumber
+        /// </summary>
         public string AgreementNumber { get; }
 
+        /// <summary>
+        /// Gets or sets the DocumentNumber
+        /// </summary>
         public string DocumentNumber { get; set; }
 
+        /// <summary>
+        /// Gets the SiteProjectCode
+        /// </summary>
         public string SiteProjectCode { get; }
 
+        /// <summary>
+        /// Gets the OrgCode
+        /// </summary>
         public string OrgCode { get; }
 
+        /// <summary>
+        /// Gets or sets the Code
+        /// </summary>
         public string Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public BOC BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FOC
+        /// </summary>
         public string FOC { get; set; }
 
+        /// <summary>
+        /// Gets the Obligations
+        /// </summary>
         public decimal Obligations { get; }
 
+        /// <summary>
+        /// Gets the Commitments
+        /// </summary>
         public decimal Commitments { get; }
 
+        /// <summary>
+        /// Gets or sets the ReimbParam
+        /// </summary>
         public Dictionary<string, object> ReimbParam { get; set; }
 
-        // METHODS
-
         /// <summary>
-        ///     Gets the insert fields.
+        /// Gets the insert fields.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -173,7 +258,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -193,7 +278,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -214,9 +299,11 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
         /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
@@ -238,7 +325,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -266,16 +353,18 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
         /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
                 {
@@ -290,7 +379,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -300,7 +389,7 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.UPDATE, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
                 {
@@ -315,16 +404,18 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
         /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Sql sql, Dictionary<string, object> p)
         {
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, provider, sql, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
                 {
@@ -339,7 +430,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -349,7 +440,7 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, Sql.DELETE, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
                 {

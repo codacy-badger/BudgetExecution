@@ -2,23 +2,35 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
+    /// <summary>
+    /// Defines the <see cref="BudgetChart" />
+    /// </summary>
     public class BudgetChart
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
         public BudgetChart()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string"/></param>
+        /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
         public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
             Chart = chart;
@@ -39,6 +51,12 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
         public BudgetChart(ChartControl chart, DataBuilder data, Field filter)
         {
             SeriesType = ChartSeriesType.Column;
@@ -63,6 +81,14 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, DataBuilder data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -99,6 +125,15 @@ namespace BudgetExecution
             ConfigureLegend(Chart);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string[]"/></param>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, string[] title, DataBuilder data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -144,6 +179,15 @@ namespace BudgetExecution
             ConfigureLegend(Chart);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string[]"/></param>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -180,6 +224,15 @@ namespace BudgetExecution
             ConfigureLegend(Chart);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string[]"/></param>
+        /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -205,6 +258,15 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string[]"/></param>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, string[] title, Source source, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -229,6 +291,16 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BudgetChart"/> class.
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <param name="title">The title<see cref="string[]"/></param>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
         public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -254,62 +326,146 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the AxisTitle
+        /// </summary>
         public string[] AxisTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Chart
+        /// </summary>
         public ChartControl Chart { get; set; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets the Metric
+        /// </summary>
         public PrcMetric Metric { get; }
 
+        /// <summary>
+        /// Gets or sets the BindingSource
+        /// </summary>
         public BindingSource BindingSource { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataMetrics
+        /// </summary>
         public Dictionary<string, double[]> DataMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOverMetrics
+        /// </summary>
         public Dictionary<string, double[]> CarryOverMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYearMetrics
+        /// </summary>
         public Dictionary<string, double[]> CurrentYearMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataSeries
+        /// </summary>
         public ChartSeries DataSeries { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOverSeries
+        /// </summary>
         public ChartSeries CarryOverSeries { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYearSeries
+        /// </summary>
         public ChartSeries CurrentYearSeries { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataTotals
+        /// </summary>
         public Dictionary<string, double> DataTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOverTotals
+        /// </summary>
         public Dictionary<string, double> CarryOverTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYearTotals
+        /// </summary>
         public Dictionary<string, double> CurrentYearTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Dimension
+        /// </summary>
         public int[] Dimension { get; set; }
 
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Filter
+        /// </summary>
         public Field Filter { get; }
 
+        /// <summary>
+        /// Gets or sets the SeriesType
+        /// </summary>
         public ChartSeriesType SeriesType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Value
+        /// </summary>
         public Stat Value { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Legend
+        /// </summary>
         public ChartLegend Legend { get; set; }
 
+        /// <summary>
+        /// Gets or sets the MainTitle
+        /// </summary>
         public string[] MainTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Model
+        /// </summary>
         public ChartDataBindModel Model { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOver
+        /// </summary>
         public DataTable CarryOver { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYear
+        /// </summary>
         public DataTable CurrentYear { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The Activate
+        /// </summary>
+        /// <returns>The <see cref="ChartControl"/></returns>
         internal ChartControl Activate()
         {
             return Chart;
         }
 
+        /// <summary>
+        /// The GetSeriesTotals
+        /// </summary>
+        /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
+        /// <returns>The <see cref="ChartSeries"/></returns>
         internal ChartSeries GetSeriesTotals(Dictionary<string, double> data)
         {
             try
@@ -354,6 +510,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSeriesTotals
+        /// </summary>
+        /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
+        /// <param name="type">The type<see cref="ChartSeriesType"/></param>
+        /// <returns>The <see cref="ChartSeries"/></returns>
         internal ChartSeries GetSeriesTotals(Dictionary<string, double> data, ChartSeriesType type)
         {
             try
@@ -396,6 +558,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMeasure
+        /// </summary>
+        /// <param name="data">The data<see cref="Dictionary{string, double[]}"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
+        /// <returns>The <see cref="Dictionary{string, double}"/></returns>
         internal Dictionary<string, double> GetMeasure(Dictionary<string, double[]> data, Stat value)
         {
             try
@@ -403,7 +571,7 @@ namespace BudgetExecution
                 Dictionary<string, double> total = new Dictionary<string, double>();
                 foreach(KeyValuePair<string, double[]> kvp in data)
                 {
-                    total.Add(kvp.Key, kvp.Value[(int) value]);
+                    total.Add(kvp.Key, kvp.Value[(int)value]);
                 }
 
                 return total;
@@ -415,6 +583,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigurePieChart
+        /// </summary>
+        /// <param name="ds">The ds<see cref="ChartSeries"/></param>
         internal void ConfigurePieChart(ChartSeries ds)
         {
             try
@@ -433,6 +605,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureLargeNumberSeries
+        /// </summary>
+        /// <param name="series">The series<see cref="ChartSeries"/></param>
         internal void ConfigureLargeNumberSeries(ChartSeries series)
         {
             try
@@ -471,6 +647,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureSeries
+        /// </summary>
+        /// <param name="series">The series<see cref="ChartSeries"/></param>
         internal void ConfigureSeries(ChartSeries series)
         {
             try
@@ -516,6 +696,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureSeries
+        /// </summary>
+        /// <param name="series">The series<see cref="ChartSeries"/></param>
+        /// <param name="value">The value<see cref="Stat"/></param>
         internal void ConfigureSeries(ChartSeries series, Stat value)
         {
             try
@@ -561,6 +746,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureToolTip
+        /// </summary>
+        /// <param name="series">The series<see cref="ChartSeries"/></param>
         internal void ConfigureToolTip(ChartSeries series)
         {
             for(int i = 0; i < series.Points.Count; i++)
@@ -569,6 +758,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigurePrimaryAxisLabels
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
         internal void ConfigurePrimaryAxisLabels(ChartControl chart)
         {
             try
@@ -598,6 +791,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Configure3DMode
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
         internal void Configure3DMode(ChartControl chart)
         {
             try
@@ -628,6 +825,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Configure3DMode
+        /// </summary>
+        /// <param name="dim">The dim<see cref="int[]"/></param>
         internal void Configure3DMode(int[] dim)
         {
             try
@@ -649,6 +850,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigurePrimaryAxisTitle
+        /// </summary>
+        /// <param name="title">The title<see cref="string[]"/></param>
         internal void ConfigurePrimaryAxisTitle(string[] title)
         {
             try
@@ -663,6 +868,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataBindingSource
+        /// </summary>
+        /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
+        /// <param name="filter">The filter<see cref="Field"/></param>
+        /// <returns>The <see cref="ChartDataBindModel"/></returns>
         internal ChartDataBindModel GetDataBindingSource(Dictionary<string, double> data, Field filter)
         {
             try
@@ -684,6 +895,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetLegend
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
+        /// <returns>The <see cref="ChartLegend"/></returns>
         internal ChartLegend GetLegend(ChartControl chart)
         {
             try
@@ -710,6 +926,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureLegend
+        /// </summary>
+        /// <param name="chart">The chart<see cref="ChartControl"/></param>
         internal void ConfigureLegend(ChartControl chart)
         {
             try
@@ -722,6 +942,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureMainTitle
+        /// </summary>
+        /// <param name="t">The t<see cref="string[]"/></param>
         internal void ConfigureMainTitle(string[] t)
         {
             try

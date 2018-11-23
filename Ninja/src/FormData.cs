@@ -2,29 +2,42 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-
 namespace BudgetExecution
 {
-    [ SuppressMessage("ReSharper", "UnusedParameter.Local") ]
-    [ SuppressMessage("ReSharper", "UnusedVariable") ]
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
+    /// <summary>
+    /// Defines the <see cref="FormData" />
+    /// </summary>
+    [SuppressMessage("ReSharper", "UnusedParameter.Local")]
+    [SuppressMessage("ReSharper", "UnusedVariable")]
     public class FormData
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormData"/> class.
+        /// </summary>
         public FormData()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormData"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
+        /// <param name="bn">The bn<see cref="BindingNavigator"/></param>
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             DbData = data;
@@ -36,6 +49,11 @@ namespace BudgetExecution
             Grid.DataSource = BindingSource.DataSource;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormData"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public FormData(Source source, Provider provider)
         {
             Source = source;
@@ -46,6 +64,12 @@ namespace BudgetExecution
             BindingSource.DataSource = Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormData"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
@@ -56,6 +80,14 @@ namespace BudgetExecution
             BindingSource.DataSource = Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormData"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
+        /// <param name="bn">The bn<see cref="BindingNavigator"/></param>
         public FormData(Source source, Provider provider, Dictionary<string, object> param, DataGridView dgv, BindingNavigator bn)
         {
             DbData = new DataBuilder(source, provider, param);
@@ -70,29 +102,69 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Measure
+        /// </summary>
         public Stat Measure { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartType
+        /// </summary>
         public ChartSeriesType ChartType { get; set; }
 
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BindingSource
+        /// </summary>
         public BindingSource BindingSource { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DataSet
+        /// </summary>
         public DataSet DataSet { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Count
+        /// </summary>
         public int Count { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Grid
+        /// </summary>
         public DataGridView Grid { get; set; }
 
+        /// <summary>
+        /// Gets or sets the TableFilter
+        /// </summary>
         internal TableDelegate TableFilter { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The BindGridAndNavigator
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="dg">The dg<see cref="DataGridView"/></param>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <param name="bn">The bn<see cref="BindingNavigator"/></param>
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
             try
@@ -108,11 +180,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CreateTextBoxDataBinding
+        /// </summary>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <param name="tb">The tb<see cref="TextBox"/></param>
+        /// <param name="field">The field<see cref="string"/></param>
         internal void CreateTextBoxDataBinding(BindingSource bs, TextBox tb, string field)
         {
             try
             {
-                DataTable table = (DataTable) bs.DataSource;
+                DataTable table = (DataTable)bs.DataSource;
                 DataRow row = table.Rows[bs.Position];
                 Binding binding = new Binding("Text", row, field);
                 tb.DataBindings.Add(binding);
@@ -123,11 +201,16 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CreateTextBoxDataBinding
+        /// </summary>
+        /// <param name="bs">The bs<see cref="BindingSource"/></param>
+        /// <param name="tb">The tb<see cref="List{TextBox}"/></param>
         internal void CreateTextBoxDataBinding(BindingSource bs, List<TextBox> tb)
         {
             try
             {
-                DataTable table = (DataTable) bs.DataSource;
+                DataTable table = (DataTable)bs.DataSource;
                 string[] field = table.GetColumnNames();
                 DataRow row = table.Rows[bs.Position];
                 for(int i = 0; i < tb.Count; i++)
@@ -141,6 +224,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The BocButton_OnSelect
+        /// </summary>
+        /// <param name="mscb">The mscb<see cref="MetroSetComboBox"/></param>
         internal void BocButton_OnSelect(MetroSetComboBox mscb)
         {
             try
@@ -153,6 +240,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ListBoxItem_OnSelect
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         internal void ListBoxItem_OnSelect(object sender, EventArgs e)
         {
             ListBox listbox = sender as ListBox;
@@ -169,6 +261,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateFilterControlItems
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="filterControl">The filterControl<see cref="Control"/></param>
+        /// <param name="prc">The prc<see cref="Field"/></param>
         internal void PopulateFilterControlItems(DataTable table, Control filterControl, Field prc)
         {
             try
@@ -180,6 +278,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateFilterPanel
+        /// </summary>
+        /// <param name="fitlerControl">The fitlerControl<see cref="FlowLayoutPanel"/></param>
+        /// <param name="filter">The filter<see cref="string[]"/></param>
         internal void PopulateFilterPanel(FlowLayoutPanel fitlerControl, string[] filter)
         {
             try
@@ -197,6 +300,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The InitializeFilterButtons
+        /// </summary>
+        /// <param name="control">The control<see cref="Control"/></param>
+        /// <param name="list">The list<see cref="string[]"/></param>
         internal void InitializeFilterButtons(Control control, string[] list)
         {
             try
@@ -227,6 +335,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateListBoxItems
+        /// </summary>
+        /// <param name="control">The control<see cref="Control"/></param>
+        /// <param name="list">The list<see cref="string[]"/></param>
         internal void PopulateListBoxItems(Control control, string[] list)
         {
             try
@@ -244,6 +357,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureFormSettings
+        /// </summary>
+        /// <param name="form">The form<see cref="MetroForm"/></param>
         internal void ConfigureFormSettings(MetroForm form)
         {
             try
@@ -268,6 +385,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureDataGridViewVisibleColumns
+        /// </summary>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
         internal void ConfigureDataGridViewVisibleColumns(DataGridView dgv)
         {
             try
@@ -292,6 +413,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ReturnButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         internal void ReturnButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -305,6 +431,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCurrentRowDictionary
+        /// </summary>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         internal Dictionary<string, object> GetCurrentRowDictionary(DataGridView dgv)
         {
             try
@@ -331,6 +462,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="Field"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         internal decimal GetCount(DataTable table, Field column, string filter)
         {
             if(table.Columns.Contains("Amount"))
@@ -349,6 +487,11 @@ namespace BudgetExecution
             return -1;
         }
 
+        /// <summary>
+        /// The GetDataFields
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         private Dictionary<string, object> GetDataFields(DataTable table)
         {
             try
@@ -373,6 +516,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetParamArray
+        /// </summary>
+        /// <param name="row">The row<see cref="DataRow"/></param>
+        /// <returns>The <see cref="SQLiteParameter[]"/></returns>
         private SQLiteParameter[] GetParamArray(DataRow row)
         {
             try
@@ -394,6 +542,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CreateTextBoxPrcBindings
+        /// </summary>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
+        /// <param name="tbx">The tbx<see cref="TextBox[]"/></param>
         private void CreateTextBoxPrcBindings(DataGridView dgv, TextBox[] tbx)
         {
             try
@@ -414,34 +567,64 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CalculatorButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
             cf.ShowDialog();
         }
 
+        /// <summary>
+        /// The ExcelButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
             ExcelData ef = new ExcelData();
             ef.Show();
         }
 
+        /// <summary>
+        /// The ReprogrammingButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rf = new Reprogramming();
             rf.Show();
         }
 
+        /// <summary>
+        /// The PreviousButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
+        /// <summary>
+        /// The NextButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
         }
 
+        /// <summary>
+        /// The AddButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -455,10 +638,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The RefreshButton_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void RefreshButton_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The CopyButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try

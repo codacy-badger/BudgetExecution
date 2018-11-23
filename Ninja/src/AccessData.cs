@@ -2,23 +2,25 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using VisualPlus.Toolkit.Controls.Interactivity;
-
 namespace BudgetExecution
 {
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using VisualPlus.Toolkit.Controls.Interactivity;
+
     /// <summary>
-    ///     UI for the SQLiteData class.
+    /// UI for the SQLiteData class.
     /// </summary>
-    /// <seealso cref="Syncfusion.Windows.Forms.MetroForm" />
     public sealed partial class AccessData : MetroForm
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccessData"/> class.
+        /// </summary>
         public AccessData()
         {
             InitializeComponent();
@@ -37,6 +39,11 @@ namespace BudgetExecution
             label12.Text = Table.Rows.Count.ToString();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccessData"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public AccessData(Source source, Provider provider)
         {
             InitializeComponent();
@@ -54,41 +61,88 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         private Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         private Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the TableFilter
+        /// </summary>
         internal TableDelegate TableFilter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fields
+        /// </summary>
         internal Fields Fields { get; set; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         internal DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Parameter
+        /// </summary>
         internal Dictionary<string, object> Parameter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         internal Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         internal DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the F1
+        /// </summary>
         private string F1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the F2
+        /// </summary>
         private string F2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the F3
+        /// </summary>
         private string F3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the F4
+        /// </summary>
         private string F4 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the C1
+        /// </summary>
         private Field C1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the C2
+        /// </summary>
         private Field C2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the C3
+        /// </summary>
         private Field C3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the C4
+        /// </summary>
         private Field C4 { get; set; }
 
-        // METHODS
         /// <summary>
-        ///     Handles the Load event of the SQLiteData control.
+        /// Handles the Load event of the SQLiteData control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -127,7 +181,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Populates the filter items.
+        /// Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="data">The data.</param>
@@ -161,7 +215,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Populates the filter items.
+        /// Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="table">The table.</param>
@@ -200,7 +254,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Populates the filter items.
+        /// Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="data">The data.</param>
@@ -235,7 +289,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Populates the filter items.
+        /// Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="table">The table.</param>
@@ -269,7 +323,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Populates the filter buttons.
+        /// Populates the filter buttons.
         /// </summary>
         /// <param name="control">The control.</param>
         /// <param name="list">The list.</param>
@@ -290,11 +344,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the FilterControlButton control.
+        /// Handles the OnClick event of the FilterControlButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
-        /// <exception cref="InvalidOperationException"></exception>
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -311,7 +364,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Hides the top grid labels.
+        /// Hides the top grid labels.
         /// </summary>
         private void HideTopGridLabels()
         {
@@ -338,7 +391,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the SelectedIndexChanged event of the Filter1 control.
+        /// Handles the SelectedIndexChanged event of the Filter1 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -366,7 +419,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the SelectedIndexChanged event of the Filter2 control.
+        /// Handles the SelectedIndexChanged event of the Filter2 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -396,7 +449,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the SelectedIndexChanged event of the Filter3 control.
+        /// Handles the SelectedIndexChanged event of the Filter3 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -429,7 +482,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the SelectedIndexChanged event of the Filter4 control.
+        /// Handles the SelectedIndexChanged event of the Filter4 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -459,7 +512,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data base.
+        /// Gets the data base.
         /// </summary>
         /// <param name="source">The source.</param>
         private void GetDataBase(Source source)
@@ -796,7 +849,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the CalculatorButton control.
+        /// Handles the OnClick event of the CalculatorButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -807,7 +860,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the ExcelButton control.
+        /// Handles the OnClick event of the ExcelButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -818,7 +871,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the ReprogrammingButton control.
+        /// Handles the OnClick event of the ReprogrammingButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -829,7 +882,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the PreviousButton control.
+        /// Handles the OnClick event of the PreviousButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -839,7 +892,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the NextButton control.
+        /// Handles the OnClick event of the NextButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -849,7 +902,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the AddButton control.
+        /// Handles the OnClick event of the AddButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -858,7 +911,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the Click event of the RefreshButton control.
+        /// Handles the Click event of the RefreshButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -867,7 +920,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the CopyButton control.
+        /// Handles the OnClick event of the CopyButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -885,7 +938,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the FilterButton control.
+        /// Handles the OnClick event of the FilterButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -903,7 +956,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the OnClick event of the FunctionButton control.
+        /// Handles the OnClick event of the FunctionButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -921,7 +974,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Handles the Enter event of the VisualGroupBox1 control.
+        /// Handles the Enter event of the VisualGroupBox1 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>

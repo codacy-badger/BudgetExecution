@@ -2,15 +2,21 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+
+    /// <summary>
+    /// Defines the <see cref="Personnel" />
+    /// </summary>
     public class Personnel
     {
-        // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Personnel"/> class.
+        /// </summary>
+        /// <param name="dbRow">The dbRow<see cref="DataRow"/></param>
         public Personnel(DataRow dbRow)
         {
             DbRow = dbRow;
@@ -20,6 +26,19 @@ namespace BudgetExecution
             DbTable = DbData.Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Personnel"/> class.
+        /// </summary>
+        /// <param name="id">The id<see cref="int"/></param>
+        /// <param name="eid">The eid<see cref="string"/></param>
+        /// <param name="hoc">The hoc<see cref="string"/></param>
+        /// <param name="hon">The hon<see cref="string"/></param>
+        /// <param name="wc">The wc<see cref="string"/></param>
+        /// <param name="f">The f<see cref="string"/></param>
+        /// <param name="l">The l<see cref="string"/></param>
+        /// <param name="lvt">The lvt<see cref="string"/></param>
+        /// <param name="leave">The leave<see cref="double"/></param>
+        /// <param name="dbRow">The dbRow<see cref="DataRow"/></param>
         public Personnel(int id, string eid, string hoc, string hon, string wc, string f, string l, string lvt, double leave, DataRow dbRow)
         {
             Source = Source.Personnel;
@@ -38,6 +57,11 @@ namespace BudgetExecution
             DbRow = dbRow;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Personnel"/> class.
+        /// </summary>
+        /// <param name="dr">The dr<see cref="DataRow"/></param>
+        /// <param name="dbRow">The dbRow<see cref="DataRow"/></param>
         public Personnel(DataRow dr, DataRow dbRow)
         {
             DbRow = dbRow;
@@ -52,39 +76,83 @@ namespace BudgetExecution
             Phone = double.Parse(dr["LeaveHours"].ToString());
         }
 
-        // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the DbTable
+        /// </summary>
         public DataTable DbTable { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbRow
+        /// </summary>
         public DataRow DbRow { get; set; }
 
+        /// <summary>
+        /// Gets the ID
+        /// </summary>
         public int ID { get; }
 
+        /// <summary>
+        /// Gets or sets the Email
+        /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FirstName
+        /// </summary>
         public string FirstName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the MailCode
+        /// </summary>
         public string MailCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Office
+        /// </summary>
         public string Office { get; set; }
 
+        /// <summary>
+        /// Gets or sets the LastName
+        /// </summary>
         public string LastName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Phone
+        /// </summary>
         public double Phone { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Cell
+        /// </summary>
         public string Cell { get; set; }
 
+        /// <summary>
+        /// Gets or sets the WorkCode
+        /// </summary>
         public string WorkCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Contractor
+        /// </summary>
         public string Contractor { get; set; }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -106,7 +174,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -128,7 +196,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

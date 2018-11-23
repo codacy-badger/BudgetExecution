@@ -2,21 +2,31 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
+    /// <summary>
+    /// Defines the <see cref="DataBuilder" />
+    /// </summary>
     public class DataBuilder : IDataBuilder
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
+        /// </summary>
         public DataBuilder()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
+        /// </summary>
+        /// <param name="q">The q<see cref="Query"/></param>
         public DataBuilder(Query q)
         {
             Input = null;
@@ -45,6 +55,11 @@ namespace BudgetExecution
             Records = GetRecords(Table);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public DataBuilder(Source source, Provider provider = Provider.SQLite)
         {
             Input = null;
@@ -83,6 +98,12 @@ namespace BudgetExecution
             Data = Table.AsEnumerable().Select(p => p).First();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
@@ -111,36 +132,73 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the BindingSource
+        /// </summary>
         public BindingSource BindingSource { get; set; }
 
+        /// <summary>
+        /// Gets the Total
+        /// </summary>
         public decimal Total { get; }
 
+        /// <summary>
+        /// Gets or sets the Input
+        /// </summary>
         public Dictionary<string, object> Input { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Schema
+        /// </summary>
         public Dictionary<string, Type> Schema { get; set; }
 
+        /// <summary>
+        /// Gets or sets the R6
+        /// </summary>
         public DataSet R6 { get; set; }
 
+        /// <summary>
+        /// Gets the Query
+        /// </summary>
         public Query Query { get; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets the Data
+        /// </summary>
         public DataRow Data { get; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
-        // METHODS
-
         /// <summary>
-        ///     Gets the data table.
+        /// Gets the data table.
         /// </summary>
         /// <returns></returns>
         public DataTable GetDataTable()
@@ -163,7 +221,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the records in the table as an Array of DataRows.
+        /// Gets the records in the table as an Array of DataRows.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -181,7 +239,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the unique values.
+        /// Gets the unique values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -205,7 +263,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the program elements.
+        /// Gets the program elements.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -261,8 +319,9 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data set.
+        /// Gets the data set.
         /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
         /// <returns></returns>
         public DataSet GetDataSet(Source source)
         {
@@ -284,7 +343,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data table.
+        /// Gets the data table.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
@@ -307,6 +366,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Filter
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="p">The p<see cref="Tuple{string, string}"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         public static DataTable Filter(DataTable table, Tuple<string, string> p)
         {
             try
@@ -324,7 +389,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Filters the records.
+        /// Filters the records.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="col">The col.</param>
@@ -344,7 +409,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Filters the records.
+        /// Filters the records.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="col">The col.</param>
@@ -436,6 +501,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
+        /// The Filter
         /// </summary>
         /// <param name="table"></param>
         /// <param name="col"></param>
@@ -527,7 +593,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the unique field values.
+        /// Gets the unique field values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -551,7 +617,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the count.
+        /// Gets the count.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -569,7 +635,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the total.
+        /// Gets the total.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="table">The table.</param>
@@ -608,7 +674,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the column names.
+        /// Gets the column names.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>

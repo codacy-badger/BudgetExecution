@@ -2,20 +2,30 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="PrcMetric" />
+    /// </summary>
     public class PrcMetric
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrcMetric"/> class.
+        /// </summary>
         public PrcMetric()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrcMetric"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
@@ -61,6 +71,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrcMetric"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataBuilder"/></param>
+        /// <param name="column">The column<see cref="Field"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
         public PrcMetric(DataBuilder data, Field column, string filter)
         {
             DbData = data;
@@ -103,6 +119,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrcMetric"/> class.
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="Field"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
         public PrcMetric(DataTable table, Field column, string filter)
         {
             Table = table;
@@ -128,73 +150,177 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Average
+        /// </summary>
         public decimal Average { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOverAverage
+        /// </summary>
         public decimal CarryOverAverage { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYearAverage
+        /// </summary>
         public decimal CurrentYearAverage { get; set; }
 
+        /// <summary>
+        /// Gets the Count
+        /// </summary>
         public int Count { get; }
 
+        /// <summary>
+        /// Gets the CarryOverCount
+        /// </summary>
         public int CarryOverCount { get; }
 
+        /// <summary>
+        /// Gets the CurrentYearCount
+        /// </summary>
         public int CurrentYearCount { get; }
 
+        /// <summary>
+        /// Gets the Metrics
+        /// </summary>
         public double[] Metrics { get; }
 
+        /// <summary>
+        /// Gets the CurrentYearMetrics
+        /// </summary>
         public double[] CurrentYearMetrics { get; }
 
+        /// <summary>
+        /// Gets the CarryOverMetrics
+        /// </summary>
         public double[] CarryOverMetrics { get; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CarryOver
+        /// </summary>
         public DataTable CarryOver { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentYear
+        /// </summary>
         public DataTable CurrentYear { get; set; }
 
+        /// <summary>
+        /// Gets the Total
+        /// </summary>
         public decimal Total { get; }
 
+        /// <summary>
+        /// Gets the CarryOverTotal
+        /// </summary>
         public decimal CarryOverTotal { get; }
 
+        /// <summary>
+        /// Gets the CurrentYearTotal
+        /// </summary>
         public decimal CurrentYearTotal { get; }
 
+        /// <summary>
+        /// Gets or sets the BocMetrics
+        /// </summary>
         public Dictionary<string, double[]> BocMetrics { get; set; }
 
+        /// <summary>
+        /// Gets the BocTotals
+        /// </summary>
         public Dictionary<string, decimal> BocTotals { get; }
 
+        /// <summary>
+        /// Gets or sets the DivisionMetrics
+        /// </summary>
         public Dictionary<string, double[]> DivisionMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DivisionTotals
+        /// </summary>
         public Dictionary<string, decimal> DivisionTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundMetrics
+        /// </summary>
         public Dictionary<string, double[]> FundMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundTotals
+        /// </summary>
         public Dictionary<string, decimal> FundTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GoalMetrics
+        /// </summary>
         public Dictionary<string, double[]> GoalMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GoalTotals
+        /// </summary>
         public Dictionary<string, decimal> GoalTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NpmMetrics
+        /// </summary>
         public Dictionary<string, double[]> NpmMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the NpmTotals
+        /// </summary>
         public Dictionary<string, decimal> NpmTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ObjectiveMetrics
+        /// </summary>
         public Dictionary<string, double[]> ObjectiveMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ObjectiveTotals
+        /// </summary>
         public Dictionary<string, decimal> ObjectiveTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramAreaMetrics
+        /// </summary>
         public Dictionary<string, double[]> ProgramAreaMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramAreaTotals
+        /// </summary>
         public Dictionary<string, decimal> ProgramAreaTotals { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectMetrics
+        /// </summary>
         public Dictionary<string, double[]> ProgramProjectMetrics { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectTotals
+        /// </summary>
         public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The GetAverage
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetAverage(DataTable table)
         {
             try
@@ -208,6 +334,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTotals
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetTotals(DataTable table)
         {
             try
@@ -221,6 +352,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCodes
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <returns>The <see cref="string[]"/></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -234,11 +371,21 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="double[]"/></returns>
         public double[] GetMetrics(DataTable table)
         {
-            return new[] { (double) GetTotals(table), GetCount(table), (double) GetAverage(table), (double) GetTotals(table) / (double) Total };
+            return new[] { (double)GetTotals(table), GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)Total };
         }
 
+        /// <summary>
+        /// The GetProgramElements
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -279,6 +426,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="int"/></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -292,6 +444,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataTotals
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="prcfilter">The prcfilter<see cref="Field"/></param>
+        /// <returns>The <see cref="Dictionary{string, decimal}"/></returns>
         public Dictionary<string, decimal> GetDataTotals(DataTable table, Field prcfilter)
         {
             try
@@ -315,6 +473,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetChartMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="prcfilter">The prcfilter<see cref="Field"/></param>
+        /// <returns>The <see cref="Dictionary{string, double[]}"/></returns>
         internal Dictionary<string, double[]> GetChartMetrics(DataTable table, Field prcfilter)
         {
             try
@@ -338,6 +502,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetChartTotals
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="prcfilter">The prcfilter<see cref="Field"/></param>
+        /// <returns>The <see cref="Dictionary{string, double}"/></returns>
         internal Dictionary<string, double> GetChartTotals(DataTable table, Field prcfilter)
         {
             try
@@ -348,7 +518,7 @@ namespace BudgetExecution
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
                     if(GetTotals(query) > 0)
                     {
-                        doubledata.Add(filter, (double) GetTotals(query));
+                        doubledata.Add(filter, (double)GetTotals(query));
                     }
                 }
 
@@ -361,6 +531,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="prcfilter">The prcfilter<see cref="Field"/></param>
+        /// <returns>The <see cref="Dictionary{string, double[]}"/></returns>
         private Dictionary<string, double[]> GetMetrics(DataTable table, Field prcfilter)
         {
             try
@@ -371,7 +547,7 @@ namespace BudgetExecution
                     DataTable query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
                     if(GetTotals(query) > 0)
                     {
-                        info.Add(filter, new[] { (double) GetTotals(query) });
+                        info.Add(filter, new[] { (double)GetTotals(query) });
                     }
                 }
 

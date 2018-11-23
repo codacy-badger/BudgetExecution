@@ -8,21 +8,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BudgetExecution.Properties {
-    
-    
+namespace BudgetExecution.Properties
+{
+    /// <summary>
+    /// Defines the <see cref="Settings" />
+    /// </summary>
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+        /// <summary>
+        /// Defines the defaultInstance
+        /// </summary>
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        /// <summary>
+        /// Gets the Default
+        /// </summary>
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
+
+        /// <summary>
+        /// Gets the SQLite
+        /// </summary>
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -33,12 +46,17 @@ namespace BudgetExecution.Properties {
         <ProviderName>System.DbData.SQLite.EF6</ProviderName>
         </SerializableConnectionString>
       ")]
-        public string SQLite {
-            get {
+        public string SQLite
+        {
+            get
+            {
                 return ((string)(this["SQLite"]));
             }
         }
-        
+
+        /// <summary>
+        /// Gets the SqlServer
+        /// </summary>
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -49,12 +67,17 @@ namespace BudgetExecution.Properties {
         <ProviderName>System.DbData.SqlClient</ProviderName>
         </SerializableConnectionString>
       ")]
-        public string SqlServer {
-            get {
+        public string SqlServer
+        {
+            get
+            {
                 return ((string)(this["SqlServer"]));
             }
         }
-        
+
+        /// <summary>
+        /// Gets the SqlCe
+        /// </summary>
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -65,12 +88,17 @@ namespace BudgetExecution.Properties {
         <ProviderName>System.DbData.SQLite.EF6</ProviderName>
         </SerializableConnectionString>
       ")]
-        public string SqlCe {
-            get {
+        public string SqlCe
+        {
+            get
+            {
                 return ((string)(this["SqlCe"]));
             }
         }
-        
+
+        /// <summary>
+        /// Gets the OleDb
+        /// </summary>
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -81,8 +109,10 @@ namespace BudgetExecution.Properties {
         <ProviderName>System.DbData.OleDb</ProviderName>
         </SerializableConnectionString>
       ")]
-        public string OleDb {
-            get {
+        public string OleDb
+        {
+            get
+            {
                 return ((string)(this["OleDb"]));
             }
         }

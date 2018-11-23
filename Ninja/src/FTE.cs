@@ -2,24 +2,39 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="FTE" />
+    /// </summary>
     public class FTE : PRC, IPRC
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FTE"/> class.
+        /// </summary>
         public FTE()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FTE"/> class.
+        /// </summary>
+        /// <param name="datarow">The datarow<see cref="DataRow"/></param>
         public FTE(DataRow datarow) : base(datarow)
         {
             FteParameter = AsDictionary();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FTE"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public FTE(Provider provider, Dictionary<string, object> param) : base(provider, param)
         {
             DbData = base.DbData;
@@ -29,16 +44,34 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         private new DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the Metric
+        /// </summary>
         private PrcMetric Metric { get; set; }
 
+        /// <summary>
+        /// Gets the FteParameter
+        /// </summary>
         private Dictionary<string, object> FteParameter { get; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         BOC IPRC.BOC { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The FilterTable
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="DataTable"/></returns>
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try
@@ -52,6 +85,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetAverage
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetAverage(DataTable table)
         {
             try
@@ -65,6 +103,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCodes
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <returns>The <see cref="string[]"/></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -78,6 +122,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="int"/></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -91,6 +140,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetDataElements
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
         public Dictionary<string, string[]> GetDataElements(DataTable table)
         {
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
@@ -118,6 +172,13 @@ namespace BudgetExecution
             return data;
         }
 
+        /// <summary>
+        /// The GetDataValues
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="Tuple{DataTable, PRC[], decimal, int}"/></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -132,12 +193,24 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal[]"/></returns>
         public decimal[] GetMetrics(DataTable table)
         {
             int count = GetCount(table);
             return new[] { GetTotal(table), count, GetAverage(table) };
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="list">The list<see cref="string[]"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, decimal[]}"/></returns>
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
         {
             try
@@ -162,6 +235,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetMetrics
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, decimal[]}"/></returns>
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
         {
             try
@@ -187,6 +267,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetPrcArray
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="PRC[]"/></returns>
         private PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -200,6 +285,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTotal
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetTotal(DataTable table)
         {
             try
@@ -213,6 +303,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTotals
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <param name="filter">The filter<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, decimal}"/></returns>
         public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
         {
             try
@@ -240,6 +337,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTotals
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
+        /// <param name="filters">The filters<see cref="string[]"/></param>
+        /// <param name="column">The column<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, decimal}"/></returns>
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try

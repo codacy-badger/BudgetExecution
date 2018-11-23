@@ -2,16 +2,23 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="ProgramObligations" />
+    /// </summary>
     public class ProgramObligations
     {
         // CONSRTUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public ProgramObligations(Provider provider = Provider.SQLite)
         {
             Source = Source.ProgramObligations;
@@ -22,6 +29,11 @@ namespace BudgetExecution
             DbRow = Records[0];
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public ProgramObligations(Provider provider, Dictionary<string, object> param)
         {
             Source = Source.ProgramObligations;
@@ -32,6 +44,10 @@ namespace BudgetExecution
             DbRow = Records[0];
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
+        /// </summary>
+        /// <param name="dr">The dr<see cref="DataRow"/></param>
         public ProgramObligations(DataRow dr)
         {
             ID = int.Parse(dr["ID"].ToString());
@@ -48,60 +64,133 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets the DbData
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets the Table
+        /// </summary>
         public DataTable Table { get; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets the DbRow
+        /// </summary>
         public DataRow DbRow { get; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the PRC
+        /// </summary>
         public PRC PRC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public BOC BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramProjectCode
+        /// </summary>
         public string ProgramProjectCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DCN
+        /// </summary>
         public string DCN { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FOC
+        /// </summary>
         public string FOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FocName
+        /// </summary>
         public string FocName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fund
+        /// </summary>
         public Fund Fund { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FundCode
+        /// </summary>
         public string FundCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
         public decimal Amount { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Org
+        /// </summary>
         public Org Org { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public RC RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RPIO
+        /// </summary>
         public string RPIO { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DollarAmount
+        /// </summary>
         public decimal DollarAmount { get; set; }
 
+        /// <summary>
+        /// Gets or sets the OpenCommitments
+        /// </summary>
         public decimal OpenCommitments { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Obligations
+        /// </summary>
         public decimal Obligations { get; set; }
 
         // METHODS
+        /// <summary>
+        /// The ToString
+        /// </summary>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return DCN;
         }
 
         /// <summary>
-        ///     Gets the schema.
+        /// Gets the schema.
         /// </summary>
         /// <returns></returns>
         internal Dictionary<string, object> GetSchema()
@@ -119,7 +208,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the data.
+        /// Gets the data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -139,7 +228,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the fields.
+        /// Gets the fields.
         /// </summary>
         /// <returns></returns>
         internal string[] GetColumnNames()
@@ -158,7 +247,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the values.
+        /// Gets the values.
         /// </summary>
         /// <returns></returns>
         internal object[] GetValues()
@@ -176,7 +265,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the insert columns.
+        /// Gets the insert columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -237,7 +326,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -257,7 +346,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Selects the specified source.
+        /// Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -278,7 +367,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -301,7 +390,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -323,7 +412,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
