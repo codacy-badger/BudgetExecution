@@ -2,19 +2,22 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
     /// <summary>
+    /// Defines the <see cref="Employee" />
     /// </summary>
-    /// <seealso cref="BudgetExecution.IEmployee" />
     public class Employee : IEmployee
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
         public Employee()
         {
             Source = Source.Personnel;
@@ -25,6 +28,11 @@ namespace BudgetExecution
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite)
         {
             Source = source;
@@ -35,6 +43,12 @@ namespace BudgetExecution
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public Employee(Source source, Provider provider, Dictionary<string, object> p)
         {
             Source = source;
@@ -59,6 +73,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
         public Employee(DataRow data)
         {
             Data = data;
@@ -74,52 +92,112 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Data
+        /// </summary>
         public DataRow Data { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Section
+        /// </summary>
         public string Section { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FirstName
+        /// </summary>
         public string FirstName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the LastName
+        /// </summary>
         public string LastName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Division
+        /// </summary>
         public Division Division { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public RC RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Office
+        /// </summary>
         public string Office { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Phone
+        /// </summary>
         public string Phone { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Cell
+        /// </summary>
         public string Cell { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Email
+        /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Status
+        /// </summary>
         public string Status { get; set; }
 
-
+        /// <summary>
+        /// The ToString
+        /// </summary>
+        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return FirstName + " " + LastName;
         }
 
         /// <summary>
-        ///     Inserts the specified source.
+        /// Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -141,7 +219,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Updates the specified source.
+        /// Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -163,7 +241,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Deletes the specified source.
+        /// Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

@@ -2,23 +2,33 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Configuration;
-using System.Data;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using Microsoft.Office.Interop.Excel;
-using DataTable = System.Data.DataTable;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Configuration;
+    using System.Data;
+    using System.Runtime.InteropServices;
+    using System.Windows.Forms;
+    using Microsoft.Office.Interop.Excel;
+    using DataTable = System.Data.DataTable;
+
+    /// <summary>
+    /// Defines the <see cref="ExcelDocument" />
+    /// </summary>
     public class ExcelDocument
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelDocument"/> class.
+        /// </summary>
         public ExcelDocument()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelDocument"/> class.
+        /// </summary>
+        /// <param name="filepath">The filepath<see cref="string"/></param>
         public ExcelDocument(string filepath)
         {
             ExternalFilePath = filepath;
@@ -26,6 +36,10 @@ namespace BudgetExecution
             ConnectionString = GetConnectionString(ExternalFilePath);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelDocument"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
         public ExcelDocument(Source source)
         {
             Source = source;
@@ -35,6 +49,11 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelDocument"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
         public ExcelDocument(Source source, Provider provider)
         {
             Source = source;
@@ -46,50 +65,108 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets the Sheet
+        /// </summary>
         public Sheet Sheet { get; }
 
+        /// <summary>
+        /// Gets or sets the Query
+        /// </summary>
         public ExcelQuery Query { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Authority
+        /// </summary>
         public DivisionAuthority Authority { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Division
+        /// </summary>
         public Division Division { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Allocation
+        /// </summary>
         public DataRow[] Allocation { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public string RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FilePath
+        /// </summary>
         public string FilePath { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ExternalFilePath
+        /// </summary>
         public string ExternalFilePath { get; set; }
 
+        /// <summary>
+        /// Gets or sets the InternalFilePath
+        /// </summary>
         public string InternalFilePath { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Report
+        /// </summary>
         public string Report { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BudgetTemplate
+        /// </summary>
         public string BudgetTemplate { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Excel
+        /// </summary>
         public Microsoft.Office.Interop.Excel.Application Excel { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Workbook
+        /// </summary>
         public Workbook Workbook { get; set; }
 
+        /// <summary>
+        /// Gets or sets the PRC
+        /// </summary>
         public Worksheet PRC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ConnectionString
+        /// </summary>
         internal string ConnectionString { get; set; }
 
+        /// <summary>
+        /// Gets or sets the AccountingInfo
+        /// </summary>
         private DocInfo AccountingInfo { get; set; }
 
-        // METHODS
-
         /// <summary>
-        ///     Gets the file path.
+        /// Gets the file path.
         /// </summary>
         /// <param name="sheet">The sheet.</param>
         /// <returns></returns>
@@ -119,7 +196,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the division information.
+        /// Gets the division information.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
@@ -159,7 +236,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Initials the budget worksheets.
+        /// Initials the budget worksheets.
         /// </summary>
         private void InitialBudgetWorksheets()
         {
@@ -173,7 +250,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the internal file path.
+        /// Gets the internal file path.
         /// </summary>
         /// <returns></returns>
         public string GetInternalFilePath()
@@ -190,7 +267,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the file path browser.
+        /// Gets the file path browser.
         /// </summary>
         /// <returns></returns>
         public string GetFilePathBrowser()
@@ -215,7 +292,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the external file path.
+        /// Gets the external file path.
         /// </summary>
         /// <returns></returns>
         public string GetExternalFilePath()
@@ -240,7 +317,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the connection string using the ConfigurationManager class and
+        /// Gets the connection string using the ConfigurationManager class and
         ///     the GetInternalFilePath method.
         /// </summary>
         /// <param name="filepath">The filepath.</param>
@@ -262,19 +339,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetBudgetReport
+        /// </summary>
         public void GetBudgetReport()
         {
         }
 
         /// <summary>
-        ///     Loads the internal data.
+        /// Loads the internal data.
         /// </summary>
         internal void LoadInternalData()
         {
         }
 
         /// <summary>
-        ///     Exports the data.
+        /// Exports the data.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -283,7 +363,7 @@ namespace BudgetExecution
             try
             {
                 Workbook WorkBook = Excel.Workbooks.Open(GetInternalFilePath());
-                Worksheet WorkSheet = (Worksheet) WorkBook.Sheets[1];
+                Worksheet WorkSheet = (Worksheet)WorkBook.Sheets[1];
                 WorkSheet.Name = table.TableName;
                 for(int i = 1; i < table.Columns.Count + 1; i++)
                 {
@@ -316,7 +396,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Exports the data.
+        /// Exports the data.
         /// </summary>
         /// <param name="filepath">The filepath.</param>
         /// <param name="table">The table.</param>
@@ -327,7 +407,7 @@ namespace BudgetExecution
             {
                 Microsoft.Office.Interop.Excel.Application excel = Create();
                 Workbook excelWorkBook = excel.Workbooks.Open(filepath);
-                Worksheet excelWorkSheet = (Worksheet) excelWorkBook.Sheets[1];
+                Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
                 for(int i = 1; i < table.Columns.Count + 1; i++)
                 {
@@ -360,7 +440,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Opens the file.
+        /// Opens the file.
         /// </summary>
         /// <param name="filepath">The filepath.</param>
         /// <returns></returns>
@@ -386,7 +466,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Opens the workbook.
+        /// Opens the workbook.
         /// </summary>
         /// <returns></returns>
         internal Workbook OpenWorkbook()
@@ -411,7 +491,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Saves the workbook.
+        /// Saves the workbook.
         /// </summary>
         /// <param name="wb">The wb.</param>
         /// <param name="filepath">The filepath.</param>
@@ -442,7 +522,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Closes the specified wb.
+        /// Closes the specified wb.
         /// </summary>
         /// <param name="wb">The wb.</param>
         internal void Close(Workbook wb)
@@ -477,7 +557,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Creates this instance.
+        /// Creates this instance.
         /// </summary>
         /// <returns></returns>
         private Microsoft.Office.Interop.Excel.Application Create()
@@ -498,7 +578,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Releases the object.
+        /// Releases the object.
         /// </summary>
         /// <param name="obj">The object.</param>
         private void ReleaseObject(object obj)

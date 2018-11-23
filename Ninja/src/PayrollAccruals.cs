@@ -2,20 +2,32 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="PayrollAccruals" />
+    /// </summary>
     public class PayrollAccruals
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollAccruals"/> class.
+        /// </summary>
         public PayrollAccruals()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollAccruals"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
         public PayrollAccruals(Source source = Source.PayAccruals, Provider provider = Provider.SQLite, Sql sql = Sql.SELECT)
         {
             Source = source;
@@ -23,6 +35,12 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.PayAccruals, Provider);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollAccruals"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public PayrollAccruals(Source source, Provider provider, Dictionary<string, object> p)
         {
             Source = source;
@@ -45,6 +63,10 @@ namespace BudgetExecution
             Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollAccruals"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
         public PayrollAccruals(DataRow data)
         {
             Data = data;
@@ -67,59 +89,143 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets or sets the Source
+        /// </summary>
         public Source Source { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Provider
+        /// </summary>
         public Provider Provider { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
         public string[] Columns { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Data
+        /// </summary>
         public DataRow Data { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the FirstName
+        /// </summary>
         public string FirstName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the LastName
+        /// </summary>
         public string LastName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the EmployeeID
+        /// </summary>
         public string EmployeeID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the StartDate
+        /// </summary>
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// Gets or sets the EndDate
+        /// </summary>
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ReportingCode
+        /// </summary>
         public string ReportingCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ReportingCodeName
+        /// </summary>
         public string ReportingCodeName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ApprovalDate
+        /// </summary>
         public string ApprovalDate { get; set; }
 
+        /// <summary>
+        /// Gets the Hours
+        /// </summary>
         public decimal Hours { get; }
 
+        /// <summary>
+        /// Gets the HrOrgCode
+        /// </summary>
         public string HrOrgCode { get; }
 
+        /// <summary>
+        /// Gets or sets the HrOrgCodeName
+        /// </summary>
         public string HrOrgCodeName { get; set; }
 
+        /// <summary>
+        /// Gets the ProgramProjectCode
+        /// </summary>
         public string ProgramProjectCode { get; }
 
+        /// <summary>
+        /// Gets the ProgramProjectName
+        /// </summary>
         public string ProgramProjectName { get; }
 
+        /// <summary>
+        /// Gets or sets the DivisionName
+        /// </summary>
         public string DivisionName { get; set; }
 
+        /// <summary>
+        /// Gets the WorkCode
+        /// </summary>
         public string WorkCode { get; }
 
+        /// <summary>
+        /// Gets or sets the PayPeriod
+        /// </summary>
         public string PayPeriod { get; set; }
 
+        /// <summary>
+        /// Gets the WorkCodeName
+        /// </summary>
         public string WorkCodeName { get; }
 
         // METHODS
+        /// <summary>
+        /// The GetParameter
+        /// </summary>
+        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="bfy">The bfy<see cref="string"/></param>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         private Dictionary<string, object> GetParameter(string code, string bfy)
         {
             try
@@ -133,6 +239,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Insert
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -150,6 +261,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Update
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -167,6 +283,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
