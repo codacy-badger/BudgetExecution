@@ -117,9 +117,15 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataTable Table { get; }
+        public string[] Columns { get; set; }
+
+        public DataTable Table { get; set; }
+
+        public DataRow[] Records { get; set; }
 
         public DataRow Data { get; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public int ID { get; set; }
 

@@ -13,8 +13,6 @@ namespace BudgetExecution
         // PROPERTIES
         DataTable Table { get; }
 
-        PrcMetric Metric { get; }
-
         decimal Amount { get; }
 
         Dictionary<string, string[]> ProgramElements { get; }

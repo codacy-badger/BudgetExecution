@@ -68,20 +68,25 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public Source Source { get; set; }
 
-        private Source Source { get; }
+        public Provider Provider { get; set; }
 
-        private Provider Provider { get; }
+        public DataBuilder DbData { get; set; }
 
-        private DataTable Table { get; }
+        public DataTable Table { get; set; }
+
+        public string[] Columns { get; set; }
+
+        public DataRow[] Records { get; set; }
+
+        public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public static string Region { get; set; }
 
         public int ID { get; set; }
-
-        public DataRow Data { get; set; }
-
-        public DataBuilder DbData { get; set; }
 
         public string BFY { get; }
 

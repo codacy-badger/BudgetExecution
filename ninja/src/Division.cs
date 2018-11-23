@@ -56,6 +56,18 @@ namespace BudgetExecution
 
         public Provider Provider { get; set; }
 
+        public DataBuilder DbData { get; set; }
+
+        public DataTable Table { get; set; }
+
+        public string[] Columns { get; set; }
+
+        public DataRow[] Records { get; set; }
+
+        public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
+
         public string Title { get; set; }
 
         public string Code { get; }
@@ -65,14 +77,6 @@ namespace BudgetExecution
         public string RC { get; }
 
         public string Name { get; }
-
-        public DataBuilder DbData { get; set; }
-
-        public DataTable Table { get; set; }
-
-        public DataRow[] Records { get; set; }
-
-        public DataRow Data { get; set; }
 
 
         // METHODS

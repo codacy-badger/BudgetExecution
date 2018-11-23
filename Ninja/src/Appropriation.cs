@@ -19,14 +19,13 @@ namespace BudgetExecution
         public Appropriation(string fundcode, string bfy)
         {
             Code = fundcode;
-            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
+            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["Code"] = fundcode, ["BFY"] = bfy });
             FiscalYear = bfy;
             Name = Fund.Name;
             Title = Fund.Title;
         }
 
-        public Appropriation(Source source, Provider provider, string fundcode, string bfy)
-                : this(fundcode, bfy)
+        public Appropriation(Source source, Provider provider, string fundcode, string bfy) : this(fundcode, bfy)
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = Fund.Code, ["BFY"] = bfy });
             Metric = new PrcMetric(DbData);
@@ -99,6 +98,14 @@ namespace BudgetExecution
 
         public decimal Amount { get; }
 
+        // METHODS
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -112,6 +119,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -126,12 +140,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public decimal[] GetMetrics(DataTable table)
         {
             int count = GetCount(table);
             return new[] { GetTotal(table), count, GetAverage(table) };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -145,6 +169,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             Dictionary<string, string[]> data = new Dictionary<string, string[]>();
@@ -172,6 +201,11 @@ namespace BudgetExecution
             return data;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public decimal GetTotal(DataTable table)
         {
             try
@@ -185,7 +219,13 @@ namespace BudgetExecution
             }
         }
 
-        // METHODS
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try
@@ -199,6 +239,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public decimal GetAverage(DataTable table)
         {
             try
@@ -212,11 +257,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Tuple<string[], string[], string[], string[], string[]> GetCodes()
         {
             return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"], ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -230,6 +284,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="list"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string[] list, string column)
         {
             foreach(string filter in list)
@@ -249,11 +310,22 @@ namespace BudgetExecution
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public decimal GetFteTotal()
         {
             return PrcData.Item1.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="list"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
         {
             try
@@ -278,6 +350,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
         {
             try
@@ -303,6 +382,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
         {
             try
@@ -311,7 +397,7 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach(string ftr in list)
                 {
-                    decimal query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Sum(p => p.Field<decimal>("Amount"));
+                    decimal query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Sum(p => p.Field<decimal>("Amount"));
                     if(query > 0)
                     {
                         info.Add(filter, query);
@@ -327,6 +413,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="filters"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try
@@ -349,7 +442,12 @@ namespace BudgetExecution
             }
         }
 
-        internal FTE[] GetFTE(DataTable table)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public FTE[] GetFTE(DataTable table)
         {
             if(table.Rows.Count > 0 &&
                BocCodes.Contains("17"))

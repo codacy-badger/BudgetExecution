@@ -50,14 +50,18 @@ namespace BudgetExecution
             BindingSource.DataSource = DbData.Table;
             Grid.DataSource = BindingSource;
             Metric = new PrcMetric(DbData);
-            ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation" };
+            SetLabels();
+            ChartMainTitle = new[] { $"{Source.ToString()} Resources" };
+            BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
+        }
+
+        private void SetLabels()
+        {
             lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
             lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
             lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
             lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
             lblCount.Text = DbData.GetCount(Table).ToString();
-            ChartMainTitle = new[] { $"{Source.ToString()} Resources" };
-            BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
         }
 
         // PROPERTIES

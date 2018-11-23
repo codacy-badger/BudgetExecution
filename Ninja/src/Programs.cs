@@ -2,6 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
@@ -28,9 +29,13 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public string[] Columns { get; set; }
+
         public DataRow[] Records { get; set; }
 
-        public DataRow DbRow { get; set; }
+        public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public int ID { get; set; }
 

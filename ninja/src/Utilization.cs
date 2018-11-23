@@ -10,28 +10,26 @@ using System.Linq;
 
 namespace BudgetExecution
 {
-    public class UtilizationData
+    public class Utilization
     {
-        public UtilizationData()
+        public Utilization()
         {
-        }
-
-        public UtilizationData(Source source = Source.BudgetLevels, Provider provider = Provider.SQLite)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(source, provider);
+            Source = Source.Utilization;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Data = Table.Rows[0];
+            Columns = DbData.Columns;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
+            Data = Table.AsEnumerable().Select(p => p).First();
         }
 
-        public UtilizationData(Provider provider, Dictionary<string, object> param)
+        public Utilization(Provider provider, Dictionary<string, object> param)
         {
-            Source = Source.BudgetLevels;
+            Source = Source.Utilization;
             Provider = provider;
             DbData = new DataBuilder(Source, provider, param);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
             if(Table.Rows.Count == 1)
             {
@@ -40,6 +38,7 @@ namespace BudgetExecution
                 RPIO = Data["RPIO "].ToString();
                 BFY = Data["BFY"].ToString();
                 Fund = new Fund(Data["Fund"].ToString(), BFY);
+                AH = Data["AH"].ToString();
                 Org = new Org(Data["Org"].ToString());
                 RC = new RC(Data["RC"].ToString());
                 ProgramProjectCode = Data["ProgramProjectCode"].ToString();
@@ -58,7 +57,7 @@ namespace BudgetExecution
             }
         }
 
-        public UtilizationData(DataRow dr)
+        public Utilization(DataRow dr)
         {
             Data = dr;
             ID = int.Parse(Data["ID"].ToString());
@@ -69,6 +68,7 @@ namespace BudgetExecution
             RC = new RC(Data["RC"].ToString());
             ProgramProjectCode = Data["ProgramProjectCode"].ToString();
             BOC = new BOC(Data["BOC"].ToString());
+            AH = Data["AH"].ToString();
             FOC = Data["FOC"].ToString();
             FocName = Data["FocName"].ToString();
             Authority = decimal.Parse(Data["Authority"].ToString());
@@ -83,17 +83,21 @@ namespace BudgetExecution
         }
 
         // Properties
-        public Source Source { get; }
+        public Source Source { get; set; }
 
-        public Provider Provider { get; }
+        public Provider Provider { get; set; }
 
-        public DataBuilder DbData { get; }
+        public DataBuilder DbData { get; set; }
 
-        public DataTable Table { get; }
+        public DataTable Table { get; set; }
 
-        public DataRow[] Records { get; }
+        public string[] Columns { get; set; }
 
-        public DataRow Data { get; }
+        public DataRow[] Records { get; set; }
+
+        public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public string AH { get; set; }
 
@@ -105,7 +109,7 @@ namespace BudgetExecution
 
         public BOC BOC { get; set; }
 
-        public string Level { get; set; }
+        public string BudgetLevel { get; set; }
 
         public string BocName { get; set; }
 

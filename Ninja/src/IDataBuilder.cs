@@ -2,6 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
 using System.Data;
 
 namespace BudgetExecution
@@ -9,15 +10,23 @@ namespace BudgetExecution
     public interface IDataBuilder
     {
         // PROPERTIES
-        Query Query { get; }
+        string[] Columns { get; set; }
 
-        DataTable Table { get; }
+        DataTable Table { get; set; }
 
         DataRow[] Records { get; }
+
+        DataRow Data { get; }
+
+        Dictionary<string, string[]> ProgramElements { get; }
 
         // METHODS
         DataTable GetDataTable();
 
         DataRow[] GetRecords(DataTable table);
+
+        string[] GetUniqueValues(DataTable table, string column);
+
+        Dictionary<string, string[]> GetProgramElements(DataTable table);
     }
 }

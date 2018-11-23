@@ -208,7 +208,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="src\UtilizationData.cs" />
+    <Compile Include="src\Utilization.cs" />
     <Compile Include="src\ExcelData.cs">
       <SubType>Form</SubType>
     </Compile>

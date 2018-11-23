@@ -14,33 +14,20 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public DivisionAuthority()
         {
-            TableFilter = DataBuilder.FilterRecords;
-            DbData = new DataBuilder(Source.DivisionAccounts);
-            Table = DbData.Table;
-            DataRecords = DbData.Records;
-            Metric = new PrcMetric(DbData);
-            PRC = GetPrcArray(Table);
-            Total = Metric.Total;
-            Count = Metric.Count;
-            Average = Metric.Average;
-            ProgramElements = DbData.ProgramElements;
-            if(ProgramElements["BOC"].Contains("17"))
-            {
-                FTE = GetFTE(DbData.Table);
-            }
         }
 
         public DivisionAuthority(Source source)
         {
-            TableFilter = DataBuilder.FilterRecords;
+            TableFilter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
             DbData = new DataBuilder(source);
+            R6 = DbData.R6;
             Table = DbData.Table;
             ProgramElements = DbData.ProgramElements;
             Metric = new PrcMetric(DbData);
             Division = new Division(source);
             CurrentYear = Metric.CurrentYear;
             CarryOver = Metric.CarryOver;
-            DataRecords = DbData.Records;
+            Records = DbData.Records;
             if(ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(Table);
@@ -52,7 +39,7 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataRow[] DataRecords { get; }
+        public DataRow[] Records { get; }
 
         public PRC[] PRC { get; }
 
@@ -69,24 +56,6 @@ namespace BudgetExecution
         public DataTable CurrentYear { get; set; }
 
         public DataTable CarryOver { get; set; }
-
-        public decimal Total { get; }
-
-        public int Count { get; }
-
-        public decimal Average { get; }
-
-        public Dictionary<string, decimal> BocAuthority { get; set; }
-
-        public Dictionary<string, decimal> FundAuthority { get; set; }
-
-        public Dictionary<string, decimal> GoalAuthority { get; set; }
-
-        public Dictionary<string, decimal> NpmAuthority { get; set; }
-
-        public Dictionary<string, decimal> ProgramAreaAuthority { get; set; }
-
-        public Dictionary<string, decimal> ProgramProjectAuthority { get; set; }
 
         public ExcelDocument Budget { get; set; }
 

@@ -23,6 +23,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
@@ -32,6 +33,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
@@ -41,6 +43,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = Table.AsEnumerable().Select(a => a).ToArray();
             if(Table.Rows.Count == 1)
             {
@@ -81,9 +84,13 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public string[] Columns { get; set; }
+
         public DataRow[] Records { get; set; }
 
         public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public int ID { get; set; }
 

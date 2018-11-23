@@ -24,7 +24,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
-            DbRow = Records[0];
+            Data = Records[0];
         }
 
         public TravelObligations(Source source, Provider provider, Dictionary<string, object> param)
@@ -34,23 +34,25 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, param);
             Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
-            DbRow = Records[0];
+            Data = Records[0];
         }
 
         // PROPERTIES
-        public Source Source { get; }
+        public Source Source { get; set; }
 
-        public Provider Provider { get; }
+        public Provider Provider { get; set; }
 
-        public Sql Sql { get; }
+        public DataBuilder DbData { get; set; }
 
-        public DataBuilder DbData { get; }
+        public DataTable Table { get; set; }
 
-        public DataTable Table { get; }
+        public string[] Columns { get; set; }
 
         public DataRow[] Records { get; set; }
 
-        public DataRow DbRow { get; }
+        public DataRow Data { get; set; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public int ID { get; set; }
 

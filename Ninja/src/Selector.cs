@@ -41,14 +41,14 @@ namespace BudgetExecution
         private string[] Images { get; set; }
 
         // METHODS
-        public void GetViewerCarouselImageList(string path)
+        public void GetViewerCarouselImageList(string imagepath)
         {
             ImageList ilist = new ImageList();
             CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
             ViewerCarousel.ImageSlides = true;
             ViewerCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(path);
-            FilePath = path;
+            string[] images = Directory.GetFiles(imagepath);
+            FilePath = imagepath;
             foreach(string i in images)
             {
                 string p = Path.GetFileNameWithoutExtension(i);

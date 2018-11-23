@@ -27,7 +27,9 @@ namespace BudgetExecution
             Source = Source.PRC;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Allocation = DbData.Records;
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
         }
 
         public PRC(Provider provider, Dictionary<string, object> param)
@@ -35,7 +37,9 @@ namespace BudgetExecution
             Source = Source.PRC;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
-            Allocation = DbData.Records;
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
             if(DbData.Table.Rows.Count == 1)
             {
                 Data = DbData.Table.AsEnumerable().Select(p => p).Single();
@@ -125,7 +129,11 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataRow[] Allocation { get; }
+        public string[] Columns { get; set; }
+
+        public DataTable Table { get; set; }
+
+        public DataRow[] Records { get; }
 
         public DataRow Data { get; }
 
