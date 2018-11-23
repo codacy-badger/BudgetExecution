@@ -143,7 +143,7 @@ namespace BudgetExecution
 
         public string BFY { get; set; }
 
-        public Fund Fund { get; }
+        public Fund Fund { get; set; }
 
         public string FundCode { get; }
 
@@ -155,7 +155,7 @@ namespace BudgetExecution
 
         public decimal Amount { get; set; }
 
-        public BOC BOC { get; }
+        public BOC BOC { get; set; }
 
         public string AH { get; }
 

@@ -13,9 +13,9 @@ namespace BudgetExecution
 
         string BFY { get; set; }
 
-        BOC BOC { get; }
+        BOC BOC { get; set; }
 
-        Fund Fund { get; }
+        Fund Fund { get; set; }
 
         Org Org { get; }
 

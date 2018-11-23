@@ -20,43 +20,23 @@ namespace BudgetExecution
             FteParameter = AsDictionary();
         }
 
-        public FTE(Source source, Provider provider, Dictionary<string, object> param)
+        public FTE(Provider provider, Dictionary<string, object> param) : base(provider, param)
         {
-            DbData = new DataBuilder(source, provider, param);
+            DbData = base.DbData;
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
+            BOC = new BOC("17");
         }
 
         // PROPERTIES
-        public DataTable Table { get; }
 
-        public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+        private new DataBuilder DbData { get; }
 
-        public PRC[] Data { get; }
-
-        public Dictionary<string, string[]> DataElement { get; }
-
-        public DataSet E6 { get; }
-
-        public Dictionary<string, decimal> FundData { get; }
-
-        public Dictionary<string, decimal> GoalInfo { get; }
-
-        public Dictionary<string, decimal> NpmData { get; }
-
-        public Dictionary<string, decimal> ObjectiveData { get; }
-
-        public Dictionary<string, decimal> ProgramData { get; }
-
-        public Dictionary<string, decimal> ProjectData { get; }
-
-        private DataBuilder DbData { get; }
-
-        private PrcMetric Metric { get; }
+        private PrcMetric Metric { get; set; }
 
         private Dictionary<string, object> FteParameter { get; }
 
-        BOC IPRC.BOC { get; }
+        BOC IPRC.BOC { get; set; }
 
         // METHODS
         public DataTable FilterTable(DataTable table, string column, string filter)
@@ -76,7 +56,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Enumerable.Average(table.AsEnumerable().Select(p => p.Field<decimal>("Amount")));
+                return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch(Exception ex)
             {
@@ -89,7 +69,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Enumerable.ToArray(Enumerable.Distinct(table.AsEnumerable().Select(p => p.Field<string>(column))));
+                return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
             }
             catch(Exception ex)
             {
@@ -224,7 +204,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Enumerable.Sum(table.AsEnumerable(), p => p.Field<decimal>("Amount"));
+                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
             }
             catch(Exception ex)
             {
@@ -241,9 +221,10 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach(string ftr in list)
                 {
-                    decimal query = Enumerable.Sum(table.AsEnumerable()
-                                                        .Where(p => p.Field<string>(column).Equals(filter))
-                                                        .Where(p => p.Field<decimal>("Amount") != 0m), p => p.Field<decimal>("Amount"));
+                    decimal query = table.AsEnumerable()
+                                         .Where(p => p.Field<string>(column).Equals(filter))
+                                         .Where(p => p.Field<decimal>("Amount") != 0m)
+                                         .Sum(p => p.Field<decimal>("Amount"));
                     if(query > 0)
                     {
                         info.Add(filter, query);
@@ -266,9 +247,10 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach(string filter in filters)
                 {
-                    decimal query = Enumerable.Sum(table.AsEnumerable()
-                                                        .Where(p => p.Field<string>(column).Equals(filter))
-                                                        .Where(p => p.Field<decimal>("Amount") != 0m), p => p.Field<decimal>("Amount"));
+                    decimal query = table.AsEnumerable()
+                                         .Where(p => p.Field<string>(column).Equals(filter))
+                                         .Where(p => p.Field<decimal>("Amount") != 0m)
+                                         .Sum(p => p.Field<decimal>("Amount"));
                     if(query > 0)
                     {
                         info.Add(filter, query);

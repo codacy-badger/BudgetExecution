@@ -6,9 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using DataRowExtensions = System.Data.DataRowExtensions;
-using DataTableExtensions = System.Data.DataTableExtensions;
-using EnumerableRowCollectionExtensions = System.Data.EnumerableRowCollectionExtensions;
 
 namespace BudgetExecution
 {
@@ -112,7 +109,7 @@ namespace BudgetExecution
         {
             try
             {
-                return EnumerableRowCollectionExtensions.Select(DataTableExtensions.AsEnumerable(table), p => DataRowExtensions.Field<string>(p, column)).Distinct().ToArray();
+                return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
             }
             catch(Exception ex)
             {
@@ -131,7 +128,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable qtable = DataTableExtensions.CopyToDataTable(EnumerableRowCollectionExtensions.Select(EnumerableRowCollectionExtensions.Where(DataTableExtensions.AsEnumerable(table), p => DataRowExtensions.Field<string>(p, column).Equals(filter)), p => p));
+                DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
             }
             catch(Exception ex)
