@@ -2041,7 +2041,7 @@ namespace BudgetExecution
             this.lblTotal.Size = new System.Drawing.Size(61, 21);
             this.lblTotal.TabIndex = 154;
             this.lblTotal.Text = "label32";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
+            this.lblTotal.Click += new System.EventHandler(this.LblTotal_Click);
             // 
             // label31
             // 

@@ -115,10 +115,6 @@ namespace BudgetExecution
 
         public Provider Provider { get; }
 
-        public Dictionary<string, string[]> ProgramElements { get; set; }
-
-        public string[] Columns { get; set; }
-
         public BindingSource BindingSource { get; set; }
 
         public decimal Total { get; }
@@ -130,6 +126,10 @@ namespace BudgetExecution
         public DataSet R6 { get; set; }
 
         public Query Query { get; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
+
+        public string[] Columns { get; set; }
 
         public DataRow Data { get; }
 
@@ -178,6 +178,86 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
+        }
+
+        /// <summary>
+        ///     Gets the unique values.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="column">The column.</param>
+        /// <returns></returns>
+        public string[] GetUniqueValues(DataTable table, string column)
+        {
+            try
+            {
+                if(table.GetColumnNames().Contains(column))
+                {
+                    return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the program elements.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
+        public Dictionary<string, string[]> GetProgramElements(DataTable table)
+        {
+            if(table != null)
+            {
+                try
+                {
+                    Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+                    foreach(DataColumn dc in table.Columns)
+                    {
+                        if(dc.ColumnName.Equals("ID") ||
+                           dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Equals("Hours") ||
+                           dc.ColumnName.Contains("OpenCommitments") ||
+                           dc.ColumnName.Contains("ULO") ||
+                           dc.ColumnName.Equals("Obligations") ||
+                           dc.ColumnName.Equals("Commitments") ||
+                           dc.ColumnName.Equals("Authority") ||
+                           dc.ColumnName.Equals("Budgeted") ||
+                           dc.ColumnName.Equals("Posted") ||
+                           dc.ColumnName.Equals("CarryIn") ||
+                           dc.ColumnName.Equals("CarryOut") ||
+                           dc.ColumnName.Equals("Balance"))
+                        {
+                            continue;
+                        }
+
+                        data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(dc)).Distinct().ToArray());
+                    }
+
+                    if(data.ContainsKey("ID"))
+                    {
+                        data.Remove("ID");
+                    }
+
+                    if(data.ContainsKey("Amount"))
+                    {
+                        data.Remove("Amount");
+                    }
+
+                    return data;
+                }
+                catch(Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -277,49 +357,64 @@ namespace BudgetExecution
                 switch(col.Length)
                 {
                     case 1 when filter.Length == 1:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Select(p => p)
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                    .Select(p => p)
                                     .CopyToDataTable();
                     case 2 when filter.Length == 2:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 3 when filter.Length == 3:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 4 when filter.Length == 4:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3].ToString()).Equals(filter[3]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 5 when filter.Length == 5:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3].ToString()).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4].ToString()).Equals(filter[4]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 6 when filter.Length == 6:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3].ToString()).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4].ToString()).Equals(filter[4]))
                                     .Where(p => p.Field<string>(col[5].ToString()).Equals(filter[5]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 7 when filter.Length == 7:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3].ToString()).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4].ToString()).Equals(filter[4]))
                                     .Where(p => p.Field<string>(col[5].ToString()).Equals(filter[5]))
                                     .Where(p => p.Field<string>(col[6].ToString()).Equals(filter[6]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 8 when filter.Length == 8:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3].ToString()).Equals(filter[3]))
@@ -327,7 +422,8 @@ namespace BudgetExecution
                                     .Where(p => p.Field<string>(col[5].ToString()).Equals(filter[5]))
                                     .Where(p => p.Field<string>(col[6].ToString()).Equals(filter[6]))
                                     .Where(p => p.Field<string>(col[7].ToString()).Equals(filter[7]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     default:
                         return null;
                 }
@@ -340,7 +436,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="col"></param>
@@ -353,49 +448,64 @@ namespace BudgetExecution
                 switch(col.Length)
                 {
                     case 1 when filter.Length == 1:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0])).Select(p => p)
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                                    .Select(p => p)
                                     .CopyToDataTable();
                     case 2 when filter.Length == 2:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 3 when filter.Length == 3:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 4 when filter.Length == 4:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3]).Equals(filter[3]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 5 when filter.Length == 5:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3]).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4]).Equals(filter[4]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 6 when filter.Length == 6:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3]).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4]).Equals(filter[4]))
                                     .Where(p => p.Field<string>(col[5]).Equals(filter[5]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 7 when filter.Length == 7:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3]).Equals(filter[3]))
                                     .Where(p => p.Field<string>(col[4]).Equals(filter[4]))
                                     .Where(p => p.Field<string>(col[5]).Equals(filter[5]))
                                     .Where(p => p.Field<string>(col[6]).Equals(filter[6]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     case 8 when filter.Length == 8:
-                        return table.AsEnumerable().Where(p => p.Field<string>(col[0]).Equals(filter[0]))
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>(col[0]).Equals(filter[0]))
                                     .Where(p => p.Field<string>(col[1]).Equals(filter[1]))
                                     .Where(p => p.Field<string>(col[2]).Equals(filter[2]))
                                     .Where(p => p.Field<string>(col[3]).Equals(filter[3]))
@@ -403,34 +513,11 @@ namespace BudgetExecution
                                     .Where(p => p.Field<string>(col[5]).Equals(filter[5]))
                                     .Where(p => p.Field<string>(col[6]).Equals(filter[6]))
                                     .Where(p => p.Field<string>(col[7]).Equals(filter[7]))
-                                    .Select(p => p).CopyToDataTable();
+                                    .Select(p => p)
+                                    .CopyToDataTable();
                     default:
                         return null;
                 }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the unique values.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="column">The column.</param>
-        /// <returns></returns>
-        public string[] GetUniqueValues(DataTable table, string column)
-        {
-            try
-            {
-                if(table.GetColumnNames().Contains(column))
-                {
-                    return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
-                }
-
-                return null;
             }
             catch(Exception ex)
             {
@@ -464,62 +551,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Gets the program elements.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public Dictionary<string, string[]> GetProgramElements(DataTable table)
-        {
-            if(table != null)
-            {
-                try
-                {
-                    Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                    foreach(DataColumn dc in table.Columns)
-                    {
-                        if(dc.ColumnName.Equals("ID") ||
-                           dc.ColumnName.Equals("Amount") ||
-                           dc.ColumnName.Equals("Hours") ||
-                           dc.ColumnName.Contains("OpenCommitments") ||
-                           dc.ColumnName.Contains("ULO") ||
-                           dc.ColumnName.Equals("Obligations") ||
-                           dc.ColumnName.Equals("Commitments") ||
-                           dc.ColumnName.Equals("Authority") ||
-                           dc.ColumnName.Equals("Budgeted") ||
-                           dc.ColumnName.Equals("Posted") ||
-                           dc.ColumnName.Equals("CarryIn") ||
-                           dc.ColumnName.Equals("CarryOut") ||
-                           dc.ColumnName.Equals("Balance"))
-                        {
-                            continue;
-                        }
-
-                        data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(dc)).Distinct().ToArray());
-                    }
-
-                    if(data.ContainsKey("ID"))
-                    {
-                        data.Remove("ID");
-                    }
-
-                    if(data.ContainsKey("Amount"))
-                    {
-                        data.Remove("Amount");
-                    }
-
-                    return data;
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
         ///     Gets the count.
         /// </summary>
         /// <param name="table">The table.</param>
@@ -550,13 +581,17 @@ namespace BudgetExecution
                 switch(source)
                 {
                     case Source.PRC:
-                        return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17")
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>("BOC") != "17")
                                     .Where(p => p.Field<decimal>("Amount") > 0m)
-                                    .Select(p => p.Field<decimal>("Amount")).Sum();
+                                    .Select(p => p.Field<decimal>("Amount"))
+                                    .Sum();
                     case Source.FTE:
-                        return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17")
+                        return table.AsEnumerable()
+                                    .Where(p => p.Field<string>("BOC") == "17")
                                     .Where(p => p.Field<decimal>("Amount") > 0m)
-                                    .Select(p => p.Field<decimal>("Amount")).Sum();
+                                    .Select(p => p.Field<decimal>("Amount"))
+                                    .Sum();
                     case Source.ProgramObligations:
                     case Source.TravelObligations:
                     case Source.PayrollObligations:

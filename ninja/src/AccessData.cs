@@ -88,10 +88,10 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Handles the Load event of the SQLiteData control.
+        ///     Handles the Load event of the SQLiteData control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void SQLiteData_Load(object sender, EventArgs e)
         {
             try
@@ -127,7 +127,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populates the filter items.
+        ///     Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="data">The data.</param>
@@ -161,7 +161,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populates the filter items.
+        ///     Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="table">The table.</param>
@@ -200,7 +200,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populates the filter items.
+        ///     Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="data">The data.</param>
@@ -235,7 +235,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populates the filter items.
+        ///     Populates the filter items.
         /// </summary>
         /// <param name="colname">The colname.</param>
         /// <param name="table">The table.</param>
@@ -269,7 +269,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populates the filter buttons.
+        ///     Populates the filter buttons.
         /// </summary>
         /// <param name="control">The control.</param>
         /// <param name="list">The list.</param>
@@ -290,10 +290,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the FilterControlButton control.
+        ///     Handles the OnClick event of the FilterControlButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         /// <exception cref="InvalidOperationException"></exception>
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
@@ -311,7 +311,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Hides the top grid labels.
+        ///     Hides the top grid labels.
         /// </summary>
         private void HideTopGridLabels()
         {
@@ -338,10 +338,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of the Filter1 control.
+        ///     Handles the SelectedIndexChanged event of the Filter1 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Filter1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -366,10 +366,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of the Filter2 control.
+        ///     Handles the SelectedIndexChanged event of the Filter2 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Filter2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -396,10 +396,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of the Filter3 control.
+        ///     Handles the SelectedIndexChanged event of the Filter3 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Filter3_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -429,10 +429,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of the Filter4 control.
+        ///     Handles the SelectedIndexChanged event of the Filter4 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Filter4_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -459,7 +459,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data base.
+        ///     Gets the data base.
         /// </summary>
         /// <param name="source">The source.</param>
         private void GetDataBase(Source source)
@@ -796,10 +796,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the CalculatorButton control.
+        ///     Handles the OnClick event of the CalculatorButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
@@ -807,10 +807,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the ExcelButton control.
+        ///     Handles the OnClick event of the ExcelButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
             ExcelData ef = new ExcelData();
@@ -818,10 +818,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the ReprogrammingButton control.
+        ///     Handles the OnClick event of the ReprogrammingButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rf = new Reprogramming();
@@ -829,48 +829,48 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the PreviousButton control.
+        ///     Handles the OnClick event of the PreviousButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
         /// <summary>
-        /// Handles the OnClick event of the NextButton control.
+        ///     Handles the OnClick event of the NextButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
         }
 
         /// <summary>
-        /// Handles the OnClick event of the AddButton control.
+        ///     Handles the OnClick event of the AddButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
         }
 
         /// <summary>
-        /// Handles the Click event of the RefreshButton control.
+        ///     Handles the Click event of the RefreshButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RefreshButton_Click(object sender, EventArgs e)
         {
         }
 
         /// <summary>
-        /// Handles the OnClick event of the CopyButton control.
+        ///     Handles the OnClick event of the CopyButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -885,10 +885,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the FilterButton control.
+        ///     Handles the OnClick event of the FilterButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FilterButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -903,10 +903,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the FunctionButton control.
+        ///     Handles the OnClick event of the FunctionButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FunctionButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -921,10 +921,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the Enter event of the VisualGroupBox1 control.
+        ///     Handles the Enter event of the VisualGroupBox1 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void VisualGroupBox1_Enter(object sender, EventArgs e)
         {
         }

@@ -55,15 +55,6 @@ namespace BudgetExecution
             BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
         }
 
-        private void SetLabels()
-        {
-            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-            lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-            lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-            lblCount.Text = DbData.GetCount(Table).ToString();
-        }
-
         // PROPERTIES
 
         /// <summary>
@@ -235,6 +226,15 @@ namespace BudgetExecution
         ///     Gets or sets the Tab
         /// </summary>
         public TabPageAdv[] Tab { get; set; }
+
+        private void SetLabels()
+        {
+            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+            lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+            lblCount.Text = DbData.GetCount(Table).ToString();
+        }
 
         // METHODS
 
@@ -1288,7 +1288,7 @@ namespace BudgetExecution
             }
         }
 
-        private void lblTotal_Click(object sender, EventArgs e)
+        private void LblTotal_Click(object sender, EventArgs e)
         {
         }
     }

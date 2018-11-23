@@ -114,7 +114,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Gets the data fields.
+        ///     Gets the data fields.
         /// </summary>
         /// <returns></returns>
         internal Dictionary<string, object> GetDataFields()
@@ -132,7 +132,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data fields.
+        ///     Gets the data fields.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -155,7 +155,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data records.
+        ///     Gets the data records.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -175,7 +175,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fields.
+        ///     Gets the fields.
         /// </summary>
         /// <returns></returns>
         internal string[] GetFields()
@@ -194,7 +194,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the values.
+        ///     Gets the values.
         /// </summary>
         /// <returns></returns>
         internal object[] GetValues()
@@ -212,7 +212,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert columns.
+        ///     Gets the insert columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -273,7 +273,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -293,7 +293,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified parameter.
+        ///     Selects the specified parameter.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <param name="source">The source.</param>
@@ -314,7 +314,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified p.
+        ///     Inserts the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
@@ -331,7 +331,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified p.
+        ///     Updates the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Update(Dictionary<string, object> p)
@@ -348,7 +348,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified p.
+        ///     Deletes the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Delete(Dictionary<string, object> p)

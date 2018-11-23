@@ -271,7 +271,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Calculates the specified fund.
+        ///     Calculates the specified fund.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <param name="divisionid">The divisionid.</param>
@@ -283,7 +283,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -308,7 +308,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -333,7 +333,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>

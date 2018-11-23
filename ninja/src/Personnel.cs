@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 
 namespace BudgetExecution
 {
@@ -85,7 +84,7 @@ namespace BudgetExecution
         public string Contractor { get; set; }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -107,7 +106,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -129,7 +128,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

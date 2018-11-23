@@ -75,7 +75,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Populuates the fund codes.
+        ///     Populuates the fund codes.
         /// </summary>
         /// <param name="FundComboBox">The fund ComboBox.</param>
         private void PopuluateFundCodes(MetroSetComboBox FundComboBox)
@@ -95,7 +95,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Populuates the boc codes.
+        ///     Populuates the boc codes.
         /// </summary>
         /// <param name="BocBox">The boc box.</param>
         private void PopuluateBocCodes(MetroSetComboBox BocBox)
@@ -115,7 +115,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the labels.
+        ///     Gets the labels.
         /// </summary>
         /// <returns></returns>
         private Label[] GetLabels()
@@ -133,7 +133,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the text boxes.
+        ///     Gets the text boxes.
         /// </summary>
         /// <returns></returns>
         private MetroSetTextBox[] GetTextBoxes()
@@ -151,7 +151,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Binds the text boxes.
+        ///     Binds the text boxes.
         /// </summary>
         /// <param name="bs">The bs.</param>
         /// <param name="dt">The dt.</param>
@@ -193,10 +193,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Binds the text boxes.
+        ///     Binds the text boxes.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BindTextBoxes(object sender, EventArgs e)
         {
             try
@@ -235,7 +235,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the combo boxes.
+        ///     Gets the combo boxes.
         /// </summary>
         /// <returns></returns>
         private List<MetroSetComboBox> GetComboBoxes()
@@ -258,10 +258,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the CalculatorButton control.
+        ///     Handles the OnClick event of the CalculatorButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
@@ -269,10 +269,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the ExcelButton control.
+        ///     Handles the OnClick event of the ExcelButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
             ExcelData ef = new ExcelData();
@@ -280,10 +280,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the ReprogrammingButton control.
+        ///     Handles the OnClick event of the ReprogrammingButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rf = new Reprogramming();
@@ -291,20 +291,20 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Handles the OnClick event of the PreviousButton control.
+        ///     Handles the OnClick event of the PreviousButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
         /// <summary>
-        /// Handles the OnClick event of the NextButton control.
+        ///     Handles the OnClick event of the NextButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();

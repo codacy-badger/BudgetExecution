@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics.CodeAnalysis;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms;
 using VisualPlus.Toolkit.Controls.Interactivity;
@@ -219,7 +218,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-        
+
         private void Filter1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

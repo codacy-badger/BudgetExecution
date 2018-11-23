@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
-using OfficeOpenXml;
 
 namespace BudgetExecution
 {
@@ -242,7 +241,7 @@ namespace BudgetExecution
 
         /// <summary>
         ///     Gets the connection string using the ConfigurationManager class and
-        /// the GetInternalFilePath method.
+        ///     the GetInternalFilePath method.
         /// </summary>
         /// <param name="filepath">The filepath.</param>
         /// <returns></returns>
@@ -251,7 +250,7 @@ namespace BudgetExecution
             try
             {
                 ConnectionStringSettingsCollection connectionString = ConfigurationManager.ConnectionStrings;
-                var excelpath = GetInternalFilePath();
+                string excelpath = GetInternalFilePath();
                 string connectionstring = connectionString["Excel"].ConnectionString;
                 connectionstring.Replace($"{filepath}", excelpath);
                 return connectionstring;
@@ -265,9 +264,8 @@ namespace BudgetExecution
 
         public void GetBudgetReport()
         {
-
         }
-       
+
         /// <summary>
         ///     Loads the internal data.
         /// </summary>
@@ -327,7 +325,7 @@ namespace BudgetExecution
         {
             try
             {
-                var excel = Create();
+                Microsoft.Office.Interop.Excel.Application excel = Create();
                 Workbook excelWorkBook = excel.Workbooks.Open(filepath);
                 Worksheet excelWorkSheet = (Worksheet) excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;

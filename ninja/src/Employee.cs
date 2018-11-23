@@ -5,13 +5,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Linq;
 
 namespace BudgetExecution
 {
     /// <summary>
-    /// 
     /// </summary>
     /// <seealso cref="BudgetExecution.IEmployee" />
     public class Employee : IEmployee
@@ -117,11 +115,11 @@ namespace BudgetExecution
 
         public override string ToString()
         {
-            return FirstName +" "+ LastName;
+            return FirstName + " " + LastName;
         }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -143,7 +141,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -165,7 +163,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

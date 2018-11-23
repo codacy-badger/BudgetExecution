@@ -781,7 +781,7 @@ namespace BudgetExecution
         {
         }
 
-        private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
     }

@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using DataRowExtensions = System.Data.DataRowExtensions;
+using DataTableExtensions = System.Data.DataTableExtensions;
+using EnumerableRowCollectionExtensions = System.Data.EnumerableRowCollectionExtensions;
 
 namespace BudgetExecution
 {
@@ -90,9 +93,9 @@ namespace BudgetExecution
 
         internal DataRow[] Data { get; }
 
-        public Dictionary<string, string[]> ProgramElements { get; }
-
         public PrcMetric Metric { get; }
+
+        public Dictionary<string, string[]> ProgramElements { get; }
 
         public DataTable Table { get; }
 
@@ -101,7 +104,6 @@ namespace BudgetExecution
         // METHODS
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -110,7 +112,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                return EnumerableRowCollectionExtensions.Select(DataTableExtensions.AsEnumerable(table), p => DataRowExtensions.Field<string>(p, column)).Distinct().ToArray();
             }
             catch(Exception ex)
             {
@@ -120,7 +122,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -130,7 +131,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                DataTable qtable = DataTableExtensions.CopyToDataTable(EnumerableRowCollectionExtensions.Select(EnumerableRowCollectionExtensions.Where(DataTableExtensions.AsEnumerable(table), p => DataRowExtensions.Field<string>(p, column).Equals(filter)), p => p));
                 return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
             }
             catch(Exception ex)
@@ -141,7 +142,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -152,7 +152,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -170,7 +169,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -202,7 +200,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -220,7 +217,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -240,7 +236,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -258,7 +253,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public Tuple<string[], string[], string[], string[], string[]> GetCodes()
@@ -267,7 +261,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -285,7 +278,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="list"></param>
@@ -311,7 +303,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public decimal GetFteTotal()
@@ -320,7 +311,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="list"></param>
@@ -351,7 +341,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -383,7 +372,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>
@@ -414,7 +402,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <param name="filters"></param>
@@ -443,7 +430,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>

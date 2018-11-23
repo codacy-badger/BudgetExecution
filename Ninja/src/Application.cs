@@ -57,7 +57,7 @@ namespace BudgetExecution
 
     public enum TransferType { Admin = 1, BOC = 2, FromHQ = 3, ToHQ = 4, FromRpio = 5, ToRpio = 6, Recertification = 7, ToDivision = 8, FromDivsion = 9, SubAllowance = 10 }
 
-    static internal class Application
+    internal static class Application
     {
         /// <summary>
         ///     The main entry point for the application.

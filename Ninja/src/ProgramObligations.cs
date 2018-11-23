@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Linq;
 
 namespace BudgetExecution
@@ -102,7 +101,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the schema.
+        ///     Gets the schema.
         /// </summary>
         /// <returns></returns>
         internal Dictionary<string, object> GetSchema()
@@ -120,7 +119,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data.
+        ///     Gets the data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -140,7 +139,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fields.
+        ///     Gets the fields.
         /// </summary>
         /// <returns></returns>
         internal string[] GetColumnNames()
@@ -159,7 +158,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the values.
+        ///     Gets the values.
         /// </summary>
         /// <returns></returns>
         internal object[] GetValues()
@@ -177,7 +176,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert columns.
+        ///     Gets the insert columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -238,7 +237,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -258,7 +257,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -279,7 +278,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -302,7 +301,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -324,7 +323,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

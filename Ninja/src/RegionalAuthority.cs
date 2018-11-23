@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Linq;
 
 namespace BudgetExecution
@@ -79,12 +78,12 @@ namespace BudgetExecution
         // METHODS
 
         /// <summary>
-        /// Returns array of strings consisting of unique values within a columns
+        ///     Returns array of strings consisting of unique values within a columns
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
         /// <returns>
-        /// string[]
+        ///     string[]
         /// </returns>
         public string[] GetCodes(DataTable table, string column)
         {
@@ -101,7 +100,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data values.
+        ///     Gets the data values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -122,7 +121,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the metrics.
+        ///     Gets the metrics.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -141,7 +140,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the PRC array.
+        ///     Gets the PRC array.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -159,7 +158,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the program elements.
+        ///     Gets the program elements.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -199,7 +198,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the total.
+        ///     Gets the total.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -218,7 +217,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Filters the table.
+        ///     Filters the table.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -238,7 +237,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the average.
+        ///     Gets the average.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -256,7 +255,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the codes.
+        ///     Gets the codes.
         /// </summary>
         /// <param name="filter">The filter.</param>
         /// <returns></returns>
@@ -274,7 +273,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the count.
+        ///     Gets the count.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -292,7 +291,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the ratio.
+        ///     Gets the ratio.
         /// </summary>
         /// <param name="t1">The t1.</param>
         /// <param name="t2">The t2.</param>

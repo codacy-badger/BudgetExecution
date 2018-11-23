@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Linq;
 
 namespace BudgetExecution
@@ -111,7 +110,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Gets the data fields.
+        ///     Gets the data fields.
         /// </summary>
         /// <param name="fundcode">The code.</param>
         /// <param name="bfy">The bfy.</param>
@@ -130,7 +129,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fund data.
+        ///     Gets the fund data.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -152,7 +151,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data.
+        ///     Gets the data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -178,7 +177,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insertion columns.
+        ///     Gets the insertion columns.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -198,7 +197,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -218,7 +217,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -239,7 +238,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -261,7 +260,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>
@@ -283,7 +282,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <param name="p">The p.</param>

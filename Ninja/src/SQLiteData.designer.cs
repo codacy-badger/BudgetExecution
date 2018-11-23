@@ -3843,7 +3843,7 @@ namespace BudgetExecution
             this.TabControl.TabIndex = 159;
             this.TabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.TabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.TabControl.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv1_SelectedIndexChanged);
+            this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControlAdv1_SelectedIndexChanged);
             // 
             // visualGroupBox1
             // 

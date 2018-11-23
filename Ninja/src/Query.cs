@@ -48,12 +48,6 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter(DataCommand, Sql);
         }
 
-        // PROPERTIES
-
-        public Source Source { get; }
-
-        public Provider Provider { get; }
-
         public Sql Sql { get; }
 
         public string TableName { get; }
@@ -77,6 +71,12 @@ namespace BudgetExecution
         public DbCommand UpdateCommand { get; internal set; }
 
         public DbCommandBuilder CommandBuilder { get; internal set; }
+
+        // PROPERTIES
+
+        public Source Source { get; }
+
+        public Provider Provider { get; }
 
         public DbConnection DataConnection { get; }
 
