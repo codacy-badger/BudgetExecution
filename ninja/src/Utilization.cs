@@ -13,7 +13,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Utilization" />
     /// </summary>
-    public class Utilization
+    public class Utilization : IDataBuilder
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization"/> class.
@@ -294,16 +294,68 @@ namespace BudgetExecution
         public decimal ULO { get; set; }
 
         // METHODS
+        /// <inheritdoc />
         /// <summary>
-        /// The GetDataFields
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
         /// </summary>
-        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
-        internal Dictionary<string, object> GetDataFields()
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
-                return param;
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
             }
             catch(Exception ex)
             {
@@ -315,38 +367,13 @@ namespace BudgetExecution
         /// <summary>
         /// The GetDataFields
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="string[]"/></returns>
-        internal string[] GetDataFields(DataTable table)
-        {
-            if(table.Rows.Count > 0)
-            {
-                try
-                {
-                    return table.GetColumnNames();
-                }
-                catch(SystemException ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Gets the data records.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
-        internal DataRow[] GetDataRecords(Source source, Provider provider, Dictionary<string, object> p)
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
+        internal Dictionary<string, object> GetDataFields()
         {
             try
             {
-                return new DataBuilder(source, provider, p).Table.AsEnumerable().Select(o => o).ToArray();
+                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
+                return param;
             }
             catch(Exception ex)
             {
@@ -384,67 +411,6 @@ namespace BudgetExecution
             {
                 Dictionary<string, object> param = GetDataFields();
                 return param.Values.ToArray();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// The GetInsertColumns
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
-        public static Dictionary<string, object> GetInsertColumns(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            try
-            {
-                Account account = new Account(provider, param["BFY"].ToString(), param["Fund"].ToString(), param["Code"].ToString());
-                if(!param.ContainsKey("FundName") ||
-                   param["FundName"] == null)
-                {
-                    param["FundName"] = account.FundName;
-                }
-
-                if(!param.ContainsKey("Org") ||
-                   param["Org"] == null)
-                {
-                    param["Org"] = account.Org;
-                }
-
-                if(!param.ContainsKey("ProgramProject") ||
-                   param["ProgramProject"] == null)
-                {
-                    param["ProgramProject"] = account.ProgramProjectCode;
-                    param["ProgramProjectName"] = account.ProgramProjectName;
-                }
-
-                if(!param.ContainsKey("ProgramArea") ||
-                   param["ProgramArea"] == null)
-                {
-                    param["ProgramArea"] = account.ProgramArea;
-                    param["ProgramAreaName"] = account.ProgramAreaName;
-                }
-
-                if(!param.ContainsKey("Goal") ||
-                   param["Goal"] == null)
-                {
-                    param["Goal"] = account.Goal;
-                    param["GoalName"] = account.GoalName;
-                }
-
-                if(!param.ContainsKey("Objective") ||
-                   param["Objective"] == null)
-                {
-                    param["Objective"] = account.Objective;
-                    param["ObjectiveName"] = account.ObjectiveName;
-                }
-
-                return param;
             }
             catch(Exception ex)
             {

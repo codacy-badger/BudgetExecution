@@ -9,10 +9,11 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc />
     /// <summary>
-    /// Defines the <see cref="Division" />
+    /// Defines the <see cref="T:BudgetExecution.Division" />
     /// </summary>
-    public class Division
+    public class Division : IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
@@ -27,7 +28,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Division(Source source = Source.Divisions, Provider provider = Provider.SQLite)
+        public Division(Source source, Provider provider = Provider.SQLite)
         {
             DbData = new DataBuilder(source, provider);
             Records = DbData.Table.AsEnumerable().Select(p => p).ToArray();
@@ -64,6 +65,17 @@ namespace BudgetExecution
         public Division(DataRow data)
         {
             Data = data;
+            ID = Data["ID"].ToString();
+            RC = Data["RC"].ToString();
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
+        }
+
+        public Division(Dictionary<string, object> data)
+        {
+            Parameter = data;
+            Data = new DataBuilder(Source.Divisions, Provider.SQLite, Parameter).Data;
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
             Title = Data["Title"].ToString();
@@ -136,6 +148,80 @@ namespace BudgetExecution
         /// Gets the Name
         /// </summary>
         public string Name { get; }
+
+        public Dictionary<string, object> Parameter { get; set; }
+
+        // METHODS
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
+        /// </summary>
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
+        {
+            try
+            {
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
 
         /// <summary>
         /// Returns a <see cref="System.String" /> that represents this instance.
