@@ -12,7 +12,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Account" />
     /// </summary>
-    public class Account : IAccount
+    public class Account : IDataBuilder, IAccount
     {
         // CONSTRUCTORS
         /// <summary>
@@ -34,13 +34,14 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
         /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="bfy">The bfy<see cref="string"/></param>
-        /// <param name="fund">The fund<see cref="string"/></param>
-        /// <param name="code">The code<see cref="string"/></param>
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
+        /// <param name="bfy">The bfy<see cref="T:System.String" /></param>
+        /// <param name="fund">The fund<see cref="T:System.String" /></param>
+        /// <param name="code">The code<see cref="T:System.String" /></param>
         public Account(Provider provider, string bfy, string fund, string code) : this(provider)
         {
             Code = code;
@@ -67,12 +68,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
         /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Account(Provider provider, Dictionary<string, object> p) : this(provider)
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
+        /// <param name="p">The p<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
+        public Account(Provider provider, Dictionary<string, object> p)
         {
             if(p.ContainsKey("BFY"))
             {
@@ -134,6 +136,26 @@ namespace BudgetExecution
             ProgramArea = data["ProgramArea"].ToString();
             ProgramAreaName = data["ProgramAreaName"].ToString();
         }
+        
+        public Account(Dictionary<string, object> data)
+        {
+            Parameter = data;
+            Data = new DataBuilder(Source.Accounts, Provider.SQLite, Parameter).Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Goal = Code.Substring(0, 1);
+            Objective = Code.Substring(1, 2);
+            NpmCode = Code.Substring(3, 1);
+            ProgramProjectCode = Code.Substring(4, 2);
+            BFY = Data["BFY"].ToString();
+            FundCode = Data["Fund"].ToString();
+            FundName = Data["FundName"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            NPM = Data["NPM"].ToString();
+            ObjectiveName = Data["ObjectiveName"].ToString();
+            GoalName = Data["GoalName"].ToString();
+            ProgramArea = Data["ProgramArea"].ToString();
+            ProgramAreaName = Data["ProgramAreaName"].ToString();
+        }
 
         // PROPERTIES
         /// <summary>
@@ -169,7 +191,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Data
         /// </summary>
-        public DataRow Data { get; }
+        public DataRow Data { get; set; }
 
         /// <summary>
         /// Gets or sets the ProgramElements
@@ -256,11 +278,15 @@ namespace BudgetExecution
         /// </summary>
         public string Objective { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the ProgramProjectCode
         /// </summary>
         public string ProgramProjectCode { get; }
 
+        // METHODS
+
+        /// <inheritdoc />
         /// <summary>
         /// Gets the goal.
         /// </summary>
@@ -271,6 +297,7 @@ namespace BudgetExecution
             return goal.ToString();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the name of the goal.
         /// </summary>
@@ -281,6 +308,7 @@ namespace BudgetExecution
             return Info.GetGoalName(code);
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the NPM code.
         /// </summary>
@@ -291,6 +319,7 @@ namespace BudgetExecution
             return npm.ToString();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the objective.
         /// </summary>
@@ -300,6 +329,7 @@ namespace BudgetExecution
             return Code.Substring(1, 2);
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the name of the objective.
         /// </summary>
@@ -310,6 +340,7 @@ namespace BudgetExecution
             return Info.GetObjectiveName(code);
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the program project code.
         /// </summary>
@@ -319,6 +350,7 @@ namespace BudgetExecution
             return Code.Substring(5, 2);
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the code.
         /// </summary>
@@ -344,6 +376,76 @@ namespace BudgetExecution
         public override string ToString()
         {
             return Code;
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
+        /// </summary>
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
+        {
+            try
+            {
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
         /// <summary>

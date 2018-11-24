@@ -12,7 +12,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Transfer" />
     /// </summary>
-    public class Transfer
+    public class Transfer : IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
@@ -245,6 +245,78 @@ namespace BudgetExecution
         /// Gets the TCN
         /// </summary>
         public string TCN { get; }
+
+        // METHODS
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
+        /// </summary>
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
+        {
+            try
+            {
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
 
         /// <summary>
         /// Returns a <see cref="System.String" /> that represents this instance.

@@ -26,17 +26,17 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Records
         /// </summary>
-        DataRow[] Records { get; }
+        DataRow[] Records { get; set; }
 
         /// <summary>
         /// Gets the Data
         /// </summary>
-        DataRow Data { get; }
+        DataRow Data { get; set; }
 
         /// <summary>
         /// Gets the ProgramElements
         /// </summary>
-        Dictionary<string, string[]> ProgramElements { get; }
+        Dictionary<string, string[]> ProgramElements { get; set; }
 
         // METHODS
         /// <summary>

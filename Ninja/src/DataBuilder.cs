@@ -185,7 +185,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Data
         /// </summary>
-        public DataRow Data { get; }
+        public DataRow Data { get; set; }
 
         /// <summary>
         /// Gets or sets the Table
@@ -197,6 +197,7 @@ namespace BudgetExecution
         /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data table.
         /// </summary>
@@ -220,6 +221,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the records in the table as an Array of DataRows.
         /// </summary>
@@ -238,6 +240,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the unique values.
         /// </summary>
@@ -262,6 +265,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the program elements.
         /// </summary>

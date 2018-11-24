@@ -12,7 +12,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Fund" />
     /// </summary>
-    public class Fund : IFund
+    public class Fund : IFund, IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
@@ -36,33 +36,15 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="Fund"/> class.
         /// </summary>
-        /// <param name="code">The code<see cref="string"/></param>
-        /// <param name="bfy">The bfy<see cref="string"/></param>
-        public Fund(string code, string bfy) : this(Provider.SQLite)
-        {
-            Code = code;
-            BFY = bfy;
-            Parameter = GetParameter(Code, BFY);
-            Table = GetData(Source, Provider, Parameter);
-            Data = Table.AsEnumerable().Select(prc => prc).Single();
-            ID = int.Parse(Data["ID"].ToString());
-            Name = Data["Name"].ToString();
-            Title = Data["Title"].ToString();
-            TreasurySymbol = Data["TreasurySymbol"].ToString();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Fund"/> class.
-        /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="code">The code<see cref="string"/></param>
         /// <param name="bfy">The bfy<see cref="string"/></param>
-        public Fund(Source source, string code, string bfy)
+        public Fund(string code, string bfy)
         {
             Code = code;
             BFY = bfy;
             Parameter = GetParameter(Code, BFY);
-            Table = GetData(source, Provider.SQLite, Parameter);
+            Table = new DataBuilder(Source.Funds, Provider.SQLite, Parameter).Table;
             if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(prc => prc).Single();
@@ -79,12 +61,12 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Fund(Source source, Provider provider, Dictionary<string, object> p)
+        public Fund(Provider provider, Dictionary<string, object> p)
         {
             Code = p["Code"].ToString();
             BFY = p["BFY"].ToString();
             Parameter = GetParameter(Code, BFY);
-            Table = GetData(source, provider, Parameter);
+            Table = new DataBuilder(Source.Funds, provider, Parameter).Table;
             if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(prc => prc).Single();
@@ -102,6 +84,16 @@ namespace BudgetExecution
         public Fund(DataRow data)
         {
             Data = data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
+        }
+
+        public Fund(Dictionary<string, object> data)
+        {
+            Parameter = data;
+            Data = new DataBuilder(Source.Funds, Provider.SQLite, Parameter).Data;
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
             Title = Data["Title"].ToString();
@@ -184,6 +176,78 @@ namespace BudgetExecution
         /// </summary>
         public string TreasurySymbol { get; }
 
+        // METHODS
+
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
+        /// </summary>
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
+        {
+            try
+            {
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
         /// <summary>
         /// Gets the data fields.
         /// </summary>

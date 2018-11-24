@@ -12,7 +12,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="WorkCode" />
     /// </summary>
-    public class WorkCode
+    public class WorkCode : IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
@@ -27,11 +27,11 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public WorkCode(Source source = Source.WorkCodes, Provider provider = Provider.SQLite)
+        public WorkCode(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.WorkCodes;
             Provider = provider;
-            DbData = new DataBuilder(Source.WorkCodes, Provider);
+            DbData = new DataBuilder(Source, Provider);
         }
 
         /// <summary>
@@ -40,11 +40,11 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public WorkCode(Source source, Provider provider, Dictionary<string, object> p)
+        public WorkCode(Provider provider, Dictionary<string, object> p)
         {
-            Source = source;
+            Source = Source.WorkCodes;
             Provider = provider;
-            DbData = new DataBuilder(Source.WorkCodes, Provider, p);
+            DbData = new DataBuilder(Source, Provider, p);
             Table = DbData.Table;
             Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
             ID = int.Parse(Data["ID"].ToString());
@@ -167,6 +167,78 @@ namespace BudgetExecution
         /// Gets the Description
         /// </summary>
         public string Description { get; }
+
+        // METHODS
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Explicit implementation of the IDataBuilder method 
+        /// Gets the primary data source using the DbData attribute.
+        /// </summary>
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
+        {
+            try
+            {
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// <param name="table"></param>
+        /// <param name="col"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
 
         /// <summary>
         /// Returns a <see cref="System.String" /> that represents this instance.

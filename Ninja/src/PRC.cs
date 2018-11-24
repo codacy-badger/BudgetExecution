@@ -2,6 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+
 namespace BudgetExecution
 {
     using System;
@@ -9,10 +10,11 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc cref="" />
     /// <summary>
-    /// Defines the <see cref="PRC" />
+    /// Defines the <see cref="T:BudgetExecution.PRC" />
     /// </summary>
-    public class PRC : IPRC, IAccount
+    public class PRC : IDataBuilder, IPRC, IAccount
     {
         // CONSTRUCTORS
         /// <summary>
@@ -96,7 +98,7 @@ namespace BudgetExecution
             BudgetLevel = bl;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(Source.Funds, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["Code"] = fund });
+            Fund = new Fund(Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["Code"] = fund });
             FundCode = Fund.Code;
             AH = ah;
             RC = new RC(rc);
@@ -137,7 +139,36 @@ namespace BudgetExecution
             BOC = new BOC(row["BOC"].ToString());
             Parameter = AsDictionary();
             Amount = decimal.Parse(row["Amount"].ToString());
-            Parameter = AsDictionary();
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
+        }
+
+        /// <summary></summary>
+        /// <param name="data"></param>
+        public PRC(Dictionary<string, object> data)
+        {
+            Parameter = data;
+            Data = new DataBuilder(Source.PRC, Provider.SQLite, Parameter).Data;
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            AH = Data["AH"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
+            FundCode = Fund.Code;
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -165,25 +196,31 @@ namespace BudgetExecution
         /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Columns
         /// </summary>
         public string[] Columns { get; set; }
 
+        public Dictionary<string, string[]> ProgramElements { get; set; }
+
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
         public DataTable Table { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Records
         /// </summary>
-        public DataRow[] Records { get; }
+        public DataRow[] Records { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Data
         /// </summary>
-        public DataRow Data { get; }
+        public DataRow Data { get; set; }
 
         /// <summary>
         /// Gets or sets the ID
@@ -195,16 +232,19 @@ namespace BudgetExecution
         /// </summary>
         public string BudgetLevel { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the RPIO
         /// </summary>
         public string RPIO { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the BFY
         /// </summary>
         public string BFY { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Fund
         /// </summary>
@@ -215,26 +255,31 @@ namespace BudgetExecution
         /// </summary>
         public string FundCode { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Org
         /// </summary>
         public Org Org { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the RC
         /// </summary>
         public RC RC { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Account
         /// </summary>
-        public Account Account { get; }
+        public Account Account { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Amount
         /// </summary>
         public decimal Amount { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the BOC
         /// </summary>
@@ -280,31 +325,39 @@ namespace BudgetExecution
         /// </summary>
         internal Dictionary<string, object> Parameter { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Code
         /// </summary>
         public string Code { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the NPM
         /// </summary>
         public string NPM { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the ProgramProjectCode
         /// </summary>
         public string ProgramProjectCode { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Goal
         /// </summary>
         public string Goal { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Objective
         /// </summary>
         public string Objective { get; }
 
+        // METHODS
+
+        /// <inheritdoc />
         /// <summary>
         /// Gets the code.
         /// </summary>
@@ -322,6 +375,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the goal.
         /// </summary>
@@ -340,6 +394,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the name of the goal.
         /// </summary>
@@ -358,6 +413,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the NPM code.
         /// </summary>
@@ -376,6 +432,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the objective.
         /// </summary>
@@ -393,6 +450,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the name of the objective.
         /// </summary>
@@ -411,6 +469,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the program project code.
         /// </summary>
@@ -428,7 +487,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
+                return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Code };
             }
             catch(Exception ex)
             {
@@ -437,16 +496,59 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data.
         /// </summary>
-        /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        internal DataRow GetData(Dictionary<string, object> param)
+        DataTable IDataBuilder.GetDataTable()
         {
             try
             {
-                return new DataBuilder(Source, Provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(Source, Provider).Table;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary>The GetProgramElements</summary>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            try
+            {
+                return DbData.ProgramElements;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return DbData.Records;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        {
+            try
+            {
+                return DbData.GetUniqueValues(table, col);
             }
             catch(Exception ex)
             {
@@ -471,28 +573,7 @@ namespace BudgetExecution
                 return string.Empty;
             }
         }
-
-        /// <summary>
-        /// Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
-        public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            try
-            {
-                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
-                return new PRC(datarow);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        
         /// <summary>
         /// Inserts the specified source.
         /// </summary>

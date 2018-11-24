@@ -2,31 +2,29 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using MakarovDev.ExpandCollapsePanel;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using VisualPlus.Toolkit.Controls.Interactivity;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Drawing;
+    using System.IO;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MakarovDev.ExpandCollapsePanel;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+    using Syncfusion.Windows.Forms.Tools;
+    using VisualPlus.Toolkit.Controls.Interactivity;
+
     /// <summary>
-    ///     Defines the <see cref="SummaryForm" />
+    /// Defines the <see cref="SummaryForm" />
     /// </summary>
     public partial class SummaryForm : MetroForm
     {
-        // CONSTRUCTORS
-
         /// <summary>
-        ///     Initializes a new instance of the <see cref="SummaryForm" /> class.
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
         /// </summary>
         public SummaryForm()
         {
@@ -34,7 +32,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="SummaryForm" /> class.
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
         /// </summary>
         /// <param name="source">The source<see cref="Source" /></param>
         /// <param name="provider">The provider<see cref="Provider" /></param>
@@ -55,191 +53,226 @@ namespace BudgetExecution
             BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
         }
 
-        // PROPERTIES
-
         /// <summary>
-        ///     Gets the Source
+        /// Gets the Source
+        /// Gets the Source
         /// </summary>
         public Source Source { get; }
 
         /// <summary>
-        ///     Gets the Provider
+        /// Gets the Provider
+        /// Gets the Provider
         /// </summary>
         public Provider Provider { get; }
 
         /// <summary>
-        ///     Gets or sets the ChartType
+        /// Gets or sets the ChartType
+        /// Gets or sets the ChartType
         /// </summary>
         public ChartSeriesType ChartType { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartField
+        /// Gets or sets the PrimaryGrouping
+        /// Gets or sets the ChartField
         /// </summary>
         public Field PrimaryGrouping { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartGroup
+        /// Gets or sets the SecondaryGrouping
+        /// Gets or sets the ChartGroup
         /// </summary>
         public Field SecondaryGrouping { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Measure
+        /// Gets or sets the Measure
+        /// Gets or sets the Measure
         /// </summary>
         public Stat Measure { get; set; }
 
         /// <summary>
-        ///     Gets or sets the DbData
+        /// Gets or sets the DbData
+        /// Gets or sets the DbData
         /// </summary>
         public DataBuilder DbData { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Table
+        /// Gets or sets the Table
+        /// Gets or sets the Table
         /// </summary>
         public DataTable Table { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Metric
+        /// Gets or sets the Metric
+        /// Gets or sets the Metric
         /// </summary>
         public PrcMetric Metric { get; set; }
 
         /// <summary>
-        ///     Gets or sets the BFY
+        /// Gets or sets the BFY
+        /// Gets or sets the BFY
         /// </summary>
         public string[] BFY { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Org
+        /// Gets or sets the Org
+        /// Gets or sets the Org
         /// </summary>
         public string[] Org { get; set; }
 
         /// <summary>
-        ///     Gets or sets the RC
+        /// Gets or sets the RC
+        /// Gets or sets the RC
         /// </summary>
         public string[] RC { get; set; }
 
         /// <summary>
-        ///     Gets or sets the AH
+        /// Gets or sets the AH
+        /// Gets or sets the AH
         /// </summary>
         public string[] AH { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Code
+        /// Gets or sets the Code
+        /// Gets or sets the Code
         /// </summary>
         public string[] Code { get; set; }
 
         /// <summary>
-        ///     Gets or sets the BOC
+        /// Gets or sets the BOC
+        /// Gets or sets the BOC
         /// </summary>
         public string[] BOC { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Fund
+        /// Gets or sets the Fund
+        /// Gets or sets the Fund
         /// </summary>
         public string[] Fund { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartFilter
+        /// Gets or sets the ChartFilter
+        /// Gets or sets the ChartFilter
         /// </summary>
         public string ChartFilter { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilter1
+        /// Gets or sets the GridFilter1
+        /// Gets or sets the GridFilter1
         /// </summary>
         public string GridFilter1 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilter2
+        /// Gets or sets the GridFilter2
+        /// Gets or sets the GridFilter2
         /// </summary>
         public string GridFilter2 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilter3
+        /// Gets or sets the GridFilter3
+        /// Gets or sets the GridFilter3
         /// </summary>
         public string GridFilter3 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Division
+        /// Gets or sets the Division
+        /// Gets or sets the Division
         /// </summary>
         public string Division { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ProgramElements
+        /// Gets or sets the ProgramElements
+        /// Gets or sets the ProgramElements
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartMainTitle
+        /// Gets or sets the ChartMainTitle
+        /// Gets or sets the ChartMainTitle
         /// </summary>
         public string[] ChartMainTitle { get; set; }
 
         /// <summary>
-        ///     Gets or sets the CurrentIndex
+        /// Gets or sets the CurrentIndex
+        /// Gets or sets the CurrentIndex
         /// </summary>
         public int CurrentIndex { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilterControl1
+        /// Gets or sets the GridFilterControl1
+        /// Gets or sets the GridFilterControl1
         /// </summary>
         public VisualComboBox GridFilterControl1 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilterControl2
+        /// Gets or sets the GridFilterControl2
+        /// Gets or sets the GridFilterControl2
         /// </summary>
         public VisualComboBox GridFilterControl2 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the GridFilterControl3
+        /// Gets or sets the GridFilterControl3
+        /// Gets or sets the GridFilterControl3
         /// </summary>
         public VisualComboBox GridFilterControl3 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartFilterControl1
+        /// Gets or sets the ChartFilterControl1
+        /// Gets or sets the ChartFilterControl1
         /// </summary>
         public VisualComboBox ChartFilterControl1 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartFilterControl2
+        /// Gets or sets the ChartFilterControl2
+        /// Gets or sets the ChartFilterControl2
         /// </summary>
         public VisualComboBox ChartFilterControl2 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartFilterControl3
+        /// Gets or sets the ChartFilterControl3
+        /// Gets or sets the ChartFilterControl3
         /// </summary>
         public VisualComboBox ChartFilterControl3 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ChartFilterControl4
+        /// Gets or sets the ChartFilterControl4
+        /// Gets or sets the ChartFilterControl4
         /// </summary>
         public VisualComboBox ChartFilterControl4 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Expander1
+        /// Gets or sets the Expander1
+        /// Gets or sets the Expander1
         /// </summary>
         public ExpandCollapsePanel Expander1 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Expander2
+        /// Gets or sets the Expander2
+        /// Gets or sets the Expander2
         /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Tab
+        /// Gets or sets the Tab
+        /// Gets or sets the Tab
         /// </summary>
         public TabPageAdv[] Tab { get; set; }
-
-        private void SetLabels()
-        {
-            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-            lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-            lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-            lblCount.Text = DbData.GetCount(Table).ToString();
-        }
 
         // METHODS
 
         /// <summary>
-        ///     The Form_Load
+        /// The SetLabels
+        /// </summary>
+        private void SetLabels()
+        {
+            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+            lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+            lblCount.Text = DbData.GetCount(Table).ToString();
+        }
+
+        /// <summary>
+        /// The Form_Load
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -258,7 +291,7 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 GridFundFilter.Visible = false;
                 GridBocFilter.Visible = false;
-                GetCaptionImages(Source);
+                //SetCaptionImages(Source);
             }
             catch(Exception ex)
             {
@@ -267,7 +300,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The FilterDataGrid
+        /// The FilterDataGrid
         /// </summary>
         private void FilterDataGridYear()
         {
@@ -275,13 +308,9 @@ namespace BudgetExecution
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridFilter1}'";
-                DataTable table = ((DataTable) BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                UpdateLabels(table);
                 PopulateGridFundFilterItems();
                 GridFundFilter.Visible = true;
                 if(GridBocFilter.Visible)
@@ -299,6 +328,18 @@ namespace BudgetExecution
             }
         }
 
+        private void UpdateLabels(DataTable table)
+        {
+            lblCount.Text = table.Rows.Count.ToString();
+            lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+            lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+            lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+        }
+
+        /// <summary>
+        /// The FilterDataGridFund
+        /// </summary>
         private void FilterDataGridFund()
         {
             try
@@ -307,20 +348,7 @@ namespace BudgetExecution
                 BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
                 DataTable table = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                if(int.Parse(lblCount.Text) >= 4)
-                {
-                    lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                }
-
-                if(int.Parse(lblCount.Text) < 4)
-                {
-                    lblDev.Text = "NA";
-                    lblVar.Text = "NA";
-                }
+                SetLabels(table);
 
                 PopulateGridBocFilterItems();
                 GridBocFilter.Visible = true;
@@ -334,31 +362,36 @@ namespace BudgetExecution
             }
         }
 
+        private void SetLabels(DataTable table)
+        {
+            lblCount.Text = table.Rows.Count.ToString();
+            lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+            if(int.Parse(lblCount.Text) >= 4)
+            {
+                lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+            }
+
+            if(int.Parse(lblCount.Text) < 4)
+            {
+                lblDev.Text = "NA";
+                lblVar.Text = "NA";
+            }
+        }
+
+        /// <summary>
+        /// The FilterDataGridBoc
+        /// </summary>
         private void FilterDataGridBoc()
         {
             try
             {
                 Grid.SelectionChanged -= UpdateAccountChart;
                 BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                DataTable table = ((DataTable) BindingSource.DataSource).AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 BindingSource.DataSource = table;
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-
-                if(int.Parse(lblCount.Text) >= 4)
-                {
-                    lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                }
-
-                if(int.Parse(lblCount.Text) < 4)
-                {
-                    lblDev.Text = "NA";
-                    lblVar.Text = "NA";
-                }
-
-                GridGroupBox.Text = $"{Source.ToString()} {GridFilter2} {GridFilter1} {GridFilter3} ";
+                UpdateSetLables(table);
                 TransitionChart(table);
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -368,8 +401,29 @@ namespace BudgetExecution
             }
         }
 
+        private void UpdateSetLables(DataTable table)
+        {
+            lblCount.Text = table.Rows.Count.ToString();
+            lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+            lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+
+            if(int.Parse(lblCount.Text) >= 4)
+            {
+                lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+            }
+
+            if(int.Parse(lblCount.Text) < 4)
+            {
+                lblDev.Text = "NA";
+                lblVar.Text = "NA";
+            }
+
+            GridGroupBox.Text = $"{Source.ToString()} {GridFilter2} {GridFilter1} {GridFilter3} ";
+        }
+
         /// <summary>
-        ///     The GridFilterControl1_ItemSelected
+        /// The GridFilterControl1_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -389,7 +443,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GridFilterControl2_ItemSelected
+        /// The GridFilterControl2_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -413,7 +467,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GridFilterControl3_ItemSelected
+        /// The GridFilterControl3_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -432,14 +486,14 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PopulateGridFundFilterItems
+        /// The PopulateGridFundFilterItems
         /// </summary>
         internal void PopulateGridFundFilterItems()
         {
             try
             {
                 GridFundFilter.Items.Clear();
-                DataTable table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("FundName")).Distinct().ToArray())
                 {
@@ -453,14 +507,14 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PopulateGridBocFilterItems
+        /// The PopulateGridBocFilterItems
         /// </summary>
         internal void PopulateGridBocFilterItems()
         {
             try
             {
                 GridBocFilter.Items.Clear();
-                DataTable table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Select(p => p).CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
                 {
@@ -474,7 +528,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PopulateGridYearFilterItems
+        /// The PopulateGridYearFilterItems
         /// </summary>
         internal void PopulateGridYearFilterItems()
         {
@@ -494,15 +548,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PopulateFilterBoxItems
+        /// The PopulateFilterBoxItems
         /// </summary>
         /// <param name="cmbox">The cmbox<see cref="VisualComboBox" /></param>
-        /// <param name="names">
-        ///     The names
-        ///     <see>
-        ///         <cref>string[]</cref>
-        ///     </see>
-        /// </param>
+        /// <param name="names">The names<see cref="string[]"/></param>
         internal void PopulateFilterBoxItems(VisualComboBox cmbox, string[] names)
         {
             try
@@ -520,7 +569,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The DefineVisisbleDataColumns
+        /// The DefineVisisbleDataColumns
         /// </summary>
         /// <param name="dgv">The dgv<see cref="DataGridView" /></param>
         private void DefineVisisbleDataColumns(DataGridView dgv)
@@ -561,7 +610,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PopulateComboBoxes
+        /// The PopulateComboBoxes
         /// </summary>
         internal void PopulateAddTabComboBoxes()
         {
@@ -622,7 +671,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ConfigureTextBoxBindings
+        /// The ConfigureTextBoxBindings
         /// </summary>
         private void ConfigureEditTabTextBoxBindings()
         {
@@ -646,7 +695,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GridRefreshButton_OnClick
+        /// The GridRefreshButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -678,14 +727,9 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GetTabPageTags
+        /// The GetTabPageTags
         /// </summary>
-        /// <returns>
-        ///     The
-        ///     <see>
-        ///         <cref>string[]</cref>
-        ///     </see>
-        /// </returns>
+        /// <returns>The <see cref="string[]"/></returns>
         private string[] GetPrimaryChartFIlterItems()
         {
             try
@@ -701,6 +745,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetPrimarySummaryChart
+        /// </summary>
+        /// <param name="field">The field<see cref="Field"/></param>
         private void GetPrimarySummaryChart(Field field)
         {
             try
@@ -714,6 +762,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSecondaryGroupSummaryChart
+        /// </summary>
+        /// <param name="field">The field<see cref="Field"/></param>
         private void GetSecondaryGroupSummaryChart(Field field)
         {
             try
@@ -730,7 +782,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ChartFilterControl1_ItemSelected
+        /// The ChartFilterControl1_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -742,7 +794,7 @@ namespace BudgetExecution
             {
                 if(ChartFilter != null)
                 {
-                    ChartType = (ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ChartFilter);
+                    ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ChartFilter);
                 }
             }
 
@@ -754,7 +806,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ChartFilterControl2_ItemSelected
+        /// The ChartFilterControl2_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -767,7 +819,7 @@ namespace BudgetExecution
                 if(ChartFilterControl2 != null &&
                    ChartFilterControl2.SelectedItem != null)
                 {
-                    Measure = (Stat) Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
+                    Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 }
 
                 if(!Expander2.Visible ||
@@ -786,7 +838,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ChartFilterControl3_ItemSelected
+        /// The ChartFilterControl3_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -830,7 +882,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ChartFilterControl4_ItemSelected
+        /// The ChartFilterControl4_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -841,7 +893,7 @@ namespace BudgetExecution
                 ChartFilterControl4 = sender as VisualComboBox;
                 if(ChartFilterControl4 != null)
                 {
-                    SecondaryGrouping = (Field) Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
+                    SecondaryGrouping = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                 }
 
                 switch(SecondaryGrouping)
@@ -865,7 +917,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The AssignChartFilterControls
+        /// The AssignChartFilterControls
         /// </summary>
         /// <param name="filter1">The filter1<see cref="VisualComboBox" /></param>
         /// <param name="filter2">The filter2<see cref="VisualComboBox" /></param>
@@ -880,7 +932,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The AssignChartExpanders
+        /// The AssignChartExpanders
         /// </summary>
         /// <param name="panel1">The panel1<see cref="ExpandCollapsePanel" /></param>
         /// <param name="panel2">The panel2<see cref="ExpandCollapsePanel" /></param>
@@ -898,7 +950,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PrimaryFilterControl_ItemSelected
+        /// The PrimaryFilterControl_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -907,7 +959,7 @@ namespace BudgetExecution
             try
             {
                 PrimaryFilter = sender as VisualComboBox;
-                PrimaryGrouping = (Field) Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
+                PrimaryGrouping = (Field)Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
                 if(BocExpander1.Visible == false ||
                    BocExpander1.IsExpanded == false)
                 {
@@ -935,7 +987,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The SummaryTabPage_TabSelected
+        /// The SummaryTabPage_TabSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -990,7 +1042,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GetSelectedRowPrcDictionary
+        /// The GetSelectedRowPrcDictionary
         /// </summary>
         /// <returns>The <see cref="Dictionary{string, object}" /></returns>
         private Dictionary<string, object> GetSelectedRowPrcDictionary()
@@ -1021,7 +1073,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The CalculatorButton_Click
+        /// The CalculatorButton_Click
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1039,7 +1091,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ExcelButton_Click
+        /// The ExcelButton_Click
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1056,7 +1108,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The AddButton_OnClick
+        /// The AddButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1087,7 +1139,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The EditButton_OnClick
+        /// The EditButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1123,7 +1175,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The Grid_OnDoubleClick
+        /// The Grid_OnDoubleClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1154,7 +1206,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The ReprogramButton_OnClick
+        /// The ReprogramButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1165,8 +1217,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The UpdateAccountChart
+        /// The UpdateAccountChart
         /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         internal void UpdateAccountChart(object sender, EventArgs e)
         {
             try
@@ -1176,8 +1230,8 @@ namespace BudgetExecution
                 decimal total = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(drv?.Cells["BFY"].Value.ToString())).Where(p => p.Field<string>("Code").Contains(drv?.Cells["Code"].Value.ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                 if(drv != null)
                 {
-                    decimal ratio = (decimal) drv.Cells["Amount"].Value / total;
-                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) (decimal) drv.Cells["Amount"].Value };
+                    decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
+                    Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
                     ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
                     AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                 }
@@ -1188,6 +1242,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The TransitionChart
+        /// </summary>
+        /// <param name="table">The table<see cref="DataTable"/></param>
         internal void TransitionChart(DataTable table)
         {
             try
@@ -1195,7 +1253,7 @@ namespace BudgetExecution
                 DataRow row = table?.Rows[0];
                 decimal total = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(row?["BFY"].ToString())).Where(p => p.Field<string>("Code").Contains(row?["Code"].ToString())).Select(p => p.Field<decimal>("Amount")).Sum();
                 decimal ratio = decimal.Parse(row?["Amount"].ToString()) / total;
-                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) decimal.Parse(row?["Amount"].ToString()) };
+                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)decimal.Parse(row?["Amount"].ToString()) };
                 ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {row?["Code"]} Funding" };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
@@ -1206,7 +1264,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The AccountChart_Click
+        /// The AccountChart_Click
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1226,7 +1284,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The PreviousButton_OnClick
+        /// The PreviousButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1236,7 +1294,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The NextButton_OnClick
+        /// The NextButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1246,7 +1304,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The DatabaseSearchButton_OnClick
+        /// The DatabaseSearchButton_OnClick
         /// </summary>
         /// <param name="sender">The sender<see cref="object" /></param>
         /// <param name="e">The e<see cref="EventArgs" /></param>
@@ -1258,14 +1316,15 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        ///     The GetCaption
+        /// The GetCaption
         /// </summary>
-        private void GetCaptionImages(Source source)
+        /// <param name="source">The source<see cref="Source"/></param>
+        private void SetCaptionImages(Source source)
         {
             try
             {
                 AppSettingsReader path = new AppSettingsReader();
-                string[] images = Directory.GetFiles((string) path.GetValue("SourceImages", typeof(string)));
+                string[] images = Directory.GetFiles((string)path.GetValue("SourceImages", typeof(string)));
                 foreach(string i in images)
                 {
                     string p = Path.GetFileNameWithoutExtension(i);
@@ -1288,6 +1347,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The LblTotal_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void LblTotal_Click(object sender, EventArgs e)
         {
         }
