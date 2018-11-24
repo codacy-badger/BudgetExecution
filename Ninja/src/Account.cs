@@ -9,12 +9,12 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc cref="" />
     /// <summary>
-    /// Defines the <see cref="Account" />
+    /// Defines the <see cref="T:BudgetExecution.Account" />
     /// </summary>
     public class Account : IDataBuilder, IAccount
     {
-        // CONSTRUCTORS
         /// <summary>
         /// Initializes a new instance of the <see cref="Account"/> class.
         /// </summary>
@@ -136,7 +136,11 @@ namespace BudgetExecution
             ProgramArea = data["ProgramArea"].ToString();
             ProgramAreaName = data["ProgramAreaName"].ToString();
         }
-        
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="Dictionary{string, object}"/></param>
         public Account(Dictionary<string, object> data)
         {
             Parameter = data;
@@ -157,7 +161,6 @@ namespace BudgetExecution
             ProgramAreaName = Data["ProgramAreaName"].ToString();
         }
 
-        // PROPERTIES
         /// <summary>
         /// Gets the Source
         /// </summary>
@@ -172,31 +175,6 @@ namespace BudgetExecution
         /// Gets the DbData
         /// </summary>
         public DataBuilder DbData { get; }
-
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
-        public string[] Columns { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
-        public DataTable Table { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
-        public DataRow[] Records { get; set; }
-
-        /// <summary>
-        /// Gets the Data
-        /// </summary>
-        public DataRow Data { get; set; }
-
-        /// <summary>
-        /// Gets or sets the ProgramElements
-        /// </summary>
-        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         /// <summary>
         /// Gets or sets the ID
@@ -361,22 +339,30 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the code.
+        /// Gets or sets the Columns
         /// </summary>
-        /// <returns></returns>
-        public string GetCode()
-        {
-            return Code;
-        }
+        public string[] Columns { get; set; }
 
         /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// Gets or sets the Table
         /// </summary>
-        /// <returns>The <see cref="string"/></returns>
-        public override string ToString()
-        {
-            return Code;
-        }
+        public DataTable Table { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
+        public DataRow[] Records { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Data
+        /// Gets the Data
+        /// </summary>
+        public DataRow Data { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         /// <inheritdoc />
         /// <summary>
@@ -446,6 +432,24 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Gets the code.
+        /// </summary>
+        /// <returns></returns>
+        public string GetCode()
+        {
+            return Code;
+        }
+
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>The <see cref="string"/></returns>
+        public override string ToString()
+        {
+            return Code;
         }
 
         /// <summary>
@@ -519,33 +523,6 @@ namespace BudgetExecution
             try
             {
                 return new Dictionary<string, object> { ["BFY"] = bfy, ["FundCode"] = fund, ["ProgramProjectCode"] = code };
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the account program data.
-        /// </summary>
-        /// <param name="bfy">The bfy<see cref="string"/></param>
-        /// <param name="fundcode">The fundcode<see cref="string"/></param>
-        /// <param name="code">The code.</param>
-        /// <returns></returns>
-        internal Dictionary<string, object> GetAccountProgramData(string bfy, string fundcode, string code)
-        {
-            try
-            {
-                Dictionary<string, object> param = GetAccountParameter(bfy, fundcode, code);
-                GoalName = Data["GoalName"].ToString();
-                ObjectiveName = Data["ObjectiveName"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                param.Add("GoalName", GoalName);
-                param.Add("ObjectiveName", ObjectiveName);
-                param.Add("ProgramProjectName", ProgramProjectName);
-                return param;
             }
             catch(Exception ex)
             {
