@@ -2,11 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+
+
 namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
     using System.Configuration;
+    using System.Data;
     using System.Data.Common;
     using System.Data.OleDb;
     using System.Data.SqlClient;
@@ -48,6 +51,22 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
+        public Query(Tuple<Provider, Source, Sql> queryTuple, Dictionary<string, object> param)
+        {
+            Provider = queryTuple.Item1;
+            Source = queryTuple.Item2;
+            Sql = queryTuple.Item3;
+            TableName = Source.ToString();
+            DataConnection = GetDataConnection(Provider);
+            SqlStatement = GetSqlStatement(Source, Sql, param);
+            DataCommand = GetDataCommand(SqlStatement, DataConnection);
+            DataAdapter = GetDataAdapter(DataCommand, Sql);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Query"/> class.
         /// </summary>
@@ -66,6 +85,22 @@ namespace BudgetExecution
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
             DataAdapter = GetDataAdapter(DataCommand, Sql);
         }
+
+
+        // PROPERTIES
+
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
+        public Source Source { get; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
+        public Provider Provider { get; }
 
         /// <summary>
         /// Gets the Sql
@@ -127,42 +162,39 @@ namespace BudgetExecution
         /// </summary>
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
-        // PROPERTIES
-        /// <summary>
-        /// Gets the Source
-        /// </summary>
-        public Source Source { get; }
-
-        /// <summary>
-        /// Gets the Provider
-        /// </summary>
-        public Provider Provider { get; }
-
+        /// <inheritdoc />
         /// <summary>
         /// Gets the DataConnection
         /// </summary>
         public DbConnection DataConnection { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the SqlStatement
         /// </summary>
         public string SqlStatement { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the DataCommand
         /// </summary>
         public DbCommand DataCommand { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the DataReader
         /// </summary>
         public DbDataReader DataReader { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the DataAdapter
         /// </summary>
         public DbDataAdapter DataAdapter { get; set; }
 
+        // METHODS
+
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data connection.
         /// </summary>
@@ -203,6 +235,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the SQL statement.
         /// </summary>
@@ -221,6 +254,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data command.
         /// </summary>
@@ -256,6 +290,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data adapter.
         /// </summary>
@@ -419,6 +454,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the data reader.
         /// </summary>
@@ -449,6 +485,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the command builder.
         /// </summary>
@@ -713,7 +750,7 @@ namespace BudgetExecution
                 {
                     case SQLiteConnection _:
                         SelectStatement = select;
-                        return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
+                        return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);            
                     case OleDbConnection _:
                         SelectStatement = select;
                         return new OleDbCommand(SelectStatement, (OleDbConnection)connection);

@@ -9,8 +9,9 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc />
     /// <summary>
-    /// Defines the <see cref="DivisionAuthority" />
+    /// Defines the <see cref="T:BudgetExecution.DivisionAuthority" />
     /// </summary>
     public class DivisionAuthority : IBudgetAuthority
     {
@@ -25,19 +26,19 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="DivisionAuthority"/> class.
         /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF<see cref="Source"/></param>
         public DivisionAuthority(Source source)
         {
             TableFilter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
             DbData = new DataBuilder(source);
             R6 = DbData.R6;
             Table = DbData.Table;
+            Records = DbData.Records;
+            PRC = GetPrcArray(Table);
             ProgramElements = DbData.ProgramElements;
             Metric = new PrcMetric(DbData);
-            Division = new Division(source);
             CurrentYear = Metric.CurrentYear;
             CarryOver = Metric.CarryOver;
-            Records = DbData.Records;
             if(ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(Table);
@@ -45,10 +46,6 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets the Division
-        /// </summary>
-        public Division Division { get; }
 
         /// <summary>
         /// Gets the DbData
@@ -76,11 +73,6 @@ namespace BudgetExecution
         public DataTable FTE { get; }
 
         /// <summary>
-        /// Gets or sets the Appropriation
-        /// </summary>
-        public Appropriation[] Appropriation { get; set; }
-
-        /// <summary>
         /// Gets or sets the R6
         /// </summary>
         public DataSet R6 { get; set; }
@@ -105,28 +97,32 @@ namespace BudgetExecution
         /// </summary>
         public PrcMetric Metric { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the ProgramElements
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets the Table
         /// </summary>
         public DataTable Table { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Amount
         /// </summary>
         public decimal Amount { get; set; }
 
         // METHODS
+        /// <inheritdoc />
         /// <summary>
         /// The GetCodes
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <param name="column">The column<see cref="string"/></param>
-        /// <returns>The <see cref="string[]"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <param name="column">The column<see cref="T:System.String" /></param>
+        /// <returns>The <see cref="T:System.String" /></returns>
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -140,13 +136,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The GetDataValues
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <param name="column">The column<see cref="string"/></param>
-        /// <param name="filter">The filter<see cref="string"/></param>
-        /// <returns>The <see cref="Tuple{DataTable, PRC[], decimal, int}"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <param name="column">The column<see cref="T:System.String" /></param>
+        /// <param name="filter">The filter<see cref="T:System.String" /></param>
+        /// <returns>The <see cref="T:System.Tuple`2" /></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -161,11 +158,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The GetMetrics
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="decimal[]"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Decimal" /></returns>
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -179,16 +177,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The GetPrcArray
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="PRC[]"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="P:BudgetExecution.DivisionAuthority.PRC" /></returns>
         public PRC[] GetPrcArray(DataTable table)
         {
             try
             {
-                return table.AsEnumerable().Select(p => new PRC()).ToArray();
+                return table.AsEnumerable().Select(p => new PRC(p)).ToArray();
             }
             catch(Exception ex)
             {
@@ -197,11 +196,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The GetProgramElements
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -248,11 +248,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The GetTotal
         /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="decimal"/></returns>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Decimal" /></returns>
         public decimal GetTotal(DataTable table)
         {
             try
@@ -314,167 +315,6 @@ namespace BudgetExecution
                 try
                 {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetEPM
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetEPM(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("T"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("B")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetSTAG
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetSTAG(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("E"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("E")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetOIL
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetOIL(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("H"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("H")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetLUST
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetLUST(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("F"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("F")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetSF6A
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetSF6A(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("T"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(a => a.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetTR
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetTR(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("TR"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("TR")).Select(a => a).CopyToDataTable();
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// The GetSUPERFUND
-        /// </summary>
-        /// <param name="approp">The approp<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
-        internal DataTable GetSUPERFUND(DataTable approp)
-        {
-            if(GetCodes(approp, "Fund").Contains("T"))
-            {
-                try
-                {
-                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(p => p.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
                 }
                 catch(Exception ex)
                 {

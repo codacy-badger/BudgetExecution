@@ -97,11 +97,11 @@ namespace BudgetExecution
                 {
                     Filter1.Text = @"BFY";
                     Filter1.Items.Add("2018");
-                    Filter2.Text = @"Fund";
-                    label5.Visible = true;
-                    label5.Text = @"Total: ";
+                    Filter2.Text = @"FundName";
+                    label11.Visible = true;
+                    label11.Text = @"Records: ";
                     label6.Visible = true;
-                    foreach(string f in ProgramElements["Fund"])
+                    foreach(string f in ProgramElements["FundName"])
                     {
                         Filter2.Items.Add(f);
                     }
@@ -113,6 +113,8 @@ namespace BudgetExecution
                     }
                 }
 
+                Filter5.Visible = false;
+                label5.Visible = false;
                 GetDataBase(Source);
             }
             catch(Exception ex)
@@ -274,7 +276,7 @@ namespace BudgetExecution
                 label2.Visible = false;
                 label3.Visible = false;
                 label4.Visible = false;
-                label5.Visible = false;
+                label15.Visible = false;
                 label6.Visible = false;
                 label7.Visible = false;
                 label8.Visible = false;
@@ -283,6 +285,7 @@ namespace BudgetExecution
                 Filter2.Visible = false;
                 Filter3.Visible = false;
                 Filter4.Visible = false;
+                Filter5.Visible = false;
             }
             catch(Exception ex)
             {
@@ -327,7 +330,11 @@ namespace BudgetExecution
                 BindingSource.DataSource = table;
                 label6.Text = DbData.GetTotal(Source, table).ToString("c");
                 label12.Text = table.Rows.Count.ToString();
-                PopulateFilterItems(Filter3.Tag.ToString(), table, Filter3, label3);
+                if(Filter3.Tag != null)
+                {
+                    PopulateFilterItems(Filter3.Tag.ToString(), table, Filter3, label3);
+                }
+
                 Filter4.Visible = false;
                 label4.Visible = false;
             }
@@ -356,6 +363,7 @@ namespace BudgetExecution
                 {
                     PopulateFilterItems(Filter4.Tag.ToString(), table, Filter4, label4);
                 }
+                
             }
             catch(Exception ex)
             {
@@ -396,34 +404,39 @@ namespace BudgetExecution
                 switch(source)
                 {
                     case Source.Accounts:
-                        label1.Text = @"Fund";
+                        label1.Text = "FundCode";
                         PopulateFilterItems(Field.FundCode, Table, Filter1, label1);
                         Filter2.Tag = "GoalName";
                         Filter3.Tag = "ProgramProjectName";
+                        Filter4.Visible = false;
                         break;
 
                     case Source.Awards:
-                        label1.Text = @"DivisionName";
+                        label1.Text = "DivisionName";
                         PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "Type";
+                        Filter4.Visible = false;
                         break;
 
                     case Source.Reimbursables:
-                        label1.Text = @"AgreementNumber";
+                        label1.Text = "AgreementNumber";
                         PopulateFilterItems(Field.AgreementNumber, Table, Filter1, label1);
                         Filter2.Tag = "ReimbOrg";
                         Filter3.Tag = "FundName";
+                        Filter4.Visible = false;
                         break;
 
                     case Source.ControlNumbers:
-                        label1.Text = @"Division";
+                        label1.Text = "Division";
                         PopulateFilterItems(Field.Division, Table, Filter1, label1);
-                        Filter2.Tag = "Fund";
+                        Filter2.Tag = "FundCode";
+                        Filter3.Visible = false;
+                        Filter4.Visible = false;
                         break;
 
                     case Source.Divisions:
-                        label1.Text = @"DivisionName";
+                        label1.Text = "Name";
                         PopulateFilterItems(Field.Name, Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "RC";
@@ -431,10 +444,11 @@ namespace BudgetExecution
                         break;
 
                     case Source.Personnel:
-                        label1.Text = "LastName";
+                        label1.Text = "Division";
                         PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Section";
-                        Filter3.Tag = "Email";
+                        Filter3.Tag = "LastName";
+                        Filter4.Tag = "Email";
                         break;
 
                     case Source.Funds:
@@ -454,26 +468,19 @@ namespace BudgetExecution
                         break;
 
                     case Source.PayrollObligations:
-                        label1.Text = "Division";
-                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
-                        Filter2.Tag = "Fund";
-                        Filter3.Tag = "BocName";
-                        Filter4.Tag = "FocName";
-                        break;
-
                     case Source.ProgramObligations:
-                        label1.Text = "Division";
-                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
+                        label1.Text = "DivisionName";
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
                         break;
 
                     case Source.TravelObligations:
-                        label1.Text = "Division";
-                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
+                        label1.Text = "DivisionName";
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
-                        Filter3.Tag = "Traveller";
+                        Filter3.Tag = "Traveler";
                         Filter4.Tag = "FocName";
                         break;
 
@@ -490,6 +497,7 @@ namespace BudgetExecution
                         PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "RC";
+                        Filter4.Tag = "BocName";
                         break;
 
                     case Source.FTE:
@@ -501,98 +509,47 @@ namespace BudgetExecution
                         break;
 
                     case Source.PAYROLL:
+                    case Source.CONTRACTS:
+                    case Source.EXPENSES:
+                    case Source.TRAVEL:
+                    case Source.WCF:
+                    case Source.GRANTS:
                         label1.Text = "FundName";
                         PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "ProgramAreaName";
-                        Filter3.Tag = "NpmCode";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.EPM:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.OIL:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
+                        Filter3.Tag = "NPM";
                         Filter4.Tag = "ProgramProjectName";
                         break;
 
                     case Source.SUPERFUND:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
                     case Source.STAG:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
                     case Source.LUST:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
                     case Source.DWH:
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
+                    case Source.OIL:
+                    case Source.EPM:
+                    case Source.SF6A:
+                        label1.Text = "BocName";
+                        PopulateFilterItems(Field.BocName, Table, Filter1, label1);
+                        Filter2.Tag = "NPM";
+                        Filter3.Tag = "ProgramAreaName";
+                        Filter4.Tag = "ProgramProjectName";
+                        break;
+
+                    case Source.EJ:
+                    case Source.EN:
+                    case Source.RA:
+                    case Source.RC:
+                    case Source.SF:
+                    case Source.MD:
+                    case Source.MDR:
+                    case Source.WQ:
+                    case Source.WSA:
+                    case Source.XA:
+                        label1.Text = "FundName";
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.TRAVEL:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "DivisionName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.EXPENSES:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "DivisionName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.CONTRACTS:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "DivisionName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.GRANTS:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "DivisionName";
-                        Filter3.Tag = "ProgramAreaName";
-                        Filter4.Tag = "ProgramProjectName";
-                        break;
-
-                    case Source.WCF:
-                        label1.Text = "BudgetLevel";
-                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "FundName";
-                        Filter3.Tag = "ProgramAreaName";
+                        Filter3.Tag = "NPM";
+                        Filter4.Tag = "ProgramAreaName";
                         break;
 
                     case Source.DivisionAccounts:
@@ -601,20 +558,6 @@ namespace BudgetExecution
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.EJ:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.EN:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.ExternalTransfers:
@@ -630,13 +573,15 @@ namespace BudgetExecution
                         PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BOC";
+                        Filter4.Visible = false;
                         break;
 
                     case Source.RegionalAccounts:
                         label1.Text = "FundName";
                         PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
+                        Filter3.Tag = "NPM";
+                        Filter4.Tag = "ProgramAreaName";
                         break;
 
                     case Source.Sites:
@@ -644,69 +589,6 @@ namespace BudgetExecution
                         PopulateFilterItems(Field.State, Table, Filter1, label1);
                         Filter2.Tag = "District";
                         Filter3.Tag = "FocName";
-                        break;
-
-                    case Source.MD:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.RC:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.RA:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.SF:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.WQ:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.MM:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.WSA:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.MDR:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
-                        break;
-
-                    case Source.XA:
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramAreaName";
                         break;
                 }
             }

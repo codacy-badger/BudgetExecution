@@ -650,7 +650,9 @@ namespace BudgetExecution
         /// <summary>
         /// Defines the Email
         /// </summary>
-        Email}
+        Email,
+        Traveler
+    }
 
     /// <summary>
     /// Defines the Provider

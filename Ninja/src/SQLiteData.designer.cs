@@ -123,23 +123,27 @@ namespace BudgetExecution
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.GridRefreshButton = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Filter5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.Filter4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.Filter3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
@@ -388,26 +392,85 @@ namespace BudgetExecution
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.ColumnCount = 10;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.41036F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.58964F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel2.Controls.Add(this.button15, 9, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button14, 8, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button13, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button11, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.button9, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(241, 586);
+            this.tableLayoutPanel2.Controls.Add(this.button10, 6, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(84, 535);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(779, 68);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1150, 45);
             this.tableLayoutPanel2.TabIndex = 170;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
+            this.button15.Location = new System.Drawing.Point(1020, 5);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(101, 35);
+            this.button15.TabIndex = 173;
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button15, "Copy Account\r\n");
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.Location = new System.Drawing.Point(909, 5);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(101, 35);
+            this.button14.TabIndex = 173;
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button14, "Copy Account\r\n");
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Location = new System.Drawing.Point(799, 5);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(101, 35);
+            this.button13.TabIndex = 173;
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button13, "Copy Account\r\n");
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -421,7 +484,7 @@ namespace BudgetExecution
             this.button2.Location = new System.Drawing.Point(4, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 58);
+            this.button2.Size = new System.Drawing.Size(102, 35);
             this.button2.TabIndex = 162;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button2, "Previous Account");
@@ -437,10 +500,10 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(138, 5);
+            this.button3.Location = new System.Drawing.Point(114, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 58);
+            this.button3.Size = new System.Drawing.Size(115, 35);
             this.button3.TabIndex = 163;
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button3, "Next Account");
@@ -455,10 +518,10 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(653, 5);
+            this.button11.Location = new System.Drawing.Point(580, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(106, 58);
+            this.button11.Size = new System.Drawing.Size(106, 35);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
@@ -475,10 +538,10 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(284, 5);
+            this.button9.Location = new System.Drawing.Point(237, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(127, 58);
+            this.button9.Size = new System.Drawing.Size(107, 35);
             this.button9.TabIndex = 165;
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button9, "Edit Account");
@@ -495,10 +558,10 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(541, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(469, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(104, 58);
+            this.GridRefreshButton.Size = new System.Drawing.Size(103, 35);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -513,14 +576,31 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(419, 5);
+            this.button12.Location = new System.Drawing.Point(352, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(114, 58);
+            this.button12.Size = new System.Drawing.Size(109, 35);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
             this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Location = new System.Drawing.Point(698, 5);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(93, 35);
+            this.button10.TabIndex = 169;
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button10, "Copy Account\r\n");
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -528,44 +608,45 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnCount = 8;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.77236F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.22765F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 53);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 7, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(77, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1228, 33);
             this.tableLayoutPanel1.TabIndex = 160;
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 33);
-            this.label5.TabIndex = 153;
-            this.label5.Text = "Total: ";
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 33);
+            this.label11.TabIndex = 153;
+            this.label11.Text = "Records : ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(793, 0);
+            this.label10.Location = new System.Drawing.Point(767, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 33);
             this.label10.TabIndex = 158;
@@ -574,11 +655,11 @@ namespace BudgetExecution
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(151, 0);
+            this.label6.Location = new System.Drawing.Point(1055, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 33);
+            this.label6.Size = new System.Drawing.Size(55, 23);
             this.label6.TabIndex = 154;
             this.label6.Text = "label6";
             // 
@@ -586,10 +667,11 @@ namespace BudgetExecution
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(732, 0);
+            this.label9.Location = new System.Drawing.Point(702, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 33);
+            this.label9.Size = new System.Drawing.Size(59, 33);
             this.label9.TabIndex = 157;
             this.label9.Text = "label9";
             // 
@@ -597,10 +679,11 @@ namespace BudgetExecution
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(417, 0);
+            this.label7.Location = new System.Drawing.Point(411, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 33);
+            this.label7.Size = new System.Drawing.Size(59, 33);
             this.label7.TabIndex = 155;
             this.label7.Text = "label7";
             // 
@@ -609,38 +692,39 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(478, 0);
+            this.label8.Location = new System.Drawing.Point(476, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 33);
             this.label8.TabIndex = 156;
             this.label8.Text = "label8";
             // 
-            // label11
+            // label15
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(1009, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 33);
-            this.label11.TabIndex = 159;
-            this.label11.Text = "Recrods :";
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(990, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 33);
+            this.label15.TabIndex = 159;
+            this.label15.Text = "Total :";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(1094, 0);
+            this.label12.Location = new System.Drawing.Point(141, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 33);
+            this.label12.Size = new System.Drawing.Size(64, 23);
             this.label12.TabIndex = 160;
             this.label12.Text = "label12";
             // 
             // metroPanel3
             // 
             this.metroPanel3.BackColor = System.Drawing.Color.Black;
-            this.metroPanel3.Controls.Add(this.label13);
+            this.metroPanel3.Controls.Add(this.label5);
             this.metroPanel3.Controls.Add(this.Filter5);
             this.metroPanel3.Controls.Add(this.Filter4);
             this.metroPanel3.Controls.Add(this.Filter3);
@@ -655,7 +739,7 @@ namespace BudgetExecution
             this.metroPanel3.HorizontalScrollbarSize = 9;
             this.metroPanel3.Location = new System.Drawing.Point(13, 13);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(288, 723);
+            this.metroPanel3.Size = new System.Drawing.Size(288, 715);
             this.metroPanel3.TabIndex = 154;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroSetToolTip1.SetToolTip(this.metroPanel3, "\r\n");
@@ -665,16 +749,17 @@ namespace BudgetExecution
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
             // 
-            // label13
+            // label5
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(40, 435);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 23);
-            this.label13.TabIndex = 174;
-            this.label13.Text = "label4 ";
-            this.metroSetToolTip1.SetToolTip(this.label13, "\r\n");
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(40, 458);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 23);
+            this.label5.TabIndex = 174;
+            this.label5.Text = "label5";
+            this.metroSetToolTip1.SetToolTip(this.label5, "\r\n");
             // 
             // Filter5
             // 
@@ -705,14 +790,14 @@ namespace BudgetExecution
             this.Filter5.IntegralHeight = false;
             this.Filter5.ItemHeight = 30;
             this.Filter5.ItemImageVisible = true;
-            this.Filter5.Location = new System.Drawing.Point(37, 461);
+            this.Filter5.Location = new System.Drawing.Point(13, 484);
             this.Filter5.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.Filter5.MenuItemNormal = System.Drawing.Color.Black;
             this.Filter5.MenuTextColor = System.Drawing.Color.LightSteelBlue;
             this.Filter5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter5.Name = "Filter5";
             this.Filter5.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter5.Size = new System.Drawing.Size(215, 36);
+            this.Filter5.Size = new System.Drawing.Size(261, 36);
             this.Filter5.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter5.TabIndex = 173;
             this.Filter5.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -761,14 +846,14 @@ namespace BudgetExecution
             this.Filter4.IntegralHeight = false;
             this.Filter4.ItemHeight = 30;
             this.Filter4.ItemImageVisible = true;
-            this.Filter4.Location = new System.Drawing.Point(37, 360);
+            this.Filter4.Location = new System.Drawing.Point(13, 380);
             this.Filter4.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.Filter4.MenuItemNormal = System.Drawing.Color.Black;
             this.Filter4.MenuTextColor = System.Drawing.Color.LightSteelBlue;
             this.Filter4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter4.Name = "Filter4";
             this.Filter4.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter4.Size = new System.Drawing.Size(215, 36);
+            this.Filter4.Size = new System.Drawing.Size(261, 36);
             this.Filter4.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter4.TabIndex = 172;
             this.Filter4.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -818,14 +903,14 @@ namespace BudgetExecution
             this.Filter3.IntegralHeight = false;
             this.Filter3.ItemHeight = 30;
             this.Filter3.ItemImageVisible = true;
-            this.Filter3.Location = new System.Drawing.Point(37, 250);
+            this.Filter3.Location = new System.Drawing.Point(13, 267);
             this.Filter3.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.Filter3.MenuItemNormal = System.Drawing.Color.Black;
             this.Filter3.MenuTextColor = System.Drawing.Color.LightSteelBlue;
             this.Filter3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter3.Name = "Filter3";
             this.Filter3.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter3.Size = new System.Drawing.Size(220, 36);
+            this.Filter3.Size = new System.Drawing.Size(261, 36);
             this.Filter3.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter3.TabIndex = 161;
             this.Filter3.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -875,14 +960,14 @@ namespace BudgetExecution
             this.Filter2.IntegralHeight = false;
             this.Filter2.ItemHeight = 30;
             this.Filter2.ItemImageVisible = true;
-            this.Filter2.Location = new System.Drawing.Point(37, 150);
+            this.Filter2.Location = new System.Drawing.Point(13, 150);
             this.Filter2.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.Filter2.MenuItemNormal = System.Drawing.Color.Black;
             this.Filter2.MenuTextColor = System.Drawing.Color.LightSteelBlue;
             this.Filter2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter2.Name = "Filter2";
             this.Filter2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter2.Size = new System.Drawing.Size(220, 36);
+            this.Filter2.Size = new System.Drawing.Size(261, 36);
             this.Filter2.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter2.TabIndex = 160;
             this.Filter2.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -932,14 +1017,14 @@ namespace BudgetExecution
             this.Filter1.IntegralHeight = false;
             this.Filter1.ItemHeight = 30;
             this.Filter1.ItemImageVisible = true;
-            this.Filter1.Location = new System.Drawing.Point(37, 40);
+            this.Filter1.Location = new System.Drawing.Point(13, 40);
             this.Filter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.Filter1.MenuItemNormal = System.Drawing.Color.Black;
             this.Filter1.MenuTextColor = System.Drawing.Color.LightSteelBlue;
             this.Filter1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter1.Name = "Filter1";
             this.Filter1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter1.Size = new System.Drawing.Size(220, 36);
+            this.Filter1.Size = new System.Drawing.Size(261, 36);
             this.Filter1.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter1.TabIndex = 159;
             this.Filter1.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -963,10 +1048,11 @@ namespace BudgetExecution
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 322);
+            this.label4.Location = new System.Drawing.Point(40, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 23);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 157;
             this.label4.Text = "label4 ";
             this.metroSetToolTip1.SetToolTip(this.label4, "\r\n");
@@ -974,10 +1060,11 @@ namespace BudgetExecution
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(40, 214);
+            this.label3.Location = new System.Drawing.Point(40, 241);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 23);
+            this.label3.Size = new System.Drawing.Size(59, 23);
             this.label3.TabIndex = 156;
             this.label3.Text = "label3";
             this.metroSetToolTip1.SetToolTip(this.label3, "\r\n");
@@ -985,10 +1072,11 @@ namespace BudgetExecution
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 114);
+            this.label2.Location = new System.Drawing.Point(40, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 23);
+            this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 155;
             this.label2.Text = "label2";
             this.metroSetToolTip1.SetToolTip(this.label2, "\r\n");
@@ -996,10 +1084,11 @@ namespace BudgetExecution
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(40, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.Size = new System.Drawing.Size(64, 23);
             this.label1.TabIndex = 154;
             this.label1.Text = "label1 ";
             this.metroSetToolTip1.SetToolTip(this.label1, "\r\n");
@@ -1030,7 +1119,7 @@ namespace BudgetExecution
             this.button1.Location = new System.Drawing.Point(4, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 74);
+            this.button1.Size = new System.Drawing.Size(125, 56);
             this.button1.TabIndex = 162;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button1, "Previous Account");
@@ -1045,10 +1134,10 @@ namespace BudgetExecution
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(138, 5);
+            this.button4.Location = new System.Drawing.Point(137, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 74);
+            this.button4.Size = new System.Drawing.Size(137, 56);
             this.button4.TabIndex = 163;
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button4, "Next Account");
@@ -1062,10 +1151,10 @@ namespace BudgetExecution
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(653, 5);
+            this.button5.Location = new System.Drawing.Point(651, 5);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 67);
+            this.button5.Size = new System.Drawing.Size(106, 56);
             this.button5.TabIndex = 167;
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button5, "Copy Account\r\n");
@@ -1081,10 +1170,10 @@ namespace BudgetExecution
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(284, 5);
+            this.button6.Location = new System.Drawing.Point(282, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 74);
+            this.button6.Size = new System.Drawing.Size(127, 56);
             this.button6.TabIndex = 165;
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button6, "Edit Account");
@@ -1100,10 +1189,10 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(541, 5);
+            this.button7.Location = new System.Drawing.Point(539, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 67);
+            this.button7.Size = new System.Drawing.Size(104, 56);
             this.button7.TabIndex = 164;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Refresh Data");
@@ -1117,10 +1206,10 @@ namespace BudgetExecution
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(419, 5);
+            this.button8.Location = new System.Drawing.Point(417, 5);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 67);
+            this.button8.Size = new System.Drawing.Size(114, 56);
             this.button8.TabIndex = 168;
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button8, "Remove Account");
@@ -1150,8 +1239,8 @@ namespace BudgetExecution
             this.DataGroupBox.Name = "DataGroupBox";
             this.DataGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.DataGroupBox.Separator = true;
-            this.DataGroupBox.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DataGroupBox.Size = new System.Drawing.Size(1351, 749);
+            this.DataGroupBox.SeparatorColor = System.Drawing.Color.Black;
+            this.DataGroupBox.Size = new System.Drawing.Size(1418, 749);
             this.DataGroupBox.TabIndex = 158;
             this.DataGroupBox.Text = "Database";
             this.DataGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -1189,7 +1278,7 @@ namespace BudgetExecution
             this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Grid.Location = new System.Drawing.Point(64, 104);
+            this.Grid.Location = new System.Drawing.Point(77, 119);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersWidth = 20;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray;
@@ -1321,7 +1410,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.Controls.Add(this.visualTextBox29, 4, 9);
             this.tableLayoutPanel3.Controls.Add(this.visualLabel30, 5, 8);
             this.tableLayoutPanel3.Controls.Add(this.visualTextBox30, 5, 9);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(104, 80);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(48, 53);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 10;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -1334,7 +1423,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1340, 417);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1396, 444);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // visualTextBox1
@@ -1394,7 +1483,7 @@ namespace BudgetExecution
             this.visualLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.visualLabel1.Location = new System.Drawing.Point(33, 14);
+            this.visualLabel1.Location = new System.Drawing.Point(61, 14);
             this.visualLabel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel1.Name = "visualLabel1";
             this.visualLabel1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1423,7 +1512,7 @@ namespace BudgetExecution
             this.visualLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel2.Location = new System.Drawing.Point(245, 14);
+            this.visualLabel2.Location = new System.Drawing.Point(301, 14);
             this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel2.Name = "visualLabel2";
             this.visualLabel2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1479,7 +1568,7 @@ namespace BudgetExecution
             this.visualTextBox2.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox2.ImageVisible = false;
             this.visualTextBox2.ImageWidth = 35;
-            this.visualTextBox2.Location = new System.Drawing.Point(216, 43);
+            this.visualTextBox2.Location = new System.Drawing.Point(272, 43);
             this.visualTextBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox2.Name = "visualTextBox2";
             this.visualTextBox2.PasswordChar = '\0';
@@ -1504,7 +1593,7 @@ namespace BudgetExecution
             this.visualLabel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel3.Location = new System.Drawing.Point(466, 14);
+            this.visualLabel3.Location = new System.Drawing.Point(522, 14);
             this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel3.Name = "visualLabel3";
             this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1560,7 +1649,7 @@ namespace BudgetExecution
             this.visualTextBox3.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox3.ImageVisible = false;
             this.visualTextBox3.ImageWidth = 35;
-            this.visualTextBox3.Location = new System.Drawing.Point(427, 43);
+            this.visualTextBox3.Location = new System.Drawing.Point(483, 43);
             this.visualTextBox3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox3.Name = "visualTextBox3";
             this.visualTextBox3.PasswordChar = '\0';
@@ -1585,7 +1674,7 @@ namespace BudgetExecution
             this.visualLabel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel4.Location = new System.Drawing.Point(695, 14);
+            this.visualLabel4.Location = new System.Drawing.Point(751, 14);
             this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel4.Name = "visualLabel4";
             this.visualLabel4.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1641,7 +1730,7 @@ namespace BudgetExecution
             this.visualTextBox4.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox4.ImageVisible = false;
             this.visualTextBox4.ImageWidth = 35;
-            this.visualTextBox4.Location = new System.Drawing.Point(658, 43);
+            this.visualTextBox4.Location = new System.Drawing.Point(714, 43);
             this.visualTextBox4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox4.Name = "visualTextBox4";
             this.visualTextBox4.PasswordChar = '\0';
@@ -1666,7 +1755,7 @@ namespace BudgetExecution
             this.visualLabel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel5.Location = new System.Drawing.Point(920, 14);
+            this.visualLabel5.Location = new System.Drawing.Point(976, 14);
             this.visualLabel5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel5.Name = "visualLabel5";
             this.visualLabel5.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1722,7 +1811,7 @@ namespace BudgetExecution
             this.visualTextBox5.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox5.ImageVisible = false;
             this.visualTextBox5.ImageWidth = 35;
-            this.visualTextBox5.Location = new System.Drawing.Point(885, 43);
+            this.visualTextBox5.Location = new System.Drawing.Point(941, 43);
             this.visualTextBox5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox5.Name = "visualTextBox5";
             this.visualTextBox5.PasswordChar = '\0';
@@ -1747,7 +1836,7 @@ namespace BudgetExecution
             this.visualLabel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel6.Location = new System.Drawing.Point(1149, 14);
+            this.visualLabel6.Location = new System.Drawing.Point(1205, 14);
             this.visualLabel6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel6.Name = "visualLabel6";
             this.visualLabel6.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1803,7 +1892,7 @@ namespace BudgetExecution
             this.visualTextBox6.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox6.ImageVisible = false;
             this.visualTextBox6.ImageWidth = 35;
-            this.visualTextBox6.Location = new System.Drawing.Point(1107, 43);
+            this.visualTextBox6.Location = new System.Drawing.Point(1163, 43);
             this.visualTextBox6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox6.Name = "visualTextBox6";
             this.visualTextBox6.PasswordChar = '\0';
@@ -1828,7 +1917,7 @@ namespace BudgetExecution
             this.visualLabel7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel7.Location = new System.Drawing.Point(33, 94);
+            this.visualLabel7.Location = new System.Drawing.Point(61, 94);
             this.visualLabel7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel7.Name = "visualLabel7";
             this.visualLabel7.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1890,9 +1979,9 @@ namespace BudgetExecution
             this.visualTextBox7.PasswordChar = '\0';
             this.visualTextBox7.ReadOnly = false;
             this.visualTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.visualTextBox7.Size = new System.Drawing.Size(183, 32);
+            this.visualTextBox7.Size = new System.Drawing.Size(194, 32);
             this.visualTextBox7.TabIndex = 31;
-            this.visualTextBox7.TextBoxWidth = 173;
+            this.visualTextBox7.TextBoxWidth = 184;
             textStyle20.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             textStyle20.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             textStyle20.Hover = System.Drawing.Color.Empty;
@@ -1909,7 +1998,7 @@ namespace BudgetExecution
             this.visualLabel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel8.Location = new System.Drawing.Point(245, 94);
+            this.visualLabel8.Location = new System.Drawing.Point(301, 94);
             this.visualLabel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel8.Name = "visualLabel8";
             this.visualLabel8.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1965,7 +2054,7 @@ namespace BudgetExecution
             this.visualTextBox8.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox8.ImageVisible = false;
             this.visualTextBox8.ImageWidth = 35;
-            this.visualTextBox8.Location = new System.Drawing.Point(216, 123);
+            this.visualTextBox8.Location = new System.Drawing.Point(272, 123);
             this.visualTextBox8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox8.Name = "visualTextBox8";
             this.visualTextBox8.PasswordChar = '\0';
@@ -1990,7 +2079,7 @@ namespace BudgetExecution
             this.visualLabel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel9.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel9.Location = new System.Drawing.Point(466, 94);
+            this.visualLabel9.Location = new System.Drawing.Point(522, 94);
             this.visualLabel9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel9.Name = "visualLabel9";
             this.visualLabel9.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2046,7 +2135,7 @@ namespace BudgetExecution
             this.visualTextBox9.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox9.ImageVisible = false;
             this.visualTextBox9.ImageWidth = 35;
-            this.visualTextBox9.Location = new System.Drawing.Point(427, 123);
+            this.visualTextBox9.Location = new System.Drawing.Point(483, 123);
             this.visualTextBox9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox9.Name = "visualTextBox9";
             this.visualTextBox9.PasswordChar = '\0';
@@ -2071,7 +2160,7 @@ namespace BudgetExecution
             this.visualLabel10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel10.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel10.Location = new System.Drawing.Point(695, 94);
+            this.visualLabel10.Location = new System.Drawing.Point(751, 94);
             this.visualLabel10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel10.Name = "visualLabel10";
             this.visualLabel10.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2127,7 +2216,7 @@ namespace BudgetExecution
             this.visualTextBox10.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox10.ImageVisible = false;
             this.visualTextBox10.ImageWidth = 35;
-            this.visualTextBox10.Location = new System.Drawing.Point(658, 123);
+            this.visualTextBox10.Location = new System.Drawing.Point(714, 123);
             this.visualTextBox10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox10.Name = "visualTextBox10";
             this.visualTextBox10.PasswordChar = '\0';
@@ -2152,7 +2241,7 @@ namespace BudgetExecution
             this.visualLabel11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel11.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel11.Location = new System.Drawing.Point(920, 94);
+            this.visualLabel11.Location = new System.Drawing.Point(976, 94);
             this.visualLabel11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel11.Name = "visualLabel11";
             this.visualLabel11.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2208,7 +2297,7 @@ namespace BudgetExecution
             this.visualTextBox11.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox11.ImageVisible = false;
             this.visualTextBox11.ImageWidth = 35;
-            this.visualTextBox11.Location = new System.Drawing.Point(885, 123);
+            this.visualTextBox11.Location = new System.Drawing.Point(941, 123);
             this.visualTextBox11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox11.Name = "visualTextBox11";
             this.visualTextBox11.PasswordChar = '\0';
@@ -2233,7 +2322,7 @@ namespace BudgetExecution
             this.visualLabel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel12.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel12.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel12.Location = new System.Drawing.Point(1149, 94);
+            this.visualLabel12.Location = new System.Drawing.Point(1205, 94);
             this.visualLabel12.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel12.Name = "visualLabel12";
             this.visualLabel12.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2289,7 +2378,7 @@ namespace BudgetExecution
             this.visualTextBox12.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox12.ImageVisible = false;
             this.visualTextBox12.ImageWidth = 35;
-            this.visualTextBox12.Location = new System.Drawing.Point(1107, 123);
+            this.visualTextBox12.Location = new System.Drawing.Point(1163, 123);
             this.visualTextBox12.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox12.Name = "visualTextBox12";
             this.visualTextBox12.PasswordChar = '\0';
@@ -2314,7 +2403,7 @@ namespace BudgetExecution
             this.visualLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel13.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel13.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel13.Location = new System.Drawing.Point(33, 174);
+            this.visualLabel13.Location = new System.Drawing.Point(61, 174);
             this.visualLabel13.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel13.Name = "visualLabel13";
             this.visualLabel13.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2395,7 +2484,7 @@ namespace BudgetExecution
             this.visualLabel14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel14.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel14.Location = new System.Drawing.Point(245, 174);
+            this.visualLabel14.Location = new System.Drawing.Point(301, 174);
             this.visualLabel14.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel14.Name = "visualLabel14";
             this.visualLabel14.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2451,7 +2540,7 @@ namespace BudgetExecution
             this.visualTextBox14.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox14.ImageVisible = false;
             this.visualTextBox14.ImageWidth = 35;
-            this.visualTextBox14.Location = new System.Drawing.Point(216, 203);
+            this.visualTextBox14.Location = new System.Drawing.Point(272, 203);
             this.visualTextBox14.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox14.Name = "visualTextBox14";
             this.visualTextBox14.PasswordChar = '\0';
@@ -2476,7 +2565,7 @@ namespace BudgetExecution
             this.visualLabel15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel15.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel15.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel15.Location = new System.Drawing.Point(466, 174);
+            this.visualLabel15.Location = new System.Drawing.Point(522, 174);
             this.visualLabel15.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel15.Name = "visualLabel15";
             this.visualLabel15.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2532,7 +2621,7 @@ namespace BudgetExecution
             this.visualTextBox15.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox15.ImageVisible = false;
             this.visualTextBox15.ImageWidth = 35;
-            this.visualTextBox15.Location = new System.Drawing.Point(427, 203);
+            this.visualTextBox15.Location = new System.Drawing.Point(483, 203);
             this.visualTextBox15.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox15.Name = "visualTextBox15";
             this.visualTextBox15.PasswordChar = '\0';
@@ -2584,7 +2673,7 @@ namespace BudgetExecution
             this.visualTextBox16.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox16.ImageVisible = false;
             this.visualTextBox16.ImageWidth = 35;
-            this.visualTextBox16.Location = new System.Drawing.Point(658, 203);
+            this.visualTextBox16.Location = new System.Drawing.Point(714, 203);
             this.visualTextBox16.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox16.Name = "visualTextBox16";
             this.visualTextBox16.PasswordChar = '\0';
@@ -2609,7 +2698,7 @@ namespace BudgetExecution
             this.visualLabel16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel16.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel16.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel16.Location = new System.Drawing.Point(695, 174);
+            this.visualLabel16.Location = new System.Drawing.Point(751, 174);
             this.visualLabel16.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel16.Name = "visualLabel16";
             this.visualLabel16.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2638,7 +2727,7 @@ namespace BudgetExecution
             this.visualLabel17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel17.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel17.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel17.Location = new System.Drawing.Point(920, 174);
+            this.visualLabel17.Location = new System.Drawing.Point(976, 174);
             this.visualLabel17.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel17.Name = "visualLabel17";
             this.visualLabel17.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2694,7 +2783,7 @@ namespace BudgetExecution
             this.visualTextBox17.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox17.ImageVisible = false;
             this.visualTextBox17.ImageWidth = 35;
-            this.visualTextBox17.Location = new System.Drawing.Point(885, 203);
+            this.visualTextBox17.Location = new System.Drawing.Point(941, 203);
             this.visualTextBox17.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox17.Name = "visualTextBox17";
             this.visualTextBox17.PasswordChar = '\0';
@@ -2719,7 +2808,7 @@ namespace BudgetExecution
             this.visualLabel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel18.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel18.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel18.Location = new System.Drawing.Point(1149, 174);
+            this.visualLabel18.Location = new System.Drawing.Point(1205, 174);
             this.visualLabel18.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel18.Name = "visualLabel18";
             this.visualLabel18.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2775,7 +2864,7 @@ namespace BudgetExecution
             this.visualTextBox18.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox18.ImageVisible = false;
             this.visualTextBox18.ImageWidth = 35;
-            this.visualTextBox18.Location = new System.Drawing.Point(1107, 203);
+            this.visualTextBox18.Location = new System.Drawing.Point(1163, 203);
             this.visualTextBox18.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox18.Name = "visualTextBox18";
             this.visualTextBox18.PasswordChar = '\0';
@@ -2800,7 +2889,7 @@ namespace BudgetExecution
             this.visualLabel19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel19.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel19.Location = new System.Drawing.Point(33, 254);
+            this.visualLabel19.Location = new System.Drawing.Point(61, 254);
             this.visualLabel19.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel19.Name = "visualLabel19";
             this.visualLabel19.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2881,7 +2970,7 @@ namespace BudgetExecution
             this.visualLabel20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel20.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel20.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel20.Location = new System.Drawing.Point(245, 254);
+            this.visualLabel20.Location = new System.Drawing.Point(301, 254);
             this.visualLabel20.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel20.Name = "visualLabel20";
             this.visualLabel20.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2937,7 +3026,7 @@ namespace BudgetExecution
             this.visualTextBox20.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox20.ImageVisible = false;
             this.visualTextBox20.ImageWidth = 35;
-            this.visualTextBox20.Location = new System.Drawing.Point(216, 283);
+            this.visualTextBox20.Location = new System.Drawing.Point(272, 283);
             this.visualTextBox20.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox20.Name = "visualTextBox20";
             this.visualTextBox20.PasswordChar = '\0';
@@ -2962,7 +3051,7 @@ namespace BudgetExecution
             this.visualLabel21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel21.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel21.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel21.Location = new System.Drawing.Point(466, 254);
+            this.visualLabel21.Location = new System.Drawing.Point(522, 254);
             this.visualLabel21.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel21.Name = "visualLabel21";
             this.visualLabel21.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3018,7 +3107,7 @@ namespace BudgetExecution
             this.visualTextBox21.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox21.ImageVisible = false;
             this.visualTextBox21.ImageWidth = 35;
-            this.visualTextBox21.Location = new System.Drawing.Point(427, 283);
+            this.visualTextBox21.Location = new System.Drawing.Point(483, 283);
             this.visualTextBox21.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox21.Name = "visualTextBox21";
             this.visualTextBox21.PasswordChar = '\0';
@@ -3043,7 +3132,7 @@ namespace BudgetExecution
             this.visualLabel22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel22.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel22.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel22.Location = new System.Drawing.Point(695, 254);
+            this.visualLabel22.Location = new System.Drawing.Point(751, 254);
             this.visualLabel22.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel22.Name = "visualLabel22";
             this.visualLabel22.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3099,7 +3188,7 @@ namespace BudgetExecution
             this.visualTextBox22.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox22.ImageVisible = false;
             this.visualTextBox22.ImageWidth = 35;
-            this.visualTextBox22.Location = new System.Drawing.Point(658, 283);
+            this.visualTextBox22.Location = new System.Drawing.Point(714, 283);
             this.visualTextBox22.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox22.Name = "visualTextBox22";
             this.visualTextBox22.PasswordChar = '\0';
@@ -3124,7 +3213,7 @@ namespace BudgetExecution
             this.visualLabel23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel23.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel23.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel23.Location = new System.Drawing.Point(920, 254);
+            this.visualLabel23.Location = new System.Drawing.Point(976, 254);
             this.visualLabel23.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel23.Name = "visualLabel23";
             this.visualLabel23.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3180,7 +3269,7 @@ namespace BudgetExecution
             this.visualTextBox23.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox23.ImageVisible = false;
             this.visualTextBox23.ImageWidth = 35;
-            this.visualTextBox23.Location = new System.Drawing.Point(885, 283);
+            this.visualTextBox23.Location = new System.Drawing.Point(941, 283);
             this.visualTextBox23.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox23.Name = "visualTextBox23";
             this.visualTextBox23.PasswordChar = '\0';
@@ -3205,7 +3294,7 @@ namespace BudgetExecution
             this.visualLabel24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel24.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel24.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel24.Location = new System.Drawing.Point(1149, 254);
+            this.visualLabel24.Location = new System.Drawing.Point(1205, 254);
             this.visualLabel24.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel24.Name = "visualLabel24";
             this.visualLabel24.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3261,7 +3350,7 @@ namespace BudgetExecution
             this.visualTextBox24.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox24.ImageVisible = false;
             this.visualTextBox24.ImageWidth = 35;
-            this.visualTextBox24.Location = new System.Drawing.Point(1107, 283);
+            this.visualTextBox24.Location = new System.Drawing.Point(1163, 283);
             this.visualTextBox24.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox24.Name = "visualTextBox24";
             this.visualTextBox24.PasswordChar = '\0';
@@ -3286,7 +3375,7 @@ namespace BudgetExecution
             this.visualLabel25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel25.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel25.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel25.Location = new System.Drawing.Point(33, 334);
+            this.visualLabel25.Location = new System.Drawing.Point(61, 334);
             this.visualLabel25.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel25.Name = "visualLabel25";
             this.visualLabel25.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3367,7 +3456,7 @@ namespace BudgetExecution
             this.visualLabel26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel26.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel26.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel26.Location = new System.Drawing.Point(245, 334);
+            this.visualLabel26.Location = new System.Drawing.Point(301, 334);
             this.visualLabel26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel26.Name = "visualLabel26";
             this.visualLabel26.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3423,7 +3512,7 @@ namespace BudgetExecution
             this.visualTextBox26.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox26.ImageVisible = false;
             this.visualTextBox26.ImageWidth = 35;
-            this.visualTextBox26.Location = new System.Drawing.Point(216, 363);
+            this.visualTextBox26.Location = new System.Drawing.Point(272, 363);
             this.visualTextBox26.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox26.Name = "visualTextBox26";
             this.visualTextBox26.PasswordChar = '\0';
@@ -3448,7 +3537,7 @@ namespace BudgetExecution
             this.visualLabel27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel27.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel27.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel27.Location = new System.Drawing.Point(466, 334);
+            this.visualLabel27.Location = new System.Drawing.Point(522, 334);
             this.visualLabel27.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel27.Name = "visualLabel27";
             this.visualLabel27.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3504,7 +3593,7 @@ namespace BudgetExecution
             this.visualTextBox27.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox27.ImageVisible = false;
             this.visualTextBox27.ImageWidth = 35;
-            this.visualTextBox27.Location = new System.Drawing.Point(427, 363);
+            this.visualTextBox27.Location = new System.Drawing.Point(483, 363);
             this.visualTextBox27.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox27.Name = "visualTextBox27";
             this.visualTextBox27.PasswordChar = '\0';
@@ -3529,7 +3618,7 @@ namespace BudgetExecution
             this.visualLabel28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel28.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel28.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel28.Location = new System.Drawing.Point(695, 334);
+            this.visualLabel28.Location = new System.Drawing.Point(751, 334);
             this.visualLabel28.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel28.Name = "visualLabel28";
             this.visualLabel28.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3585,7 +3674,7 @@ namespace BudgetExecution
             this.visualTextBox28.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox28.ImageVisible = false;
             this.visualTextBox28.ImageWidth = 35;
-            this.visualTextBox28.Location = new System.Drawing.Point(658, 363);
+            this.visualTextBox28.Location = new System.Drawing.Point(714, 363);
             this.visualTextBox28.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox28.Name = "visualTextBox28";
             this.visualTextBox28.PasswordChar = '\0';
@@ -3610,7 +3699,7 @@ namespace BudgetExecution
             this.visualLabel29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel29.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel29.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel29.Location = new System.Drawing.Point(920, 334);
+            this.visualLabel29.Location = new System.Drawing.Point(976, 334);
             this.visualLabel29.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel29.Name = "visualLabel29";
             this.visualLabel29.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3666,7 +3755,7 @@ namespace BudgetExecution
             this.visualTextBox29.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox29.ImageVisible = false;
             this.visualTextBox29.ImageWidth = 35;
-            this.visualTextBox29.Location = new System.Drawing.Point(885, 363);
+            this.visualTextBox29.Location = new System.Drawing.Point(941, 363);
             this.visualTextBox29.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox29.Name = "visualTextBox29";
             this.visualTextBox29.PasswordChar = '\0';
@@ -3691,7 +3780,7 @@ namespace BudgetExecution
             this.visualLabel30.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.visualLabel30.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel30.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel30.Location = new System.Drawing.Point(1149, 334);
+            this.visualLabel30.Location = new System.Drawing.Point(1205, 334);
             this.visualLabel30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel30.Name = "visualLabel30";
             this.visualLabel30.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3747,7 +3836,7 @@ namespace BudgetExecution
             this.visualTextBox30.ImageSize = new System.Drawing.Size(16, 16);
             this.visualTextBox30.ImageVisible = false;
             this.visualTextBox30.ImageWidth = 35;
-            this.visualTextBox30.Location = new System.Drawing.Point(1107, 363);
+            this.visualTextBox30.Location = new System.Drawing.Point(1163, 363);
             this.visualTextBox30.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualTextBox30.Name = "visualTextBox30";
             this.visualTextBox30.PasswordChar = '\0';
@@ -3776,7 +3865,7 @@ namespace BudgetExecution
             this.tabPageAdv2.Location = new System.Drawing.Point(0, 28);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1351, 749);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1418, 749);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -3790,7 +3879,7 @@ namespace BudgetExecution
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button4, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.button5, 5, 0);
@@ -3802,7 +3891,7 @@ namespace BudgetExecution
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 84);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 66);
             this.tableLayoutPanel4.TabIndex = 171;
             // 
             // tabPageAdv1
@@ -3813,7 +3902,7 @@ namespace BudgetExecution
             this.tabPageAdv1.Location = new System.Drawing.Point(0, 28);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1351, 749);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1418, 749);
             this.tabPageAdv1.TabBackColor = System.Drawing.Color.Black;
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
@@ -3823,7 +3912,7 @@ namespace BudgetExecution
             // 
             this.TabControl.ActiveTabColor = System.Drawing.Color.Black;
             this.TabControl.ActiveTabForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.TabControl.BeforeTouchSize = new System.Drawing.Size(1351, 777);
+            this.TabControl.BeforeTouchSize = new System.Drawing.Size(1418, 777);
             this.TabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.TabControl.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
@@ -3835,11 +3924,11 @@ namespace BudgetExecution
             this.TabControl.InactiveTabColor = System.Drawing.Color.Black;
             this.TabControl.InActiveTabForeColor = System.Drawing.Color.Black;
             this.TabControl.ItemSize = new System.Drawing.Size(200, 29);
-            this.TabControl.Location = new System.Drawing.Point(339, 136);
+            this.TabControl.Location = new System.Drawing.Point(357, 96);
             this.TabControl.Name = "TabControl";
             this.TabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.TabControl.ShowSeparator = false;
-            this.TabControl.Size = new System.Drawing.Size(1351, 777);
+            this.TabControl.Size = new System.Drawing.Size(1418, 777);
             this.TabControl.TabIndex = 159;
             this.TabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.TabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -3861,13 +3950,13 @@ namespace BudgetExecution
             this.visualGroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.visualGroupBox1.Image = null;
-            this.visualGroupBox1.Location = new System.Drawing.Point(12, 164);
+            this.visualGroupBox1.Location = new System.Drawing.Point(12, 137);
             this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
             this.visualGroupBox1.Separator = true;
             this.visualGroupBox1.SeparatorColor = System.Drawing.Color.Black;
-            this.visualGroupBox1.Size = new System.Drawing.Size(313, 749);
+            this.visualGroupBox1.Size = new System.Drawing.Size(313, 736);
             this.visualGroupBox1.TabIndex = 159;
             this.visualGroupBox1.Text = "visualGroupBox1";
             this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -3891,19 +3980,18 @@ namespace BudgetExecution
             this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Transparent;
-            captionImage1.Image = global::BudgetExecution.Properties.Resources.databaseheader;
             captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(75, 20);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1702, 998);
+            this.ClientSize = new System.Drawing.Size(1788, 1029);
             this.Controls.Add(this.visualGroupBox1);
             this.Controls.Add(this.TabControl);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1714, 1047);
+            this.MaximumSize = new System.Drawing.Size(1800, 1100);
             this.MetroColor = System.Drawing.Color.Black;
-            this.MinimumSize = new System.Drawing.Size(1714, 1047);
+            this.MinimumSize = new System.Drawing.Size(1800, 1078);
             this.Name = "SQLiteData";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -3949,13 +4037,13 @@ namespace BudgetExecution
         private System.Windows.Forms.BindingSource BindingSource;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -3975,7 +4063,7 @@ namespace BudgetExecution
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter1;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox DataGroupBox;
         private System.Windows.Forms.DataGridView Grid;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label5;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter5;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv GridTab;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv EditTab;
@@ -4052,5 +4140,9 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox1;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button10;
     }
 }

@@ -25,7 +25,7 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="Division"/> class.
         /// </summary>
-        /// <param name="source">The source<see cref="Source" /></param>
+        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF <see cref="Source" /></param>
         /// <param name="provider">The provider<see cref="Provider" /></param>
         public Division(Source source, Provider provider = Provider.SQLite)
         {
@@ -36,7 +36,7 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="Division"/> class.
         /// </summary>
-        /// <param name="source">The source<see cref="Source" /></param>
+        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF <see cref="Source" /></param>
         /// <param name="provider">The provider<see cref="Provider" /></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}" /></param>
         public Division(Source source, Provider provider, Dictionary<string, object> p)
@@ -72,7 +72,8 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Division"/> class.
+        ///Default args Source = Source.Divisions and Provider = Provider.SQLite are passed
+        /// to the DataBuilder attribute. This constructor initializes a new instance of the <see cref="Division"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="Dictionary{string, object}"/></param>
         public Division(Dictionary<string, object> data)
@@ -88,48 +89,42 @@ namespace BudgetExecution
 
         /// <summary>
         /// Gets or sets the Source
-        /// Gets or sets the Source
         /// </summary>
         public Source Source { get; set; }
 
         /// <summary>
-        /// Gets or sets the Provider
         /// Gets or sets the Provider
         /// </summary>
         public Provider Provider { get; set; }
 
         /// <summary>
         /// Gets or sets the DbData
-        /// Gets or sets the DbData
         /// </summary>
         public DataBuilder DbData { get; set; }
 
+        public DivisionAuthority D6 { get; set; }
+
         /// <summary>
-        /// Gets or sets the Title
         /// Gets or sets the Title
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
         /// Gets the Code
-        /// Gets the Code
         /// </summary>
         public string Code { get; }
 
         /// <summary>
-        /// Gets the ID
         /// Gets the ID
         /// </summary>
         public string ID { get; }
 
         /// <summary>
         /// Gets the RC
-        /// Gets the RC
         /// </summary>
         public string RC { get; }
 
         /// <summary>
-        /// Gets the Name
         /// Gets the Name
         /// </summary>
         public string Name { get; }
@@ -141,31 +136,23 @@ namespace BudgetExecution
 
         /// <summary>
         /// Gets or sets the Table
-        /// Gets or sets the Table
         /// </summary>
         public DataTable Table { get; set; }
 
         /// <summary>
         /// Gets or sets the Columns
-        /// Gets or sets the Columns
         /// </summary>
         public string[] Columns { get; set; }
 
         /// <summary>
-        /// Gets or sets the Records
-        /// Gets or sets the Records
         /// </summary>
         public DataRow[] Records { get; set; }
 
         /// <summary>
-        /// Gets or sets the Data
-        /// Gets or sets the Data
         /// </summary>
         public DataRow Data { get; set; }
 
         /// <summary>
-        /// Gets or sets the ProgramElements
-        /// Gets or sets the ProgramElements
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
