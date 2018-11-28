@@ -333,7 +333,7 @@ namespace BudgetExecution
                         Filter3.Tag = "ProgramProjectName";
                         break;
 
-                    case Source.Awards:
+                    case Source.Supplemental:
                         label1.Text = @"DivisionName";
                         PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";

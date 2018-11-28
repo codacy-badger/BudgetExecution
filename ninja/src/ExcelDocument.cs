@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using OfficeOpenXml;
+
 namespace BudgetExecution
 {
     using System;
@@ -44,7 +46,7 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = Provider.SQLite;
-            Sheet = Sheet.Budget;
+            Excel = Excel.Budget;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
         }
@@ -78,7 +80,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Sheet
         /// </summary>
-        public Sheet Sheet { get; }
+        public Excel Excel { get; }
 
         /// <summary>
         /// Gets or sets the Query
@@ -143,7 +145,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the Excel
         /// </summary>
-        public Microsoft.Office.Interop.Excel.Application Excel { get; set; }
+        public Microsoft.Office.Interop.Excel.Application ExcelApplication { get; set; }
 
         /// <summary>
         /// Gets or sets the Workbook
@@ -156,33 +158,36 @@ namespace BudgetExecution
         public Worksheet PRC { get; set; }
 
         /// <summary>
+        /// Gets or sets the excel package.
+        /// </summary>
+        /// <value>
+        /// The excel package.
+        /// </value>
+        public ExcelPackage ExcelPackage { get; set; }
+
+        /// <summary>
         /// Gets or sets the ConnectionString
         /// </summary>
         internal string ConnectionString { get; set; }
 
         /// <summary>
-        /// Gets or sets the AccountingInfo
-        /// </summary>
-        private DocInfo AccountingInfo { get; set; }
-
-        /// <summary>
         /// Gets the file path.
         /// </summary>
-        /// <param name="sheet">The sheet.</param>
+        /// <param name="Excel">The sheet.</param>
         /// <returns></returns>
-        private string GetFilePath(Sheet sheet)
+        private string GetFilePath(Excel Excel)
         {
             try
             {
-                switch(sheet)
+                switch(Excel)
                 {
-                    case Sheet.Budget:
+                    case Excel.Budget:
                         return BudgetTemplate = GetFilePathBrowser();
-                    case Sheet.Internal:
+                    case Excel.Internal:
                         return BudgetTemplate = GetFilePathBrowser();
-                    case Sheet.External:
+                    case Excel.External:
                         return ExternalFilePath = GetExternalFilePath();
-                    case Sheet.Report:
+                    case Excel.Report:
                         return Report = GetFilePathBrowser();
                     default:
                         return BudgetTemplate = GetFilePathBrowser();
@@ -236,20 +241,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Initials the budget worksheets.
-        /// </summary>
-        private void InitialBudgetWorksheets()
-        {
-            try
-            {
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
         /// Gets the internal file path.
         /// </summary>
         /// <returns></returns>
@@ -257,7 +248,7 @@ namespace BudgetExecution
         {
             try
             {
-                return ConfigurationManager.AppSettings["BudgetReport"];
+                return ConfigurationManager.AppSettings["Report"];
             }
             catch(Exception ex)
             {
@@ -327,10 +318,8 @@ namespace BudgetExecution
             try
             {
                 ConnectionStringSettingsCollection connectionString = ConfigurationManager.ConnectionStrings;
-                string excelpath = GetInternalFilePath();
                 string connectionstring = connectionString["Excel"].ConnectionString;
-                connectionstring.Replace($"{filepath}", excelpath);
-                return connectionstring;
+                return connectionstring.Replace($"{filepath}", GetInternalFilePath());
             }
             catch(Exception ex)
             {
@@ -349,7 +338,7 @@ namespace BudgetExecution
         /// <summary>
         /// Loads the internal data.
         /// </summary>
-        internal void LoadInternalData()
+        internal void LoadFromDatabase()
         {
         }
 
@@ -362,7 +351,7 @@ namespace BudgetExecution
         {
             try
             {
-                Workbook WorkBook = Excel.Workbooks.Open(GetInternalFilePath());
+                Workbook WorkBook = ExcelApplication.Workbooks.Open(GetInternalFilePath());
                 Worksheet WorkSheet = (Worksheet)WorkBook.Sheets[1];
                 WorkSheet.Name = table.TableName;
                 for(int i = 1; i < table.Columns.Count + 1; i++)
@@ -378,7 +367,7 @@ namespace BudgetExecution
                     }
                 }
 
-                Excel.Visible = true;
+                ExcelApplication.Visible = true;
                 return WorkBook;
             }
             catch(Exception ex)
@@ -389,9 +378,9 @@ namespace BudgetExecution
             finally
             {
                 Workbook.Close(true);
-                Excel.Quit();
+                ExcelApplication.Quit();
                 ReleaseObject(Workbook);
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -409,7 +398,7 @@ namespace BudgetExecution
                 Workbook excelWorkBook = excel.Workbooks.Open(filepath);
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
-                for(int i = 1; i < table.Columns.Count + 1; i++)
+                for(int i = 1; i <= table.Columns.Count; i++)
                 {
                     excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
                 }
@@ -433,9 +422,9 @@ namespace BudgetExecution
             finally
             {
                 Workbook.Close(true);
-                Excel.Quit();
+                ExcelApplication.Quit();
                 ReleaseObject(Workbook);
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -448,7 +437,7 @@ namespace BudgetExecution
         {
             try
             {
-                Workbook excelWorkBook = Excel.Workbooks.Open(filepath);
+                Workbook excelWorkBook = ExcelApplication.Workbooks.Open(filepath);
                 return excelWorkBook;
             }
             catch(Exception ex)
@@ -459,9 +448,9 @@ namespace BudgetExecution
             finally
             {
                 Workbook.Close(true);
-                Excel.Quit();
+                ExcelApplication.Quit();
                 ReleaseObject(Workbook);
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -473,7 +462,7 @@ namespace BudgetExecution
         {
             try
             {
-                Workbook excelWorkBook = Excel.Workbooks.Add();
+                Workbook excelWorkBook = ExcelApplication.Workbooks.Add();
                 return excelWorkBook;
             }
             catch(Exception ex)
@@ -484,9 +473,9 @@ namespace BudgetExecution
             finally
             {
                 Workbook.Close(true);
-                Excel.Quit();
+                ExcelApplication.Quit();
                 ReleaseObject(Workbook);
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -515,9 +504,9 @@ namespace BudgetExecution
             finally
             {
                 Workbook.Close(true);
-                Excel.Quit();
+                ExcelApplication.Quit();
                 ReleaseObject(Workbook);
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -551,7 +540,7 @@ namespace BudgetExecution
                 {
                     Workbook.Close(true);
                     ReleaseObject(Workbook);
-                    ReleaseObject(Excel);
+                    ReleaseObject(ExcelApplication);
                 }
             }
         }
@@ -573,7 +562,7 @@ namespace BudgetExecution
             }
             finally
             {
-                ReleaseObject(Excel);
+                ReleaseObject(ExcelApplication);
             }
         }
 
