@@ -55,18 +55,15 @@ namespace BudgetExecution
 
         /// <summary>
         /// Gets the Source
-        /// Gets the Source
         /// </summary>
         public Source Source { get; }
 
         /// <summary>
         /// Gets the Provider
-        /// Gets the Provider
         /// </summary>
         public Provider Provider { get; }
 
         /// <summary>
-        /// Gets or sets the ChartType
         /// Gets or sets the ChartType
         /// </summary>
         public ChartSeriesType ChartType { get; set; }
@@ -85,12 +82,10 @@ namespace BudgetExecution
 
         /// <summary>
         /// Gets or sets the Measure
-        /// Gets or sets the Measure
         /// </summary>
         public Stat Measure { get; set; }
 
         /// <summary>
-        /// Gets or sets the DbData
         /// Gets or sets the DbData
         /// </summary>
         public DataBuilder DbData { get; set; }
@@ -103,156 +98,130 @@ namespace BudgetExecution
 
         /// <summary>
         /// Gets or sets the Metric
-        /// Gets or sets the Metric
         /// </summary>
         public PrcMetric Metric { get; set; }
 
         /// <summary>
-        /// Gets or sets the BFY
         /// Gets or sets the BFY
         /// </summary>
         public string[] BFY { get; set; }
 
         /// <summary>
         /// Gets or sets the Org
-        /// Gets or sets the Org
         /// </summary>
         public string[] Org { get; set; }
 
         /// <summary>
-        /// Gets or sets the RC
         /// Gets or sets the RC
         /// </summary>
         public string[] RC { get; set; }
 
         /// <summary>
         /// Gets or sets the AH
-        /// Gets or sets the AH
         /// </summary>
         public string[] AH { get; set; }
 
         /// <summary>
-        /// Gets or sets the Code
         /// Gets or sets the Code
         /// </summary>
         public string[] Code { get; set; }
 
         /// <summary>
         /// Gets or sets the BOC
-        /// Gets or sets the BOC
         /// </summary>
         public string[] BOC { get; set; }
 
         /// <summary>
-        /// Gets or sets the Fund
         /// Gets or sets the Fund
         /// </summary>
         public string[] Fund { get; set; }
 
         /// <summary>
         /// Gets or sets the ChartFilter
-        /// Gets or sets the ChartFilter
         /// </summary>
         public string ChartFilter { get; set; }
 
         /// <summary>
-        /// Gets or sets the GridFilter1
         /// Gets or sets the GridFilter1
         /// </summary>
         public string GridFilter1 { get; set; }
 
         /// <summary>
         /// Gets or sets the GridFilter2
-        /// Gets or sets the GridFilter2
         /// </summary>
         public string GridFilter2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the GridFilter3
         /// Gets or sets the GridFilter3
         /// </summary>
         public string GridFilter3 { get; set; }
 
         /// <summary>
         /// Gets or sets the Division
-        /// Gets or sets the Division
         /// </summary>
         public string Division { get; set; }
 
         /// <summary>
-        /// Gets or sets the ProgramElements
         /// Gets or sets the ProgramElements
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
         /// <summary>
         /// Gets or sets the ChartMainTitle
-        /// Gets or sets the ChartMainTitle
         /// </summary>
         public string[] ChartMainTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets the CurrentIndex
         /// Gets or sets the CurrentIndex
         /// </summary>
         public int CurrentIndex { get; set; }
 
         /// <summary>
         /// Gets or sets the GridFilterControl1
-        /// Gets or sets the GridFilterControl1
         /// </summary>
         public VisualComboBox GridFilterControl1 { get; set; }
 
         /// <summary>
-        /// Gets or sets the GridFilterControl2
         /// Gets or sets the GridFilterControl2
         /// </summary>
         public VisualComboBox GridFilterControl2 { get; set; }
 
         /// <summary>
         /// Gets or sets the GridFilterControl3
-        /// Gets or sets the GridFilterControl3
         /// </summary>
         public VisualComboBox GridFilterControl3 { get; set; }
 
         /// <summary>
-        /// Gets or sets the ChartFilterControl1
         /// Gets or sets the ChartFilterControl1
         /// </summary>
         public VisualComboBox ChartFilterControl1 { get; set; }
 
         /// <summary>
         /// Gets or sets the ChartFilterControl2
-        /// Gets or sets the ChartFilterControl2
         /// </summary>
         public VisualComboBox ChartFilterControl2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the ChartFilterControl3
         /// Gets or sets the ChartFilterControl3
         /// </summary>
         public VisualComboBox ChartFilterControl3 { get; set; }
 
         /// <summary>
         /// Gets or sets the ChartFilterControl4
-        /// Gets or sets the ChartFilterControl4
         /// </summary>
         public VisualComboBox ChartFilterControl4 { get; set; }
 
         /// <summary>
-        /// Gets or sets the Expander1
         /// Gets or sets the Expander1
         /// </summary>
         public ExpandCollapsePanel Expander1 { get; set; }
 
         /// <summary>
         /// Gets or sets the Expander2
-        /// Gets or sets the Expander2
         /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the Tab
         /// Gets or sets the Tab
         /// </summary>
         public TabPageAdv[] Tab { get; set; }

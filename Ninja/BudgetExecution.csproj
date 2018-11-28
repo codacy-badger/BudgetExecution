@@ -207,6 +207,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="src\Overtime.cs" />
+    <Compile Include="src\Supplemental.cs" />
     <Compile Include="src\Utilization.cs" />
     <Compile Include="src\ExcelData.cs">
       <SubType>Form</SubType>
@@ -331,7 +333,6 @@
     <Compile Include="src\BudgetChart.cs" />
     <Compile Include="src\DataBuilder.cs" />
     <Compile Include="src\DivisionAuthority.cs" />
-    <Compile Include="src\DocInfo.cs" />
     <Compile Include="src\Personnel.cs" />
     <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelDocument.cs" />

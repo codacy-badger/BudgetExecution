@@ -136,12 +136,12 @@ namespace BudgetExecution
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.Filter5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
@@ -402,7 +402,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
             this.tableLayoutPanel2.Controls.Add(this.button15, 9, 0);
             this.tableLayoutPanel2.Controls.Add(this.button14, 8, 0);
             this.tableLayoutPanel2.Controls.Add(this.button13, 7, 0);
@@ -413,7 +413,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button10, 6, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(84, 535);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(129, 559);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -424,15 +424,15 @@ namespace BudgetExecution
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(1020, 5);
+            this.button15.Location = new System.Drawing.Point(1019, 5);
             this.button15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(101, 35);
+            this.button15.Size = new System.Drawing.Size(80, 35);
             this.button15.TabIndex = 173;
             this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button15, "Copy Account\r\n");
@@ -441,15 +441,15 @@ namespace BudgetExecution
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(909, 5);
+            this.button14.Location = new System.Drawing.Point(908, 5);
             this.button14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(101, 35);
+            this.button14.Size = new System.Drawing.Size(80, 35);
             this.button14.TabIndex = 173;
             this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button14, "Copy Account\r\n");
@@ -458,15 +458,15 @@ namespace BudgetExecution
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(799, 5);
+            this.button13.Location = new System.Drawing.Point(798, 5);
             this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(101, 35);
+            this.button13.Size = new System.Drawing.Size(80, 35);
             this.button13.TabIndex = 173;
             this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button13, "Copy Account\r\n");
@@ -475,8 +475,7 @@ namespace BudgetExecution
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -484,7 +483,7 @@ namespace BudgetExecution
             this.button2.Location = new System.Drawing.Point(4, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 35);
+            this.button2.Size = new System.Drawing.Size(80, 35);
             this.button2.TabIndex = 162;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button2, "Previous Account");
@@ -494,8 +493,7 @@ namespace BudgetExecution
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -503,7 +501,7 @@ namespace BudgetExecution
             this.button3.Location = new System.Drawing.Point(114, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 35);
+            this.button3.Size = new System.Drawing.Size(80, 35);
             this.button3.TabIndex = 163;
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button3, "Next Account");
@@ -513,15 +511,15 @@ namespace BudgetExecution
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(580, 5);
+            this.button11.Location = new System.Drawing.Point(579, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(106, 35);
+            this.button11.Size = new System.Drawing.Size(80, 35);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
@@ -532,16 +530,15 @@ namespace BudgetExecution
             // 
             this.button9.BackColor = System.Drawing.Color.Transparent;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(237, 5);
+            this.button9.Location = new System.Drawing.Point(236, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(107, 35);
+            this.button9.Size = new System.Drawing.Size(80, 35);
             this.button9.TabIndex = 165;
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button9, "Edit Account");
@@ -553,15 +550,15 @@ namespace BudgetExecution
             // 
             this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
             this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(469, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(468, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(103, 35);
+            this.GridRefreshButton.Size = new System.Drawing.Size(80, 35);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -571,15 +568,15 @@ namespace BudgetExecution
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(352, 5);
+            this.button12.Location = new System.Drawing.Point(351, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(109, 35);
+            this.button12.Size = new System.Drawing.Size(80, 35);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
@@ -588,15 +585,15 @@ namespace BudgetExecution
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(698, 5);
+            this.button10.Location = new System.Drawing.Point(697, 5);
             this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(93, 35);
+            this.button10.Size = new System.Drawing.Size(80, 35);
             this.button10.TabIndex = 169;
             this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button10, "Copy Account\r\n");
@@ -613,7 +610,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
@@ -646,22 +643,11 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(767, 0);
+            this.label10.Location = new System.Drawing.Point(766, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 33);
             this.label10.TabIndex = 158;
             this.label10.Text = "label10";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1055, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 23);
-            this.label6.TabIndex = 154;
-            this.label6.Text = "label6";
             // 
             // label9
             // 
@@ -669,7 +655,7 @@ namespace BudgetExecution
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(702, 0);
+            this.label9.Location = new System.Drawing.Point(701, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 33);
             this.label9.TabIndex = 157;
@@ -681,34 +667,11 @@ namespace BudgetExecution
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(411, 0);
+            this.label7.Location = new System.Drawing.Point(410, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 33);
             this.label7.TabIndex = 155;
             this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(476, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 33);
-            this.label8.TabIndex = 156;
-            this.label8.Text = "label8";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(990, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 33);
-            this.label15.TabIndex = 159;
-            this.label15.Text = "Total :";
             // 
             // label12
             // 
@@ -720,6 +683,40 @@ namespace BudgetExecution
             this.label12.Size = new System.Drawing.Size(64, 23);
             this.label12.TabIndex = 160;
             this.label12.Text = "label12";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(475, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 33);
+            this.label8.TabIndex = 156;
+            this.label8.Text = "label8";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(989, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 33);
+            this.label15.TabIndex = 159;
+            this.label15.Text = "Total :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1054, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 23);
+            this.label6.TabIndex = 154;
+            this.label6.Text = "label6";
             // 
             // metroPanel3
             // 
@@ -1119,7 +1116,7 @@ namespace BudgetExecution
             this.button1.Location = new System.Drawing.Point(4, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 56);
+            this.button1.Size = new System.Drawing.Size(124, 56);
             this.button1.TabIndex = 162;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button1, "Previous Account");
@@ -1134,7 +1131,7 @@ namespace BudgetExecution
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(137, 5);
+            this.button4.Location = new System.Drawing.Point(136, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 56);
@@ -1151,7 +1148,7 @@ namespace BudgetExecution
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(651, 5);
+            this.button5.Location = new System.Drawing.Point(650, 5);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 56);
@@ -1170,7 +1167,7 @@ namespace BudgetExecution
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(282, 5);
+            this.button6.Location = new System.Drawing.Point(281, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(127, 56);
@@ -1189,7 +1186,7 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(539, 5);
+            this.button7.Location = new System.Drawing.Point(538, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(104, 56);
@@ -1206,7 +1203,7 @@ namespace BudgetExecution
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(417, 5);
+            this.button8.Location = new System.Drawing.Point(416, 5);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(114, 56);
@@ -3879,7 +3876,7 @@ namespace BudgetExecution
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button4, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.button5, 5, 0);

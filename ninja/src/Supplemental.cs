@@ -2,8 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using MoreLinq;
-
 namespace BudgetExecution
 {
     using System;
@@ -14,13 +12,13 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Awards" />
     /// </summary>
-    public class Awards : Supplemental, IDataBuilder
+    public class Supplemental : IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
-        public Awards()
+        public Supplemental()
         {
         }
 
@@ -28,13 +26,11 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Awards(Provider provider = Provider.SQLite)
+        public Supplemental(Provider provider = Provider.SQLite)
         {
             Source = Source.Supplemental;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider).Table.AsEnumerable()
-                                                     .Where(p => p.Field<string>("Type").Equals("Awards", StringComparison.CurrentCultureIgnoreCase))
-                                                     .Select(p => p).CopyToDataTable();
+            Table = new DataBuilder(Source, Provider).Table;
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
@@ -43,7 +39,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Awards(Provider provider, Dictionary<string, object> p)
+        public Supplemental(Provider provider, Dictionary<string, object> p)
         {
             Source = Source.Supplemental;
             Provider = provider;
@@ -53,12 +49,12 @@ namespace BudgetExecution
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
-                Type = Data["Type"].ToString();
                 RC = Data["RC"].ToString();
                 DivisionName = Data["DivisionName"].ToString();
                 FundCode = Data["FundCode"].ToString();
                 BFY = Data["BFY"].ToString();
                 Amount = decimal.Parse(Data["Amount"].ToString());
+                Type = Data["Type"].ToString();
             }
         }
 
@@ -66,59 +62,98 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Awards(DataRow data)
+        public Supplemental(DataRow data)
         {
             Data = data;
             ID = int.Parse(Data["ID"].ToString());
-            Type = Data["Type"].ToString();
             RC = Data["RC"].ToString();
             DivisionName = Data["DivisionName"].ToString();
             FundCode = Data["FundCode"].ToString();
             BFY = Data["BFY"].ToString();
             Amount = decimal.Parse(Data["Amount"].ToString());
+            Type = Data["Type"].ToString();
         }
 
         // PROPERTIES
         /// <summary>
         /// Gets or sets the Source
         /// </summary>
-        public new Source Source { get; set; }
+        public Source Source { get; set; }
 
         /// <summary>
         /// Gets or sets the Provider
         /// </summary>
-        public new Provider Provider { get; set; }
+        public Provider Provider { get; set; }
 
         /// <summary>
         /// Gets or sets the DbData
         /// </summary>
-        public new DataBuilder DbData { get; set; }
+        public DataBuilder DbData { get; set; }
 
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
-        public new DataTable Table { get; set; }
+        public DataTable Table { get; set; }
 
         /// <summary>
         /// Gets or sets the Columns
         /// </summary>
-        public new string[] Columns { get; set; }
+        public string[] Columns { get; set; }
 
         /// <summary>
         /// Gets or sets the Records
         /// </summary>
-        public new DataRow[] Records { get; set; }
+        public DataRow[] Records { get; set; }
 
         /// <summary>
         /// Gets or sets the Data
         /// </summary>
-        public new DataRow Data { get; set; }
+        public DataRow Data { get; set; }
 
         /// <summary>
         /// Gets or sets the ProgramElements
         /// </summary>
-        public new Dictionary<string, string[]> ProgramElements { get; set; }
-        
+        public Dictionary<string, string[]> ProgramElements { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ID
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Type
+        /// </summary>
+        public string Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
+        public string RC { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DivisionName
+        /// </summary>
+        public string DivisionName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the FundCode
+        /// </summary>
+        public string FundCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
+        public string BFY { get; set; }
+
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
+        public string BOC { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Amount
+        /// </summary>
+        public decimal Amount { get; set; }
 
         // METHODS
 
@@ -191,6 +226,72 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }        
+        }
+
+        /// <summary>
+        /// The Insert
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public static void Insert(Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                Query query = new Query(Source.Supplemental, provider, Sql.INSERT, p);
+                query.DataConnection.Open();
+                query.InsertCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        /// <summary>
+        /// The Update
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public static void Update(Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                Query query = new Query(Source.Supplemental, provider, Sql.UPDATE, p);
+                query.DataConnection.Open();
+                query.UpdateCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.InsertCommand.Dispose();
+                query.DataConnection.Dispose();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public static void Delete(Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                Query query = new Query(Source.Supplemental, provider, Sql.DELETE, p);
+                query.DataConnection.Open();
+                query.DeleteCommand.ExecuteNonQuery();
+                query.DataConnection.Close();
+                query.DeleteCommand.Dispose();
+                query.DataConnection.Dispose();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
     }
 }

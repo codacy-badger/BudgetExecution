@@ -2,6 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+
 namespace BudgetExecution
 {
     using System;
@@ -36,9 +37,10 @@ namespace BudgetExecution
             Records = DbData.Records;
             PRC = GetPrcArray(Table);
             ProgramElements = DbData.ProgramElements;
+            RC = ProgramElements["RC"].AsEnumerable().Select(s => s).First();
             Metric = new PrcMetric(DbData);
-            CurrentYear = Metric.CurrentYear;
-            CarryOver = Metric.CarryOver;
+            CurrentYearAuthority = Metric.CurrentYear;
+            CarryOverAuthority = Metric.CarryOver;
             if(ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(Table);
@@ -46,6 +48,26 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+
+        public string[] BFY { get; set; }
+
+        public Division Division { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fund.
+        /// </summary>
+        /// <value>
+        /// The fund.
+        /// </value>
+        public Fund[] Fund { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rc.
+        /// </summary>
+        /// <value>
+        /// The rc.
+        /// </value>
+        public string RC { get; set; }
 
         /// <summary>
         /// Gets the DbData
@@ -80,12 +102,44 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the CurrentYear
         /// </summary>
-        public DataTable CurrentYear { get; set; }
+        public DataTable CurrentYearAuthority { get; set; }
 
         /// <summary>
         /// Gets or sets the CarryOver
         /// </summary>
-        public DataTable CarryOver { get; set; }
+        public DataTable CarryOverAuthority { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current year awards.
+        /// </summary>
+        /// <value>
+        /// The current year awards.
+        /// </value>
+        public Awards CurrentYearAwards { get; set; }
+
+        /// <summary>
+        /// Gets or sets the carry over awards.
+        /// </summary>
+        /// <value>
+        /// The carry over awards.
+        /// </value>
+        public Awards CarryOverAwards { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current overtime.
+        /// </summary>
+        /// <value>
+        /// The current overtime.
+        /// </value>
+        public Awards CurrentOvertime { get; set; }
+
+        /// <summary>
+        /// Gets or sets the carry overtime.
+        /// </summary>
+        /// <value>
+        /// The carry overtime.
+        /// </value>
+        public Awards CarryOvertime { get; set; }
 
         /// <summary>
         /// Gets or sets the Budget

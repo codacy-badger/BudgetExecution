@@ -2,13 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace BudgetExecution
 {
-    using Syncfusion.Windows.Forms.Chart;
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-
     // Delegates
     public delegate DataTable TableDelegate(DataTable table, Field column, string filter);
 
@@ -343,7 +343,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the Sheet
     /// </summary>
-    public enum Sheet { /// <summary>
+    public enum Excel { /// <summary>
         /// Defines the Budget
         /// </summary>
         Budget, 
@@ -685,14 +685,16 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the Source
     /// </summary>
-    public enum Source { /// <summary>
+    public enum Source
+    { /// <summary>
         /// Defines the Accounts
         /// </summary>
-        Accounts, 
+        Accounts,
+
         /// <summary>
         /// Defines the Awards
         /// </summary>
-        Awards, 
+        Supplemental, 
         /// <summary>
         /// Defines the ControlNumbers
         /// </summary>

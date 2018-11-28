@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using MoreLinq;
 
 namespace BudgetExecution
 {
@@ -14,13 +13,13 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="Awards" />
     /// </summary>
-    public class Awards : Supplemental, IDataBuilder
+    public class Overtime : Supplemental, IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
-        public Awards()
+        public Overtime()
         {
         }
 
@@ -28,7 +27,7 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Awards(Provider provider = Provider.SQLite)
+        public Overtime(Provider provider = Provider.SQLite)
         {
             Source = Source.Supplemental;
             Provider = provider;
@@ -43,7 +42,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Awards(Provider provider, Dictionary<string, object> p)
+        public Overtime(Provider provider, Dictionary<string, object> p)
         {
             Source = Source.Supplemental;
             Provider = provider;
@@ -66,7 +65,7 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Awards(DataRow data)
+        public Overtime(DataRow data)
         {
             Data = data;
             ID = int.Parse(Data["ID"].ToString());
@@ -118,7 +117,7 @@ namespace BudgetExecution
         /// Gets or sets the ProgramElements
         /// </summary>
         public new Dictionary<string, string[]> ProgramElements { get; set; }
-        
+
 
         // METHODS
 
@@ -191,6 +190,6 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }        
+        }
     }
 }
