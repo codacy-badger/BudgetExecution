@@ -11,7 +11,7 @@ using System.Text;
 
 namespace BudgetExecution
 {
-    public class ControlNumber
+    public class ControlNumber : IDataBuilder
     {
         // CONSTRUCTORS
         public ControlNumber()
@@ -21,7 +21,6 @@ namespace BudgetExecution
         /// <summary>
         ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
         /// </summary>
-        /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
         public ControlNumber(Provider provider = Provider.SQLite)
         {
@@ -34,7 +33,6 @@ namespace BudgetExecution
         /// <summary>
         ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
         /// </summary>
-        /// <param name="FundCode">The fund.</param>
         /// <param name="division">The division.</param>
         public ControlNumber(string fundCode, string division)
         {
@@ -134,7 +132,7 @@ namespace BudgetExecution
         {
             try
             {
-                ControlNumber account = new ControlNumber(param["Fund"].ToString(), param["DivisionID"].ToString());
+                new ControlNumber(param["Fund"].ToString(), param["DivisionID"].ToString());
 
                 return param;
             }
@@ -235,7 +233,6 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets the division count.
         /// </summary>
-        /// <param name="divisionid">The divisionid.</param>
         /// <returns></returns>
         internal int GetDivisionCount(int divisionId)
         {
@@ -270,16 +267,132 @@ namespace BudgetExecution
             }
         }
 
+
+        /// <inheritdoc />
         /// <summary>
-        ///     Calculates the specified fund.
+        /// Gets the data table.
         /// </summary>
-        /// <param name="fund">The fund.</param>
-        /// <param name="divisionid">The divisionid.</param>
-        internal void Calculate(string fund, int divisionid)
+        /// <returns></returns>
+        DataTable IDataBuilder.GetDataTable()
         {
-            int reg = GetRegionCount() + 1;
-            int fd = GetFundCount(fund) + 1;
-            int dc = GetDivisionCount(divisionid) + 1;
+            try
+            {
+                Query query = DbData.Query;
+                DataSet ds = new DataSet("R06");
+                ds.DataSetName = "R06";
+                DataTable dt = new DataTable();
+                dt.TableName = Source.ToString();
+                ds.Tables.Add(dt);
+                query.DataAdapter.Fill(ds, dt.TableName);
+                return dt;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets the records in the table as an Array of DataRows.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
+        DataRow[] IDataBuilder.GetRecords(DataTable table)
+        {
+            try
+            {
+                return table.AsEnumerable().Select(p => p).ToArray();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets the unique values.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="column">The column.</param>
+        /// <returns></returns>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string column)
+        {
+            try
+            {
+                if(table.GetColumnNames().Contains(column))
+                {
+                    return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets the program elements.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
+        {
+            if(table != null)
+            {
+                try
+                {
+                    Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+                    foreach(DataColumn dc in table.Columns)
+                    {
+                        if(dc.ColumnName.Equals("ID") ||
+                           dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Equals("Hours") ||
+                           dc.ColumnName.Contains("OpenCommitments") ||
+                           dc.ColumnName.Contains("ULO") ||
+                           dc.ColumnName.Equals("Obligations") ||
+                           dc.ColumnName.Equals("Commitments") ||
+                           dc.ColumnName.Equals("Authority") ||
+                           dc.ColumnName.Equals("Budgeted") ||
+                           dc.ColumnName.Equals("Posted") ||
+                           dc.ColumnName.Equals("CarryIn") ||
+                           dc.ColumnName.Equals("CarryOut") ||
+                           dc.ColumnName.Equals("Balance"))
+                        {
+                            continue;
+                        }
+
+                        data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(dc)).Distinct().ToArray());
+                    }
+
+                    if(data.ContainsKey("ID"))
+                    {
+                        data.Remove("ID");
+                    }
+
+                    if(data.ContainsKey("Amount"))
+                    {
+                        data.Remove("Amount");
+                    }
+
+                    return data;
+                }
+                catch(Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>

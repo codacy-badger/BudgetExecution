@@ -10,8 +10,9 @@ namespace BudgetExecution
     using System.Linq;
     using System.Windows.Forms;
 
+    /// <inheritdoc />
     /// <summary>
-    /// Defines the <see cref="DataBuilder" />
+    /// Defines the <see cref="T:BudgetExecution.DataBuilder" />
     /// </summary>
     public class DataBuilder : IDataBuilder
     {
@@ -112,12 +113,18 @@ namespace BudgetExecution
             Query = new Query(source, provider, Sql.SELECT, Input);
             if(source == Source.PRC)
             {
-                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source).AsEnumerable()
+                                            .Where(p => p.Field<string>("BOC") != "17")
+                                            .Where(p => p.Field<decimal>("Amount") != 0)
+                                            .Select(p => p).CopyToDataTable();
             }
 
             if(source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                Table = GetDataTable().AsEnumerable()
+                                      .Where(p => p.Field<string>("BOC").Equals("17"))
+                                      .Where(p => p.Field<decimal>("Amount") != 0)
+                                      .Select(p => p).CopyToDataTable();
             }
             else
             {
