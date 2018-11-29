@@ -28,6 +28,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
+            Records = DbData.Records;
         }
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace BudgetExecution
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
-                Region = "R06";
+                Region = "R6";
                 BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
                 RegionControlNumber = GetRegionCount() + 1;
                 FundControlNumber = RegionControlNumber + 1;
@@ -114,7 +115,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["Fund"] = fund, ["DivisionID"] = divisionid };
+                return new Dictionary<string, object> { ["FundCode"] = fund, ["DivisionID"] = divisionid };
             }
             catch(Exception ex)
             {
@@ -132,7 +133,7 @@ namespace BudgetExecution
         {
             try
             {
-                new ControlNumber(param["Fund"].ToString(), param["DivisionID"].ToString());
+                new ControlNumber(param["FundCode"].ToString(), param["DivisionID"].ToString());
 
                 return param;
             }
@@ -215,13 +216,15 @@ namespace BudgetExecution
         /// <summary>
         ///     Gets the fund count.
         /// </summary>
-        /// <param name="fund">The fund.</param>
+        /// <param name="fundcode">The fund.</param>
         /// <returns></returns>
-        internal int GetFundCount(string fund)
+        internal int GetFundCount(string fundcode)
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(fund)).Select(p => p).Count();
+                return Table.AsEnumerable()
+                            .Where(p => p.Field<string>("Fund").Equals(fundcode))
+                            .Select(p => p).Count();
             }
             catch(Exception ex)
             {
@@ -278,8 +281,8 @@ namespace BudgetExecution
             try
             {
                 Query query = DbData.Query;
-                DataSet ds = new DataSet("R06");
-                ds.DataSetName = "R06";
+                DataSet ds = new DataSet("R6");
+                ds.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);

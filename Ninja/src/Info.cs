@@ -105,7 +105,7 @@ namespace BudgetExecution
         /// <summary>
         /// Defines the Divisions
         /// </summary>
-        public static string[] Divisions = { "6MD", "6MM", "6RA", "6SF", "6EJ", "6XA", "6WQ", "6EN", "6RC", "R06", "6WSA", "6WCF" };
+        public static string[] Divisions = { "6MD", "6MM", "6RA", "6SF", "6EJ", "6XA", "6WQ", "6EN", "6RC", "R6", "6WSA", "6WCF" };
 
         /// <summary>
         /// Defines the DivisionTitle
@@ -231,10 +231,10 @@ namespace BudgetExecution
                     return "OGC";
 
                 case "":
-                    return "R06";
+                    return "R6";
 
                 default:
-                    return "R06";
+                    return "R6";
             }
         }
 
@@ -281,10 +281,10 @@ namespace BudgetExecution
                     return "OFFICE OF GENERAL COUNSEL";
 
                 case "":
-                    return "R06";
+                    return "R6";
 
                 default:
-                    return "R06";
+                    return "R6";
             }
         }
 
@@ -331,10 +331,10 @@ namespace BudgetExecution
                     return "39";
 
                 case "":
-                    return "R06";
+                    return "R6";
 
                 default:
-                    return "R06";
+                    return "R6";
             }
         }
 
@@ -643,16 +643,16 @@ namespace BudgetExecution
                     return "EXTERNAL AFFAIRS";
 
                 case "06":
-                    return "R06";
+                    return "R6";
 
                 case "06F":
                     return "ENVIRONMENTAL JUSTICE";
 
                 case "":
-                    return "R06";
+                    return "R6";
 
                 default:
-                    return "R06";
+                    return "R6";
             }
         }
 
@@ -980,10 +980,10 @@ namespace BudgetExecution
                         return "6EJ";
 
                     case "06":
-                        return "R06";
+                        return "R6";
 
                     default:
-                        return "R06";
+                        return "R6";
                 }
             }
             catch(Exception ex)

@@ -32,7 +32,7 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = new SqlConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.mdf");
+            DataConnection = base.DataConnection as SqlConnection;;
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -56,7 +56,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSelectStatement(TableName, Parameter);
-            DataConnection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\SqlCe\R6.mdf");
+            DataConnection = base.DataConnection as SqlConnection;
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -82,7 +82,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the Settings
         /// </summary>
-        public AppSettingsReader Settings { get; set; }
+        public AppSettingsReader Setting { get; set; }
 
         /// <summary>
         /// Gets or sets the DataConnection

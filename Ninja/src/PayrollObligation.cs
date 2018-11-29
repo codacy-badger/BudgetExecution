@@ -20,6 +20,12 @@ namespace BudgetExecution
         /// </summary>
         public PayrollObligation()
         {
+            Source = Source.PayrollObligations;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>

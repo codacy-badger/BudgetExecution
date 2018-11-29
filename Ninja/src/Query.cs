@@ -172,7 +172,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the DataConnection
         /// </summary>
-        public DbConnection DataConnection { get; }
+        public DbConnection DataConnection { get; set; }
 
         /// <inheritdoc />
         /// <summary>

@@ -20,6 +20,12 @@ namespace BudgetExecution
         /// </summary>
         public Division()
         {
+            Source = Source.Divisions;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>
@@ -29,7 +35,11 @@ namespace BudgetExecution
         /// <param name="provider">The provider<see cref="Provider" /></param>
         public Division(Source source, Provider provider = Provider.SQLite)
         {
+            Source = source;
+            Provider = provider;
             DbData = new DataBuilder(source, provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(p => p).ToArray();
         }
 
@@ -41,7 +51,11 @@ namespace BudgetExecution
         /// <param name="p">The p<see cref="Dictionary{string, object}" /></param>
         public Division(Source source, Provider provider, Dictionary<string, object> p)
         {
-            DbData = new DataBuilder(source, provider, p);
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, p);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(r => r).ToArray();
             if(Records.Length == 1)
             {
@@ -64,6 +78,10 @@ namespace BudgetExecution
         public Division(DataRow data)
         {
             Data = data;
+            Table = Data.Table;
+            Columns = Table.Columns
+                           .Cast<DataColumn>().AsEnumerable()
+                           .Select(d => d.ColumnName).ToArray();
             ID = Data["ID"].ToString();
             RC = Data["RC"].ToString();
             Title = Data["Title"].ToString();
@@ -134,24 +152,29 @@ namespace BudgetExecution
         /// </summary>
         public Dictionary<string, object> Parameter { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
         public DataTable Table { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Columns
         /// </summary>
         public string[] Columns { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// </summary>
         public DataRow Data { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }

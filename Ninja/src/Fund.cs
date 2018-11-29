@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc cref="" />
     /// <summary>
     /// Defines the <see cref="Fund" />
     /// </summary>
@@ -20,6 +21,12 @@ namespace BudgetExecution
         /// </summary>
         public Fund()
         {
+            Source = Source.Funds;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>
@@ -116,6 +123,7 @@ namespace BudgetExecution
         /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
@@ -248,6 +256,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         /// <summary>
         /// Gets the data fields.
         /// </summary>
@@ -310,6 +319,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// The ToString
         /// </summary>

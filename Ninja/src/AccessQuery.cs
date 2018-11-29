@@ -23,7 +23,7 @@ namespace BudgetExecution
         {
             Provider = base.Provider;
             Source = source;
-            DataConnection = GetDataConnection(Provider) as OleDbConnection;
+            DataConnection = base.DataConnection as OleDbConnection;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection) as OleDbCommand;
@@ -37,11 +37,12 @@ namespace BudgetExecution
             DeleteStatement = DeleteCommand.CommandText;
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccessQuery"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.AccessQuery" /> class.
         /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="parameter">The parameter<see cref="Dictionary{string, object}"/></param>
+        /// <param name="source">The source<see cref="P:BudgetExecution.AccessQuery.Source" /></param>
+        /// <param name="parameter">The parameter<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
         public AccessQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.Access, Sql.SELECT, parameter)
         {
             Source = source;
@@ -49,7 +50,7 @@ namespace BudgetExecution
             Provider = base.Provider;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            DataConnection = base.DataConnection as OleDbConnection;
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
@@ -61,12 +62,13 @@ namespace BudgetExecution
             DeleteStatement = DeleteCommand.CommandText;
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccessQuery"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.AccessQuery" /> class.
         /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        /// <param name="parameter">The parameter<see cref="Dictionary{string, object}"/></param>
+        /// <param name="source">The source<see cref="P:BudgetExecution.AccessQuery.Source" /></param>
+        /// <param name="param">The param<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
+        /// <param name="parameter">The parameter<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
         public AccessQuery(Source source, Dictionary<string, object> param, Dictionary<string, object> parameter)
         {
             Source = source;
@@ -75,7 +77,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             Parameters = GetParameter(param);
             SelectStatement = GetSqlStatement();
-            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            DataConnection = base.DataConnection as OleDbConnection;
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);

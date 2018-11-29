@@ -14,6 +14,16 @@ namespace BudgetExecution
     /// </summary>
     public class ProgramObligations : IDataBuilder
     {
+        public ProgramObligations()
+        {
+            Source = Source.ProgramObligations;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
+        }
+
         // CONSRTUCTORS
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
@@ -84,7 +94,7 @@ namespace BudgetExecution
         /// </summary>
         public DataTable Table { get; set; }
 
-        string[] IDataBuilder.Columns { get; set; }
+        public string[] Columns { get; set; }
 
         Dictionary<string, string[]> IDataBuilder.ProgramElements { get; set; }
 

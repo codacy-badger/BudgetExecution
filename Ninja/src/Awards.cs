@@ -11,19 +11,28 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    /// <inheritdoc />
     /// <summary>
     /// Defines the <see cref="Awards" />
     /// </summary>
     public class Awards : Supplemental, IDataBuilder
     {
         // CONSTRUCTORS
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         public Awards()
         {
+            Source = Source.Supplemental;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
@@ -38,6 +47,7 @@ namespace BudgetExecution
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
@@ -62,6 +72,7 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
@@ -94,26 +105,31 @@ namespace BudgetExecution
         /// </summary>
         public new DataBuilder DbData { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
         public new DataTable Table { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Columns
         /// </summary>
         public new string[] Columns { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Records
         /// </summary>
         public new DataRow[] Records { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Data
         /// </summary>
         public new DataRow Data { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the ProgramElements
         /// </summary>

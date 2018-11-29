@@ -182,15 +182,15 @@ namespace BudgetExecution
                 switch(Excel)
                 {
                     case Excel.Budget:
-                        return BudgetTemplate = GetFilePathBrowser();
+                        return BudgetTemplate = GetBrowserFilePath();
                     case Excel.Internal:
-                        return BudgetTemplate = GetFilePathBrowser();
+                        return BudgetTemplate = GetBrowserFilePath();
                     case Excel.External:
                         return ExternalFilePath = GetExternalFilePath();
                     case Excel.Report:
-                        return Report = GetFilePathBrowser();
+                        return Report = GetBrowserFilePath();
                     default:
-                        return BudgetTemplate = GetFilePathBrowser();
+                        return BudgetTemplate = GetBrowserFilePath();
                 }
             }
             catch(Exception ex)
@@ -261,7 +261,7 @@ namespace BudgetExecution
         /// Gets the file path browser.
         /// </summary>
         /// <returns></returns>
-        public string GetFilePathBrowser()
+        public string GetBrowserFilePath()
         {
             try
             {

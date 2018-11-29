@@ -20,6 +20,12 @@ namespace BudgetExecution
         /// </summary>
         public PayrollAccruals()
         {
+            Source = Source.PayAccruals;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>

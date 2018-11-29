@@ -54,7 +54,7 @@ namespace BudgetExecution
             Provider = base.Provider;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            DataConnection = base.DataConnection as OleDbConnection;
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
@@ -81,7 +81,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             Parameters = GetParameter(param);
             SelectStatement = GetSqlStatement();
-            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            DataConnection = base.DataConnection as OleDbConnection;
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);

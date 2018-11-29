@@ -213,8 +213,8 @@ namespace BudgetExecution
         {
             try
             {
-                DataSet ds = new DataSet("R06");
-                ds.DataSetName = "R06";
+                DataSet ds = new DataSet("R6");
+                ds.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);

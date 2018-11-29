@@ -20,6 +20,12 @@ namespace BudgetExecution
         /// </summary>
         public Account()
         {
+            Source = Source.Accounts;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>
@@ -32,6 +38,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
+            Columns = DbData.Columns;
         }
 
         /// <inheritdoc />
@@ -49,6 +56,7 @@ namespace BudgetExecution
             Parameter = GetAccountParameter(bfy, fund, code);
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
@@ -95,6 +103,7 @@ namespace BudgetExecution
             Parameter = p;
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
+            Columns = DbData.Columns;
             if(Table.Rows.Count == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
@@ -236,21 +245,25 @@ namespace BudgetExecution
         /// </summary>
         public Dictionary<string, object> Parameter { get; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Code
         /// </summary>
         public string Code { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the NPM
         /// </summary>
         public string NPM { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Goal
         /// </summary>
         public string Goal { get; set; }
 
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets or sets the Objective
         /// </summary>
@@ -338,27 +351,32 @@ namespace BudgetExecution
             return Code;
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Columns
         /// </summary>
         public string[] Columns { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Table
         /// </summary>
         public DataTable Table { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Records
         /// </summary>
         public DataRow[] Records { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the Data
         /// Gets the Data
         /// </summary>
         public DataRow Data { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the ProgramElements
         /// </summary>
