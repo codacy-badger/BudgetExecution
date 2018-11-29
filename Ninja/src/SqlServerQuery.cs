@@ -36,9 +36,12 @@ namespace BudgetExecution
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         /// <summary>
@@ -57,9 +60,12 @@ namespace BudgetExecution
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         // PROPERTIES

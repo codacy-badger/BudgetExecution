@@ -31,9 +31,12 @@ namespace BudgetExecution
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection) as OleDbCommand;
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter) as OleDbCommandBuilder;
-            UpdateCommand = CommandBuilder?.GetUpdateCommand();
-            InsertCommand = CommandBuilder?.GetInsertCommand();
-            DeleteCommand = CommandBuilder?.GetDeleteCommand();
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
             Settings = new AppSettingsReader();
         }
 
@@ -55,9 +58,12 @@ namespace BudgetExecution
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
-            InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         /// <summary>
@@ -79,9 +85,12 @@ namespace BudgetExecution
             SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
-            InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         // Properties

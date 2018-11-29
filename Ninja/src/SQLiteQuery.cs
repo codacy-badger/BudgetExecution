@@ -60,8 +60,11 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         /// <summary>
@@ -106,8 +109,11 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter((SQLiteCommand) DataCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         // PROPERTIES
