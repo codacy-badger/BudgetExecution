@@ -47,8 +47,11 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter(SelectCommand, Sql);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         public Query(Tuple<Provider, Source, Sql> queryTuple, Dictionary<string, object> param)
@@ -63,8 +66,11 @@ namespace BudgetExecution
             DataAdapter = GetDataAdapter(DataCommand, Sql);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
+            UpdateStatement = UpdateCommand.CommandText;
             InsertCommand = CommandBuilder.GetInsertCommand();
+            InsertStatement = InsertCommand.CommandText;
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            DeleteStatement = DeleteCommand.CommandText;
         }
 
         /// <summary>
