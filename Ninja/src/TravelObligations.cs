@@ -207,7 +207,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the TravellerName
         /// </summary>
-        public string TravellerName { get; set; }
+        public string TravelerName { get; set; }
 
         /// <summary>
         /// Gets or sets the ModificationDate

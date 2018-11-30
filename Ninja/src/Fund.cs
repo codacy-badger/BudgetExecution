@@ -26,18 +26,23 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Fund"/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Fund(Provider provider = Provider.SQLite)
+        public Fund(Provider provider = Provider.SQLite) : this()
         {
             Source = Source.Funds;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider).Table;
+            DbData = new DataBuilder(Source, Provider);
         }
 
         /// <summary>
@@ -46,20 +51,12 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="code">The code<see cref="string"/></param>
         /// <param name="bfy">The bfy<see cref="string"/></param>
-        public Fund(string code, string bfy)
+        public Fund(string code, string bfy) : this()
         {
             Code = code;
             BFY = bfy;
-            Parameter = GetParameter(Code, BFY);
-            Table = new DataBuilder(Source.Funds, Provider.SQLite, Parameter).Table;
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(prc => prc).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                Name = Data["Name"].ToString();
-                Title = Data["Title"].ToString();
-                TreasurySymbol = Data["TreasurySymbol"].ToString();
-            }
+            Input = GetParameter(Code, BFY);
+            DbData = new DataBuilder(Source, Provider, Input);
         }
 
         /// <summary>
@@ -68,43 +65,27 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Fund(Provider provider, Dictionary<string, object> p)
+        public Fund(Provider provider, Dictionary<string, object> p) : this()
         {
             Code = p["Code"].ToString();
             BFY = p["BFY"].ToString();
-            Parameter = GetParameter(Code, BFY);
-            Table = new DataBuilder(Source.Funds, provider, Parameter).Table;
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(prc => prc).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                Name = Data["Name"].ToString();
-                Title = Data["Title"].ToString();
-                TreasurySymbol = Data["TreasurySymbol"].ToString();
-            }
+            Input = GetParameter(Code, BFY);
+            DbData = new DataBuilder(Source, provider, Input);
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Fund"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Fund(DataRow data)
+        public Fund(DataRow data) : this()
         {
             Data = data;
-            ID = int.Parse(Data["ID"].ToString());
-            Name = Data["Name"].ToString();
-            Title = Data["Title"].ToString();
-            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
-        public Fund(Dictionary<string, object> data)
+        public Fund(Dictionary<string, object> data) : this()
         {
-            Parameter = data;
-            Data = new DataBuilder(Source.Funds, Provider.SQLite, Parameter).Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Name = Data["Name"].ToString();
-            Title = Data["Title"].ToString();
-            TreasurySymbol = Data["TreasurySymbol"].ToString();
+            Input = data;
+            DbData = new DataBuilder(Source, Provider, Input);
         }
 
         // PROPERTIES
@@ -167,7 +148,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Parameter
         /// </summary>
-        public Dictionary<string, object> Parameter { get; }
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets the Name
@@ -285,11 +266,11 @@ namespace BudgetExecution
         {
             try
             {
-                GetData(Source.Funds, Provider.SQLite, Parameter);
-                Parameter.Add("Name", Name);
-                Parameter.Add("Title", Title);
-                Parameter.Add("TreasurySymbol", TreasurySymbol);
-                return Parameter;
+                GetData(Source.Funds, Provider.SQLite, Input);
+                Input.Add("Name", Name);
+                Input.Add("Title", Title);
+                Input.Add("TreasurySymbol", TreasurySymbol);
+                return Input;
             }
             catch(Exception ex)
             {

@@ -25,35 +25,8 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PayrollObligation"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="sql">The sql<see cref="Sql"/></param>
-        public PayrollObligation(Source source = Source.PayrollObligations, Provider provider = Provider.SQLite, Sql sql = Sql.SELECT)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source.PayrollObligations, Provider);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PayrollObligation"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public PayrollObligation(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source.PayrollObligations, Provider, p);
-            Table = DbData.Table;
-            Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
+            Records = DbData.Records;
+            Data = DbData.Data;
             RPIO = Data["RPIO"].ToString();
             BFY = Data["BFY "].ToString();
             Fund = new Fund(Data["FundCode"].ToString(), BFY);
@@ -74,24 +47,41 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="PayrollObligation"/> class.
         /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="sql">The sql<see cref="Sql"/></param>
+        public PayrollObligation(Provider provider = Provider.SQLite) : this()
+        {
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollObligation"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public PayrollObligation(Provider provider, Dictionary<string, object> p) : this()
+        {
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        public PayrollObligation(Dictionary<string, object> p) : this()
+        {
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PayrollObligation"/> class.
+        /// </summary>
         /// <param name="dr">The dr<see cref="DataRow"/></param>
-        public PayrollObligation(DataRow dr)
+        public PayrollObligation(DataRow dr) : this()
         {
             Data = dr;
-            RPIO = Data["RPIO"].ToString();
-            BFY = Data["BFY "].ToString();
-            Fund = new Fund(Data["FundCode"].ToString(), BFY);
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            Code = Data["Code"].ToString();
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            HrOrgCode = Data["HrOrgCode"].ToString();
-            WorkCode = Data["WorkCode"].ToString();
-            WorkCodeName = Data["WorkCodeName"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            Obligations = decimal.Parse(Data["Obligations"].ToString());
-            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         // PROPERTIES
@@ -104,6 +94,8 @@ namespace BudgetExecution
         /// Gets or sets the Provider
         /// </summary>
         public Provider Provider { get; set; }
+
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the DbData

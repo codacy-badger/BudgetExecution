@@ -11,112 +11,58 @@ namespace BudgetExecution
     using System.Linq;
 
     /// <summary>
-    /// Defines the <see cref="Awards" />
+    /// Defines the <see cref="Overtime />
     /// </summary>
     public class Overtime : Supplemental, IDataBuilder
     {
         // CONSTRUCTORS
         /// <summary>
-        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// Initializes a new instance of the <see cref="Overtime"/> class.
         /// </summary>
         public Overtime()
         {
+            Table = DbData.Table.AsEnumerable()
+                          .Where(a => a.Field<string>("Type").Equals("Overtime", StringComparison.CurrentCultureIgnoreCase))
+                          .Select(a => a).CopyToDataTable();
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// Initializes a new instance of the <see cref="Overtime"/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Overtime(Provider provider = Provider.SQLite)
+        public Overtime(Provider provider = Provider.SQLite) : base(provider)
         {
-            Source = Source.Supplemental;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider).Table.AsEnumerable()
-                                                     .Where(p => p.Field<string>("Type").Equals("Awards", StringComparison.CurrentCultureIgnoreCase))
-                                                     .Select(p => p).CopyToDataTable();
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
+            Table = DbData.Table.AsEnumerable()
+                          .Where(a => a.Field<string>("Type").Equals("Overtime", StringComparison.CurrentCultureIgnoreCase))
+                          .Select(a => a).CopyToDataTable();
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// Initializes a new instance of the <see cref=""/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Overtime(Provider provider, Dictionary<string, object> p)
+        public Overtime(Provider provider, Dictionary<string, object> p) : base(provider, p)
         {
-            Source = Source.Supplemental;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider, p).GetDataTable();
-            Records = Table.AsEnumerable().Select(r => r).ToArray();
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(d => d).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                Type = Data["Type"].ToString();
-                RC = Data["RC"].ToString();
-                DivisionName = Data["DivisionName"].ToString();
-                FundCode = Data["FundCode"].ToString();
-                BFY = Data["BFY"].ToString();
-                Amount = decimal.Parse(Data["Amount"].ToString());
-            }
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+            Table = DbData.Table.AsEnumerable()
+                          .Where(a => a.Field<string>("Type").Equals("Overtime", StringComparison.CurrentCultureIgnoreCase))
+                          .Select(a => a).CopyToDataTable();
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Awards"/> class.
+        /// Initializes a new instance of the <see cref="Overtime"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Overtime(DataRow data)
+        public Overtime(DataRow data) : base(data)
         {
             Data = data;
-            ID = int.Parse(Data["ID"].ToString());
-            Type = Data["Type"].ToString();
-            RC = Data["RC"].ToString();
-            DivisionName = Data["DivisionName"].ToString();
-            FundCode = Data["FundCode"].ToString();
-            BFY = Data["BFY"].ToString();
-            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets or sets the Source
-        /// </summary>
-        public new Source Source { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Provider
-        /// </summary>
-        public new Provider Provider { get; set; }
-
-        /// <summary>
-        /// Gets or sets the DbData
-        /// </summary>
-        public new DataBuilder DbData { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
-        public new DataTable Table { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
-        public new string[] Columns { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
-        public new DataRow[] Records { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Data
-        /// </summary>
-        public new DataRow Data { get; set; }
-
-        /// <summary>
-        /// Gets or sets the ProgramElements
-        /// </summary>
-        public new Dictionary<string, string[]> ProgramElements { get; set; }
 
 
         // METHODS

@@ -20,6 +20,26 @@ namespace BudgetExecution
         /// </summary>
         public PayrollAccruals()
         {
+            Source = Source.PayAccruals;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            FirstName = Data["FirstName"].ToString();
+            EmployeeID = Data["EmployeeID"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            StartDate = Data["StartDate"].ToString();
+            EndDate = Data["EndDate"].ToString();
+            ApprovalDate = Data["ApprovalDate"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         /// <summary>
@@ -28,11 +48,10 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="sql">The sql<see cref="Sql"/></param>
-        public PayrollAccruals(Source source = Source.PayAccruals, Provider provider = Provider.SQLite, Sql sql = Sql.SELECT)
+        public PayrollAccruals(Provider provider = Provider.SQLite) : this()
         {
-            Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source.PayAccruals, Provider);
+            DbData = new DataBuilder(Source, Provider);
         }
 
         /// <summary>
@@ -41,51 +60,26 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public PayrollAccruals(Source source, Provider provider, Dictionary<string, object> p)
+        public PayrollAccruals(Provider provider, Dictionary<string, object> p) : this()
         {
-            Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source.PayrollObligations, Provider, p);
-            Table = DbData.Table;
-            Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
-            ID = int.Parse(Data["ID"].ToString());
-            FirstName = Data["FirstName"].ToString();
-            EmployeeID = Data["EmployeeID"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            StartDate = Data["StartDate"].ToString();
-            EndDate = Data["EndDate"].ToString();
-            ApprovalDate = Data["ApprovalDate"].ToString();
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            HrOrgCode = Data["HrOrgCode"].ToString();
-            WorkCode = Data["WorkCode"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            Hours = decimal.Parse(Data["Hours"].ToString());
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        public PayrollAccruals(Dictionary<string, object> p) : this()
+        {
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PayrollAccruals"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public PayrollAccruals(DataRow data)
+        public PayrollAccruals(DataRow data) : this()
         {
             Data = data;
-            ID = int.Parse(Data["ID"].ToString());
-            FirstName = Data["FirstName"].ToString();
-            EmployeeID = Data["EmployeeID"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            StartDate = Data["StartDate"].ToString();
-            EndDate = Data["EndDate"].ToString();
-            ApprovalDate = Data["ApprovalDate"].ToString();
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            HrOrgCode = Data["HrOrgCode"].ToString();
-            WorkCode = Data["WorkCode"].ToString();
-            ReportingCodeName = Data["ReportingCodeName"].ToString();
-            ReportingCode = Data["ReportingCode"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            HrOrgCodeName = Data["HrOrgCodeName"].ToString();
-            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         // PROPERTIES
@@ -98,6 +92,8 @@ namespace BudgetExecution
         /// Gets or sets the Provider
         /// </summary>
         public Provider Provider { get; set; }
+
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the DbData

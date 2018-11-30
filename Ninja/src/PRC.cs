@@ -28,38 +28,9 @@ namespace BudgetExecution
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PRC"/> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public PRC(Provider provider = Provider.SQLite)
-        {
-            Source = Source.PRC;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Records;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PRC"/> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public PRC(Provider provider, Dictionary<string, object> param)
-        {
-            Source = Source.PRC;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Records;
-            if(DbData.Table.Rows.Count == 1)
+            if(Records.Length == 1)
             {
-                Data = DbData.Table.AsEnumerable().Select(p => p).Single();
+                Data = DbData.Table.AsEnumerable().Select(p => p).First();
                 ID = int.Parse(Data["ID"].ToString());
                 BudgetLevel = Data["BudgetLevel"].ToString();
                 RPIO = Data["RPIO"].ToString();
@@ -84,117 +55,43 @@ namespace BudgetExecution
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="PRC"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.PRC" /> class.
         /// </summary>
-        /// <param name="id">The id<see cref="int"/></param>
-        /// <param name="bl">The bl<see cref="string"/></param>
-        /// <param name="rpio">The rpio<see cref="string"/></param>
-        /// <param name="bfy">The bfy<see cref="string"/></param>
-        /// <param name="fund">The fund<see cref="string"/></param>
-        /// <param name="ah">The ah<see cref="string"/></param>
-        /// <param name="org">The org<see cref="string"/></param>
-        /// <param name="rc">The rc<see cref="string"/></param>
-        /// <param name="code">The code<see cref="string"/></param>
-        /// <param name="boc">The boc<see cref="string"/></param>
-        /// <param name="amount">The amount<see cref="decimal"/></param>
-        public PRC(int id, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.PRC.Provider" /></param>
+        public PRC(Provider provider = Provider.SQLite) : this()
         {
-            ID = id;
-            BudgetLevel = bl;
-            RPIO = rpio;
-            BFY = bfy;
-            Fund = new Fund(Provider.SQLite, new Dictionary<string, object> { ["BFY"] = bfy, ["Code"] = fund });
-            FundCode = Fund.Code;
-            AH = ah;
-            RC = new RC(rc);
-            Org = new Org(org);
-            Account = new Account(Provider.SQLite, BFY, Fund.Code, code);
-            Code = Account.Code;
-            BOC = new BOC(boc, amount);
-            Amount = amount;
-            Parameter = AsDictionary();
-            ProgramProjectCode = Account.ProgramProjectCode;
-            ProgramProjectName = Account.ProgramProjectName;
-            ProgramArea = Account.ProgramArea;
-            NPM = Account.NPM;
-            NpmCode = Account.NpmCode;
-            Goal = Account.Goal;
-            GoalName = Account.GoalName;
-            Objective = Account.Objective;
-            ObjectiveName = Account.ObjectiveName;
+            Provider = provider;
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.PRC" /> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.PRC.Provider" /></param>
+        /// <param name="param">The param<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
+        public PRC(Provider provider, Dictionary<string, object> param) : this()
+        {
+            Provider = provider;
+            DbData = new DataBuilder(Source.PRC, Provider, param);
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PRC"/> class.
         /// </summary>
         /// <param name="row">The row<see cref="DataRow"/></param>
-        public PRC(DataRow row)
+        public PRC(DataRow row) : this()
         {
             Data = row;
-            Table = Data.Table;
-            Columns = Table.Columns
-                           .Cast<DataColumn>().AsEnumerable()
-                           .Select(d => d.ColumnName).ToArray();
-            ID = int.Parse(Data["ID"].ToString());
-            BudgetLevel = Data["BudgetLevel"].ToString();
-            RPIO = Data["RPIO"].ToString();
-            AH = Data["AH"].ToString();
-            BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
-            FundCode = Fund.Code;
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
-            Code = Account.Code;
-            BOC = new BOC(Data["BOC"].ToString());
-            Parameter = AsDictionary();
-            Amount = decimal.Parse(Data["Amount"].ToString());
-            ProgramProjectCode = Account.ProgramProjectCode;
-            ProgramProjectName = Account.ProgramProjectName;
-            ProgramArea = Account.ProgramArea;
-            NPM = Account.NPM;
-            NpmCode = Account.NpmCode;
-            Goal = Account.Goal;
-            GoalName = Account.GoalName;
-            Objective = Account.Objective;
-            ObjectiveName = Account.ObjectiveName;
         }
 
         /// <summary></summary>
         /// <param name="data"></param>
-        public PRC(Dictionary<string, object> data)
+        public PRC(Dictionary<string, object> data) : this()
         {
             Parameter = data;
             DbData = new DataBuilder(Source.PRC, Provider.SQLite, Parameter);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Records;
-            if(DbData.Table.Rows.Count == 1)
-            {
-                Data = DbData.Table.AsEnumerable().Select(p => p).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                BudgetLevel = Data["BudgetLevel"].ToString();
-                RPIO = Data["RPIO"].ToString();
-                AH = Data["AH"].ToString();
-                BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
-                Org = new Org(Data["Org"].ToString());
-                RC = new RC(Data["RC"].ToString());
-                Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
-                Code = Account.Code;
-                BOC = new BOC(Data["BOC"].ToString());
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                ProgramProjectCode = Account.ProgramProjectCode;
-                ProgramProjectName = Account.ProgramProjectName;
-                ProgramArea = Account.ProgramArea;
-                NPM = Account.NPM;
-                NpmCode = Account.NpmCode;
-                Goal = Account.Goal;
-                GoalName = Account.GoalName;
-                Objective = Account.Objective;
-                ObjectiveName = Account.ObjectiveName;
-            }
         }
 
         // PROPERTIES

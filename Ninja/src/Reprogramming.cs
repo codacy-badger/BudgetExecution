@@ -26,8 +26,7 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
-            DbQuery = new Query(Source, Provider);
-            DbData = new DataBuilder(DbQuery);
+            DbData = new DataBuilder(Source, Provider);
             DbTable = DbData.Table;
             DbRow = DbData.Records;
             ProgramElements = DbData.GetProgramElements(DbTable);
@@ -37,7 +36,6 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        public Query DbQuery { get; }
 
         public DataTable DbTable { get; }
 

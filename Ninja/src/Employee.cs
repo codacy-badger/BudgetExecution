@@ -25,61 +25,8 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Employee(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider, p);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = Table.AsEnumerable().Select(a => a).ToArray();
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(r => r).Single();
-                Section = Data["Section"].ToString();
-                FirstName = Data["FirstName"].ToString();
-                LastName = Data["LastName"].ToString();
-                Office = Data["Office"].ToString();
-                Phone = Data["Phone"].ToString();
-                Cell = Data["Cell"].ToString();
-                Email = Data["Email"].ToString();
-                Status = Data["Status"].ToString();
-                RC = new RC(Data["RC"].ToString());
-                Division = new Division(source);
-            }
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="data">The data<see cref="DataRow"/></param>
-        public Employee(DataRow data)
-        {
-            Data = data;
+            Records = DbData.Records;
+            Data = DbData.Data;
             Section = Data["Section"].ToString();
             FirstName = Data["FirstName"].ToString();
             LastName = Data["LastName"].ToString();
@@ -89,6 +36,41 @@ namespace BudgetExecution
             Email = Data["Email"].ToString();
             Status = Data["Status"].ToString();
             RC = new RC(Data["RC"].ToString());
+            Division = new Division(Source);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite) : this()
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public Employee(Provider provider, Dictionary<string, object> p) : this()
+        {
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Employee"/> class.
+        /// </summary>
+        /// <param name="data">The data<see cref="DataRow"/></param>
+        public Employee(DataRow data) : this()
+        {
+            Data = data;
         }
 
         // PROPERTIES
@@ -131,6 +113,8 @@ namespace BudgetExecution
         /// Gets or sets the ProgramElements
         /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
+
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the ID

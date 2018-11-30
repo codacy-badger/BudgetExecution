@@ -27,45 +27,14 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="DataBuilder"/> class.
         /// </summary>
-        /// <param name="q">The q<see cref="Query"/></param>
-        public DataBuilder(Query q)
-        {
-            Input = null;
-            Source = q.Source;
-            Query = new Query(q.Source, q.Provider, q.Sql);
-
-            if(q.Source == Source.PRC)
-            {
-                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
-            }
-
-            if(q.Source == Source.FTE)
-            {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
-            }
-            else
-            {
-                Table = GetDataTable();
-            }
-
-            Total = GetTotal(Source, Table);
-            Columns = GetColumnNames(Table);
-            ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            Records = GetRecords(Table);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
-        /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         public DataBuilder(Source source, Provider provider = Provider.SQLite)
         {
             Input = null;
             Source = source;
-            Query = new Query(source, provider);
+            Provider = provider;
+            Query = new Query(Source, Provider);
 
             if(source == Source.PRC)
             {
@@ -105,37 +74,10 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
+        public DataBuilder(Source source, Provider provider, Dictionary<string, object> param) : this(source, provider)
         {
-            Source = source;
-            Provider = provider;
             Input = param;
-            Query = new Query(source, provider, Sql.SELECT, Input);
-            if(source == Source.PRC)
-            {
-                Table = GetDataTable(Source).AsEnumerable()
-                                            .Where(p => p.Field<string>("BOC") != "17")
-                                            .Where(p => p.Field<decimal>("Amount") != 0)
-                                            .Select(p => p).CopyToDataTable();
-            }
-
-            if(source == Source.FTE)
-            {
-                Table = GetDataTable().AsEnumerable()
-                                      .Where(p => p.Field<string>("BOC").Equals("17"))
-                                      .Where(p => p.Field<decimal>("Amount") != 0)
-                                      .Select(p => p).CopyToDataTable();
-            }
-            else
-            {
-                Table = GetDataTable();
-            }
-
-            Total = GetTotal(Source, Table);
-            Columns = GetColumnNames(Table);
-            ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource(Table.DataSet, Table.TableName);
-            Records = GetRecords(Table);
+            Query = new Query(Source, Provider, Sql.SELECT, Input);
         }
 
         // PROPERTIES

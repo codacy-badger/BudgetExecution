@@ -18,7 +18,7 @@ namespace BudgetExecution
 
         string Name { get; }
 
-        Dictionary<string, object> Parameter { get; }
+        Dictionary<string, object> Input { get; }
 
         string Title { get; }
 

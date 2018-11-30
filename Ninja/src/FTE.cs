@@ -12,15 +12,17 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="FTE" />
     /// </summary>
-    public class FTE : PRC, IPRC
+    public class FTE : PRC, IDataBuilder, IPRC
     {
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="FTE"/> class.
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.FTE" /> class.
         /// </summary>
         public FTE()
         {
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="FTE"/> class.
         /// </summary>
@@ -30,6 +32,7 @@ namespace BudgetExecution
             FteParameter = AsDictionary();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Initializes a new instance of the <see cref="FTE"/> class.
         /// </summary>
@@ -37,28 +40,16 @@ namespace BudgetExecution
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public FTE(Provider provider, Dictionary<string, object> param) : base(provider, param)
         {
-            DbData = base.DbData;
-            Metric = new PrcMetric(DbData);
-            Table = DbData.Table;
-            BOC = new BOC("17");
+            FteParameter = param;
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets the DbData
-        /// </summary>
-        private new DataBuilder DbData { get; }
-
-        /// <summary>
-        /// Gets or sets the Metric
-        /// </summary>
-        private PrcMetric Metric { get; set; }
-
         /// <summary>
         /// Gets the FteParameter
         /// </summary>
         private Dictionary<string, object> FteParameter { get; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Gets or sets the BOC
         /// </summary>
@@ -140,37 +131,23 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The GetDataElements
-        /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
-        public Dictionary<string, string[]> GetDataElements(DataTable table)
+        /// <inheritdoc />
+        /// <summary>The GetProgramElements</summary>
+        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
+        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
+        Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
-            Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-            foreach(DataColumn dc in table.Columns)
+            try
             {
-                if(dc.ColumnName.Equals("ID") ||
-                   dc.ColumnName.Equals("Amount"))
-                {
-                    continue;
-                }
-
-                data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                return DbData.ProgramElements;
             }
-
-            if(data.ContainsKey("ID"))
+            catch(Exception ex)
             {
-                data.Remove("ID");
+                new Error(ex).ShowDialog();
+                return null;
             }
-
-            if(data.ContainsKey("Amount"))
-            {
-                data.Remove("Amount");
-            }
-
-            return data;
         }
+
 
         /// <summary>
         /// The GetDataValues

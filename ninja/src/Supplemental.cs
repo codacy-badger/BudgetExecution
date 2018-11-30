@@ -20,18 +20,29 @@ namespace BudgetExecution
         /// </summary>
         public Supplemental()
         {
+            Source = Source.Supplemental;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = Table.AsEnumerable().Select(a => a).ToArray();
+            Data = Table.AsEnumerable().Select(d => d).Single();
+            ID = int.Parse(Data["ID"].ToString());
+            Type = Data["Type"].ToString();
+            RC = Data["RC"].ToString();
+            DivisionName = Data["DivisionName"].ToString();
+            FundCode = Data["FundCode"].ToString();
+            BFY = Data["BFY"].ToString();
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Supplemental(Provider provider = Provider.SQLite)
+        public Supplemental(Provider provider = Provider.SQLite) : this()
         {
-            Source = Source.Supplemental;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider).Table;
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
         /// <summary>
@@ -39,39 +50,26 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Supplemental(Provider provider, Dictionary<string, object> p)
+        public Supplemental(Provider provider, Dictionary<string, object> p) : this()
         {
-            Source = Source.Supplemental;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider, p).GetDataTable();
-            Records = Table.AsEnumerable().Select(r => r).ToArray();
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(d => d).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                RC = Data["RC"].ToString();
-                DivisionName = Data["DivisionName"].ToString();
-                FundCode = Data["FundCode"].ToString();
-                BFY = Data["BFY"].ToString();
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                Type = Data["Type"].ToString();
-            }
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+        
+        public Supplemental(Dictionary<string, object> p) : this()
+        {
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Awards"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Supplemental(DataRow data)
+        public Supplemental(DataRow data) : this()
         {
             Data = data;
-            ID = int.Parse(Data["ID"].ToString());
-            RC = Data["RC"].ToString();
-            DivisionName = Data["DivisionName"].ToString();
-            FundCode = Data["FundCode"].ToString();
-            BFY = Data["BFY"].ToString();
-            Amount = decimal.Parse(Data["Amount"].ToString());
-            Type = Data["Type"].ToString();
         }
 
         // PROPERTIES
@@ -84,6 +82,8 @@ namespace BudgetExecution
         /// Gets or sets the Provider
         /// </summary>
         public Provider Provider { get; set; }
+
+        public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
         /// Gets or sets the DbData

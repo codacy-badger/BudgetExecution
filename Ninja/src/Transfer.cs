@@ -24,8 +24,25 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            TransId = int.Parse(DbRow["ID"].ToString());
+            Data = Table.AsEnumerable().Select(t => t).First();
+            TransId = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            DocType = Data["DocType"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            TCN = Data["TCN"].ToString();
+            Qtr = Data["Qtr"].ToString();
+            Date = Data["Date"].ToString();
+            Code = Data["Code"].ToString();
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
+            FundCode = Account.FundCode;
+            NpmCode = Account.NPM;
+            FromTo = Data["FromTo"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         /// <summary>
@@ -33,81 +50,31 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Transfer(Source source = Source.Transfers, Provider provider = Provider.SQLite)
+        public Transfer(Provider provider = Provider.SQLite) : this()
         {
-            Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            TransId = int.Parse(DbRow["ID"].ToString());
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Transfer"/> class.
-        /// </summary>
-        /// <param name="bl">The bl<see cref="string"/></param>
-        /// <param name="docType">The docType<see cref="string"/></param>
-        /// <param name="rpio">The rpio<see cref="string"/></param>
-        /// <param name="org">The org<see cref="string"/></param>
-        /// <param name="rc">The rc<see cref="string"/></param>
-        /// <param name="bfy">The bfy<see cref="string"/></param>
-        /// <param name="fund">The fund<see cref="string"/></param>
-        /// <param name="tcn">The tcn<see cref="string"/></param>
-        /// <param name="qtr">The qtr<see cref="string"/></param>
-        /// <param name="date">The date<see cref="string"/></param>
-        /// <param name="code">The code<see cref="string"/></param>
-        /// <param name="progproj">The progproj<see cref="string"/></param>
-        /// <param name="ppn">The ppn<see cref="string"/></param>
-        /// <param name="npmcode">The npmcode<see cref="string"/></param>
-        /// <param name="fromto">The fromto<see cref="string"/></param>
-        /// <param name="boc">The boc<see cref="string"/></param>
-        /// <param name="amount">The amount<see cref="decimal"/></param>
-        public Transfer(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
+        public Transfer(Provider provider, Dictionary<string, object> p) : this()
         {
-            BudgetLevel = bl;
-            DocType = docType;
-            RPIO = rpio;
-            Org = new Org(org);
-            RC = new RC(rc);
-            BFY = bfy;
-            Fund = new Fund(fund, BFY);
-            TCN = tcn;
-            Qtr = qtr;
-            Date = date;
-            Code = code;
-            Account = new Account(0, BFY, fund, code);
-            FundCode = Account.FundCode;
-            NpmCode = Account.NPM;
-            FromTo = fromto;
-            BOC = new BOC(boc);
-            Amount = amount;
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        public Transfer(Dictionary<string, object> p) : this()
+        {
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Transfer"/> class.
         /// </summary>
         /// <param name="dr">The dr<see cref="DataRow"/></param>
-        public Transfer(DataRow dr)
+        public Transfer(DataRow dr) : this()
         {
-            TransId = int.Parse(dr["ID"].ToString());
-            BudgetLevel = dr["BudgetLevel"].ToString();
-            DocType = dr["DocType"].ToString();
-            RPIO = dr["RPIO"].ToString();
-            Org = new Org(dr["Org"].ToString());
-            RC = new RC(dr["RC"].ToString());
-            BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["FundCode"].ToString(), BFY);
-            TCN = dr["TCN"].ToString();
-            Qtr = dr["Qtr"].ToString();
-            Date = dr["Date"].ToString();
-            Code = dr["Code"].ToString();
-            Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
-            FundCode = Account.FundCode;
-            NpmCode = Account.NPM;
-            FromTo = dr["FromTo"].ToString();
-            BOC = new BOC(dr["BOC"].ToString());
-            Amount = decimal.Parse(dr["Amount"].ToString());
+            Data = dr;
         }
 
         // PROPERTIES
@@ -120,6 +87,8 @@ namespace BudgetExecution
         /// Gets or sets the Provider
         /// </summary>
         public Provider Provider { get; set; }
+
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the DbData
@@ -155,12 +124,7 @@ namespace BudgetExecution
         /// Gets the TransId
         /// </summary>
         public int TransId { get; }
-
-        /// <summary>
-        /// Gets the DbRow
-        /// </summary>
-        public DataRow DbRow { get; }
-
+        
         /// <summary>
         /// Gets the Account
         /// </summary>

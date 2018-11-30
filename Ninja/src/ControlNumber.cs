@@ -16,54 +16,58 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public ControlNumber()
         {
-        }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        public ControlNumber(Provider provider = Provider.SQLite)
-        {
             Source = Source.ControlNumbers;
-            Provider = provider;
+            Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Records = DbData.Records;
-        }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
-        /// </summary>
-        /// <param name="division">The division.</param>
-        public ControlNumber(string fundCode, string division)
-        {
-            Source = Source.ControlNumbers;
-            Provider = Provider.SQLite;
-            FundCode = fundCode;
-            Division = division;
-            DbData = new DataBuilder(Source, Provider, GetParamData(FundCode, division));
-            Table = DbData.Table;
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(d => d).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                Region = "R6";
-                BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
-                RegionControlNumber = GetRegionCount() + 1;
-                FundControlNumber = RegionControlNumber + 1;
-                BudgetControlNumber = FundControlNumber + 1;
-            }
-        }
-
-        public ControlNumber(DataRow data)
-        {
-            Data = data;
+            Data = DbData.Data;
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
             BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
+        }
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
+        /// </summary>
+        /// <param name="provider">The provider.</param>
+        public ControlNumber(Provider provider = Provider.SQLite) : this()
+        {
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+        }
+
+        public ControlNumber(Provider provider, Dictionary<string, object> p) : this()
+        {
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        public ControlNumber(Dictionary<string, object> p) : this()
+        {
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
+        /// </summary>
+        /// <param name="division">The division.</param>
+        public ControlNumber(string fundCode, string division) : this()
+        {
+            FundCode = fundCode;
+            Division = division;
+            Input = GetParameter(FundCode, Division);
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        public ControlNumber(DataRow data)
+        {
+            Data = data;
         }
 
         // PROPERTIES
@@ -101,7 +105,7 @@ namespace BudgetExecution
 
         public int BudgetControlNumber { get; set; }
 
-        public Dictionary<string, object> Parameter { get; set; }
+        public Dictionary<string, object> Input { get; set; }
 
         // METHODS
 
@@ -111,7 +115,7 @@ namespace BudgetExecution
         /// <param name="fund">The fund.</param>
         /// <param name="divisionid">The divisionid.</param>
         /// <returns>  </returns>
-        public Dictionary<string, object> GetParamData(string fund, string divisionid)
+        public Dictionary<string, object> GetParameter(string fund, string divisionid)
         {
             try
             {

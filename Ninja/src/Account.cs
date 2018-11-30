@@ -25,42 +25,12 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Account"/> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Account(Provider provider = Provider.SQLite)
-        {
-            Source = Source.Accounts;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-        }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
-        /// <param name="bfy">The bfy<see cref="T:System.String" /></param>
-        /// <param name="fund">The fund<see cref="T:System.String" /></param>
-        /// <param name="code">The code<see cref="T:System.String" /></param>
-        public Account(Provider provider, string bfy, string fund, string code) : this(provider)
-        {
-            Code = code;
-            ProgramProjectCode = Code.Substring(4, 2);
-            Parameter = GetAccountParameter(bfy, fund, code);
-            DbData = new DataBuilder(Source.Accounts, provider, Parameter);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
+            Records = DbData.Records;
+            if(Records.Length == 1)
             {
                 Data = Table.AsEnumerable().Select(d => d).Single();
                 ID = int.Parse(Data["ID"].ToString());
+                Code = Data["Code"].ToString();
                 Goal = Code.Substring(0, 1);
                 Objective = Code.Substring(1, 2);
                 NpmCode = Code.Substring(3, 1);
@@ -73,6 +43,7 @@ namespace BudgetExecution
                 GoalName = Table.Rows[0]["GoalName"].ToString();
                 ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
                 ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+                Parameter = GetAccountParameter(BFY, FundCode, Code);
             }
         }
 
@@ -81,9 +52,37 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
         /// </summary>
         /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
-        /// <param name="p">The p<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
-        public Account(Provider provider, Dictionary<string, object> p)
+        public Account(Provider provider = Provider.SQLite) : this()
         {
+            Provider = provider;
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
+        /// <param name="bfy">The bfy<see cref="T:System.String" /></param>
+        /// <param name="fund">The fund<see cref="T:System.String" /></param>
+        /// <param name="code">The code<see cref="T:System.String" /></param>
+        public Account(Provider provider, string bfy, string fund, string code) : this()
+        {
+            Code = code;
+            Provider = provider;
+            ProgramProjectCode = Code.Substring(4, 2);
+            Parameter = GetAccountParameter(bfy, fund, code);
+            DbData = new DataBuilder(Source.Accounts, provider, Parameter);
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:BudgetExecution.Account" /> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="P:BudgetExecution.Account.Provider" /></param>
+        /// <param name="p">The p<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
+        public Account(Provider provider, Dictionary<string, object> p) : this() 
+        {
+            Provider = provider;
             if(p.ContainsKey("BFY"))
             {
                 BFY = p["BFY"].ToString();
@@ -97,78 +96,33 @@ namespace BudgetExecution
             if(p.ContainsKey("Code"))
             {
                 Code = p["Code"].ToString();
+                ProgramProjectCode = Code.Substring(4, 2);
             }
 
-            ProgramProjectCode = Code.Substring(4, 2);
             Parameter = p;
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = Table.AsEnumerable().Select(d => d).Single();
-                ID = int.Parse(Data["ID"].ToString());
-                Goal = Code.Substring(0, 1);
-                Objective = Code.Substring(1, 2);
-                NpmCode = Code.Substring(3, 1);
-                Org = Data["Org"].ToString();
-                BFY = Data["BFY"].ToString();
-                FundCode = Data["FundCode"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                NPM = Data["NPM"].ToString();
-                ObjectiveName = Data["ObjectiveName"].ToString();
-                GoalName = Data["GoalName"].ToString();
-                ProgramArea = Data["ProgramArea"].ToString();
-                ProgramAreaName = Data["ProgramAreaName"].ToString();
-            }
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Account"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
-        public Account(DataRow data)
+        public Account(DataRow data) : this()
         {
             Data = data;
-            ID = int.Parse(data["ID"].ToString());
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            ProgramProjectCode = Code.Substring(4, 2);
-            BFY = data["BFY"].ToString();
-            FundCode = data["Fund"].ToString();
-            FundName = data["FundName"].ToString();
-            ProgramProjectName = data["ProgramProjectName"].ToString();
-            NPM = data["NPM"].ToString();
-            ObjectiveName = data["ObjectiveName"].ToString();
-            GoalName = data["GoalName"].ToString();
-            ProgramArea = data["ProgramArea"].ToString();
-            ProgramAreaName = data["ProgramAreaName"].ToString();
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Account"/> class.
         /// </summary>
         /// <param name="data">The data<see cref="Dictionary{string, object}"/></param>
-        public Account(Dictionary<string, object> data)
+        public Account(Dictionary<string, object> data) : this()
         {
             Parameter = data;
-            Data = new DataBuilder(Source.Accounts, Provider.SQLite, Parameter).Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            ProgramProjectCode = Code.Substring(4, 2);
-            BFY = Data["BFY"].ToString();
-            FundCode = Data["Fund"].ToString();
-            FundName = Data["FundName"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            NPM = Data["NPM"].ToString();
-            ObjectiveName = Data["ObjectiveName"].ToString();
-            GoalName = Data["GoalName"].ToString();
-            ProgramArea = Data["ProgramArea"].ToString();
-            ProgramAreaName = Data["ProgramAreaName"].ToString();
         }
+
+        
+        // METHODS
 
         /// <summary>
         /// Gets the Source
@@ -275,6 +229,37 @@ namespace BudgetExecution
         /// </summary>
         public string ProgramProjectCode { get; }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets or sets the Columns
+        /// </summary>
+        public string[] Columns { get; set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
+        public DataTable Table { get; set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets or sets the Records
+        /// </summary>
+        public DataRow[] Records { get; set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets or sets the Data
+        /// Gets the Data
+        /// </summary>
+        public DataRow Data { get; set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
+        public Dictionary<string, string[]> ProgramElements { get; set; }
+
         // METHODS
 
         /// <inheritdoc />
@@ -350,37 +335,6 @@ namespace BudgetExecution
         {
             return Code;
         }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
-        public string[] Columns { get; set; }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
-        public DataTable Table { get; set; }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
-        public DataRow[] Records { get; set; }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the Data
-        /// Gets the Data
-        /// </summary>
-        public DataRow Data { get; set; }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the ProgramElements
-        /// </summary>
-        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         /// <inheritdoc />
         /// <summary>
