@@ -20,38 +20,14 @@ namespace BudgetExecution
         /// </summary>
         public WorkCode()
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkCode"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public WorkCode(Provider provider = Provider.SQLite)
-        {
             Source = Source.WorkCodes;
-            Provider = provider;
+            Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkCode"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public WorkCode(Provider provider, Dictionary<string, object> p)
-        {
-            Source = Source.WorkCodes;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider, p);
-            Table = DbData.Table;
-            Data = DbData.Table.AsEnumerable().Select(prc => prc).First();
             ID = int.Parse(Data["ID"].ToString());
             PayPeriod = Data["PayPeriod"].ToString();
             BFY = Data["BFY"].ToString();
             Org = Data["StartDate"].ToString();
-            FundCode = Data["EndDate"].ToString();
+            FundCode = Data["FundCode"].ToString();
             ApprovalDate = Data["ApprovalDate"].ToString();
             Project = Data["ProgramProjectCode"].ToString();
             Code = Data["WorkCode"].ToString();
@@ -62,19 +38,33 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkCode"/> class.
         /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        public WorkCode(Provider provider = Provider.SQLite) : this()
+        {
+            Provider = provider;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkCode"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
+        public WorkCode(Provider provider, Dictionary<string, object> p) : this()
+        {
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkCode"/> class.
+        /// </summary>
         /// <param name="data">The data<see cref="DataRow"/></param>
         public WorkCode(DataRow data)
         {
-            ID = int.Parse(data["ID"].ToString());
-            PayPeriod = data["PayPeriod"].ToString();
-            BFY = data["BFY"].ToString();
-            Org = data["StartDate"].ToString();
-            FundCode = data["FundCode"].ToString();
-            ApprovalDate = data["ApprovalDate"].ToString();
-            Project = data["ProgramProjectCode"].ToString();
-            Code = data["WorkCode"].ToString();
-            PayPeriod = data["PayPeriod"].ToString();
-            Description = data["FirstName"].ToString();
+            Data = data;
         }
 
         // PROPERTIES
@@ -102,6 +92,8 @@ namespace BudgetExecution
         /// Gets or sets the Columns
         /// </summary>
         public string[] Columns { get; set; }
+
+        public Dictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the Records
@@ -198,7 +190,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -206,7 +198,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
         /// <param name="table"></param>

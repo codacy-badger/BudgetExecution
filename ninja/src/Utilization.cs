@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.ComponentModel;
+
 namespace BudgetExecution
 {
     using System;
@@ -30,7 +32,7 @@ namespace BudgetExecution
             ID = int.Parse(Data["ID"].ToString());
             RPIO = Data["RPIO "].ToString();
             BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["Fund"].ToString(), BFY);
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
             AH = Data["AH"].ToString();
             Org = new Org(Data["Org"].ToString());
             RC = new RC(Data["RC"].ToString());
@@ -54,7 +56,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public Utilization(Provider provider, Dictionary<string, object> param) : this()
+        public Utilization(Provider provider, IDictionary<string, object> param) : this()
         {
             Provider = provider;
             Input = param;
@@ -81,7 +83,7 @@ namespace BudgetExecution
         /// </summary>
         public Provider Provider { get; set; }
 
-        public Dictionary<string, object> Input { get; }
+        public IDictionary<string, object> Input { get; }
 
         /// <summary>
         /// Gets or sets the DbData
@@ -297,7 +299,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -305,7 +307,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
         /// <param name="table"></param>
