@@ -186,7 +186,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {

@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.ComponentModel;
+
 namespace BudgetExecution
 {
     using System.Collections.Generic;

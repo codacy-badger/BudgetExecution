@@ -28,31 +28,28 @@ namespace BudgetExecution
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-            if(Records.Length == 1)
-            {
-                Data = DbData.Table.AsEnumerable().Select(p => p).First();
-                ID = int.Parse(Data["ID"].ToString());
-                BudgetLevel = Data["BudgetLevel"].ToString();
-                RPIO = Data["RPIO"].ToString();
-                AH = Data["AH"].ToString();
-                BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
-                Org = new Org(Data["Org"].ToString());
-                RC = new RC(Data["RC"].ToString());
-                Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
-                Code = Account.Code;
-                BOC = new BOC(Data["BOC"].ToString());
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                ProgramProjectCode = Account.ProgramProjectCode;
-                ProgramProjectName = Account.ProgramProjectName;
-                ProgramArea = Account.ProgramArea;
-                NPM = Account.NPM;
-                NpmCode = Account.NpmCode;
-                Goal = Account.Goal;
-                GoalName = Account.GoalName;
-                Objective = Account.Objective;
-                ObjectiveName = Account.ObjectiveName;
-            }
+            Data = DbData.Table.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            AH = Data["AH"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         /// <inheritdoc />
@@ -429,14 +426,15 @@ namespace BudgetExecution
         }
 
         /// <inheritdoc />
-        /// <summary>The GetProgramElements</summary>
+        /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
         /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
         /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {

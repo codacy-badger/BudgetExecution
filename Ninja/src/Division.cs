@@ -178,13 +178,14 @@ namespace BudgetExecution
 
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
+        /// 
         /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
         /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {

@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.ComponentModel;
+
 namespace BudgetExecution
 {
     using System;
@@ -74,7 +76,7 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public DataBuilder(Source source, Provider provider, Dictionary<string, object> param) : this(source, provider)
+        public DataBuilder(Source source, Provider provider, IDictionary<string, object> param) : this(source, provider)
         {
             Input = param;
             Query = new Query(Source, Provider, Sql.SELECT, Input);
@@ -104,12 +106,12 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the Input
         /// </summary>
-        public Dictionary<string, object> Input { get; set; }
+        public IDictionary<string, object> Input { get; set; }
 
         /// <summary>
         /// Gets or sets the Schema
         /// </summary>
-        public Dictionary<string, Type> Schema { get; set; }
+        public IDictionary<string, Type> Schema { get; set; }
 
         /// <summary>
         /// Gets or sets the R6
@@ -170,7 +172,7 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc cref="" />
         /// <summary>
         /// Gets the records in the table as an Array of DataRows.
         /// </summary>
@@ -232,16 +234,16 @@ namespace BudgetExecution
                         if(dc.ColumnName.Equals("ID") ||
                            dc.ColumnName.Equals("Amount") ||
                            dc.ColumnName.Equals("Hours") ||
-                           dc.ColumnName.Contains("OpenCommitments") ||
+                           dc.ColumnName.Equals("OpenCommitments") ||
                            dc.ColumnName.Contains("ULO") ||
                            dc.ColumnName.Equals("Obligations") ||
-                           dc.ColumnName.Equals("Commitments") ||
+                           dc.ColumnName.Contains("Commitments") ||
                            dc.ColumnName.Equals("Authority") ||
                            dc.ColumnName.Equals("Budgeted") ||
                            dc.ColumnName.Equals("Posted") ||
                            dc.ColumnName.Equals("CarryIn") ||
                            dc.ColumnName.Equals("CarryOut") ||
-                           dc.ColumnName.Equals("Balance"))
+                           dc.ColumnName.Contains("Balance"))
                         {
                             continue;
                         }

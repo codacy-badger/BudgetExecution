@@ -271,7 +271,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -279,7 +279,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
         /// <param name="table"></param>

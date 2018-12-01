@@ -54,7 +54,7 @@ namespace BudgetExecution
             DeleteStatement = DeleteCommand.CommandText;
         }
 
-        public Query(Tuple<Provider, Source, Sql> queryTuple, Dictionary<string, object> param)
+        public Query(Tuple<Provider, Source, Sql> queryTuple, IDictionary<string, object> param)
         {
             Provider = queryTuple.Item1;
             Source = queryTuple.Item2;
@@ -80,7 +80,7 @@ namespace BudgetExecution
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="command">The command<see cref="Sql"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
+        public Query(Source source, Provider provider, Sql command, IDictionary<string, object> param)
         {
             Provider = provider;
             Source = source;
@@ -117,11 +117,6 @@ namespace BudgetExecution
         /// Gets the TableName
         /// </summary>
         public string TableName { get; }
-
-        /// <summary>
-        /// Gets or sets the Parameters
-        /// </summary>
-        public DbParameter[] Parameters { get; set; }
 
         /// <summary>
         /// Gets or sets the SelectStatement
@@ -535,7 +530,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetSqlParameterString(Dictionary<string, object> param)
+        public string GetSqlParameterString(IDictionary<string, object> param)
         {
             try
             {
@@ -560,7 +555,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
         /// <returns></returns>
-        internal string GetSelectParamString(Dictionary<string, object> p)
+        internal string GetSelectParamString(IDictionary<string, object> p)
         {
             try
             {
@@ -587,7 +582,7 @@ namespace BudgetExecution
         /// <param name="cmd">The command.</param>
         /// <param name="p">The p.</param>
         /// <returns></returns>
-        public string GetSqlStatement(Source source, Sql cmd, Dictionary<string, object> p)
+        public string GetSqlStatement(Source source, Sql cmd, IDictionary<string, object> p)
         {
             try
             {
@@ -626,7 +621,7 @@ namespace BudgetExecution
         /// <param name="table">The table.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetSelectStatement(string table, Dictionary<string, object> param)
+        public string GetSelectStatement(string table, IDictionary<string, object> param)
         {
             try
             {
@@ -645,7 +640,7 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetSelectStatement(Source source, Dictionary<string, object> param)
+        public string GetSelectStatement(Source source, IDictionary<string, object> param)
         {
             try
             {
@@ -671,7 +666,7 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         /// <returns></returns>
-        public string GetUpdateStatement(Source source, Dictionary<string, object> param)
+        public string GetUpdateStatement(Source source, IDictionary<string, object> param)
         {
             try
             {
@@ -699,7 +694,7 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetInsertStatement(Source source, Dictionary<string, object> param)
+        public string GetInsertStatement(Source source, IDictionary<string, object> param)
         {
             try
             {
@@ -728,7 +723,7 @@ namespace BudgetExecution
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetDeleteStatement(Source source, Dictionary<string, object> param)
+        public string GetDeleteStatement(Source source, IDictionary<string, object> param)
         {
             try
             {
@@ -782,7 +777,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        public DbCommand GetUpdateCommand(Dictionary<string, object> pmr)
+        public DbCommand GetUpdateCommand(IDictionary<string, object> pmr)
         {
             try
             {
@@ -804,7 +799,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        public DbCommand GetInsertCommand(Dictionary<string, object> pmr)
+        public DbCommand GetInsertCommand(IDictionary<string, object> pmr)
         {
             try
             {
@@ -826,7 +821,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="pmr">The pmr<see cref="Dictionary{string, object}"/></param>
         /// <returns>The <see cref="DbCommand"/></returns>
-        public DbCommand GetDeleteCommand(Dictionary<string, object> pmr)
+        public DbCommand GetDeleteCommand(IDictionary<string, object> pmr)
         {
             try
             {
@@ -849,7 +844,7 @@ namespace BudgetExecution
         /// <param name="cmd">The command.</param>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        public DbCommand GetDataCommand(Sql cmd, Dictionary<string, object> pmr)
+        public DbCommand GetDataCommand(Sql cmd, IDictionary<string, object> pmr)
         {
             try
             {
