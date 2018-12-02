@@ -328,7 +328,6 @@
     <Compile Include="src\SQLiteData.designer.cs">
       <DependentUpon>SQLiteData.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Appropriation.cs" />
     <Compile Include="src\BOC.cs" />
     <Compile Include="src\BudgetChart.cs" />
     <Compile Include="src\DataBuilder.cs" />

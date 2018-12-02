@@ -26,6 +26,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
+            Input = GetParameter();
         }
 
         /// <summary>
@@ -72,7 +73,7 @@ namespace BudgetExecution
             Parameter = data;
             Data = new DataBuilder(Source.Divisions, Provider.SQLite, Parameter).Data;
             ID = Data["ID"].ToString();
-            RC = Data["RC"].ToString();
+            RC = new RC(Data["RC"].ToString());
             Title = Data["Title"].ToString();
             Code = Data["Code"].ToString();
             Name = Data["Name"].ToString();
@@ -93,9 +94,20 @@ namespace BudgetExecution
         /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the d6.
+        /// </summary>
+        /// <value>
+        /// The d6.
+        /// </value>
         public DivisionAuthority D6 { get; set; }
 
-
+        /// <summary>
+        /// Gets the input.
+        /// </summary>
+        /// <value>
+        /// The input.
+        /// </value>
         public Dictionary<string, object> Input { get; }
 
         /// <summary>
@@ -116,7 +128,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the RC
         /// </summary>
-        public string RC { get; }
+        public RC RC { get; }
 
         /// <summary>
         /// Gets the Name
@@ -140,19 +152,10 @@ namespace BudgetExecution
         /// </summary>
         public string[] Columns { get; set; }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// </summary>
         public DataRow[] Records { get; set; }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// </summary>
         public DataRow Data { get; set; }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
         // METHODS
@@ -185,7 +188,7 @@ namespace BudgetExecution
         {
             try
             {
-                return (Dictionary<string, string[]>)DbData.ProgramElements;
+                return DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -213,12 +216,12 @@ namespace BudgetExecution
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
         /// <param name="table"></param>
-        /// <param name="col"></param>
-        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
+        /// <param name="column"></param>
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string column)
         {
             try
             {
-                return DbData.GetUniqueValues(table, col);
+                return DbData.GetUniqueValues(table, column);
             }
             catch(Exception ex)
             {
@@ -233,7 +236,7 @@ namespace BudgetExecution
         /// <returns>The <see cref="string" /></returns>
         public override string ToString()
         {
-            return RC;
+            return RC.Code;
         }
 
         /// <summary>
@@ -244,7 +247,11 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object> { ["RC"] = RC };
+                return new Dictionary<string, object>
+                {
+                    ["RC"] = RC, ["Name"] = Name,
+                    ["Code"] = Code
+                };
             }
             catch(Exception ex)
             {
