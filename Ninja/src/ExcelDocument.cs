@@ -224,7 +224,7 @@ namespace BudgetExecution
                     case Source.XA:
                     {
                         Division division = new Division(source);
-                        return division.RC;
+                        return division.RC.Code;
                     }
 
                     default:

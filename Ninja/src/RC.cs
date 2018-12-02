@@ -10,16 +10,8 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the <see cref="RC" />
     /// </summary>
-    public class RC
+    public struct RC
     {
-        // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RC"/> class.
-        /// </summary>
-        public RC()
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="RC"/> class.
         /// </summary>
@@ -27,6 +19,7 @@ namespace BudgetExecution
         public RC(string code)
         {
             Code = code;
+            Input = GetParameter(code);
             Name = Info.DivisionName(code);
             ID = Info.GetDivisionMailCode(code);
         }
@@ -47,6 +40,8 @@ namespace BudgetExecution
         /// </summary>
         public string Name { get; }
 
+        public Dictionary<string, object> Input { get; set; }
+
         // METHODS
         /// <summary>
         /// The ToString
@@ -61,11 +56,11 @@ namespace BudgetExecution
         /// The GetParameter
         /// </summary>
         /// <returns>The <see cref="Dictionary{string, object}"/></returns>
-        private Dictionary<string, object> GetParameter()
+        public static Dictionary<string, object> GetParameter(string code)
         {
             try
             {
-                return new Dictionary<string, object> { ["Code"] = Code };
+                return new Dictionary<string, object> { ["Code"] = code };
             }
             catch(Exception ex)
             {

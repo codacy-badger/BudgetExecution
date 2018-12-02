@@ -540,8 +540,7 @@ namespace BudgetExecution
                     vals += $"{kvp.Key} = '{kvp.Value}' AND";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {
@@ -565,8 +564,7 @@ namespace BudgetExecution
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {

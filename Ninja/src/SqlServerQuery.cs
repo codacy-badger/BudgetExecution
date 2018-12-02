@@ -32,7 +32,7 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = base.DataConnection as SqlConnection;;
+            DataConnection = base.DataConnection as SqlConnection;
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -155,7 +155,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         /// <returns>The <see cref="string"/></returns>
-        public new string GetSelectParamString(Dictionary<string, object> param)
+        public string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {
@@ -166,8 +166,7 @@ namespace BudgetExecution
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {
@@ -191,8 +190,7 @@ namespace BudgetExecution
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {
@@ -248,7 +246,7 @@ namespace BudgetExecution
         /// <param name="table">The table<see cref="string"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         /// <returns>The <see cref="string"/></returns>
-        public new string GetSelectStatement(string table, Dictionary<string, object> param)
+        public string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
             {
@@ -290,24 +288,6 @@ namespace BudgetExecution
             try
             {
                 return $"SELECT * FROM {TableName} WHERE {sql}";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// The GetConnection
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <returns>The <see cref="SqlConnection"/></returns>
-        public SqlConnection GetConnection(Provider provider)
-        {
-            try
-            {
-                return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
             }
             catch(Exception ex)
             {
