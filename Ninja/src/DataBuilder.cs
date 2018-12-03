@@ -12,25 +12,13 @@ namespace BudgetExecution
     using System.Linq;
     using System.Windows.Forms;
 
-    /// <inheritdoc />
-    /// <summary>
-    /// Defines the <see cref="T:BudgetExecution.DataBuilder" />
-    /// </summary>
     public class DataBuilder : IDataBuilder
     {
         // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
-        /// </summary>
         public DataBuilder()
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
         public DataBuilder(Source source, Provider provider = Provider.SQLite)
         {
             Input = null;
@@ -46,6 +34,13 @@ namespace BudgetExecution
                         .Where(p => p.Field<decimal>("Amount") > 0)
                         .Select(p => p)
                         .CopyToDataTable();
+
+                Total = GetTotal(Source, Table);
+                Columns = GetColumnNames(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
+                Records = GetRecords(Table);
+                Data = Table.Rows[0];
             }
 
             if(source == Source.FTE)
@@ -56,103 +51,75 @@ namespace BudgetExecution
                         .Where(p => p.Field<decimal>("Amount") > 0)
                         .Select(p => p)
                         .CopyToDataTable();
+
+                Total = GetTotal(Source, Table);
+                Columns = GetColumnNames(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
+                Records = GetRecords(Table);
+                Data = Table.Rows[0];
             }
             else
             {
-                Table = GetDataTable();
+                Table = GetDataTable(Source);
+                Total = GetTotal(Source, Table);
+                Columns = GetColumnNames(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
+                Records = GetRecords(Table);
+                Data = Table.Rows[0];
             }
+        }
 
+        public DataBuilder(Source source, Provider provider, IDictionary<string, object> param) : this(source, provider)
+        {
+            Source = source;
+            Provider = provider;
+            Input = param;
+            Query = new Query(Source, Provider, Sql.SELECT, Input);
+        }
+        
+        public DataBuilder(Source source, IDictionary<string, object> param) : this(source)
+        {
+            Source = source;
+            Input = param;
+            Query = new Query(Source, Provider, Sql.SELECT, Input);
+            Table = GetDataTable(Source);
             Total = GetTotal(Source, Table);
             Columns = GetColumnNames(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            Data = Table.AsEnumerable().Select(p => p).First();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DataBuilder"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public DataBuilder(Source source, Provider provider, IDictionary<string, object> param) : this(source, provider)
-        {
-            Input = param;
-            Query = new Query(Source, Provider, Sql.SELECT, Input);
+            Data = Table.Rows[0];
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets the Source
-        /// </summary>
         public Source Source { get; }
 
-        /// <summary>
-        /// Gets the Provider
-        /// </summary>
         public Provider Provider { get; }
 
-        /// <summary>
-        /// Gets or sets the BindingSource
-        /// </summary>
         public BindingSource BindingSource { get; set; }
 
-        /// <summary>
-        /// Gets the Total
-        /// </summary>
         public decimal Total { get; }
 
-        /// <summary>
-        /// Gets or sets the Input
-        /// </summary>
         public IDictionary<string, object> Input { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Schema
-        /// </summary>
         public IDictionary<string, Type> Schema { get; set; }
 
-        /// <summary>
-        /// Gets or sets the R6
-        /// </summary>
         public DataSet R6 { get; set; }
 
-        /// <summary>
-        /// Gets the Query
-        /// </summary>
         public Query Query { get; }
 
-        /// <summary>
-        /// Gets or sets the ProgramElements
-        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
         public string[] Columns { get; set; }
 
-        /// <summary>
-        /// Gets the Data
-        /// </summary>
         public DataRow Data { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
         public DataTable Table { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
         public DataRow[] Records { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data table.
-        /// </summary>
-        /// <returns></returns>
         public DataTable GetDataTable()
         {
             try
@@ -172,12 +139,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// Gets the records in the table as an Array of DataRows.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         public DataRow[] GetRecords(DataTable table)
         {
             try
@@ -191,13 +152,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the unique values.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="column">The column.</param>
-        /// <returns></returns>
         public string[] GetUniqueValues(DataTable table, string column)
         {
             try
@@ -216,12 +170,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the program elements.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             if(table != null)
@@ -273,11 +221,6 @@ namespace BudgetExecution
             return null;
         }
 
-        /// <summary>
-        /// Gets the data set.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <returns></returns>
         public DataSet GetDataSet(Source source)
         {
             try
@@ -297,11 +240,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the data table.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
         public DataTable GetDataTable(Source source)
         {
             try
@@ -321,12 +259,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The Filter
-        /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <param name="p">The p<see cref="Tuple{string, string}"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
         public static DataTable Filter(DataTable table, Tuple<string, string> p)
         {
             try
@@ -343,13 +275,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Filters the records.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="col">The col.</param>
-        /// <param name="filter">The filter.</param>
-        /// <returns></returns>
         public static DataTable Filter(DataTable table, Field col, string filter)
         {
             try
@@ -363,13 +288,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Filters the records.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="col">The col.</param>
-        /// <param name="filter">The filter.</param>
-        /// <returns></returns>
         public static DataTable Filter(DataTable table, Field[] col, string[] filter)
         {
             try
@@ -455,13 +373,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The Filter
-        /// </summary>
-        /// <param name="table"></param>
-        /// <param name="col"></param>
-        /// <param name="filter"></param>
-        /// <returns></returns>
         public static DataTable Filter(DataTable table, string[] col, string[] filter)
         {
             try
@@ -547,12 +458,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the unique field values.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="column">The column.</param>
-        /// <returns></returns>
         public static string[] GetUniqueValues(DataTable table, Field column)
         {
             try
@@ -571,11 +476,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the count.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -589,12 +489,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the total.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         public decimal GetTotal(Source source, DataTable table)
         {
             try
@@ -628,11 +522,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the column names.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         public string[] GetColumnNames(DataTable table)
         {
             if(table.Rows.Count > 0)

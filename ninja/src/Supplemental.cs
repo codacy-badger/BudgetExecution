@@ -26,7 +26,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = Table.AsEnumerable().Select(a => a).ToArray();
-            Data = Table.AsEnumerable().Select(d => d).Single();
+            Data = Table.AsEnumerable().Select(d => d).First();
             ID = int.Parse(Data["ID"].ToString());
             Type = Data["Type"].ToString();
             RC = Data["RC"].ToString();

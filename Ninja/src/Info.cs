@@ -65,7 +65,7 @@ namespace BudgetExecution
         /// <summary>
         /// Defines the AgencyFundCodes
         /// </summary>
-        public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
+        public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCodes));
 
         /// <summary>
         /// Defines the ActivityCodes

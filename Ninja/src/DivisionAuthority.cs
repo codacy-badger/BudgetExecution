@@ -1,8 +1,4 @@
-﻿// <copyright file="DivisionAuthority.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-
+﻿
 namespace BudgetExecution
 {
     using System;
@@ -10,173 +6,163 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    /// <inheritdoc />
-    /// <summary>
-    /// Defines the <see cref="T:BudgetExecution.DivisionAuthority" />
-    /// </summary>
     public class DivisionAuthority : IBudgetAuthority
     {
-        // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DivisionAuthority"/> class.
-        /// </summary>
+        //CONSTRUCTORS
+
         public DivisionAuthority()
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DivisionAuthority"/> class.
-        /// </summary>
-        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF<see cref="Source"/></param>
         public DivisionAuthority(Source source)
         {
-            TableFilter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
-            DbData = new DataBuilder(source);
+            Source = source;
+            Filter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
+            DbData = new DataBuilder(Source);
             R6 = DbData.R6;
             Table = DbData.Table;
             Records = DbData.Records;
             PRC = GetPrcArray(Table);
             ProgramElements = DbData.ProgramElements;
+            BFY = ProgramElements["BFY"];
             RC = ProgramElements["RC"].AsEnumerable().Select(s => s).First();
             Metric = new PrcMetric(DbData);
-            CurrentYearAuthority = Metric.CurrentYear;
-            CarryOverAuthority = Metric.CarryOver;
             if(ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(Table);
             }
+
+            Fund = GetFunds();
+            Authority = Filter(Table, Field.BFY, BFY[1]);
+            CarryOver = Filter(Table, Field.BFY, BFY[0]);
+            Awards = Filter(new Awards(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
+            Overtime = Filter(new Overtime(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
         }
 
         // PROPERTIES
+        public Source Source { get; }
 
         public string[] BFY { get; set; }
 
-        public Division Division { get; set; }
-
-        /// <summary>
-        /// Gets or sets the fund.
-        /// </summary>
-        /// <value>
-        /// The fund.
-        /// </value>
         public Fund[] Fund { get; set; }
 
-        /// <summary>
-        /// Gets or sets the rc.
-        /// </summary>
-        /// <value>
-        /// The rc.
-        /// </value>
         public string RC { get; set; }
 
-        /// <summary>
-        /// Gets the DbData
-        /// </summary>
         public DataBuilder DbData { get; }
 
-        /// <summary>
-        /// Gets the Records
-        /// </summary>
         public DataRow[] Records { get; }
 
-        /// <summary>
-        /// Gets the PRC
-        /// </summary>
         public PRC[] PRC { get; }
 
-        /// <summary>
-        /// Gets the TableFilter
-        /// </summary>
-        public TableDelegate TableFilter { get; }
+        public TableDelegate Filter { get; }
 
-        /// <summary>
-        /// Gets the FTE
-        /// </summary>
         public DataTable FTE { get; }
 
-        /// <summary>
-        /// Gets or sets the R6
-        /// </summary>
         public DataSet R6 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the CurrentYear
-        /// </summary>
-        public DataTable CurrentYearAuthority { get; set; }
+        public DataTable Authority { get; set; }
 
-        /// <summary>
-        /// Gets or sets the CarryOver
-        /// </summary>
-        public DataTable CarryOverAuthority { get; set; }
+        public DataTable CarryOver { get; set; }
 
-        /// <summary>
-        /// Gets or sets the current year awards.
-        /// </summary>
-        /// <value>
-        /// The current year awards.
-        /// </value>
-        public Awards CurrentYearAwards { get; set; }
+        public DataTable Awards { get; set; }
 
-        /// <summary>
-        /// Gets or sets the carry over awards.
-        /// </summary>
-        /// <value>
-        /// The carry over awards.
-        /// </value>
-        public Awards CarryOverAwards { get; set; }
+        public DataTable Overtime { get; set; }
 
-        /// <summary>
-        /// Gets or sets the current overtime.
-        /// </summary>
-        /// <value>
-        /// The current overtime.
-        /// </value>
-        public Awards CurrentOvertime { get; set; }
-
-        /// <summary>
-        /// Gets or sets the carry overtime.
-        /// </summary>
-        /// <value>
-        /// The carry overtime.
-        /// </value>
-        public Awards CarryOvertime { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Budget
-        /// </summary>
         public ExcelDocument Budget { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Metric
-        /// </summary>
         public PrcMetric Metric { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the ProgramElements
-        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the Table
-        /// </summary>
         public DataTable Table { get; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the Amount
-        /// </summary>
         public decimal Amount { get; set; }
 
         // METHODS
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetCodes
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <param name="column">The column<see cref="T:System.String" /></param>
-        /// <returns>The <see cref="T:System.String" /></returns>
+
+        private Fund[] GetFunds()
+        {
+            try
+            {
+                var bfy = ProgramElements["BFY"];
+                var fcodes = ProgramElements["FundCode"];
+                var fund = new Fund[fcodes.Length];
+                foreach(string yr in bfy)
+                {
+                    for(int i = 0; i < fcodes.Length; i++)
+                    {
+                        var d = new Dictionary<string, object> { ["BFY"] = yr, ["Code"] = fcodes[i] };
+                        fund[i] = new Fund(d);
+                    }
+                }
+
+                return fund;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+     
+        private DataTable GetAwards()
+        {
+            try
+            {
+                switch(Source)
+                {
+                    case Source.EJ:
+                    case Source.EN:
+                    case Source.RA:
+                    case Source.RC:
+                    case Source.SF:
+                    case Source.MD:
+                    case Source.WQ:
+                    case Source.XA:
+                        return new Awards().Table.AsEnumerable()
+                                           .Where(a => a.Field<string>("BFY").Equals(BFY[0]))
+                                           .Where(a => a.Field<string>("RC").Equals(RC))
+                                           .Select(a => a).CopyToDataTable();
+                    default:
+                        return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private DataTable GetOverTime()
+        {
+            try
+            {
+                switch(Source)
+                {
+                    case Source.EJ:
+                    case Source.EN:
+                    case Source.RA:
+                    case Source.RC:
+                    case Source.SF:
+                    case Source.MD:
+                    case Source.WQ:
+                    case Source.XA:
+                        return new Awards().Table.AsEnumerable()
+                                           .Where(a => a.Field<string>("BFY").Equals(BFY[0]))
+                                           .Where(a => a.Field<string>("RC").Equals(RC))
+                                           .Select(a => a).CopyToDataTable();
+                    default:
+                        return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -190,14 +176,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetDataValues
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <param name="column">The column<see cref="T:System.String" /></param>
-        /// <param name="filter">The filter<see cref="T:System.String" /></param>
-        /// <returns>The <see cref="T:System.Tuple`2" /></returns>
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -212,12 +190,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetMetrics
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="T:System.Decimal" /></returns>
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -231,17 +203,18 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetPrcArray
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="P:BudgetExecution.DivisionAuthority.PRC" /></returns>
         public PRC[] GetPrcArray(DataTable table)
         {
             try
             {
-                return table.AsEnumerable().Select(p => new PRC(p)).ToArray();
+                var rows = table.AsEnumerable().Select(p => p).ToArray();
+                var prc = new PRC[rows.Length];
+                for(int i = 0; i < rows.Length; i++)
+                {
+                    prc[i] = new PRC(rows[i]);
+                }
+
+                return prc;
             }
             catch(Exception ex)
             {
@@ -250,12 +223,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetProgramElements
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -302,12 +269,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// The GetTotal
-        /// </summary>
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="T:System.Decimal" /></returns>
         public decimal GetTotal(DataTable table)
         {
             try
@@ -321,11 +282,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The GetAverage
-        /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="decimal"/></returns>
         public decimal GetAverage(DataTable table)
         {
             try
@@ -339,11 +295,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The GetCount
-        /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="int"/></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -357,11 +308,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The GetFTE
-        /// </summary>
-        /// <param name="table">The table<see cref="DataTable"/></param>
-        /// <returns>The <see cref="DataTable"/></returns>
         internal DataTable GetFTE(DataTable table)
         {
             if(GetCodes(table, "BOC").Contains("17"))

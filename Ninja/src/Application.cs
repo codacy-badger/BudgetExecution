@@ -95,7 +95,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the FundCode
     /// </summary>
-    public enum FundCode { /// <summary>
+    public enum FundCodes { /// <summary>
         /// Defines the B
         /// </summary>
         B, 
@@ -343,10 +343,16 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the Sheet
     /// </summary>
-    public enum Excel { /// <summary>
+    public enum Excel
+    {
+        /// <summary>
         /// Defines the Budget
         /// </summary>
-        Budget, 
+        Budget,
+        /// <summary>
+        /// Defines the Budget
+        /// </summary>
+        BudgetTemplate, 
         /// <summary>
         /// Defines the Internal
         /// </summary>

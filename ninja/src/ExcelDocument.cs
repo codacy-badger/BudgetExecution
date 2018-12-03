@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System;
     using System.Configuration;
     using System.Data;
+    using System.IO;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using Microsoft.Office.Interop.Excel;
@@ -150,12 +151,12 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the Workbook
         /// </summary>
-        public Workbook Workbook { get; set; }
+        public ExcelWorkbook Workbook { get; set; }
 
         /// <summary>
         /// Gets or sets the PRC
         /// </summary>
-        public Worksheet PRC { get; set; }
+        public ExcelWorksheet PRC { get; set; }
 
         /// <summary>
         /// Gets or sets the excel package.
@@ -175,7 +176,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="Excel">The sheet.</param>
         /// <returns></returns>
-        private string GetFilePath(Excel Excel)
+        private string GetBrowserFilePath(Excel Excel)
         {
             try
             {
@@ -244,11 +245,11 @@ namespace BudgetExecution
         /// Gets the internal file path.
         /// </summary>
         /// <returns></returns>
-        public string GetInternalFilePath()
+        public string GetFilePath(Excel temp)
         {
             try
             {
-                return ConfigurationManager.AppSettings["Report"];
+                return ConfigurationManager.AppSettings[temp.ToString()];
             }
             catch(Exception ex)
             {
@@ -319,7 +320,7 @@ namespace BudgetExecution
             {
                 ConnectionStringSettingsCollection connectionString = ConfigurationManager.ConnectionStrings;
                 string connectionstring = connectionString["Excel"].ConnectionString;
-                return connectionstring.Replace($"{filepath}", GetInternalFilePath());
+                return connectionstring.Replace($"{filepath}", GetFilePath(Excel.BudgetTemplate));
             }
             catch(Exception ex)
             {
@@ -347,40 +348,38 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
-        internal Workbook ExportData(DataTable table)
+        internal ExcelWorkbook ExportData(DataTable table)
         {
             try
             {
-                Workbook WorkBook = ExcelApplication.Workbooks.Open(GetInternalFilePath());
-                Worksheet WorkSheet = (Worksheet)WorkBook.Sheets[1];
-                WorkSheet.Name = table.TableName;
-                for(int i = 1; i < table.Columns.Count + 1; i++)
+                var fi = new FileInfo(GetFilePath(Excel.BudgetTemplate));
+                using(ExcelPackage excel = new ExcelPackage(fi))
                 {
-                    WorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
-                }
-
-                for(int j = 0; j < table.Rows.Count; j++)
-                {
-                    for(int k = 0; k < table.Columns.Count; k++)
+                    ExcelWorkbook budget = excel.Workbook;
+                    ExcelWorksheet report = budget.Worksheets[1];
+                    report.Name = table.TableName;
+                    for(int i = 1; i <= table.Columns.Count; i++)
                     {
-                        WorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
+                        var col = report.Cells[1, i];
+                        col.Value = table.Columns[i - 1].ColumnName;
                     }
-                }
 
-                ExcelApplication.Visible = true;
-                return WorkBook;
+                    for(int j = 0; j < table.Rows.Count; j++)
+                    {
+                        for(int k = 0; k < table.Columns.Count; k++)
+                        {
+                            var row = report.Cells[j + 2, k + 1];
+                            row.Value = table.Rows[j].ItemArray[k].ToString();
+                        }
+                    }
+
+                    return budget;
+                }
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
-            finally
-            {
-                Workbook.Close(true);
-                ExcelApplication.Quit();
-                ReleaseObject(Workbook);
-                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -390,41 +389,38 @@ namespace BudgetExecution
         /// <param name="filepath">The filepath.</param>
         /// <param name="table">The table.</param>
         /// <returns></returns>
-        internal Workbook ExportData(string filepath, DataTable table)
+        internal ExcelWorkbook ExportData(string filepath, DataTable table)
         {
             try
             {
-                Microsoft.Office.Interop.Excel.Application excel = Create();
-                Workbook excelWorkBook = excel.Workbooks.Open(filepath);
-                Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
-                excelWorkSheet.Name = table.TableName;
-                for(int i = 1; i <= table.Columns.Count; i++)
+                var fi = new FileInfo(GetFilePath(Excel.BudgetTemplate));
+                using(ExcelPackage excel = new ExcelPackage(fi))
                 {
-                    excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
-                }
-
-                for(int j = 0; j < table.Rows.Count; j++)
-                {
-                    for(int k = 0; k < table.Columns.Count; k++)
+                    ExcelWorkbook budget = excel.Workbook;
+                    ExcelWorksheet report = budget.Worksheets[1];
+                    report.Name = table.TableName;
+                    for(int i = 1; i <= table.Columns.Count; i++)
                     {
-                        excelWorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
+                        var col = report.Cells[1, i];
+                        col.Value = table.Columns[i - 1].ColumnName;
                     }
-                }
 
-                excel.Visible = true;
-                return excelWorkBook;
+                    for(int j = 0; j < table.Rows.Count; j++)
+                    {
+                        for(int k = 0; k < table.Columns.Count; k++)
+                        {
+                            var row = report.Cells[j + 2, k + 1];
+                            row.Value = table.Rows[j].ItemArray[k].ToString();
+                        }
+                    }
+
+                    return budget;
+                }
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
-            finally
-            {
-                Workbook.Close(true);
-                ExcelApplication.Quit();
-                ReleaseObject(Workbook);
-                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -433,24 +429,28 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="filepath">The filepath.</param>
         /// <returns></returns>
-        internal Workbook OpenFile(string filepath)
+        internal ExcelWorkbook OpenFile(string filepath)
         {
             try
             {
-                Workbook excelWorkBook = ExcelApplication.Workbooks.Open(filepath);
-                return excelWorkBook;
+                var fi = new FileInfo(GetFilePath(Excel.BudgetTemplate));
+                using(ExcelPackage excel = new ExcelPackage(fi))
+                {
+                    ExcelWorkbook budget = excel.Workbook;
+                    ExcelWorksheet report = budget.Worksheets[1];
+                    if(report.Name == string.Empty)
+                    {
+                        report.Name = Path.GetFileNameWithoutExtension(filepath);
+                        return budget;
+                    }
+
+                    return budget;
+                }
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
-            finally
-            {
-                Workbook.Close(true);
-                ExcelApplication.Quit();
-                ReleaseObject(Workbook);
-                ReleaseObject(ExcelApplication);
             }
         }
 
@@ -458,114 +458,25 @@ namespace BudgetExecution
         /// Opens the workbook.
         /// </summary>
         /// <returns></returns>
-        internal Workbook OpenWorkbook()
+        internal ExcelWorkbook OpenWorkbook()
         {
             try
             {
-                Workbook excelWorkBook = ExcelApplication.Workbooks.Add();
-                return excelWorkBook;
+                var fi = new FileInfo(GetFilePath(Excel.BudgetTemplate));
+                using(ExcelPackage excel = new ExcelPackage(fi))
+                {
+                    ExcelWorkbook budget = excel.Workbook;
+                    ExcelWorksheet report = budget.Worksheets[1];
+                    return budget;
+                }
             }
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
             }
-            finally
-            {
-                Workbook.Close(true);
-                ExcelApplication.Quit();
-                ReleaseObject(Workbook);
-                ReleaseObject(ExcelApplication);
-            }
         }
-
-        /// <summary>
-        /// Saves the workbook.
-        /// </summary>
-        /// <param name="wb">The wb.</param>
-        /// <param name="filepath">The filepath.</param>
-        internal void SaveWorkbook(Workbook wb, string filepath)
-        {
-            try
-            {
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
-                wb.SaveAs(filepath);
-                wb.Close();
-                Marshal.ReleaseComObject(wb.Worksheets);
-                Marshal.ReleaseComObject(wb);
-                wb.Application.Quit();
-                Marshal.ReleaseComObject(wb.Application);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-            finally
-            {
-                Workbook.Close(true);
-                ExcelApplication.Quit();
-                ReleaseObject(Workbook);
-                ReleaseObject(ExcelApplication);
-            }
-        }
-
-        /// <summary>
-        /// Closes the specified wb.
-        /// </summary>
-        /// <param name="wb">The wb.</param>
-        internal void Close(Workbook wb)
-        {
-            if(wb != null)
-            {
-                try
-                {
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
-                    if(wb.Worksheets != null)
-                    {
-                        Marshal.ReleaseComObject(wb.Worksheets);
-                    }
-
-                    Marshal.ReleaseComObject(wb);
-                    wb.Close();
-                    wb.Application.Quit();
-                    Marshal.ReleaseComObject(wb.Application);
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                }
-                finally
-                {
-                    Workbook.Close(true);
-                    ReleaseObject(Workbook);
-                    ReleaseObject(ExcelApplication);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Creates this instance.
-        /// </summary>
-        /// <returns></returns>
-        private Microsoft.Office.Interop.Excel.Application Create()
-        {
-            try
-            {
-                return new Microsoft.Office.Interop.Excel.Application();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-            finally
-            {
-                ReleaseObject(ExcelApplication);
-            }
-        }
-
+        
         /// <summary>
         /// Releases the object.
         /// </summary>

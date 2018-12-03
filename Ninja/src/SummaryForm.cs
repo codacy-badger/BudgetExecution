@@ -1324,5 +1324,13 @@ namespace BudgetExecution
         private void LblTotal_Click(object sender, EventArgs e)
         {
         }
+
+        private void TestButton_Click(object sender, EventArgs e)
+        {
+            var p = new Dictionary<string, object> { ["Name"] = Source.ToString() };
+            var divsion = new Division(p);
+            var authority = new DivisionAuthority(Source);
+            new Message("Test Complete").Show();
+        }
     }
 }

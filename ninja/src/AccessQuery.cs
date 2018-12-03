@@ -29,12 +29,12 @@ namespace BudgetExecution
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection) as OleDbCommand;
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter) as OleDbCommandBuilder;
-            UpdateCommand = CommandBuilder.GetUpdateCommand();
-            UpdateStatement = UpdateCommand.CommandText;
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            InsertStatement = InsertCommand.CommandText;
-            DeleteCommand = CommandBuilder.GetDeleteCommand();
-            DeleteStatement = DeleteCommand.CommandText;
+            UpdateCommand = CommandBuilder?.GetUpdateCommand();
+            UpdateStatement = UpdateCommand?.CommandText;
+            InsertCommand = CommandBuilder?.GetInsertCommand();
+            InsertStatement = InsertCommand?.CommandText;
+            DeleteCommand = CommandBuilder?.GetDeleteCommand();
+            DeleteStatement = DeleteCommand?.CommandText;
         }
 
         /// <inheritdoc />
@@ -112,7 +112,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the Parameters
         /// </summary>
-        public new OleDbParameter[] Parameters { get; set; }
+        public OleDbParameter[] Parameters { get; set; }
 
         /// <summary>
         /// Gets or sets the DataReader
@@ -167,13 +167,13 @@ namespace BudgetExecution
         /// <summary>
         /// The GetSqlStatement
         /// </summary>
-        /// <param name="sql">The sql<see cref="string"/></param>
+        /// <param name="sqlStatement">The sql<see cref="string"/></param>
         /// <returns>The <see cref="string"/></returns>
-        public new string GetSqlStatement(string sql)
+        public new string GetSqlStatement(string sqlStatement)
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {sql}";
+                return $"SELECT * FROM {TableName} WHERE {sqlStatement}";
             }
             catch(Exception ex)
             {
@@ -300,7 +300,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        internal new string GetSelectParamString(Dictionary<string, object> param)
+        internal string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {
@@ -310,8 +310,7 @@ namespace BudgetExecution
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {
@@ -335,42 +334,7 @@ namespace BudgetExecution
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the command builder.
-        /// </summary>
-        /// <returns></returns>
-        private OleDbCommandBuilder GetCommandBuilder()
-        {
-            try
-            {
-                return new OleDbCommandBuilder(Adapter);
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the data adapter.
-        /// </summary>
-        /// <returns></returns>
-        private OleDbDataAdapter GetDataAdapter()
-        {
-            try
-            {
-                return new OleDbDataAdapter(SelectCommand);
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {
@@ -394,25 +358,7 @@ namespace BudgetExecution
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the select command.
-        /// </summary>
-        /// <returns></returns>
-        private OleDbCommand GetSelectCommand()
-        {
-            try
-            {
-                return new OleDbCommand(SelectStatement, DataConnection);
+                return vals.Trim().Substring(0, vals.Length - 4);
             }
             catch(Exception ex)
             {

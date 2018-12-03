@@ -57,6 +57,14 @@ namespace BudgetExecution
             BFY = bfy;
             Input = GetParameter(Code, BFY);
             DbData = new DataBuilder(Source, Provider, Input);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         /// <summary>
@@ -71,6 +79,14 @@ namespace BudgetExecution
             BFY = p["BFY"].ToString();
             Input = GetParameter(Code, BFY);
             DbData = new DataBuilder(Source, provider, Input);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         /// <summary>
@@ -85,7 +101,15 @@ namespace BudgetExecution
         public Fund(Dictionary<string, object> data) : this()
         {
             Input = data;
-            DbData = new DataBuilder(Source, Provider, Input);
+            DbData = new DataBuilder(Source, Input);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         // PROPERTIES

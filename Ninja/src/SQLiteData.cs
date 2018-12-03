@@ -362,8 +362,7 @@ namespace BudgetExecution
                 if(Filter4.Tag != null)
                 {
                     PopulateFilterItems(Filter4.Tag.ToString(), table, Filter4, label4);
-                }
-                
+                }               
             }
             catch(Exception ex)
             {

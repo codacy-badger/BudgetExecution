@@ -9,15 +9,8 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    /// <inheritdoc />
-    /// <summary>
-    ///     Defines the <see cref="T:BudgetExecution.Division" />
-    /// </summary>
     public class Division : IDataBuilder
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Division"/> class.
-        /// </summary>
         public Division()
         {
             Source = Source.Divisions;
@@ -26,14 +19,8 @@ namespace BudgetExecution
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
-            Input = GetParameter();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Division"/> class.
-        /// </summary>
-        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF <see cref="Source" /></param>
-        /// <param name="provider">The provider<see cref="Provider" /></param>
         public Division(Source source, Provider provider = Provider.SQLite) : this()
         {
             Source = source;
@@ -41,37 +28,13 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Division"/> class.
-        /// </summary>
-        /// <param name="source">The source MD, RA, RC, EJ, EN, WQ, WSA, MDR, MCF, MM, XA, SF <see cref="Source" /></param>
-        /// <param name="provider">The provider<see cref="Provider" /></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}" /></param>
         public Division(Provider provider, Dictionary<string, object> p) : this()
         {
             Provider = provider;
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Division"/> class.
-        /// </summary>
-        /// <param name="data">The data<see cref="DataRow" /></param>
-        public Division(DataRow data) : this()
-        {
-            Data = data;
-        }
-
-        /// <summary>
-        ///Default args Source = Source.Divisions and Provider = Provider.SQLite are passed
-        /// to the DataBuilder attribute. This constructor initializes a new instance of the <see cref="Division"/> class.
-        /// </summary>
-        /// <param name="data">The data<see cref="Dictionary{string, object}"/></param>
-        public Division(Dictionary<string, object> data) : this()
-        {
-            Parameter = data;
-            Data = new DataBuilder(Source.Divisions, Provider.SQLite, Parameter).Data;
+            Table = DbData.Table;
+            Data = DbData.Data;
             ID = Data["ID"].ToString();
             RC = new RC(Data["RC"].ToString());
             Title = Data["Title"].ToString();
@@ -79,77 +42,46 @@ namespace BudgetExecution
             Name = Data["Name"].ToString();
         }
 
-        /// <summary>
-        /// Gets or sets the Source
-        /// </summary>
+        public Division(DataRow data) : this()
+        {
+            Data = data;
+        }
+
+        public Division(Dictionary<string, object> data) : this()
+        {
+            Input = data;
+            DbData = new DataBuilder(Source, Input);
+            Table = DbData.Table;
+            Data = DbData.Data;
+            ID = Data["ID"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
+        }
+
         public Source Source { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Provider
-        /// </summary>
         public Provider Provider { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DbData
-        /// </summary>
         public DataBuilder DbData { get; set; }
 
-        /// <summary>
-        /// Gets or sets the d6.
-        /// </summary>
-        /// <value>
-        /// The d6.
-        /// </value>
-        public DivisionAuthority D6 { get; set; }
+        public Dictionary<string, object> Input { get; set; }
 
-        /// <summary>
-        /// Gets the input.
-        /// </summary>
-        /// <value>
-        /// The input.
-        /// </value>
-        public Dictionary<string, object> Input { get; }
-
-        /// <summary>
-        /// Gets or sets the Title
-        /// </summary>
         public string Title { get; set; }
 
-        /// <summary>
-        /// Gets the Code
-        /// </summary>
         public string Code { get; }
 
-        /// <summary>
-        /// Gets the ID
-        /// </summary>
         public string ID { get; }
 
-        /// <summary>
-        /// Gets the RC
-        /// </summary>
         public RC RC { get; }
 
-        /// <summary>
-        /// Gets the Name
-        /// </summary>
         public string Name { get; }
 
-        /// <summary>
-        /// Gets or sets the Parameter
-        /// </summary>
         public Dictionary<string, object> Parameter { get; set; }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
         public DataTable Table { get; set; }
 
-        /// <inheritdoc cref="" />
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
         public string[] Columns { get; set; }
 
         public DataRow[] Records { get; set; }
@@ -160,12 +92,6 @@ namespace BudgetExecution
 
         // METHODS
 
-        /// <inheritdoc />
-        /// <summary>
-        ///     Explicit implementation of the IDataBuilder method
-        ///     Gets the primary data source using the DbData attribute.
-        /// </summary>
-        /// <returns></returns>
         DataTable IDataBuilder.GetDataTable()
         {
             try
@@ -179,11 +105,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// 
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
             try
@@ -197,9 +118,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// <param name="table"></param>
         DataRow[] IDataBuilder.GetRecords(DataTable table)
         {
             try
@@ -213,10 +131,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// <param name="table"></param>
-        /// <param name="column"></param>
         string[] IDataBuilder.GetUniqueValues(DataTable table, string column)
         {
             try
@@ -230,26 +144,18 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this instance.
-        /// </summary>
-        /// <returns>The <see cref="string" /></returns>
         public override string ToString()
         {
             return RC.Code;
         }
 
-        /// <summary>
-        /// Gets the parameter.
-        /// </summary>
-        /// <returns></returns>
         private Dictionary<string, object> GetParameter()
         {
             try
             {
                 return new Dictionary<string, object>
                 {
-                    ["RC"] = RC, ["Name"] = Name,
+                    ["RC"] = RC.Code, ["Name"] = Name,
                     ["Code"] = Code
                 };
             }
@@ -260,11 +166,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Inserts the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -282,11 +183,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Updates the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -304,11 +200,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Deletes the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try
