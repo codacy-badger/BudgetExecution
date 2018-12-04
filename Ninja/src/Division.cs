@@ -17,8 +17,8 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
+            Columns = Table.GetColumnNames();
+            Records = DbData.Records;
         }
 
         public Division(Source source, Provider provider = Provider.SQLite) : this()
@@ -26,6 +26,9 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
         }
 
         public Division(Provider provider, Dictionary<string, object> p) : this()
@@ -34,6 +37,8 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
+            Columns = Table.GetColumnNames();
+            Records = DbData.Records;
             Data = DbData.Data;
             ID = Data["ID"].ToString();
             RC = new RC(Data["RC"].ToString());
@@ -52,6 +57,8 @@ namespace BudgetExecution
             Input = data;
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
+            Columns = Table.GetColumnNames();
+            Records = DbData.Records;
             Data = DbData.Data;
             ID = Data["ID"].ToString();
             RC = new RC(Data["RC"].ToString());

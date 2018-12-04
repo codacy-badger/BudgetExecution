@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace BudgetExecution
 {
     using System;
@@ -17,12 +19,12 @@ namespace BudgetExecution
         public DivisionAuthority(Source source)
         {
             Source = source;
-            Filter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
             DbData = new DataBuilder(Source);
-            R6 = DbData.R6;
+            Filter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
+            R6 = DbData.GetDataSet(Source);
+            R6.DataSetName = "R6";
             Table = DbData.Table;
-            Records = DbData.Records;
-            PRC = GetPrcArray(Table);
+            Table.TableName = Source.ToString();
             ProgramElements = DbData.ProgramElements;
             BFY = ProgramElements["BFY"];
             RC = ProgramElements["RC"].AsEnumerable().Select(s => s).First();
@@ -37,6 +39,7 @@ namespace BudgetExecution
             CarryOver = Filter(Table, Field.BFY, BFY[0]);
             Awards = Filter(new Awards(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
             Overtime = Filter(new Overtime(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
+            BCN = new ControlNumber(new Dictionary<string, object>(){["Division"] = Table.TableName});
         }
 
         // PROPERTIES
@@ -55,6 +58,8 @@ namespace BudgetExecution
         public PRC[] PRC { get; }
 
         public TableDelegate Filter { get; }
+
+        public ControlNumber BCN { get; set; }
 
         public DataTable FTE { get; }
 

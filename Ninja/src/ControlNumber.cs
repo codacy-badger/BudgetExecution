@@ -21,19 +21,8 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Region = "R6";
-            BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
-            RegionControlNumber = GetRegionCount() + 1;
-            FundControlNumber = RegionControlNumber + 1;
-            BudgetControlNumber = FundControlNumber + 1;
         }
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
         public ControlNumber(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
@@ -45,24 +34,47 @@ namespace BudgetExecution
             Provider = provider;
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
+            Table = DbData.Table;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Region = "R6";
+            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+            RegionControlNumber = GetRegionCount() + 1;
+            FundControlNumber = RegionControlNumber + 1;
+            BudgetControlNumber = FundControlNumber + 1;
         }
 
         public ControlNumber(Dictionary<string, object> p) : this()
         {
             Input = p;
-            DbData = new DataBuilder(Source, Provider, Input);
+            DbData = new DataBuilder(Source, Input);
+            Table = DbData.Table;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Region = "R6";
+            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+            RegionControlNumber = GetRegionCount() + 1;
+            FundControlNumber = RegionControlNumber + 1;
+            BudgetControlNumber = FundControlNumber + 1;
         }
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
-        /// </summary>
-        /// <param name="division">The division.</param>
         public ControlNumber(string fundCode, string division) : this()
         {
             FundCode = fundCode;
             Division = division;
             Input = GetParameter(FundCode, Division);
             DbData = new DataBuilder(Source, Provider, Input);
+            Table = DbData.Table;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            Region = "R6";
+            BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
+            RegionControlNumber = GetRegionCount() + 1;
+            FundControlNumber = RegionControlNumber + 1;
+            BudgetControlNumber = FundControlNumber + 1;
         }
 
         public ControlNumber(DataRow data)
@@ -109,12 +121,6 @@ namespace BudgetExecution
 
         // METHODS
 
-        /// <summary>
-        ///     Gets the parameter data.
-        /// </summary>
-        /// <param name="fund">The fund.</param>
-        /// <param name="divisionid">The divisionid.</param>
-        /// <returns>  </returns>
         public Dictionary<string, object> GetParameter(string fund, string divisionid)
         {
             try
@@ -128,11 +134,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Gets the insertion columns.
-        /// </summary>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public static Dictionary<string, object> GetInsertionColumns(Dictionary<string, object> param)
         {
             try
@@ -148,12 +149,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        /// <returns>returns a Fund object</returns>
         public static Fund Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -168,13 +163,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
-        /// <returns>returns a Fund object</returns>
         public static Fund Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -189,21 +177,11 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Returns a <see cref="System.String" /> that represents this instance.
-        /// </summary>
-        /// <returns>
-        ///     A <see cref="System.String" /> that represents this instance.
-        /// </returns>
         public override string ToString()
         {
             return new StringBuilder($"{BFY}={Region}-{RegionControlNumber}-{FundCode}-{FundControlNumber}-{Division}-{BudgetControlNumber}").ToString();
         }
 
-        /// <summary>
-        ///     Gets the column names.
-        /// </summary>
-        /// <returns></returns>
         internal string[] GetColumnNames()
         {
             try
@@ -217,11 +195,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Gets the fund count.
-        /// </summary>
-        /// <param name="fundcode">The fund.</param>
-        /// <returns></returns>
         internal int GetFundCount(string fundcode)
         {
             try
@@ -237,10 +210,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Gets the division count.
-        /// </summary>
-        /// <returns></returns>
         internal int GetDivisionCount(int divisionId)
         {
             try
@@ -257,10 +226,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Gets the region count.
-        /// </summary>
-        /// <returns>return integer representing the number of records</returns>
         internal int GetRegionCount()
         {
             try
@@ -275,11 +240,6 @@ namespace BudgetExecution
         }
 
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data table.
-        /// </summary>
-        /// <returns></returns>
         DataTable IDataBuilder.GetDataTable()
         {
             try
@@ -301,12 +261,6 @@ namespace BudgetExecution
         }
 
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the records in the table as an Array of DataRows.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         DataRow[] IDataBuilder.GetRecords(DataTable table)
         {
             try
@@ -320,13 +274,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the unique values.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="column">The column.</param>
-        /// <returns></returns>
         string[] IDataBuilder.GetUniqueValues(DataTable table, string column)
         {
             try
@@ -345,12 +292,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the program elements.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
             if(table != null)
@@ -402,12 +343,6 @@ namespace BudgetExecution
             return null;
         }
 
-        /// <summary>
-        ///     Inserts the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -427,12 +362,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Updates the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -452,12 +381,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        ///     Deletes the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try

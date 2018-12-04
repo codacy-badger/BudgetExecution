@@ -36,7 +36,7 @@ namespace BudgetExecution
                         .CopyToDataTable();
 
                 Total = GetTotal(Source, Table);
-                Columns = GetColumnNames(Table);
+                Columns = GetColumnNames();
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
@@ -53,7 +53,7 @@ namespace BudgetExecution
                         .CopyToDataTable();
 
                 Total = GetTotal(Source, Table);
-                Columns = GetColumnNames(Table);
+                Columns = GetColumnNames();
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
@@ -63,7 +63,7 @@ namespace BudgetExecution
             {
                 Table = GetDataTable(Source);
                 Total = GetTotal(Source, Table);
-                Columns = GetColumnNames(Table);
+                Columns = GetColumnNames();
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
@@ -86,11 +86,10 @@ namespace BudgetExecution
             Query = new Query(Source, Provider, Sql.SELECT, Input);
             Table = GetDataTable(Source);
             Total = GetTotal(Source, Table);
-            Columns = GetColumnNames(Table);
+            Columns = GetColumnNames();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
-            Records = GetRecords(Table);
-            Data = Table.Rows[0];
+            Data = Table.AsEnumerable().Select(dr => dr).First();
         }
 
         // PROPERTIES
@@ -522,22 +521,17 @@ namespace BudgetExecution
             }
         }
 
-        public string[] GetColumnNames(DataTable table)
+        public string[] GetColumnNames()
         {
-            if(table.Rows.Count > 0)
+            try
             {
-                try
-                {
-                    return table.GetColumnNames();
-                }
-                catch(SystemException ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return null;
-                }
+                return Table.GetColumnNames();
             }
-
-            return null;
+            catch(SystemException ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
     }
 }

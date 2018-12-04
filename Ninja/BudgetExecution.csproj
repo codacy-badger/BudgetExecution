@@ -382,7 +382,6 @@
     <Compile Include="src\Query.cs" />
     <Compile Include="src\RC.cs" />
     <Compile Include="src\RegionalAuthority.cs" />
-    <Compile Include="src\Reimbursable.cs" />
     <Compile Include="src\Transfer.cs" />
     <Compile Include="src\Calendar.cs">
       <SubType>Form</SubType>

@@ -194,5 +194,13 @@ namespace BudgetExecution
         private void TransferButton_Click(object sender, EventArgs e)
         {
         }
+
+        private void TestButton_Click(object sender, EventArgs e)
+        {
+            var p = new Dictionary<string, object> { ["Name"] = Source.WQ };
+            var division = new Division(p);
+            var authority = new DivisionAuthority(Source.WQ);
+            new Message($"Test Complete: {division.Title}").Show();
+        }
     }
 }

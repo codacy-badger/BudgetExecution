@@ -27,8 +27,8 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
-            Data = Table.AsEnumerable().Select(p => p).First();
+            Records = DbData.Records;
+            Data = DbData.Data;
             ID = int.Parse(Data["ID"].ToString());
             RPIO = Data["RPIO "].ToString();
             BFY = Data["BFY"].ToString();
@@ -61,6 +61,30 @@ namespace BudgetExecution
             Provider = provider;
             Input = param;
             DbData = new DataBuilder(Source, provider, Input);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = Table.AsEnumerable().Select(p => p).ToArray();
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            RPIO = Data["RPIO "].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            AH = Data["AH"].ToString();
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            FOC = Data["FOC"].ToString();
+            FocName = Data["FocName"].ToString();
+            Authority = decimal.Parse(Data["Authority"].ToString());
+            Budgeted = decimal.Parse(Data["Budgeted"].ToString());
+            Posted = decimal.Parse(Data["Posted"].ToString());
+            CarryIn = decimal.Parse(Data["CarryIn"].ToString());
+            CarryOut = decimal.Parse(Data["CarryOut"].ToString());
+            Commitments = decimal.Parse(Data["Commitments"].ToString());
+            OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            ULO = decimal.Parse(Data["ULO"].ToString());
         }
 
         /// <summary>

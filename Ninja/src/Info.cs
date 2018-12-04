@@ -1002,14 +1002,10 @@ namespace BudgetExecution
         {
             try
             {
-                DataColumnCollection columns = table.Columns;
-                string[] fields = new string[columns.Count];
-                for(int i = 0; i < columns.Count; i++)
+                string[] fields = new string[table.Columns.Count];
+                for(int i = 0; i < table.Columns.Count; i++)
                 {
-                    foreach(DataColumn dc in columns)
-                    {
-                        fields[i] = dc.ColumnName;
-                    }
+                    fields[i] = table.Columns[i].ColumnName;
                 }
 
                 return fields;

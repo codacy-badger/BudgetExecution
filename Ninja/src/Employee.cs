@@ -9,20 +9,34 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    /// <summary>
-    /// Defines the <see cref="Employee" />
-    /// </summary>
     public class Employee : IEmployee
     {
         // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
         public Employee()
         {
             Source = Source.Personnel;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+        }
+
+        public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite) : this()
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+        }
+
+        public Employee(Provider provider, Dictionary<string, object> p) : this()
+        {
+            Provider = provider;
+            Input = p;
+            DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
             Records = DbData.Records;
@@ -39,152 +53,77 @@ namespace BudgetExecution
             Division = new Division(Source);
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite) : this()
+        public Employee(Dictionary<string, object> p) : this()
         {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public Employee(Provider provider, Dictionary<string, object> p) : this()
-        {
-            Provider = provider;
             Input = p;
-            DbData = new DataBuilder(Source, Provider, Input);
+            DbData = new DataBuilder(Source, Input);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            Records = DbData.Records;
+            Data = DbData.Data;
+            Section = Data["Section"].ToString();
+            FirstName = Data["FirstName"].ToString();
+            LastName = Data["LastName"].ToString();
+            Office = Data["Office"].ToString();
+            Phone = Data["Phone"].ToString();
+            Cell = Data["Cell"].ToString();
+            Email = Data["Email"].ToString();
+            Status = Data["Status"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Division = new Division(Source);
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Employee"/> class.
-        /// </summary>
-        /// <param name="data">The data<see cref="DataRow"/></param>
         public Employee(DataRow data) : this()
         {
             Data = data;
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets or sets the Source
-        /// </summary>
         public Source Source { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Provider
-        /// </summary>
         public Provider Provider { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DbData
-        /// </summary>
         public DataBuilder DbData { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Table
-        /// </summary>
         public DataTable Table { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Columns
-        /// </summary>
         public string[] Columns { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
         public DataRow[] Records { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Data
-        /// </summary>
         public DataRow Data { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ProgramElements
-        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public Dictionary<string, object> Input { get; }
 
-        /// <summary>
-        /// Gets or sets the ID
-        /// </summary>
         public int ID { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Section
-        /// </summary>
         public string Section { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FirstName
-        /// </summary>
         public string FirstName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the LastName
-        /// </summary>
         public string LastName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Division
-        /// </summary>
         public Division Division { get; set; }
 
-        /// <summary>
-        /// Gets or sets the RC
-        /// </summary>
         public RC RC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Office
-        /// </summary>
         public string Office { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Phone
-        /// </summary>
         public string Phone { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cell
-        /// </summary>
         public string Cell { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Email
-        /// </summary>
         public string Email { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Status
-        /// </summary>
         public string Status { get; set; }
 
-        /// <summary>
-        /// The ToString
-        /// </summary>
-        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return FirstName + " " + LastName;
         }
 
-        /// <summary>
-        /// Inserts the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -202,11 +141,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Updates the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -224,11 +158,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Deletes the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try

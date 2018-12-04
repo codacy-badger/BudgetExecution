@@ -51,6 +51,7 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             this.hubTile2 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.TestButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hubTile2
@@ -217,6 +218,25 @@ namespace BudgetExecution
             this.MainChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
             this.MainChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
+            // TestButton
+            // 
+            this.TestButton.BackColor = System.Drawing.Color.Transparent;
+            this.TestButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TestButton.FlatAppearance.BorderSize = 0;
+            this.TestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.TestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.TestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestButton.Image = ((System.Drawing.Image)(resources.GetObject("TestButton.Image")));
+            this.TestButton.Location = new System.Drawing.Point(1677, 930);
+            this.TestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(50, 52);
+            this.TestButton.TabIndex = 166;
+            this.TestButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.TestButton.UseVisualStyleBackColor = false;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -225,6 +245,7 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1788, 1053);
+            this.Controls.Add(this.TestButton);
             this.Controls.Add(this.hubTile2);
             this.Controls.Add(this.MainChart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -241,5 +262,6 @@ namespace BudgetExecution
         #endregion
         protected Syncfusion.Windows.Forms.Chart.ChartControl MainChart;
         private Syncfusion.Windows.Forms.Tools.HubTile hubTile2;
+        private System.Windows.Forms.Button TestButton;
     }
 }
