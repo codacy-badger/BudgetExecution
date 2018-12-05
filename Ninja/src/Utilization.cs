@@ -20,35 +20,13 @@ namespace BudgetExecution
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization"/> class.
         /// </summary>
-        public Utilization()
+        public Utilization(Source source = Source.Utilization, Provider provider = Provider.SQLite)
         {
-            Source = Source.Utilization;
-            Provider = Provider.SQLite;
+            Source = source;
+            Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            RPIO = Data["RPIO "].ToString();
-            BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["FundCode"].ToString(), BFY);
-            AH = Data["AH"].ToString();
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-            BOC = new BOC(Data["BOC"].ToString());
-            FOC = Data["FOC"].ToString();
-            FocName = Data["FocName"].ToString();
-            Authority = decimal.Parse(Data["Authority"].ToString());
-            Budgeted = decimal.Parse(Data["Budgeted"].ToString());
-            Posted = decimal.Parse(Data["Posted"].ToString());
-            CarryIn = decimal.Parse(Data["CarryIn"].ToString());
-            CarryOut = decimal.Parse(Data["CarryOut"].ToString());
-            Commitments = decimal.Parse(Data["Commitments"].ToString());
-            OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
-            Obligations = decimal.Parse(Data["Obligations"].ToString());
-            ULO = decimal.Parse(Data["ULO"].ToString());
         }
 
         /// <summary>
@@ -60,11 +38,42 @@ namespace BudgetExecution
         {
             Provider = provider;
             Input = param;
-            DbData = new DataBuilder(Source, provider, Input);
+            DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
-            Data = DbData.Data;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                RPIO = Data["RPIO "].ToString();
+                BFY = Data["BFY"].ToString();
+                Fund = new Fund(Data["FundCode"].ToString(), BFY);
+                AH = Data["AH"].ToString();
+                Org = new Org(Data["Org"].ToString());
+                RC = new RC(Data["RC"].ToString());
+                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+                BOC = new BOC(Data["BOC"].ToString());
+                FOC = Data["FOC"].ToString();
+                FocName = Data["FocName"].ToString();
+                Authority = decimal.Parse(Data["Authority"].ToString());
+                Budgeted = decimal.Parse(Data["Budgeted"].ToString());
+                Posted = decimal.Parse(Data["Posted"].ToString());
+                CarryIn = decimal.Parse(Data["CarryIn"].ToString());
+                CarryOut = decimal.Parse(Data["CarryOut"].ToString());
+                Commitments = decimal.Parse(Data["Commitments"].ToString());
+                OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
+                Obligations = decimal.Parse(Data["Obligations"].ToString());
+                ULO = decimal.Parse(Data["ULO"].ToString()); 
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Utilization"/> class.
+        /// </summary>
+        /// <param name="dr">The dr<see cref="DataRow"/></param>
+        public Utilization(DataRow dr) : this()
+        {
+            Data = dr;
             ID = int.Parse(Data["ID"].ToString());
             RPIO = Data["RPIO "].ToString();
             BFY = Data["BFY"].ToString();
@@ -85,15 +94,6 @@ namespace BudgetExecution
             OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
             Obligations = decimal.Parse(Data["Obligations"].ToString());
             ULO = decimal.Parse(Data["ULO"].ToString());
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Utilization"/> class.
-        /// </summary>
-        /// <param name="dr">The dr<see cref="DataRow"/></param>
-        public Utilization(DataRow dr) : this()
-        {
-            Data = dr;
         }
 
         // Properties
@@ -323,7 +323,7 @@ namespace BudgetExecution
         {
             try
             {
-                return (Dictionary<string, string[]>)DbData.ProgramElements;
+                return DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -331,6 +331,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         /// <inheritdoc />
         /// <summary> Explicit implementation of the IDataBuilder method </summary>
         /// <param name="table"></param>

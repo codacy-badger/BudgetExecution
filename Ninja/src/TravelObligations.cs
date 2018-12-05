@@ -22,8 +22,30 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Records = Table.AsEnumerable().Select(o => o).ToArray();
-            Data = Records[0];
+            Columns = DbData.Columns;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY"].ToString();
+            AH = Data["AH"].ToString();
+            AllowanceHolderName = Data["AllowanceHolderName"].ToString();
+            RC = Data["RC"].ToString();
+            DivisionName = Data["DivisionName"].ToString();
+            Org = Data["Org"].ToString();
+            OrgName = Data["OrgName"].ToString();
+            Code = Data["Code"].ToString();
+            FOC = Data["FOC"].ToString();
+            FocName = Data["FocName"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            TravelBeginDate = Data["TravelBeginDate"].ToString();
+            TravelEndDate = Data["TravelEndDate"].ToString();
+            TravelType = Data["TravelType"].ToString();
+            TravelerName = Data["TravelerName"].ToString();
+            DCN = Data["DCN"].ToString();
+            OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            ULO = decimal.Parse(Data["ULO "].ToString());
         }
 
         public TravelObligations(Source source, Provider provider, Dictionary<string, object> param)
@@ -32,8 +54,8 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
             Table = DbData.Table;
-            Records = Table.AsEnumerable().Select(o => o).ToArray();
-            Data = Records[0];
+            Columns = DbData.Columns;
+            Data = DbData.Data;
         }
 
         // PROPERTIES
@@ -71,45 +93,34 @@ namespace BudgetExecution
 
         public string OrgName { get; set; }
 
-        public string NPM { get; set; }
-
-        public string NpmName { get; set; }
-
         public string Code { get; set; }
+
+        public string FOC { get; set; }
+
+        public string FocName { get; set; }
 
         public string ProgramProjectCode { get; set; }
 
         public string ProgramProjectName { get; set; }
 
-        public string ProgramArea { get; set; }
+        public string TravelBeginDate { get; set; }
 
-        public string ProgramAreaName { get; set; }
-
-        public string SiteProjectCode { get; set; }
-
-        public string SiteSpillID { get; set; }
-
-        public string TravelStartDate { get; set; }
+        public string TravelEndDate { get; set; }
 
         public string TravelType { get; set; }
 
-        public string TicketNumber { get; set; }
-
-        public string DateProcessed { get; set; }
+        public string ObligationType { get; set; }
 
         public string TravelerName { get; set; }
 
-        public string ModificationDate { get; set; }
-
         public string DCN { get; set; }
 
-        public string Destination { get; set; }
+        public decimal OpenCommitments { get; set; }
 
-        public string TravelAuthorizationNumber { get; set; }
+        public decimal Obligations { get; set; }
 
-        public string SiteProjectName { get; set; }
+        public decimal ULO { get; set; }
 
-        public decimal Amount { get; set; }
 
         // METHODS
 

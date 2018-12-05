@@ -19,7 +19,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public PayrollAccruals(Provider provider = Provider.SQLite) : this()
@@ -35,21 +34,23 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            FirstName = Data["FirstName"].ToString();
-            EmployeeID = Data["EmployeeID"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            StartDate = Data["StartDate"].ToString();
-            EndDate = Data["EndDate"].ToString();
-            ApprovalDate = Data["ApprovalDate"].ToString();
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            HrOrgCode = Data["HrOrgCode"].ToString();
-            WorkCode = Data["WorkCode"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            Hours = decimal.Parse(Data["Hours"].ToString());
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                FirstName = Data["FirstName"].ToString();
+                EmployeeID = Data["EmployeeID"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                StartDate = Data["StartDate"].ToString();
+                EndDate = Data["EndDate"].ToString();
+                ApprovalDate = Data["ApprovalDate"].ToString();
+                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                HrOrgCode = Data["HrOrgCode"].ToString();
+                WorkCode = Data["WorkCode"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                Hours = decimal.Parse(Data["Hours"].ToString());
+            }
         }
 
         public PayrollAccruals(Dictionary<string, object> p) : this()
@@ -58,8 +59,28 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                FirstName = Data["FirstName"].ToString();
+                EmployeeID = Data["EmployeeID"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                StartDate = Data["StartDate"].ToString();
+                EndDate = Data["EndDate"].ToString();
+                ApprovalDate = Data["ApprovalDate"].ToString();
+                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                HrOrgCode = Data["HrOrgCode"].ToString();
+                WorkCode = Data["WorkCode"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                Hours = decimal.Parse(Data["Hours"].ToString()); 
+            }
+        }
+
+        public PayrollAccruals(DataRow data) : this()
+        {
+            Data = data;
             ID = int.Parse(Data["ID"].ToString());
             FirstName = Data["FirstName"].ToString();
             EmployeeID = Data["EmployeeID"].ToString();
@@ -73,11 +94,6 @@ namespace BudgetExecution
             WorkCode = Data["WorkCode"].ToString();
             PayPeriod = Data["PayPeriod"].ToString();
             Hours = decimal.Parse(Data["Hours"].ToString());
-        }
-
-        public PayrollAccruals(DataRow data) : this()
-        {
-            Data = data;
         }
 
         // PROPERTIES

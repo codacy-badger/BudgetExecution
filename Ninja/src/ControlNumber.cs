@@ -20,13 +20,25 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Records = DbData.Records;
+            Columns = DbData.Columns;
         }
 
         public ControlNumber(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Region = "R6";
+                BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+                RegionControlNumber = GetRegionCount() + 1;
+                FundControlNumber = RegionControlNumber + 1;
+                BudgetControlNumber = FundControlNumber + 1;
+            }
         }
 
         public ControlNumber(Provider provider, Dictionary<string, object> p) : this()
@@ -35,14 +47,17 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Region = "R6";
-            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
-            RegionControlNumber = GetRegionCount() + 1;
-            FundControlNumber = RegionControlNumber + 1;
-            BudgetControlNumber = FundControlNumber + 1;
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Region = "R6";
+                BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+                RegionControlNumber = GetRegionCount() + 1;
+                FundControlNumber = RegionControlNumber + 1;
+                BudgetControlNumber = FundControlNumber + 1; 
+            }
         }
 
         public ControlNumber(Dictionary<string, object> p) : this()
@@ -50,14 +65,17 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Region = "R6";
-            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
-            RegionControlNumber = GetRegionCount() + 1;
-            FundControlNumber = RegionControlNumber + 1;
-            BudgetControlNumber = FundControlNumber + 1;
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Region = "R6";
+                BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+                RegionControlNumber = GetRegionCount() + 1;
+                FundControlNumber = RegionControlNumber + 1;
+                BudgetControlNumber = FundControlNumber + 1;
+            }
         }
 
         public ControlNumber(string fundCode, string division) : this()
@@ -67,19 +85,28 @@ namespace BudgetExecution
             Input = GetParameter(FundCode, Division);
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
-            Records = DbData.Records;
-            Data = DbData.Data;
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Region = "R6";
+                BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
+                RegionControlNumber = GetRegionCount() + 1;
+                FundControlNumber = RegionControlNumber + 1;
+                BudgetControlNumber = FundControlNumber + 1; 
+            }
+        }
+
+        public ControlNumber(DataRow data)
+        {
+            Data = data;
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
             BFY = Table.AsEnumerable().Select(p => p.Field<string>("BFY")).First();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
-        }
-
-        public ControlNumber(DataRow data)
-        {
-            Data = data;
         }
 
         // PROPERTIES

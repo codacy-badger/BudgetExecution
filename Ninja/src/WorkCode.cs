@@ -19,12 +19,14 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         public WorkCode(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
         }
 
         public WorkCode(Provider provider, Dictionary<string, object> p) : this()
@@ -34,18 +36,20 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            PayPeriod = Data["PayPeriod"].ToString();
-            BFY = Data["BFY"].ToString();
-            Org = Data["StartDate"].ToString();
-            FundCode = Data["FundCode"].ToString();
-            ApprovalDate = Data["ApprovalDate"].ToString();
-            Project = Data["ProgramProjectCode"].ToString();
-            Code = Data["WorkCode"].ToString();
-            PayPeriod = Data["PayPeriod"].ToString();
-            Description = Data["FirstName"].ToString();
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                PayPeriod = Data["PayPeriod"].ToString();
+                BFY = Data["BFY"].ToString();
+                Org = Data["StartDate"].ToString();
+                FundCode = Data["FundCode"].ToString();
+                ApprovalDate = Data["ApprovalDate"].ToString();
+                Project = Data["ProgramProjectCode"].ToString();
+                Code = Data["WorkCode"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                Description = Data["FirstName"].ToString(); 
+            }
         }
 
         public WorkCode(Dictionary<string, object> p) : this()
@@ -54,8 +58,25 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                PayPeriod = Data["PayPeriod"].ToString();
+                BFY = Data["BFY"].ToString();
+                Org = Data["StartDate"].ToString();
+                FundCode = Data["FundCode"].ToString();
+                ApprovalDate = Data["ApprovalDate"].ToString();
+                Project = Data["ProgramProjectCode"].ToString();
+                Code = Data["WorkCode"].ToString();
+                PayPeriod = Data["PayPeriod"].ToString();
+                Description = Data["FirstName"].ToString();
+            }
+        }
+
+        public WorkCode(DataRow data)
+        {
+            Data = data;
             ID = int.Parse(Data["ID"].ToString());
             PayPeriod = Data["PayPeriod"].ToString();
             BFY = Data["BFY"].ToString();
@@ -66,11 +87,6 @@ namespace BudgetExecution
             Code = Data["WorkCode"].ToString();
             PayPeriod = Data["PayPeriod"].ToString();
             Description = Data["FirstName"].ToString();
-        }
-
-        public WorkCode(DataRow data)
-        {
-            Data = data;
         }
 
         // PROPERTIES

@@ -44,11 +44,9 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             ProgramElements = DbData.ProgramElements;
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = DbData.Table;
-            Grid.DataSource = BindingSource;
             Metric = new PrcMetric(DbData);
-            SetLabels();
+            GetBindingSource();
+            Grid.DataSource = BindingSource;
             ChartMainTitle = new[] { $"{Source.ToString()} Resources" };
             BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
         }
@@ -228,16 +226,38 @@ namespace BudgetExecution
 
         // METHODS
 
+        private BindingSource GetBindingSource()
+        {
+            try
+            {
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = DbData.Table;
+                return BindingSource;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         /// <summary>
         /// The SetLabels
         /// </summary>
         private void SetLabels()
         {
-            lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-            lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-            lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-            lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-            lblCount.Text = DbData.GetCount(Table).ToString();
+            try
+            {
+                lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+                lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                lblCount.Text = DbData.GetCount(Table).ToString();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
 
         /// <summary>
@@ -260,6 +280,7 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 GridFundFilter.Visible = false;
                 GridBocFilter.Visible = false;
+                SetLabels();
                 //SetCaptionImages(Source);
             }
             catch(Exception ex)

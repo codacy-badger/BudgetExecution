@@ -19,7 +19,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Employee(Source source = Source.Personnel, Provider provider = Provider.SQLite) : this()
@@ -29,7 +28,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Employee(Provider provider, Dictionary<string, object> p) : this()
@@ -39,18 +37,20 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            Section = Data["Section"].ToString();
-            FirstName = Data["FirstName"].ToString();
-            LastName = Data["LastName"].ToString();
-            Office = Data["Office"].ToString();
-            Phone = Data["Phone"].ToString();
-            Cell = Data["Cell"].ToString();
-            Email = Data["Email"].ToString();
-            Status = Data["Status"].ToString();
-            RC = new RC(Data["RC"].ToString());
-            Division = new Division(Source);
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                Section = Data["Section"].ToString();
+                FirstName = Data["FirstName"].ToString();
+                LastName = Data["LastName"].ToString();
+                Office = Data["Office"].ToString();
+                Phone = Data["Phone"].ToString();
+                Cell = Data["Cell"].ToString();
+                Email = Data["Email"].ToString();
+                Status = Data["Status"].ToString();
+                RC = new RC(Data["RC"].ToString());
+                Division = new Division(Source);
+            }
         }
 
         public Employee(Dictionary<string, object> p) : this()
@@ -59,8 +59,25 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                Section = Data["Section"].ToString();
+                FirstName = Data["FirstName"].ToString();
+                LastName = Data["LastName"].ToString();
+                Office = Data["Office"].ToString();
+                Phone = Data["Phone"].ToString();
+                Cell = Data["Cell"].ToString();
+                Email = Data["Email"].ToString();
+                Status = Data["Status"].ToString();
+                RC = new RC(Data["RC"].ToString());
+                Division = new Division(Source); 
+            }
+        }
+
+        public Employee(DataRow data) : this()
+        {
+            Data = data;
             Section = Data["Section"].ToString();
             FirstName = Data["FirstName"].ToString();
             LastName = Data["LastName"].ToString();
@@ -71,11 +88,6 @@ namespace BudgetExecution
             Status = Data["Status"].ToString();
             RC = new RC(Data["RC"].ToString());
             Division = new Division(Source);
-        }
-
-        public Employee(DataRow data) : this()
-        {
-            Data = data;
         }
 
         // PROPERTIES

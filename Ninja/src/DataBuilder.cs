@@ -123,12 +123,12 @@ namespace BudgetExecution
         {
             try
             {
-                DataSet ds = new DataSet("R6");
-                ds.DataSetName = "R6";
+                R6 = new DataSet("R6");
+                R6.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = Source.ToString();
-                ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, dt.TableName);
+                R6.Tables.Add(dt);
+                Query.DataAdapter.Fill(R6, dt.TableName);
                 return dt;
             }
             catch(Exception e)
@@ -243,12 +243,12 @@ namespace BudgetExecution
         {
             try
             {
-                DataSet ds = new DataSet("R6");
-                ds.DataSetName = "R6";
+                R6 = new DataSet("R6");
+                R6.DataSetName = "R6";
                 DataTable dt = new DataTable();
                 dt.TableName = source.ToString();
-                ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, dt.TableName);
+                R6.Tables.Add(dt);
+                Query.DataAdapter.Fill(R6, dt.TableName);
                 return dt;
             }
             catch(Exception e)

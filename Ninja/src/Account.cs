@@ -18,12 +18,14 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Account(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
         }
 
         public Account(Provider provider, string bfy, string fund, string code) : this()
@@ -35,23 +37,25 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Code = Data["Code"].ToString();
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            Org = Data["Org"].ToString();
-            BFY = Data["BFY"].ToString();
-            FundCode = Data["FundCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            NPM = Table.Rows[0]["NPM"].ToString();
-            ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
-            GoalName = Table.Rows[0]["GoalName"].ToString();
-            ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
-            ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
-            Parameter = GetAccountParameter(BFY, FundCode, Code);
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Code = Data["Code"].ToString();
+                Goal = Code.Substring(0, 1);
+                Objective = Code.Substring(1, 2);
+                NpmCode = Code.Substring(3, 1);
+                Org = Data["Org"].ToString();
+                BFY = Data["BFY"].ToString();
+                FundCode = Data["FundCode"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                NPM = Table.Rows[0]["NPM"].ToString();
+                ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+                GoalName = Table.Rows[0]["GoalName"].ToString();
+                ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+                ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+                Parameter = GetAccountParameter(BFY, FundCode, Code);
+            }
         }
 
         public Account(Provider provider, Dictionary<string, object> p) : this() 
@@ -77,8 +81,30 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.Accounts, provider, Parameter);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Code = Data["Code"].ToString();
+                Goal = Code.Substring(0, 1);
+                Objective = Code.Substring(1, 2);
+                NpmCode = Code.Substring(3, 1);
+                Org = Data["Org"].ToString();
+                BFY = Data["BFY"].ToString();
+                FundCode = Data["FundCode"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                NPM = Table.Rows[0]["NPM"].ToString();
+                ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+                GoalName = Table.Rows[0]["GoalName"].ToString();
+                ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+                ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+                Parameter = GetAccountParameter(BFY, FundCode, Code); 
+            }
+        }
+
+        public Account(DataRow data) : this()
+        {
+            Data = data;
             ID = int.Parse(Data["ID"].ToString());
             Code = Data["Code"].ToString();
             Goal = Code.Substring(0, 1);
@@ -94,11 +120,6 @@ namespace BudgetExecution
             ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
             ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
             Parameter = GetAccountParameter(BFY, FundCode, Code);
-        }
-
-        public Account(DataRow data) : this()
-        {
-            Data = data;
         }
 
         public Account(Dictionary<string, object> data) : this()
@@ -106,23 +127,25 @@ namespace BudgetExecution
             Parameter = data;
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = int.Parse(Data["ID"].ToString());
-            Code = Data["Code"].ToString();
-            Goal = Code.Substring(0, 1);
-            Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(3, 1);
-            Org = Data["Org"].ToString();
-            BFY = Data["BFY"].ToString();
-            FundCode = Data["FundCode"].ToString();
-            ProgramProjectName = Data["ProgramProjectName"].ToString();
-            NPM = Table.Rows[0]["NPM"].ToString();
-            ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
-            GoalName = Table.Rows[0]["GoalName"].ToString();
-            ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
-            ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
-            Parameter = GetAccountParameter(BFY, FundCode, Code);
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = int.Parse(Data["ID"].ToString());
+                Code = Data["Code"].ToString();
+                Goal = Code.Substring(0, 1);
+                Objective = Code.Substring(1, 2);
+                NpmCode = Code.Substring(3, 1);
+                Org = Data["Org"].ToString();
+                BFY = Data["BFY"].ToString();
+                FundCode = Data["FundCode"].ToString();
+                ProgramProjectName = Data["ProgramProjectName"].ToString();
+                NPM = Table.Rows[0]["NPM"].ToString();
+                ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+                GoalName = Table.Rows[0]["GoalName"].ToString();
+                ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+                ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
+                Parameter = GetAccountParameter(BFY, FundCode, Code); 
+            }
         }
 
         

@@ -17,8 +17,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Columns = Table.GetColumnNames();
-            Records = DbData.Records;
+            Columns = DbData.Columns;
         }
 
         public Division(Source source, Provider provider = Provider.SQLite) : this()
@@ -28,7 +27,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Division(Provider provider, Dictionary<string, object> p) : this()
@@ -37,19 +35,26 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
-            Columns = Table.GetColumnNames();
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = Data["ID"].ToString();
-            RC = new RC(Data["RC"].ToString());
-            Title = Data["Title"].ToString();
-            Code = Data["Code"].ToString();
-            Name = Data["Name"].ToString();
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = Data["ID"].ToString();
+                RC = new RC(Data["RC"].ToString());
+                Title = Data["Title"].ToString();
+                Code = Data["Code"].ToString();
+                Name = Data["Name"].ToString();
+            }
         }
 
         public Division(DataRow data) : this()
         {
             Data = data;
+            ID = Data["ID"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
         }
 
         public Division(Dictionary<string, object> data) : this()
@@ -57,14 +62,16 @@ namespace BudgetExecution
             Input = data;
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
-            Columns = Table.GetColumnNames();
-            Records = DbData.Records;
-            Data = DbData.Data;
-            ID = Data["ID"].ToString();
-            RC = new RC(Data["RC"].ToString());
-            Title = Data["Title"].ToString();
-            Code = Data["Code"].ToString();
-            Name = Data["Name"].ToString();
+            Columns = DbData.Columns;
+            if(Table.Rows.Count == 1)
+            {
+                Data = DbData.Data;
+                ID = Data["ID"].ToString();
+                RC = new RC(Data["RC"].ToString());
+                Title = Data["Title"].ToString();
+                Code = Data["Code"].ToString();
+                Name = Data["Name"].ToString(); 
+            }
         }
 
         public Source Source { get; set; }
