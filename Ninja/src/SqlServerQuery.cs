@@ -49,7 +49,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public SqlServerQuery(Source source, Dictionary<string, object> param) : base(source, Provider.SqlServer, Sql.SELECT, param)
+        public SqlServerQuery(Source source, Dictionary<string, object> param) : base(source, Provider.SqlServer, SQL.SELECT, param)
         {
             Source = source;
             Provider = Provider.SqlServer;

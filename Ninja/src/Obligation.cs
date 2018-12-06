@@ -26,14 +26,13 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        public Obligation(Source source = Source.ProgramObligations, Provider provider = Provider.SQLite)
+        public Obligation(Source source, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider);
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
+            Data = DbData.Data;
         }
 
         /// <summary>
@@ -48,54 +47,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Obligation"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        /// <param name="rpio">The rpio<see cref="string"/></param>
-        /// <param name="fy">The fy<see cref="string"/></param>
-        /// <param name="fund">The fund<see cref="string"/></param>
-        /// <param name="org">The org<see cref="string"/></param>
-        /// <param name="rc">The rc<see cref="string"/></param>
-        /// <param name="code">The code<see cref="string"/></param>
-        /// <param name="boc">The boc<see cref="string"/></param>
-        /// <param name="foc">The foc<see cref="string"/></param>
-        /// <param name="focname">The focname<see cref="string"/></param>
-        /// <param name="doctype">The doctype<see cref="string"/></param>
-        /// <param name="system">The system<see cref="string"/></param>
-        /// <param name="prn">The prn<see cref="string"/></param>
-        /// <param name="dcnprefix">The dcnprefix<see cref="string"/></param>
-        /// <param name="grantnumber">The grantnumber<see cref="string"/></param>
-        /// <param name="siteprojcode">The siteprojcode<see cref="string"/></param>
-        /// <param name="siteprojname">The siteprojname<see cref="string"/></param>
-        /// <param name="dcn">The dcn<see cref="string"/></param>
-        /// <param name="c">The c<see cref="decimal"/></param>
-        /// <param name="o">The o<see cref="decimal"/></param>
-        public Obligation(Source source, Provider provider, Dictionary<string, object> param, string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname, string doctype, string system, string prn, string dcnprefix, string grantnumber, string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(source, provider, param);
-            Table = DbData.Table;
-            DbRow = Table.Rows[0];
-            Records = Table.AsEnumerable().Select(p => p).ToArray();
-            ID = int.Parse(Records[0]["ID"].ToString());
-            RPIO = rpio;
-            BFY = fy;
-            Fund = new Fund(provider, new Dictionary<string, object> { ["FundCode"] = param["FundCode"].ToString(), ["BFY"] = param["BFY"].ToString() });
-            Org = new Org(org);
-            RC = new RC(rc);
-            ProgramProjectCode = Records[0]["ProgramProjectCode"].ToString();
-            BOC = new BOC(boc);
-            FOC = foc;
-            FocName = focname;
-            Obligations = o;
+            Data = DbData.Data;
         }
 
         /// <summary>
@@ -104,17 +56,18 @@ namespace BudgetExecution
         /// <param name="dr">The dr<see cref="DataRow"/></param>
         public Obligation(DataRow dr)
         {
-            ID = int.Parse(dr["ID"].ToString());
-            RPIO = dr["RPIO "].ToString();
-            BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["FundCode"].ToString(), BFY);
-            Org = new Org(dr["Org"].ToString());
-            RC = new RC(dr["RC"].ToString());
-            ProgramProjectCode = dr["ProgramProjectCode"].ToString();
-            BOC = new BOC(dr["BOC"].ToString());
-            FOC = dr["FOC"].ToString();
-            FocName = dr["FocName"].ToString();
-            Obligations = decimal.Parse(dr["Obligations"].ToString());
+            Data = dr;
+            ID = int.Parse(Data["ID"].ToString());
+            RPIO = Data["RPIO "].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            FOC = Data["FOC"].ToString();
+            FocName = Data["FocName"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
         }
 
         // Properties
@@ -137,16 +90,12 @@ namespace BudgetExecution
         /// Gets the Table
         /// </summary>
         public DataTable Table { get; }
-
-        /// <summary>
-        /// Gets the Records
-        /// </summary>
-        public DataRow[] Records { get; }
+        
 
         /// <summary>
         /// Gets the DbRow
         /// </summary>
-        public DataRow DbRow { get; }
+        public DataRow Data { get; }
 
         /// <summary>
         /// Gets or sets the AH

@@ -30,7 +30,7 @@ namespace BudgetExecution
         {
             Provider = base.Provider;
             Source = base.Source;
-            SqlCmd = Sql.SELECT;
+            SqlCmd = SQL.SELECT;
             DataConnection = GetConnection();
             TableName = Source.ToString();
             SelectStatement = $"SELECT * FROM {TableName}";
@@ -46,9 +46,9 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="SQLiteQuery"/> class.
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="sqlcmd">The sqlcmd<see cref="Sql"/></param>
+        /// <param name="sqlcmd">The sqlcmd<see cref="SQL"/></param>
         /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        public SQLiteQuery(Source source, Sql sqlcmd, Dictionary<string, object> p) : base(source, Provider.SQLite, sqlcmd, p)
+        public SQLiteQuery(Source source, SQL sqlcmd, Dictionary<string, object> p) : base(source, Provider.SQLite, sqlcmd, p)
         {
             Provider = base.Provider;
             Source = source;
@@ -72,8 +72,8 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="sql">The sql<see cref="Sql"/></param>
-        public SQLiteQuery(Source source, Provider provider, Sql sql) : base(source, provider, sql)
+        /// <param name="sql">The sql<see cref="SQL"/></param>
+        public SQLiteQuery(Source source, Provider provider, SQL sql) : base(source, provider, sql)
         {
             Provider = provider;
             Source = source;
@@ -94,9 +94,9 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="sql">The sql<see cref="Sql"/></param>
+        /// <param name="sql">The sql<see cref="SQL"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public SQLiteQuery(Source source, Provider provider, Sql sql, Dictionary<string, object> param) : base(source, provider, sql, param)
+        public SQLiteQuery(Source source, Provider provider, SQL sql, Dictionary<string, object> param) : base(source, provider, sql, param)
         {
             Provider = base.Provider;
             Source = base.Source;
@@ -135,7 +135,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets or sets the SqlCmd
         /// </summary>
-        public Sql SqlCmd { get; set; }
+        public SQL SqlCmd { get; set; }
 
         /// <summary>
         /// Gets or sets the SelectStatement
@@ -503,26 +503,26 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="cmd">The cmd<see cref="Sql"/></param>
+        /// <param name="cmd">The cmd<see cref="SQL"/></param>
         /// <param name="pmr">The pmr<see cref="SQLiteParameter[]"/></param>
         /// <param name="connection">The connection<see cref="SQLiteConnection"/></param>
         /// <returns>The <see cref="SQLiteCommand"/></returns>
-        public SQLiteCommand GetDataCommand(Source source, Provider provider, Sql cmd, SQLiteParameter[] pmr, SQLiteConnection connection)
+        public SQLiteCommand GetDataCommand(Source source, Provider provider, SQL cmd, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT:
+                    case SQL.SELECT:
                         return GetSelectCommand(source, provider, pmr, connection);
 
-                    case Sql.UPDATE:
+                    case SQL.UPDATE:
                         return GetUpdateCommand(source, provider, pmr, connection);
 
-                    case Sql.INSERT:
+                    case SQL.INSERT:
                         return GetInsertCommand(source, provider, pmr, connection);
 
-                    case Sql.DELETE:
+                    case SQL.DELETE:
                         return GetDeleteCommand(source, provider, pmr, connection);
 
                     default:

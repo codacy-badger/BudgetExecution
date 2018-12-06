@@ -55,11 +55,6 @@ namespace BudgetExecution
         Org Org { get; set; }
 
         /// <summary>
-        /// Gets or sets the PRC
-        /// </summary>
-        PRC[] PRC { get; set; }
-
-        /// <summary>
         /// Gets or sets the ProgramProjectCode
         /// </summary>
         string ProgramProjectCode { get; set; }

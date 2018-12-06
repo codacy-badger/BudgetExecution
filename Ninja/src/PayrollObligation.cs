@@ -235,7 +235,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayrollObligations, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayrollObligations, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -252,7 +252,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayrollObligations, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayrollObligations, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -269,7 +269,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayrollObligations, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayrollObligations, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();

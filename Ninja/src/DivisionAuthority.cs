@@ -21,9 +21,8 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source);
             Filter = (table, col, filter) => DataBuilder.Filter(table, col, filter);
             R6 = DbData.GetDataSet(Source);
-            R6.DataSetName = "R6";
             Table = DbData.Table;
-            Table.TableName = Source.ToString();
+            Data = DbData.Data;
             ProgramElements = DbData.ProgramElements;
             BFY = ProgramElements["BFY"];
             RC = ProgramElements["RC"].AsEnumerable().Select(s => s).First();
@@ -38,7 +37,8 @@ namespace BudgetExecution
             CarryOver = Filter(Table, Field.BFY, BFY[0]);
             Awards = Filter(new Awards(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
             Overtime = Filter(new Overtime(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
-            BCN = new ControlNumber(new Dictionary<string, object>(){["Division"] = Table.TableName});
+            BCN = new ControlNumber(new Dictionary<string, object>{["DivisionName"] = Source.ToString(),});
+            ControlNumber = BCN.ToString();
         }
 
         // PROPERTIES
@@ -52,13 +52,13 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataRow[] Records { get; }
-
-        public PRC[] PRC { get; }
+        public DataRow Data { get; set; }
 
         public TableDelegate Filter { get; }
 
         public ControlNumber BCN { get; set; }
+
+        public string ControlNumber { get; set; }
 
         public DataTable FTE { get; }
 

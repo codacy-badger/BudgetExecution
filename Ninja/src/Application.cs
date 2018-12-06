@@ -457,7 +457,7 @@ namespace BudgetExecution
     /// <summary>
     /// Defines the Sql
     /// </summary>
-    public enum Sql { /// <summary>
+    public enum SQL { /// <summary>
         /// Defines the SELECT
         /// </summary>
         SELECT, 

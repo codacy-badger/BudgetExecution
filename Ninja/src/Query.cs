@@ -35,7 +35,7 @@ namespace BudgetExecution
         /// <param name="source">The source<see cref="Source"/></param>
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="cmb">The cmb<see cref="Sql"/></param>
-        public Query(Source source = Source.PRC, Provider provider = Provider.SQLite, Sql cmb = Sql.SELECT)
+        public Query(Source source = Source.PRC, Provider provider = Provider.SQLite, SQL cmb = SQL.SELECT)
         {
             Provider = provider;
             Source = source;
@@ -54,7 +54,7 @@ namespace BudgetExecution
             DeleteStatement = DeleteCommand.CommandText;
         }
 
-        public Query(Tuple<Provider, Source, Sql> queryTuple, IDictionary<string, object> param)
+        public Query(Tuple<Provider, Source, SQL> queryTuple, IDictionary<string, object> param)
         {
             Provider = queryTuple.Item1;
             Source = queryTuple.Item2;
@@ -80,7 +80,7 @@ namespace BudgetExecution
         /// <param name="provider">The provider<see cref="Provider"/></param>
         /// <param name="command">The command<see cref="Sql"/></param>
         /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        public Query(Source source, Provider provider, Sql command, IDictionary<string, object> param)
+        public Query(Source source, Provider provider, SQL command, IDictionary<string, object> param)
         {
             Provider = provider;
             Source = source;
@@ -111,7 +111,7 @@ namespace BudgetExecution
         /// <summary>
         /// Gets the Sql
         /// </summary>
-        public Sql Sql { get; }
+        public SQL Sql { get; }
 
         /// <summary>
         /// Gets the TableName
@@ -298,13 +298,13 @@ namespace BudgetExecution
         /// <param name="command">The command.</param>
         /// <param name="cmd"></param>
         /// <returns></returns>
-        public DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd)
+        public DbDataAdapter GetDataAdapter(DbCommand command, SQL cmd)
         {
             try
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT:
+                    case SQL.SELECT:
                         switch(command)
                         {
                             case SQLiteCommand _:
@@ -338,7 +338,7 @@ namespace BudgetExecution
 
                         break;
 
-                    case Sql.UPDATE:
+                    case SQL.UPDATE:
                         switch(command)
                         {
                             case SQLiteCommand _:
@@ -372,7 +372,7 @@ namespace BudgetExecution
 
                         break;
 
-                    case Sql.INSERT:
+                    case SQL.INSERT:
                         switch(command)
                         {
                             case SQLiteCommand _:
@@ -406,7 +406,7 @@ namespace BudgetExecution
 
                         break;
 
-                    case Sql.DELETE:
+                    case SQL.DELETE:
                         switch(command)
                         {
                             case SQLiteCommand _:
@@ -580,25 +580,25 @@ namespace BudgetExecution
         /// <param name="cmd">The command.</param>
         /// <param name="p">The p.</param>
         /// <returns></returns>
-        public string GetSqlStatement(Source source, Sql cmd, IDictionary<string, object> p)
+        public string GetSqlStatement(Source source, SQL cmd, IDictionary<string, object> p)
         {
             try
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT:
+                    case SQL.SELECT:
                         SelectStatement = GetSelectStatement(source, p);
                         return SelectStatement;
 
-                    case Sql.UPDATE:
+                    case SQL.UPDATE:
                         UpdateStatement = GetUpdateStatement(source, p);
                         return UpdateStatement;
 
-                    case Sql.INSERT:
+                    case SQL.INSERT:
                         InsertStatement = GetInsertStatement(source, p);
                         return InsertStatement;
 
-                    case Sql.DELETE:
+                    case SQL.DELETE:
                         DeleteStatement = GetDeleteStatement(source, p);
                         return DeleteStatement;
 
@@ -842,22 +842,22 @@ namespace BudgetExecution
         /// <param name="cmd">The command.</param>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
-        public DbCommand GetDataCommand(Sql cmd, IDictionary<string, object> pmr)
+        public DbCommand GetDataCommand(SQL cmd, IDictionary<string, object> pmr)
         {
             try
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT:
+                    case SQL.SELECT:
                         return GetSelectCommand(GetSelectParamString(pmr), DataConnection);
 
-                    case Sql.UPDATE:
+                    case SQL.UPDATE:
                         return GetUpdateCommand(pmr);
 
-                    case Sql.INSERT:
+                    case SQL.INSERT:
                         return GetInsertCommand(pmr);
 
-                    case Sql.DELETE:
+                    case SQL.DELETE:
                         return GetDeleteCommand(pmr);
 
                     default:

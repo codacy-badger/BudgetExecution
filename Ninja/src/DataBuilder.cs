@@ -76,20 +76,20 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             Input = param;
-            Query = new Query(Source, Provider, Sql.SELECT, Input);
+            Query = new Query(Source, Provider, SQL.SELECT, Input);
         }
         
         public DataBuilder(Source source, IDictionary<string, object> param) : this(source)
         {
             Source = source;
             Input = param;
-            Query = new Query(Source, Provider, Sql.SELECT, Input);
+            Query = new Query(Source, Provider, SQL.SELECT, Input);
             Table = GetDataTable(Source);
+            Data = Table.Rows[0];
             Total = GetTotal(Source, Table);
             Columns = GetColumnNames();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
-            Data = Table.AsEnumerable().Select(dr => dr).First();
         }
 
         // PROPERTIES
@@ -226,8 +226,7 @@ namespace BudgetExecution
             {
                 DataSet ds = new DataSet("R6");
                 ds.DataSetName = "R6";
-                DataTable dt = new DataTable();
-                dt.TableName = source.ToString();
+                DataTable dt = new DataTable(source.ToString());
                 ds.Tables.Add(dt);
                 Query.DataAdapter.Fill(ds, Source.ToString());
                 return ds;
@@ -245,8 +244,7 @@ namespace BudgetExecution
             {
                 R6 = new DataSet("R6");
                 R6.DataSetName = "R6";
-                DataTable dt = new DataTable();
-                dt.TableName = source.ToString();
+                DataTable dt = new DataTable(source.ToString());
                 R6.Tables.Add(dt);
                 Query.DataAdapter.Fill(R6, dt.TableName);
                 return dt;

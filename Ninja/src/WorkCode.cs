@@ -203,7 +203,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.WorkCodes, provider, Sql.INSERT, p);
+                Query query = new Query(Source.WorkCodes, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -220,7 +220,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.WorkCodes, provider, Sql.UPDATE, p);
+                Query query = new Query(Source.WorkCodes, provider, SQL.UPDATE, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -237,7 +237,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.WorkCodes, provider, Sql.DELETE, p);
+                Query query = new Query(Source.WorkCodes, provider, SQL.DELETE, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();

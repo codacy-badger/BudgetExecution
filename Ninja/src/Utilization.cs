@@ -430,7 +430,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
+                Query query = new Query(source, provider, SQL.INSERT, p);
                 DbConnection conn = query.DataConnection;
                 DbCommand command = query.InsertCommand;
                 conn.Open();
@@ -453,7 +453,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
+                Query query = new Query(source, provider, SQL.INSERT, p);
                 DbConnection conn = query.DataConnection;
                 DbCommand command = query.UpdateCommand;
                 conn.Open();
@@ -476,7 +476,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, Sql.INSERT, p);
+                Query query = new Query(source, provider, SQL.INSERT, p);
                 DbConnection conn = query.DataConnection;
                 DbCommand command = query.DeleteCommand;
                 conn.Open();

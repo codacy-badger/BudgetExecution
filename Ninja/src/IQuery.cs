@@ -81,9 +81,9 @@ namespace BudgetExecution
         /// The GetDataAdapter
         /// </summary>
         /// <param name="command">The command<see cref="DbCommand"/></param>
-        /// <param name="cmd">The cmd<see cref="Sql"/></param>
+        /// <param name="cmd">The cmd<see cref="SQL"/></param>
         /// <returns>The <see cref="DbDataAdapter"/></returns>
-        DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd);
+        DbDataAdapter GetDataAdapter(DbCommand command, SQL cmd);
 
         /// <summary>
         /// The GetDataReader
