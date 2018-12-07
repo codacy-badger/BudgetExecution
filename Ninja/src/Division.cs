@@ -36,15 +36,12 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = Data["ID"].ToString();
-                RC = new RC(Data["RC"].ToString());
-                Title = Data["Title"].ToString();
-                Code = Data["Code"].ToString();
-                Name = Data["Name"].ToString();
-            }
+            Data = DbData.Data;
+            ID = Data["ID"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
         }
 
         public Division(DataRow data) : this()
@@ -63,15 +60,12 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = Data["ID"].ToString();
-                RC = new RC(Data["RC"].ToString());
-                Title = Data["Title"].ToString();
-                Code = Data["Code"].ToString();
-                Name = Data["Name"].ToString(); 
-            }
+            Data = DbData.Data;
+            ID = Data["ID"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Title = Data["Title"].ToString();
+            Code = Data["Code"].ToString();
+            Name = Data["Name"].ToString();
         }
 
         public Source Source { get; set; }

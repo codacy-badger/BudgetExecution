@@ -172,13 +172,13 @@ namespace BudgetExecution
         /// <summary>
         /// The GetSqlStatement
         /// </summary>
-        /// <param name="sqlStatement">The sql<see cref="string"/></param>
+        /// <param name="sqlWhere">The sql<see cref="string"/></param>
         /// <returns>The <see cref="string"/></returns>
-        public new string GetSqlStatement(string sqlStatement)
+        public new string GetSqlStatement(string sqlWhere)
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {sqlStatement}";
+                return $"SELECT * FROM {TableName} WHERE {sqlWhere}";
             }
             catch(Exception ex)
             {

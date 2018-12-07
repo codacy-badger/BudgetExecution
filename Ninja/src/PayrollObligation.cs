@@ -21,7 +21,7 @@ namespace BudgetExecution
             Columns = DbData.Columns;
         }
 
-        public PayrollObligation( Provider provider = Provider.SQLite) : this()
+        public PayrollObligation(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
@@ -33,26 +33,23 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
-            if(Table.Rows.Count == 1)
-            {
-                Columns = DbData.Columns;
-                Data = DbData.Data;
-                RPIO = Data["RPIO"].ToString();
-                BFY = Data["BFY "].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), BFY);
-                Org = new Org(Data["Org"].ToString());
-                OrgName = Org.Name;
-                RC = new RC(Data["RC"].ToString());
-                Code = Data["Code"].ToString();
-                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                HrOrgCode = Data["HrOrgCode"].ToString();
-                WorkCode = Data["WorkCode"].ToString();
-                WorkCodeName = Data["WorkCodeName"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                Obligations = decimal.Parse(Data["Obligations"].ToString());
-                Hours = decimal.Parse(Data["Hours"].ToString());
-            }
+            Columns = DbData.Columns;
+            Data = DbData.Data;
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY "].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            OrgName = Org.Name;
+            RC = new RC(Data["RC"].ToString());
+            Code = Data["Code"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            WorkCodeName = Data["WorkCodeName"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         public PayrollObligation(Dictionary<string, object> p) : this()
@@ -60,26 +57,23 @@ namespace BudgetExecution
             Input = p;
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
-            if(Table.Rows.Count == 1)
-            {
-                Columns = DbData.Columns;
-                Data = DbData.Data;
-                RPIO = Data["RPIO"].ToString();
-                BFY = Data["BFY "].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), BFY);
-                Org = new Org(Data["Org"].ToString());
-                OrgName = Org.Name;
-                RC = new RC(Data["RC"].ToString());
-                Code = Data["Code"].ToString();
-                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                HrOrgCode = Data["HrOrgCode"].ToString();
-                WorkCode = Data["WorkCode"].ToString();
-                WorkCodeName = Data["WorkCodeName"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                Obligations = decimal.Parse(Data["Obligations"].ToString());
-                Hours = decimal.Parse(Data["Hours"].ToString());
-            }
+            Columns = DbData.Columns;
+            Data = DbData.Data;
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY "].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            OrgName = Org.Name;
+            RC = new RC(Data["RC"].ToString());
+            Code = Data["Code"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            WorkCodeName = Data["WorkCodeName"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
         public PayrollObligation(DataRow dr) : this()

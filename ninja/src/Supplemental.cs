@@ -19,12 +19,15 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Supplemental(Provider provider = Provider.SQLite) : this()
         {
+            Source = Source.Supplemental;
             Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
         }
 
         public Supplemental(Provider provider, Dictionary<string, object> p) : this()
@@ -34,7 +37,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
             Data = DbData.Data;
             ID = int.Parse(Data["ID"].ToString());
             Type = Data["Type"].ToString();
@@ -51,7 +53,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
             Data = DbData.Data;
             ID = int.Parse(Data["ID"].ToString());
             Type = Data["Type"].ToString();
@@ -65,6 +66,13 @@ namespace BudgetExecution
         public Supplemental(DataRow data) : this()
         {
             Data = data;
+            ID = int.Parse(Data["ID"].ToString());
+            Type = Data["Type"].ToString();
+            RC = Data["RC"].ToString();
+            DivisionName = Data["DivisionName"].ToString();
+            FundCode = Data["FundCode"].ToString();
+            BFY = Data["BFY"].ToString();
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         // PROPERTIES

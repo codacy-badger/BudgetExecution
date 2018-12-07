@@ -24,7 +24,6 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         /// <summary>

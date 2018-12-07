@@ -9,9 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    /// <summary>
-    /// Defines the <see cref="ProgramObligations" />
-    /// </summary>
     public class ProgramObligations : IDataBuilder
     {
         public ProgramObligations()
@@ -21,43 +18,51 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         // CONSRTUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
         public ProgramObligations(Provider provider = Provider.SQLite)
         {
             Source = Source.ProgramObligations;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            Records = Table.AsEnumerable().Select(o => o).ToArray();
-            Data = Records[0];
+            Columns = DbData.Columns;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            RPIO = Data["RPIO "].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            FOC = Data["FOC"].ToString();
+            FocName = Data["FocName"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
-        /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public ProgramObligations(Provider provider, Dictionary<string, object> param)
         {
             Source = Source.ProgramObligations;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
             Table = DbData.Table;
-            Records = Table.AsEnumerable().Select(o => o).ToArray();
-            Data = Records[0];
+            Columns = DbData.Columns;
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            RPIO = Data["RPIO "].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            FOC = Data["FOC"].ToString();
+            FocName = Data["FocName"].ToString();
+            Obligations = decimal.Parse(Data["Obligations"].ToString());
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ProgramObligations"/> class.
-        /// </summary>
-        /// <param name="dr">The dr<see cref="DataRow"/></param>
         public ProgramObligations(DataRow dr)
         {
             ID = int.Parse(dr["ID"].ToString());
@@ -74,133 +79,58 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        /// <summary>
-        /// Gets the Source
-        /// </summary>
         public Source Source { get; }
 
-        /// <summary>
-        /// Gets the Provider
-        /// </summary>
         public Provider Provider { get; }
 
-        /// <summary>
-        /// Gets the DbData
-        /// </summary>
         public DataBuilder DbData { get; }
 
-        /// <summary>
-        /// Gets the Table
-        /// </summary>
         public DataTable Table { get; set; }
 
         public string[] Columns { get; set; }
 
         Dictionary<string, string[]> IDataBuilder.ProgramElements { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Records
-        /// </summary>
         public DataRow[] Records { get; set; }
 
-        /// <summary>
-        /// Gets the DbRow
-        /// </summary>
         public DataRow Data { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ID
-        /// </summary>
         public int ID { get; set; }
 
-        /// <summary>
-        /// Gets or sets the PRC
-        /// </summary>
         public PRC PRC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the BFY
-        /// </summary>
         public string BFY { get; set; }
 
-        /// <summary>
-        /// Gets or sets the BOC
-        /// </summary>
         public BOC BOC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ProgramProjectCode
-        /// </summary>
         public string ProgramProjectCode { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DCN
-        /// </summary>
         public string DCN { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FOC
-        /// </summary>
         public string FOC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FocName
-        /// </summary>
         public string FocName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Fund
-        /// </summary>
         public Fund Fund { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FundCode
-        /// </summary>
         public string FundCode { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Amount
-        /// </summary>
         public decimal Amount { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Org
-        /// </summary>
         public Org Org { get; set; }
 
-        /// <summary>
-        /// Gets or sets the RC
-        /// </summary>
         public RC RC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the RPIO
-        /// </summary>
         public string RPIO { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DollarAmount
-        /// </summary>
         public decimal DollarAmount { get; set; }
 
-        /// <summary>
-        /// Gets or sets the OpenCommitments
-        /// </summary>
         public decimal OpenCommitments { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Obligations
-        /// </summary>
         public decimal Obligations { get; set; }
 
         // METHODS
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Explicit implementation of the IDataBuilder method 
-        /// Gets the primary data source using the DbData attribute.
-        /// </summary>
-        /// <returns></returns>
         DataTable IDataBuilder.GetDataTable()
         {
             try
@@ -214,11 +144,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// 
-        /// <param name="table">The table<see cref="T:System.Data.DataTable" /></param>
-        /// <returns>The <see cref="T:System.Collections.Generic.Dictionary`2" /></returns>
         Dictionary<string, string[]> IDataBuilder.GetProgramElements(DataTable table)
         {
             try
@@ -232,9 +157,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// <param name="table"></param>
         DataRow[] IDataBuilder.GetRecords(DataTable table)
         {
             try
@@ -248,10 +170,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary> Explicit implementation of the IDataBuilder method </summary>
-        /// <param name="table"></param>
-        /// <param name="col"></param>
         string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
         {
             try
@@ -265,19 +183,11 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The ToString
-        /// </summary>
-        /// <returns>The <see cref="string"/></returns>
         public override string ToString()
         {
             return DCN;
         }
 
-        /// <summary>
-        /// Gets the schema.
-        /// </summary>
-        /// <returns></returns>
         internal Dictionary<string, object> GetSchema()
         {
             try
@@ -292,13 +202,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the data.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -312,10 +215,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the fields.
-        /// </summary>
-        /// <returns></returns>
         internal string[] GetColumnNames()
         {
             try
@@ -331,10 +230,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the values.
-        /// </summary>
-        /// <returns></returns>
         internal object[] GetValues()
         {
             try
@@ -349,13 +244,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the insert columns.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public static Dictionary<string, object> GetInsertColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -410,12 +298,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
         public static Obligation Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -430,13 +312,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public static Obligation Select(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -451,12 +326,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Inserts the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -474,11 +343,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Updates the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Update(Provider provider, Dictionary<string, object> p)
         {
             try
@@ -496,11 +360,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Deletes the specified source.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
         public static void Delete(Provider provider, Dictionary<string, object> p)
         {
             try

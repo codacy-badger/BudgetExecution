@@ -198,7 +198,7 @@ namespace BudgetExecution
         public override string ToString()
         {
             var yr = BFY.Substring(2, 2);
-            return new StringBuilder($"{BFY}-{Region}-0{RegionControlNumber}-{yr}{FundCode}-0{FundControlNumber}-{DivisionName}-{BudgetControlNumber}").ToString();
+            return new StringBuilder($"{Region}-{BFY}-{yr}{FundCode}-0{FundControlNumber}-6{DivisionName}-0{BudgetControlNumber}").ToString();
         }
 
         internal string[] GetColumnNames()

@@ -37,20 +37,17 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                Section = Data["Section"].ToString();
-                FirstName = Data["FirstName"].ToString();
-                LastName = Data["LastName"].ToString();
-                Office = Data["Office"].ToString();
-                Phone = Data["Phone"].ToString();
-                Cell = Data["Cell"].ToString();
-                Email = Data["Email"].ToString();
-                Status = Data["Status"].ToString();
-                RC = new RC(Data["RC"].ToString());
-                Division = new Division(Source);
-            }
+            Data = DbData.Data;
+            Section = Data["Section"].ToString();
+            FirstName = Data["FirstName"].ToString();
+            LastName = Data["LastName"].ToString();
+            Office = Data["Office"].ToString();
+            Phone = Data["Phone"].ToString();
+            Cell = Data["Cell"].ToString();
+            Email = Data["Email"].ToString();
+            Status = Data["Status"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Division = new Division(Source);
         }
 
         public Employee(Dictionary<string, object> p) : this()
@@ -59,20 +56,17 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                Section = Data["Section"].ToString();
-                FirstName = Data["FirstName"].ToString();
-                LastName = Data["LastName"].ToString();
-                Office = Data["Office"].ToString();
-                Phone = Data["Phone"].ToString();
-                Cell = Data["Cell"].ToString();
-                Email = Data["Email"].ToString();
-                Status = Data["Status"].ToString();
-                RC = new RC(Data["RC"].ToString());
-                Division = new Division(Source); 
-            }
+            Data = DbData.Data;
+            Section = Data["Section"].ToString();
+            FirstName = Data["FirstName"].ToString();
+            LastName = Data["LastName"].ToString();
+            Office = Data["Office"].ToString();
+            Phone = Data["Phone"].ToString();
+            Cell = Data["Cell"].ToString();
+            Email = Data["Email"].ToString();
+            Status = Data["Status"].ToString();
+            RC = new RC(Data["RC"].ToString());
+            Division = new Division(Source);
         }
 
         public Employee(DataRow data) : this()

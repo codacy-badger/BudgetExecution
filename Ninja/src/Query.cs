@@ -2,39 +2,24 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-
-
 namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
     using System.Configuration;
-    using System.Data;
     using System.Data.Common;
     using System.Data.OleDb;
     using System.Data.SqlClient;
     using System.Data.SQLite;
     using System.Data.SqlServerCe;
 
-    /// <summary>
-    /// Defines the <see cref="Query" />
-    /// </summary>
     public class Query : IQuery
     {
         // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Query"/> class.
-        /// </summary>
         public Query()
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Query"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="cmb">The cmb<see cref="Sql"/></param>
         public Query(Source source = Source.PRC, Provider provider = Provider.SQLite, SQL cmb = SQL.SELECT)
         {
             Provider = provider;
@@ -73,13 +58,6 @@ namespace BudgetExecution
             DeleteStatement = DeleteCommand.CommandText;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Query"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="command">The command<see cref="Sql"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public Query(Source source, Provider provider, SQL command, IDictionary<string, object> param)
         {
             Provider = provider;
@@ -96,111 +74,44 @@ namespace BudgetExecution
         // PROPERTIES
 
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the Source
-        /// </summary>
         public Source Source { get; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the Provider
-        /// </summary>
         public Provider Provider { get; }
 
-        /// <summary>
-        /// Gets the Sql
-        /// </summary>
         public SQL Sql { get; }
 
-        /// <summary>
-        /// Gets the TableName
-        /// </summary>
         public string TableName { get; }
 
-        /// <summary>
-        /// Gets or sets the SelectStatement
-        /// </summary>
         public string SelectStatement { get; set; }
 
-        /// <summary>
-        /// Gets or sets the UpdateStatement
-        /// </summary>
         public string UpdateStatement { get; set; }
 
-        /// <summary>
-        /// Gets or sets the InsertStatement
-        /// </summary>
         public string InsertStatement { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DeleteStatement
-        /// </summary>
         public string DeleteStatement { get; set; }
 
-        /// <summary>
-        /// Gets or sets the SelectCommand
-        /// </summary>
         public DbCommand SelectCommand { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DeleteCommand
-        /// </summary>
         public DbCommand DeleteCommand { get; internal set; }
 
-        /// <summary>
-        /// Gets or sets the InsertCommand
-        /// </summary>
         public DbCommand InsertCommand { get; internal set; }
 
-        /// <summary>
-        /// Gets or sets the UpdateCommand
-        /// </summary>
         public DbCommand UpdateCommand { get; internal set; }
 
-        /// <summary>
-        /// Gets or sets the CommandBuilder
-        /// </summary>
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the DataConnection
-        /// </summary>
         public DbConnection DataConnection { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the SqlStatement
-        /// </summary>
         public string SqlStatement { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the DataCommand
-        /// </summary>
         public DbCommand DataCommand { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the DataReader
-        /// </summary>
         public DbDataReader DataReader { get; set; }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets or sets the DataAdapter
-        /// </summary>
         public DbDataAdapter DataAdapter { get; set; }
 
         // METHODS
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data connection.
-        /// </summary>
-        /// <param name="provider">The provider.</param>
-        /// <returns></returns>
         public DbConnection GetDataConnection(Provider provider)
         {
             try
@@ -236,17 +147,11 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the SQL statement.
-        /// </summary>
-        /// <param name="sql">The SQL.</param>
-        /// <returns></returns>
-        public string GetSqlStatement(string sql)
+        public string GetSqlStatement(string sqlWhere)
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {sql}";
+                return $"SELECT * FROM {TableName} WHERE {sqlWhere}";
             }
             catch(Exception ex)
             {
@@ -255,25 +160,18 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data command.
-        /// </summary>
-        /// <param name="sql">The SQL.</param>
-        /// <param name="connection">The connection.</param>
-        /// <returns></returns>
         public DbCommand GetDataCommand(string sql, DbConnection connection)
         {
             try
             {
                 switch(connection)
                 {
-                    case SQLiteConnection liteConnection:
+                    case SQLiteConnection sqLiteConnection:
                         SqlStatement = sql;
-                        return new SQLiteCommand(SqlStatement, liteConnection);
-                    case OleDbConnection dbConnection:
+                        return new SQLiteCommand(SqlStatement, sqLiteConnection);
+                    case OleDbConnection oleDbConnection:
                         SqlStatement = sql;
-                        return new OleDbCommand(SqlStatement, dbConnection);
+                        return new OleDbCommand(SqlStatement, oleDbConnection);
                     case SqlCeConnection sqlceConnection:
                         SqlStatement = sql;
                         return new SqlCeCommand(SqlStatement, sqlceConnection);
@@ -291,13 +189,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data adapter.
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <param name="cmd"></param>
-        /// <returns></returns>
         public DbDataAdapter GetDataAdapter(DbCommand command, SQL cmd)
         {
             try
@@ -455,12 +346,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the data reader.
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <returns></returns>
         public DbDataReader GetDataReader(DbCommand command)
         {
             try
@@ -486,12 +371,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// Gets the command builder.
-        /// </summary>
-        /// <param name="adapter">The adapter.</param>
-        /// <returns></returns>
         public DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter)
         {
             try
@@ -521,15 +400,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the connection.
-        /// </summary>
-        /// <returns></returns>
-        /// <summary>
-        ///     Gets the parameter strings.
-        /// </summary>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public string GetSqlParameterString(IDictionary<string, object> param)
         {
             try
@@ -549,11 +419,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the select parameter string.
-        /// </summary>
-        /// <param name="p">The p<see cref="Dictionary{string, object}"/></param>
-        /// <returns></returns>
         internal string GetSelectParamString(IDictionary<string, object> p)
         {
             try
@@ -573,13 +438,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the SQL statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="cmd">The command.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
         public string GetSqlStatement(Source source, SQL cmd, IDictionary<string, object> p)
         {
             try
@@ -613,12 +471,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the select statement.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public string GetSelectStatement(string table, IDictionary<string, object> param)
         {
             try
@@ -632,12 +484,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the select statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public string GetSelectStatement(Source source, IDictionary<string, object> param)
         {
             try
@@ -658,12 +504,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the update statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
-        /// <returns></returns>
         public string GetUpdateStatement(Source source, IDictionary<string, object> param)
         {
             try
@@ -686,12 +526,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the insert statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public string GetInsertStatement(Source source, IDictionary<string, object> param)
         {
             try
@@ -715,12 +549,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the delete statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public string GetDeleteStatement(Source source, IDictionary<string, object> param)
         {
             try
@@ -735,12 +563,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the select command.
-        /// </summary>
-        /// <param name="select">The select.</param>
-        /// <param name="connection">The connection.</param>
-        /// <returns></returns>
         internal DbCommand GetSelectCommand(string select, DbConnection connection)
         {
             try
@@ -770,11 +592,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the update command.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <returns></returns>
         public DbCommand GetUpdateCommand(IDictionary<string, object> pmr)
         {
             try
@@ -792,11 +609,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the insert command.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <returns></returns>
         public DbCommand GetInsertCommand(IDictionary<string, object> pmr)
         {
             try
@@ -814,11 +626,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The GetDeleteCommand
-        /// </summary>
-        /// <param name="pmr">The pmr<see cref="Dictionary{string, object}"/></param>
-        /// <returns>The <see cref="DbCommand"/></returns>
         public DbCommand GetDeleteCommand(IDictionary<string, object> pmr)
         {
             try
@@ -836,12 +643,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the data command.
-        /// </summary>
-        /// <param name="cmd">The command.</param>
-        /// <param name="pmr">The PMR.</param>
-        /// <returns></returns>
         public DbCommand GetDataCommand(SQL cmd, IDictionary<string, object> pmr)
         {
             try

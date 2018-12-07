@@ -9,10 +9,10 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    public class PayrollAccruals : IDataBuilder
+    public class PayAccruals : IDataBuilder
     {
         // CONSTRUCTORS
-        public PayrollAccruals()
+        public PayAccruals()
         {
             Source = Source.PayAccruals;
             Provider = Provider.SQLite;
@@ -21,64 +21,58 @@ namespace BudgetExecution
             Columns = DbData.Columns;
         }
 
-        public PayrollAccruals(Provider provider = Provider.SQLite) : this()
+        public PayAccruals(Provider provider = Provider.SQLite) : this()
         {
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
         }
 
-        public PayrollAccruals(Provider provider, Dictionary<string, object> p) : this()
+        public PayAccruals(Provider provider, Dictionary<string, object> p) : this()
         {
             Provider = provider;
             Input = p;
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = int.Parse(Data["ID"].ToString());
-                FirstName = Data["FirstName"].ToString();
-                EmployeeID = Data["EmployeeID"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                StartDate = Data["StartDate"].ToString();
-                EndDate = Data["EndDate"].ToString();
-                ApprovalDate = Data["ApprovalDate"].ToString();
-                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                HrOrgCode = Data["HrOrgCode"].ToString();
-                WorkCode = Data["WorkCode"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                Hours = decimal.Parse(Data["Hours"].ToString());
-            }
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            FirstName = Data["FirstName"].ToString();
+            EmployeeID = Data["EmployeeID"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            StartDate = Data["StartDate"].ToString();
+            EndDate = Data["EndDate"].ToString();
+            ApprovalDate = Data["ApprovalDate"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
-        public PayrollAccruals(Dictionary<string, object> p) : this()
+        public PayAccruals(Dictionary<string, object> p) : this()
         {
             Input = p;
             DbData = new DataBuilder(Source, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = int.Parse(Data["ID"].ToString());
-                FirstName = Data["FirstName"].ToString();
-                EmployeeID = Data["EmployeeID"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                StartDate = Data["StartDate"].ToString();
-                EndDate = Data["EndDate"].ToString();
-                ApprovalDate = Data["ApprovalDate"].ToString();
-                ProgramProjectCode = Data["ProgramProjectCode"].ToString();
-                ProgramProjectName = Data["ProgramProjectName"].ToString();
-                HrOrgCode = Data["HrOrgCode"].ToString();
-                WorkCode = Data["WorkCode"].ToString();
-                PayPeriod = Data["PayPeriod"].ToString();
-                Hours = decimal.Parse(Data["Hours"].ToString()); 
-            }
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            FirstName = Data["FirstName"].ToString();
+            EmployeeID = Data["EmployeeID"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            StartDate = Data["StartDate"].ToString();
+            EndDate = Data["EndDate"].ToString();
+            ApprovalDate = Data["ApprovalDate"].ToString();
+            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            HrOrgCode = Data["HrOrgCode"].ToString();
+            WorkCode = Data["WorkCode"].ToString();
+            PayPeriod = Data["PayPeriod"].ToString();
+            Hours = decimal.Parse(Data["Hours"].ToString());
         }
 
-        public PayrollAccruals(DataRow data) : this()
+        public PayAccruals(DataRow data) : this()
         {
             Data = data;
             ID = int.Parse(Data["ID"].ToString());
@@ -220,7 +214,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayAccruals, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayAccruals, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -237,7 +231,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayAccruals, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayAccruals, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();
@@ -254,7 +248,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(Source.PayAccruals, provider, Sql.INSERT, p);
+                Query query = new Query(Source.PayAccruals, provider, SQL.INSERT, p);
                 query.DataConnection.Open();
                 query.DeleteCommand.ExecuteNonQuery();
                 query.DataConnection.Close();

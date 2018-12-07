@@ -33,31 +33,28 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.PRC, Provider, param);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = int.Parse(Data["ID"].ToString());
-                BudgetLevel = Data["BudgetLevel"].ToString();
-                RPIO = Data["RPIO"].ToString();
-                AH = Data["AH"].ToString();
-                BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
-                Org = new Org(Data["Org"].ToString());
-                RC = new RC(Data["RC"].ToString());
-                Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
-                Code = Account.Code;
-                BOC = new BOC(Data["BOC"].ToString());
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                ProgramProjectCode = Account.ProgramProjectCode;
-                ProgramProjectName = Account.ProgramProjectName;
-                ProgramArea = Account.ProgramArea;
-                NPM = Account.NPM;
-                NpmCode = Account.NpmCode;
-                Goal = Account.Goal;
-                GoalName = Account.GoalName;
-                Objective = Account.Objective;
-                ObjectiveName = Account.ObjectiveName; 
-            }
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            AH = Data["AH"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         public PRC(DataRow row) : this()
@@ -92,31 +89,28 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.PRC, Parameter);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            if(Table.Rows.Count == 1)
-            {
-                Data = DbData.Data;
-                ID = int.Parse(Data["ID"].ToString());
-                BudgetLevel = Data["BudgetLevel"].ToString();
-                RPIO = Data["RPIO"].ToString();
-                AH = Data["AH"].ToString();
-                BFY = Data["BFY"].ToString();
-                Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
-                Org = new Org(Data["Org"].ToString());
-                RC = new RC(Data["RC"].ToString());
-                Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
-                Code = Account.Code;
-                BOC = new BOC(Data["BOC"].ToString());
-                Amount = decimal.Parse(Data["Amount"].ToString());
-                ProgramProjectCode = Account.ProgramProjectCode;
-                ProgramProjectName = Account.ProgramProjectName;
-                ProgramArea = Account.ProgramArea;
-                NPM = Account.NPM;
-                NpmCode = Account.NpmCode;
-                Goal = Account.Goal;
-                GoalName = Account.GoalName;
-                Objective = Account.Objective;
-                ObjectiveName = Account.ObjectiveName;
-            }
+            Data = DbData.Data;
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            AH = Data["AH"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), Data["BFY"].ToString());
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         // PROPERTIES

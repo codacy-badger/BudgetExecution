@@ -9,23 +9,12 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    /// <summary>
-    /// Defines the <see cref="Obligation" />
-    /// </summary>
     public class Obligation : IObligation
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Obligation"/> class.
-        /// </summary>
         public Obligation()
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Obligation"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
         public Obligation(Source source, Provider provider = Provider.SQLite)
         {
             Source = source;
@@ -35,12 +24,6 @@ namespace BudgetExecution
             Data = DbData.Data;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Obligation"/> class.
-        /// </summary>
-        /// <param name="source">The source<see cref="Source"/></param>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        /// <param name="param">The param<see cref="Dictionary{string, object}"/></param>
         public Obligation(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
@@ -50,10 +33,6 @@ namespace BudgetExecution
             Data = DbData.Data;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Obligation"/> class.
-        /// </summary>
-        /// <param name="dr">The dr<see cref="DataRow"/></param>
         public Obligation(DataRow dr)
         {
             Data = dr;
@@ -71,106 +50,44 @@ namespace BudgetExecution
         }
 
         // Properties
-        /// <summary>
-        /// Gets the Source
-        /// </summary>
         public Source Source { get; }
 
-        /// <summary>
-        /// Gets the Provider
-        /// </summary>
         public Provider Provider { get; }
 
-        /// <summary>
-        /// Gets the DbData
-        /// </summary>
         public DataBuilder DbData { get; }
 
-        /// <summary>
-        /// Gets the Table
-        /// </summary>
         public DataTable Table { get; }
         
-
-        /// <summary>
-        /// Gets the DbRow
-        /// </summary>
         public DataRow Data { get; }
 
-        /// <summary>
-        /// Gets or sets the AH
-        /// </summary>
         public string AH { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ID
-        /// </summary>
         public int ID { get; set; }
 
-        /// <summary>
-        /// Gets or sets the PRC
-        /// </summary>
         public PRC[] PRC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the BFY
-        /// </summary>
         public string BFY { get; set; }
 
-        /// <summary>
-        /// Gets or sets the BOC
-        /// </summary>
         public BOC BOC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ProgramProjectCode
-        /// </summary>
         public string ProgramProjectCode { get; set; }
 
-        /// <summary>
-        /// Gets or sets the DocumentControlNumber
-        /// </summary>
         public string DocumentControlNumber { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FOC
-        /// </summary>
         public string FOC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the FocName
-        /// </summary>
         public string FocName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Fund
-        /// </summary>
         public Fund Fund { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Obligations
-        /// </summary>
         public decimal Obligations { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Org
-        /// </summary>
         public Org Org { get; set; }
 
-        /// <summary>
-        /// Gets or sets the RC
-        /// </summary>
         public RC RC { get; set; }
 
-        /// <summary>
-        /// Gets or sets the RPIO
-        /// </summary>
         public string RPIO { get; set; }
 
-        /// <summary>
-        /// Gets the data fields.
-        /// </summary>
-        /// <returns></returns>
         internal Dictionary<string, object> GetDataFields()
         {
             try
@@ -185,11 +102,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the data fields.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
         internal string[] GetDataFields(DataTable table)
         {
             if(table.Rows.Count > 0)
@@ -208,13 +120,6 @@ namespace BudgetExecution
             return null;
         }
 
-        /// <summary>
-        /// Gets the data records.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
         internal DataRow[] GetDataRecords(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -228,10 +133,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the fields.
-        /// </summary>
-        /// <returns></returns>
         internal string[] GetFields()
         {
             try
@@ -247,10 +148,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the values.
-        /// </summary>
-        /// <returns></returns>
         internal object[] GetValues()
         {
             try
@@ -265,13 +162,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Gets the insert columns.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
         public static Dictionary<string, object> GetInsertColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -326,12 +216,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Selects the specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="p">The p.</param>
-        /// <returns></returns>
         public static Obligation Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -346,13 +230,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Selects the specified parameter.
-        /// </summary>
-        /// <param name="param">The parameter.</param>
-        /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
-        /// <returns></returns>
         public static Obligation Select(Dictionary<string, object> param, Source source = Source.ProgramObligations, Provider provider = Provider.SQLite)
         {
             try
@@ -367,10 +244,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Inserts the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
         {
             try
@@ -384,10 +257,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Updates the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
         public static void Update(Dictionary<string, object> p)
         {
             try
@@ -401,10 +270,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// Deletes the specified p.
-        /// </summary>
-        /// <param name="p">The p.</param>
         public static void Delete(Dictionary<string, object> p)
         {
             try

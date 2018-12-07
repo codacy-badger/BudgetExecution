@@ -220,7 +220,7 @@
     <Compile Include="src\Awards.cs" />
     <Compile Include="src\Employee.cs" />
     <Compile Include="src\Obligation.cs" />
-    <Compile Include="src\PayrollAccruals.cs" />
+    <Compile Include="src\PayAccruals.cs" />
     <Compile Include="src\PdfViewer.cs">
       <SubType>Form</SubType>
     </Compile>

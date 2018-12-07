@@ -16,11 +16,20 @@ namespace BudgetExecution
         {
         }
 
-        public TravelObligations(Source source = Source.TravelObligations, Provider provider = Provider.SQLite)
+        public TravelObligations(Provider provider = Provider.SQLite)
         {
-            Source = source;
+            Source = Source.TravelObligations;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
+        }
+
+        public TravelObligations(Provider provider, Dictionary<string, object> param)
+        {
+            Source = Source.TravelObligations;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, param);
             Table = DbData.Table;
             Columns = DbData.Columns;
             Data = DbData.Data;
@@ -46,16 +55,6 @@ namespace BudgetExecution
             OpenCommitments = decimal.Parse(Data["OpenCommitments"].ToString());
             Obligations = decimal.Parse(Data["Obligations"].ToString());
             ULO = decimal.Parse(Data["ULO "].ToString());
-        }
-
-        public TravelObligations(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Data = DbData.Data;
         }
 
         // PROPERTIES

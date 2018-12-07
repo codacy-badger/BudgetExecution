@@ -19,12 +19,15 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
         }
 
         public Transfer(Provider provider = Provider.SQLite) : this()
         {
+            Source = Source.Transfers;
             Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Columns = DbData.Columns;
         }
 
         public Transfer(Provider provider, Dictionary<string, object> p) : this()
@@ -34,35 +37,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, Input);
             Table = DbData.Table;
             Columns = DbData.Columns;
-            Records = DbData.Records;
-            Data = DbData.Data;
-            TransId = int.Parse(Data["ID"].ToString());
-            BudgetLevel = Data["BudgetLevel"].ToString();
-            DocType = Data["DocType"].ToString();
-            RPIO = Data["RPIO"].ToString();
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["FundCode"].ToString(), BFY);
-            TCN = Data["TCN"].ToString();
-            Qtr = Data["Qtr"].ToString();
-            Date = Data["Date"].ToString();
-            Code = Data["Code"].ToString();
-            Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
-            FundCode = Account.FundCode;
-            NpmCode = Account.NPM;
-            FromTo = Data["FromTo"].ToString();
-            BOC = new BOC(Data["BOC"].ToString());
-            Amount = decimal.Parse(Data["Amount"].ToString());
-        }
-
-        public Transfer(Dictionary<string, object> p) : this()
-        {
-            Input = p;
-            DbData = new DataBuilder(Source, Input);
-            Table = DbData.Table;
-            Columns = DbData.Columns;
-            Records = DbData.Records;
             Data = DbData.Data;
             TransId = int.Parse(Data["ID"].ToString());
             BudgetLevel = Data["BudgetLevel"].ToString();
@@ -87,6 +61,24 @@ namespace BudgetExecution
         public Transfer(DataRow dr) : this()
         {
             Data = dr;
+            TransId = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            DocType = Data["DocType"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["FundCode"].ToString(), BFY);
+            TCN = Data["TCN"].ToString();
+            Qtr = Data["Qtr"].ToString();
+            Date = Data["Date"].ToString();
+            Code = Data["Code"].ToString();
+            Account = new Account(Provider.SQLite, BFY, Fund.Code, Code);
+            FundCode = Account.FundCode;
+            NpmCode = Account.NPM;
+            FromTo = Data["FromTo"].ToString();
+            BOC = new BOC(Data["BOC"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         // PROPERTIES

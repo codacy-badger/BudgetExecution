@@ -65,9 +65,9 @@ namespace BudgetExecution
         /// <summary>
         /// The GetSqlStatement
         /// </summary>
-        /// <param name="sqlStatement">The sqlStatement<see cref="string"/></param>
+        /// <param name="sqlWhere">The sqlStatement<see cref="string"/></param>
         /// <returns>The <see cref="string"/></returns>
-        string GetSqlStatement(string sqlStatement);
+        string GetSqlStatement(string sqlWhere);
 
         /// <summary>
         /// The GetDataCommand
