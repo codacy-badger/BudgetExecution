@@ -32,7 +32,7 @@ namespace BudgetExecution
             Data = DbData.Data;
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
-            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+            BFY = DbData.ProgramElements["BFY"].ToString();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
@@ -49,7 +49,7 @@ namespace BudgetExecution
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
             FundCode = Data["FundCode"].ToString();
-            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+            BFY = DbData.ProgramElements["BFY"].ToString();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
@@ -66,7 +66,7 @@ namespace BudgetExecution
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
             FundCode = Data["FundCode"].ToString();
-            BFY = Table.AsEnumerable().Select(c => c.Field<string>("BFY")).First();
+            BFY = DbData.ProgramElements["BFY"].ToString();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
