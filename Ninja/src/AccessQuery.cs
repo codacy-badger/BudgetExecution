@@ -43,7 +43,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source<see cref="P:BudgetExecution.AccessQuery.Source" /></param>
         /// <param name="parameter">The parameter<see cref="T:System.Collections.Generic.Dictionary`2" /></param>
-        public AccessQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.Access, Sql.SELECT, parameter)
+        public AccessQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.Access, SQL.SELECT, parameter)
         {
             Source = source;
             Parameter = parameter;
@@ -167,13 +167,13 @@ namespace BudgetExecution
         /// <summary>
         /// The GetSqlStatement
         /// </summary>
-        /// <param name="sqlStatement">The sql<see cref="string"/></param>
+        /// <param name="sqlWhere">The sql<see cref="string"/></param>
         /// <returns>The <see cref="string"/></returns>
-        public new string GetSqlStatement(string sqlStatement)
+        public new string GetSqlStatement(string sqlWhere)
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {sqlStatement}";
+                return $"SELECT * FROM {TableName} WHERE {sqlWhere}";
             }
             catch(Exception ex)
             {
