@@ -31,7 +31,7 @@ namespace BudgetExecution
             ProgramElements = DbData.ProgramElements;
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
-            Text = $@"{Source.ToString()} Database";
+            Text = $"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -47,7 +47,7 @@ namespace BudgetExecution
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.ProgramElements;
-            Text = $@"{Source.ToString()} Database";
+            Text = $"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -94,18 +94,18 @@ namespace BudgetExecution
                 HideTopGridLabels();
                 if(Source == Source.PRC)
                 {
-                    Filter1.Text = @"BFY";
+                    Filter1.Text = "BFY";
                     Filter1.Items.Add("2018");
-                    Filter2.Text = @"Fund";
+                    Filter2.Text = "Fund";
                     label5.Visible = true;
-                    label5.Text = @"Total: ";
+                    label5.Text = "Total: ";
                     label6.Visible = true;
                     foreach(string f in ProgramElements["Fund"])
                     {
                         Filter2.Items.Add(f);
                     }
 
-                    Filter3.Text = @"RC";
+                    Filter3.Text = "RC";
                     foreach(string rc in ProgramElements["RC"])
                     {
                         Filter3.Items.Add(rc);
@@ -130,7 +130,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                 }
@@ -157,7 +157,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                     label.Text = control.Tag?.ToString() ?? colname;
@@ -169,7 +169,7 @@ namespace BudgetExecution
                     control.Items.Add(i);
                 }
 
-                if(control.Visible == false)
+                if(!control.Visible)
                 {
                     control.Visible = true;
                 }
@@ -190,7 +190,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                     label.Text = control.Tag.ToString();
@@ -217,7 +217,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                 }
@@ -258,7 +258,7 @@ namespace BudgetExecution
                 MetroSetButton button = sender as MetroSetButton;
                 string name = button?.Tag.ToString();
                 Source source = (Source) Enum.Parse(typeof(Source), name ?? throw new InvalidOperationException());
-                BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+                BindingSource.DataSource = new DataBuilder(source).GetDataTable();
             }
             catch(Exception ex)
             {
@@ -398,34 +398,34 @@ namespace BudgetExecution
                 switch(source)
                 {
                     case Source.Accounts:
-                        label1.Text = @"Fund";
+                        label1.Text = "Fund";
                         PopulateFilterItems(Field.FundCode, Table, Filter1, label1);
                         Filter2.Tag = "GoalName";
                         Filter3.Tag = "ProgramProjectName";
                         break;
 
                     case Source.Supplemental:
-                        label1.Text = @"DivisionName";
+                        label1.Text = "DivisionName";
                         PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "Type";
                         break;
 
                     case Source.Reimbursables:
-                        label1.Text = @"AgreementNumber";
+                        label1.Text = "AgreementNumber";
                         PopulateFilterItems(Field.AgreementNumber, Table, Filter1, label1);
                         Filter2.Tag = "ReimbOrg";
                         Filter3.Tag = "FundName";
                         break;
 
                     case Source.ControlNumbers:
-                        label1.Text = @"DivisionID";
+                        label1.Text = "DivisionID";
                         PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 
                     case Source.Divisions:
-                        label1.Text = @"DivisionName";
+                        label1.Text = "DivisionName";
                         PopulateFilterItems(Field.Name, Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "RC";
