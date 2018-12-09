@@ -120,6 +120,7 @@ namespace BudgetExecution
 
         // METHODS
 
+
         DataTable IDataBuilder.GetDataTable()
         {
             try
@@ -137,7 +138,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.ProgramElements;
+                return (Dictionary<string, string[]>)DbData.ProgramElements;
             }
             catch(Exception ex)
             {
@@ -159,11 +160,11 @@ namespace BudgetExecution
             }
         }
 
-        string[] IDataBuilder.GetUniqueValues(DataTable table, string column)
+        string[] IDataBuilder.GetUniqueValues(DataTable table, string col)
         {
             try
             {
-                return DbData.GetUniqueValues(table, column);
+                return DbData.GetUniqueValues(table, col);
             }
             catch(Exception ex)
             {
