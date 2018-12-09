@@ -2,8 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System.ComponentModel;
-
 namespace BudgetExecution
 {
     using System;
@@ -78,7 +76,7 @@ namespace BudgetExecution
             Input = param;
             Query = new Query(Source, Provider, SQL.SELECT, Input);
         }
-        
+
         public DataBuilder(Source source, IDictionary<string, object> param) : this(source)
         {
             Source = source;
@@ -261,7 +259,7 @@ namespace BudgetExecution
             try
             {
                 return table.AsEnumerable()
-                            .Where(prc => prc.Field<string>(p.Item1.ToString()).Equals(p.Item2.ToString(), StringComparison.CurrentCultureIgnoreCase))
+                            .Where(prc => prc.Field<string>(p.Item1).Equals(p.Item2, StringComparison.CurrentCultureIgnoreCase))
                             .Select(prc => prc)
                             .CopyToDataTable();
             }

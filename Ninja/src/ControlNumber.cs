@@ -66,7 +66,7 @@ namespace BudgetExecution
             ID = int.Parse(Data["ID"].ToString());
             Region = "R6";
             FundCode = Data["FundCode"].ToString();
-            BFY = DbData.ProgramElements["BFY"].ToString();
+            BFY = Data["BFY"].ToString();
             RegionControlNumber = GetRegionCount() + 1;
             FundControlNumber = RegionControlNumber + 1;
             BudgetControlNumber = FundControlNumber + 1;
@@ -258,7 +258,6 @@ namespace BudgetExecution
             }
         }
 
-
         DataTable IDataBuilder.GetDataTable()
         {
             try
@@ -278,7 +277,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
 
         DataRow[] IDataBuilder.GetRecords(DataTable table)
         {

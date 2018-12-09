@@ -1,5 +1,4 @@
 ﻿
-
 namespace BudgetExecution
 {
     using System;
@@ -24,7 +23,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             Data = DbData.Data;
             ProgramElements = DbData.ProgramElements;
-            BFY = ProgramElements["BFY"];
+            BFY = GetFiscalYears(ProgramElements["BFY"]);
             RC = ProgramElements["RC"].AsEnumerable().Select(s => s).First();
             Metric = new PrcMetric(DbData);
             if(ProgramElements["BOC"].Contains("17"))
@@ -33,18 +32,18 @@ namespace BudgetExecution
             }
 
             Fund = GetFunds();
-            Authority = Filter(Table, Field.BFY, BFY[1]);
-            CarryOver = Filter(Table, Field.BFY, BFY[0]);
-            Awards = Filter(new Awards(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
-            Overtime = Filter(new Overtime(new Dictionary<string, object>{["RC"] = RC}).Table, Field.RC, RC);
-            BCN = new ControlNumber(new Dictionary<string, object>{["DivisionName"] = Source.ToString(),});
+            Authority = Filter(Table, Field.BFY, BFY[1].Date.Year.ToString());
+            CarryOver = Filter(Table, Field.BFY, BFY[0].Date.Year.ToString());
+            Awards = GetAwards();
+            Overtime = GetOverTime();
+            BCN = new ControlNumber(new Dictionary<string, object> { ["DivisionName"] = Source.ToString() });
             ControlNumber = BCN.ToString();
         }
 
         // PROPERTIES
         public Source Source { get; }
 
-        public string[] BFY { get; set; }
+        public FiscalYear[] BFY { get; set; }
 
         public Fund[] Fund { get; set; }
 
@@ -108,7 +107,26 @@ namespace BudgetExecution
                 return null;
             }
         }
-     
+
+        private FiscalYear[] GetFiscalYears(string[] yearargs)
+        {
+            try
+            {
+                FiscalYear[] bfy = new FiscalYear[yearargs.Length];
+                for(int i = 0; i < yearargs.Length; i++)
+                {
+                    bfy[i] = new FiscalYear(yearargs[i]);
+                }
+
+                return bfy;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         private DataTable GetAwards()
         {
             try
@@ -124,7 +142,6 @@ namespace BudgetExecution
                     case Source.WQ:
                     case Source.XA:
                         return new Awards().Table.AsEnumerable()
-                                           .Where(a => a.Field<string>("BFY").Equals(BFY[0]))
                                            .Where(a => a.Field<string>("RC").Equals(RC))
                                            .Select(a => a).CopyToDataTable();
                     default:
@@ -152,10 +169,9 @@ namespace BudgetExecution
                     case Source.MD:
                     case Source.WQ:
                     case Source.XA:
-                        return new Awards().Table.AsEnumerable()
-                                           .Where(a => a.Field<string>("BFY").Equals(BFY[0]))
-                                           .Where(a => a.Field<string>("RC").Equals(RC))
-                                           .Select(a => a).CopyToDataTable();
+                        return new Overtime().Table.AsEnumerable()
+                                             .Where(a => a.Field<string>("RC").Equals(RC))
+                                             .Select(a => a).CopyToDataTable();
                     default:
                         return null;
                 }

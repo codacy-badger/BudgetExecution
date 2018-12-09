@@ -9,7 +9,6 @@ namespace BudgetExecution
 
     public struct NPM
     {
-        // CONSTRUCTORS
         public NPM(string code)
         {
             Code = code;
@@ -18,7 +17,6 @@ namespace BudgetExecution
             Title = Info.GetNpmTitle(code);
         }
 
-        // PROPERTIES
         public string Code { get; }
 
         public string Name { get; set; }
@@ -27,7 +25,6 @@ namespace BudgetExecution
 
         public string Title { get; set; }
 
-        // METHODS
         private Dictionary<string, object> GetParameter(string code)
         {
             try
