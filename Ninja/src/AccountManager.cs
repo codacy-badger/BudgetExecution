@@ -38,7 +38,7 @@ namespace BudgetExecution
             }
 
             BindingSource = new BindingSource();
-            BindingSource.DataSource = new DataBuilder(data.Source, Provider.SQLite);
+            BindingSource.DataSource = new DataBuilder(data.Source);
         }
 
         /// <summary>

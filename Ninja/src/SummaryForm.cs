@@ -806,14 +806,13 @@ namespace BudgetExecution
             {
                 ChartFilterControl2 = sender as VisualComboBox;
                 filter3label.Text = $"Filter {PrimaryGrouping.ToString()} By";
-                if(ChartFilterControl2 != null &&
-                   ChartFilterControl2.SelectedItem != null)
+                if(ChartFilterControl2?.SelectedItem != null)
                 {
                     Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 }
 
                 if(!Expander2.Visible ||
-                   Expander2.IsExpanded == false)
+                   !Expander2.IsExpanded)
                 {
                     Expander2.Visible = true;
                     Expander2.IsExpanded = true;
@@ -950,8 +949,8 @@ namespace BudgetExecution
             {
                 PrimaryFilter = sender as VisualComboBox;
                 PrimaryGrouping = (Field)Enum.Parse(typeof(Field), PrimaryFilter?.SelectedItem.ToString());
-                if(BocExpander1.Visible == false ||
-                   BocExpander1.IsExpanded == false)
+                if(!BocExpander1.Visible ||
+                   !BocExpander1.IsExpanded)
                 {
                     BocExpander1.Visible = true;
                     BocExpander1.IsExpanded = true;
@@ -1107,7 +1106,7 @@ namespace BudgetExecution
             try
             {
                 AccountTabControl.SelectedTab = AddTab;
-                if(AddTab.Visible == false)
+                if(!AddTab.Visible)
                 {
                     AddTab.Visible = true;
                 }
@@ -1138,7 +1137,7 @@ namespace BudgetExecution
             try
             {
                 AccountTabControl.SelectedTab = EditTab;
-                if(EditTab.Visible == false)
+                if(!EditTab.Visible)
                 {
                     EditTab.Visible = true;
                 }
@@ -1174,7 +1173,7 @@ namespace BudgetExecution
             try
             {
                 AccountTabControl.SelectedTab = EditTab;
-                if(EditTab.Visible == false)
+                if(!EditTab.Visible)
                 {
                     EditTab.Visible = true;
                 }
@@ -1223,7 +1222,7 @@ namespace BudgetExecution
                     decimal ratio = (decimal)drv.Cells["Amount"].Value / total;
                     Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)(decimal)drv.Cells["Amount"].Value };
                     ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {drv.Cells["Code"].Value} Funding" };
-                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                    AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Stat.Total, ChartSeriesType.Column).Activate();
                 }
             }
             catch(Exception ex)
@@ -1245,7 +1244,7 @@ namespace BudgetExecution
                 decimal ratio = decimal.Parse(row?["Amount"].ToString()) / total;
                 Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)decimal.Parse(row?["Amount"].ToString()) };
                 ChartMainTitle = new[] { $"{ratio.ToString("P")} {Source.ToString()} PRC {row?["Code"]} Funding" };
-                AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Stat.Total, ChartSeriesType.Column).Activate();
             }
             catch(Exception ex)
             {

@@ -32,7 +32,7 @@ namespace BudgetExecution
             ProgramElements = DbData.ProgramElements;
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
-            Text = $@"{Source.ToString()} Database";
+            Text = $"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -48,7 +48,7 @@ namespace BudgetExecution
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.ProgramElements;
-            Text = $@"{Source.ToString()} - Database";
+            Text = $"{Source.ToString()} - Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -95,18 +95,18 @@ namespace BudgetExecution
                 HideTopGridLabels();
                 if(Source == Source.PRC)
                 {
-                    Filter1.Text = @"BFY";
+                    Filter1.Text = "BFY";
                     Filter1.Items.Add("2018");
-                    Filter2.Text = @"FundName";
+                    Filter2.Text = "FundName";
                     label11.Visible = true;
-                    label11.Text = @"Records: ";
+                    label11.Text = "Records: ";
                     label6.Visible = true;
                     foreach(string f in ProgramElements["FundName"])
                     {
                         Filter2.Items.Add(f);
                     }
 
-                    Filter3.Text = @"RC";
+                    Filter3.Text = "RC";
                     foreach(string rc in ProgramElements["RC"])
                     {
                         Filter3.Items.Add(rc);
@@ -132,7 +132,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                 }
@@ -159,7 +159,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                     label.Text = control.Tag?.ToString() ?? colname;
@@ -171,7 +171,7 @@ namespace BudgetExecution
                     control.Items.Add(i);
                 }
 
-                if(control.Visible == false)
+                if(!control.Visible)
                 {
                     control.Visible = true;
                 }
@@ -192,7 +192,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                     label.Text = control.Tag.ToString();
@@ -219,7 +219,7 @@ namespace BudgetExecution
                     control.Items.Clear();
                 }
 
-                if(label.Visible == false)
+                if(!label.Visible)
                 {
                     label.Visible = true;
                 }
@@ -260,7 +260,7 @@ namespace BudgetExecution
                 MetroSetButton button = sender as MetroSetButton;
                 string name = button?.Tag.ToString();
                 Source source = (Source) Enum.Parse(typeof(Source), name ?? throw new InvalidOperationException());
-                BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+                BindingSource.DataSource = new DataBuilder(source).GetDataTable();
             }
             catch(Exception ex)
             {
@@ -362,7 +362,7 @@ namespace BudgetExecution
                 if(Filter4.Tag != null)
                 {
                     PopulateFilterItems(Filter4.Tag.ToString(), table, Filter4, label4);
-                }               
+                }
             }
             catch(Exception ex)
             {
@@ -375,7 +375,7 @@ namespace BudgetExecution
             try
             {
                 VisualComboBox filter = sender as VisualComboBox;
-                if(filter.SelectedItem != null)
+                if(filter?.SelectedItem != null)
                 {
                     F4 = filter.SelectedItem.ToString();
                     C4 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());

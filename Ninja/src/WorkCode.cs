@@ -7,7 +7,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Linq;
 
     public class WorkCode : IDataBuilder
     {
@@ -48,7 +47,7 @@ namespace BudgetExecution
                 Project = Data["ProgramProjectCode"].ToString();
                 Code = Data["WorkCode"].ToString();
                 PayPeriod = Data["PayPeriod"].ToString();
-                Description = Data["FirstName"].ToString(); 
+                Description = Data["FirstName"].ToString();
             }
         }
 

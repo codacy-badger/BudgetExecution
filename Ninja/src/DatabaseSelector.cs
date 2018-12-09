@@ -35,8 +35,6 @@ namespace BudgetExecution
         // PROPERTIES
         private string FilePath { get; set; }
 
-        private string[] Images { get; set; }
-
         public FormData NinjaData { get; set; }
 
         // METHODS

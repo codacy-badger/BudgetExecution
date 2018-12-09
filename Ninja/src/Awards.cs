@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using MoreLinq;
 
 namespace BudgetExecution
 {
@@ -109,6 +108,6 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }        
+        }
     }
 }

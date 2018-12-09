@@ -7,7 +7,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Linq;
 
     public class Supplemental : IDataBuilder
     {
@@ -46,7 +45,7 @@ namespace BudgetExecution
             BFY = Data["BFY"].ToString();
             Amount = decimal.Parse(Data["Amount"].ToString());
         }
-        
+
         public Supplemental(Dictionary<string, object> p) : this()
         {
             Input = p;

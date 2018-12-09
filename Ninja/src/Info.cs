@@ -458,8 +458,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(table != null &&
-                   table.Columns.Contains(column))
+                if(table?.Columns.Contains(column) == true)
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }
@@ -481,8 +480,7 @@ namespace BudgetExecution
         /// <returns>The <see cref="Dictionary{string, string[]}"/></returns>
         public static Dictionary<string, string[]> GetProgramElements(DataTable table, string column)
         {
-            if(table != null &&
-               table.GetColumnNames().Contains(column))
+            if(table?.GetColumnNames().Contains(column) == true)
             {
                 try
                 {

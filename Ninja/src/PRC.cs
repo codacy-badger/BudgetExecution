@@ -8,7 +8,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Linq;
 
     public class PRC : IDataBuilder, IPRC, IAccount
     {
@@ -342,7 +341,7 @@ namespace BudgetExecution
                 return string.Empty;
             }
         }
-        
+
         public static void Insert(Provider provider, Dictionary<string, object> p)
         {
             try

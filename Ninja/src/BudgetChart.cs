@@ -5,7 +5,6 @@
 namespace BudgetExecution
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Data;
     using System.Drawing;
@@ -36,10 +35,7 @@ namespace BudgetExecution
             Chart = chart;
             Value = Stat.Total;
             SeriesType = ChartSeriesType.Column;
-            if(Chart.Series != null)
-            {
-                Chart.Series.Clear();
-            }
+            Chart.Series?.Clear();
 
             ConfigurePrimaryAxisTitle(new[] { title });
             DataSeries = GetSeriesTotals(data);
@@ -68,10 +64,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataTotals = Metric.GetChartTotals(Table, filter);
-            if(Chart.Series != null)
-            {
-                Chart.Series.Clear();
-            }
+            Chart.Series?.Clear();
 
             DataSeries = GetSeriesTotals(DataTotals);
             Chart.Series?.Add(DataSeries);
@@ -97,10 +90,7 @@ namespace BudgetExecution
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
-            if(Chart.Series != null)
-            {
-                Chart.Series.Clear();
-            }
+            Chart.Series?.Clear();
 
             Table = DbData.Table;
             CarryOver = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
@@ -183,12 +173,11 @@ namespace BudgetExecution
         /// Initializes a new instance of the <see cref="BudgetChart"/> class.
         /// </summary>
         /// <param name="chart">The chart<see cref="ChartControl"/></param>
-        /// <param name="title">The title<see cref="string[]"/></param>
         /// <param name="table">The table<see cref="DataTable"/></param>
         /// <param name="filter">The filter<see cref="Field"/></param>
         /// <param name="value">The value<see cref="Stat"/></param>
         /// <param name="type">The type<see cref="ChartSeriesType"/></param>
-        public BudgetChart(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, DataTable table, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
@@ -230,10 +219,9 @@ namespace BudgetExecution
         /// <param name="chart">The chart<see cref="ChartControl"/></param>
         /// <param name="title">The title<see cref="string[]"/></param>
         /// <param name="data">The data<see cref="Dictionary{string, double}"/></param>
-        /// <param name="filter">The filter<see cref="Field"/></param>
         /// <param name="value">The value<see cref="Stat"/></param>
         /// <param name="type">The type<see cref="ChartSeriesType"/></param>
-        public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, Field filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
@@ -271,16 +259,12 @@ namespace BudgetExecution
         {
             Chart = chart;
             Source = source;
-            DbData = new DataBuilder(source, Provider.SQLite);
+            DbData = new DataBuilder(source);
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
-            if(Chart.Series != null)
-            {
-                Chart.Series.Clear();
-            }
-
+            Chart.Series?.Clear();
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
@@ -407,11 +391,6 @@ namespace BudgetExecution
         public Source Source { get; }
 
         /// <summary>
-        /// Gets the Filter
-        /// </summary>
-        public Field Filter { get; }
-
-        /// <summary>
         /// Gets or sets the SeriesType
         /// </summary>
         public ChartSeriesType SeriesType { get; set; }
@@ -471,32 +450,38 @@ namespace BudgetExecution
             try
             {
                 ChartSeries series = new ChartSeries("Total", SeriesType);
-                if(SeriesType == ChartSeriesType.Column ||
-                   SeriesType == ChartSeriesType.Line ||
-                   SeriesType == ChartSeriesType.Spline ||
-                   SeriesType == ChartSeriesType.SplineArea ||
-                   SeriesType == ChartSeriesType.StackingColumn)
+                switch(SeriesType)
                 {
-                    foreach(KeyValuePair<string, double> kvp in data)
+                    case ChartSeriesType.Column:
+                    case ChartSeriesType.Line:
+                    case ChartSeriesType.Spline:
+                    case ChartSeriesType.SplineArea:
+                    case ChartSeriesType.StackingColumn:
                     {
-                        series.Points.Add(kvp.Key, kvp.Value);
-                    }
-                }
+                        foreach(KeyValuePair<string, double> kvp in data)
+                        {
+                            series.Points.Add(kvp.Key, kvp.Value);
+                        }
 
-                if(SeriesType == ChartSeriesType.Pie)
-                {
-                    foreach(KeyValuePair<string, double> kvp in data)
+                        break;
+                    }
+                    case ChartSeriesType.Pie:
                     {
-                        series.Style.DisplayText = true;
-                        series.ExplodedAll = true;
-                        series.ExplosionOffset = 20f;
-                        series.ShowTicks = true;
-                        series.SmartLabels = true;
-                        series.SortPoints = true;
-                        series.Style.TextOffset = 15.0F;
-                        series.OptimizePiePointPositions = true;
-                        series.Style.TextColor = Color.White;
-                        series.Points.Add(kvp.Key, kvp.Value);
+                        foreach(KeyValuePair<string, double> kvp in data)
+                        {
+                            series.Style.DisplayText = true;
+                            series.ExplodedAll = true;
+                            series.ExplosionOffset = 20f;
+                            series.ShowTicks = true;
+                            series.SmartLabels = true;
+                            series.SortPoints = true;
+                            series.Style.TextOffset = 15.0F;
+                            series.OptimizePiePointPositions = true;
+                            series.Style.TextColor = Color.White;
+                            series.Points.Add(kvp.Key, kvp.Value);
+                        }
+
+                        break;
                     }
                 }
 
@@ -540,7 +525,6 @@ namespace BudgetExecution
                         return DataSeries;
 
                     case ChartSeriesType.Pie:
-                        ArrayList list = new ArrayList();
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
                             DataSeries.Points.Add(kvp.Key, kvp.Value);
@@ -705,20 +689,18 @@ namespace BudgetExecution
         {
             try
             {
-                if(value == Stat.Total ||
-                   value == Stat.Average)
+                switch(value)
                 {
-                    series.Style.TextFormat = "{0:C}";
-                }
-
-                if(value == Stat.Ratio)
-                {
-                    series.Style.TextFormat = "{0:P}";
-                }
-
-                if(value == Stat.Count)
-                {
-                    series.Style.TextFormat = "{0}";
+                    case Stat.Total:
+                    case Stat.Average:
+                        series.Style.TextFormat = "{0:C}";
+                        break;
+                    case Stat.Ratio:
+                        series.Style.TextFormat = "{0:P}";
+                        break;
+                    case Stat.Count:
+                        series.Style.TextFormat = "{0}";
+                        break;
                 }
 
                 if(series.Type == ChartSeriesType.Area ||
@@ -802,21 +784,20 @@ namespace BudgetExecution
                 Chart = chart;
                 Chart.Style3D = true;
                 Chart.ChartArea.Series3D = true;
-                if(SeriesType == ChartSeriesType.Column)
+                switch(SeriesType)
                 {
-                    Chart.Tilt = 1f;
-                    Chart.Depth = 250;
-                    Chart.Rotation = 10;
-                    Chart.SpacingBetweenSeries = 1;
-                    Chart.RealMode3D = true;
-                    return;
-                }
-
-                if(SeriesType == ChartSeriesType.Pie)
-                {
-                    Chart.Tilt = -15f;
-                    Chart.Depth = 250;
-                    Chart.RealMode3D = false;
+                    case ChartSeriesType.Column:
+                        Chart.Tilt = 1f;
+                        Chart.Depth = 250;
+                        Chart.Rotation = 10;
+                        Chart.SpacingBetweenSeries = 1;
+                        Chart.RealMode3D = true;
+                        return;
+                    case ChartSeriesType.Pie:
+                        Chart.Tilt = -15f;
+                        Chart.Depth = 250;
+                        Chart.RealMode3D = false;
+                        break;
                 }
             }
             catch(Exception e)
@@ -904,19 +885,16 @@ namespace BudgetExecution
         {
             try
             {
-                if(Chart.Legends != null)
-                {
-                    Chart.Legends.Clear();
-                }
+                Chart.Legends?.Clear();
 
                 ChartLegend legend = new ChartLegend(Chart);
                 foreach(string axislabel in Chart.PrimaryXAxis.Labels)
                 {
-                    ChartLegendItem item = new ChartLegendItem(axislabel);
+                    new ChartLegendItem(axislabel);
                 }
 
                 legend.VisibleCheckBox = true;
-                Chart.Legends.Add(legend);
+                Chart.Legends?.Add(legend);
                 return legend;
             }
             catch(Exception e)
@@ -950,10 +928,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(Chart.Titles != null)
-                {
-                    Chart.Titles.Clear();
-                }
+                Chart.Titles?.Clear();
 
                 foreach(string s in t)
                 {
@@ -961,7 +936,7 @@ namespace BudgetExecution
                     title.Text = s;
                     title.ForeColor = Color.LightSteelBlue;
                     title.Font = new Font("Tahoma", 9f, FontStyle.Regular);
-                    Chart.Titles.Add(title);
+                    Chart.Titles?.Add(title);
                 }
             }
             catch(Exception e)

@@ -12,7 +12,6 @@ namespace BudgetExecution
     using System.IO;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
-    using Microsoft.Office.Interop.Excel;
     using DataTable = System.Data.DataTable;
 
     /// <summary>
@@ -476,7 +475,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         /// <summary>
         /// Releases the object.
         /// </summary>
