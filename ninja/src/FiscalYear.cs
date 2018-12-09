@@ -79,12 +79,12 @@ namespace BudgetExecution
             {
                 if(input.Year == DateTime.Today.Year)
                 {
-                    return new DateTime(DateTime.Today.Year, 9, 30);
+                    return new DateTime(DateTime.Today.Year + 1, 9, 30);
                 }
 
                 if(input.Year > DateTime.Today.Year)
                 {
-                    return new DateTime(DateTime.Today.Year + 1, 9, 30);
+                    return new DateTime(DateTime.Today.Year + 2, 9, 30);
                 }
 
                 return default(DateTime);
@@ -95,7 +95,7 @@ namespace BudgetExecution
                 return default(DateTime);
             }
         }
-        
+
         public Dictionary<string, DateTime> GetFederalHolidays(Dictionary<string, string> d)
         {
             try
@@ -108,10 +108,10 @@ namespace BudgetExecution
 
                 return holiday;
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
 
@@ -127,10 +127,10 @@ namespace BudgetExecution
 
                 return holiday;
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
 
